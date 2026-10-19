@@ -8,9 +8,9 @@ Source file hashes per command are in `artifacts/checks/*.json`; the final sourc
 snapshot, source fingerprint, environment and artifact hashes are in
 `artifacts/foundation-001/{source.zip,environment.txt,manifest.json}`.
 Checkpoints are retained locally but ignored by Git. No commit/push or paid
-compute was used. [README reproduction commands](../README.md#reproduce-the-bounded-foundation-experiment)
-specify the exact CLI defaults and inputs; command arrays and wall times are in
-the check records. Run `python scripts/verify.py` for local CI equivalents.
+compute was used. Exact command arrays and wall times are in the check records;
+the full former README with reproduction instructions is preserved separately
+outside this Git working tree. Run `python scripts/verify.py` for local CI equivalents.
 
 Hardware: AMD Ryzen 5 5600G, 6 cores / 12 logical processors; AMD Radeon integrated
 graphics, Windows 11. Python 3.12.14, PyTorch 2.14.1+cpu. CUDA is unavailable in
