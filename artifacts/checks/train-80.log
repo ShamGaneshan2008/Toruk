@@ -1,0 +1,448 @@
+{
+  "model_family": "Toruk-LM",
+  "variant": "ordinary",
+  "steps_completed": 80,
+  "steps_this_invocation": 80,
+  "train_config": {
+    "seed": 23,
+    "batch_size": 4,
+    "learning_rate": 0.003,
+    "threads": 1
+  },
+  "model_config": {
+    "context": 64,
+    "width": 32,
+    "heads": 4,
+    "layers": 2,
+    "vocab_size": 259
+  },
+  "tokenizer": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7",
+  "datasets": {
+    "train": "c935a64824e4456f8fb76d544ce58a5102210df521cb55ebd860336399462286",
+    "validation": "8f5bb8d6ca2ad960d20063735a47883bd5637cacc30f04c0592d0c4c27963b06"
+  },
+  "parameters": 44096,
+  "recurrent_state_bytes": 0,
+  "train_valid_tokens_this_invocation": 16312,
+  "training_seconds": 0.5939093000001776,
+  "train_tokens_per_second": 27465.47326333351,
+  "validation": {
+    "loss_nats_per_byte_or_eos": 1.2481076792124155,
+    "valid_tokens": 925,
+    "seconds": 0.009975800000120216,
+    "tokens_per_second": 92724.39303001795,
+    "context_tokens": 64,
+    "protocol": "document windows; no token scored twice; positions restart per window",
+    "dataset_sha256": "8f5bb8d6ca2ad960d20063735a47883bd5637cacc30f04c0592d0c4c27963b06"
+  },
+  "losses": [
+    {
+      "step": 1,
+      "loss": 5.77603006362915,
+      "gradient_norm": 0.9004772305488586
+    },
+    {
+      "step": 2,
+      "loss": 5.588083744049072,
+      "gradient_norm": 0.8569799661636353
+    },
+    {
+      "step": 3,
+      "loss": 5.47752046585083,
+      "gradient_norm": 0.8320801258087158
+    },
+    {
+      "step": 4,
+      "loss": 5.306304454803467,
+      "gradient_norm": 0.9340333938598633
+    },
+    {
+      "step": 5,
+      "loss": 5.177859306335449,
+      "gradient_norm": 0.9390268325805664
+    },
+    {
+      "step": 6,
+      "loss": 5.009389400482178,
+      "gradient_norm": 0.9850460290908813
+    },
+    {
+      "step": 7,
+      "loss": 4.8050007820129395,
+      "gradient_norm": 1.0821675062179565
+    },
+    {
+      "step": 8,
+      "loss": 4.714475154876709,
+      "gradient_norm": 1.0880651473999023
+    },
+    {
+      "step": 9,
+      "loss": 4.486589431762695,
+      "gradient_norm": 1.1506859064102173
+    },
+    {
+      "step": 10,
+      "loss": 4.369078636169434,
+      "gradient_norm": 1.2264015674591064
+    },
+    {
+      "step": 11,
+      "loss": 4.205390453338623,
+      "gradient_norm": 1.267565369606018
+    },
+    {
+      "step": 12,
+      "loss": 4.008309364318848,
+      "gradient_norm": 1.3284380435943604
+    },
+    {
+      "step": 13,
+      "loss": 3.880941152572632,
+      "gradient_norm": 1.4222666025161743
+    },
+    {
+      "step": 14,
+      "loss": 3.8336968421936035,
+      "gradient_norm": 1.1634331941604614
+    },
+    {
+      "step": 15,
+      "loss": 3.7524771690368652,
+      "gradient_norm": 1.1345428228378296
+    },
+    {
+      "step": 16,
+      "loss": 3.607592821121216,
+      "gradient_norm": 1.0181893110275269
+    },
+    {
+      "step": 17,
+      "loss": 3.426147699356079,
+      "gradient_norm": 1.1203813552856445
+    },
+    {
+      "step": 18,
+      "loss": 3.5299248695373535,
+      "gradient_norm": 0.8760222792625427
+    },
+    {
+      "step": 19,
+      "loss": 3.353182554244995,
+      "gradient_norm": 0.9938176274299622
+    },
+    {
+      "step": 20,
+      "loss": 3.4685561656951904,
+      "gradient_norm": 0.8073666095733643
+    },
+    {
+      "step": 21,
+      "loss": 3.2612390518188477,
+      "gradient_norm": 0.7524722814559937
+    },
+    {
+      "step": 22,
+      "loss": 3.3281402587890625,
+      "gradient_norm": 0.7302542924880981
+    },
+    {
+      "step": 23,
+      "loss": 3.035308361053467,
+      "gradient_norm": 0.723427951335907
+    },
+    {
+      "step": 24,
+      "loss": 3.0291717052459717,
+      "gradient_norm": 0.7564941644668579
+    },
+    {
+      "step": 25,
+      "loss": 2.863970994949341,
+      "gradient_norm": 0.82753586769104
+    },
+    {
+      "step": 26,
+      "loss": 2.812588691711426,
+      "gradient_norm": 0.7221029996871948
+    },
+    {
+      "step": 27,
+      "loss": 2.768597364425659,
+      "gradient_norm": 0.9158461093902588
+    },
+    {
+      "step": 28,
+      "loss": 2.735074281692505,
+      "gradient_norm": 0.7077425122261047
+    },
+    {
+      "step": 29,
+      "loss": 2.8185791969299316,
+      "gradient_norm": 0.5450356602668762
+    },
+    {
+      "step": 30,
+      "loss": 2.6414544582366943,
+      "gradient_norm": 0.5303806066513062
+    },
+    {
+      "step": 31,
+      "loss": 2.727400064468384,
+      "gradient_norm": 0.7555137872695923
+    },
+    {
+      "step": 32,
+      "loss": 2.5170705318450928,
+      "gradient_norm": 0.5722612142562866
+    },
+    {
+      "step": 33,
+      "loss": 2.551706075668335,
+      "gradient_norm": 0.6500775218009949
+    },
+    {
+      "step": 34,
+      "loss": 2.530437469482422,
+      "gradient_norm": 0.5500487685203552
+    },
+    {
+      "step": 35,
+      "loss": 2.4082911014556885,
+      "gradient_norm": 0.6476855278015137
+    },
+    {
+      "step": 36,
+      "loss": 2.3833768367767334,
+      "gradient_norm": 0.5187114477157593
+    },
+    {
+      "step": 37,
+      "loss": 2.3549070358276367,
+      "gradient_norm": 0.5086138248443604
+    },
+    {
+      "step": 38,
+      "loss": 2.210599660873413,
+      "gradient_norm": 0.4991788864135742
+    },
+    {
+      "step": 39,
+      "loss": 2.364877462387085,
+      "gradient_norm": 0.7960115671157837
+    },
+    {
+      "step": 40,
+      "loss": 2.2248284816741943,
+      "gradient_norm": 0.4823310971260071
+    },
+    {
+      "step": 41,
+      "loss": 2.177550792694092,
+      "gradient_norm": 0.47338151931762695
+    },
+    {
+      "step": 42,
+      "loss": 2.2831315994262695,
+      "gradient_norm": 0.44641655683517456
+    },
+    {
+      "step": 43,
+      "loss": 2.2464730739593506,
+      "gradient_norm": 0.48384493589401245
+    },
+    {
+      "step": 44,
+      "loss": 2.0898146629333496,
+      "gradient_norm": 0.6167643666267395
+    },
+    {
+      "step": 45,
+      "loss": 2.000556707382202,
+      "gradient_norm": 0.5458323359489441
+    },
+    {
+      "step": 46,
+      "loss": 2.089128017425537,
+      "gradient_norm": 0.4232257902622223
+    },
+    {
+      "step": 47,
+      "loss": 2.108560085296631,
+      "gradient_norm": 0.44667550921440125
+    },
+    {
+      "step": 48,
+      "loss": 2.473938226699829,
+      "gradient_norm": 1.1091557741165161
+    },
+    {
+      "step": 49,
+      "loss": 1.7844380140304565,
+      "gradient_norm": 0.4898429214954376
+    },
+    {
+      "step": 50,
+      "loss": 2.355970621109009,
+      "gradient_norm": 0.7456555366516113
+    },
+    {
+      "step": 51,
+      "loss": 2.205960273742676,
+      "gradient_norm": 0.5756915807723999
+    },
+    {
+      "step": 52,
+      "loss": 1.8492082357406616,
+      "gradient_norm": 0.4791606366634369
+    },
+    {
+      "step": 53,
+      "loss": 2.1379289627075195,
+      "gradient_norm": 1.0091606378555298
+    },
+    {
+      "step": 54,
+      "loss": 1.7222084999084473,
+      "gradient_norm": 0.6777616739273071
+    },
+    {
+      "step": 55,
+      "loss": 1.9153810739517212,
+      "gradient_norm": 0.6555263996124268
+    },
+    {
+      "step": 56,
+      "loss": 1.8240216970443726,
+      "gradient_norm": 0.7335100173950195
+    },
+    {
+      "step": 57,
+      "loss": 1.7238590717315674,
+      "gradient_norm": 0.6346601843833923
+    },
+    {
+      "step": 58,
+      "loss": 1.8665711879730225,
+      "gradient_norm": 0.5667327642440796
+    },
+    {
+      "step": 59,
+      "loss": 1.9725624322891235,
+      "gradient_norm": 0.5881546139717102
+    },
+    {
+      "step": 60,
+      "loss": 1.6696043014526367,
+      "gradient_norm": 0.48411116003990173
+    },
+    {
+      "step": 61,
+      "loss": 2.080842971801758,
+      "gradient_norm": 0.9279773235321045
+    },
+    {
+      "step": 62,
+      "loss": 1.652226209640503,
+      "gradient_norm": 0.5417470335960388
+    },
+    {
+      "step": 63,
+      "loss": 1.689557433128357,
+      "gradient_norm": 0.5080916881561279
+    },
+    {
+      "step": 64,
+      "loss": 1.5995171070098877,
+      "gradient_norm": 0.49161168932914734
+    },
+    {
+      "step": 65,
+      "loss": 1.392344355583191,
+      "gradient_norm": 0.623298168182373
+    },
+    {
+      "step": 66,
+      "loss": 1.5647016763687134,
+      "gradient_norm": 0.6866345405578613
+    },
+    {
+      "step": 67,
+      "loss": 1.8074870109558105,
+      "gradient_norm": 0.519584059715271
+    },
+    {
+      "step": 68,
+      "loss": 1.4522686004638672,
+      "gradient_norm": 0.4766252636909485
+    },
+    {
+      "step": 69,
+      "loss": 1.6553348302841187,
+      "gradient_norm": 0.5775923728942871
+    },
+    {
+      "step": 70,
+      "loss": 1.5352994203567505,
+      "gradient_norm": 0.6664362549781799
+    },
+    {
+      "step": 71,
+      "loss": 1.7574114799499512,
+      "gradient_norm": 0.670217752456665
+    },
+    {
+      "step": 72,
+      "loss": 1.5756484270095825,
+      "gradient_norm": 0.49621522426605225
+    },
+    {
+      "step": 73,
+      "loss": 1.7308931350708008,
+      "gradient_norm": 0.5769335627555847
+    },
+    {
+      "step": 74,
+      "loss": 1.1724661588668823,
+      "gradient_norm": 0.6526976823806763
+    },
+    {
+      "step": 75,
+      "loss": 1.6385579109191895,
+      "gradient_norm": 0.6439149975776672
+    },
+    {
+      "step": 76,
+      "loss": 1.5269910097122192,
+      "gradient_norm": 0.5116181969642639
+    },
+    {
+      "step": 77,
+      "loss": 1.023372769355774,
+      "gradient_norm": 0.762889564037323
+    },
+    {
+      "step": 78,
+      "loss": 1.3994351625442505,
+      "gradient_norm": 0.5818666815757751
+    },
+    {
+      "step": 79,
+      "loss": 1.4467726945877075,
+      "gradient_norm": 0.5058891773223877
+    },
+    {
+      "step": 80,
+      "loss": 1.2525275945663452,
+      "gradient_norm": 0.5666200518608093
+    }
+  ],
+  "python": "3.12.14",
+  "torch": "2.14.1+cpu",
+  "device": "cpu",
+  "resume_from": null,
+  "peak_allocated_memory_bytes": null,
+  "peak_memory_note": "CPU allocator peak not measured; CUDA not used"
+}
+C:\Users\susee\VS_CODE_PROJECT\Toruk\.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))

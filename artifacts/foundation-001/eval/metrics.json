@@ -1,0 +1,18 @@
+{
+  "checkpoint_sha256": "0285d3fb6adc4e49a92b6c2f4f8226f607d8660d46d3a19d5fea33ca48065e94",
+  "context_tokens": 64,
+  "dataset_sha256": "8f5bb8d6ca2ad960d20063735a47883bd5637cacc30f04c0592d0c4c27963b06",
+  "generation": {
+    "end_to_end_seconds": 0.18085999999902924,
+    "examples": 6,
+    "generated_tokens": 192,
+    "includes": "prefix tokenization, local-window recomputation, greedy decode; excludes model load",
+    "protocol": "greedy text continuation; not controlled-world QA or recall accuracy",
+    "tokens_per_second": 1061.5946035664633
+  },
+  "loss_nats_per_byte_or_eos": 1.2481076792124155,
+  "protocol": "document windows; no token scored twice; positions restart per window",
+  "seconds": 0.011661000000003696,
+  "tokens_per_second": 79324.24320381672,
+  "valid_tokens": 925
+}

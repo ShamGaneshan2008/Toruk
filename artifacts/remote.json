@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "base_commit": "334fe510780bda7b622ae7821a970c40d9f7dd2a",
+  "command": "github.fetch_commit_workflow_runs",
+  "arguments": {
+    "repo_full_name": "ShamGaneshan2008/Toruk",
+    "commit_sha": "334fe510780bda7b622ae7821a970c40d9f7dd2a"
+  },
+  "evidence_path": "artifacts/remote.json",
+  "limitation": "Only first page of PR-triggered runs; no remote validation of uncommitted changes",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "workflow_runs": []
+    },
+    "isError": false
+  }
+}

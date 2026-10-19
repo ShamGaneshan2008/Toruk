@@ -1,0 +1,86 @@
+UP017 [*] Use `datetime.UTC` alias
+  --> scripts\check.py:46:37
+   |
+44 |     record = {
+45 |         **source_identity(), "command": command,
+46 |         "started_utc": datetime.now(timezone.utc).isoformat(),
+   |                                     ^^^^^^^^^^^^
+47 |         "evidence_path": f"artifacts/checks/{args.label}.log",
+48 |     }
+   |
+help: Convert to `datetime.UTC` alias
+   |
+8  | import time
+   - from datetime import datetime, timezone
+9  + from datetime import datetime, timezone, UTC
+10 | from pathlib import Path
+--------------------------------------------------------------------------------
+45 |         **source_identity(), "command": command,
+   -         "started_utc": datetime.now(timezone.utc).isoformat(),
+46 +         "started_utc": datetime.now(UTC).isoformat(),
+47 |         "evidence_path": f"artifacts/checks/{args.label}.log",
+   |
+
+E501 Line too long (106 > 100)
+  --> src\toruk_lm\cli.py:56:101
+   |
+54 |                 "logical_cpus": os.cpu_count(), "torch": str(torch.__version__),
+55 |                 "cuda_available": torch.cuda.is_available(),
+56 |                 "cuda_devices": [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())],
+   |                                                                                                     ^^^^^^
+57 |                 "training_device": "cpu", "tokenizer": ByteTokenizer.fingerprint,
+58 |             }
+   |
+
+E501 Line too long (105 > 100)
+   --> src\toruk_lm\engine.py:111:101
+    |
+109 |                 raise ValueError(f"resume {key} mismatch")
+110 |         if saved["data_progress"] != {
+111 |             "next_step": saved["next_step"], "examples_consumed": saved["next_step"] * config.batch_size,
+    |                                                                                                     ^^^^^
+112 |             "boundary": "after_optimizer_step; independent ordinary-LM windows",
+113 |         }:
+    |
+
+E501 Line too long (102 > 100)
+   --> src\toruk_lm\engine.py:164:101
+    |
+162 |         "datasets": fingerprints, "parameters": sum(p.numel() for p in model.parameters()),
+163 |         "recurrent_state_bytes": 0, "train_valid_tokens_this_invocation": processed,
+164 |         "training_seconds": training_seconds, "train_tokens_per_second": processed / training_seconds,
+    |                                                                                                     ^^
+165 |         "validation": evaluate_loss(model, validation_path, config.batch_size),
+166 |         "losses": losses, "python": platform.python_version(), "torch": str(torch.__version__),
+    |
+
+E501 Line too long (106 > 100)
+   --> src\toruk_lm\engine.py:204:101
+    |
+202 |         ),
+203 |         "end_to_end_seconds": sum(row["end_to_end_seconds"] for row in predictions),
+204 |         "includes": "prefix tokenization, local-window recomputation, greedy decode; excludes model load",
+    |                                                                                                     ^^^^^^
+205 |     }
+206 |     metrics["generation"]["tokens_per_second"] = (
+    |
+
+F401 [*] `pathlib.Path` imported but unused
+ --> tests\test_foundation.py:4:21
+  |
+2 | import subprocess
+3 | import sys
+4 | from pathlib import Path
+  |                     ^^^^
+5 |
+6 | import pytest
+  |
+help: Remove unused import: `pathlib.Path`
+  |
+3 | import sys
+  - from pathlib import Path
+4 |
+  |
+
+Found 6 errors.
+[*] 2 fixable with `--fix`.

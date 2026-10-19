@@ -1,0 +1,102 @@
+{
+  "base_commit": "334fe510780bda7b622ae7821a970c40d9f7dd2a",
+  "branch": "main",
+  "initial_working_tree": "clean",
+  "evidence_path": "artifacts/audit.json",
+  "checks_directory": "artifacts/checks",
+  "note": "Each executable check has an individual JSON record with exact source hashes and raw log. Initial environmental/audit checks below occurred before the package existed.",
+  "initial_checks": [
+    {
+      "status": "PASS",
+      "command": "git status --short; git branch --show-current; git rev-parse HEAD; git ls-tree -r --name-only HEAD; git log -5 --oneline; git remote -v",
+      "result": "Clean main, base 334fe510780bda7b622ae7821a970c40d9f7dd2a. Tracked: main.py, .idea/.gitignore. Origin http://github.com/ShamGaneshan2008/Toruk. main.py only prints Hi, PyCharm."
+    },
+    {
+      "status": "PASS",
+      "command": "rg --files --hidden -g '!.git/**' -g '!.idea/**'; Get-ChildItem -Force; Get-Content main.py; inspect AGENTS.md from C:\\ through cwd",
+      "result": "No README, AGENTS.md, package, specs, milestones, configuration, experiments, tests or CI. Only starter code. No ancestor AGENTS.md found."
+    },
+    {
+      "status": "BLOCKED",
+      "command": "Run existing causal LM / training / checkpoint / world oracle / baseline checks",
+      "result": "No implementation or check commands existed. Substantial prerequisite absent; ordinary LM foundation implemented before memory work."
+    },
+    {
+      "status": "PASS",
+      "command": "C:\\Users\\susee\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -c import/runtime inspection",
+      "result": "Python 3.12.14, Windows 11, 12 logical CPUs; torch/pytest/ruff/mypy/build initially unavailable. No python or uv on PATH; explicit runtime used to create .venv."
+    },
+    {
+      "status": "PASS",
+      "command": "C:\\Users\\susee\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -m venv .venv",
+      "result": "Workspace virtual environment created."
+    },
+    {
+      "status": "BLOCKED",
+      "command": ".venv\\Scripts\\python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
+      "result": "Sandbox socket access denied, WinError 10013. Retried with required escalation."
+    },
+    {
+      "status": "PASS",
+      "command": ".venv\\Scripts\\python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu (approved network retry)",
+      "result": "Installed torch 2.14.1+cpu and transitive dependencies."
+    },
+    {
+      "status": "BLOCKED",
+      "command": ".venv\\Scripts\\python.exe -m pip install -e '.[dev]'",
+      "result": "Sandbox blocked build-dependency network access. Retried with required escalation."
+    },
+    {
+      "status": "PASS",
+      "command": ".venv\\Scripts\\python.exe -m pip install -e '.[dev]' (approved network retry)",
+      "result": "Installed toruk-lm 0.1.0, pytest 9.1.1, ruff 0.17.1, mypy 1.20.2, build 1.6.1. Subsequent offline editable install and pip check have raw evidence in checks/."
+    },
+    {
+      "status": "BLOCKED",
+      "command": "Get-CimInstance Win32_Processor; Get-CimInstance Win32_ComputerSystem",
+      "result": "Sandbox CIM access denied. Retried read-only query with approval."
+    },
+    {
+      "status": "PASS",
+      "command": "Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors; Get-CimInstance Win32_ComputerSystem | Select-Object TotalPhysicalMemory; Get-CimInstance Win32_VideoController | Select-Object Name,AdapterRAM (approved retry)",
+      "result": "AMD Ryzen 5 5600G with Radeon Graphics; 6 cores, 12 logical processors. AMD Radeon(TM) Graphics. PowerShell tabular formatting omitted RAM fields, so no RAM figure is claimed."
+    }
+  ],
+  "not_run": [
+    {
+      "status": "NOT_RUN",
+      "command": null,
+      "check": "M2 controlled-world oracle validation and factual task evaluation",
+      "reason": "M2 implementation absent; fixture generator explicitly is not that benchmark."
+    },
+    {
+      "status": "NOT_RUN",
+      "command": null,
+      "check": "M3 write timing, read/writer gradients, memory resets, lane/session isolation, padding writes, fixed capacity, incremental commit equivalence, memory checkpoint/resume, streaming evaluation",
+      "reason": "Memory implementation deferred under earliest-unmet-dependency rule. Proposed contract documented only."
+    },
+    {
+      "status": "NOT_RUN",
+      "command": null,
+      "check": "Matched-budget ordinary/memory QA comparison and reset-memory ablation",
+      "reason": "Neither M2 benchmark nor memory model exists. No accuracy/benefit claim."
+    },
+    {
+      "status": "NOT_RUN",
+      "command": null,
+      "check": "CPU allocator peak memory",
+      "reason": "No allocator instrumentation. Metrics explicitly report null."
+    },
+    {
+      "status": "NOT_RUN",
+      "command": null,
+      "check": "Final test scoring",
+      "reason": "Deliberately held out from this pilot."
+    },
+    {
+      "status": "NOT_RUN",
+      "command": "GitHub Actions for current uncommitted tree",
+      "reason": "No commit/push authorized. Local equivalents run on Windows; Ubuntu runner not verified. Base-commit remote inspection is retained separately in remote.json."
+    }
+  ]
+}

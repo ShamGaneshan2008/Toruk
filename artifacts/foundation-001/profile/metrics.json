@@ -1,0 +1,56 @@
+{
+  "datasets": {
+    "train": "c935a64824e4456f8fb76d544ce58a5102210df521cb55ebd860336399462286",
+    "validation": "8f5bb8d6ca2ad960d20063735a47883bd5637cacc30f04c0592d0c4c27963b06"
+  },
+  "device": "cpu",
+  "losses": [
+    {
+      "gradient_norm": 0.9004772305488586,
+      "loss": 5.77603006362915,
+      "step": 1
+    },
+    {
+      "gradient_norm": 0.8569799661636353,
+      "loss": 5.588083744049072,
+      "step": 2
+    }
+  ],
+  "model_config": {
+    "context": 64,
+    "heads": 4,
+    "layers": 2,
+    "vocab_size": 259,
+    "width": 32
+  },
+  "model_family": "Toruk-LM",
+  "parameters": 44096,
+  "peak_allocated_memory_bytes": null,
+  "peak_memory_note": "CPU allocator peak not measured; CUDA not used",
+  "python": "3.12.14",
+  "recurrent_state_bytes": 0,
+  "resume_from": null,
+  "steps_completed": 2,
+  "steps_this_invocation": 2,
+  "tokenizer": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7",
+  "torch": "2.14.1+cpu",
+  "train_config": {
+    "batch_size": 4,
+    "learning_rate": 0.003,
+    "seed": 23,
+    "threads": 1
+  },
+  "train_tokens_per_second": 17307.162805224936,
+  "train_valid_tokens_this_invocation": 352,
+  "training_seconds": 0.020338400000127876,
+  "validation": {
+    "context_tokens": 64,
+    "dataset_sha256": "8f5bb8d6ca2ad960d20063735a47883bd5637cacc30f04c0592d0c4c27963b06",
+    "loss_nats_per_byte_or_eos": 5.447158862964527,
+    "protocol": "document windows; no token scored twice; positions restart per window",
+    "seconds": 0.009986900000058085,
+    "tokens_per_second": 92621.33394693249,
+    "valid_tokens": 925
+  },
+  "variant": "ordinary"
+}

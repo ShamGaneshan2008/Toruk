@@ -1,0 +1,29 @@
+{
+  "base_commit": "334fe510780bda7b622ae7821a970c40d9f7dd2a",
+  "source_sha256": "8aa5ac2b9f38d77e902e52a6ac18427b335e950f33db77a68aa94c6c1d14b137",
+  "source_files": {
+    ".github/workflows/ci.yml": "9250f2521709cc0ed1092cd8026d8e1b22071c10fdf6c50dc3a410f31bb04f2d",
+    ".gitignore": "924b84c37978c3d2a058d4869b93754899ec86c89566f85769fccf5946d570f1",
+    "main.py": "b7f97e8abf7d0d0c30058002e3245003355f18183b841bf0e1602dea239f86ea",
+    "pyproject.toml": "49d11350c7674080463ed59df70861883133ca45cc43ed5184a7071254b721a6",
+    "scripts/check.py": "bed60dd02b85226ba43e9f8ab8a9d1290af41b09f9a84c342b178761a58e1d14",
+    "src/toruk_lm/__init__.py": "88d34fdc60d187a30490100b736e815f48bb1289c2d47cd96c9659c9ca6d1528",
+    "src/toruk_lm/__main__.py": "fc1bac39e9cfe3421a96e5030ea35df8d6d72fd50614b48c8e85ecb448c733ea",
+    "src/toruk_lm/cli.py": "31c92a6a3c19aa84a90fa87d7ec6c10c31199e245717d6cf23e5dd2138588b72",
+    "src/toruk_lm/data.py": "404dd830343ff73d5bdedec380069f3b9d2222ee599ed195fcf32ad1c9f60a99",
+    "src/toruk_lm/engine.py": "7b36827a198a192ff1a264042e5e89caf778f029e662284c4f163b6088a8bc26",
+    "src/toruk_lm/model.py": "f262757b30f010fa036d3549da7ad25487c3afb8394c4c5120e5e5d1696a294d",
+    "src/toruk_lm/tokenizer.py": "ff22d6885d31a3437b65f947538e04ebc581de1c67ca13579bb81f0a937e6a00",
+    "tests/test_foundation.py": "e672ba24013aaf486ecd1d3624a9aed42f24aa2f21136e0fe08162acc2e7ea37"
+  },
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-m",
+    "mypy"
+  ],
+  "started_utc": "2026-10-19T12:59:18.410975+00:00",
+  "evidence_path": "artifacts/checks/initial-types.log",
+  "status": "FAIL",
+  "returncode": 1,
+  "seconds": 23.15295849999984
+}

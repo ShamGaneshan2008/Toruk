@@ -1,0 +1,20 @@
+{
+  "loss_nats_per_byte_or_eos": 1.2481076792124155,
+  "valid_tokens": 925,
+  "seconds": 0.011661000000003696,
+  "tokens_per_second": 79324.24320381672,
+  "context_tokens": 64,
+  "protocol": "document windows; no token scored twice; positions restart per window",
+  "dataset_sha256": "8f5bb8d6ca2ad960d20063735a47883bd5637cacc30f04c0592d0c4c27963b06",
+  "generation": {
+    "protocol": "greedy text continuation; not controlled-world QA or recall accuracy",
+    "examples": 6,
+    "generated_tokens": 192,
+    "end_to_end_seconds": 0.18085999999902924,
+    "includes": "prefix tokenization, local-window recomputation, greedy decode; excludes model load",
+    "tokens_per_second": 1061.5946035664633
+  },
+  "checkpoint_sha256": "0285d3fb6adc4e49a92b6c2f4f8226f607d8660d46d3a19d5fea33ca48065e94"
+}
+C:\Users\susee\VS_CODE_PROJECT\Toruk\.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))

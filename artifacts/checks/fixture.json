@@ -1,0 +1,37 @@
+{
+  "base_commit": "334fe510780bda7b622ae7821a970c40d9f7dd2a",
+  "source_sha256": "5b16c675899dd18b89b01baa8f5cf441cfee9e6fdff2f39803d52156799784ef",
+  "source_files": {
+    ".github/workflows/ci.yml": "72c7afbfffc85ed3aff6eeb8243c9dd64c9ff33ddcd054fba5a6658de2fd78b5",
+    ".gitignore": "924b84c37978c3d2a058d4869b93754899ec86c89566f85769fccf5946d570f1",
+    "main.py": "b7f97e8abf7d0d0c30058002e3245003355f18183b841bf0e1602dea239f86ea",
+    "pyproject.toml": "49d11350c7674080463ed59df70861883133ca45cc43ed5184a7071254b721a6",
+    "scripts/check.py": "20258bf0f8d9083a23ea714cb3ffe5f9d66f1f6ba0f1bc0dfcc4e262e2f2bcc2",
+    "scripts/seal_run.py": "220d233321f4c16baa1f75198be4368f6ae2b670c463bda103d02e52ea8d0260",
+    "src/toruk_lm/__init__.py": "ecc19b70baf0d7a94586eaf67bc1cc6bf2dc119b4bc82ad95107e63ad0a22229",
+    "src/toruk_lm/__main__.py": "25e078db81166f4b06162e32c0ed40433a060f7785fd0a1c471fcb1771a652f9",
+    "src/toruk_lm/cli.py": "ec96e220df327a5adf50a61fde6e5cd72a03ab7fe0a0fe799ceca89c98e6b4df",
+    "src/toruk_lm/data.py": "2d1251c8e07663c03a1aef58f4cbc7e830eac7a7686e34dbd06e93cbfd291975",
+    "src/toruk_lm/engine.py": "ea64e19ffe07a7a1f6ae49fd74fdae8d2f344704ff87b49f532e6d5f3b2cdf43",
+    "src/toruk_lm/model.py": "312f0c1889028ae2014b7ed981caad092056b00273a0eff1606953a43ce9be79",
+    "src/toruk_lm/tokenizer.py": "e22977465d986dadb601095eeae1aa55f74eedd39897de0a6d52657c863f1434",
+    "tests/test_foundation.py": "d31b9fb689fb413fee51e827a19f20506a05a4128192ee28b89e12fe31f85457"
+  },
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-m",
+    "toruk_lm",
+    "make-fixture",
+    "--output",
+    "artifacts/foundation-001/data",
+    "--documents",
+    "60",
+    "--seed",
+    "17"
+  ],
+  "started_utc": "2026-10-19T13:00:54.528307+00:00",
+  "evidence_path": "artifacts/checks/fixture.log",
+  "status": "PASS",
+  "returncode": 0,
+  "seconds": 2.2366950999999062
+}

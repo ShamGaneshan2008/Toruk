@@ -1,0 +1,16 @@
+usage: toruk [-h] {diagnose,make-fixture,train,evaluate,generate} ...
+
+Toruk-LM research foundation
+
+positional arguments:
+  {diagnose,make-fixture,train,evaluate,generate}
+    diagnose            report actual runtime and CUDA availability
+    make-fixture        generate document-separated smoke-test text
+    train               train ordinary LM; CPU; fixed learning rate
+    evaluate            local-context loss and autoregressive continuations
+    generate            greedy local-context inference
+
+options:
+  -h, --help            show this help message and exit
+C:\Users\susee\VS_CODE_PROJECT\Toruk\.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
