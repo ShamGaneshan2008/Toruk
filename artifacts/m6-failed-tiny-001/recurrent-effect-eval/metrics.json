@@ -1,0 +1,62 @@
+{
+  "calibration": [
+    {
+      "count": 1,
+      "observed": 0.007017538882791996,
+      "predicted": 0.0019215974025428295
+    },
+    {
+      "count": 1,
+      "observed": 5.488925671670586e-05,
+      "predicted": 0.0019215974025428295
+    }
+  ],
+  "harmful_examples": 0,
+  "harmful_precision": null,
+  "harmful_recall": null,
+  "inference_seconds_per_example": 0.0001873093751783017,
+  "mae_nats": 0.0034813247621059418,
+  "ood_fallbacks": 2,
+  "policies": {
+    "heuristic": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 1.0
+    },
+    "oracle": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 1.0
+    },
+    "predictor": {
+      "mean_regret_nats": 0.0035362141206860542,
+      "write_rate": 0.0
+    },
+    "retain": {
+      "mean_regret_nats": 0.0035362141206860542,
+      "write_rate": 0.0
+    },
+    "shuffled": {
+      "mean_regret_nats": 0.0035362141206860542,
+      "write_rate": 0.0
+    },
+    "write": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 1.0
+    }
+  },
+  "raw": [
+    {
+      "chosen_write": false,
+      "effect": 0.007017538882791996,
+      "prediction": 0.0019215974025428295,
+      "world_id": "validation-17-0000"
+    },
+    {
+      "chosen_write": false,
+      "effect": 5.488925671670586e-05,
+      "prediction": 0.0019215974025428295,
+      "world_id": "validation-17-0001"
+    }
+  ],
+  "rmse_nats": 0.0038375265430659056,
+  "sign_ranking_accuracy": 1.0
+}

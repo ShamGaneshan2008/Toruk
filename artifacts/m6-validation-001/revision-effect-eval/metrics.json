@@ -1,0 +1,84 @@
+{
+  "calibration": [
+    {
+      "count": 1,
+      "observed": -0.00026837101904675364,
+      "predicted": -0.0002442887634970248
+    },
+    {
+      "count": 1,
+      "observed": 0.0010826220968738198,
+      "predicted": -0.00017438344366382807
+    },
+    {
+      "count": 1,
+      "observed": 0.0009690567385405302,
+      "predicted": 7.390019891317934e-05
+    },
+    {
+      "count": 1,
+      "observed": -0.0004689876805059612,
+      "predicted": 0.0002720773627515882
+    }
+  ],
+  "harmful_examples": 2,
+  "harmful_precision": 0.5,
+  "harmful_recall": 0.5,
+  "inference_seconds_per_example": 0.0001027312500809785,
+  "mae_nats": 0.0007293273229151964,
+  "ood_fallbacks": 4,
+  "policies": {
+    "heuristic": {
+      "mean_regret_nats": 0.0001172469201264903,
+      "write_rate": 0.75
+    },
+    "oracle": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 0.5
+    },
+    "predictor": {
+      "mean_regret_nats": 0.000512919737957418,
+      "write_rate": 0.0
+    },
+    "retain": {
+      "mean_regret_nats": 0.000512919737957418,
+      "write_rate": 0.0
+    },
+    "shuffled": {
+      "mean_regret_nats": 0.000512919737957418,
+      "write_rate": 0.0
+    },
+    "write": {
+      "mean_regret_nats": 0.0001843396748881787,
+      "write_rate": 1.0
+    }
+  },
+  "raw": [
+    {
+      "chosen_write": false,
+      "effect": 0.0010826220968738198,
+      "prediction": -0.00017438344366382807,
+      "world_id": "validation-17-0000"
+    },
+    {
+      "chosen_write": false,
+      "effect": -0.00026837101904675364,
+      "prediction": -0.0002442887634970248,
+      "world_id": "validation-17-0001"
+    },
+    {
+      "chosen_write": false,
+      "effect": -0.0004689876805059612,
+      "prediction": 0.0002720773627515882,
+      "world_id": "validation-17-0002"
+    },
+    {
+      "chosen_write": false,
+      "effect": 0.0009690567385405302,
+      "prediction": 7.390019891317934e-05,
+      "world_id": "validation-17-0003"
+    }
+  ],
+  "rmse_nats": 0.0008560264832340181,
+  "sign_ranking_accuracy": 0.5
+}

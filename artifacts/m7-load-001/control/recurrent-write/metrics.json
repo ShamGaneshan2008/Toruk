@@ -1,0 +1,77 @@
+{
+  "active_predictor_parameters": 0,
+  "answer_coverage": 0.375,
+  "checkpoint_sha256": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "qa",
+    "seed": 23,
+    "slots": 4,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "recurrent"
+  },
+  "data": "bb21c925d2d28c461f1303267aaa6f9ef91afbd1f385f2c1d67cc306de00f072",
+  "decision_point": "last observed-history boundary only",
+  "exact_accuracy": 0.08333333333333333,
+  "examples": 24,
+  "final_boundaries": 4,
+  "final_boundary_writes": 4,
+  "generated_tokens": 384,
+  "groups": {
+    "ambiguous": {
+      "accuracy": 0.5,
+      "correct": 2,
+      "examples": 4
+    },
+    "corrected": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unchanged_entity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unknown": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_date": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_number": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    }
+  },
+  "history_lm_loss": 5.204699671285917,
+  "inference_forward_tokens": 16212,
+  "inference_seconds": 1.726338099964778,
+  "model_load_seconds": 0.017353300005197525,
+  "observed_history_tokens": 2736,
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "peak_memory_bytes": null,
+  "policy": "write",
+  "predictor_fallbacks": 0,
+  "predictor_sha256": null,
+  "question_tokens": 408,
+  "scoring_forward_tokens": 490,
+  "teacher_forced_answer_loss": 3.8455750042537473,
+  "uncertainty": "single-seed tiny validation pilot"
+}

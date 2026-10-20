@@ -1,0 +1,390 @@
+{
+  "answer_coverage": 0.0,
+  "data_seed_mean": 0.0,
+  "data_seed_sample_sd": 0.0,
+  "exact_accuracy": 0.3333333333333333,
+  "examples": 24,
+  "failure_examples": [
+    {
+      "answer": "?",
+      "evidence_distance_tokens": 238,
+      "gold": "green",
+      "group": "corrected",
+      "world_id": "m7-117-40-control"
+    },
+    {
+      "answer": "?",
+      "evidence_distance_tokens": 479,
+      "gold": "Ada",
+      "group": "unchanged_entity",
+      "world_id": "m7-117-40-control"
+    },
+    {
+      "answer": "?",
+      "evidence_distance_tokens": 445,
+      "gold": "2026-10-21",
+      "group": "unrelated_date",
+      "world_id": "m7-117-40-control"
+    },
+    {
+      "answer": "?",
+      "evidence_distance_tokens": 418,
+      "gold": "50",
+      "group": "unrelated_number",
+      "world_id": "m7-117-40-control"
+    },
+    {
+      "answer": "?",
+      "evidence_distance_tokens": 262,
+      "gold": "red",
+      "group": "corrected",
+      "world_id": "m7-117-41-control"
+    },
+    {
+      "answer": "?",
+      "evidence_distance_tokens": 502,
+      "gold": "Di",
+      "group": "unchanged_entity",
+      "world_id": "m7-117-41-control"
+    }
+  ],
+  "groups": {
+    "ambiguous": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "examples": 4
+    },
+    "corrected": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unchanged_entity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unknown": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "examples": 4
+    },
+    "unrelated_date": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_number": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    }
+  },
+  "matches_superseded_value": 0,
+  "nonabstaining_uncertain_errors": 0,
+  "per_data_seed": {
+    "117": {
+      "answer_coverage": 0.0,
+      "exact_accuracy": 0.3333333333333333,
+      "examples": 12,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 1.0,
+          "correct": 2,
+          "examples": 2
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        },
+        "unknown": {
+          "accuracy": 1.0,
+          "correct": 2,
+          "examples": 2
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        }
+      },
+      "primary": 0.0
+    },
+    "118": {
+      "answer_coverage": 0.0,
+      "exact_accuracy": 0.3333333333333333,
+      "examples": 12,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 1.0,
+          "correct": 2,
+          "examples": 2
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        },
+        "unknown": {
+          "accuracy": 1.0,
+          "correct": 2,
+          "examples": 2
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 2
+        }
+      },
+      "primary": 0.0
+    }
+  },
+  "primary": 0.0,
+  "resources": {
+    "active_predictor_parameters": 0,
+    "derived_inference_forward_calls": 428,
+    "derived_memory_proposals": 0,
+    "derived_offline_scoring_forward_calls": 106,
+    "final_boundaries": 0,
+    "final_boundary_writes": 0,
+    "forwarded_positions_per_second": 34543.27546684672,
+    "generated_tokens": 384,
+    "history_lm_loss": 5.3730554538799415,
+    "history_tokens_including_bos": 2736,
+    "inference_forward_tokens": 27312,
+    "inference_seconds": 0.7906604000600055,
+    "memory_state_bytes": 0,
+    "model_load_seconds": 0.027490899999975227,
+    "model_parameters": 44096,
+    "offline_answer_forward_tokens": 6784,
+    "predictor_fallbacks": 0,
+    "question_tokens": 408,
+    "teacher_forced_answer_loss": 3.908917818429335
+  },
+  "strata": {
+    "corrections": {
+      "3": {
+        "correct": 8,
+        "examples": 24,
+        "known_correct": 0,
+        "known_examples": 16
+      }
+    },
+    "distractors": {
+      "2": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      },
+      "3": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      },
+      "4": {
+        "correct": 4,
+        "examples": 12,
+        "known_correct": 0,
+        "known_examples": 8
+      }
+    },
+    "evidence_distance_tokens": {
+      "143": {
+        "correct": 1,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 0
+      },
+      "173": {
+        "correct": 1,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 0
+      },
+      "194": {
+        "correct": 1,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 0
+      },
+      "197": {
+        "correct": 1,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 0
+      },
+      "209": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "238": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "260": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "262": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "386": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "413": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "418": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "438": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "441": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "445": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "447": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "465": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "468": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "479": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "499": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "502": {
+        "correct": 0,
+        "examples": 1,
+        "known_correct": 0,
+        "known_examples": 1
+      },
+      "None": {
+        "correct": 4,
+        "examples": 4,
+        "known_correct": 0,
+        "known_examples": 0
+      }
+    },
+    "history_tokens": {
+      "649": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      },
+      "683": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      },
+      "700": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      },
+      "704": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      }
+    },
+    "known_facts": {
+      "6": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      },
+      "7": {
+        "correct": 2,
+        "examples": 6,
+        "known_correct": 0,
+        "known_examples": 4
+      },
+      "8": {
+        "correct": 4,
+        "examples": 12,
+        "known_correct": 0,
+        "known_examples": 8
+      }
+    }
+  },
+  "training_seed_sd": null
+}

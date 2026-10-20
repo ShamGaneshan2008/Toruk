@@ -1,0 +1,28 @@
+..F.                                                                     [100%]
+================================== FAILURES ===================================
+___________ test_session_commit_parity_reset_clone_and_independence ___________
+
+    def test_session_commit_parity_reset_clone_and_independence():
+        model = tiny()
+        session = Session(model)
+        inputs = [1, 10, 11, 12, 13, 14]
+        manual_logits, memory, _ = model(torch.tensor([inputs[:4]]), model.initial_state())
+        first = session.consume(inputs[:4])
+        torch.testing.assert_close(first, manual_logits[0, -1], rtol=0, atol=0)
+>       torch.testing.assert_close(session.memory, memory, rtol=0, atol=0)
+E       AssertionError: Tensor-likes are not equal!
+E       
+E       Mismatched elements: 12 / 16 (75.0%)
+E       Greatest absolute difference: 3.725290298461914e-08 at index (0, 0, 7)
+E       Greatest relative difference: 0.00022123953385744244 at index (0, 0, 5)
+
+tests\test_recurrent.py:68: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368
+  C:\Users\susee\VScode Project\Toruk\.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+    cpu = _conversion_method_template(device=torch.device("cpu"))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_recurrent.py::test_session_commit_parity_reset_clone_and_independence
+1 failed, 3 passed, 1 warning in 6.31s

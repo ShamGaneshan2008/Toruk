@@ -1,0 +1,77 @@
+{
+  "active_predictor_parameters": 0,
+  "answer_coverage": 0.25,
+  "checkpoint_sha256": "52e2959b7891ffe7fc9ee6024cd9e2c1090ced256daf821e0b18470ad4625467",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "qa",
+    "seed": 23,
+    "slots": 8,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "recurrent"
+  },
+  "data": "ab8e92396ff455fb5785d182121e34e17faa52acd2e32ce201c761b4a2847944",
+  "decision_point": "last observed-history boundary only",
+  "exact_accuracy": 0.125,
+  "examples": 24,
+  "final_boundaries": 4,
+  "final_boundary_writes": 4,
+  "generated_tokens": 384,
+  "groups": {
+    "ambiguous": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "examples": 4
+    },
+    "corrected": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unchanged_entity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unknown": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_date": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_number": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    }
+  },
+  "history_lm_loss": 5.222757493870641,
+  "inference_forward_tokens": 16692,
+  "inference_seconds": 1.9500212999701034,
+  "model_load_seconds": 0.02126690000295639,
+  "observed_history_tokens": 3216,
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "peak_memory_bytes": null,
+  "policy": "write",
+  "predictor_fallbacks": 0,
+  "predictor_sha256": null,
+  "question_tokens": 408,
+  "scoring_forward_tokens": 490,
+  "teacher_forced_answer_loss": 3.842975674935107,
+  "uncertainty": "single-seed tiny validation pilot"
+}

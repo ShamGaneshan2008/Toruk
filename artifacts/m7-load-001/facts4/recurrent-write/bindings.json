@@ -1,0 +1,50 @@
+{
+  "data": "ab8e92396ff455fb5785d182121e34e17faa52acd2e32ce201c761b4a2847944",
+  "model": {
+    "checkpoint": "recurrent/checkpoint.pt",
+    "checkpoint_sha256": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+    "policy": "write",
+    "predictor": null,
+    "predictor_sha256": null,
+    "training": {
+      "checkpoint_sha256": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+      "config": {
+        "answer_weight": 1.0,
+        "batch_worlds": 1,
+        "lm_weight": 0.1,
+        "lr": 0.003,
+        "max_segments": 32,
+        "model": {
+          "context": 64,
+          "heads": 4,
+          "layers": 2,
+          "vocab_size": 259,
+          "width": 32
+        },
+        "objective": "qa",
+        "seed": 23,
+        "slots": 4,
+        "unroll": "whole bounded document; no live-graph steps",
+        "variant": "recurrent"
+      },
+      "data": {
+        "train": "eca6f82580ff192c74140c4da9f9729fb1e5c851dc4377096e7a26b516f6aa05",
+        "validation": "a255bb245e457cbf6c3bff617c85d9876f5fe467bcad421c1a5bc6ecf26956e6"
+      },
+      "memory_state_bytes": 512,
+      "model_input_token_evaluations": 7137,
+      "package_sha256": "d59cb1e1ebc32f0affe9e87b2e5365b7212b8ae641c545a326d7c80493d1cd95",
+      "parameters": 57088,
+      "peak_memory_bytes": null,
+      "seed": 23,
+      "steps_this_invocation": 12,
+      "tokens_per_second": 4585.652234995816,
+      "total_steps": 12,
+      "training_seconds": 1.556376199994702,
+      "valid_targets": 5973,
+      "variant": "recurrent"
+    }
+  },
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "protocol_sha256": "0eb89653d13f19a79c0c48091c9711d9d84b9fefc11b9fcc7f2d8e82e1ba6838"
+}

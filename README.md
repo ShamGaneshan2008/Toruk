@@ -1,15 +1,21 @@
 # Toruk-LM
 
 `toruk_lm` is the Python package for the Toruk-LM research model family.
-This working tree implements the **ordinary causal LM foundation**. M2's
-controlled-world benchmark and M3's recurrent memory are **not implemented**.
-The initial repository contained only a PyCharm starter, so the requested M3
-work stopped at its earliest unmet dependency, as required by the task.
+This working tree includes an ordinary causal LM foundation and research
+prototypes for controlled synthetic tasks, recurrent memory, effect prediction,
+and correction/preservation training. Bounded validation pipelines are implemented;
+useful memory, reliable revision and resource advantages are not established.
 
 Implemented: byte tokenizer, causal decoder, shifted/masked next-token loss,
 deterministic CPU training, checkpoint reload/resume, local-context greedy
 generation, text-loss evaluation, raw continuations, and a real CLI pipeline.
-No effect predictor or protected revisions exist.
+Protected revisions are not implemented.
+
+Earlier prerequisite audits recorded missing implementations. Subsequent M6
+work implements the dependency chain and a preliminary validation study; full
+matched-resource comparisons remain outstanding. Bounded exploratory held-out
+studies have been executed; generalization and capacity advantages remain unestablished.
+See the internal milestone and experiment records for measured status.
 
 ## Install and verify
 

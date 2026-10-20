@@ -1,0 +1,47 @@
+{
+  "checkpoint_sha256": "f3f1f7ebf0923f5a6c1bba966ac92fcd3ec0a3148c1dd405cd09855ae37b16f1",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "qa",
+    "seed": 23,
+    "slots": 4,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "recurrent"
+  },
+  "data": {
+    "train": "4fc7e18d86034b0a8b5864964235460ac6298591ad83f52cf389083012d1f641",
+    "validation": "d1477b5fd6fbadb0be4b5f990f30865c0a827073f8d5f159317a2829ca5ca189"
+  },
+  "losses": [
+    {
+      "gradient_norm": 1.367541790008545,
+      "loss": 6.503725051879883,
+      "step": 1,
+      "world_id": "train-17-0000",
+      "writer_gradient_norm": 0.08388204872608185
+    }
+  ],
+  "memory_state_bytes": 512,
+  "model_input_token_evaluations": 557,
+  "package_sha256": "b85c8e26f75ed7ce201d4aa30f1b3a040195dd03706e0a8144f58aa258b265e0",
+  "parameters": 57088,
+  "peak_memory_bytes": null,
+  "seed": 23,
+  "steps_this_invocation": 1,
+  "tokens_per_second": 3660.348567432572,
+  "total_steps": 1,
+  "training_seconds": 0.1521713000111049,
+  "valid_targets": 460,
+  "variant": "recurrent"
+}

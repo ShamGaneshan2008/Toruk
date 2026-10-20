@@ -1,0 +1,74 @@
+[
+  {
+    "cumulative_process_peak_bytes": 211251200,
+    "seconds": 0.013590700007625856,
+    "stage": "worlds",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328409088,
+    "seconds": 2.7109664999879897,
+    "stage": "profile-ordinary",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328409088,
+    "seconds": 0.4143577000068035,
+    "stage": "profile-recurrent",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 0.3337020000035409,
+    "stage": "train-ordinary",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 0.3333413000073051,
+    "stage": "eval-ordinary",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 0.2058995999977924,
+    "stage": "train-recurrent",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 1.0171806999860564,
+    "stage": "eval-recurrent",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 1.9155917999887606,
+    "stage": "recurrent-labels-train",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 1.8355574000015622,
+    "stage": "recurrent-labels-validation",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 0.2710344999941299,
+    "stage": "recurrent-fit-effect",
+    "status": "PASS"
+  },
+  {
+    "cumulative_process_peak_bytes": 328839168,
+    "seconds": 0.036424000005354173,
+    "stage": "recurrent-effect-metrics",
+    "status": "PASS"
+  },
+  {
+    "error": "ValueError('use a fresh evaluation directory')",
+    "seconds": 0.002202699994086288,
+    "stage": "eval-recurrent-predictor",
+    "status": "FAIL"
+  }
+]

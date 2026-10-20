@@ -1,0 +1,50 @@
+{
+  "data": "0f23e5b2dcb079188598b548accdcbcd176eeb2a78ff3c119f4dcf07a51252d0",
+  "model": {
+    "checkpoint": "revision/checkpoint.pt",
+    "checkpoint_sha256": "c7f78c965a9e58671e12d59faf7bd9db454ebeb7ac3b9720d34ba848ef58fc99",
+    "policy": "predictor",
+    "predictor": "revision-effect-model/predictor.pt",
+    "predictor_sha256": "8acdeb5a9968b285ac89508a71ddedc8fe11f2246aef8745ce5f8158041d7055",
+    "training": {
+      "checkpoint_sha256": "c7f78c965a9e58671e12d59faf7bd9db454ebeb7ac3b9720d34ba848ef58fc99",
+      "config": {
+        "answer_weight": 1.0,
+        "batch_worlds": 1,
+        "lm_weight": 0.1,
+        "lr": 0.003,
+        "max_segments": 32,
+        "model": {
+          "context": 64,
+          "heads": 4,
+          "layers": 2,
+          "vocab_size": 259,
+          "width": 32
+        },
+        "objective": "revision",
+        "seed": 23,
+        "slots": 4,
+        "unroll": "whole bounded document; no live-graph steps",
+        "variant": "recurrent"
+      },
+      "data": {
+        "train": "eca6f82580ff192c74140c4da9f9729fb1e5c851dc4377096e7a26b516f6aa05",
+        "validation": "a255bb245e457cbf6c3bff617c85d9876f5fe467bcad421c1a5bc6ecf26956e6"
+      },
+      "memory_state_bytes": 512,
+      "model_input_token_evaluations": 7137,
+      "package_sha256": "d59cb1e1ebc32f0affe9e87b2e5365b7212b8ae641c545a326d7c80493d1cd95",
+      "parameters": 57088,
+      "peak_memory_bytes": null,
+      "seed": 23,
+      "steps_this_invocation": 12,
+      "tokens_per_second": 4621.094230025346,
+      "total_steps": 12,
+      "training_seconds": 1.5444394000078319,
+      "valid_targets": 5973,
+      "variant": "recurrent"
+    }
+  },
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "protocol_sha256": "d5a8e478457e4208669171f7bc79abfec0eb12d11ffec275aeed43ba7e2fcc3d"
+}

@@ -1,0 +1,19 @@
+{
+  "answer_weight": 1.0,
+  "batch_worlds": 1,
+  "lm_weight": 0.1,
+  "lr": 0.003,
+  "max_segments": 32,
+  "model": {
+    "context": 64,
+    "heads": 4,
+    "layers": 2,
+    "vocab_size": 259,
+    "width": 32
+  },
+  "objective": "qa",
+  "seed": 23,
+  "slots": 2,
+  "unroll": "whole bounded document; no live-graph steps",
+  "variant": "recurrent"
+}
