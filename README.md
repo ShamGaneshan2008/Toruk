@@ -62,6 +62,10 @@ The CLI supports fixture generation, ordinary and recurrent model training, eval
 
 For local checks, install `python -m pip install -e ".[dev]"` and run `python scripts/verify.py`.
 
+The [reproducibility guide](docs/reproducibility.md) provides versioned config
+validation, a tiny CPU smoke run, and artifact rescoring commands. These verify
+execution and traceability; they do not establish a memory or accuracy advantage.
+
 ## Evaluation principles
 
 Language quality and factual answers require different measurements. Toruk aims to report ordinary-text loss separately from answers generated without seeing reference answers. Controlled evaluations cover recall, corrections, unchanged facts and unknown answers; reliable learning and capacity boundaries remain research goals.

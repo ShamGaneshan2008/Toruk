@@ -19,6 +19,24 @@ def parser() -> argparse.ArgumentParser:
     root = argparse.ArgumentParser(prog="toruk", description="Toruk-LM research foundation")
     sub = root.add_subparsers(dest="command", required=True)
     sub.add_parser("diagnose", help="report actual runtime and CUDA availability")
+    repro = sub.add_parser("reproduce", help="run a versioned bounded CPU reproduction config")
+    repro.add_argument("--config", type=Path, required=True)
+    repro.add_argument("--output", type=Path, required=True)
+    valid = sub.add_parser("validate-config", help="validate a versioned reproduction config")
+    valid.add_argument("--config", type=Path, required=True)
+    audit = sub.add_parser(
+        "audit-evidence", help="validate sealed evidence and rescore raw answers"
+    )
+    audit.add_argument("--parent", type=Path, required=True)
+    audit.add_argument("--handoff", type=Path, required=True)
+    audit.add_argument("--studies", type=Path, nargs="*", default=[])
+    audit.add_argument("--output", type=Path, required=True)
+    compare = sub.add_parser(
+        "compare-replay", help="require exact generated answers and score parity"
+    )
+    compare.add_argument("--reference", type=Path, required=True)
+    compare.add_argument("--reproduction", type=Path, required=True)
+    compare.add_argument("--output", type=Path, required=True)
     data = sub.add_parser("make-fixture", help="generate document-separated smoke-test text")
     data.add_argument("--output", type=Path, required=True)
     data.add_argument("--seed", type=int, default=17)
@@ -139,7 +157,23 @@ def main() -> None:
     args = root.parse_args()
     result: dict[str, Any]
     try:
-        if args.command == "diagnose":
+        if args.command == "compare-replay":
+            from toruk_lm.reproducibility import compare_replay
+
+            result = compare_replay(args.reference, args.reproduction, args.output)
+        elif args.command == "validate-config":
+            from toruk_lm.reproducibility import validate_config
+
+            result = {"status": "PASS", "config": validate_config(args.config)}
+        elif args.command == "reproduce":
+            from toruk_lm.reproducibility import reproduce
+
+            result = reproduce(args.config, args.output)
+        elif args.command == "audit-evidence":
+            from toruk_lm.reproducibility import audit_evidence
+
+            result = audit_evidence(args.parent, args.handoff, args.studies, args.output)
+        elif args.command == "diagnose":
             result = {
                 "python": platform.python_version(),
                 "platform": platform.platform(),
@@ -171,6 +205,11 @@ def main() -> None:
             from toruk_lm.generalization import evaluate_cell
 
             protocol = json.loads(args.protocol.read_text(encoding="utf-8"))
+            if args.method not in protocol.get("methods", {}):
+                raise ValueError(
+                    f"unknown protocol method {args.method!r}; choose from "
+                    + ", ".join(sorted(protocol.get("methods", {})))
+                )
             result = evaluate_cell(
                 args.parent, protocol["methods"][args.method], args.data, args.protocol, args.output
             )
@@ -266,6 +305,8 @@ def main() -> None:
                 args.max_new_tokens,
             )
             result = {"generated": ByteTokenizer().decode(generated), "ids": generated}
-    except (ValueError, FloatingPointError, FileNotFoundError) as error:
+    except KeyError as error:
+        root.error(f"malformed configuration/artifact: missing required field {error}")
+    except (ValueError, FloatingPointError, FileNotFoundError, TimeoutError) as error:
         root.error(str(error))
     print(json.dumps(result, indent=2))

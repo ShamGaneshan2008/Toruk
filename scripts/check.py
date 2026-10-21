@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import time
@@ -13,10 +14,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def sources():
-    paths = [ROOT / "pyproject.toml", ROOT / "main.py", ROOT / ".gitignore"]
-    for directory in ("src", "tests", "scripts", ".github"):
+    paths = [ROOT / name for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore")]
+    for directory in ("src", "tests", "scripts", ".github", "configs"):
         paths.extend((ROOT / directory).rglob("*.py"))
         paths.extend((ROOT / directory).rglob("*.yml"))
+        paths.extend((ROOT / directory).rglob("*.json"))
     return sorted(p for p in paths if p.is_file() and "__pycache__" not in p.parts)
 
 
@@ -26,7 +28,11 @@ def source_identity():
         for p in sources()
     }
     fingerprint = hashlib.sha256(json.dumps(files, sort_keys=True).encode()).hexdigest()
-    base = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    base = subprocess.check_output(
+        ["git", "-c", f"safe.directory={ROOT.as_posix()}", "rev-parse", "HEAD"],
+        cwd=ROOT,
+        text=True,
+    ).strip()
     return {"base_commit": base, "source_sha256": fingerprint, "source_files": files}
 
 
@@ -42,6 +48,10 @@ def main():
     if not command:
         parser.error("command required after --")
     directory = ROOT / "artifacts/checks"
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", args.label):
+        parser.error("label must contain only letters, numbers, dots, dashes and underscores")
+    if any((directory / f"{args.label}.{extension}").exists() for extension in ("log", "json")):
+        parser.error("check label already exists; use a fresh label to preserve prior evidence")
     directory.mkdir(parents=True, exist_ok=True)
     record = {
         **source_identity(),
@@ -63,8 +73,15 @@ def main():
         output = completed.stdout + completed.stderr
         code = completed.returncode
         record.update(status="PASS" if code == 0 else "FAIL", returncode=code)
-    except subprocess.TimeoutExpired:
-        output = f"Timed out after {args.timeout} seconds"
+    except subprocess.TimeoutExpired as error:
+
+        def decoded(value):
+            return (
+                value.decode("utf-8", errors="replace") if isinstance(value, bytes) else value or ""
+            )
+
+        output = decoded(error.stdout) + decoded(error.stderr)
+        output += f"\nTimed out after {args.timeout} seconds"
         record.update(status="FAIL", returncode=None)
         code = 1
     record["seconds"] = time.perf_counter() - started

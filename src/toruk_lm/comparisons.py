@@ -4,6 +4,7 @@ import importlib
 import json
 import os
 import platform
+import sys
 import time
 from collections.abc import Callable
 from functools import partial
@@ -41,7 +42,7 @@ EXPECTED_RESULTS = {
 
 
 def process_peak_bytes() -> int | None:
-    if os.name == "nt":
+    if sys.platform == "win32":
         import ctypes
         from ctypes import wintypes
 

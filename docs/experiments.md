@@ -1,5 +1,19 @@
 # Experiment registry
 
+## 2026-10-21 M8 evidence audit
+
+Current branch `main`, base `34d3037310050bd8e5dd2e52c2566c2fd9a21b78`.
+Historical entries below retain the revisions and statuses recorded at their time.
+The M8 audit verified and rescored 59 retained M6/M7 evaluations (1,416 answers).
+Fresh inference reproduced 336/336 M6 answers and two selected M7 cells (48/48)
+exactly. This is a bounded reproduction of negative results, not new training or
+a successful generalization result. Full M7 regeneration and primary retraining
+are NOT_REPRODUCED in M8. All current known-fact conclusions remain at the floor.
+Local 34-test verification and Windows/Linux types pass. Exact-HEAD remote CI
+failed before the uncommitted platform correction; it is not green remotely.
+Internal draft, detailed cost accounting and unreleased evidence remain local.
+No commit, push, publication, final-test scoring or paid compute was performed.
+
 ## foundation-001 — ordinary-LM prerequisite, validation only
 
 Run date: 2026-10-19 (Asia/Calcutta). Base commit:

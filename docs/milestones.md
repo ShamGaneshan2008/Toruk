@@ -15,6 +15,7 @@ Ancestor AGENTS.md locations were checked; none were present. `main.py` is kept.
 | M5 correction and preservation | Implemented separate objectives and final-write prediction; pilot known-fact correction/preservation accuracy 0%; research hypothesis unestablished |
 | M6 controlled comparisons | PARTIAL: 14 validation configurations completed; all 0% primary accuracy; one seed, final test closed, exact resource matching outstanding |
 | M7 generalization/capacity | PARTIAL: M6 replay 14/14 exact; 45 exploratory held-out evaluations completed, all 0% known-fact accuracy; capacity onset unidentifiable |
+| M8 reproducibility and research audit | PARTIAL: sealed evidence rescored; M6 and two selected M7 cells replayed; internal draft prepared; full reruns, release permissions and independent replication outstanding |
 | Protected revisions | Not started |
 
 The following foundation handoff and audit sections are historical; the recovery
@@ -93,3 +94,15 @@ Exact-HEAD historical remote foundation CI passes; current edits NOT_RUN remotel
 See [frozen protocol](research/m7-protocol.md), [results and M8 gaps](research/m7-results.md),
 `artifacts/m7-analysis.json` and `artifacts/m7-handoff`. Prior edits/runs preserved;
 no commit, push, branch creation or paid compute.
+
+## 2026-10-21 M8 audit
+
+The current base is `34d3037310050bd8e5dd2e52c2566c2fd9a21b78` on `main`.
+Earlier references to an unpushed M7 tree and older HEAD are historical.
+M6/M7 remain partial negative research studies. M8 independently rescored 1,416
+retained answers and reproduced all 336 M6 answers plus 48 selected M7 answers
+exactly. No useful-memory, generalization, novelty or efficiency claim follows.
+The remaining M7 cells and primary retraining were not rerun in this audit.
+Current local tests pass (34 tests); exact-HEAD remote CI failed Linux types,
+and the preserved local platform fix remains unpushed. See the reproducibility
+guide for supported public commands; detailed M8 review and draft stay local.
