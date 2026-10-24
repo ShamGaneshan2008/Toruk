@@ -19,4 +19,7 @@ jobs:
       - run: python -m ruff format --check src tests scripts
       - run: python -m mypy
       - run: python -m pytest -q
+      - run: python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke
+      - run: python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt
+      - run: python -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables
       - run: python -m build --no-isolation

@@ -1,7 +1,7 @@
 <div align="center">
   <h1>TORUK</h1>
   <p><strong>Remember what matters. Revise what changed.</strong></p>
-  <p>An experimental language model exploring useful memory under fixed resource limits.</p>
+  <p>An ordinary causal language-model foundation. Learned memory experiments are planned.</p>
   <p><img src="https://img.shields.io/badge/status-research-41627A" alt="Status: research" /></p>
 </div>
 
@@ -17,7 +17,7 @@ The current repository provides a compact causal language model as a research fo
 
 Long histories contain both useful facts and distractions. Some facts later change; others must survive those changes. A fixed memory budget makes every update a choice: what should remain available, what should be revised, and what must not be disturbed?
 
-Toruk studies those choices through controlled comparisons with simpler language models, alongside measurements of the resources each approach uses.
+Toruk aims to study those choices through controlled comparisons with simpler language models, alongside measurements of the resources each approach uses.
 
 ## Research focus
 
@@ -32,7 +32,7 @@ Toruk studies those choices through controlled comparisons with simpler language
 
 ## What Toruk investigates
 
-The project explores memory within the model's computation, with explicit capacity limits. It tests recall alongside correction and preservation, then compares any gains with simpler alternatives under the same evaluation rules. Selective memory management is a research direction, not an established capability of the current model.
+The project aims to explore memory within the model's computation, with explicit capacity limits. Planned experiments will test recall alongside correction and preservation, then compare any gains with simpler alternatives under the same evaluation rules. Selective memory management is a research direction, not an established capability of the current model.
 
 ## Development status
 
@@ -57,7 +57,24 @@ python -m toruk_lm --help
 python -m toruk_lm diagnose
 ```
 
-The CLI currently supports fixture generation, ordinary-LM training, evaluation, and text generation. It does not offer a recurrent-memory model. The package also installs the `toruk` command.
+The CLI supports fixture generation, ordinary-LM training, evaluation, text generation, manifest validation, and bounded reproduction. It does not offer a recurrent-memory model. The package also installs the `toruk` command.
+
+For a small CPU smoke run, use fresh output directories:
+
+```sh
+python -m toruk_lm reproduce --output runs/smoke
+python -m toruk_lm validate --manifest runs/smoke/data/manifest.json --config runs/smoke/config.json --checkpoint runs/smoke/train/checkpoint.pt
+python -m toruk_lm generate --checkpoint runs/smoke/train/checkpoint.pt --prompt "Field journal" --max-new-tokens 8
+python -m toruk_lm summarize --run runs/smoke --output runs/tables
+```
+
+Reproduction saves a checkpoint, predictions, metrics, tables and a checksum manifest.
+Use `--manifest` with individual training/evaluation commands to enforce dataset integrity.
+Ordinary-model training supports `--resume` at optimizer boundaries; use a fresh
+`--output`, identical data/settings, and a larger absolute `--steps` value.
+For development checks, install `python -m pip install -e ".[dev]"` and run
+`python scripts/verify.py` from a Git checkout. Each invocation saves fresh check records under
+`artifacts/checks`.
 
 ## Evaluation principles
 

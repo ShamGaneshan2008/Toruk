@@ -1,6 +1,7 @@
 """CPU training, safe-boundary checkpoints, local-window evaluation."""
 
 import math
+import pickle
 import platform
 import random
 import time
@@ -31,6 +32,12 @@ class TrainConfig:
     threads: int = 1
 
     def __post_init__(self) -> None:
+        if any(type(value) is not int for value in (self.seed, self.batch_size, self.threads)):
+            raise ValueError("seed, batch_size and threads must be integers")
+        if not -(2**63) <= self.seed < 2**64:
+            raise ValueError("seed must be in the supported torch seed range")
+        if type(self.learning_rate) not in (int, float):
+            raise ValueError("learning_rate must be a finite positive number")
         if (
             self.batch_size <= 0
             or self.threads <= 0
@@ -48,20 +55,115 @@ def setup(seed: int, threads: int) -> None:
 
 
 def load_checkpoint(path: Path) -> dict[str, Any]:
-    checkpoint: dict[str, Any] = torch.load(path, map_location="cpu", weights_only=True)
+    try:
+        checkpoint = torch.load(path, map_location="cpu", weights_only=True)
+    except (pickle.UnpicklingError, EOFError, RuntimeError) as error:
+        raise ValueError(f"cannot read checkpoint {path}: {error}") from error
+    if not isinstance(checkpoint, dict):
+        raise ValueError("checkpoint must be a dictionary")
     if checkpoint.get("format") != "toruk-ordinary-v1":
         raise ValueError("unsupported checkpoint format or recurrent/mid-document state")
     if checkpoint.get("tokenizer") != ByteTokenizer.fingerprint:
         raise ValueError("tokenizer identity mismatch")
+    required = {
+        "model_config",
+        "train_config",
+        "model",
+        "optimizer",
+        "scheduler",
+        "python_rng",
+        "torch_rng",
+        "datasets",
+        "next_step",
+        "data_progress",
+    }
+    missing = required - checkpoint.keys()
+    if missing:
+        raise ValueError(f"checkpoint missing fields: {', '.join(sorted(missing))}")
+    for key in ("model_config", "train_config", "model", "optimizer", "datasets", "data_progress"):
+        if not isinstance(checkpoint[key], dict):
+            raise ValueError(f"checkpoint {key} must be a dictionary")
+    if type(checkpoint["next_step"]) is not int or checkpoint["next_step"] < 0:
+        raise ValueError("checkpoint next_step must be a nonnegative integer")
+    if checkpoint["scheduler"] is not None:
+        raise ValueError("checkpoint scheduler is unsupported; expected fixed learning rate")
     return checkpoint
 
 
 def load_model(path: Path) -> CausalLM:
     checkpoint = load_checkpoint(path)
-    model = CausalLM(ModelConfig(**checkpoint["model_config"]))
-    model.load_state_dict(checkpoint["model"])
+    try:
+        config = ModelConfig(**checkpoint["model_config"])
+    except TypeError as error:
+        raise ValueError(f"invalid checkpoint model_config: {error}") from error
+    model = CausalLM(config)
+    try:
+        model.load_state_dict(checkpoint["model"])
+    except RuntimeError as error:
+        raise ValueError(f"checkpoint model state mismatch: {error}") from error
+    for name, parameter in model.named_parameters():
+        if not torch.isfinite(parameter).all():
+            raise ValueError(f"checkpoint contains nonfinite model weights: {name}")
     model.eval()
     return model
+
+
+def restore_training_state(
+    saved: dict[str, Any], model: CausalLM, optimizer: torch.optim.AdamW
+) -> None:
+    """Validate resumable AdamW/RNG state before using it for another update."""
+    state = saved["optimizer"]
+    groups = state.get("param_groups")
+    moments = state.get("state")
+    if not isinstance(groups, list) or len(groups) != 1 or not isinstance(moments, dict):
+        raise ValueError("checkpoint optimizer requires one param_groups entry and state")
+    group = groups[0]
+    if not isinstance(group, dict) or not isinstance(group.get("params"), list):
+        raise ValueError("invalid checkpoint optimizer parameter group")
+    indices = group["params"]
+    parameters = list(model.parameters())
+    if (
+        len(indices) != len(parameters)
+        or any(type(index) is not int for index in indices)
+        or len(set(indices)) != len(indices)
+        or set(moments) != set(indices)
+    ):
+        raise ValueError("checkpoint optimizer parameter/state identity mismatch")
+    for key, value in optimizer.defaults.items():
+        if group.get(key) != value:
+            raise ValueError(f"checkpoint optimizer setting mismatch: {key}")
+    for index, parameter in zip(indices, parameters, strict=True):
+        item = moments[index]
+        if not isinstance(item, dict):
+            raise ValueError("invalid checkpoint optimizer state")
+        for field in ("exp_avg", "exp_avg_sq"):
+            tensor = item.get(field)
+            if (
+                not isinstance(tensor, torch.Tensor)
+                or tensor.shape != parameter.shape
+                or tensor.dtype != parameter.dtype
+                or not torch.isfinite(tensor).all()
+            ):
+                raise ValueError(f"invalid checkpoint optimizer {field}")
+        step = item.get("step")
+        if not isinstance(step, torch.Tensor) or step.numel() != 1:
+            raise ValueError("invalid checkpoint optimizer step")
+        if step.item() != saved["next_step"]:
+            raise ValueError("checkpoint optimizer step disagrees with next_step")
+    if not isinstance(saved["python_rng"], tuple) or len(saved["python_rng"]) != 3:
+        raise ValueError("invalid checkpoint Python RNG state")
+    try:
+        random.Random().setstate(saved["python_rng"])
+        torch.Generator().set_state(saved["torch_rng"])
+    except (TypeError, ValueError, RuntimeError) as error:
+        raise ValueError(f"invalid checkpoint RNG state: {error}") from error
+    try:
+        model.load_state_dict(saved["model"])
+        optimizer.load_state_dict(state)
+    except (KeyError, TypeError, ValueError, RuntimeError) as error:
+        raise ValueError(f"incompatible checkpoint training state: {error}") from error
+    random.setstate(saved["python_rng"])
+    torch.set_rng_state(saved["torch_rng"])
 
 
 def evaluate_loss(model: CausalLM, path: Path, batch_size: int = 4) -> dict[str, Any]:
@@ -126,10 +228,7 @@ def train(
             "boundary": "after_optimizer_step; independent ordinary-LM windows",
         }:
             raise ValueError("unsupported data-progress/resume boundary")
-        model.load_state_dict(saved["model"])
-        optimizer.load_state_dict(saved["optimizer"])
-        random.setstate(saved["python_rng"])
-        torch.set_rng_state(saved["torch_rng"])
+        restore_training_state(saved, model, optimizer)
         next_step = saved["next_step"]
         if steps <= next_step:
             raise ValueError("steps must exceed checkpoint next_step")

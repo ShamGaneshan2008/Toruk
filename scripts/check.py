@@ -13,10 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def sources():
-    paths = [ROOT / "pyproject.toml", ROOT / "main.py", ROOT / ".gitignore"]
+    paths = [ROOT / name for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore")]
     for directory in ("src", "tests", "scripts", ".github"):
         paths.extend((ROOT / directory).rglob("*.py"))
         paths.extend((ROOT / directory).rglob("*.yml"))
+    paths.extend((ROOT / "configs").glob("*.json"))
     return sorted(p for p in paths if p.is_file() and "__pycache__" not in p.parts)
 
 
@@ -26,7 +27,10 @@ def source_identity():
         for p in sources()
     }
     fingerprint = hashlib.sha256(json.dumps(files, sort_keys=True).encode()).hexdigest()
-    base = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    base = None
+    # Source distributions need not have Git installed or belong to a checkout.
+    if (ROOT / ".git").exists():
+        base = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     return {"base_commit": base, "source_sha256": fingerprint, "source_files": files}
 
 
@@ -34,6 +38,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("label")
     parser.add_argument("--timeout", type=int, default=120)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "artifacts/checks")
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
     command = args.command
@@ -41,13 +46,15 @@ def main():
         command = command[1:]
     if not command:
         parser.error("command required after --")
-    directory = ROOT / "artifacts/checks"
+    directory = args.output_dir.resolve()
     directory.mkdir(parents=True, exist_ok=True)
+    if any((directory / f"{args.label}.{suffix}").exists() for suffix in ("log", "json")):
+        parser.error("check evidence already exists; select a fresh label or --output-dir")
     record = {
         **source_identity(),
         "command": command,
         "started_utc": datetime.now(UTC).isoformat(),
-        "evidence_path": f"artifacts/checks/{args.label}.log",
+        "evidence_path": str(directory / f"{args.label}.log"),
     }
     started = time.perf_counter()
     try:
@@ -63,8 +70,15 @@ def main():
         output = completed.stdout + completed.stderr
         code = completed.returncode
         record.update(status="PASS" if code == 0 else "FAIL", returncode=code)
-    except subprocess.TimeoutExpired:
-        output = f"Timed out after {args.timeout} seconds"
+    except subprocess.TimeoutExpired as error:
+
+        def decoded(value: str | bytes | None) -> str:
+            return (
+                value.decode("utf-8", errors="replace") if isinstance(value, bytes) else value or ""
+            )
+
+        output = decoded(error.stdout) + decoded(error.stderr)
+        output += f"\nTimed out after {args.timeout} seconds"
         record.update(status="FAIL", returncode=None)
         code = 1
     record["seconds"] = time.perf_counter() - started

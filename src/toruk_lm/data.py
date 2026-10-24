@@ -63,7 +63,17 @@ def make_fixture(directory: Path, seed: int = 17, documents: int = 60) -> dict[s
 
 
 def read_documents(path: Path) -> list[dict[str, str]]:
-    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
+    rows = []
+    for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        if not line.strip():
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError as error:
+            raise ValueError(f"{path}:{number}: invalid JSON: {error.msg}") from error
+        if not isinstance(row, dict):
+            raise ValueError(f"{path}:{number}: expected JSON object with string id and text")
+        rows.append(row)
     if not rows or any(
         not isinstance(row.get("id"), str) or not isinstance(row.get("text"), str) for row in rows
     ):

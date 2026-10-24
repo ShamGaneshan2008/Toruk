@@ -16,6 +16,11 @@ class ModelConfig:
     vocab_size: int = 259
 
     def __post_init__(self) -> None:
+        if any(
+            type(value) is not int
+            for value in (self.context, self.width, self.heads, self.layers, self.vocab_size)
+        ):
+            raise ValueError("model dimensions must be integers")
         if min(self.context, self.width, self.heads, self.layers) <= 0:
             raise ValueError("model dimensions must be positive")
         if self.width % self.heads:
