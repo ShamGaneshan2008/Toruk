@@ -130,6 +130,8 @@ def answer_loss(
 
 def load_controlled(path: Path) -> tuple[ControlledModel, dict[str, Any]]:
     saved: dict[str, Any] = torch.load(path, map_location="cpu", weights_only=True)
+    if not isinstance(saved, dict):
+        raise ValueError("controlled checkpoint must be a dictionary")
     if saved.get("format") != "toruk-controlled-v1" or saved.get("boundary") != "drained-document":
         raise ValueError("unsupported controlled checkpoint/resume boundary")
     if saved.get("tokenizer") != ByteTokenizer.fingerprint:
@@ -142,7 +144,13 @@ def load_controlled(path: Path) -> tuple[ControlledModel, dict[str, Any]]:
         model = CausalLM(config)
     else:
         raise ValueError("unknown model variant")
-    model.load_state_dict(saved["model"])
+    try:
+        model.load_state_dict(saved["model"])
+    except (RuntimeError, TypeError) as error:
+        raise ValueError(f"controlled checkpoint model state mismatch: {error}") from error
+    for name, parameter in model.named_parameters():
+        if not torch.isfinite(parameter).all():
+            raise ValueError(f"controlled checkpoint contains nonfinite model weights: {name}")
     model.eval()
     return model, saved
 
