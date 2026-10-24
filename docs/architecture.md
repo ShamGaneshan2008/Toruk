@@ -58,6 +58,10 @@ controlled checkpoint format is separate from ordinary checkpoints.
 `generalization.py` verifies the sealed M6 kernels and reproduces saved generated
 answers before allowing frozen-checkpoint M7 studies. Held-out manifests bind
 data, transformations, model/predictor hashes and protocols; evaluation-only
-datasets are rejected by training loaders. The original model, tokenizer,
-generation and scoring kernels are unchanged. Oracle/stratum analysis remains
-offline. See [M7 protocol](research/m7-protocol.md) for study scope and limits.
+datasets are rejected by training loaders. This describes the historical study's
+integrity requirements, not a guarantee that today's kernels match its archive.
+Current exact historical replay is blocked by archived-source identity mismatch
+and missing original weights; see [reproduction limits](reproducibility.md).
+Saved-output rescoring is distinct from new model inference. Oracle/stratum
+analysis remains offline. See [M7 protocol](research/m7-protocol.md) for study
+scope and limits.

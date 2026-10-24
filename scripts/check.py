@@ -88,6 +88,10 @@ def main():
         output += f"\nTimed out after {args.timeout} seconds"
         record.update(status="FAIL", returncode=None)
         code = 1
+    except OSError as error:
+        output = f"Could not start command: {type(error).__name__}: {error}\n"
+        record.update(status="FAIL", returncode=None)
+        code = 1
     record["seconds"] = time.perf_counter() - started
     (directory / f"{args.label}.log").write_text(output, encoding="utf-8")
     (directory / f"{args.label}.json").write_text(json.dumps(record, indent=2) + "\n")

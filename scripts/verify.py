@@ -77,6 +77,7 @@ def main():
         ],
         "build": ["-m", "build", "--no-isolation"],
         "diff-check": ["git", "diff", "--check"],
+        "staged-diff-check": ["git", "diff", "--cached", "--check"],
     }
     failures = []
     for label, args in commands.items():
