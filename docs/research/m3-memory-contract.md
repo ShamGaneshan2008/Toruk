@@ -1,5 +1,10 @@
 # M3 proposed recurrent-memory contract (not implemented)
 
+Historical design from the foundation audit. Subsequent M6 prerequisite work
+implemented a bounded subset with explicit deviations; see
+[actual M3 protocol](m3-implementation.md) and [measured results](m6-results.md).
+The original design below is preserved, not claimed to be implemented verbatim.
+
 Status: design only. The initial repository has no M1 or M2 implementation. The
 current changes establish the ordinary-LM prerequisite; this document is not
 evidence of recurrent-memory behavior or a completed M3.

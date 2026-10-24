@@ -1,0 +1,77 @@
+{
+  "active_predictor_parameters": 0,
+  "answer_coverage": 0.4583333333333333,
+  "checkpoint_sha256": "97be25b99a8d1004bef6f24a0f5625a06454e221e68fa611466f7c8e345bebff",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "qa",
+    "seed": 23,
+    "slots": 2,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "recurrent"
+  },
+  "data": "c6e2348c9aa31482c2d8597608ee65732b0713f2ab7f9f16affb29692cde6710",
+  "decision_point": "last observed-history boundary only",
+  "exact_accuracy": 0.041666666666666664,
+  "examples": 24,
+  "final_boundaries": 4,
+  "final_boundary_writes": 4,
+  "generated_tokens": 384,
+  "groups": {
+    "ambiguous": {
+      "accuracy": 0.25,
+      "correct": 1,
+      "examples": 4
+    },
+    "corrected": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unchanged_entity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unknown": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_date": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_number": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    }
+  },
+  "history_lm_loss": 5.21293075770548,
+  "inference_forward_tokens": 16692,
+  "inference_seconds": 2.30273369999486,
+  "model_load_seconds": 0.024748099996941164,
+  "observed_history_tokens": 3216,
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "peak_memory_bytes": null,
+  "policy": "write",
+  "predictor_fallbacks": 0,
+  "predictor_sha256": null,
+  "question_tokens": 408,
+  "scoring_forward_tokens": 490,
+  "teacher_forced_answer_loss": 3.8471497544702493,
+  "uncertainty": "single-seed tiny validation pilot"
+}

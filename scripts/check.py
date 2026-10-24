@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import time
@@ -14,10 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def sources():
     paths = [ROOT / name for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore")]
-    for directory in ("src", "tests", "scripts", ".github"):
+    for directory in ("src", "tests", "scripts", ".github", "configs"):
         paths.extend((ROOT / directory).rglob("*.py"))
         paths.extend((ROOT / directory).rglob("*.yml"))
-    paths.extend((ROOT / "configs").glob("*.json"))
+        paths.extend((ROOT / directory).rglob("*.json"))
     return sorted(p for p in paths if p.is_file() and "__pycache__" not in p.parts)
 
 
@@ -30,7 +31,11 @@ def source_identity():
     base = None
     # Source distributions need not have Git installed or belong to a checkout.
     if (ROOT / ".git").exists():
-        base = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+        base = subprocess.check_output(
+            ["git", "-c", f"safe.directory={ROOT.as_posix()}", "rev-parse", "HEAD"],
+            cwd=ROOT,
+            text=True,
+        ).strip()
     return {"base_commit": base, "source_sha256": fingerprint, "source_files": files}
 
 
@@ -47,6 +52,8 @@ def main():
     if not command:
         parser.error("command required after --")
     directory = args.output_dir.resolve()
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", args.label):
+        parser.error("label must contain only letters, numbers, dots, dashes and underscores")
     directory.mkdir(parents=True, exist_ok=True)
     if any((directory / f"{args.label}.{suffix}").exists() for suffix in ("log", "json")):
         parser.error("check evidence already exists; select a fresh label or --output-dir")

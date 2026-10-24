@@ -1,0 +1,77 @@
+{
+  "active_predictor_parameters": 0,
+  "answer_coverage": 0.0,
+  "checkpoint_sha256": "ac440c58734503426fe7b1b194baf0d2a43e1042f66d19974e3d0249a3c2f76d",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "qa",
+    "seed": 23,
+    "slots": 4,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "ordinary"
+  },
+  "data": "e7b4a59600b9dc21fccbadef536854af5877bcf15bf0789e94f9524e15495cda",
+  "decision_point": "last observed-history boundary only",
+  "exact_accuracy": 0.3333333333333333,
+  "examples": 24,
+  "final_boundaries": 0,
+  "final_boundary_writes": 0,
+  "generated_tokens": 384,
+  "groups": {
+    "ambiguous": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "examples": 4
+    },
+    "corrected": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unchanged_entity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unknown": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "examples": 4
+    },
+    "unrelated_date": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_number": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    }
+  },
+  "history_lm_loss": 5.3730554538799415,
+  "inference_forward_tokens": 27312,
+  "inference_seconds": 0.7307388000190258,
+  "model_load_seconds": 0.015560500003630295,
+  "observed_history_tokens": 2736,
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "peak_memory_bytes": null,
+  "policy": "write",
+  "predictor_fallbacks": 0,
+  "predictor_sha256": null,
+  "question_tokens": 408,
+  "scoring_forward_tokens": 6784,
+  "teacher_forced_answer_loss": 3.908917818429335,
+  "uncertainty": "single-seed tiny validation pilot"
+}

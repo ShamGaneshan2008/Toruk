@@ -1,0 +1,583 @@
+{
+  "status": "PARTIAL; bounded validation study, not final matched-resource M6",
+  "results": {
+    "ordinary-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.3333333333333333,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 1.0,
+          "correct": 4,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 1.0,
+          "correct": 4,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 0.9645832999522099,
+      "inference_forward_tokens": 27258,
+      "metrics_sha256": "b149aedc9cc9bf0b4b681675c6bb55a11929f682f6c78f8da26b250dc96a2121"
+    },
+    "recurrent-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.08333333333333333,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 3.329824800064671,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "424c86553cb8111cdc9802c75ceb091067148efc02002ddc5bd66e901cba25e8"
+    },
+    "recurrent-predictor": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.125,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.75,
+          "correct": 3,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "predictor",
+      "inference_seconds": 2.69718129998364,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "418e82af255c4d1defc3566f918a6957553821708989e135281ce8d2a09ffd0d"
+    },
+    "revision-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 3.7407363000238547,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "fd7f443226b721542d14a6f9845f15e27f317b24da37c9874ac43a809a038072"
+    },
+    "revision-predictor": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "predictor",
+      "inference_seconds": 3.2884025999956066,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "9b1b6f2d0c4e734d4dba83a28e9cabd5115139e81b43094002cc7f4209b100d0"
+    },
+    "revision-heuristic": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "heuristic",
+      "inference_seconds": 2.6946284000441665,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "9f60b19ef741287a4d7b1db5e0d72b9f2599b1d615e4f0b1b780ef5455fdf978"
+    },
+    "revision-random": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "random",
+      "inference_seconds": 3.4571644999814453,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "f6090ea52363d738054ee645d9cb5f924e92ba2e91ab7ad6f67950a4f530ed6b"
+    },
+    "revision-retain": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "retain",
+      "inference_seconds": 3.2926619999925606,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "1355623d5d380b2125aa3ac15fe59d2508db15e257c079c853acabba90c1ae26"
+    },
+    "revision-reset": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "reset",
+      "inference_seconds": 3.6839719000126934,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "1deadf1f15e4749f1cb0768c3370d41c87e2cb849e7b5e16ec65fc17547f26cb"
+    },
+    "no-correction-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 2.181778799975291,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "7bd38a509459dd8a462342d548cbf2bf08d0aafc121ec2ce52e38cda237d1099"
+    },
+    "no-preservation-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 3.441315400035819,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "2936b6a7082eb29b7d0e5656dde5b17cd09faee211b76352b8dbfff2e498d51e"
+    },
+    "slots2-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 2.301086599982227,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "049304c07bfab7149a71123c363d41ec39075f932dae7b96580e22fb7fb846e4"
+    },
+    "slots8-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.08333333333333333,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 2.5519854000012856,
+      "inference_forward_tokens": 16158,
+      "metrics_sha256": "377a154860a2c65e094155c00b6c7a69830bde6ee5b172cc17dc4e4f07bb76df"
+    },
+    "ordinary-wide-write": {
+      "primary_correction_preservation_macro": 0.0,
+      "exact_accuracy": 0.0,
+      "groups": {
+        "ambiguous": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "corrected": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unchanged_entity": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unknown": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_date": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        },
+        "unrelated_number": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "examples": 4
+        }
+      },
+      "seed": 23,
+      "policy": "write",
+      "inference_seconds": 1.3759304000122938,
+      "inference_forward_tokens": 27258,
+      "metrics_sha256": "b4c3e3d6d1854dc46b029ee6c6fb155eb7ea49ccd78507da9e6ff95a9fc217d7"
+    }
+  },
+  "elapsed_seconds": 87.34133880000445,
+  "evidence": "artifacts\\m6-validation-001"
+}
+C:\Users\susee\VScode Project\Toruk\.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))

@@ -1,0 +1,319 @@
+F401 [*] `hashlib` imported but unused
+ --> src\toruk_lm\comparisons.py:3:8
+  |
+1 | """Validation-only bounded protocol. No final-test evaluation or runtime oracle."""
+2 |
+3 | import hashlib
+  |        ^^^^^^^
+4 | import json
+5 | import os
+  |
+help: Remove unused import: `hashlib`
+  |
+2 |
+  - import hashlib
+3 | import json
+  |
+
+E501 Line too long (106 > 100)
+   --> src\toruk_lm\comparisons.py:153:101
+    |
+151 |         parameter_match="ordinary width40 sensitivity; approximate only",
+152 |         matching="equal world steps/probes; parameters, FLOPs and branch costs not matched",
+153 |         falsification="no joint accuracy improvement over heuristic, or correction/preservation tradeoff",
+    |                                                                                                     ^^^^^^
+154 |         package_sha256=package_fingerprint(),
+155 |     )
+    |
+
+B023 Function definition does not bind loop variable `run`
+   --> src\toruk_lm\comparisons.py:224:17
+    |
+222 |                 train,
+223 |                 validation,
+224 |                 run,
+    |                 ^^^
+225 |                 variant,
+226 |                 steps,
+    |
+
+B023 Function definition does not bind loop variable `variant`
+   --> src\toruk_lm\comparisons.py:225:17
+    |
+223 |                 validation,
+224 |                 run,
+225 |                 variant,
+    |                 ^^^^^^^
+226 |                 steps,
+227 |                 slots=slots,
+    |
+
+B023 Function definition does not bind loop variable `slots`
+   --> src\toruk_lm\comparisons.py:227:23
+    |
+225 |                 variant,
+226 |                 steps,
+227 |                 slots=slots,
+    |                       ^^^^^
+228 |                 config=ModelConfig(width=width),
+229 |                 objective=objective,
+    |
+
+B023 Function definition does not bind loop variable `width`
+   --> src\toruk_lm\comparisons.py:228:42
+    |
+226 |                 steps,
+227 |                 slots=slots,
+228 |                 config=ModelConfig(width=width),
+    |                                          ^^^^^
+229 |                 objective=objective,
+230 |             ),
+    |
+
+B023 Function definition does not bind loop variable `objective`
+   --> src\toruk_lm\comparisons.py:229:27
+    |
+227 |                 slots=slots,
+228 |                 config=ModelConfig(width=width),
+229 |                 objective=objective,
+    |                           ^^^^^^^^^
+230 |             ),
+231 |         )
+    |
+
+B023 Function definition does not bind loop variable `checkpoint`
+   --> src\toruk_lm\comparisons.py:236:17
+    |
+234 |             "eval-" + name,
+235 |             lambda: evaluate_controlled(
+236 |                 checkpoint, validation, output / (name + "-write"), answer_budget
+    |                 ^^^^^^^^^^
+237 |             ),
+238 |         )
+    |
+
+B023 Function definition does not bind loop variable `name`
+   --> src\toruk_lm\comparisons.py:236:51
+    |
+234 |             "eval-" + name,
+235 |             lambda: evaluate_controlled(
+236 |                 checkpoint, validation, output / (name + "-write"), answer_budget
+    |                                                   ^^^^
+237 |             ),
+238 |         )
+    |
+
+B023 Function definition does not bind loop variable `checkpoint`
+   --> src\toruk_lm\comparisons.py:246:21
+    |
+244 |                 name + "-labels-" + split,
+245 |                 lambda: paired_labels(
+246 |                     checkpoint,
+    |                     ^^^^^^^^^^
+247 |                     path,
+248 |                     output / (name + "-labels-" + split),
+    |
+
+B023 Function definition does not bind loop variable `path`
+   --> src\toruk_lm\comparisons.py:247:21
+    |
+245 |                 lambda: paired_labels(
+246 |                     checkpoint,
+247 |                     path,
+    |                     ^^^^
+248 |                     output / (name + "-labels-" + split),
+249 |                     split,
+    |
+
+B023 Function definition does not bind loop variable `name`
+   --> src\toruk_lm\comparisons.py:248:31
+    |
+246 |                     checkpoint,
+247 |                     path,
+248 |                     output / (name + "-labels-" + split),
+    |                               ^^^^
+249 |                     split,
+250 |                     limit=worlds,
+    |
+
+B023 Function definition does not bind loop variable `split`
+   --> src\toruk_lm\comparisons.py:248:51
+    |
+246 |                     checkpoint,
+247 |                     path,
+248 |                     output / (name + "-labels-" + split),
+    |                                                   ^^^^^
+249 |                     split,
+250 |                     limit=worlds,
+    |
+
+B023 Function definition does not bind loop variable `split`
+   --> src\toruk_lm\comparisons.py:249:21
+    |
+247 |                     path,
+248 |                     output / (name + "-labels-" + split),
+249 |                     split,
+    |                     ^^^^^
+250 |                     limit=worlds,
+251 |                     answer_budget=answer_budget,
+    |
+
+B023 Function definition does not bind loop variable `name`
+   --> src\toruk_lm\comparisons.py:257:42
+    |
+255 |         stage(
+256 |             name + "-fit-effect",
+257 |             lambda: fit_effect(output / (name + "-labels-train/labels.json"), predictor, 100),
+    |                                          ^^^^
+258 |         )
+259 |         stage(
+    |
+
+B023 Function definition does not bind loop variable `predictor`
+   --> src\toruk_lm\comparisons.py:257:79
+    |
+255 |         stage(
+256 |             name + "-fit-effect",
+257 |             lambda: fit_effect(output / (name + "-labels-train/labels.json"), predictor, 100),
+    |                                                                               ^^^^^^^^^
+258 |         )
+259 |         stage(
+    |
+
+B023 Function definition does not bind loop variable `predictor`
+   --> src\toruk_lm\comparisons.py:262:17
+    |
+260 |             name + "-effect-metrics",
+261 |             lambda: evaluate_effect(
+262 |                 predictor / "predictor.pt",
+    |                 ^^^^^^^^^
+263 |                 output / (name + "-labels-validation/labels.json"),
+264 |                 output / (name + "-effect-eval"),
+    |
+
+B023 Function definition does not bind loop variable `name`
+   --> src\toruk_lm\comparisons.py:263:27
+    |
+261 |             lambda: evaluate_effect(
+262 |                 predictor / "predictor.pt",
+263 |                 output / (name + "-labels-validation/labels.json"),
+    |                           ^^^^
+264 |                 output / (name + "-effect-eval"),
+265 |             ),
+    |
+
+B023 Function definition does not bind loop variable `name`
+   --> src\toruk_lm\comparisons.py:264:27
+    |
+262 |                 predictor / "predictor.pt",
+263 |                 output / (name + "-labels-validation/labels.json"),
+264 |                 output / (name + "-effect-eval"),
+    |                           ^^^^
+265 |             ),
+266 |         )
+    |
+
+B023 Function definition does not bind loop variable `checkpoint`
+   --> src\toruk_lm\comparisons.py:277:21
+    |
+275 |                 "eval-" + destination.name,
+276 |                 lambda: evaluate_controlled(
+277 |                     checkpoint,
+    |                     ^^^^^^^^^^
+278 |                     validation,
+279 |                     destination,
+    |
+
+B023 Function definition does not bind loop variable `destination`
+   --> src\toruk_lm\comparisons.py:279:21
+    |
+277 |                     checkpoint,
+278 |                     validation,
+279 |                     destination,
+    |                     ^^^^^^^^^^^
+280 |                     answer_budget,
+281 |                     policy,
+    |
+
+B023 Function definition does not bind loop variable `policy`
+   --> src\toruk_lm\comparisons.py:281:21
+    |
+279 |                     destination,
+280 |                     answer_budget,
+281 |                     policy,
+    |                     ^^^^^^
+282 |                     predictor / "predictor.pt" if policy in ("predictor", "heuristic") else None,
+283 |                 ),
+    |
+
+B023 Function definition does not bind loop variable `predictor`
+   --> src\toruk_lm\comparisons.py:282:21
+    |
+280 |                     answer_budget,
+281 |                     policy,
+282 |                     predictor / "predictor.pt" if policy in ("predictor", "heuristic") else None,
+    |                     ^^^^^^^^^
+283 |                 ),
+284 |             )
+    |
+
+B023 Function definition does not bind loop variable `policy`
+   --> src\toruk_lm\comparisons.py:282:51
+    |
+280 |                     answer_budget,
+281 |                     policy,
+282 |                     predictor / "predictor.pt" if policy in ("predictor", "heuristic") else None,
+    |                                                   ^^^^^^
+283 |                 ),
+284 |             )
+    |
+
+E501 Line too long (152 > 100)
+   --> src\toruk_lm\comparisons.py:308:101
+    |
+306 | … for r in predictor_costs),
+307 | …PASS"],
+308 | …lot. Earlier test/failed-check costs are separate check records; no total CPU-hours claim.",
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+309 | …
+310 | …
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> src\toruk_lm\controlled.py:3:1
+   |
+ 1 |   """One-document CPU training and generated-answer evaluation for the M3 prerequisite."""
+ 2 |
+ 3 | / import hashlib
+ 4 | | import json
+ 5 | | import random
+ 6 | | import time
+ 7 | | from dataclasses import asdict
+ 8 | | from pathlib import Path
+ 9 | | from typing import Any
+10 | |
+11 | | import torch
+12 | | from torch import Tensor
+13 | |
+14 | | from toruk_lm.data import sha256_file, write_json
+15 | | from toruk_lm.engine import setup
+16 | | from toruk_lm.effect_predictor import EffectPredictor
+17 | | from toruk_lm.model import CausalLM, ModelConfig, generate, loss_sum
+18 | | from toruk_lm.recurrent import Decision, RecurrentLM, Session
+19 | | from toruk_lm.tokenizer import ByteTokenizer
+20 | | from toruk_lm.worlds import dataset_identity, load_worlds, summarize
+   | |____________________________________________________________________^
+21 |
+22 |   ControlledModel = CausalLM | RecurrentLM
+   |
+help: Organize imports
+   |
+14 | from toruk_lm.data import sha256_file, write_json
+15 + from toruk_lm.effect_predictor import EffectPredictor
+16 | from toruk_lm.engine import setup
+   - from toruk_lm.effect_predictor import EffectPredictor
+17 | from toruk_lm.model import CausalLM, ModelConfig, generate, loss_sum
+   |
+
+Found 26 errors.
+[*] 2 fixable with `--fix`.

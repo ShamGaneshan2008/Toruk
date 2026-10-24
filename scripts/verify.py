@@ -11,6 +11,7 @@ from check import ROOT
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--prefix", default="")
     parser.add_argument(
         "--output-dir",
         type=Path,
@@ -27,6 +28,7 @@ def main():
         "lint": ["-m", "ruff", "check", "."],
         "format": ["-m", "ruff", "format", "--check", "src", "tests", "scripts"],
         "types": ["-m", "mypy"],
+        "types-linux": ["-m", "mypy", "--platform", "linux"],
         "tests": ["-m", "pytest", "-q"],
         "reproduce": [
             "-m",
@@ -57,24 +59,45 @@ def main():
             "--output",
             str(options.output_dir.resolve() / "tables"),
         ],
+        "research-config": [
+            "-m",
+            "toruk_lm",
+            "validate-config",
+            "--config",
+            "configs/reproduce-smoke-v1.json",
+        ],
+        "research-smoke": [
+            "-m",
+            "toruk_lm",
+            "reproduce",
+            "--config",
+            "configs/reproduce-smoke-v1.json",
+            "--output",
+            str(options.output_dir.resolve() / "research-smoke"),
+        ],
         "build": ["-m", "build", "--no-isolation"],
         "diff-check": ["git", "diff", "--check"],
     }
     failures = []
     for label, args in commands.items():
         command = args if args[0] == "git" else [sys.executable, *args]
+        timeout = 300 if label.startswith("types") or label == "tests" else 120
+        if args[0] == "git":
+            command = ["git", "-c", f"safe.directory={ROOT.as_posix()}", *args[1:]]
         completed = subprocess.run(
             [
                 sys.executable,
                 "scripts/check.py",
+                "--timeout",
+                str(timeout),
                 "--output-dir",
                 str(options.output_dir),
-                label,
+                f"{options.prefix}-{label}" if options.prefix else label,
                 "--",
                 *command,
             ],
             cwd=ROOT,
-            timeout=135,
+            timeout=timeout + 15,
         )
         if completed.returncode:
             failures.append(label)

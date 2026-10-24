@@ -3,7 +3,9 @@
 Toruk-LM is the model family; `toruk_lm` is the package. The ordinary decoder uses
 learned byte/position embeddings, pre-norm causal self-attention and a GELU MLP
 per layer, final normalization, and an untied output projection. Dropout is zero.
-No memory mechanisms, effect predictor or protected revisions exist.
+The ordinary variant has no memory. The additional controlled/recurrent research
+pipeline is documented in [M3 implementation](research/m3-implementation.md) and
+[M4–M6 protocol](research/m6-validation-protocol.md). Protected revisions do not exist.
 
 ByteTokenizer has PAD=0, BOS=1, EOS=2, UTF-8 byte b mapped to b+3. Its immutable
 identity/fingerprint is recorded in checkpoints. Padding is right-only; fully
@@ -42,3 +44,20 @@ controlled-world generator/oracle. Train rejects overlapping IDs and identical
 train/validation text. Generated fixture IDs across all splits are tested disjoint.
 
 The proposed future memory design is in [research/m3-memory-contract.md](research/m3-memory-contract.md).
+
+The preceding sections document the preserved ordinary foundation. The proposed
+contract is historical; the implemented one-lane bounded-document trainer and
+its explicit deviations are in the M3 implementation note. Controlled-world
+generation/scoring is in `worlds.py`; recurrent state/session code in
+`recurrent.py`; ordered training and answer evaluation in `controlled.py`;
+runtime prediction in `effect_predictor.py`; future-only supervision in
+`effect_training.py`; bounded experiments/integrity aggregation in `comparisons.py`.
+Runtime prediction does not import world/oracle/offline label code. The new
+controlled checkpoint format is separate from ordinary checkpoints.
+
+`generalization.py` verifies the sealed M6 kernels and reproduces saved generated
+answers before allowing frozen-checkpoint M7 studies. Held-out manifests bind
+data, transformations, model/predictor hashes and protocols; evaluation-only
+datasets are rejected by training loaders. The original model, tokenizer,
+generation and scoring kernels are unchanged. Oracle/stratum analysis remains
+offline. See [M7 protocol](research/m7-protocol.md) for study scope and limits.

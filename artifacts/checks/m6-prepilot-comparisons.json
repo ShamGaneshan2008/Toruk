@@ -1,0 +1,43 @@
+{
+  "base_commit": "a025f0148965089b24a69344a13cd8a6447afef9",
+  "source_sha256": "baf8c5e82ec94b15b0a606a5e44d8992f351b754926ecbd9db7887d47fd27234",
+  "source_files": {
+    ".github/workflows/ci.yml": "ca8376f6e7bae5e3843bf5e73cf90a289a50e3f57246da8e3d6ce383032d0121",
+    ".gitignore": "231a361e8a7b0c266884f4cf937da2505f01e5cd0e8250eaf50302eea3a4e5d5",
+    "main.py": "b7f97e8abf7d0d0c30058002e3245003355f18183b841bf0e1602dea239f86ea",
+    "pyproject.toml": "50f9f0c53fc78981876ec08793c87f2f59abfc9faa4edfc60b44c17d44564d92",
+    "scripts/check.py": "30f3af423ea08d6aa60af31afe607b2ceb69a5822b2f07cc769a5e9ac7660a08",
+    "scripts/seal_run.py": "b493ef3e57ad475af3cf5c157412d0aedf2e0d98ef44affeadb797b36ee521fa",
+    "scripts/verify.py": "96d9bf22c8739039e9ba23862387cb4fa34f7c522b69ea97c74e814dcfd42c09",
+    "src/toruk_lm/__init__.py": "1d6a99ed3b245abce15c74f047898d561e9429fdc1c0b8fd9cf0f174f628f2b3",
+    "src/toruk_lm/__main__.py": "7af6702f5f844f3dad9467632ba68ba87dd7abdd646a78374d8518a3328d39a3",
+    "src/toruk_lm/cli.py": "f36df97671420dfd1bfca88e93dec29ee661f0966df7bb281a77b859251bf70f",
+    "src/toruk_lm/comparisons.py": "649c75cd0226a1a8e8c7c60314c3758fb0e9be03a96088aa10290b8620d5da51",
+    "src/toruk_lm/controlled.py": "e5ccc4bc80db3d6db5a6b36289857884d92fa0bd30e21bdc988acf34524bcf69",
+    "src/toruk_lm/data.py": "cf19136a4a83d0b2149877649151f6563faba889ebabaf30d7d3f842c1d5244a",
+    "src/toruk_lm/effect_predictor.py": "c0cec39e83b8a5632dfe73324e3d0f22ebcfb86c5f9f9e643ae466d2b42b29f8",
+    "src/toruk_lm/effect_training.py": "fdf8e33f41e3a67162284bf219375557a6ec02795de054d4a5d895f466b13495",
+    "src/toruk_lm/engine.py": "f320f05d71ddb61a9ff8d0c8c032a09b5d58ea93172ed41d497e314666923a0d",
+    "src/toruk_lm/model.py": "06bc28eb4141008b1687c2d6bb90c4000e72041f7ef1e38ac7e955ef4d9b86d5",
+    "src/toruk_lm/recurrent.py": "44700d91ada2496b0c63966d09b6ecb2d557510138d6d7849bd84da71bb5d47c",
+    "src/toruk_lm/tokenizer.py": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0",
+    "src/toruk_lm/worlds.py": "2c26746b20b17fc7532a742e16b4daae64e7dd648b23c37b3086339061a54c3c",
+    "tests/test_comparisons.py": "4be087190c4c2b94396093b7f56ac5f9d75385ea173da808d2a18966871cd1b8",
+    "tests/test_effects.py": "8501df9294cf576bb93979c6913234280213029ec7244f3fb1326427ed609285",
+    "tests/test_foundation.py": "8913f9467a781c29c5d8425e536fbb02bc400a5c40cf136588d62d8b654a68e9",
+    "tests/test_recurrent.py": "6eb515def7258c65534e079782e15cd5223d113d2d2cffb665efcfd1ccaa4c13",
+    "tests/test_worlds.py": "9086333e88af87bf780328b7214bd3b624bc3369fb8fed27ea82e02834e118ea"
+  },
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_comparisons.py",
+    "-q"
+  ],
+  "started_utc": "2026-10-20T16:18:45.742011+00:00",
+  "evidence_path": "artifacts/checks/m6-prepilot-comparisons.log",
+  "status": "FAIL",
+  "returncode": 1,
+  "seconds": 16.319026800003485
+}

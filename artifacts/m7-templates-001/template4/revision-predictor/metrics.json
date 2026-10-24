@@ -1,0 +1,77 @@
+{
+  "active_predictor_parameters": 4641,
+  "answer_coverage": 0.8333333333333334,
+  "checkpoint_sha256": "c7f78c965a9e58671e12d59faf7bd9db454ebeb7ac3b9720d34ba848ef58fc99",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "revision",
+    "seed": 23,
+    "slots": 4,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "recurrent"
+  },
+  "data": "0f23e5b2dcb079188598b548accdcbcd176eeb2a78ff3c119f4dcf07a51252d0",
+  "decision_point": "last observed-history boundary only",
+  "exact_accuracy": 0.0,
+  "examples": 24,
+  "final_boundaries": 4,
+  "final_boundary_writes": 0,
+  "generated_tokens": 384,
+  "groups": {
+    "ambiguous": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "corrected": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unchanged_entity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unknown": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_date": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_number": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    }
+  },
+  "history_lm_loss": 5.2913729155286475,
+  "inference_forward_tokens": 17599,
+  "inference_seconds": 1.9148628999391804,
+  "model_load_seconds": 0.03535829999600537,
+  "observed_history_tokens": 4123,
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "peak_memory_bytes": null,
+  "policy": "predictor",
+  "predictor_fallbacks": 4,
+  "predictor_sha256": "8acdeb5a9968b285ac89508a71ddedc8fe11f2246aef8745ce5f8158041d7055",
+  "question_tokens": 408,
+  "scoring_forward_tokens": 490,
+  "teacher_forced_answer_loss": 4.241571750280992,
+  "uncertainty": "single-seed tiny validation pilot"
+}

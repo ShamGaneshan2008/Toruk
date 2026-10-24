@@ -1,0 +1,77 @@
+{
+  "active_predictor_parameters": 0,
+  "answer_coverage": 0.8333333333333334,
+  "checkpoint_sha256": "c7f78c965a9e58671e12d59faf7bd9db454ebeb7ac3b9720d34ba848ef58fc99",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "revision",
+    "seed": 23,
+    "slots": 4,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "recurrent"
+  },
+  "data": "a255bb245e457cbf6c3bff617c85d9876f5fe467bcad421c1a5bc6ecf26956e6",
+  "decision_point": "last observed-history boundary only",
+  "exact_accuracy": 0.0,
+  "examples": 24,
+  "final_boundaries": 4,
+  "final_boundary_writes": 4,
+  "generated_tokens": 384,
+  "groups": {
+    "ambiguous": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "corrected": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unchanged_entity": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unknown": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_date": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    },
+    "unrelated_number": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "examples": 4
+    }
+  },
+  "history_lm_loss": 5.233851984777586,
+  "inference_forward_tokens": 16158,
+  "inference_seconds": 2.252035400029854,
+  "model_load_seconds": 0.019323699991218746,
+  "observed_history_tokens": 2682,
+  "package_sha256": "68b2c18ca9dd84f3804bfdfc0adebb01550b51e3b5f59a531a9a35ed42c06651",
+  "peak_memory_bytes": null,
+  "policy": "write",
+  "predictor_fallbacks": 0,
+  "predictor_sha256": null,
+  "question_tokens": 408,
+  "scoring_forward_tokens": 490,
+  "teacher_forced_answer_loss": 4.196913395287855,
+  "uncertainty": "single-seed tiny validation pilot"
+}

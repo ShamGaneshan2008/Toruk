@@ -1,0 +1,47 @@
+{
+  "checkpoint_sha256": "fbd774dd23ba408149b56816d4140f6aaf85626a27b8993ce80ae63df4c9a73c",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "qa",
+    "seed": 23,
+    "slots": 4,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "ordinary"
+  },
+  "data": {
+    "train": "4fc7e18d86034b0a8b5864964235460ac6298591ad83f52cf389083012d1f641",
+    "validation": "d1477b5fd6fbadb0be4b5f990f30865c0a827073f8d5f159317a2829ca5ca189"
+  },
+  "losses": [
+    {
+      "gradient_norm": 1.65503990650177,
+      "loss": 6.4840545654296875,
+      "step": 1,
+      "world_id": "train-17-0000",
+      "writer_gradient_norm": null
+    }
+  ],
+  "memory_state_bytes": 0,
+  "model_input_token_evaluations": 2162,
+  "package_sha256": "b85c8e26f75ed7ce201d4aa30f1b3a040195dd03706e0a8144f58aa258b265e0",
+  "parameters": 44096,
+  "peak_memory_bytes": null,
+  "seed": 23,
+  "steps_this_invocation": 1,
+  "tokens_per_second": 8085.676758130998,
+  "total_steps": 1,
+  "training_seconds": 0.2673864000098547,
+  "valid_targets": 460,
+  "variant": "ordinary"
+}

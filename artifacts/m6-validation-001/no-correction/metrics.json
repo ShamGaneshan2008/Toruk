@@ -1,0 +1,124 @@
+{
+  "checkpoint_sha256": "fe8e382c6c205e8648e1188177a70277571f29b6575ace7700d542fa95cf819c",
+  "config": {
+    "answer_weight": 1.0,
+    "batch_worlds": 1,
+    "lm_weight": 0.1,
+    "lr": 0.003,
+    "max_segments": 32,
+    "model": {
+      "context": 64,
+      "heads": 4,
+      "layers": 2,
+      "vocab_size": 259,
+      "width": 32
+    },
+    "objective": "no-correction",
+    "seed": 23,
+    "slots": 4,
+    "unroll": "whole bounded document; no live-graph steps",
+    "variant": "recurrent"
+  },
+  "data": {
+    "train": "eca6f82580ff192c74140c4da9f9729fb1e5c851dc4377096e7a26b516f6aa05",
+    "validation": "a255bb245e457cbf6c3bff617c85d9876f5fe467bcad421c1a5bc6ecf26956e6"
+  },
+  "losses": [
+    {
+      "gradient_norm": 2.0763256549835205,
+      "loss": 6.737234592437744,
+      "step": 1,
+      "world_id": "train-17-0001",
+      "writer_gradient_norm": 0.1580175757408142
+    },
+    {
+      "gradient_norm": 2.010077476501465,
+      "loss": 7.123990535736084,
+      "step": 2,
+      "world_id": "train-17-0003",
+      "writer_gradient_norm": 0.11162738502025604
+    },
+    {
+      "gradient_norm": 1.9239729642868042,
+      "loss": 6.712667465209961,
+      "step": 3,
+      "world_id": "train-17-0000",
+      "writer_gradient_norm": 0.12176167964935303
+    },
+    {
+      "gradient_norm": 1.9175922870635986,
+      "loss": 6.113827228546143,
+      "step": 4,
+      "world_id": "train-17-0002",
+      "writer_gradient_norm": 0.17545494437217712
+    },
+    {
+      "gradient_norm": 2.041560173034668,
+      "loss": 5.595053672790527,
+      "step": 5,
+      "world_id": "train-17-0001",
+      "writer_gradient_norm": 0.21286167204380035
+    },
+    {
+      "gradient_norm": 2.012678861618042,
+      "loss": 6.019003868103027,
+      "step": 6,
+      "world_id": "train-17-0000",
+      "writer_gradient_norm": 0.19144777953624725
+    },
+    {
+      "gradient_norm": 1.988025188446045,
+      "loss": 5.441575050354004,
+      "step": 7,
+      "world_id": "train-17-0002",
+      "writer_gradient_norm": 0.1900758594274521
+    },
+    {
+      "gradient_norm": 2.21630597114563,
+      "loss": 5.762453079223633,
+      "step": 8,
+      "world_id": "train-17-0003",
+      "writer_gradient_norm": 0.20022651553153992
+    },
+    {
+      "gradient_norm": 2.1399388313293457,
+      "loss": 4.829405307769775,
+      "step": 9,
+      "world_id": "train-17-0001",
+      "writer_gradient_norm": 0.09469986706972122
+    },
+    {
+      "gradient_norm": 2.0032997131347656,
+      "loss": 4.876105308532715,
+      "step": 10,
+      "world_id": "train-17-0002",
+      "writer_gradient_norm": 0.12196886539459229
+    },
+    {
+      "gradient_norm": 2.145864725112915,
+      "loss": 5.106871128082275,
+      "step": 11,
+      "world_id": "train-17-0000",
+      "writer_gradient_norm": 0.1641998440027237
+    },
+    {
+      "gradient_norm": 2.237018585205078,
+      "loss": 5.077332496643066,
+      "step": 12,
+      "world_id": "train-17-0003",
+      "writer_gradient_norm": 0.15216968953609467
+    }
+  ],
+  "memory_state_bytes": 512,
+  "model_input_token_evaluations": 7137,
+  "package_sha256": "d59cb1e1ebc32f0affe9e87b2e5365b7212b8ae641c545a326d7c80493d1cd95",
+  "parameters": 57088,
+  "peak_memory_bytes": null,
+  "seed": 23,
+  "steps_this_invocation": 12,
+  "tokens_per_second": 5006.556505593013,
+  "total_steps": 12,
+  "training_seconds": 1.4255306999984896,
+  "valid_targets": 5973,
+  "variant": "recurrent"
+}

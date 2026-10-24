@@ -1,7 +1,7 @@
 <div align="center">
   <h1>TORUK</h1>
   <p><strong>Remember what matters. Revise what changed.</strong></p>
-  <p>An ordinary causal language-model foundation. Learned memory experiments are planned.</p>
+  <p>A language-model research foundation with experimental bounded-memory prototypes.</p>
   <p><img src="https://img.shields.io/badge/status-research-41627A" alt="Status: research" /></p>
 </div>
 
@@ -11,7 +11,7 @@
 
 Toruk investigates how a language model can carry useful information through a long stream while operating with bounded internal memory. The model family is **Toruk-LM**; its Python package is **`toruk_lm`**. The central question is whether a model can retain relevant context, incorporate corrections, and preserve facts that remain valid without letting its memory grow with every new piece of text.
 
-The current repository provides a compact causal language model as a research foundation. Bounded learned memory and the experiments needed to assess it are still planned.
+The repository includes a compact causal language model and research prototypes for bounded memory, effect prediction, and correction/preservation training. Bounded validation and exploratory held-out studies have run; useful recall, reliable revision, generalization, and resource advantages remain unestablished.
 
 ## Why this matters
 
@@ -40,9 +40,10 @@ The project aims to explore memory within the model's computation, with explicit
 | --- | --- | --- |
 | Ordinary causal LM | **Verified** | Local tests cover causality, training, checkpoint reload and resume, and generation. |
 | Document-separated text fixture | **Verified** | A saved CPU pilot covers ordinary-text loss and generated continuations; it does not measure factual recall. |
-| Controlled factual benchmark and independent scoring | **Planned** | Needed before a meaningful memory comparison. |
-| Bounded learned memory | **Planned** | Design work exists; no memory model has been trained or evaluated. |
-| Correction, preservation, and resource comparisons | **Planned** | No supported accuracy or efficiency claim yet. |
+| Controlled factual benchmark and independent scoring | **Implemented** | Synthetic worlds, independent oracle and generated-answer evaluation are tested. |
+| Bounded learned memory | **Prototype** | Training and evaluation run; useful-memory benefit remains unestablished. |
+| Correction, preservation, and resource comparisons | **Partial** | Bounded studies completed; no supported accuracy or efficiency advantage. |
+| Generalization and capacity | **Exploratory** | Held-out studies completed; successful transfer and capacity boundaries remain unestablished. |
 
 The [pilot metrics](artifacts/foundation-001/eval/metrics.json) report validation text loss and continuation timing for the ordinary model. The run used a small, repetitive fixture; its generated text was repetitive too. These results verify the pipeline, not the research objective above.
 
@@ -57,36 +58,25 @@ python -m toruk_lm --help
 python -m toruk_lm diagnose
 ```
 
-The CLI supports fixture generation, ordinary-LM training, evaluation, text generation, manifest validation, and bounded reproduction. It does not offer a recurrent-memory model. The package also installs the `toruk` command.
+The CLI supports fixture generation, ordinary and recurrent model training, evaluation, text generation, and bounded research studies. The package also installs the `toruk` command. See [milestone status](docs/milestones.md) and the [experiment registry](docs/experiments.md) for measured limitations and reproduction instructions.
 
-For a small CPU smoke run, use fresh output directories:
+For local checks, install `python -m pip install -e ".[dev]"` and run `python scripts/verify.py`.
 
-```sh
-python -m toruk_lm reproduce --output runs/smoke
-python -m toruk_lm validate --manifest runs/smoke/data/manifest.json --config runs/smoke/config.json --checkpoint runs/smoke/train/checkpoint.pt
-python -m toruk_lm generate --checkpoint runs/smoke/train/checkpoint.pt --prompt "Field journal" --max-new-tokens 8
-python -m toruk_lm summarize --run runs/smoke --output runs/tables
-```
-
-Reproduction saves a checkpoint, predictions, metrics, tables and a checksum manifest.
-Use `--manifest` with individual training/evaluation commands to enforce dataset integrity.
-Ordinary-model training supports `--resume` at optimizer boundaries; use a fresh
-`--output`, identical data/settings, and a larger absolute `--steps` value.
-For development checks, install `python -m pip install -e ".[dev]"` and run
-`python scripts/verify.py` from a Git checkout. Each invocation saves fresh check records under
-`artifacts/checks`.
+The [reproducibility guide](docs/reproducibility.md) provides versioned config
+validation, a tiny CPU smoke run, and artifact rescoring commands. These verify
+execution and traceability; they do not establish a memory or accuracy advantage.
 
 ## Evaluation principles
 
-Language quality and factual answers require different measurements. Toruk aims to report ordinary-text loss separately from answers generated without seeing reference answers. Future controlled evaluations should cover delayed recall, corrections, unchanged facts, unknown answers, and behavior as memory fills.
+Language quality and factual answers require different measurements. Toruk aims to report ordinary-text loss separately from answers generated without seeing reference answers. Controlled evaluations cover recall, corrections, unchanged facts and unknown answers; reliable learning and capacity boundaries remain research goals.
 
 Resource comparisons must include the full history read, memory operations, and answer time. A small stored state does not mean the model read fewer input tokens, and no unlimited-context or speedup claim follows from the current pilot.
 
 ## Roadmap
 
 1. **Foundation:** establish a causal LM and reproducible local pipeline. The ordinary-LM foundation is verified locally.
-2. **Memory experiments:** implement and test bounded learned memory.
-3. **Controlled comparisons:** evaluate recall, revision, preservation, and resource cost against simpler baselines.
+2. **Memory experiments:** validate useful behavior beyond the implemented and tested prototype.
+3. **Controlled comparisons:** extend preliminary studies with independent training seeds and matched total-resource budgets.
 4. **Reproducibility and technical release:** share methods and results when the experiments support them.
 
 ## Research status and disclosure

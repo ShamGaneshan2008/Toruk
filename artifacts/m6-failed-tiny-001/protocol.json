@@ -1,0 +1,47 @@
+{
+  "answer_budget": 2,
+  "baselines": [
+    "no-correction-write",
+    "no-preservation-write",
+    "ordinary-wide-write",
+    "ordinary-write",
+    "recurrent-predictor",
+    "recurrent-write",
+    "revision-heuristic",
+    "revision-predictor",
+    "revision-random",
+    "revision-reset",
+    "revision-retain",
+    "revision-write",
+    "slots2-write",
+    "slots8-write"
+  ],
+  "cpu_only": true,
+  "elapsed_cap_seconds": 90.0,
+  "falsification": "no joint accuracy improvement over heuristic, or correction/preservation tradeoff",
+  "final_test": "closed",
+  "fixture_seed": 17,
+  "matching": "equal world steps/probes; parameters, FLOPs and branch costs not matched",
+  "memory_slots": [
+    2,
+    4,
+    8
+  ],
+  "model": {
+    "context": 64,
+    "heads": 4,
+    "layers": 2,
+    "width": 32
+  },
+  "package_sha256": "b85c8e26f75ed7ce201d4aa30f1b3a040195dd03706e0a8144f58aa258b265e0",
+  "parameter_match": "ordinary width40 sensitivity; approximate only",
+  "predictor_steps": 100,
+  "primary": "mean corrected/unchanged-entity/unrelated-date/unrelated-number accuracy",
+  "profile_steps": 2,
+  "schema": "m6-validation-pilot-v1",
+  "seed": 23,
+  "steps_per_model": 1,
+  "threads": 1,
+  "tuning": "none; all coefficients/configs predeclared",
+  "worlds_per_split": 2
+}

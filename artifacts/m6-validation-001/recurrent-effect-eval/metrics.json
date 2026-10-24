@@ -1,0 +1,84 @@
+{
+  "calibration": [
+    {
+      "count": 1,
+      "observed": -0.0017065268475562334,
+      "predicted": -0.00043239787919446826
+    },
+    {
+      "count": 1,
+      "observed": -0.001807195134460926,
+      "predicted": -2.9450631700456142e-05
+    },
+    {
+      "count": 1,
+      "observed": -0.004702329635620117,
+      "predicted": 0.0003430370124988258
+    },
+    {
+      "count": 1,
+      "observed": -0.0002496684028301388,
+      "predicted": 0.00034361897269263864
+    }
+  ],
+  "harmful_examples": 4,
+  "harmful_precision": 1.0,
+  "harmful_recall": 0.5,
+  "inference_seconds_per_example": 3.318046867661906e-05,
+  "mae_nats": 0.002172631910070777,
+  "ood_fallbacks": 4,
+  "policies": {
+    "heuristic": {
+      "mean_regret_nats": 0.0020540128462016582,
+      "write_rate": 0.75
+    },
+    "oracle": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 0.0
+    },
+    "predictor": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 0.0
+    },
+    "retain": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 0.0
+    },
+    "shuffled": {
+      "mean_regret_nats": 0.0,
+      "write_rate": 0.0
+    },
+    "write": {
+      "mean_regret_nats": 0.0021164300851523876,
+      "write_rate": 1.0
+    }
+  },
+  "raw": [
+    {
+      "chosen_write": false,
+      "effect": -0.0017065268475562334,
+      "prediction": -0.00043239787919446826,
+      "world_id": "validation-17-0000"
+    },
+    {
+      "chosen_write": false,
+      "effect": -0.0002496684028301388,
+      "prediction": 0.00034361897269263864,
+      "world_id": "validation-17-0001"
+    },
+    {
+      "chosen_write": false,
+      "effect": -0.004702329635620117,
+      "prediction": 0.0003430370124988258,
+      "world_id": "validation-17-0002"
+    },
+    {
+      "chosen_write": false,
+      "effect": -0.001807195134460926,
+      "prediction": -2.9450631700456142e-05,
+      "world_id": "validation-17-0003"
+    }
+  ],
+  "rmse_nats": 0.0027654790319502354,
+  "sign_ranking_accuracy": 0.5
+}
