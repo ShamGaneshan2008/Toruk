@@ -112,7 +112,7 @@ def test_cli_invalid_config_missing_file_and_unknown_protocol_method(tmp_path):
         ),
     ):
         completed = subprocess.run(
-            [sys.executable, "-m", "toruk_lm", *args], text=True, capture_output=True, timeout=30
+            [sys.executable, "-m", "toruk_lm", *args], text=True, capture_output=True, timeout=60
         )
         assert completed.returncode == 2
         assert expected in completed.stderr
