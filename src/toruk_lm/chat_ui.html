@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toruk · Local chat experiment</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101722; color: #edf3fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    .shell { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; max-width: 900px; margin: auto; }
+    header { border-bottom: 1px solid #304153; padding: 16px 20px; display: flex; gap: 16px; align-items: center; justify-content: space-between; }
+    h1 { margin: 0; font-size: 1.2rem; letter-spacing: .04em; }
+    .sub { color: #9fb4c9; font-size: .85rem; margin-top: 3px; overflow-wrap: anywhere; }
+    button, select, textarea { font: inherit; }
+    button { background: #29445e; border: 1px solid #486581; border-radius: 10px; color: #fff; padding: 10px 14px; cursor: pointer; }
+    button:hover:not(:disabled) { background: #355877; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    main { overflow-y: auto; padding: 24px 20px; }
+    .notice { border: 1px solid #76603f; background: #302b24; color: #f2d8a6; padding: 12px 14px; border-radius: 10px; line-height: 1.4; }
+    .error { color: #ffd1d1; background: #482b32; border: 1px solid #88505c; border-radius: 10px; padding: 10px 12px; margin: 14px 0; }
+    .error:empty { display: none; }
+    .transcript { display: flex; flex-direction: column; gap: 16px; padding: 24px 0; }
+    .message { max-width: 85%; border: 1px solid #34485d; border-radius: 14px; padding: 12px 15px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .message.user { align-self: flex-end; background: #24415a; }
+    .message.assistant { align-self: flex-start; background: #1c2a39; }
+    .role { color: #a9c2d9; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; }
+    .empty { color: #9fb4c9; text-align: center; padding: 45px 10px; }
+    footer { border-top: 1px solid #304153; padding: 14px 20px 20px; background: #101722; }
+    .controls { display: flex; gap: 10px; align-items: flex-end; }
+    textarea { flex: 1; min-height: 54px; max-height: 160px; resize: vertical; background: #1a2938; border: 1px solid #486581; color: #edf3fa; border-radius: 10px; padding: 12px; }
+    textarea:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid #89c5fa; outline-offset: 2px; }
+    .options { display: flex; gap: 12px; align-items: center; color: #aac0d5; font-size: .82rem; margin-top: 10px; }
+    select { background: #1a2938; color: #edf3fa; border: 1px solid #486581; border-radius: 7px; padding: 5px; }
+    #loading { margin-left: auto; }
+    @media (max-width: 600px) { header { align-items: flex-start; } .message { max-width: 96%; } main { padding: 16px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div><h1>TORUK</h1><div id="model" class="sub">Loading checkpoint…</div></div>
+      <button id="clear" type="button">New chat</button>
+    </header>
+    <main id="main">
+      <div class="notice">Experimental local model. It learned only a tiny synthetic text pattern in the validated demo and may produce poor or nonsensical answers. This page formats text for continuation; Toruk was not trained as a chat assistant. Only its last model context tokens can affect a reply.</div>
+      <div id="error" class="error" role="alert" aria-live="assertive"></div>
+      <div id="transcript" class="transcript" aria-live="polite"></div>
+    </main>
+    <footer>
+      <form id="form">
+        <div class="controls">
+          <textarea id="message" aria-label="Your message" placeholder="Type a message…" maxlength="1024"></textarea>
+          <button id="send" type="submit">Send</button>
+        </div>
+        <div class="options">
+          <label for="length">Maximum output</label>
+          <select id="length"><option value="16">16 tokens</option><option value="32" selected>32 tokens</option><option value="64">64 tokens</option></select>
+          <span id="loading" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </footer>
+  </div>
+  <script>
+    const transcript = document.getElementById('transcript');
+    const error = document.getElementById('error');
+    const model = document.getElementById('model');
+    const message = document.getElementById('message');
+    const send = document.getElementById('send');
+    const loading = document.getElementById('loading');
+    const main = document.getElementById('main');
+    let messages = [];
+    let ready = false;
+    let sending = false;
+    let revision = 0;
+
+    function render(items) {
+      transcript.replaceChildren();
+      if (!items.length) {
+        const hint = document.createElement('div');
+        hint.className = 'empty';
+        hint.textContent = 'Start a local text continuation.';
+        transcript.append(hint);
+      }
+      for (const item of items) {
+        const box = document.createElement('div');
+        box.className = `message ${item.role}`;
+        const role = document.createElement('div');
+        role.className = 'role';
+        role.textContent = item.role === 'user' ? 'You' : 'Toruk';
+        const body = document.createElement('div');
+        body.textContent = item.content || '(No text generated.)';
+        box.append(role, body);
+        transcript.append(box);
+      }
+      main.scrollTop = main.scrollHeight;
+    }
+    function setSending(value) {
+      sending = value;
+      send.disabled = value || !ready;
+      message.disabled = value || !ready;
+      loading.textContent = value ? 'Toruk is generating…' : '';
+    }
+    async function request(path, body) {
+      const response = await fetch(path, {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || `Request failed (${response.status}).`);
+      return data;
+    }
+    async function loadStatus() {
+      try {
+        const response = await fetch('/api/status');
+        const data = await response.json();
+        ready = data.ready;
+        model.textContent = data.model;
+        messages = data.messages;
+        render(messages);
+        if (data.error) error.textContent = data.error;
+        setSending(false);
+      } catch (cause) {
+        error.textContent = `Cannot reach local server: ${cause.message}`;
+        model.textContent = 'Unavailable';
+        setSending(false);
+      }
+    }
+    document.getElementById('form').addEventListener('submit', async event => {
+      event.preventDefault();
+      const content = message.value.trim();
+      if (!content) { error.textContent = 'Enter a message before sending.'; return; }
+      if (!ready || sending) return;
+      error.textContent = '';
+      const requestRevision = revision;
+      render([...messages, {role: 'user', content}]);
+      setSending(true);
+      try {
+        const data = await request('/api/chat', {message: content, max_new_tokens: Number(document.getElementById('length').value)});
+        if (revision === requestRevision) {
+          messages = data.messages;
+          message.value = '';
+          render(messages);
+        }
+      } catch (cause) {
+        if (revision === requestRevision) { error.textContent = cause.message; render(messages); }
+      } finally {
+        setSending(false);
+        message.focus();
+      }
+    });
+    message.addEventListener('keydown', event => {
+      if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); document.getElementById('form').requestSubmit(); }
+    });
+    document.getElementById('clear').addEventListener('click', async () => {
+      revision++;
+      messages = [];
+      render(messages);
+      error.textContent = '';
+      message.value = '';
+      try { await request('/api/clear', {}); }
+      catch (cause) { error.textContent = cause.message; }
+      message.focus();
+    });
+    loadStatus();
+  </script>
+</body>
+</html>
