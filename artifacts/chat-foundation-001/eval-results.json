@@ -1,0 +1,289 @@
+{
+  "fixture": "configs\\chat-foundation-eval-v1.json",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "selector": "479c5ee26ff9",
+  "modes": {
+    "BASELINE": [
+      {
+        "id": "basic_instruction",
+        "category": "basic instructions",
+        "answer": "I'm ready to assist you. Please provide the text you'd like me to edit, and I'll do my best to provide you with a clear and concise",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 39,
+          "selected_context_tokens": 39,
+          "output_tokens": 32,
+          "response_ms": 1576.829,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1
+        }
+      },
+      {
+        "id": "factual_planet",
+        "category": "factual question",
+        "answer": "The Red Planet is known as Mars.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 45,
+          "selected_context_tokens": 45,
+          "output_tokens": 9,
+          "response_ms": 453.515,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1
+        }
+      },
+      {
+        "id": "multiturn_name",
+        "category": "multi-turn reference",
+        "answer": "Understood.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 88,
+          "selected_context_tokens": 88,
+          "output_tokens": 4,
+          "response_ms": 431.12,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 5
+        }
+      },
+      {
+        "id": "correction_color",
+        "category": "corrected information",
+        "answer": "My project color is blue.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 92,
+          "selected_context_tokens": 92,
+          "output_tokens": 7,
+          "response_ms": 702.573,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 5
+        }
+      },
+      {
+        "id": "preserve_city",
+        "category": "unrelated-fact preservation",
+        "answer": "I provided the name of the city.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 95,
+          "selected_context_tokens": 95,
+          "output_tokens": 9,
+          "response_ms": 560.612,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 5
+        }
+      },
+      {
+        "id": "long_retrieval",
+        "category": "long-context retrieval",
+        "answer": "The vault code is LIME42.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 297,
+          "selected_context_tokens": 297,
+          "output_tokens": 10,
+          "response_ms": 1355.736,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 13
+        }
+      },
+      {
+        "id": "unknown_secret",
+        "category": "unknown-answer behavior",
+        "answer": "I'm sorry for any confusion, but as a chatbot designed to assist users, I don't have access to personal information or personal accounts. I'm here",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 54,
+          "selected_context_tokens": 54,
+          "output_tokens": 32,
+          "response_ms": 1462.945,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1
+        }
+      }
+    ],
+    "TORUK": [
+      {
+        "id": "basic_instruction",
+        "category": "basic instructions",
+        "answer": "I'm ready to assist you. Please provide the text you'd like me to edit, and I'll do my best to provide you with a clear and concise",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 39,
+          "selected_context_tokens": 39,
+          "output_tokens": 32,
+          "response_ms": 1368.036,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 1
+        }
+      },
+      {
+        "id": "factual_planet",
+        "category": "factual question",
+        "answer": "The Red Planet is known as Mars.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 45,
+          "selected_context_tokens": 45,
+          "output_tokens": 9,
+          "response_ms": 554.65,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 1
+        }
+      },
+      {
+        "id": "multiturn_name",
+        "category": "multi-turn reference",
+        "answer": "Understood.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 88,
+          "selected_context_tokens": 88,
+          "output_tokens": 4,
+          "response_ms": 469.254,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5
+        }
+      },
+      {
+        "id": "correction_color",
+        "category": "corrected information",
+        "answer": "My project color is blue.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 92,
+          "selected_context_tokens": 92,
+          "output_tokens": 7,
+          "response_ms": 534.682,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5
+        }
+      },
+      {
+        "id": "preserve_city",
+        "category": "unrelated-fact preservation",
+        "answer": "I provided the name of the city.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 95,
+          "selected_context_tokens": 95,
+          "output_tokens": 9,
+          "response_ms": 854.991,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5
+        }
+      },
+      {
+        "id": "long_retrieval",
+        "category": "long-context retrieval",
+        "answer": "The vault code is LIME42.",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 297,
+          "selected_context_tokens": 119,
+          "output_tokens": 10,
+          "response_ms": 802.112,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5
+        }
+      },
+      {
+        "id": "unknown_secret",
+        "category": "unknown-answer behavior",
+        "answer": "I'm sorry for any confusion, but as a chatbot designed to assist users, I don't have access to personal information or personal accounts. I'm here",
+        "correct": false,
+        "metrics": {
+          "input_tokens": 54,
+          "selected_context_tokens": 54,
+          "output_tokens": 32,
+          "response_ms": 1850.981,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 1
+        }
+      }
+    ]
+  },
+  "status": "COMPLETE",
+  "private_bytes": 1462267904,
+  "summary": {
+    "BASELINE": {
+      "quality_correct": 0,
+      "quality_total": 7,
+      "failures": 0,
+      "input_tokens": 710,
+      "selected_tokens": 710,
+      "output_tokens": 103,
+      "latency_ms": 6543.33,
+      "memory_used_cases": 0
+    },
+    "TORUK": {
+      "quality_correct": 0,
+      "quality_total": 7,
+      "failures": 0,
+      "input_tokens": 710,
+      "selected_tokens": 532,
+      "output_tokens": 103,
+      "latency_ms": 6434.706,
+      "memory_used_cases": 4
+    }
+  },
+  "efficiency_verified": false,
+  "seconds": 18.749
+}

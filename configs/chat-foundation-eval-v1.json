@@ -1,0 +1,89 @@
+{
+  "kind": "chat-foundation-eval-v1",
+  "max_new_tokens": 32,
+  "temperature": 0,
+  "top_p": 1,
+  "cases": [
+    {
+      "id": "basic_instruction",
+      "category": "basic instructions",
+      "messages": [{"role": "user", "content": "Reply with exactly one word: READY"}],
+      "accepted": ["ready"],
+      "forbidden": []
+    },
+    {
+      "id": "factual_planet",
+      "category": "factual question",
+      "messages": [{"role": "user", "content": "Which planet is known as the Red Planet? Answer with its name only."}],
+      "accepted": ["mars"],
+      "forbidden": []
+    },
+    {
+      "id": "multiturn_name",
+      "category": "multi-turn reference",
+      "messages": [
+        {"role": "user", "content": "For this conversation, my nickname is Mira."},
+        {"role": "assistant", "content": "Understood."},
+        {"role": "user", "content": "I am planning a short walk."},
+        {"role": "assistant", "content": "That sounds pleasant."},
+        {"role": "user", "content": "What nickname did I give you? Answer with the nickname only."}
+      ],
+      "accepted": ["mira"],
+      "forbidden": []
+    },
+    {
+      "id": "correction_color",
+      "category": "corrected information",
+      "messages": [
+        {"role": "user", "content": "My project color is blue."},
+        {"role": "assistant", "content": "Noted."},
+        {"role": "user", "content": "Correction: my project color is green, not blue."},
+        {"role": "assistant", "content": "I will use the corrected color."},
+        {"role": "user", "content": "What is my project color now? Answer with one word."}
+      ],
+      "accepted": ["green"],
+      "forbidden": ["blue"]
+    },
+    {
+      "id": "preserve_city",
+      "category": "unrelated-fact preservation",
+      "messages": [
+        {"role": "user", "content": "My favorite fruit is pear. My travel city is Oslo."},
+        {"role": "assistant", "content": "I noted both facts."},
+        {"role": "user", "content": "Correction: my favorite fruit is apple."},
+        {"role": "assistant", "content": "I updated the fruit."},
+        {"role": "user", "content": "What is my travel city? Answer with its name only."}
+      ],
+      "accepted": ["oslo"],
+      "forbidden": []
+    },
+    {
+      "id": "long_retrieval",
+      "category": "long-context retrieval",
+      "messages": [
+        {"role": "user", "content": "The vault code for this conversation is LIME42. Remember it for a later question."},
+        {"role": "assistant", "content": "I noted the vault code."},
+        {"role": "user", "content": "I am writing a garden plan with rows of herbs, tomatoes, carrots, and flowers. The plan mentions irrigation, shade, soil, and a small tool shed."},
+        {"role": "assistant", "content": "That is a detailed garden plan."},
+        {"role": "user", "content": "For an unrelated trip, I may take a train through several towns, visit a museum, have lunch, and return before evening."},
+        {"role": "assistant", "content": "The train trip has several steps."},
+        {"role": "user", "content": "I also listed chores: repair the fence, clean the windows, sort old notebooks, and organize a bookshelf."},
+        {"role": "assistant", "content": "The chores are listed."},
+        {"role": "user", "content": "A separate story describes a river, a stone bridge, a hill, and a quiet village where people gather each morning."},
+        {"role": "assistant", "content": "That sounds like a setting for a story."},
+        {"role": "user", "content": "Another unrelated note is about cooking soup with beans, onion, garlic, potatoes, herbs, and warm bread."},
+        {"role": "assistant", "content": "The cooking note is separate."},
+        {"role": "user", "content": "What was the vault code I gave earlier? Return the code only."}
+      ],
+      "accepted": ["lime42"],
+      "forbidden": []
+    },
+    {
+      "id": "unknown_secret",
+      "category": "unknown-answer behavior",
+      "messages": [{"role": "user", "content": "What is the secret password for my account? I have not told you. If unknown, say I don't know."}],
+      "accepted": ["i don't know", "i do not know"],
+      "forbidden": []
+    }
+  ]
+}

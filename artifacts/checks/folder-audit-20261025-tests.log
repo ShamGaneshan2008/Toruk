@@ -1,0 +1,85 @@
+.........................F........                                       [100%]
+================================== FAILURES ===================================
+______ test_cli_invalid_config_missing_file_and_unknown_protocol_method _______
+
+tmp_path = WindowsPath('C:/Users/susee/AppData/Local/Temp/pytest-of-susee/pytest-139/test_cli_invalid_config_missin0')
+
+    def test_cli_invalid_config_missing_file_and_unknown_protocol_method(tmp_path):
+        protocol = tmp_path / "protocol.json"
+        protocol.write_text(json.dumps({"methods": {"ordinary-write": {}}}))
+        checkpoint = tmp_path / "unsupported.pt"
+        torch.save({"format": "unsupported"}, checkpoint)
+        for args, expected in (
+            (["validate-config", "--config", str(tmp_path / "missing.json")], "missing.json"),
+            (
+                [
+                    "evaluate-heldout",
+                    "--parent",
+                    str(tmp_path),
+                    "--protocol",
+                    str(protocol),
+                    "--method",
+                    "typo",
+                    "--data",
+                    "missing",
+                    "--output",
+                    str(tmp_path / "out"),
+                ],
+                "unknown protocol method",
+            ),
+            (
+                ["reproduce", "--config", str(protocol), "--output", str(tmp_path / "out")],
+                "reproduction config requires",
+            ),
+            (["diagnose", "--unsupported"], "unrecognized arguments"),
+            (
+                ["generate", "--checkpoint", str(checkpoint), "--prompt", "hello"],
+                "unsupported checkpoint",
+            ),
+        ):
+>           completed = subprocess.run(
+                [sys.executable, "-m", "toruk_lm", *args], text=True, capture_output=True, timeout=30
+            )
+
+tests\test_reproducibility.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Local\Programs\Python\Python314\Lib\subprocess.py:557: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Local\Programs\Python\Python314\Lib\subprocess.py:1240: in communicate
+    sts = self.wait(timeout=self._remaining_time(endtime))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Local\Programs\Python\Python314\Lib\subprocess.py:1279: in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: 2 args: ['C:\\Users\\susee\\VScode Project\\Toruk\\.venv...>
+timeout = -20.169607699965127
+
+    def _wait(self, timeout):
+        """Internal implementation of wait() on Windows."""
+        if timeout is None:
+            timeout_millis = _winapi.INFINITE
+        elif timeout <= 0:
+            timeout_millis = 0
+        else:
+            timeout_millis = int(timeout * 1000)
+        if self.returncode is None:
+            # API note: Returns immediately if timeout_millis == 0.
+            result = _winapi.WaitForSingleObject(self._handle,
+                                                 timeout_millis)
+            if result == _winapi.WAIT_TIMEOUT:
+>               raise TimeoutExpired(self.args, timeout)
+E               subprocess.TimeoutExpired: Command '['C:\\Users\\susee\\VScode Project\\Toruk\\.venv\\Scripts\\python.exe', '-m', 'toruk_lm', 'validate-config', '--config', 'C:\\Users\\susee\\AppData\\Local\\Temp\\pytest-of-susee\\pytest-139\\test_cli_invalid_config_missin0\\missing.json']' timed out after 30 seconds
+
+..\..\AppData\Local\Programs\Python\Python314\Lib\subprocess.py:1608: TimeoutExpired
+============================== warnings summary ===============================
+.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368
+  C:\Users\susee\VScode Project\Toruk\.venv\Lib\site-packages\torch\_subclasses\functional_tensor.py:368: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:84.)
+    cpu = _conversion_method_template(device=torch.device("cpu"))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_reproducibility.py::test_cli_invalid_config_missing_file_and_unknown_protocol_method
+1 failed, 33 passed, 1 warning in 178.98s (0:02:58)

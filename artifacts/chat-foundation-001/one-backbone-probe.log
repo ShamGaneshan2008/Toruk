@@ -1,0 +1,23 @@
+
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]
+Loading weights:  35%|###4      | 94/272 [00:00<00:00, 927.45it/s]
+Loading weights:  69%|######8   | 187/272 [00:00<00:00, 917.48it/s]
+Loading weights: 100%|##########| 272/272 [00:00<00:00, 927.00it/s]
+Traceback (most recent call last):
+  File "C:\Users\susee\VScode Project\Toruk\.venv\Lib\site-packages\transformers\tokenization_utils_base.py", line 293, in __getattr__
+    return self.data[item]
+           ~~~~~~~~~^^^^^^
+KeyError: 'shape'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from pathlib import Path; from toruk_lm.chat_foundation import PretrainedChatBackend; b=PretrainedChatBackend(Path('artifacts/chat-foundation-001/backbone')); print(b.reply_with_metrics([{'role':'user','content':'Say hello in one short sentence.'}],16))
+                                                                                                                                                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\VScode Project\Toruk\src\toruk_lm\chat_foundation.py", line 166, in reply_with_metrics
+    input_tokens = int(self._tokens(messages).shape[-1])
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\VScode Project\Toruk\.venv\Lib\site-packages\transformers\tokenization_utils_base.py", line 295, in __getattr__
+    raise AttributeError
+AttributeError

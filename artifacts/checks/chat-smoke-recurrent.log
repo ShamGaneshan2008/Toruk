@@ -1,0 +1,6 @@
+ERROR: Checkpoint load failed: Unsupported checkpoint. Local chat accepts toruk-ordinary-v1 only; controlled and recurrent checkpoints use a different inference path.
+INFO: Toruk local chat at http://127.0.0.1:54027
+INFO: Model: No supported checkpoint loaded
+127.0.0.1 - - [26/Oct/2026 12:56:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:56:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:56:10] "POST /api/chat HTTP/1.1" 503 -

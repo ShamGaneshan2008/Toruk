@@ -1,0 +1,61 @@
+{
+  "fixture": "configs\\chat-comparison-v1.json",
+  "plain": {
+    "rows": [
+      {
+        "id": "greeting",
+        "answer": "abc abc abc abc ",
+        "expected": "Hello",
+        "exact": false,
+        "metrics": {
+          "input_tokens": 19,
+          "selected_context_tokens": 19,
+          "output_tokens": 16,
+          "response_ms": 38.683,
+          "backend": "Toruk",
+          "model": "toruk-ordinary-v1:e00a0f0b5823",
+          "memory_used": false
+        }
+      },
+      {
+        "id": "arithmetic",
+        "answer": "bc abc bc abc ab",
+        "expected": "4",
+        "exact": false,
+        "metrics": {
+          "input_tokens": 28,
+          "selected_context_tokens": 28,
+          "output_tokens": 16,
+          "response_ms": 47.814,
+          "backend": "Toruk",
+          "model": "toruk-ordinary-v1:e00a0f0b5823",
+          "memory_used": false
+        }
+      },
+      {
+        "id": "pattern",
+        "answer": "bc abc abc abc a",
+        "expected": "abc abc abc abc ",
+        "exact": false,
+        "metrics": {
+          "input_tokens": 18,
+          "selected_context_tokens": 18,
+          "output_tokens": 16,
+          "response_ms": 47.369,
+          "backend": "Toruk",
+          "model": "toruk-ordinary-v1:e00a0f0b5823",
+          "memory_used": false
+        }
+      }
+    ],
+    "exact_accuracy": 0.0,
+    "input_tokens": 65,
+    "selected_context_tokens": 65,
+    "output_tokens": 48,
+    "response_ms": 133.86599999999999,
+    "memory_used": false
+  },
+  "selected": null,
+  "status": "NO_VALID_CONTEXT_PATH",
+  "efficiency_claim": false
+}

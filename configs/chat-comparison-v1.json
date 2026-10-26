@@ -1,0 +1,10 @@
+{
+  "kind": "chat-context-comparison-fixture-v1",
+  "note": "Author-written local probes, not research validation or held-out answers. Exact match is only a crude quality signal.",
+  "max_new_tokens": 16,
+  "questions": [
+    {"id": "greeting", "text": "Hello", "expected": "Hello"},
+    {"id": "arithmetic", "text": "What is 2 + 2?", "expected": "4"},
+    {"id": "pattern", "text": "abc ", "expected": "abc abc abc abc "}
+  ]
+}

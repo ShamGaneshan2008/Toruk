@@ -1,0 +1,32 @@
+<template>
+<style>
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#101722;color:#edf3fa;font-family:Inter,Arial,sans-serif}
+#kicker{position:absolute;left:150px;top:116px;color:#89c5fa;font:700 28px Inter,Arial,sans-serif;letter-spacing:.23em}
+#title{position:absolute;left:150px;top:180px;font:800 75px Inter,Arial,sans-serif;letter-spacing:-.04em}
+#card{position:absolute;left:150px;top:346px;width:1620px;height:410px;border:1px solid #486581;border-radius:24px;background:#172638;box-shadow:0 36px 100px rgba(0,0,0,.25)}
+.col{position:absolute;top:66px;width:430px}.col:nth-child(1){left:72px}.col:nth-child(2){left:595px}.col:nth-child(3){left:1115px}
+.label{color:#aac0d5;font:700 28px Inter,Arial,sans-serif;letter-spacing:.22em}.value{margin-top:62px;color:#edf3fa;font:800 72px Inter,Arial,sans-serif;letter-spacing:-.05em}
+#old{color:#a9c2d9;text-decoration:line-through;text-decoration-color:#89c5fa}#new{position:absolute;left:0;top:132px;color:#89c5fa}
+#note{position:absolute;left:150px;top:812px;color:#f2d8a6;font:600 28px Inter,Arial,sans-serif;letter-spacing:.05em}
+#foot{position:absolute;right:150px;bottom:90px;color:#9fb4c9;font:500 28px Inter,Arial,sans-serif}
+</style>
+<div data-hf-id="hf-oco2" id="root" data-composition-id="revision" data-width="1920" data-height="1080">
+<div data-hf-id="hf-0d2i" id="kicker" class="clip" data-start="0" data-duration="4">01 / RETENTION &amp; REVISION</div>
+<div data-hf-id="hf-dqp7" id="title" class="clip" data-start="0" data-duration="4">What changes. What stays.</div>
+<div data-hf-id="hf-ko39" id="card" class="clip" data-start=".3" data-duration="3.7">
+<div data-hf-id="hf-7s1i" class="col"><div data-hf-id="hf-945b" class="label">PERSON</div><div data-hf-id="hf-qezs" class="value">Mira</div></div>
+<div data-hf-id="hf-vmze" class="col"><div data-hf-id="hf-4vad" class="label">CITY</div><div data-hf-id="hf-lvca" id="old" class="value">Pune</div><div data-hf-id="hf-0jy6" id="new" class="value">Jaipur</div></div>
+<div data-hf-id="hf-w1af" class="col"><div data-hf-id="hf-h98l" class="label">OCCUPATION</div><div data-hf-id="hf-6j7p" class="value">botanist</div></div></div>
+<div data-hf-id="hf-ifls" id="note" class="clip" data-start=".3" data-duration="3.7">ILLUSTRATIVE RESEARCH OBJECTIVE · NOT A MODEL RESULT</div>
+<div data-hf-id="hf-i4ad" id="foot" class="clip" data-start="0" data-duration="4">README / WHY THIS MATTERS</div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo('#kicker',{opacity:0,y:18},{opacity:1,y:0,duration:.35},.1);
+tl.fromTo('#title',{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:'power3.out'},.25);
+tl.fromTo('#card',{opacity:0,y:70},{opacity:1,y:0,duration:.55,ease:'power3.out'},.4);
+tl.fromTo('#new',{opacity:0,y:26},{opacity:0,y:26,duration:.01},0);
+tl.to('#old',{opacity:.27,duration:.24},2.05);
+tl.to('#new',{opacity:1,y:0,duration:.38,ease:'power3.out'},2.17);
+window.__timelines.revision=tl;
+</script></template>

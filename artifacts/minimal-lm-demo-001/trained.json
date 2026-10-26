@@ -1,0 +1,49 @@
+{
+  "checkpoint_datasets": {
+    "train": "27d83355cf36eb6aa77fbe000bfa6de096d38d845e96c03e219bf1c211e88ca1",
+    "validation": "2f3e846bbfb42cc12eeee001aa2364d89a8223ccdfc27be987ec1969f2d2ce86"
+  },
+  "checkpoint_next_step": 120,
+  "checkpoint_sha256": "e00a0f0b58233bc6013622e964c68eb9672db158bff80f0efdfceb5483e8b545",
+  "config_sha256": "7d57bbd146b76a64fe558213ed5c818e1c897a3b8bca07246251e44c90278b31",
+  "majority_training_target_id": 100,
+  "majority_validation_accuracy": 0.25735294117647056,
+  "parameters": 12112,
+  "phase": "trained",
+  "prompt": "abc ",
+  "python": "3.14.6",
+  "sample": "abc abc abc abc ",
+  "sample_ids": [
+    100,
+    101,
+    102,
+    35,
+    100,
+    101,
+    102,
+    35,
+    100,
+    101,
+    102,
+    35,
+    100,
+    101,
+    102,
+    35
+  ],
+  "torch": "2.14.1+cpu",
+  "train": {
+    "loss_nats_per_token": 0.10674053182204564,
+    "perplexity": 1.1126455209163384,
+    "tokens": 384,
+    "top1_accuracy": 0.9791666666666666
+  },
+  "train_sha256": "27d83355cf36eb6aa77fbe000bfa6de096d38d845e96c03e219bf1c211e88ca1",
+  "validation": {
+    "loss_nats_per_token": 0.09159239600686465,
+    "perplexity": 1.095918030464613,
+    "tokens": 136,
+    "top1_accuracy": 0.9852941176470589
+  },
+  "validation_sha256": "2f3e846bbfb42cc12eeee001aa2364d89a8223ccdfc27be987ec1969f2d2ce86"
+}

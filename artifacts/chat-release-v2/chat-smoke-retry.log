@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\susee\VScode Project\Toruk\scripts\smoke_chat_foundation.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\susee\VScode Project\Toruk\scripts\smoke_chat_foundation.py", line 58, in main
+    wait_ready(f"http://127.0.0.1:{backend_port}/api/status", backend)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\VScode Project\Toruk\scripts\smoke_vercel_local.py", line 52, in wait_ready
+    raise TimeoutError(f"server did not start: {url}")
+TimeoutError: server did not start: http://127.0.0.1:61681/api/status

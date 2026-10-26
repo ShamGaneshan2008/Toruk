@@ -1,0 +1,37 @@
+{
+  "page": "PASS",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "baseline": {
+    "answer": "The vault code is LIME42.",
+    "metrics": {
+      "input_tokens": 297,
+      "selected_context_tokens": 297,
+      "output_tokens": 10,
+      "response_ms": 1169.735,
+      "backend": "Toruk",
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+      "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selected_messages": 13,
+      "proxy_ms": 1178.815
+    }
+  },
+  "toruk": {
+    "answer": "The vault code is LIME42.",
+    "metrics": {
+      "input_tokens": 297,
+      "selected_context_tokens": 119,
+      "output_tokens": 10,
+      "response_ms": 759.209,
+      "backend": "Toruk",
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+      "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "mode": "TORUK",
+      "memory_used": true,
+      "selected_messages": 5,
+      "proxy_ms": 763.427
+    }
+  },
+  "outage_status": 503
+}

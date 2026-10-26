@@ -1,0 +1,28 @@
+<template>
+<style>
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#101722;color:#edf3fa;font-family:Inter,Arial,sans-serif}
+#kicker{position:absolute;left:150px;top:112px;color:#89c5fa;font:700 28px Inter,Arial,sans-serif;letter-spacing:.23em}
+#title{position:absolute;left:150px;top:180px;font:800 77px Inter,Arial,sans-serif;letter-spacing:-.04em}
+.card{position:absolute;top:360px;width:495px;height:330px;padding:44px 42px;border:1px solid #486581;background:#172638;border-radius:18px}
+#one{left:150px}#two{left:712px}#three{left:1274px}.number{color:#89c5fa;font:700 28px Inter,Arial,sans-serif;letter-spacing:.15em}.name{margin-top:38px;color:#edf3fa;font:800 44px/1.08 Inter,Arial,sans-serif;letter-spacing:-.03em}.status{margin-top:35px;color:#aac0d5;font:700 28px Inter,Arial,sans-serif;letter-spacing:.12em}
+#caveat{position:absolute;left:150px;top:786px;color:#f2d8a6;font:600 29px Inter,Arial,sans-serif}
+</style>
+<div data-hf-id="hf-20di" id="root" data-composition-id="foundation" data-width="1920" data-height="1080">
+<div data-hf-id="hf-chj6" id="kicker" class="clip" data-start="0" data-duration="4">02 / WHAT EXISTS</div>
+<div data-hf-id="hf-hn0s" id="title" class="clip" data-start="0" data-duration="4">A foundation for the question.</div>
+<div data-hf-id="hf-3d8m" id="one" class="clip card" data-start=".45" data-duration="3.55"><div data-hf-id="hf-dye0" class="number">01</div><div data-hf-id="hf-x113" class="name">CAUSAL<br data-hf-id="hf-x5px">LM</div><div data-hf-id="hf-tzxq" class="status">VERIFIED</div></div>
+<div data-hf-id="hf-z0he" id="two" class="clip card" data-start="1.25" data-duration="2.75"><div data-hf-id="hf-crgx" class="number">02</div><div data-hf-id="hf-ql15" class="name">BOUNDED<br data-hf-id="hf-rsrt">MEMORY</div><div data-hf-id="hf-s3ho" class="status">PROTOTYPE</div></div>
+<div data-hf-id="hf-m2ft" id="three" class="clip card" data-start="1.7" data-duration="2.3"><div data-hf-id="hf-d5ry" class="number">03</div><div data-hf-id="hf-zefe" class="name">INDEPENDENT<br data-hf-id="hf-szow">SCORING</div><div data-hf-id="hf-bsi6" class="status">IMPLEMENTED</div></div>
+<div data-hf-id="hf-zdsx" id="caveat" class="clip" data-start="1.25" data-duration="2.75">Useful-memory benefit remains unestablished.</div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo('#kicker',{opacity:0,y:16},{opacity:1,y:0,duration:.34},.1);
+tl.fromTo('#title',{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:'power3.out'},.25);
+// Natural spacing gives the three labels enough time to read.
+tl.fromTo('#one',{opacity:0,y:70},{opacity:1,y:0,duration:.43,ease:'power3.out'},.64);
+tl.fromTo('#two',{opacity:0,y:70},{opacity:1,y:0,duration:.43,ease:'power3.out'},1.4);
+tl.fromTo('#three',{opacity:0,y:70},{opacity:1,y:0,duration:.43,ease:'power3.out'},2.16);
+tl.fromTo('#caveat',{opacity:0},{opacity:1,duration:.35},1.35);
+window.__timelines.foundation=tl;
+</script></template>

@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights:  15%|#5        | 41/272 [00:00<00:00, 328.88it/s]Loading weights:  27%|##7       | 74/272 [00:00<00:00, 284.48it/s]Loading weights:  38%|###8      | 104/272 [00:00<00:00, 220.18it/s]Loading weights:  59%|#####8    | 160/272 [00:00<00:00, 322.17it/s]Loading weights:  72%|#######2  | 197/272 [00:00<00:00, 248.11it/s]Loading weights:  85%|########5 | 232/272 [00:00<00:00, 240.97it/s]Loading weights: 100%|##########| 272/272 [00:00<00:00, 276.43it/s]
+INFO: Toruk inference listening on 127.0.0.1:62511
+127.0.0.1 - - [26/Oct/2026 18:46:52] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 18:46:52] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 18:46:52] "GET /api/status HTTP/1.1" 200 -
+INFO: inference {"backbone": "HuggingFaceTB/SmolLM2-135M-Instruct", "backend": "Toruk", "input_tokens": 297, "memory_used": false, "mode": "BASELINE", "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366", "output_tokens": 10, "response_ms": 9710.556, "selected_context_tokens": 297, "selected_message_ids": ["m0", "m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12"], "selected_messages": 13, "total_tokens": 307}
+127.0.0.1 - - [26/Oct/2026 18:47:02] "POST /api/infer HTTP/1.1" 200 -
+INFO: inference {"backbone": "HuggingFaceTB/SmolLM2-135M-Instruct", "backend": "Toruk", "input_tokens": 297, "memory_used": true, "mode": "TORUK", "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366", "output_tokens": 10, "response_ms": 3761.67, "selected_context_tokens": 119, "selected_message_ids": ["m0", "m1", "m10", "m11", "m12"], "selected_messages": 5, "total_tokens": 129}
+127.0.0.1 - - [26/Oct/2026 18:47:06] "POST /api/infer HTTP/1.1" 200 -

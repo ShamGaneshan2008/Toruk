@@ -1,0 +1,39 @@
+<template>
+<style>
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#101722;color:#edf3fa;font-family:Inter,Arial,sans-serif}
+#kicker{position:absolute;left:150px;top:88px;color:#89c5fa;font:700 28px Inter,Arial,sans-serif;letter-spacing:.22em}
+#title{position:absolute;left:150px;top:147px;color:#edf3fa;font:800 68px Inter,Arial,sans-serif;letter-spacing:-.04em}
+#browser{position:absolute;left:150px;top:270px;width:1620px;height:646px;overflow:hidden;background:#101722;border:1px solid #486581;border-radius:19px;box-shadow:0 36px 120px rgba(0,0,0,.35)}
+#header{height:89px;padding:19px 31px;border-bottom:1px solid #304153;display:flex;align-items:center;justify-content:space-between}
+#logo{font:800 32px Inter,Arial,sans-serif;letter-spacing:.05em}#sub{color:#9fb4c9;font:400 28px Inter,Arial,sans-serif;margin-top:3px}
+#new-chat{background:#29445e;border:1px solid #486581;border-radius:10px;color:white;padding:12px 20px;font:500 28px Inter,Arial,sans-serif}
+#notice{margin:22px 30px 0;padding:18px 20px;background:#302b24;border:1px solid #76603f;border-radius:10px;color:#f2d8a6;font:400 28px/1.35 Inter,Arial,sans-serif}
+#main{padding:20px 30px;height:286px}#user{margin-left:auto;width:715px;min-height:77px;background:#24415a;border:1px solid #34485d;border-radius:14px;padding:13px 18px;color:#edf3fa;font:400 28px/1.4 Inter,Arial,sans-serif}
+#answer{width:545px;margin-top:13px;min-height:77px;background:#1c2a39;border:1px solid #34485d;border-radius:14px;padding:13px 18px;color:#edf3fa;font:400 28px/1.4 Inter,Arial,sans-serif}.role{color:#a9c2d9;font:700 28px Inter,Arial,sans-serif;letter-spacing:.1em;margin-bottom:5px}
+#footer{position:absolute;bottom:0;width:100%;height:116px;padding:18px 30px;border-top:1px solid #304153;display:flex;gap:12px}
+#input{flex:1;background:#1a2938;border:1px solid #486581;border-radius:10px;color:#edf3fa;padding:13px 17px;font:400 28px Inter,Arial,sans-serif}
+#send{background:#29445e;border:1px solid #486581;border-radius:10px;padding:12px 20px;color:white;font:600 28px Inter,Arial,sans-serif;align-self:flex-start}
+#label{position:absolute;right:150px;bottom:68px;color:#aac0d5;font:700 28px Inter,Arial,sans-serif;letter-spacing:.1em}
+</style>
+<div data-hf-id="hf-jt58" id="root" data-composition-id="experiment" data-width="1920" data-height="1080">
+<div data-hf-id="hf-tedh" id="kicker" class="clip" data-start="0" data-duration="5">03 / LOCAL TEXT CONTINUATION</div>
+<div data-hf-id="hf-a3hf" id="title" class="clip" data-start="0" data-duration="5">The ordinary model, in view.</div>
+<div data-hf-id="hf-nrpo" id="browser" class="clip" data-start=".3" data-duration="4.7">
+<div data-hf-id="hf-rw2y" id="header"><div data-hf-id="hf-yeow"><div data-hf-id="hf-jyy5" id="logo">TORUK</div><div data-hf-id="hf-a8w1" id="sub">Local chat experiment</div></div><div data-hf-id="hf-dmuk" id="new-chat">New chat</div></div>
+<div data-hf-id="hf-qt3q" id="notice">Experimental local model. Toruk was not trained as a chat assistant.</div>
+<div data-hf-id="hf-j156" id="main"><div data-hf-id="hf-tezg" id="user"><div data-hf-id="hf-5rxv" class="role">YOU</div>abc abc abc abc abc abc abc abc</div><div data-hf-id="hf-a86h" id="answer"><div data-hf-id="hf-spi5" class="role">TORUK</div>abc abc abc abc</div></div>
+<div data-hf-id="hf-yo4s" id="footer"><div data-hf-id="hf-u2ot" id="input">abc abc abc abc abc abc abc abc</div><div data-hf-id="hf-bsgd" id="send">Send</div></div>
+</div>
+<div data-hf-id="hf-eyg4" id="label" class="clip" data-start=".3" data-duration="4.7">SAVED CONTINUATION · SMALL SYNTHETIC FIXTURE</div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo('#kicker',{opacity:0,y:15},{opacity:1,y:0,duration:.35},.1);
+tl.fromTo('#title',{opacity:0,y:25},{opacity:1,y:0,duration:.45},.25);
+tl.fromTo('#browser',{opacity:0,y:65},{opacity:1,y:0,duration:.55,ease:'power3.out'},.4);
+tl.fromTo('#user',{opacity:0,y:20},{opacity:1,y:0,duration:.35},1.5);
+tl.fromTo('#input',{opacity:.45},{opacity:1,duration:.35},1.55);
+tl.fromTo('#send',{backgroundColor:'#29445e'},{backgroundColor:'#355877',duration:.13,yoyo:true,repeat:1},2.8);
+tl.fromTo('#answer',{opacity:0,y:25},{opacity:1,y:0,duration:.43,ease:'power3.out'},3.25);
+window.__timelines.experiment=tl;
+</script></template>

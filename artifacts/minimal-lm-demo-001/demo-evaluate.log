@@ -1,0 +1,18 @@
+{
+  "loss_nats_per_byte_or_eos": 0.09159239600686465,
+  "valid_tokens": 136,
+  "seconds": 0.010324400034733117,
+  "tokens_per_second": 13172.678271131672,
+  "context_tokens": 32,
+  "protocol": "document windows; no token scored twice; positions restart per window",
+  "dataset_sha256": "2f3e846bbfb42cc12eeee001aa2364d89a8223ccdfc27be987ec1969f2d2ce86",
+  "generation": {
+    "protocol": "greedy text continuation; not controlled-world QA or recall accuracy",
+    "examples": 2,
+    "generated_tokens": 32,
+    "end_to_end_seconds": 0.04873109993059188,
+    "includes": "prefix tokenization, local-window recomputation, greedy decode; excludes model load",
+    "tokens_per_second": 656.6648412528729
+  },
+  "checkpoint_sha256": "e00a0f0b58233bc6013622e964c68eb9672db158bff80f0efdfceb5483e8b545"
+}

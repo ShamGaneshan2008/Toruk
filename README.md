@@ -62,6 +62,24 @@ The CLI supports fixture generation, ordinary and recurrent model training, eval
 
 For local checks, install `python -m pip install -e ".[dev]"` and run `python scripts/verify.py`.
 
+### Experimental local chat page
+
+The optional local page wraps Toruk's ordinary text-continuation generator. It does not make the model a trained chat assistant. The measured demo learned only a repeating four-byte pattern; answers to ordinary questions may be poor or nonsensical.
+
+From Windows PowerShell, with the project environment installed:
+
+```powershell
+.\.venv\Scripts\python.exe -m toruk_lm.chat_server --checkpoint .\artifacts\minimal-lm-demo-001\train\checkpoint.pt --port 8765
+```
+
+Open `http://127.0.0.1:8765` locally. Stop the server with **Ctrl+C** in that PowerShell window. The path above refers to the local minimal-demo artifact; use another checkpoint if that file is absent. Only `toruk-ordinary-v1` checkpoints accepted by `engine.load_model` are supported. `toruk-controlled-v1` ordinary/recurrent checkpoints are rejected with a visible error; the page does not reinterpret or fall back from them. The server binds only to `127.0.0.1`, starts no training, and uses one CPU thread. Output is capped at 64 tokens; only the model's last context tokens influence each continuation. The transcript is kept in memory for the one local session and is cleared by **New chat** or by stopping the server.
+
+Run the focused interface checks with `.\.venv\Scripts\python.exe -m pytest -q tests/test_chat.py`.
+
+For a static Vercel Hobby chat page with a separate protected Toruk inference host, see the [Vercel chatbot MVP guide](docs/vercel-chat.md). The Vercel page does not bundle PyTorch or start training; without the separately configured backend it reports that inference is unavailable.
+
+The optional [conversational foundation](docs/chat-foundation.md) adds an explicitly labeled pretrained instruct backbone and an experimental Toruk recurrent context selector. Its fixed local evaluation found no verified chat-memory or token-efficiency benefit.
+
 The [reproducibility guide](docs/reproducibility.md) provides versioned config
 validation, a tiny CPU smoke run, and artifact rescoring commands. These verify
 execution and traceability; they do not establish a memory or accuracy advantage.

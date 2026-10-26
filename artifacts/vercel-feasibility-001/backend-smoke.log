@@ -1,0 +1,12 @@
+INFO: Toruk inference listening on 127.0.0.1:63581
+127.0.0.1 - - [26/Oct/2026 19:34:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 19:34:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 19:34:41] "GET /api/status HTTP/1.1" 200 -
+INFO: inference {"backbone": "Toruk ordinary byte LM", "backend": "Toruk", "input_tokens": 19, "memory_used": false, "mode": "BASELINE", "model": "toruk-ordinary-v1:e00a0f0b5823", "output_tokens": 16, "response_ms": 29.665, "selected_context_tokens": 19, "selected_message_ids": ["m0"], "total_tokens": 35}
+127.0.0.1 - - [26/Oct/2026 19:34:41] "POST /api/infer HTTP/1.1" 200 -
+INFO: inference {"backbone": "Toruk ordinary byte LM", "backend": "Toruk", "input_tokens": 19, "memory_used": false, "mode": "BASELINE", "model": "toruk-ordinary-v1:e00a0f0b5823", "output_tokens": 16, "response_ms": 25.409, "selected_context_tokens": 19, "selected_message_ids": ["m0"], "total_tokens": 35}
+127.0.0.1 - - [26/Oct/2026 19:34:41] "POST /api/infer HTTP/1.1" 200 -
+INFO: inference {"backbone": "Toruk ordinary byte LM", "backend": "Toruk", "input_tokens": 28, "memory_used": false, "mode": "BASELINE", "model": "toruk-ordinary-v1:e00a0f0b5823", "output_tokens": 16, "response_ms": 20.963, "selected_context_tokens": 28, "selected_message_ids": ["m0"], "total_tokens": 44}
+127.0.0.1 - - [26/Oct/2026 19:34:41] "POST /api/infer HTTP/1.1" 200 -
+INFO: inference {"backbone": "Toruk ordinary byte LM", "backend": "Toruk", "input_tokens": 18, "memory_used": false, "mode": "BASELINE", "model": "toruk-ordinary-v1:e00a0f0b5823", "output_tokens": 16, "response_ms": 20.405, "selected_context_tokens": 18, "selected_message_ids": ["m0"], "total_tokens": 34}
+127.0.0.1 - - [26/Oct/2026 19:34:41] "POST /api/infer HTTP/1.1" 200 -

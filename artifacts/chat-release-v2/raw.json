@@ -1,0 +1,1347 @@
+{
+  "schema": "toruk-chat-release-result-v2",
+  "fixture": "configs\\chat-release-eval-v2.json",
+  "fixture_sha256": "86e31ab8afccb0e7ab88817fc11b7be4585a7d261c3d99f93eef60540c63a0c6",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "selector_sha256": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+  "settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "rows": [
+    {
+      "id": "instruction_word",
+      "category": "instruction",
+      "mode": "BASELINE",
+      "answer": "HELLO",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 44,
+        "selected_context_tokens": 44,
+        "output_tokens": 4,
+        "total_tokens": 48,
+        "response_ms": 341.416,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "instruction_word",
+      "category": "instruction",
+      "mode": "TORUK",
+      "answer": "HELLO",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 44,
+        "selected_context_tokens": 44,
+        "output_tokens": 4,
+        "total_tokens": 48,
+        "response_ms": 342.173,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "instruction_digit",
+      "category": "instruction",
+      "mode": "BASELINE",
+      "answer": "The digit seven is 7.",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 40,
+        "selected_context_tokens": 40,
+        "output_tokens": 8,
+        "total_tokens": 48,
+        "response_ms": 597.233,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "instruction_digit",
+      "category": "instruction",
+      "mode": "TORUK",
+      "answer": "The digit seven is 7.",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 40,
+        "selected_context_tokens": 40,
+        "output_tokens": 8,
+        "total_tokens": 48,
+        "response_ms": 527.249,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_italy",
+      "category": "factual",
+      "mode": "BASELINE",
+      "answer": "The capital city of Italy is Rome.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 38,
+        "selected_context_tokens": 38,
+        "output_tokens": 9,
+        "total_tokens": 47,
+        "response_ms": 764.633,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_italy",
+      "category": "factual",
+      "mode": "TORUK",
+      "answer": "The capital city of Italy is Rome.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 38,
+        "selected_context_tokens": 38,
+        "output_tokens": 9,
+        "total_tokens": 47,
+        "response_ms": 621.18,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_water",
+      "category": "factual",
+      "mode": "BASELINE",
+      "answer": "At sea level, pure water boils at a temperature of approximately 100 degrees Celsius.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 45,
+        "selected_context_tokens": 45,
+        "output_tokens": 20,
+        "total_tokens": 65,
+        "response_ms": 1095.472,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_water",
+      "category": "factual",
+      "mode": "TORUK",
+      "answer": "At sea level, pure water boils at a temperature of approximately 100 degrees Celsius.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 45,
+        "selected_context_tokens": 45,
+        "output_tokens": 20,
+        "total_tokens": 65,
+        "response_ms": 1127.412,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "reference_nickname",
+      "category": "reference",
+      "mode": "BASELINE",
+      "answer": "I'm sorry for any confusion, but as a painting assistant, I don't have the ability to name you.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 85,
+        "selected_context_tokens": 85,
+        "output_tokens": 24,
+        "total_tokens": 109,
+        "response_ms": 1585.934,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "reference_nickname",
+      "category": "reference",
+      "mode": "TORUK",
+      "answer": "I'm sorry for any confusion, but as a painting assistant, I don't have the ability to name you.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 85,
+        "selected_context_tokens": 85,
+        "output_tokens": 24,
+        "total_tokens": 109,
+        "response_ms": 1298.001,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "reference_codename",
+      "category": "reference",
+      "mode": "BASELINE",
+      "answer": "I noted the codename.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 88,
+        "selected_context_tokens": 88,
+        "output_tokens": 7,
+        "total_tokens": 95,
+        "response_ms": 428.185,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "reference_codename",
+      "category": "reference",
+      "mode": "TORUK",
+      "answer": "I noted the codename.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 88,
+        "selected_context_tokens": 88,
+        "output_tokens": 7,
+        "total_tokens": 95,
+        "response_ms": 445.832,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_drink",
+      "category": "user_fact",
+      "mode": "BASELINE",
+      "answer": "I noted that you prefer a cold drink.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 82,
+        "selected_context_tokens": 82,
+        "output_tokens": 10,
+        "total_tokens": 92,
+        "response_ms": 550.07,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_drink",
+      "category": "user_fact",
+      "mode": "TORUK",
+      "answer": "I noted that you prefer a cold drink.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 82,
+        "selected_context_tokens": 82,
+        "output_tokens": 10,
+        "total_tokens": 92,
+        "response_ms": 548.376,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_pet",
+      "category": "user_fact",
+      "mode": "BASELINE",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have real-time access to the internet. I'm here to assist with your",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 85,
+        "selected_context_tokens": 85,
+        "output_tokens": 32,
+        "total_tokens": 117,
+        "response_ms": 1493.485,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_pet",
+      "category": "user_fact",
+      "mode": "TORUK",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have real-time access to the internet. I'm here to assist with your",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 85,
+        "selected_context_tokens": 85,
+        "output_tokens": 32,
+        "total_tokens": 117,
+        "response_ms": 1465.528,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_day",
+      "category": "correction",
+      "mode": "BASELINE",
+      "answer": "I will use the corrected day.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": false,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 88,
+        "selected_context_tokens": 88,
+        "output_tokens": 8,
+        "total_tokens": 96,
+        "response_ms": 454.801,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_day",
+      "category": "correction",
+      "mode": "TORUK",
+      "answer": "I will use the corrected day.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": false,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 88,
+        "selected_context_tokens": 88,
+        "output_tokens": 8,
+        "total_tokens": 96,
+        "response_ms": 484.386,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_floor",
+      "category": "correction",
+      "mode": "BASELINE",
+      "answer": "Floor five.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": true,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 89,
+        "selected_context_tokens": 89,
+        "output_tokens": 5,
+        "total_tokens": 94,
+        "response_ms": 385.081,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_floor",
+      "category": "correction",
+      "mode": "TORUK",
+      "answer": "Floor five.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": true,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 89,
+        "selected_context_tokens": 89,
+        "output_tokens": 5,
+        "total_tokens": 94,
+        "response_ms": 390.272,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_city",
+      "category": "preservation",
+      "mode": "BASELINE",
+      "answer": "I provided the city name.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 92,
+        "selected_context_tokens": 92,
+        "output_tokens": 7,
+        "total_tokens": 99,
+        "response_ms": 490.477,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_city",
+      "category": "preservation",
+      "mode": "TORUK",
+      "answer": "I provided the city name.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 92,
+        "selected_context_tokens": 92,
+        "output_tokens": 7,
+        "total_tokens": 99,
+        "response_ms": 472.817,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_hobby",
+      "category": "preservation",
+      "mode": "BASELINE",
+      "answer": "My hobby is playing chess. The deadline is Monday.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 84,
+        "selected_context_tokens": 84,
+        "output_tokens": 12,
+        "total_tokens": 96,
+        "response_ms": 703.472,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_hobby",
+      "category": "preservation",
+      "mode": "TORUK",
+      "answer": "My hobby is playing chess. The deadline is Monday.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 84,
+        "selected_context_tokens": 84,
+        "output_tokens": 12,
+        "total_tokens": 96,
+        "response_ms": 693.958,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "long_key",
+      "category": "long_retrieval",
+      "mode": "BASELINE",
+      "answer": "I noted the archive key.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 227,
+        "selected_context_tokens": 227,
+        "output_tokens": 7,
+        "total_tokens": 234,
+        "response_ms": 817.415,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 11,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "long_key",
+      "category": "long_retrieval",
+      "mode": "TORUK",
+      "answer": "I noted the archive key.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 227,
+        "selected_context_tokens": 110,
+        "output_tokens": 7,
+        "total_tokens": 117,
+        "response_ms": 530.543,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "long_color",
+      "category": "long_retrieval",
+      "mode": "BASELINE",
+      "answer": "The package label was violet.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 214,
+        "selected_context_tokens": 214,
+        "output_tokens": 7,
+        "total_tokens": 221,
+        "response_ms": 749.493,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 11,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "long_color",
+      "category": "long_retrieval",
+      "mode": "TORUK",
+      "answer": "The package label was violet.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 214,
+        "selected_context_tokens": 100,
+        "output_tokens": 7,
+        "total_tokens": 107,
+        "response_ms": 549.085,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_arithmetic",
+      "category": "irrelevant_history",
+      "mode": "BASELINE",
+      "answer": "That's a tricky one.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 127,
+        "selected_context_tokens": 127,
+        "output_tokens": 7,
+        "total_tokens": 134,
+        "response_ms": 594.075,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 7,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_arithmetic",
+      "category": "irrelevant_history",
+      "mode": "TORUK",
+      "answer": "Three is 3.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 127,
+        "selected_context_tokens": 105,
+        "output_tokens": 6,
+        "total_tokens": 111,
+        "response_ms": 656.876,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m2",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_fact",
+      "category": "irrelevant_history",
+      "mode": "BASELINE",
+      "answer": "I noted the planet Mars.",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 110,
+        "selected_context_tokens": 110,
+        "output_tokens": 7,
+        "total_tokens": 117,
+        "response_ms": 576.435,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 7,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_fact",
+      "category": "irrelevant_history",
+      "mode": "TORUK",
+      "answer": "I'm sorry for the confusion, but as a helpful AI, I don't have real-time capabilities to provide information about planets or celestial bodies. I'm",
+      "score": {
+        "quality": false,
+        "factual_correct": false,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 110,
+        "selected_context_tokens": 91,
+        "output_tokens": 32,
+        "total_tokens": 123,
+        "response_ms": 1721.788,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m2",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "unknown_pin",
+      "category": "unknown",
+      "mode": "BASELINE",
+      "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or provide sensitive information. I'm designed to provide information",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 53,
+        "selected_context_tokens": 53,
+        "output_tokens": 32,
+        "total_tokens": 85,
+        "response_ms": 1309.498,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "unknown_pin",
+      "category": "unknown",
+      "mode": "TORUK",
+      "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or provide sensitive information. I'm designed to provide information",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 53,
+        "selected_context_tokens": 53,
+        "output_tokens": 32,
+        "total_tokens": 85,
+        "response_ms": 1335.262,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "unknown_maiden",
+      "category": "unknown",
+      "mode": "BASELINE",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide information about your mother's maiden name. I'm here",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 45,
+        "selected_context_tokens": 45,
+        "output_tokens": 32,
+        "total_tokens": 77,
+        "response_ms": 1304.466,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "unknown_maiden",
+      "category": "unknown",
+      "mode": "TORUK",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide information about your mother's maiden name. I'm here",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 45,
+        "selected_context_tokens": 45,
+        "output_tokens": 32,
+        "total_tokens": 77,
+        "response_ms": 1327.297,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_season",
+      "category": "ambiguous",
+      "mode": "BASELINE",
+      "answer": "My favorite season is spring.",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 98,
+        "selected_context_tokens": 98,
+        "output_tokens": 7,
+        "total_tokens": 105,
+        "response_ms": 489.78,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_season",
+      "category": "ambiguous",
+      "mode": "TORUK",
+      "answer": "My favorite season is spring.",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 98,
+        "selected_context_tokens": 98,
+        "output_tokens": 7,
+        "total_tokens": 105,
+        "response_ms": 453.994,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_pronoun",
+      "category": "ambiguous",
+      "mode": "BASELINE",
+      "answer": "The pronoun could refer to either person.",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": false
+      },
+      "metrics": {
+        "input_tokens": 84,
+        "selected_context_tokens": 84,
+        "output_tokens": 9,
+        "total_tokens": 93,
+        "response_ms": 528.287,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 3,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_pronoun",
+      "category": "ambiguous",
+      "mode": "TORUK",
+      "answer": "The pronoun could refer to either person.",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": false
+      },
+      "metrics": {
+        "input_tokens": 84,
+        "selected_context_tokens": 84,
+        "output_tokens": 9,
+        "total_tokens": 93,
+        "response_ms": 560.219,
+        "backend": "Toruk",
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+        "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 3,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2"
+        ]
+      }
+    }
+  ],
+  "status": "COMPLETE",
+  "private_bytes": 1475166208,
+  "summary": {
+    "BASELINE": {
+      "n": 20,
+      "quality": 6,
+      "factual_correct": 4,
+      "correction_correct": 1,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1818,
+      "selected_tokens": 1818,
+      "output_tokens": 254,
+      "total_tokens": 2072,
+      "latency_ms": 15259.708,
+      "memory_used_cases": 0
+    },
+    "TORUK": {
+      "n": 20,
+      "quality": 6,
+      "factual_correct": 4,
+      "correction_correct": 1,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1818,
+      "selected_tokens": 1546,
+      "output_tokens": 278,
+      "total_tokens": 1824,
+      "latency_ms": 15552.248,
+      "memory_used_cases": 13
+    }
+  },
+  "bootstrap": {
+    "selected_token_reduction_pct_95_interval": [
+      1.35,
+      27.28
+    ],
+    "quality_difference_pp_95_interval": [
+      0.0,
+      0.0
+    ],
+    "method": "2000 paired resamples, seed 23; descriptive for this fixed fixture"
+  },
+  "selected_token_reduction_pct": 14.96,
+  "quality_difference_pp": 0.0,
+  "per_category": {
+    "ambiguous": {
+      "BASELINE": 1,
+      "TORUK": 1
+    },
+    "correction": {
+      "BASELINE": 1,
+      "TORUK": 1
+    },
+    "factual": {
+      "BASELINE": 2,
+      "TORUK": 2
+    },
+    "instruction": {
+      "BASELINE": 1,
+      "TORUK": 1
+    },
+    "irrelevant_history": {
+      "BASELINE": 0,
+      "TORUK": 0
+    },
+    "long_retrieval": {
+      "BASELINE": 1,
+      "TORUK": 1
+    },
+    "preservation": {
+      "BASELINE": 0,
+      "TORUK": 0
+    },
+    "reference": {
+      "BASELINE": 0,
+      "TORUK": 0
+    },
+    "unknown": {
+      "BASELINE": 0,
+      "TORUK": 0
+    },
+    "user_fact": {
+      "BASELINE": 0,
+      "TORUK": 0
+    }
+  },
+  "primary_success": false,
+  "seconds": 30.945
+}

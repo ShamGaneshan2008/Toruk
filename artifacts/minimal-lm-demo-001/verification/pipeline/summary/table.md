@@ -1,0 +1,20 @@
+| Measurement | Value |
+| --- | --- |
+| scope | ordinary-LM smoke fixture; no factual or memory claim |
+| parameters | 44096 |
+| steps | 2 |
+| training_targets | 353 |
+| validation_loss_nats_per_byte_or_eos | 5.395493544541396 |
+| validation_targets | 154 |
+| generated_tokens | 8 |
+| saved_generation_seconds | 0.03623410000000149 |
+| saved_mean_generation_ms | 36.23410000000149 |
+| saved_generation_tokens_per_second | 220.78649669785287 |
+| saved_training_seconds | 0.0586536000482738 |
+| saved_training_tokens_per_second | 6018.385908272802 |
+| checkpoint_sha256 | d7c9a9f3c6bac129b23ca350e251a1417d565d631f127c511a00b83feb06ce12 |
+| run_manifest_sha256 | f512699622c37f8e0d3205b6d711363753a727689dac169133101627a4beea4b |
+| uncertainty | NOT_TESTED; one seed and synthetic fixture |
+| recurrent_state_bytes | 0 |
+| peak_memory_bytes | None |
+| timing_note | stored run timings; rescore/generation verify outputs but do not replace timings |

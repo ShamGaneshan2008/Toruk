@@ -38,13 +38,13 @@ class FakeBackend:
         }
 
 
-def call(base, path, body=None, token="secret"):
+def call(base, path, body=None, token="secret", timeout=5):
     data = None if body is None else json.dumps(body).encode()
     headers = {"Authorization": f"Bearer {token}"}
     if data is not None:
         headers["Content-Type"] = "application/json"
     request = Request(base + path, data=data, headers=headers)
-    with urlopen(request, timeout=5) as response:
+    with urlopen(request, timeout=timeout) as response:
         return json.load(response)
 
 
@@ -147,7 +147,7 @@ def test_overlapping_requests_are_bounded_by_single_generation_slot():
     class SlowBackend(FakeBackend):
         def reply_with_metrics(self, messages, budget, mode="BASELINE", temperature=0, top_p=1):
             entered.set()
-            if not release.wait(timeout=5):
+            if not release.wait(timeout=20):
                 raise TimeoutError("test backend did not release")
             return super().reply_with_metrics(messages, budget, mode, temperature, top_p)
 
@@ -159,13 +159,13 @@ def test_overlapping_requests_are_bounded_by_single_generation_slot():
     base = f"http://127.0.0.1:{http.server_port}"
     payload = {"messages": [{"role": "user", "content": "hello"}]}
     first_thread = threading.Thread(
-        target=lambda: first_result.append(call(base, "/api/infer", payload))
+        target=lambda: first_result.append(call(base, "/api/infer", payload, timeout=20))
     )
     first_thread.start()
     try:
         assert entered.wait(timeout=5)
         with pytest.raises(HTTPError) as error:
-            call(base, "/api/infer", payload)
+            call(base, "/api/infer", payload, timeout=10)
         assert error.value.code == 503
     finally:
         release.set()

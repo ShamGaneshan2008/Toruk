@@ -1,0 +1,27 @@
+<template>
+<style>
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#101722;color:#edf3fa;font-family:Inter,Arial,sans-serif}
+#halo{position:absolute;left:510px;top:70px;width:900px;height:900px;background:radial-gradient(circle,rgba(64,119,166,.34),rgba(16,23,34,0) 67%);border-radius:50%}
+#line{position:absolute;left:150px;top:152px;width:1620px;height:2px;background:#486581}
+#tagline{position:absolute;left:150px;top:230px;width:1600px;color:#a9c2d9;font:700 36px Inter,Arial,sans-serif;letter-spacing:.14em}
+#name{position:absolute;left:145px;top:360px;color:#edf3fa;font:900 174px Inter,Arial,sans-serif;letter-spacing:-.075em}#accent{color:#89c5fa}
+#status{position:absolute;left:150px;top:676px;padding:15px 25px;border:1px solid #486581;border-radius:9px;color:#aac0d5;font:700 29px Inter,Arial,sans-serif;letter-spacing:.19em}
+#foot{position:absolute;left:150px;bottom:95px;color:#9fb4c9;font:500 28px Inter,Arial,sans-serif}
+</style>
+<div data-hf-id="hf-x7nm" id="root" data-composition-id="outro" data-width="1920" data-height="1080">
+<div data-hf-id="hf-a18q" id="halo" data-layout-ignore></div><div data-hf-id="hf-8u7y" id="line" data-layout-ignore></div>
+<div data-hf-id="hf-i9qt" id="tagline" class="clip" data-start="0" data-duration="4">REMEMBER WHAT MATTERS. REVISE WHAT CHANGED.</div>
+<div data-hf-id="hf-k8b5" id="name" class="clip" data-start="1.1" data-duration="2.9">TORUK<span data-hf-id="hf-19ow" id="accent">-LM</span></div>
+<div data-hf-id="hf-ti2v" id="status" class="clip" data-start="1.45" data-duration="2.55">RESEARCH PROTOTYPE</div>
+<div data-hf-id="hf-deat" id="foot" class="clip" data-start="1.2" data-duration="2.8">toruk_lm · bounded-memory research</div>
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo('#tagline',{opacity:0,y:35},{opacity:1,y:0,duration:.55,ease:'power3.out'},.25);
+// beat-locked: main title lands at absolute 17.47 s, a strong cue.
+tl.fromTo('#name',{opacity:0,y:90},{opacity:1,y:0,duration:.5,ease:'power4.out'},1.47);
+tl.fromTo('#status',{opacity:0,y:20},{opacity:1,y:0,duration:.4},1.83);
+tl.fromTo('#foot',{opacity:0},{opacity:1,duration:.4},1.55);
+tl.fromTo('#halo',{opacity:.25,scale:.86},{opacity:1,scale:1,duration:2.4,ease:'sine.out'},.5);
+window.__timelines.outro=tl;
+</script></template>

@@ -1,0 +1,66 @@
+{
+  "answers": 336,
+  "comparisons": 14,
+  "prediction_files": {
+    "no-correction-write/predictions.json": {
+      "reference": "d1acdd2eadce8c6fac383a84c662d2d61881f60f18b95eaa811e661ca5eb28bb",
+      "reproduction": "f9984d1aafd417e58c385056b6b9861b13af5fbad943405e6b4e1a4415bb2d30"
+    },
+    "no-preservation-write/predictions.json": {
+      "reference": "8d92c855eb60376f2bf276c6659f3776923c027b1d778f5fe9bedcac1d542a24",
+      "reproduction": "5e4706103a0faa5ad880ce1c7c9c82da9d2b272001c290c9892eac6cfdac35fa"
+    },
+    "ordinary-wide-write/predictions.json": {
+      "reference": "7d8ddec46f08f94a71efc06a9c91bcdc863146d4846a3076813f4098b4cf3828",
+      "reproduction": "9411c9ca2b47b6f1cd1c63e3234e79158114b1d9badbf7d15c839c5a2a3b8dd9"
+    },
+    "ordinary-write/predictions.json": {
+      "reference": "6a0267d99115b4d89100bd603f7c71435fb44e97d65cde557a1b48c4328023c9",
+      "reproduction": "29342870a730c96ea4948877c441142b267e895d507f7024e2cb98af4f588773"
+    },
+    "recurrent-predictor/predictions.json": {
+      "reference": "6e4d53f1d25bd787dc3904c06c4dc6fe69d2d7ce4fd2a44532f2cefe89da8dd9",
+      "reproduction": "8c9a0047b682e2530078b2f057a3a2bb0cc4f7ae204e5ebf122937061efce63d"
+    },
+    "recurrent-write/predictions.json": {
+      "reference": "30a8b3627be89695e0dcc9bf1328711925be85ae2da322b49bad92b340020c41",
+      "reproduction": "dea627430cbd0de00389b2099c96165a56d9cf290a5a30a5a21780c1e1246ada"
+    },
+    "revision-heuristic/predictions.json": {
+      "reference": "f3df664f1a6c1caa7c3020341d13e23ad97f1adb4eb2539a41e40d16c296cf5b",
+      "reproduction": "6cdc13b2bf35ff3ffd508533c093c2b0be18e02b80e5465d25e1deeb1e03990f"
+    },
+    "revision-predictor/predictions.json": {
+      "reference": "fef40f2547537477b4edebb0aa5b8f9ebbfe8cab0c3fbe1d17280db7fa50142b",
+      "reproduction": "e774bbb7322928be90ca800e899afa9b724da5d77a08c19423156198705c7085"
+    },
+    "revision-random/predictions.json": {
+      "reference": "be5adaaee7fc89c99c3aee5498c17241806de5e62568acedea9ab212653008ad",
+      "reproduction": "3cea19f072dfe8acbe0f7f271291a7c0aa45bbbbaeebac6873dbbb75bbf8274f"
+    },
+    "revision-reset/predictions.json": {
+      "reference": "65fb379e54a3cb4da522961db0b646793a7c01e3e092ab4ba3874041acbfac56",
+      "reproduction": "b2f4bd2bbf732183d597c6c57bb7b879fb1bf5fed918af933e1ab5b17eecff1d"
+    },
+    "revision-retain/predictions.json": {
+      "reference": "68ede2a21e6d41bc05be86f2bc77d5428dccc06720f51a218acb856836e48ebb",
+      "reproduction": "08a6ddca82ed5479f11a71da6798bc0299b205756baeea4cd99d6ef6fee07911"
+    },
+    "revision-write/predictions.json": {
+      "reference": "3f5ed6a6c960efa4890f1cec7898437cf199745c6c4d45b427fe92b82f2459ef",
+      "reproduction": "c2b9f3975ab2770cfc4997785cddde95441ae88343f37a52b6a9b146694f2ea1"
+    },
+    "slots2-write/predictions.json": {
+      "reference": "531e4d9138e43aa5b377fc8ed65ed2432763d5af0298e40db231751785120dc5",
+      "reproduction": "caebf20a70779c773e02bc8a95b3c588b40c435726a0d5671722a7b0e351ccd1"
+    },
+    "slots8-write/predictions.json": {
+      "reference": "93bd1b052f581a15e906ef1c74c1a1e768c7c73ef5563100ca373455f9d57286",
+      "reproduction": "2a01608779ea37d3b49ae69acfbd24a880fe31c792bb4d9a6acc2cd405d23b84"
+    }
+  },
+  "reference": "artifacts\\m6-validation-001",
+  "reproduction": "artifacts\\m8-m6-replay",
+  "rule": "exact generated IDs, answers, gold, groups and correctness; excludes timing",
+  "status": "PASS"
+}

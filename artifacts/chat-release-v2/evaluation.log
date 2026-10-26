@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "BASELINE": {
+      "n": 20,
+      "quality": 6,
+      "factual_correct": 4,
+      "correction_correct": 1,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1818,
+      "selected_tokens": 1818,
+      "output_tokens": 254,
+      "total_tokens": 2072,
+      "latency_ms": 15259.708,
+      "memory_used_cases": 0
+    },
+    "TORUK": {
+      "n": 20,
+      "quality": 6,
+      "factual_correct": 4,
+      "correction_correct": 1,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1818,
+      "selected_tokens": 1546,
+      "output_tokens": 278,
+      "total_tokens": 1824,
+      "latency_ms": 15552.248,
+      "memory_used_cases": 13
+    }
+  },
+  "primary_success": false
+}
+
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]
+Loading weights:  26%|##6       | 71/272 [00:00<00:00, 693.10it/s]
+Loading weights:  53%|#####2    | 143/272 [00:00<00:00, 687.37it/s]
+Loading weights:  78%|#######7  | 212/272 [00:00<00:00, 681.55it/s]
+Loading weights: 100%|##########| 272/272 [00:00<00:00, 712.61it/s]

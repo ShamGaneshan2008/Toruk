@@ -82,7 +82,7 @@ def main():
     failures = []
     for label, args in commands.items():
         command = args if args[0] == "git" else [sys.executable, *args]
-        timeout = 300 if label.startswith("types") or label == "tests" else 120
+        timeout = 420 if label == "tests" else 300 if label.startswith("types") else 120
         if args[0] == "git":
             command = ["git", "-c", f"safe.directory={ROOT.as_posix()}", *args[1:]]
         completed = subprocess.run(

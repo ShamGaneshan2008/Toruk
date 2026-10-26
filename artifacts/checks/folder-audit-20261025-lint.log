@@ -1,0 +1,96 @@
+E501 Line too long (101 > 100)
+   --> artifacts\don-codino-v2\app\database.py:120:101
+    |
+118 |             if fields.get("status") in {"PASS", "FAIL", "BLOCKED", "CANCELLED"}:
+119 |                 db.execute("UPDATE plans SET status=? WHERE task_id=?",
+120 |                            ("VERIFIED" if fields["status"] == "PASS" else fields["status"], task_id))
+    |                                                                                                     ^
+121 |
+122 |     def event(self, task_id: str, kind: str, message: str):
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> artifacts\don-codino-v2\app\prompt_engine.py:3:1
+   |
+ 1 |   """Deterministic refinement by default; optional real OpenAI Responses refinement."""
+ 2 |
+ 3 | / from pathlib import Path
+ 4 | | import json
+ 5 | |
+ 6 | | import httpx
+ 7 | |
+ 8 | | from app.config import Settings
+   | |_______________________________^
+ 9 |
+10 |   CONSTRAINTS = """Review the existing code before editing. Implement the smallest complete solution.
+   |
+help: Organize imports
+  |
+2 |
+3 + import json
+4 | from pathlib import Path
+  - import json
+5 |
+  |
+
+E501 Line too long (101 > 100)
+  --> artifacts\don-codino-v2\scripts\acceptance.py:44:101
+   |
+42 |             "Do not run tests or project scripts on the host."
+43 |         )
+44 |         result = client.post("/api/v1/plans", json={"workspace": str(workspace), "request": request})
+   |                                                                                                     ^
+45 |         result.raise_for_status()
+46 |         plan = result.json()
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> artifacts\v2-acceptance\calculator-775a5520ee\test_calculator.py:3:1
+  |
+1 |   """Behavior tests for the arithmetic API and executable CLI."""
+2 |
+3 | / import subprocess
+4 | | import sys
+5 | | from pathlib import Path
+6 | |
+7 | | import pytest
+8 | |
+9 | | from calculator import add, divide, multiply, subtract
+  | |______________________________________________________^
+help: Organize imports
+  |
+7 | import pytest
+  -
+8 | from calculator import add, divide, multiply, subtract
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> artifacts\v2-regression-tests\test_inspector_fastapi_javascr0\python\main.py:1:1
+  |
+1 | from fastapi import FastAPI
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | app = FastAPI()
+  |
+help: Organize imports
+  |
+1 | from fastapi import FastAPI
+2 +
+3 | app = FastAPI()
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> artifacts\v2-targeted-tests\test_inspector_fastapi_javascr0\python\main.py:1:1
+  |
+1 | from fastapi import FastAPI
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | app = FastAPI()
+  |
+help: Organize imports
+  |
+1 | from fastapi import FastAPI
+2 +
+3 | app = FastAPI()
+  |
+
+Found 6 errors.
+[*] 4 fixable with `--fix`.
