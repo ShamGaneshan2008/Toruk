@@ -1,0 +1,58 @@
+..............F....                                                      [100%]
+================================== FAILURES ===================================
+_________________ test_deadline_kills_worker_and_fails_closed _________________
+
+self = <toruk_lm.inference_worker.ProcessBackend object at 0x0000023A6D893FE0>
+args = ([], 1), kwargs = {}
+
+    def reply_with_metrics(self, *args: Any, **kwargs: Any) -> dict[str, Any]:
+        if not self.ready:
+            raise ChatError("Model worker unavailable; restart service.")
+        try:
+            self.pipe.send((args, kwargs))
+            if not self.pipe.poll(self.timeout):
+                self.close()
+>               raise TimeoutError("Generation deadline exceeded; restart service.")
+E               TimeoutError: Generation deadline exceeded; restart service.
+
+src\toruk_lm\inference_worker.py:91: TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+    def test_deadline_kills_worker_and_fails_closed():
+        context = mp.get_context("spawn")
+        backend = ProcessBackend.__new__(ProcessBackend)
+        backend.pipe, child = context.Pipe()
+        backend.process = context.Process(target=stalled_worker, args=(child,))
+        backend.timeout = 0.1
+        backend.process.start()
+        child.close()
+        try:
+            assert backend.pipe.poll(30) and backend.pipe.recv() == "ready"
+            with pytest.raises(TimeoutError, match="deadline"):
+>               backend.reply_with_metrics([], 1)
+
+tests\test_inference_server.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <toruk_lm.inference_worker.ProcessBackend object at 0x0000023A6D893FE0>
+args = ([], 1), kwargs = {}
+
+    def reply_with_metrics(self, *args: Any, **kwargs: Any) -> dict[str, Any]:
+        if not self.ready:
+            raise ChatError("Model worker unavailable; restart service.")
+        try:
+            self.pipe.send((args, kwargs))
+            if not self.pipe.poll(self.timeout):
+                self.close()
+                raise TimeoutError("Generation deadline exceeded; restart service.")
+            success, result = self.pipe.recv()
+        except (EOFError, OSError) as error:
+            self.close()
+>           raise ChatError("Model worker unavailable; restart service.") from error
+E           toruk_lm.chat_runtime.ChatError: Model worker unavailable; restart service.
+
+src\toruk_lm\inference_worker.py:95: ChatError
+=========================== short test summary info ===========================
+FAILED tests/test_inference_server.py::test_deadline_kills_worker_and_fails_closed
+1 failed, 18 passed in 10.61s

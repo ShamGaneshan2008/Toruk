@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\measure_inference_host.py", line 149, in <module>
+    main()
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\measure_inference_host.py", line 109, in main
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+         ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'concurrent' where it is not associated with a value

@@ -1,5 +1,9 @@
 # Experimental conversational foundation
 
+For this device's current model files, working BASELINE commands, and verbatim
+browser-API responses, see the [2026-10-27 real chat run](real-chat-run-20261027.md).
+The original M6 selector is missing here; that run explicitly disables Toruk memory.
+
 Toruk's ordinary 12,112-parameter checkpoint learned a four-byte pattern, not conversation. This optional local foundation uses the **pretrained HuggingFaceTB/SmolLM2-135M-Instruct backbone**, pinned to revision `12fd25f77366fa6b3b4b768ec3050bf629380bac` (Apache-2.0 [model card](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct)). The pretrained model supplies language ability. Toruk's own frozen M6 recurrent architecture is a separate, experimental selector of earlier verbatim turns. It does not alter the backbone weights and has not shown a reliable quality or efficiency advantage.
 
 ## Windows PowerShell setup

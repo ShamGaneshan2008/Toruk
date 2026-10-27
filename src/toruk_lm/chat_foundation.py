@@ -58,7 +58,8 @@ class TorukContextSelector:
             raise ChatError("TORUK mode requires a toruk-controlled-v1 recurrent checkpoint.")
         self.model = model
         self.tokenizer = ByteTokenizer()
-        self.checkpoint_id = hashlib.sha256(checkpoint.read_bytes()).hexdigest()[:12]
+        self.sha256 = hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+        self.checkpoint_id = self.sha256[:12]
         if saved.get("tokenizer") != ByteTokenizer.fingerprint:
             raise ChatError("Toruk selector tokenizer mismatch.")
 
@@ -136,6 +137,8 @@ class PretrainedChatBackend:
         self.model.eval()
         self.context = MAX_PROMPT_TOKENS
         self.backbone_id = BACKBONE_ID
+        self.backbone_revision = BACKBONE_REVISION
+        self.backbone_sha256 = BACKBONE_SHA256
         self.model_id = f"{BACKBONE_ID}@{BACKBONE_REVISION[:12]}"
         self.selector = (
             TorukContextSelector(selector_checkpoint) if selector_checkpoint is not None else None

@@ -1,0 +1,54 @@
+{
+  "artifacts": {
+    "config.json": "91d99ebeff78c7781d585ab7a0f187cde59d6748fcf89d34789893baa569804b",
+    "data/manifest.json": "e273c4edb571d9811588205377eca60e73ff38fd30cf155021230ae49f3c9592",
+    "data/test.jsonl": "5ca25658f3719e359271e105be477c29f0c7dd270e7fd07e4382c76ee3628dd6",
+    "data/train.jsonl": "3ccd3c409cec351fc85266c127170dad66e2c383e17c35f811285ff1fa05f3fa",
+    "data/validation.jsonl": "ced09d63618de0f1defa6a3bc4e774a3c1720a3674a59dd34f4e0bd03bc94ba0",
+    "eval/metrics.json": "c8f74cd3c7787bf72406d2fede69e2cfa667a5e7cf3ee9784de7e7a49d45d06f",
+    "eval/predictions.json": "46eba6443d5dd725372f14c1d1ba952181b734d06fb5060efa8636ef66534882",
+    "generation.json": "3fc245a329ceb8be8f1e85bb6b2ba40e4edd5d0e728f8c33877cdc8a92175625",
+    "train/checkpoint.pt": "df99da343fd8d3c9d72c972b0f9f606facdc5f49b6f882df5c640e59682fc81d",
+    "train/config.json": "91d99ebeff78c7781d585ab7a0f187cde59d6748fcf89d34789893baa569804b",
+    "train/metrics.json": "a9ee048a677f0b0659dd61509fcef26b061195efd6690a14a21cf837ab40ec1d"
+  },
+  "created_utc": "2026-10-27T14:50:23.681193+00:00",
+  "environment": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu"
+  },
+  "format": "toruk-foundation-run-v1",
+  "package_sources": {
+    "__init__.py": "ecc19b70baf0d7a94586eaf67bc1cc6bf2dc119b4bc82ad95107e63ad0a22229",
+    "__main__.py": "25e078db81166f4b06162e32c0ed40433a060f7785fd0a1c471fcb1771a652f9",
+    "chat_foundation.py": "616a5f129fa85d982df1f479461c4df472ee97b4acd53b0087ab6721c52a1868",
+    "chat_runtime.py": "7a71f6901573430cf2b4328ddfe90a6c9fedef1e9b4ac51886da21c647793c82",
+    "chat_server.py": "455720de050a3426c32408adf0f4fecf12c8bec65a19ec7392f68244e1a903c4",
+    "cli.py": "33a6d2e13dacc3a94c9ca262368bfe023e2e514aabf215e3003b41c560bdab29",
+    "comparisons.py": "e02faa41d7027d13e8a1b6275e3eb11723691c653d8ababb2a70b1bfb69a554c",
+    "controlled.py": "eec1b16d9cbaad935a085dfce6e177829cc3ac3ab71ebfc3143733352f4bd03c",
+    "data.py": "ed6a05d6acd6117737cfbc5149e3027ebc0be2780286a165908cb41d3ec5fe11",
+    "effect_predictor.py": "3c121a95a774f54da7904d5464394e62252ee936725b0c69dd77978d3b9dd59e",
+    "effect_training.py": "fa1dab50a9b3d7744d4e0798027d38373330b0f0bc6c53ff1cf96d5c0af5665b",
+    "engine.py": "daff977dd7fa49d54d852b3a28c72a41bc5bf9a0c844dc9f517e5b8b26a6bc61",
+    "generalization.py": "c9469cc5cdc8609d53550982b53da97b5598bda3d32a498e3cea56f307b4ec5d",
+    "inference_server.py": "3e34ae4f9e247574e2c5104d62c8db56f3e6074aedf82016b0974e0249fffded",
+    "inference_worker.py": "f148ae3e62c5a08f703dd41178699eec2b85fda67173caa4f1d09c51b37aef63",
+    "model.py": "df9266dc010064fbd6dde9727247312c1c9a177d609c5ea7fee7100602bfe673",
+    "recurrent.py": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d",
+    "reproducibility.py": "c78cfdde8a9ab72a6604c03b37839ad74f0f9b7044f1e6fe9f00163fea7c760c",
+    "reproduction.py": "6970e7c6e510f6fd94c10af93d8618a2219ed19e619f7843dad6484ca8795202",
+    "tokenizer.py": "e22977465d986dadb601095eeae1aa55f74eedd39897de0a6d52657c863f1434",
+    "validation.py": "1a808f81652014d4b6e0d7612195fde977f9df515b666786f402d44498670463",
+    "worlds.py": "b8a9f400d8e69a3cb7ac894ee61692bdf4b1ac28dd55acaf0d4a70807c98c8ab"
+  },
+  "package_version": "0.1.0",
+  "parameters": {
+    "data_seed": 17,
+    "documents": 10,
+    "max_new_tokens": 8,
+    "steps": 2
+  },
+  "test_split": "integrity checked only; not model scored or used for tuning"
+}

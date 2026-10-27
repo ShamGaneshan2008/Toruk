@@ -1,0 +1,79 @@
+{
+  "fixture": "configs\\chat-comparison-v1.json",
+  "plain": {
+    "rows": [
+      {
+        "id": "greeting",
+        "answer": ". 00000000000000",
+        "expected": "Hello",
+        "exact": false,
+        "metrics": {
+          "input_tokens": 19,
+          "selected_context_tokens": 19,
+          "output_tokens": 16,
+          "total_tokens": 35,
+          "response_ms": 11.859,
+          "backend": "Toruk",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "backbone": "Toruk ordinary byte LM",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      {
+        "id": "arithmetic",
+        "answer": "ernienienear the",
+        "expected": "4",
+        "exact": false,
+        "metrics": {
+          "input_tokens": 28,
+          "selected_context_tokens": 28,
+          "output_tokens": 16,
+          "total_tokens": 44,
+          "response_ms": 13.366,
+          "backend": "Toruk",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "backbone": "Toruk ordinary byte LM",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      {
+        "id": "pattern",
+        "answer": "e 00000000000000",
+        "expected": "abc abc abc abc ",
+        "exact": false,
+        "metrics": {
+          "input_tokens": 18,
+          "selected_context_tokens": 18,
+          "output_tokens": 16,
+          "total_tokens": 34,
+          "response_ms": 11.862,
+          "backend": "Toruk",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "backbone": "Toruk ordinary byte LM",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      }
+    ],
+    "exact_accuracy": 0.0,
+    "input_tokens": 65,
+    "selected_context_tokens": 65,
+    "output_tokens": 48,
+    "response_ms": 37.087,
+    "memory_used": false
+  },
+  "selected": null,
+  "status": "NO_VALID_CONTEXT_PATH",
+  "efficiency_claim": false
+}

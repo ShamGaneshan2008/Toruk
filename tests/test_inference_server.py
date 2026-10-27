@@ -1,4 +1,5 @@
 import json
+import multiprocessing as mp
 import threading
 from http.server import ThreadingHTTPServer
 from urllib.error import HTTPError
@@ -8,6 +9,7 @@ import pytest
 
 from toruk_lm.chat_runtime import ChatError
 from toruk_lm.inference_server import make_handler, validate_request
+from toruk_lm.inference_worker import ProcessBackend
 
 
 class FakeBackend:
@@ -73,6 +75,51 @@ def test_stateless_inference_and_telemetry(server):
         assert not result["metrics"]["memory_used"]
     assert len(backend.calls) == 2
     assert all(len(messages) == 1 for messages, _ in backend.calls)
+
+
+def stalled_worker(pipe):
+    pipe.send("ready")
+    pipe.recv()
+    threading.Event().wait(30)
+
+
+def test_deadline_kills_worker_and_fails_closed():
+    context = mp.get_context("spawn")
+    backend = ProcessBackend.__new__(ProcessBackend)
+    backend.pipe, child = context.Pipe()
+    backend.process = context.Process(target=stalled_worker, args=(child,))
+    backend.timeout = 0.1
+    backend.process.start()
+    child.close()
+    try:
+        assert backend.pipe.poll(30) and backend.pipe.recv() == "ready"
+        with pytest.raises(TimeoutError, match="deadline"):
+            backend.reply_with_metrics([], 1)
+        assert not backend.ready
+        with pytest.raises(ChatError, match="restart"):
+            backend.reply_with_metrics([], 1)
+    finally:
+        backend.close()
+
+
+def test_private_message_and_path_are_absent_from_logs(server, capsys):
+    _, base = server
+    sentinel = "private-sentinel-7492"
+    call(base, "/api/infer", {"messages": [{"role": "user", "content": sentinel}]})
+    with pytest.raises(HTTPError):
+        call(base, "/" + sentinel)
+    captured = capsys.readouterr()
+    assert sentinel not in captured.out + captured.err
+
+
+def test_dead_worker_is_unavailable_instead_of_accepting_requests(server):
+    backend, base = server
+    backend.ready = False
+    assert call(base, "/healthz")["ready"] is False
+    with pytest.raises(HTTPError) as error:
+        call(base, "/api/infer", {"messages": [{"role": "user", "content": "hello"}]})
+    assert error.value.code == 503
+    assert backend.calls == []
 
 
 def test_auth_and_input_limits(server):

@@ -60,7 +60,7 @@ export async function statusResponse({env = process.env, fetchImpl = fetch} = {}
     if (!response.ok) throw new Error('backend status error');
     const data = await response.json();
     if (data.backend !== 'Toruk' || typeof data.ready !== 'boolean') throw new Error('invalid backend status');
-    return json({ready: data.ready, backend: 'Toruk', model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], error: data.error || null});
+    return json({ready: data.ready, backend: 'Toruk', experimental: true, chat_quality: 'unqualified', efficiency_claim: 'unsupported', selector_sha256: data.selector_sha256 ?? null, model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], error: data.error || null});
   } catch {
     return json({ready: false, backend: 'Toruk', model: 'Unavailable', error: 'Toruk inference host is unavailable.'});
   }
@@ -94,7 +94,7 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
     const m = data.metrics;
     if (typeof data.answer !== 'string' || !m || m.backend !== 'Toruk' || !Number.isInteger(m.input_tokens) || !Number.isInteger(m.selected_context_tokens) || !Number.isInteger(m.output_tokens) || !Number.isInteger(m.total_tokens) || typeof m.response_ms !== 'number' || typeof m.model !== 'string' || typeof m.backbone !== 'string' || m.mode !== payload.mode || typeof m.memory_used !== 'boolean' || !Array.isArray(m.selected_message_ids) || m.selected_message_ids.some(id => !/^m(?:[0-9]|1[0-9])$/.test(id))) throw new Error('invalid backend response');
     const metrics = {...m, proxy_ms: Math.round((performance.now() - started) * 1000) / 1000};
-    logger.info(JSON.stringify({event: 'toruk_chat', ...metrics}));
+    logger.info(JSON.stringify({event: 'toruk_chat', mode: payload.mode, input_tokens: m.input_tokens, selected_context_tokens: m.selected_context_tokens, output_tokens: m.output_tokens, response_ms: m.response_ms, proxy_ms: metrics.proxy_ms}));
     return json({answer: data.answer, metrics});
   } catch (error) {
     const timeout = error?.name === 'TimeoutError' || error?.name === 'AbortError';

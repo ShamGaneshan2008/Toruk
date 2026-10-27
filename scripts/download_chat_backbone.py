@@ -18,6 +18,7 @@ FILES = (
     "tokenizer.json",
     "tokenizer_config.json",
     "special_tokens_map.json",
+    "README.md",
 )
 
 

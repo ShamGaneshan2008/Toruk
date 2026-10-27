@@ -1,5 +1,6 @@
 """Bounded end-to-end smoke for local Toruk inference and Vercel-style proxy."""
 
+import argparse
 import json
 import os
 import socket
@@ -53,7 +54,12 @@ def wait_ready(url: str, process: subprocess.Popen) -> None:
 
 
 def main() -> None:
-    ARTIFACT.mkdir(parents=True, exist_ok=True)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--checkpoint", default="artifacts/minimal-lm-demo-001/train/checkpoint.pt")
+    parser.add_argument("--output-dir", type=Path, default=ARTIFACT)
+    args = parser.parse_args()
+    artifact = args.output_dir.resolve()
+    artifact.mkdir(parents=True, exist_ok=True)
     backend_port, web_port = free_port(), free_port()
     flags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
     backend_env = dict(os.environ, TORUK_BACKEND_TOKEN=TOKEN)
@@ -64,8 +70,8 @@ def main() -> None:
         PORT=str(web_port),
     )
     with (
-        (ARTIFACT / "backend-smoke.log").open("w", encoding="utf-8") as backend_log,
-        (ARTIFACT / "web-smoke.log").open("w", encoding="utf-8") as web_log,
+        (artifact / "backend-smoke.log").open("w", encoding="utf-8") as backend_log,
+        (artifact / "web-smoke.log").open("w", encoding="utf-8") as web_log,
     ):
         backend = subprocess.Popen(
             [
@@ -73,7 +79,7 @@ def main() -> None:
                 "-m",
                 "toruk_lm.inference_server",
                 "--checkpoint",
-                "artifacts/minimal-lm-demo-001/train/checkpoint.pt",
+                args.checkpoint,
                 "--port",
                 str(backend_port),
             ],
@@ -110,7 +116,7 @@ def main() -> None:
             metrics = result["metrics"]
             assert metrics["backend"] == "Toruk" and metrics["output_tokens"] <= 16
             assert not metrics["memory_used"]
-            comparison_path = ARTIFACT / f"comparison-smoke-{uuid4().hex[:12]}.json"
+            comparison_path = artifact / f"comparison-smoke-{uuid4().hex[:12]}.json"
             comparison = subprocess.run(
                 [
                     sys.executable,

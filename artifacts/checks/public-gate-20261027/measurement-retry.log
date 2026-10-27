@@ -1,0 +1,100 @@
+{
+  "scope": "local Windows only; exact requested model; not a host test",
+  "status": {
+    "ready": true,
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_sha256": null,
+    "backend": "Toruk",
+    "model": "toruk-ordinary-v1:0285d3fb6adc",
+    "backbone": "Toruk ordinary byte LM",
+    "context_tokens": 64,
+    "memory_supported": false,
+    "modes": [
+      "BASELINE"
+    ],
+    "error": null
+  },
+  "startup_seconds": 5.860499000000345,
+  "startup_plus_first_response_seconds": 5.944059600000401,
+  "generations": [
+    {
+      "wall_seconds": 0.08356060000005527,
+      "metrics": {
+        "input_tokens": 19,
+        "selected_context_tokens": 19,
+        "output_tokens": 64,
+        "total_tokens": 83,
+        "response_ms": 59.913,
+        "backend": "Toruk",
+        "model": "toruk-ordinary-v1:0285d3fb6adc",
+        "backbone": "Toruk ordinary byte LM",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "wall_seconds": 0.07330679999995482,
+      "metrics": {
+        "input_tokens": 19,
+        "selected_context_tokens": 19,
+        "output_tokens": 64,
+        "total_tokens": 83,
+        "response_ms": 52.42,
+        "backend": "Toruk",
+        "model": "toruk-ordinary-v1:0285d3fb6adc",
+        "backbone": "Toruk ordinary byte LM",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    }
+  ],
+  "four_concurrent_http_statuses": [
+    503,
+    503,
+    200,
+    503
+  ],
+  "peak_process_tree": {
+    "rss_sum_bytes": 503615488,
+    "private_sum_bytes": 1241243648
+  },
+  "dependencies": {
+    "torch": {
+      "version": "2.14.1+cpu",
+      "installed_bytes": 531556961
+    },
+    "transformers": {
+      "version": "5.20.2",
+      "installed_bytes": 107440502
+    },
+    "safetensors": {
+      "version": "0.8.0",
+      "installed_bytes": 911391
+    },
+    "numpy": {
+      "version": "2.5.4",
+      "installed_bytes": 54161255
+    },
+    "sympy": {
+      "version": "1.14.0",
+      "installed_bytes": 69598071
+    },
+    "networkx": {
+      "version": "3.6.1",
+      "installed_bytes": 15641933
+    }
+  },
+  "checkpoint": {
+    "path": "artifacts\\foundation-001\\train\\checkpoint.pt",
+    "bytes": 573431,
+    "sha256": "0285d3fb6adc4e49a92b6c2f4f8226f607d8660d46d3a19d5fea33ca48065e94"
+  }
+}

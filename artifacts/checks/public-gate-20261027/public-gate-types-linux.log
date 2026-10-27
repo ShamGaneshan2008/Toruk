@@ -1,0 +1,5 @@
+src\toruk_lm\chat_foundation.py:114: error: Cannot find implementation or library stub for module named "transformers"  [import-not-found]
+src\toruk_lm\chat_foundation.py:114: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+src\toruk_lm\inference_server.py:105: error: Item "ProcessBackend" of "OrdinaryChatBackend | PretrainedChatBackend | ProcessBackend" has no attribute "model_id"  [union-attr]
+src\toruk_lm\inference_server.py:109: error: Item "ProcessBackend" of "OrdinaryChatBackend | PretrainedChatBackend | ProcessBackend" has no attribute "context"  [union-attr]
+Found 3 errors in 2 files (checked 22 source files)

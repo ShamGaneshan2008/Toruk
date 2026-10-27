@@ -1,0 +1,222 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "baseline": {
+    "answer": "The vault code is LIME42.",
+    "metrics": {
+      "input_tokens": 297,
+      "selected_context_tokens": 297,
+      "output_tokens": 10,
+      "total_tokens": 307,
+      "response_ms": 1109.262,
+      "backend": "Toruk",
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+      "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 1114.016
+    }
+  },
+  "toruk": null,
+  "probes": {
+    "arithmetic": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is 2 + 3?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "2 + 3 is a simple arithmetic operation that can be performed using basic arithmetic operations. In mathematics, addition is a fundamental operation that combines two numbers to produce",
+          "metrics": {
+            "input_tokens": 38,
+            "selected_context_tokens": 38,
+            "output_tokens": 32,
+            "total_tokens": 70,
+            "response_ms": 1834.747,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 1838.557
+          }
+        }
+      }
+    ],
+    "follow_up": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My name is Mira."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm Mira, a friendly AI chatbot designed to assist users in various aspects of life. I'm here to help you with your queries, whether it's",
+          "metrics": {
+            "input_tokens": 35,
+            "selected_context_tokens": 35,
+            "output_tokens": 32,
+            "total_tokens": 67,
+            "response_ms": 1814.102,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 1817.416
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My name is Mira."
+            },
+            {
+              "role": "assistant",
+              "content": "I'm Mira, a friendly AI chatbot designed to assist users in various aspects of life. I'm here to help you with your queries, whether it's"
+            },
+            {
+              "role": "user",
+              "content": "What is my name?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "My name is Mira, and I'm a friendly AI chatbot. I'm here to help you with your queries, whether it's about a specific topic,",
+          "metrics": {
+            "input_tokens": 83,
+            "selected_context_tokens": 83,
+            "output_tokens": 32,
+            "total_tokens": 115,
+            "response_ms": 1875.528,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 1878.868
+          }
+        }
+      }
+    ],
+    "correction": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My favorite color is blue."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades,",
+          "metrics": {
+            "input_tokens": 36,
+            "selected_context_tokens": 36,
+            "output_tokens": 32,
+            "total_tokens": 68,
+            "response_ms": 1700.966,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 1704.03
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My favorite color is blue."
+            },
+            {
+              "role": "assistant",
+              "content": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades,"
+            },
+            {
+              "role": "user",
+              "content": "Correction: my favorite color is green. What is my favorite color now?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm glad you like the color green. It's a beautiful and versatile choice that can be found in many different forms. You can choose from various shades,",
+          "metrics": {
+            "input_tokens": 95,
+            "selected_context_tokens": 95,
+            "output_tokens": 32,
+            "total_tokens": 127,
+            "response_ms": 1686.212,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 1689.34
+          }
+        }
+      }
+    ]
+  },
+  "outage_status": 503
+}
