@@ -1,0 +1,42 @@
+{
+  "format": "toruk-chat-selector-data-v2",
+  "seeds": {
+    "train": 711,
+    "dev": 991,
+    "final": 1423
+  },
+  "sizes_per_category": {
+    "train": 24,
+    "dev": 8,
+    "final": 4
+  },
+  "categories": [
+    "correction",
+    "preservation",
+    "conflict",
+    "irrelevant",
+    "long_recall",
+    "multi_fact",
+    "unknown"
+  ],
+  "template_families": {
+    "train": [
+      "{name}'s {slot} is {value}.",
+      "What is {name}'s {slot}?"
+    ],
+    "dev": [
+      "For {name}, record {slot}: {value}.",
+      "Tell me the {slot} for {name}."
+    ],
+    "final": [
+      "Please remember this entry: {name} has {value} as the {slot}.",
+      "Which {slot} belongs to {name}?"
+    ]
+  },
+  "generator_sha256": "6775d0542f1568147752c9000a9317bdd5ed26a706661190f7d36caa649f6e61",
+  "split_sha256": {
+    "train": "e7cc889d420a37e2deb744ef84f0cd988bc6b57cec27055a31536c32d65331f2",
+    "dev": "66c98eda31f16b7666befa2acc903a51adf79a4820eba4c261b479e09fd25247",
+    "final": "de149f82fbfc71b12833fb8ce8ac911e6d5eec95dd445851ab9f8e3cf4cfcd84"
+  }
+}

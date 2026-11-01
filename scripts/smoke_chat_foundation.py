@@ -1,6 +1,7 @@
 """Local browser-proxy-inference smoke with pinned backbone and M6 selector."""
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -9,8 +10,6 @@ from pathlib import Path
 
 from smoke_vercel_local import free_port, read, wait_ready
 
-from toruk_lm.chat_foundation import BACKBONE_ID, BACKBONE_REVISION
-
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT = ROOT / "artifacts/chat-foundation-001"
 
@@ -18,6 +17,8 @@ ARTIFACT = ROOT / "artifacts/chat-foundation-001"
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--backbone-dir", type=Path, default=ARTIFACT / "backbone")
+    parser.add_argument("--ollama-model")
+    parser.add_argument("--ollama-digest")
     parser.add_argument(
         "--selector-checkpoint",
         type=Path,
@@ -32,6 +33,8 @@ def main() -> None:
     parser.add_argument("--max-new-tokens", type=int, choices=(32, 64), default=32)
     parser.add_argument("--output-dir", type=Path, default=ARTIFACT)
     args = parser.parse_args()
+    if bool(args.ollama_model) != bool(args.ollama_digest):
+        parser.error("--ollama-model requires --ollama-digest and vice versa")
     args.output_dir.mkdir(parents=True, exist_ok=True)
     backend_port, web_port = free_port(), free_port()
     token = "local-chat-foundation-smoke-token"
@@ -52,8 +55,11 @@ def main() -> None:
                 sys.executable,
                 "-m",
                 "toruk_lm.inference_server",
-                "--backbone-dir",
-                str(args.backbone_dir),
+                *(
+                    ["--ollama-model", args.ollama_model, "--ollama-digest", args.ollama_digest]
+                    if args.ollama_model
+                    else ["--backbone-dir", str(args.backbone_dir)]
+                ),
                 *(
                     []
                     if args.baseline_only
@@ -78,15 +84,41 @@ def main() -> None:
         )
         try:
             base = f"http://127.0.0.1:{web_port}"
-            wait_ready(f"http://127.0.0.1:{backend_port}/api/status", backend)
+            wait_ready(
+                f"http://127.0.0.1:{backend_port}/api/status",
+                backend,
+                timeout=180 if args.ollama_model else 60,
+            )
             wait_ready(base + "/api/status", web)
             page_code, page = read(base + "/")
             assert page_code == 200 and isinstance(page, str)
             assert "BASELINE: recent turns" in page and "TORUK: selected turns" in page
             _, status = read(base + "/api/status")
             assert isinstance(status, dict) and status["ready"]
-            assert status["model"] == f"{BACKBONE_ID}@{BACKBONE_REVISION[:12]}"
+            if args.ollama_model:
+                assert status["model"] == f"ollama/{args.ollama_model}@{args.ollama_digest[:12]}"
+                assert status["backbone"] == f"ollama/{args.ollama_model}"
+            else:
+                manifest = json.loads(
+                    (args.backbone_dir / "toruk-backbone.json").read_text(encoding="utf-8")
+                )
+                assert status["model"] == f"{manifest['model']}@{manifest['revision'][:12]}"
+                assert status["backbone"] == manifest["model"]
             assert status["memory_supported"] is (not args.baseline_only)
+            if not args.baseline_only:
+                selector_hash = hashlib.sha256(args.selector_checkpoint.read_bytes()).hexdigest()
+                assert status["selector_sha256"] == selector_hash
+                selector_kind = "toruk-m6-controlled-qa"
+                if args.selector_checkpoint.suffix.lower() == ".json":
+                    metadata = json.loads(args.selector_checkpoint.read_text(encoding="utf-8"))
+                    selector_kind = (
+                        "toruk-chat-selector-v2"
+                        if metadata.get("protocol") == "chat-selector-v2"
+                        else "toruk-chat-selector-v1"
+                    )
+                assert status["selector_kind"] == (
+                    selector_kind
+                )
             fixture = json.loads((ROOT / "configs/chat-foundation-eval-v1.json").read_text())
             messages = next(
                 case["messages"] for case in fixture["cases"] if case["id"] == "long_retrieval"
@@ -106,6 +138,8 @@ def main() -> None:
                 assert code == 200 and isinstance(response, dict)
                 assert response["metrics"]["mode"] == mode
                 assert response["metrics"]["backbone"] == status["backbone"]
+                if args.ollama_model:
+                    assert response["metrics"]["selector_sha256"] == status["selector_sha256"]
                 results[mode] = response
             if not args.baseline_only:
                 assert results["TORUK"]["metrics"]["memory_used"] is True
@@ -123,39 +157,85 @@ def main() -> None:
             probes = {}
             if args.chat_probes:
                 scenarios = {
-                    "arithmetic": ["What is 2 + 3?"],
-                    "follow_up": ["My name is Mira.", "What is my name?"],
-                    "correction": [
-                        "My favorite color is blue.",
-                        "Correction: my favorite color is green. What is my favorite color now?",
+                    "youtube_then_math": ["open youtube", "what is 5+5"],
+                    "reported_history": ["what is 5", "what is 5+5"],
+                    "full_history_generated": [
+                        "open youtube",
+                        "what is 5",
+                        "what is 5+5",
+                        "what is 5+5",
                     ],
+                    "fresh_math": ["what is 5+5"],
+                    "fresh_name": ["My name is Mira.", "What is my name?"],
                 }
-                for name, prompts in scenarios.items():
-                    history = []
-                    turns = []
-                    for prompt in prompts:
-                        history.append({"role": "user", "content": prompt})
-                        code, answer = read(
-                            base + "/api/chat",
-                            {
-                                "messages": history,
-                                "mode": "BASELINE",
-                                "max_new_tokens": args.max_new_tokens,
+                for probe_mode in ("BASELINE",) if args.baseline_only else ("BASELINE", "TORUK"):
+                    probes[probe_mode] = {}
+                    for name, prompts in scenarios.items():
+                        history = []
+                        if name == "reported_history":
+                            history = [
+                                {"role": "user", "content": "open youtube"},
+                                {
+                                    "role": "assistant",
+                                    "content": (
+                                        "I'm sorry for any confusion, but as a chatbot, I don't "
+                                        "have the capability to access or interact with "
+                                        "online content."
+                                    ),
+                                },
+                            ]
+                        elif name == "full_history_generated":
+                            history = [
+                                {"role": "user", "content": "hello"},
+                                {
+                                    "role": "assistant",
+                                    "content": "Hello! How can I help you today?",
+                                },
+                                {"role": "user", "content": "what are you?"},
+                                {
+                                    "role": "assistant",
+                                    "content": (
+                                        "I'm a chatbot designed to assist users with "
+                                        "various topics."
+                                    ),
+                                },
+                                {"role": "user", "content": "i am JinSakai"},
+                                {
+                                    "role": "assistant",
+                                    "content": (
+                                        "I'm sorry for any confusion, but as a chatbot, I don't "
+                                        "have the ability to assist with specific queries or "
+                                        "provide information about specific topics."
+                                    ),
+                                },
+                            ]
+                        turns = []
+                        for prompt_index, prompt in enumerate(prompts):
+                            history.append({"role": "user", "content": prompt})
+                            budget = (
+                                64
+                                if name == "full_history_generated" and prompt_index == 3
+                                else args.max_new_tokens
+                            )
+                            request_body = {
+                                "messages": list(history),
+                                "mode": probe_mode,
+                                "max_new_tokens": budget,
                                 "temperature": 0,
                                 "top_p": 1,
-                            },
-                        )
-                        turns.append(
-                            {
-                                "request": {"messages": list(history)},
-                                "http_status": code,
-                                "response": answer,
                             }
-                        )
-                        assert code == 200 and isinstance(answer, dict)
-                        assert answer["metrics"]["model"] == status["model"]
-                        history.append({"role": "assistant", "content": answer["answer"]})
-                    probes[name] = turns
+                            code, answer = read(base + "/api/chat", request_body)
+                            turns.append(
+                                {
+                                    "request": request_body,
+                                    "http_status": code,
+                                    "response": answer,
+                                }
+                            )
+                            assert code == 200 and isinstance(answer, dict)
+                            assert answer["metrics"]["model"] == status["model"]
+                            history.append({"role": "assistant", "content": answer["answer"]})
+                        probes[probe_mode][name] = turns
             backend.terminate()
             backend.wait(timeout=10)
             outage_code, outage = read(

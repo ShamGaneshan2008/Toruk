@@ -1,0 +1,161 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "scenarios": {
+    "youtube_then_math": [
+      {
+        "prompt": "Open YouTube for me.",
+        "answer": "I'm ready to help you with your YouTube content. Please go ahead and share the content you'd like me to review, and I'll be happy to assist you in editing, improving, and optimizing your videos for better quality and engagement.",
+        "metrics": {
+          "input_tokens": 35,
+          "selected_context_tokens": 35,
+          "output_tokens": 49,
+          "total_tokens": 84,
+          "response_ms": 5404.418,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      {
+        "prompt": "What is 2 + 3?",
+        "answer": "2 + 3 is a simple addition problem that can be solved using basic arithmetic operations. To add two numbers, you simply add the numbers together. In this case, you have two numbers, 2 and 3, and you want to add them together.\n\nThe formula for adding two numbers is:",
+        "metrics": {
+          "input_tokens": 102,
+          "selected_context_tokens": 102,
+          "output_tokens": 64,
+          "total_tokens": 166,
+          "response_ms": 9923.886,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      },
+      {
+        "prompt": "What is 7 times 8?",
+        "answer": "To find 7 times 8, you simply multiply the numbers together. In this case, you have 7 and 8, so you multiply them together: 7 * 8 = 56.\n\nSo, 7 times 8 is equal to 56.",
+        "metrics": {
+          "input_tokens": 184,
+          "selected_context_tokens": 184,
+          "output_tokens": 60,
+          "total_tokens": 244,
+          "response_ms": 9479.544,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      }
+    ],
+    "fresh_math": [
+      {
+        "prompt": "What is 2 + 3?",
+        "answer": "2 + 3 is a simple arithmetic operation that can be performed using basic arithmetic operations. In mathematics, addition is a fundamental operation that combines two numbers to produce a single number.\n\nIn this case, we have two numbers, 2 and 3, and we want to add them together. The basic arithmetic",
+        "metrics": {
+          "input_tokens": 38,
+          "selected_context_tokens": 38,
+          "output_tokens": 64,
+          "total_tokens": 102,
+          "response_ms": 9491.392,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      }
+    ],
+    "fresh_instruction": [
+      {
+        "prompt": "Reply with exactly the word OK and nothing else.",
+        "answer": "I'm sorry for the confusion, but as a chatbot, I don't have the capability to provide responses that are overly polite or overly helpful. I'm designed to provide clear and concise responses to user queries. If you need assistance with a specific topic or need help with a particular issue, feel free to ask.",
+        "metrics": {
+          "input_tokens": 41,
+          "selected_context_tokens": 41,
+          "output_tokens": 64,
+          "total_tokens": 105,
+          "response_ms": 8772.491,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      }
+    ],
+    "fresh_correction": [
+      {
+        "prompt": "My favorite color is blue.",
+        "answer": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light blues to deep blues, and even some vibrant shades like navy or charcoal. Blue is also a great choice for adding a touch of sophistication to any outfit",
+        "metrics": {
+          "input_tokens": 36,
+          "selected_context_tokens": 36,
+          "output_tokens": 64,
+          "total_tokens": 100,
+          "response_ms": 8193.541,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      {
+        "prompt": "Correction: my favorite color is green. What is my favorite color now?",
+        "answer": "I'm glad you like the color green. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light greens to dark greens, and even some vibrant shades like navy or charcoal. Green is also a great choice for adding a touch of sophistication to any outfit",
+        "metrics": {
+          "input_tokens": 127,
+          "selected_context_tokens": 127,
+          "output_tokens": 64,
+          "total_tokens": 191,
+          "response_ms": 9635.912,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    ]
+  }
+}

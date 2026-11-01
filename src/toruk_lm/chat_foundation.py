@@ -3,6 +3,7 @@
 import hashlib
 import json
 import math
+import re
 import time
 from pathlib import Path
 from typing import Any
@@ -11,6 +12,7 @@ import torch
 from torch.nn import functional as F
 
 from toruk_lm.chat_runtime import ChatError
+from toruk_lm.chat_selector import load_chat_selector
 from toruk_lm.controlled import load_controlled
 from toruk_lm.recurrent import RecurrentLM
 from toruk_lm.tokenizer import ByteTokenizer
@@ -19,6 +21,25 @@ BACKBONE_ID = "HuggingFaceTB/SmolLM2-135M-Instruct"
 BACKBONE_REVISION = "12fd25f77366fa6b3b4b768ec3050bf629380bac"
 BACKBONE_SHA256 = "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c"
 MAX_PROMPT_TOKENS = 512
+
+
+def read_backbone_manifest(model_dir: Path) -> dict[str, str]:
+    """Require a local, content-identified model before loading executable model code."""
+    try:
+        manifest = json.loads((model_dir / "toruk-backbone.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError) as error:
+        raise ChatError(f"Backbone manifest unavailable: {error}") from error
+    if (
+        not isinstance(manifest, dict)
+        or set(manifest) != {"model", "revision", "model_sha256"}
+        or not all(isinstance(value, str) and value for value in manifest.values())
+        or not re.fullmatch(r"[0-9a-f]{64}", manifest["model_sha256"])
+    ):
+        raise ChatError("Backbone identity or revision mismatch.")
+    weights = model_dir / "model.safetensors"
+    if not weights.is_file() or weight_sha256(weights) != manifest["model_sha256"]:
+        raise ChatError("Backbone weights are missing or have the wrong SHA-256.")
+    return manifest
 
 
 def weight_sha256(path: Path) -> str:
@@ -60,6 +81,7 @@ class TorukContextSelector:
         self.tokenizer = ByteTokenizer()
         self.sha256 = hashlib.sha256(checkpoint.read_bytes()).hexdigest()
         self.checkpoint_id = self.sha256[:12]
+        self.kind = "toruk-m6-controlled-qa"
         if saved.get("tokenizer") != ByteTokenizer.fingerprint:
             raise ChatError("Toruk selector tokenizer mismatch.")
 
@@ -93,23 +115,10 @@ class TorukContextSelector:
 
 
 class PretrainedChatBackend:
-    """Local-only pinned backbone; TORUK changes context, never backbone weights."""
+    """Local content-identified backbone; TORUK changes context, never weights."""
 
     def __init__(self, model_dir: Path, selector_checkpoint: Path | None = None) -> None:
-        manifest_path = model_dir / "toruk-backbone.json"
-        try:
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except (OSError, ValueError) as error:
-            raise ChatError(f"Backbone manifest unavailable: {error}") from error
-        if manifest != {
-            "model": BACKBONE_ID,
-            "revision": BACKBONE_REVISION,
-            "model_sha256": BACKBONE_SHA256,
-        }:
-            raise ChatError("Backbone identity or revision mismatch.")
-        weights = model_dir / "model.safetensors"
-        if not weights.is_file() or weight_sha256(weights) != BACKBONE_SHA256:
-            raise ChatError("Backbone weights are missing or have the wrong SHA-256.")
+        manifest = read_backbone_manifest(model_dir)
         try:
             from transformers import AutoModelForCausalLM, AutoTokenizer
         except ImportError as error:
@@ -130,18 +139,18 @@ class PretrainedChatBackend:
             )
         except (OSError, ValueError, RuntimeError) as error:
             raise ChatError(f"Cannot load pinned chat backbone: {error}") from error
-        if self.model.config.model_type != "llama" or not self.tokenizer.chat_template:
+        if not self.tokenizer.chat_template:
             raise ChatError("Backbone architecture or chat template is incompatible.")
         if self.tokenizer.eos_token_id is None or self.tokenizer.pad_token_id is None:
             raise ChatError("Backbone stop/padding tokens are missing.")
         self.model.eval()
         self.context = MAX_PROMPT_TOKENS
-        self.backbone_id = BACKBONE_ID
-        self.backbone_revision = BACKBONE_REVISION
-        self.backbone_sha256 = BACKBONE_SHA256
-        self.model_id = f"{BACKBONE_ID}@{BACKBONE_REVISION[:12]}"
+        self.backbone_id = manifest["model"]
+        self.backbone_revision = manifest["revision"]
+        self.backbone_sha256 = manifest["model_sha256"]
+        self.model_id = f"{self.backbone_id}@{self.backbone_revision[:12]}"
         self.selector = (
-            TorukContextSelector(selector_checkpoint) if selector_checkpoint is not None else None
+            load_chat_selector(selector_checkpoint) if selector_checkpoint is not None else None
         )
 
     def _tokens(self, messages: list[dict[str, str]]) -> torch.Tensor:
@@ -213,7 +222,9 @@ class PretrainedChatBackend:
                 "response_ms": round((time.perf_counter() - started) * 1000, 3),
                 "backend": "Toruk",
                 "model": self.model_id,
-                "backbone": BACKBONE_ID,
+                "backbone": self.backbone_id,
+                "selector_sha256": getattr(self.selector, "sha256", None),
+                "selector_kind": getattr(self.selector, "kind", None),
                 "mode": mode,
                 "memory_used": memory_used,
                 "selected_messages": len(chosen),

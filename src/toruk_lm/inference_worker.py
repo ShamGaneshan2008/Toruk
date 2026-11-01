@@ -11,7 +11,13 @@ from typing import Any
 from toruk_lm.chat_runtime import ChatError
 
 
-def model_worker(pipe: Connection, source: Path, selector: Path | None, pretrained: bool) -> None:
+def model_worker(
+    pipe: Connection,
+    source: Path | str,
+    selector: Path | None,
+    pretrained: bool,
+    ollama_digest: str | None,
+) -> None:
     def watch_parent() -> None:
         parent = mp.parent_process()
         while parent is not None:
@@ -22,11 +28,18 @@ def model_worker(pipe: Connection, source: Path, selector: Path | None, pretrain
     threading.Thread(target=watch_parent, daemon=True).start()
     from toruk_lm.chat_foundation import PretrainedChatBackend
     from toruk_lm.chat_runtime import OrdinaryChatBackend
+    from toruk_lm.ollama_chat import OllamaChatBackend
 
     try:
-        backend = (
-            PretrainedChatBackend(source, selector) if pretrained else OrdinaryChatBackend(source)
-        )
+        backend: OllamaChatBackend | PretrainedChatBackend | OrdinaryChatBackend
+        if ollama_digest is not None:
+            backend = OllamaChatBackend(str(source), ollama_digest, selector)
+        elif pretrained:
+            assert isinstance(source, Path)
+            backend = PretrainedChatBackend(source, selector)
+        else:
+            assert isinstance(source, Path)
+            backend = OrdinaryChatBackend(source)
         pipe.send(
             {
                 "model_id": backend.model_id,
@@ -34,8 +47,10 @@ def model_worker(pipe: Connection, source: Path, selector: Path | None, pretrain
                 "context": backend.context,
                 "selector": bool(getattr(backend, "selector", None)),
                 "selector_sha256": getattr(getattr(backend, "selector", None), "sha256", None),
+                "selector_kind": getattr(getattr(backend, "selector", None), "kind", None),
                 "backbone_revision": getattr(backend, "backbone_revision", None),
                 "backbone_sha256": getattr(backend, "backbone_sha256", None),
+                "backbone_digest": getattr(backend, "backbone_digest", None),
             }
         )
         while True:
@@ -59,18 +74,23 @@ class ProcessBackend:
     selector_sha256: str | None
 
     def __init__(
-        self, source: Path, selector: Path | None, pretrained: bool, timeout: float = 45
+        self,
+        source: Path | str,
+        selector: Path | None,
+        pretrained: bool,
+        timeout: float = 45,
+        ollama_digest: str | None = None,
     ) -> None:
         self.timeout = timeout
         context = mp.get_context("spawn")
         self.pipe, child = context.Pipe()
         self.process = context.Process(
-            target=model_worker, args=(child, source, selector, pretrained)
+            target=model_worker, args=(child, source, selector, pretrained, ollama_digest)
         )
         self.process.start()
         child.close()
         try:
-            if not self.pipe.poll(120):
+            if not self.pipe.poll(180 if ollama_digest is not None else 120):
                 raise ChatError("Model startup timed out.")
             metadata = self.pipe.recv()
             for name, value in metadata.items():

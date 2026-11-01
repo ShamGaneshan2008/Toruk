@@ -1,0 +1,21 @@
+{
+  "format": "toruk-chat-selector-freeze-v1",
+  "sealed_utc": "2026-11-01T15:32:37.060310+00:00",
+  "sha256": {
+    "docs/research/chat-selector-v1-protocol.md": "3c144b355c5621841b44228f4a60ea50a78f9250b06f32faaed7441b8f95cf18",
+    "scripts/build_chat_selector_data.py": "b03ab4d8b907a77819180140b1ee96914618248dbaf68b5ab137922c554bfd7f",
+    "scripts/train_chat_selector.py": "01658d2dbb0ee0331bc877e3a0a2198c5a2e30d98f02e88d1728db0429b8232f",
+    "scripts/evaluate_trained_chat_selector.py": "7da44da93ba2f1244749c85ef1ab96281dcbd07a5b9fde9e00df75199ef3805b",
+    "src/toruk_lm/chat_selector.py": "53f6443d34270cc558bb2d81b0bf4280f2c2613280cfba6563c712fee3fd49c0",
+    "artifacts/chat-selector-v1-20261101/data-frozen/manifest.json": "be357b221a392c968a371e9bbaffa8a7169a069eb1d99d6b2ab0eb5d80401c84",
+    "artifacts/chat-selector-v1-20261101/data-frozen/final.jsonl": "3194fc40daf0586e392fa2b726e3f754b9450e4cff909bd95360538a25c15787",
+    "artifacts/chat-selector-v1-20261101/selector.json": "09b804ee11a93e22426870c2c29481f209c8b8b99862ed74e0c6286a5861ad92"
+  },
+  "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+  "settings": {
+    "temperature": 0,
+    "top_p": 1,
+    "max_new_tokens": 32,
+    "max_prompt_tokens": 512
+  }
+}

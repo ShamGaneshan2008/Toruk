@@ -1,4 +1,4 @@
-"""Download only a pinned small instruct model, verifying its weight hash."""
+"""Download a revision-pinned compatible instruct model, verifying its weight hash."""
 
 import argparse
 import json
@@ -27,7 +27,14 @@ def main() -> None:
     parser.add_argument(
         "--output", type=Path, default=Path("artifacts/chat-foundation-001/backbone")
     )
+    parser.add_argument("--model", default=BACKBONE_ID)
+    parser.add_argument("--revision", default=BACKBONE_REVISION)
+    parser.add_argument("--sha256", default=BACKBONE_SHA256)
     args = parser.parse_args()
+    if args.model != BACKBONE_ID and (
+        args.revision == BACKBONE_REVISION or args.sha256 == BACKBONE_SHA256
+    ):
+        parser.error("a different model requires its own --revision and --sha256")
     if args.output.exists() and any(args.output.iterdir()):
         parser.error("use a fresh output directory")
     try:
@@ -36,8 +43,8 @@ def main() -> None:
         parser.error(f"install optional chat dependencies first: {error}")
     args.output.mkdir(parents=True, exist_ok=True)
     snapshot_download(
-        repo_id=BACKBONE_ID,
-        revision=BACKBONE_REVISION,
+        repo_id=args.model,
+        revision=args.revision,
         allow_patterns=list(FILES),
         local_dir=args.output,
         max_workers=1,
@@ -46,11 +53,11 @@ def main() -> None:
         if not (args.output / name).is_file():
             raise ValueError(f"missing backbone file: {name}")
     digest = weight_sha256(args.output / "model.safetensors")
-    if digest != BACKBONE_SHA256:
+    if digest != args.sha256:
         raise ValueError("model.safetensors SHA-256 mismatch")
     manifest = {
-        "model": BACKBONE_ID,
-        "revision": BACKBONE_REVISION,
+        "model": args.model,
+        "revision": args.revision,
         "model_sha256": digest,
     }
     (args.output / "toruk-backbone.json").write_text(

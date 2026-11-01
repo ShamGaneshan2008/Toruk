@@ -13,6 +13,26 @@ Toruk investigates how a language model can carry useful information through a l
 
 The repository includes a compact causal language model and research prototypes for bounded memory, effect prediction, and correction/preservation training. Bounded validation and exploratory held-out studies have run; useful recall, reliable revision, generalization, and resource advantages remain unestablished.
 
+## Implemented conversational chat flow
+
+```mermaid
+flowchart LR
+    user["User"] --> page["Local chat page"]
+    page -->|history and mode| proxy["Node proxy"]
+    proxy --> server["Python inference server and model worker"]
+    server --> mode{"Context mode"}
+    mode -->|BASELINE| recent["Recent-turn context"]
+    mode -->|TORUK when selector loaded| selector["Experimental Toruk context selector"]
+    recent --> fit["512-token prompt fit"]
+    selector --> fit
+    fit --> backbone["Shared local pretrained instruct backbone"]
+    backbone --> result["Answer and token/latency metrics"]
+    result -->|via server and proxy| page
+    page -->|display reply| user
+```
+
+The ordinary small Toruk LM and controlled recurrent research pipeline are separate from this conversational path; the ordinary demo checkpoint is not its chat backbone. The pretrained backbone supplies the chatbot's language ability. Toruk's accuracy and efficiency advantage has not been verified; the optional selector can omit needed context.
+
 ## Why this matters
 
 Long histories contain both useful facts and distractions. Some facts later change; others must survive those changes. A fixed memory budget makes every update a choice: what should remain available, what should be revised, and what must not be disturbed?
@@ -79,6 +99,12 @@ Run the focused interface checks with `.\.venv\Scripts\python.exe -m pytest -q t
 For a static Vercel Hobby chat page with a separate protected Toruk inference host, see the [Vercel chatbot MVP guide](docs/vercel-chat.md). The Vercel page does not bundle PyTorch or start training; without the separately configured backend it reports that inference is unavailable.
 
 The optional [conversational foundation](docs/chat-foundation.md) adds an explicitly labeled pretrained instruct backbone and an experimental Toruk recurrent context selector. Its fixed local evaluation found no verified chat-memory or token-efficiency benefit.
+
+The same local page can also use a digest-pinned Ollama Llama 3.2 3B backbone on a 4 GiB GPU. See the [Windows startup commands](docs/chat-foundation.md#local-ollama-backbone-on-a-small-gpu) and [separate exploratory comparison](docs/research/local-backbone-llama32-20261101.md). The pretrained model supplies its language ability; Toruk's selectors only choose prompt turns.
+
+A separately trained [Toruk chat selector v1](docs/research/chat-selector-v1-results.md) now ranks earlier turns using supervised evidence labels. It improves a narrow synthetic held-out comparison against recent-turn context, but fails an existing vault-code paraphrase. It does not train the conversational backbone or establish general semantic memory.
+
+The newer [v2 held out comparison](docs/research/chat-selector-v2-results.md) used a separately trained selector and distinct fact templates across train, development, and final splits. On 28 final cases, recent context answered 26 correctly; both a simple lexical selector and Toruk v2 answered 22. Toruk selected fewer prompt tokens but did not improve answer quality or demonstrate total-resource efficiency. The local page can load the v2 checkpoint and displays its true identity.
 
 The [reproducibility guide](docs/reproducibility.md) provides versioned config
 validation, a tiny CPU smoke run, and artifact rescoring commands. These verify

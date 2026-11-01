@@ -1,0 +1,2167 @@
+{
+  "schema": "toruk-local-backbone-exploratory-v1",
+  "note": "Exploratory reuse of the frozen v2 fixture; no preregistered success claim.",
+  "fixture": "configs\\chat-release-eval-v2.json",
+  "fixture_sha256": "86e31ab8afccb0e7ab88817fc11b7be4585a7d261c3d99f93eef60540c63a0c6",
+  "model": "ollama/llama3.2:latest@a80c4f17acd5",
+  "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+  "selector_sha256": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+  "settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "memory_before": {
+    "available_ram_gib": 1.438,
+    "gpu_memory_mib": {
+      "total": 4096,
+      "used": 2350,
+      "free": 1613
+    }
+  },
+  "memory_after": {
+    "available_ram_gib": 1.539,
+    "gpu_memory_mib": {
+      "total": 4096,
+      "used": 2350,
+      "free": 1613
+    }
+  },
+  "ollama_loaded": {
+    "name": "llama3.2:latest",
+    "model": "llama3.2:latest",
+    "size": 2935656282,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "llama",
+      "families": [
+        "llama"
+      ],
+      "parameter_size": "3.2B",
+      "quantization_level": "Q4_K_M"
+    },
+    "expires_at": "2026-11-01T20:35:35.7267129+05:30",
+    "size_vram": 2347688263,
+    "context_length": 4096,
+    "runner": "llamacpp"
+  },
+  "elapsed_seconds": 55.45,
+  "summary": {
+    "BASELINE": {
+      "n": 20,
+      "quality": 17,
+      "factual_correct": 14,
+      "correction_correct": 2,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1682,
+      "selected_tokens": 1682,
+      "output_tokens": 266,
+      "total_tokens": 1948,
+      "latency_ms": 18837.815,
+      "memory_used_cases": 0
+    },
+    "TORUK": {
+      "n": 20,
+      "quality": 17,
+      "factual_correct": 14,
+      "correction_correct": 2,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1682,
+      "selected_tokens": 1399,
+      "output_tokens": 265,
+      "total_tokens": 1664,
+      "latency_ms": 25120.895,
+      "memory_used_cases": 13
+    }
+  },
+  "rows": [
+    {
+      "id": "instruction_word",
+      "category": "instruction",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Reply with exactly this one word and nothing else: HELLO"
+        }
+      ],
+      "answer": "HELLO",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 37,
+        "selected_context_tokens": 37,
+        "output_tokens": 3,
+        "total_tokens": 40,
+        "response_ms": 800.261,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "instruction_word",
+      "category": "instruction",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Reply with exactly this one word and nothing else: HELLO"
+        }
+      ],
+      "answer": "HELLO",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 37,
+        "selected_context_tokens": 37,
+        "output_tokens": 3,
+        "total_tokens": 40,
+        "response_ms": 551.2,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "instruction_digit",
+      "category": "instruction",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Return only the digit seven, with no explanation."
+        }
+      ],
+      "answer": "7",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 35,
+        "selected_context_tokens": 35,
+        "output_tokens": 2,
+        "total_tokens": 37,
+        "response_ms": 675.946,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "instruction_digit",
+      "category": "instruction",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Return only the digit seven, with no explanation."
+        }
+      ],
+      "answer": "7",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 35,
+        "selected_context_tokens": 35,
+        "output_tokens": 2,
+        "total_tokens": 37,
+        "response_ms": 609.167,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_italy",
+      "category": "factual",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the capital city of Italy?"
+        }
+      ],
+      "answer": "The capital city of Italy is Rome (Italian: Roma).",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 33,
+        "selected_context_tokens": 33,
+        "output_tokens": 13,
+        "total_tokens": 46,
+        "response_ms": 993.045,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_italy",
+      "category": "factual",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the capital city of Italy?"
+        }
+      ],
+      "answer": "The capital city of Italy is Rome (Italian: Roma).",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 33,
+        "selected_context_tokens": 33,
+        "output_tokens": 13,
+        "total_tokens": 46,
+        "response_ms": 693.269,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_water",
+      "category": "factual",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "At sea level, at what temperature in degrees Celsius does pure water boil?"
+        }
+      ],
+      "answer": "At sea level, the boiling point of pure water is 100 degrees Celsius.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 40,
+        "selected_context_tokens": 40,
+        "output_tokens": 17,
+        "total_tokens": 57,
+        "response_ms": 1341.868,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "fact_water",
+      "category": "factual",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "At sea level, at what temperature in degrees Celsius does pure water boil?"
+        }
+      ],
+      "answer": "At sea level, the boiling point of pure water is 100 degrees Celsius.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 40,
+        "selected_context_tokens": 40,
+        "output_tokens": 17,
+        "total_tokens": 57,
+        "response_ms": 2471.692,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "reference_nickname",
+      "category": "reference",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Please call me Nila in this conversation."
+        },
+        {
+          "role": "assistant",
+          "content": "All right."
+        },
+        {
+          "role": "user",
+          "content": "I am learning to paint landscapes."
+        },
+        {
+          "role": "assistant",
+          "content": "That sounds interesting."
+        },
+        {
+          "role": "user",
+          "content": "What name did I ask you to call me?"
+        }
+      ],
+      "answer": "You asked me to call you \"Nila\".",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 78,
+        "selected_context_tokens": 78,
+        "output_tokens": 11,
+        "total_tokens": 89,
+        "response_ms": 903.342,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "reference_nickname",
+      "category": "reference",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Please call me Nila in this conversation."
+        },
+        {
+          "role": "assistant",
+          "content": "All right."
+        },
+        {
+          "role": "user",
+          "content": "I am learning to paint landscapes."
+        },
+        {
+          "role": "assistant",
+          "content": "That sounds interesting."
+        },
+        {
+          "role": "user",
+          "content": "What name did I ask you to call me?"
+        }
+      ],
+      "answer": "You asked me to call you \"Nila\".",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 78,
+        "selected_context_tokens": 78,
+        "output_tokens": 11,
+        "total_tokens": 89,
+        "response_ms": 800.211,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "reference_codename",
+      "category": "reference",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The codename for my bicycle is ORBIT."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the codename."
+        },
+        {
+          "role": "user",
+          "content": "It has a silver bell."
+        },
+        {
+          "role": "assistant",
+          "content": "A silver bell is useful."
+        },
+        {
+          "role": "user",
+          "content": "What codename did I give it?"
+        }
+      ],
+      "answer": "You gave your bicycle the codename \"ORBIT\".",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 81,
+        "selected_context_tokens": 81,
+        "output_tokens": 12,
+        "total_tokens": 93,
+        "response_ms": 742.407,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "reference_codename",
+      "category": "reference",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The codename for my bicycle is ORBIT."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the codename."
+        },
+        {
+          "role": "user",
+          "content": "It has a silver bell."
+        },
+        {
+          "role": "assistant",
+          "content": "A silver bell is useful."
+        },
+        {
+          "role": "user",
+          "content": "What codename did I give it?"
+        }
+      ],
+      "answer": "You gave your bicycle the codename \"ORBIT\".",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 81,
+        "selected_context_tokens": 81,
+        "output_tokens": 12,
+        "total_tokens": 93,
+        "response_ms": 870.26,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_drink",
+      "category": "user_fact",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My preferred drink is mint tea."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted your drink."
+        },
+        {
+          "role": "user",
+          "content": "I also like hiking on weekends."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted that too."
+        },
+        {
+          "role": "user",
+          "content": "What drink do I prefer?"
+        }
+      ],
+      "answer": "You prefer mint tea.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 75,
+        "selected_context_tokens": 75,
+        "output_tokens": 6,
+        "total_tokens": 81,
+        "response_ms": 605.357,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_drink",
+      "category": "user_fact",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My preferred drink is mint tea."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted your drink."
+        },
+        {
+          "role": "user",
+          "content": "I also like hiking on weekends."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted that too."
+        },
+        {
+          "role": "user",
+          "content": "What drink do I prefer?"
+        }
+      ],
+      "answer": "You prefer mint tea.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 75,
+        "selected_context_tokens": 75,
+        "output_tokens": 6,
+        "total_tokens": 81,
+        "response_ms": 762.551,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_pet",
+      "category": "user_fact",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My dog's name is Pippa."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the name."
+        },
+        {
+          "role": "user",
+          "content": "She likes to run in the park."
+        },
+        {
+          "role": "assistant",
+          "content": "That sounds fun."
+        },
+        {
+          "role": "user",
+          "content": "What is my dog's name?"
+        }
+      ],
+      "answer": "Your dog's name is Pippa.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 78,
+        "selected_context_tokens": 78,
+        "output_tokens": 10,
+        "total_tokens": 88,
+        "response_ms": 671.004,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "user_fact_pet",
+      "category": "user_fact",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My dog's name is Pippa."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the name."
+        },
+        {
+          "role": "user",
+          "content": "She likes to run in the park."
+        },
+        {
+          "role": "assistant",
+          "content": "That sounds fun."
+        },
+        {
+          "role": "user",
+          "content": "What is my dog's name?"
+        }
+      ],
+      "answer": "Your dog's name is Pippa.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 78,
+        "selected_context_tokens": 78,
+        "output_tokens": 10,
+        "total_tokens": 88,
+        "response_ms": 862.553,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_day",
+      "category": "correction",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Our meeting is on Tuesday."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted Tuesday."
+        },
+        {
+          "role": "user",
+          "content": "Correction: the meeting moved to Thursday, not Tuesday."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use the corrected day."
+        },
+        {
+          "role": "user",
+          "content": "Which day is the meeting now?"
+        }
+      ],
+      "answer": "The meeting is now scheduled for Thursday.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": true,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 80,
+        "selected_context_tokens": 80,
+        "output_tokens": 9,
+        "total_tokens": 89,
+        "response_ms": 761.042,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_day",
+      "category": "correction",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Our meeting is on Tuesday."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted Tuesday."
+        },
+        {
+          "role": "user",
+          "content": "Correction: the meeting moved to Thursday, not Tuesday."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use the corrected day."
+        },
+        {
+          "role": "user",
+          "content": "Which day is the meeting now?"
+        }
+      ],
+      "answer": "The meeting is now scheduled for Thursday.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": true,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 80,
+        "selected_context_tokens": 80,
+        "output_tokens": 9,
+        "total_tokens": 89,
+        "response_ms": 941.983,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_floor",
+      "category": "correction",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My apartment is on floor three."
+        },
+        {
+          "role": "assistant",
+          "content": "Floor three, noted."
+        },
+        {
+          "role": "user",
+          "content": "I was mistaken. It is on floor five."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use floor five."
+        },
+        {
+          "role": "user",
+          "content": "Which floor is my apartment on now?"
+        }
+      ],
+      "answer": "Your apartment is on floor five.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": true,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 81,
+        "selected_context_tokens": 81,
+        "output_tokens": 8,
+        "total_tokens": 89,
+        "response_ms": 729.649,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "correction_floor",
+      "category": "correction",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My apartment is on floor three."
+        },
+        {
+          "role": "assistant",
+          "content": "Floor three, noted."
+        },
+        {
+          "role": "user",
+          "content": "I was mistaken. It is on floor five."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use floor five."
+        },
+        {
+          "role": "user",
+          "content": "Which floor is my apartment on now?"
+        }
+      ],
+      "answer": "Your apartment is on floor five.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": true,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 81,
+        "selected_context_tokens": 81,
+        "output_tokens": 8,
+        "total_tokens": 89,
+        "response_ms": 680.848,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_city",
+      "category": "preservation",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My travel city is Quito, and my favorite fruit is mango."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted both facts."
+        },
+        {
+          "role": "user",
+          "content": "Correction: my favorite fruit is papaya."
+        },
+        {
+          "role": "assistant",
+          "content": "I updated the fruit."
+        },
+        {
+          "role": "user",
+          "content": "Which city am I traveling to?"
+        }
+      ],
+      "answer": "You're traveling to Quito.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 85,
+        "selected_context_tokens": 85,
+        "output_tokens": 8,
+        "total_tokens": 93,
+        "response_ms": 545.415,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_city",
+      "category": "preservation",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My travel city is Quito, and my favorite fruit is mango."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted both facts."
+        },
+        {
+          "role": "user",
+          "content": "Correction: my favorite fruit is papaya."
+        },
+        {
+          "role": "assistant",
+          "content": "I updated the fruit."
+        },
+        {
+          "role": "user",
+          "content": "Which city am I traveling to?"
+        }
+      ],
+      "answer": "You're traveling to Quito.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 85,
+        "selected_context_tokens": 85,
+        "output_tokens": 8,
+        "total_tokens": 93,
+        "response_ms": 652.879,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_hobby",
+      "category": "preservation",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My hobby is chess. The deadline is Monday."
+        },
+        {
+          "role": "assistant",
+          "content": "Both details are noted."
+        },
+        {
+          "role": "user",
+          "content": "The deadline changed to Friday."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the new deadline."
+        },
+        {
+          "role": "user",
+          "content": "What is my hobby?"
+        }
+      ],
+      "answer": "Your hobby is chess.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 77,
+        "selected_context_tokens": 77,
+        "output_tokens": 6,
+        "total_tokens": 83,
+        "response_ms": 565.382,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "preserve_hobby",
+      "category": "preservation",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My hobby is chess. The deadline is Monday."
+        },
+        {
+          "role": "assistant",
+          "content": "Both details are noted."
+        },
+        {
+          "role": "user",
+          "content": "The deadline changed to Friday."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the new deadline."
+        },
+        {
+          "role": "user",
+          "content": "What is my hobby?"
+        }
+      ],
+      "answer": "Your hobby is chess.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 77,
+        "selected_context_tokens": 77,
+        "output_tokens": 6,
+        "total_tokens": 83,
+        "response_ms": 618.355,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "long_key",
+      "category": "long_retrieval",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The archive key for this conversation is CEDAR-19."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the archive key."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with basil, rosemary, carrots, beans, a small path, and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "That garden has several parts."
+        },
+        {
+          "role": "user",
+          "content": "The workshop schedule has morning sessions, a lunch break, afternoon practice, and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "The workshop schedule is clear."
+        },
+        {
+          "role": "user",
+          "content": "A separate travel plan includes a train, two museums, a walk by the river, and dinner near the station."
+        },
+        {
+          "role": "assistant",
+          "content": "That is a full travel day."
+        },
+        {
+          "role": "user",
+          "content": "The recipe list has lentils, onion, ginger, tomatoes, warm bread, and a bowl of fruit."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the recipe list."
+        },
+        {
+          "role": "user",
+          "content": "What was the archive key I gave at the beginning?"
+        }
+      ],
+      "answer": "You mentioned earlier that the archive key for this conversation is CEDAR-19.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 218,
+        "selected_context_tokens": 218,
+        "output_tokens": 18,
+        "total_tokens": 236,
+        "response_ms": 1555.99,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 11,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "long_key",
+      "category": "long_retrieval",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The archive key for this conversation is CEDAR-19."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the archive key."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with basil, rosemary, carrots, beans, a small path, and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "That garden has several parts."
+        },
+        {
+          "role": "user",
+          "content": "The workshop schedule has morning sessions, a lunch break, afternoon practice, and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "The workshop schedule is clear."
+        },
+        {
+          "role": "user",
+          "content": "A separate travel plan includes a train, two museums, a walk by the river, and dinner near the station."
+        },
+        {
+          "role": "assistant",
+          "content": "That is a full travel day."
+        },
+        {
+          "role": "user",
+          "content": "The recipe list has lentils, onion, ginger, tomatoes, warm bread, and a bowl of fruit."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the recipe list."
+        },
+        {
+          "role": "user",
+          "content": "What was the archive key I gave at the beginning?"
+        }
+      ],
+      "answer": "You mentioned that the archive key for this conversation is CEDAR-19.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 218,
+        "selected_context_tokens": 103,
+        "output_tokens": 17,
+        "total_tokens": 120,
+        "response_ms": 5737.232,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "long_color",
+      "category": "long_retrieval",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The package label color is violet."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the label color."
+        },
+        {
+          "role": "user",
+          "content": "The office inventory includes pencils, paper folders, blank notebooks, a lamp, and two calendars."
+        },
+        {
+          "role": "assistant",
+          "content": "That is a varied inventory."
+        },
+        {
+          "role": "user",
+          "content": "A weekend walk could pass a lake, a bridge, a market, and an old library before returning home."
+        },
+        {
+          "role": "assistant",
+          "content": "The route has several stops."
+        },
+        {
+          "role": "user",
+          "content": "For lunch I may cook rice with vegetables, herbs, and a little lemon, then have a cup of tea."
+        },
+        {
+          "role": "assistant",
+          "content": "Lunch sounds planned."
+        },
+        {
+          "role": "user",
+          "content": "A story outline mentions a quiet village, a tower, a ferry, and a hill above the harbor."
+        },
+        {
+          "role": "assistant",
+          "content": "That story has a clear setting."
+        },
+        {
+          "role": "user",
+          "content": "What color was the package label?"
+        }
+      ],
+      "answer": "The package label was violet.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 204,
+        "selected_context_tokens": 204,
+        "output_tokens": 7,
+        "total_tokens": 211,
+        "response_ms": 612.861,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 11,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "long_color",
+      "category": "long_retrieval",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The package label color is violet."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the label color."
+        },
+        {
+          "role": "user",
+          "content": "The office inventory includes pencils, paper folders, blank notebooks, a lamp, and two calendars."
+        },
+        {
+          "role": "assistant",
+          "content": "That is a varied inventory."
+        },
+        {
+          "role": "user",
+          "content": "A weekend walk could pass a lake, a bridge, a market, and an old library before returning home."
+        },
+        {
+          "role": "assistant",
+          "content": "The route has several stops."
+        },
+        {
+          "role": "user",
+          "content": "For lunch I may cook rice with vegetables, herbs, and a little lemon, then have a cup of tea."
+        },
+        {
+          "role": "assistant",
+          "content": "Lunch sounds planned."
+        },
+        {
+          "role": "user",
+          "content": "A story outline mentions a quiet village, a tower, a ferry, and a hill above the harbor."
+        },
+        {
+          "role": "assistant",
+          "content": "That story has a clear setting."
+        },
+        {
+          "role": "user",
+          "content": "What color was the package label?"
+        }
+      ],
+      "answer": "The package label was violet.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 204,
+        "selected_context_tokens": 93,
+        "output_tokens": 7,
+        "total_tokens": 100,
+        "response_ms": 1014.638,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m8",
+          "m9",
+          "m10"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_arithmetic",
+      "category": "irrelevant_history",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My notebook is green and my desk is near a window."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The market has apples, peaches, oranges, and a bakery."
+        },
+        {
+          "role": "assistant",
+          "content": "That sounds like a busy market."
+        },
+        {
+          "role": "user",
+          "content": "I might walk through a park after work."
+        },
+        {
+          "role": "assistant",
+          "content": "A walk could be pleasant."
+        },
+        {
+          "role": "user",
+          "content": "Ignoring those personal notes, what is 3 + 4?"
+        }
+      ],
+      "answer": "3 + 4 = 7",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 119,
+        "selected_context_tokens": 119,
+        "output_tokens": 8,
+        "total_tokens": 127,
+        "response_ms": 704.923,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 7,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_arithmetic",
+      "category": "irrelevant_history",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My notebook is green and my desk is near a window."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The market has apples, peaches, oranges, and a bakery."
+        },
+        {
+          "role": "assistant",
+          "content": "That sounds like a busy market."
+        },
+        {
+          "role": "user",
+          "content": "I might walk through a park after work."
+        },
+        {
+          "role": "assistant",
+          "content": "A walk could be pleasant."
+        },
+        {
+          "role": "user",
+          "content": "Ignoring those personal notes, what is 3 + 4?"
+        }
+      ],
+      "answer": "3 + 4 = 7",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 119,
+        "selected_context_tokens": 89,
+        "output_tokens": 8,
+        "total_tokens": 97,
+        "response_ms": 744.921,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m2",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_fact",
+      "category": "irrelevant_history",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My shelves contain novels and maps."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted that."
+        },
+        {
+          "role": "user",
+          "content": "I prefer walking after lunch."
+        },
+        {
+          "role": "assistant",
+          "content": "Understood."
+        },
+        {
+          "role": "user",
+          "content": "The kitchen is being painted this month."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the renovation."
+        },
+        {
+          "role": "user",
+          "content": "Unrelated to my history, which planet is closest to the Sun?"
+        }
+      ],
+      "answer": "Mercury is the planet closest to the Sun.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 102,
+        "selected_context_tokens": 102,
+        "output_tokens": 11,
+        "total_tokens": 113,
+        "response_ms": 614.958,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 7,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "irrelevant_fact",
+      "category": "irrelevant_history",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My shelves contain novels and maps."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted that."
+        },
+        {
+          "role": "user",
+          "content": "I prefer walking after lunch."
+        },
+        {
+          "role": "assistant",
+          "content": "Understood."
+        },
+        {
+          "role": "user",
+          "content": "The kitchen is being painted this month."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted the renovation."
+        },
+        {
+          "role": "user",
+          "content": "Unrelated to my history, which planet is closest to the Sun?"
+        }
+      ],
+      "answer": "Mercury is the planet closest to the Sun.",
+      "score": {
+        "quality": true,
+        "factual_correct": true,
+        "correction_correct": null,
+        "unsupported_answer": null
+      },
+      "metrics": {
+        "input_tokens": 102,
+        "selected_context_tokens": 75,
+        "output_tokens": 11,
+        "total_tokens": 86,
+        "response_ms": 754.073,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m2",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "id": "unknown_pin",
+      "category": "unknown",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I have never told you my bank PIN. What is it? Say you do not know if it is unknown."
+        }
+      ],
+      "answer": "I don't know your bank PIN. I don't have any information about your personal or financial details, including your bank PIN. Our conversation just started, and",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": false
+      },
+      "metrics": {
+        "input_tokens": 48,
+        "selected_context_tokens": 48,
+        "output_tokens": 32,
+        "total_tokens": 80,
+        "response_ms": 1191.399,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "unknown_pin",
+      "category": "unknown",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I have never told you my bank PIN. What is it? Say you do not know if it is unknown."
+        }
+      ],
+      "answer": "I don't know your bank PIN. I don't have any information about your personal or financial details, including your bank PIN. Our conversation just started, and",
+      "score": {
+        "quality": true,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": false
+      },
+      "metrics": {
+        "input_tokens": 48,
+        "selected_context_tokens": 48,
+        "output_tokens": 32,
+        "total_tokens": 80,
+        "response_ms": 1120.08,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "unknown_maiden",
+      "category": "unknown",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is my mother's maiden name? I have not provided that information."
+        }
+      ],
+      "answer": "You haven't provided your mother's maiden name, and I don't have any information about it. I'm a text-based AI assistant, and our conversation just",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 40,
+        "selected_context_tokens": 40,
+        "output_tokens": 32,
+        "total_tokens": 72,
+        "response_ms": 1194.07,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "unknown_maiden",
+      "category": "unknown",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is my mother's maiden name? I have not provided that information."
+        }
+      ],
+      "answer": "You haven't provided your mother's maiden name, and I don't have any information about it. I'm a text-based AI assistant, and our conversation just",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 40,
+        "selected_context_tokens": 40,
+        "output_tokens": 32,
+        "total_tokens": 72,
+        "response_ms": 1117.07,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_season",
+      "category": "ambiguous",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "One note says my favorite season is spring."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted that note."
+        },
+        {
+          "role": "user",
+          "content": "A second note says my favorite season is autumn. I have not said which note is correct."
+        },
+        {
+          "role": "assistant",
+          "content": "The notes disagree."
+        },
+        {
+          "role": "user",
+          "content": "Without guessing, what is my favorite season?"
+        }
+      ],
+      "answer": "Since both notes say different seasons, I can't determine your favorite season based on the information provided.",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 91,
+        "selected_context_tokens": 91,
+        "output_tokens": 21,
+        "total_tokens": 112,
+        "response_ms": 2502.757,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_season",
+      "category": "ambiguous",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "One note says my favorite season is spring."
+        },
+        {
+          "role": "assistant",
+          "content": "I noted that note."
+        },
+        {
+          "role": "user",
+          "content": "A second note says my favorite season is autumn. I have not said which note is correct."
+        },
+        {
+          "role": "assistant",
+          "content": "The notes disagree."
+        },
+        {
+          "role": "user",
+          "content": "Without guessing, what is my favorite season?"
+        }
+      ],
+      "answer": "Since both notes say different seasons, I can't determine your favorite season based on the information provided.",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 91,
+        "selected_context_tokens": 91,
+        "output_tokens": 21,
+        "total_tokens": 112,
+        "response_ms": 2893.919,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_pronoun",
+      "category": "ambiguous",
+      "mode": "BASELINE",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I said that Rina told Tara that she had won an award. I never clarified who she meant."
+        },
+        {
+          "role": "assistant",
+          "content": "The pronoun could refer to either person."
+        },
+        {
+          "role": "user",
+          "content": "Who won the award? Do not guess if the pronoun is ambiguous."
+        }
+      ],
+      "answer": "I don't have enough information to determine who won the award. The sentence only states that Rina told Tara that she had won an award, but it doesn",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 80,
+        "selected_context_tokens": 80,
+        "output_tokens": 32,
+        "total_tokens": 112,
+        "response_ms": 1126.139,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selected_messages": 3,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2"
+        ]
+      }
+    },
+    {
+      "id": "ambiguous_pronoun",
+      "category": "ambiguous",
+      "mode": "TORUK",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I said that Rina told Tara that she had won an award. I never clarified who she meant."
+        },
+        {
+          "role": "assistant",
+          "content": "The pronoun could refer to either person."
+        },
+        {
+          "role": "user",
+          "content": "Who won the award? Do not guess if the pronoun is ambiguous."
+        }
+      ],
+      "answer": "I don't have enough information to determine who won the award. The sentence only states that Rina told Tara that she had won an award, but it doesn",
+      "score": {
+        "quality": false,
+        "factual_correct": null,
+        "correction_correct": null,
+        "unsupported_answer": true
+      },
+      "metrics": {
+        "input_tokens": 80,
+        "selected_context_tokens": 80,
+        "output_tokens": 32,
+        "total_tokens": 112,
+        "response_ms": 1223.994,
+        "backend": "Toruk",
+        "model": "ollama/llama3.2:latest@a80c4f17acd5",
+        "backbone": "ollama/llama3.2:latest",
+        "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "mode": "TORUK",
+        "memory_used": false,
+        "selected_messages": 3,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "max_new_tokens": 32,
+  "rows": [
+    {
+      "scenario": "fresh_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10.",
+        "metrics": {
+          "input_tokens": 36,
+          "selected_context_tokens": 36,
+          "output_tokens": 10,
+          "total_tokens": 46,
+          "response_ms": 1737.266,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 55,
+          "selected_context_tokens": 55,
+          "output_tokens": 9,
+          "total_tokens": 64,
+          "response_ms": 1582.43,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal_spaced_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "What is 5 + 5?"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 57,
+          "selected_context_tokens": 57,
+          "output_tokens": 9,
+          "total_tokens": 66,
+          "response_ms": 1612.143,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 is a number that is a perfect square.",
+        "metrics": {
+          "input_tokens": 75,
+          "selected_context_tokens": 75,
+          "output_tokens": 11,
+          "total_tokens": 86,
+          "response_ms": 1925.653,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 102,
+          "selected_context_tokens": 102,
+          "output_tokens": 10,
+          "total_tokens": 112,
+          "response_ms": 2001.432,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 + 5 is 10."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 128,
+          "selected_context_tokens": 128,
+          "output_tokens": 10,
+          "total_tokens": 138,
+          "response_ms": 5339.409,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 7,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "fresh_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10.",
+        "metrics": {
+          "input_tokens": 36,
+          "selected_context_tokens": 36,
+          "output_tokens": 10,
+          "total_tokens": 46,
+          "response_ms": 2264.725,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 55,
+          "selected_context_tokens": 55,
+          "output_tokens": 9,
+          "total_tokens": 64,
+          "response_ms": 1485.709,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal_spaced_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "What is 5 + 5?"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 57,
+          "selected_context_tokens": 57,
+          "output_tokens": 9,
+          "total_tokens": 66,
+          "response_ms": 1441.118,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 is a number that is a perfect square.",
+        "metrics": {
+          "input_tokens": 75,
+          "selected_context_tokens": 75,
+          "output_tokens": 11,
+          "total_tokens": 86,
+          "response_ms": 4544.121,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 102,
+          "selected_context_tokens": 102,
+          "output_tokens": 10,
+          "total_tokens": 112,
+          "response_ms": 2026.485,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 + 5 is 10."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 128,
+          "selected_context_tokens": 79,
+          "output_tokens": 10,
+          "total_tokens": 89,
+          "response_ms": 1794.867,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m4",
+            "m5",
+            "m6"
+          ]
+        }
+      }
+    }
+  ]
+}

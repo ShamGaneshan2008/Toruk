@@ -68,6 +68,73 @@ test('status and client history clear remain independent of backend sessions', a
   assert.deepEqual(finished.map(item => item.role), ['user', 'assistant']);
 });
 
+test('status retains the full backbone and trained selector identities', async () => {
+  const digest = 'a'.repeat(64);
+  const response = await statusResponse({
+    env,
+    fetchImpl: async () => Response.json({
+      ready: true, backend: 'Toruk', model: 'ollama/llama3.2:latest@aaaaaaaaaaaa',
+      backbone: 'ollama/llama3.2:latest', backbone_digest: digest,
+      selector_sha256: 'b'.repeat(64), selector_kind: 'toruk-chat-selector-v1',
+    }),
+  });
+  const status = await response.json();
+  assert.equal(status.backbone_digest, digest);
+  assert.equal(status.selector_sha256, 'b'.repeat(64));
+  assert.equal(status.selector_kind, 'toruk-chat-selector-v1');
+});
+
+test('follow-up request forwards the browser history in order', async () => {
+  const refusal = "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.";
+  const first = completedMessages(pendingMessages([], 'open youtube'), refusal);
+  const second = completedMessages(pendingMessages(first, 'what is 5'), refusal);
+  const history = pendingMessages(second, 'what is 5+5');
+  assert.deepEqual(history.map(item => item.role), ['user', 'assistant', 'user', 'assistant', 'user']);
+  const response = await chatResponse(request(history), {
+    env,
+    fetchImpl: async (_url, options) => {
+      assert.deepEqual(JSON.parse(options.body).messages, history);
+      return Response.json({answer: '10', metrics: {...metrics, input_tokens: 120, selected_context_tokens: 120, total_tokens: 123, selected_message_ids: ['m0', 'm1', 'm2', 'm3', 'm4']}});
+    },
+    logger: {info(){}, error(){}},
+  });
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).answer, '10');
+  assert.deepEqual(pendingMessages(clearedMessages(), 'what is 5+5'), [
+    {role: 'user', content: 'what is 5+5'},
+  ]);
+});
+
+test('full reported history reaches inference without dropped or rewritten turns', async () => {
+  const refusal = "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.";
+  const history = [
+    {role: 'user', content: 'hello'},
+    {role: 'assistant', content: 'Hello! How can I help you today?'},
+    {role: 'user', content: 'what are you?'},
+    {role: 'assistant', content: "I'm a chatbot designed to assist users with various topics."},
+    {role: 'user', content: 'i am JinSakai'},
+    {role: 'assistant', content: "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."},
+    {role: 'user', content: 'open youtube'},
+    {role: 'assistant', content: refusal},
+    {role: 'user', content: 'what is 5'},
+    {role: 'assistant', content: refusal},
+  ];
+  const pending = pendingMessages(history, 'what is 5+5');
+  const response = await chatResponse(request(pending, 32), {
+    env,
+    fetchImpl: async (_url, options) => {
+      assert.deepEqual(JSON.parse(options.body).messages, pending);
+      return Response.json({answer: refusal, metrics: {...metrics, input_tokens: 300, selected_context_tokens: 300, total_tokens: 303, selected_message_ids: pending.map((_, index) => `m${index}`)}});
+    },
+    logger: {info(){}, error(){}},
+  });
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).answer, refusal);
+  assert.deepEqual(pendingMessages(clearedMessages(), 'what is 5+5'), [
+    {role: 'user', content: 'what is 5+5'},
+  ]);
+});
+
 test('TORUK metrics are accepted only for a matching TORUK request', async () => {
   const torukRequest = new Request('http://localhost/api/chat', {
     method: 'POST', body: JSON.stringify({messages: user, mode: 'TORUK'}),

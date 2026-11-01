@@ -60,7 +60,7 @@ export async function statusResponse({env = process.env, fetchImpl = fetch} = {}
     if (!response.ok) throw new Error('backend status error');
     const data = await response.json();
     if (data.backend !== 'Toruk' || typeof data.ready !== 'boolean') throw new Error('invalid backend status');
-    return json({ready: data.ready, backend: 'Toruk', experimental: true, chat_quality: 'unqualified', efficiency_claim: 'unsupported', selector_sha256: data.selector_sha256 ?? null, model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], error: data.error || null});
+    return json({ready: data.ready, backend: 'Toruk', experimental: true, chat_quality: 'unqualified', efficiency_claim: 'unsupported', selector_sha256: data.selector_sha256 ?? null, selector_kind: data.selector_kind ?? null, model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', backbone_digest: data.backbone_digest ?? null, context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], error: data.error || null});
   } catch {
     return json({ready: false, backend: 'Toruk', model: 'Unavailable', error: 'Toruk inference host is unavailable.'});
   }
