@@ -1,0 +1,79 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE and TORUK",
+  "model": "ollama/llama3.2:latest@a80c4f17acd5",
+  "probe_settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 285,
+      "selected_context_tokens": 285,
+      "output_tokens": 4,
+      "total_tokens": 289,
+      "total_prompt_eval_tokens": 855,
+      "selector_scan_bytes": 0,
+      "selector_ms": 0,
+      "response_ms": 778.808,
+      "backend": "Toruk",
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "backbone": "ollama/llama3.2:latest",
+      "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "selector_kind": "toruk-chat-selector-v2",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 976.467
+    }
+  },
+  "toruk": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 285,
+      "selected_context_tokens": 95,
+      "output_tokens": 4,
+      "total_tokens": 99,
+      "total_prompt_eval_tokens": 475,
+      "selector_scan_bytes": 903,
+      "selector_ms": 0.551,
+      "response_ms": 633.181,
+      "backend": "Toruk",
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "backbone": "ollama/llama3.2:latest",
+      "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "selector_kind": "toruk-chat-selector-v2",
+      "mode": "TORUK",
+      "memory_used": true,
+      "selected_messages": 4,
+      "selected_message_ids": [
+        "m0",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 863.48
+    }
+  },
+  "probes": {},
+  "outage_status": 503
+}

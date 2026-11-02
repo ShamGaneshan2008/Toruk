@@ -7,6 +7,7 @@ import pytest
 import torch
 
 from toruk_lm.chat_foundation import (
+<<<<<<< HEAD
     BACKBONES,
     PretrainedChatBackend,
     backbone_spec,
@@ -14,6 +15,14 @@ from toruk_lm.chat_foundation import (
 )
 from toruk_lm.chat_runtime import ChatError, ModelStartupError
 from toruk_lm.context_selection import LexicalContextSelector
+=======
+    PretrainedChatBackend,
+    read_backbone_manifest,
+    validate_sampling,
+    weight_sha256,
+)
+from toruk_lm.chat_runtime import ChatError
+>>>>>>> origin/main
 from toruk_lm.inference_server import validate_request
 
 
@@ -22,7 +31,11 @@ class FakeTokenizer:
     pad_token_id = 2
 
     def apply_chat_template(self, messages, **kwargs):
+<<<<<<< HEAD
         self.messages = messages
+=======
+        self.seen_messages = list(messages)
+>>>>>>> origin/main
         assert kwargs["add_generation_prompt"]
         assert kwargs["return_dict"]
         return {"input_ids": torch.ones((1, 20 * len(messages)), dtype=torch.long)}
@@ -52,7 +65,10 @@ def backend():
     value.model = FakeModel()
     value.model_id = "SmolLM2:test"
     value.backbone_id = "SmolLM2"
+<<<<<<< HEAD
     value.system_prompt = ""
+=======
+>>>>>>> origin/main
     value.selector = FakeSelector()
     return value
 
@@ -81,6 +97,8 @@ def test_template_modes_sampling_and_eos():
     baseline = value.reply_with_metrics(messages, 8)
     assert baseline["answer"] == "Hello"
     assert baseline["metrics"]["selected_context_tokens"] == 60
+    assert value.tokenizer.seen_messages == messages
+    assert baseline["metrics"]["selected_message_ids"] == ["m0", "m1", "m2"]
     assert baseline["metrics"]["memory_used"] is False
     assert value.model.options["eos_token_id"] == 2
     assert value.model.options["do_sample"] is False
@@ -123,6 +141,7 @@ def test_missing_or_incompatible_backbone_and_invalid_options(tmp_path: Path):
         value.reply_with_metrics([{"role": "user", "content": "hi"}], 8, mode="TORUK")
 
 
+<<<<<<< HEAD
 def test_missing_optional_chat_dependencies_have_a_safe_code(tmp_path, monkeypatch):
     import builtins
 
@@ -145,6 +164,21 @@ def test_missing_optional_chat_dependencies_have_a_safe_code(tmp_path, monkeypat
         PretrainedChatBackend(tmp_path)
     assert error.value.code == "CHAT_DEPENDENCIES_MISSING"
     assert "private-dependency-detail" not in str(error.value)
+=======
+def test_backbone_manifest_accepts_other_verified_identity(tmp_path: Path):
+    weights = tmp_path / "model.safetensors"
+    weights.write_bytes(b"a separate local model")
+    manifest = {
+        "model": "example/stronger-instruct",
+        "revision": "revision-123",
+        "model_sha256": weight_sha256(weights),
+    }
+    (tmp_path / "toruk-backbone.json").write_text(json.dumps(manifest))
+    assert read_backbone_manifest(tmp_path) == manifest
+    weights.write_bytes(b"tampered")
+    with pytest.raises(ChatError, match="SHA-256"):
+        read_backbone_manifest(tmp_path)
+>>>>>>> origin/main
 
 
 def test_server_request_parses_mode_and_controls():

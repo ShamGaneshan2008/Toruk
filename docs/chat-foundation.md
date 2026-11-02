@@ -21,6 +21,42 @@ The downloader fetches only six pinned files, verifies the 269 MB safetensors SH
 
 The downloaded backbone directory is ignored by Git; provision those files separately on any inference host. No model weights are placed in the Vercel frontend project.
 
+To test a different locally supported instruct backbone, download a fixed revision with its independently obtained SHA-256:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/download_chat_backbone.py --model OWNER/MODEL --revision FULL_REVISION --sha256 EXPECTED_MODEL_SAFETENSORS_SHA256 --output artifacts/other-chat-backbone
+.\.venv\Scripts\python.exe -m toruk_lm.inference_server --backbone-dir artifacts/other-chat-backbone --selector-checkpoint artifacts/m6-validation-001/recurrent/checkpoint.pt --host 127.0.0.1 --port 8766
+```
+
+This path currently requires a single `model.safetensors`, a Transformers causal LM and tokenizer that load locally without remote code, a chat template, and EOS/pad tokens. It retains the 512-token prompt cap. The manifest records the exact model, revision, and weight hash; status and response metrics expose the model identity. A different model has not been validated by the retained evaluation. For a BASELINE/TORUK comparison, use the same backbone, decoding settings, and questions in both modes. Backbone quality is separate from Toruk selector performance.
+
+### Local Ollama backbone on a small GPU
+
+The inference server also accepts a model already installed in **local** Ollama at `127.0.0.1:11434`. Pin its full digest from Ollama's `/api/tags`; do not rely on a mutable tag alone. For example, in PowerShell:
+
+```powershell
+$expectedDigest = 'a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72'
+$tag = (Invoke-RestMethod http://127.0.0.1:11434/api/tags).models | Where-Object name -eq 'llama3.2:latest'
+if ($null -eq $tag -or $tag.digest -ne $expectedDigest) { throw 'The installed Llama 3.2 model does not match the tested digest.' }
+$env:TORUK_BACKEND_TOKEN = 'choose-a-long-random-secret'
+.\.venv\Scripts\python.exe -m toruk_lm.inference_server --ollama-model $tag.name --ollama-digest $expectedDigest --selector-checkpoint artifacts/m6-validation-001/recurrent/checkpoint.pt --host 127.0.0.1 --port 8766
+```
+
+Start `ollama serve` in another PowerShell window first if the local service is stopped. The tested `llama3.2:latest` is the 3B Q4_K_M instruct variant. It was already installed on this device, so this run downloaded zero bytes. On another machine, `ollama pull llama3.2:3b-instruct-q4_K_M` downloads about 2.0 GB; verify its full digest before using these commands. The [Ollama model listing](https://ollama.com/library/llama3.2/tags) identifies the variant, and the [Meta model card](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) gives its Llama 3.2 Community License. This is a custom license, not Apache-2.0. The measured local disk model is 2,019,393,189 bytes. At a 4,096-token Ollama context, the loaded runner occupied 2,347,688,263 bytes of VRAM; plan for roughly 2.5 GiB GPU memory plus OS/driver headroom and host RAM. The tested device has 4,096 MiB VRAM and 16,831,897,600 bytes physical RAM. Free system RAM was about 1.0–1.5 GiB during the run, so other applications can affect cold-load latency and reliability.
+
+The server checks the digest, warms the model before advertising readiness, uses Ollama's token counts to fit the same 512-token prompt ceiling, and uses the same frozen Toruk selector and model in both modes. Status and reply metrics show the model and digest. Omit `--selector-checkpoint` if unavailable; TORUK then remains disabled. The historical SmolLM2 research result remains tied to its original backbone. See the [separate Llama 3.2 local comparison](research/local-backbone-llama32-20261101.md) for raw replies, RAM, VRAM, latency, and limitations.
+
+To use the separately trained **Toruk chat selector v1** from the local research run, replace the `--selector-checkpoint` value above with `artifacts/chat-selector-v1-20261101/selector.json`. This JSON checkpoint is a supervised lexical turn ranker, distinct from the M6 controlled-world `.pt` checkpoint. It reads all supplied history, keeps at most two older evidence turns plus the latest three, and is bounded by the same 512-token backbone prompt limit. Status and chat responses identify the selector format and SHA-256; the page shows its identity when TORUK mode is available and whether TORUK was active for the reply. The [frozen protocol](research/chat-selector-v1-protocol.md) and [result report](research/chat-selector-v1-results.md) describe what it learned and where it fails. The pretrained Ollama model still supplies conversational language ability.
+
+To run the separate **v2 trained selector**, use the same verified `$expectedDigest` and `$tag` from above, then start the inference server in one PowerShell window:
+
+```powershell
+$env:TORUK_BACKEND_TOKEN = 'choose-a-long-random-secret'
+.\.venv\Scripts\python.exe -m toruk_lm.inference_server --ollama-model $tag.name --ollama-digest $expectedDigest --selector-checkpoint artifacts/chat-selector-v2-20261101/selector.json --host 127.0.0.1 --port 8766
+```
+
+Start the Node proxy using the second window below and open `http://127.0.0.1:3000`. Status and replies show `toruk-chat-selector-v2`, its checkpoint SHA, the pretrained backbone identity, selected token counts, latency, and whether selection ran. The [v2 held out result](research/chat-selector-v2-results.md) found lower answer quality than recent-turn context, so TORUK remains an experimental mode; it does not indicate a reliable memory advantage.
+
 In a second PowerShell window:
 
 ```powershell

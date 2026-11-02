@@ -59,7 +59,11 @@
           <select id="length"><option value="16">16 tokens</option><option value="32" selected>32 tokens</option><option value="64">64 tokens</option></select>
           <label for="mode">Context</label>
           <select id="mode"><option value="BASELINE">BASELINE: recent turns</option><option value="TORUK" disabled>TORUK: selected turns</option></select>
+<<<<<<< HEAD
           <span id="memory-status">Context selection: disabled</span>
+=======
+          <span id="memory-status">Context selector: off</span>
+>>>>>>> origin/main
           <label for="temperature">Temperature</label>
           <select id="temperature"><option value="0" selected>0 (greedy)</option><option value="0.7">0.7</option><option value="1">1</option></select>
           <label for="top-p">Top-p</label>
@@ -115,7 +119,11 @@
       loading.textContent = value ? 'Toruk is generating…' : '';
     }
     function updateMemoryStatus() {
+<<<<<<< HEAD
       memoryStatus.textContent = mode.value === 'TORUK' ? 'Context selection: enabled (experimental)' : 'Context selection: disabled';
+=======
+      memoryStatus.textContent = mode.value === 'TORUK' ? 'Context selector: active (experimental)' : 'Context selector: off';
+>>>>>>> origin/main
     }
     async function request(path, body) {
       const response = await fetch(path, {
@@ -134,8 +142,13 @@
       try {
         const response = await fetch('/api/status');
         const data = await response.json();
+<<<<<<< HEAD
         ready = response.ok && data.ready === true;
         model.textContent = `Backend: ${data.backend} · Backbone: ${data.backbone || data.model} · Model: ${data.model} · Selector: ${data.selector_id || 'none'}`;
+=======
+        ready = data.ready;
+        model.textContent = `Backend: ${data.backend} · Backbone: ${data.backbone || data.model} · Model: ${data.model} · Selector: ${data.selector_kind || 'none'} ${data.selector_sha256 || ''}`;
+>>>>>>> origin/main
         mode.querySelector('option[value="TORUK"]').disabled = !data.memory_supported;
         if (!data.memory_supported) mode.value = 'BASELINE';
         updateMemoryStatus();
@@ -173,7 +186,7 @@
           render(messages);
           const m = data.metrics;
           const retained = m.input_tokens > 0 ? Math.round(100 * m.selected_context_tokens / m.input_tokens) : 0;
-          metrics.textContent = `${m.mode} · Backbone ${m.backbone} · Input ${m.input_tokens} tokens · Selected ${m.selected_context_tokens} (${retained}% retained) · Output ${m.output_tokens} · ${m.response_ms} ms · Memory ${m.memory_used ? 'yes' : 'no'}`;
+          metrics.textContent = `${m.mode} · Model ${m.model} · Selector ${m.selector_sha256 || 'none'} · Input ${m.input_tokens} tokens · Selected ${m.selected_context_tokens} (${retained}% retained) · Output ${m.output_tokens} · ${m.response_ms} ms · Selection ${m.memory_used ? 'used' : 'not used'}`;
         }
       } catch (cause) {
         if (revision === requestRevision) { error.textContent = cause.message; render(messages); }

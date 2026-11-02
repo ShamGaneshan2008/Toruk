@@ -1,0 +1,1382 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "max_new_tokens": 32,
+  "rows": [
+    {
+      "scenario": "fresh_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10.",
+        "metrics": {
+          "input_tokens": 36,
+          "selected_context_tokens": 36,
+          "output_tokens": 10,
+          "total_tokens": 46,
+          "response_ms": 611.435,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 55,
+          "selected_context_tokens": 55,
+          "output_tokens": 9,
+          "total_tokens": 64,
+          "response_ms": 675.531,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal_spaced_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "What is 5 + 5?"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 57,
+          "selected_context_tokens": 57,
+          "output_tokens": 9,
+          "total_tokens": 66,
+          "response_ms": 670.114,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 is a number that is a perfect square.",
+        "metrics": {
+          "input_tokens": 75,
+          "selected_context_tokens": 75,
+          "output_tokens": 11,
+          "total_tokens": 86,
+          "response_ms": 800.467,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 102,
+          "selected_context_tokens": 102,
+          "output_tokens": 10,
+          "total_tokens": 112,
+          "response_ms": 952.904,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 + 5 is 10."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 128,
+          "selected_context_tokens": 128,
+          "output_tokens": 10,
+          "total_tokens": 138,
+          "response_ms": 888.093,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 7,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 130,
+          "selected_context_tokens": 130,
+          "output_tokens": 28,
+          "total_tokens": 158,
+          "response_ms": 1722.809,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 7,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 172,
+          "selected_context_tokens": 172,
+          "output_tokens": 28,
+          "total_tokens": 200,
+          "response_ms": 1560.57,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 9,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 216,
+          "output_tokens": 28,
+          "total_tokens": 244,
+          "response_ms": 1585.28,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 260,
+          "selected_context_tokens": 260,
+          "output_tokens": 28,
+          "total_tokens": 288,
+          "response_ms": 1703.22,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 13,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10",
+            "m11",
+            "m12"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_matched",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 216,
+          "output_tokens": 28,
+          "total_tokens": 244,
+          "response_ms": 1578.078,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_matched",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 216,
+          "output_tokens": 28,
+          "total_tokens": 244,
+          "response_ms": 1546.878,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "fresh_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10.",
+        "metrics": {
+          "input_tokens": 36,
+          "selected_context_tokens": 36,
+          "output_tokens": 10,
+          "total_tokens": 46,
+          "response_ms": 438.75,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 55,
+          "selected_context_tokens": 55,
+          "output_tokens": 9,
+          "total_tokens": 64,
+          "response_ms": 456.045,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "prior_refusal_spaced_math",
+      "request": [
+        {
+          "role": "user",
+          "content": "open YouTube"
+        },
+        {
+          "role": "assistant",
+          "content": "I cannot access online content."
+        },
+        {
+          "role": "user",
+          "content": "What is 5 + 5?"
+        }
+      ],
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "input_tokens": 57,
+          "selected_context_tokens": 57,
+          "output_tokens": 9,
+          "total_tokens": 66,
+          "response_ms": 460.182,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 is a number that is a perfect square.",
+        "metrics": {
+          "input_tokens": 75,
+          "selected_context_tokens": 75,
+          "output_tokens": 11,
+          "total_tokens": 86,
+          "response_ms": 591.765,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": false,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 102,
+          "selected_context_tokens": 102,
+          "output_tokens": 10,
+          "total_tokens": 112,
+          "response_ms": 603.728,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "reported_transcript_replay",
+      "request": [
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 + 5 is 10."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 128,
+          "selected_context_tokens": 79,
+          "output_tokens": 10,
+          "total_tokens": 89,
+          "response_ms": 573.194,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m4",
+            "m5",
+            "m6"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or interact with specific websites or platforms. I'm here",
+        "metrics": {
+          "input_tokens": 130,
+          "selected_context_tokens": 96,
+          "output_tokens": 32,
+          "total_tokens": 128,
+          "response_ms": 1453.292,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m4",
+            "m5",
+            "m6"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or interact with specific websites or platforms. I'm here"
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 is a number that is a perfect square.",
+        "metrics": {
+          "input_tokens": 177,
+          "selected_context_tokens": 95,
+          "output_tokens": 11,
+          "total_tokens": 106,
+          "response_ms": 642.101,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m6",
+            "m7",
+            "m8"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or interact with specific websites or platforms. I'm here"
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 204,
+          "selected_context_tokens": 76,
+          "output_tokens": 10,
+          "total_tokens": 86,
+          "response_ms": 570.966,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_generated",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or interact with specific websites or platforms. I'm here"
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 is a number that is a perfect square."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        },
+        {
+          "role": "assistant",
+          "content": "5 + 5 is 10."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "5 + 5 is 10.",
+        "metrics": {
+          "input_tokens": 230,
+          "selected_context_tokens": 80,
+          "output_tokens": 10,
+          "total_tokens": 90,
+          "response_ms": 604.285,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m2",
+            "m8",
+            "m10",
+            "m11",
+            "m12"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_matched",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 32,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 93,
+          "output_tokens": 28,
+          "total_tokens": 121,
+          "response_ms": 1745.513,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "full_history_matched",
+      "request": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "max_new_tokens": 64,
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 93,
+          "output_tokens": 28,
+          "total_tokens": 121,
+          "response_ms": 1698.716,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "TORUK",
+          "memory_used": true,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      }
+    }
+  ]
+}

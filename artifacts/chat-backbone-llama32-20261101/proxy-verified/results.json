@@ -1,0 +1,70 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE and TORUK",
+  "model": "ollama/llama3.2:latest@a80c4f17acd5",
+  "probe_settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 285,
+      "selected_context_tokens": 285,
+      "output_tokens": 4,
+      "total_tokens": 289,
+      "response_ms": 485.359,
+      "backend": "Toruk",
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "backbone": "ollama/llama3.2:latest",
+      "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 564.208
+    }
+  },
+  "toruk": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 285,
+      "selected_context_tokens": 111,
+      "output_tokens": 4,
+      "total_tokens": 115,
+      "response_ms": 603.099,
+      "backend": "Toruk",
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "backbone": "ollama/llama3.2:latest",
+      "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "mode": "TORUK",
+      "memory_used": true,
+      "selected_messages": 5,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 751.457
+    }
+  },
+  "probes": {},
+  "outage_status": 503
+}

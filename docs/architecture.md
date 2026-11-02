@@ -65,3 +65,45 @@ and missing original weights; see [reproduction limits](reproducibility.md).
 Saved-output rescoring is distinct from new model inference. Oracle/stratum
 analysis remains offline. See [M7 protocol](research/m7-protocol.md) for study
 scope and limits.
+
+## Current chat history selection
+
+The local conversational page can run either the historical M6 controlled-world
+checkpoint as an experimental turn selector or the separate
+`toruk-chat-selector-v1` JSON checkpoint. V1 is an eight-feature logistic
+ranker trained on labeled synthetic conversation evidence. It scans all
+supplied turns and retains at most two older user turns plus the latest three
+messages before the backbone's 512-token fit. It does not update model
+weights, store persistent memory, or prove semantic relevance. The frozen
+[protocol](research/chat-selector-v1-protocol.md) and
+[results](research/chat-selector-v1-results.md) distinguish its narrow
+synthetic gain from a failed vault-code paraphrase. Status and responses
+identify the selected checkpoint by format and SHA-256.
+
+## Future: a genuinely Toruk-trained conversational LM
+
+The current chat page uses an external pretrained instruct model for language
+ability. Its frozen Toruk checkpoint only ranks earlier turns. A conversational
+Toruk model would require training the decoder and a bounded state updater
+together, including learned write, revise, retain, and read decisions. The
+state must have a fixed byte/token budget independent of conversation length;
+the answer head must learn to use that state and abstain when evidence is absent.
+
+Build training data with licensed ordinary dialogue plus long conversations
+containing delayed facts, explicit corrections, unrelated facts to preserve,
+irrelevant turns, contradictions, and genuinely unknown answers. Separate
+people, templates, topics, and long-range compositions between train and held-out
+splits. Optimize next-token prediction and answer likelihood alongside supervised
+state-update, correction, preservation, and abstention objectives. Measure the
+cost of reading all turns and updating state, not just the final prompt size.
+
+This is a new training program, beyond a 4 GiB GPU local fine-tune of a 3B
+decoder. First run small controlled ablations and estimate accelerator memory,
+GPU-hours, data volume, and energy from pilot throughput; full pretraining or
+joint 3B training needs a separately budgeted multi-GPU resource plan. Compare
+against the same pretrained decoder with full/recent context, retrieval, a
+summary cache, and a matched-capacity recurrent model. Hold the backbone,
+tokenizer, data, decoding, and total compute budget fixed when isolating the
+memory mechanism. Require independent seeds, unseen long-range tasks, reliable
+correction and unknown-answer scores, and end-to-end latency/memory measurements
+with confidence intervals before attributing any gain to Toruk training.

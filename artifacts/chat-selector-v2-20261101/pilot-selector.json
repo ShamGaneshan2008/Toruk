@@ -1,0 +1,68 @@
+{
+  "format": "toruk-chat-selector-v1",
+  "features": [
+    "query_coverage",
+    "shared_terms",
+    "subject_match",
+    "slot_match",
+    "correction_marker",
+    "relative_position",
+    "is_user",
+    "length_log"
+  ],
+  "weights": [
+    1.6284934282302856,
+    1.6284935474395752,
+    1.6219146251678467,
+    -1.5268304347991943,
+    1.8037523031234741,
+    2.1205501556396484,
+    -1.5268304347991943,
+    -1.5615636110305786
+  ],
+  "bias": -1.5268304347991943,
+  "threshold": 0.35,
+  "protocol": "chat-selector-v2",
+  "data_manifest_sha256": "ca95a48966d1e9ee6d63278d840da89c000da4a3d8a7df023e3ceff9a9dbc4a9",
+  "train_sha256": "e7cc889d420a37e2deb744ef84f0cd988bc6b57cec27055a31536c32d65331f2",
+  "dev_sha256": "66c98eda31f16b7666befa2acc903a51adf79a4820eba4c261b479e09fd25247",
+  "training": {
+    "pilot": true,
+    "seed": 173,
+    "steps": 80,
+    "optimizer": "Adam",
+    "lr": 0.03,
+    "objective": "weighted evidence-turn BCE",
+    "positive_weight": 5,
+    "train_cases": 8,
+    "dev_cases": 56,
+    "train_examples": 56,
+    "dev_examples": 232,
+    "curve": [
+      {
+        "step": 1,
+        "loss": 1.089231
+      },
+      {
+        "step": 20,
+        "loss": 0.625426
+      },
+      {
+        "step": 40,
+        "loss": 0.377102
+      },
+      {
+        "step": 60,
+        "loss": 0.257891
+      },
+      {
+        "step": 80,
+        "loss": 0.192676
+      }
+    ],
+    "train_evidence_f1": 1.0,
+    "dev_evidence_f1": 0.14285714285714285,
+    "seconds": 0.1785,
+    "peak_working_set_bytes": null
+  }
+}

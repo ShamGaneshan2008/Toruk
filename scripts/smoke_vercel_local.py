@@ -40,8 +40,8 @@ def read(url: str, body: dict | None = None) -> tuple[int, dict | str]:
         return error.code, json.loads(error.read())
 
 
-def wait_ready(url: str, process: subprocess.Popen) -> None:
-    until = time.monotonic() + 60
+def wait_ready(url: str, process: subprocess.Popen, timeout: int = 60) -> None:
+    until = time.monotonic() + timeout
     while time.monotonic() < until:
         if process.poll() is not None:
             raise RuntimeError(f"server exited: {process.returncode}")

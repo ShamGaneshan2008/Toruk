@@ -22,6 +22,7 @@ from toruk_lm.chat_runtime import (
     OrdinaryChatBackend,
 )
 from toruk_lm.inference_worker import ProcessBackend
+from toruk_lm.ollama_chat import OllamaChatBackend
 
 MAX_BODY_BYTES = 16_384
 MAX_HISTORY_BYTES = 8_192
@@ -91,7 +92,11 @@ def validate_request(value: object) -> tuple[list[dict[str, str]], int, str, flo
 
 
 def make_handler(
-    backend: OrdinaryChatBackend | PretrainedChatBackend | ProcessBackend | None,
+    backend: OrdinaryChatBackend
+    | PretrainedChatBackend
+    | OllamaChatBackend
+    | ProcessBackend
+    | None,
     load_error: str | None,
     token: str,
 ) -> type[BaseHTTPRequestHandler]:
@@ -141,9 +146,14 @@ def make_handler(
                     "chat_quality": "unqualified",
                     "efficiency_claim": "unsupported",
                     "selector_sha256": getattr(backend, "selector_sha256", None),
+<<<<<<< HEAD
                     "selector_id": getattr(backend, "selector_id", None),
+=======
+                    "selector_kind": getattr(backend, "selector_kind", None),
+>>>>>>> origin/main
                     "backbone_revision": getattr(backend, "backbone_revision", None),
                     "backbone_sha256": getattr(backend, "backbone_sha256", None),
+                    "backbone_digest": getattr(backend, "backbone_digest", None),
                     "backend": "Toruk",
                     "model": backend.model_id if backend else "Unavailable",
                     "backbone": getattr(backend, "backbone_id", "Toruk ordinary byte LM")
@@ -208,9 +218,15 @@ def main() -> None:
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--checkpoint", type=Path)
     source.add_argument("--backbone-dir", type=Path)
+<<<<<<< HEAD
     selection = parser.add_mutually_exclusive_group()
     selection.add_argument("--selector-checkpoint", type=Path)
     selection.add_argument("--context-selector", choices=("lexical-v1", "lexical-v2"))
+=======
+    source.add_argument("--ollama-model")
+    parser.add_argument("--ollama-digest")
+    parser.add_argument("--selector-checkpoint", type=Path)
+>>>>>>> origin/main
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8766)
     args = parser.parse_args()
@@ -222,6 +238,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     backend: ProcessBackend | None
     try:
+<<<<<<< HEAD
         if (args.selector_checkpoint or args.context_selector) and not args.backbone_dir:
             parser.error("Context selection requires --backbone-dir")
         backend = ProcessBackend(
@@ -229,6 +246,19 @@ def main() -> None:
             args.selector_checkpoint,
             bool(args.backbone_dir),
             context_selector=args.context_selector,
+=======
+        if args.selector_checkpoint and not (args.backbone_dir or args.ollama_model):
+            parser.error("--selector-checkpoint requires --backbone-dir or --ollama-model")
+        if bool(args.ollama_model) != bool(args.ollama_digest):
+            parser.error("--ollama-model requires --ollama-digest and vice versa")
+        model_source = args.backbone_dir or args.checkpoint or args.ollama_model
+        assert model_source is not None
+        backend = ProcessBackend(
+            model_source,
+            args.selector_checkpoint,
+            bool(args.backbone_dir),
+            ollama_digest=args.ollama_digest,
+>>>>>>> origin/main
         )
         error = None
     except ChatError as failure:

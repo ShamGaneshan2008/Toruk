@@ -13,10 +13,17 @@ from toruk_lm.chat_runtime import ChatError, ModelStartupError
 
 def model_worker(
     pipe: Connection,
+<<<<<<< HEAD
     source: Path,
     selector: Path | None,
     pretrained: bool,
     context_selector: str | None = None,
+=======
+    source: Path | str,
+    selector: Path | None,
+    pretrained: bool,
+    ollama_digest: str | None,
+>>>>>>> origin/main
 ) -> None:
     def watch_parent() -> None:
         parent = mp.parent_process()
@@ -28,8 +35,10 @@ def model_worker(
     threading.Thread(target=watch_parent, daemon=True).start()
     from toruk_lm.chat_foundation import PretrainedChatBackend
     from toruk_lm.chat_runtime import OrdinaryChatBackend
+    from toruk_lm.ollama_chat import OllamaChatBackend
 
     try:
+<<<<<<< HEAD
         backend = (
             PretrainedChatBackend(source, selector, context_selector)
             if pretrained
@@ -42,6 +51,17 @@ def model_worker(
         pipe.close()
         return
     try:
+=======
+        backend: OllamaChatBackend | PretrainedChatBackend | OrdinaryChatBackend
+        if ollama_digest is not None:
+            backend = OllamaChatBackend(str(source), ollama_digest, selector)
+        elif pretrained:
+            assert isinstance(source, Path)
+            backend = PretrainedChatBackend(source, selector)
+        else:
+            assert isinstance(source, Path)
+            backend = OrdinaryChatBackend(source)
+>>>>>>> origin/main
         pipe.send(
             {
                 "model_id": backend.model_id,
@@ -50,8 +70,10 @@ def model_worker(
                 "selector": bool(getattr(backend, "selector", None)),
                 "selector_id": getattr(backend, "selector_id", None),
                 "selector_sha256": getattr(getattr(backend, "selector", None), "sha256", None),
+                "selector_kind": getattr(getattr(backend, "selector", None), "kind", None),
                 "backbone_revision": getattr(backend, "backbone_revision", None),
                 "backbone_sha256": getattr(backend, "backbone_sha256", None),
+                "backbone_digest": getattr(backend, "backbone_digest", None),
             }
         )
         while True:
@@ -76,23 +98,40 @@ class ProcessBackend:
 
     def __init__(
         self,
+<<<<<<< HEAD
         source: Path,
         selector: Path | None,
         pretrained: bool,
         timeout: float = 45,
         context_selector: str | None = None,
+=======
+        source: Path | str,
+        selector: Path | None,
+        pretrained: bool,
+        timeout: float = 45,
+        ollama_digest: str | None = None,
+>>>>>>> origin/main
     ) -> None:
         self.timeout = timeout
         context = mp.get_context("spawn")
         self.pipe, child = context.Pipe()
         self.process = context.Process(
+<<<<<<< HEAD
             target=model_worker, args=(child, source, selector, pretrained, context_selector)
+=======
+            target=model_worker, args=(child, source, selector, pretrained, ollama_digest)
+>>>>>>> origin/main
         )
         self.process.start()
         child.close()
         try:
+<<<<<<< HEAD
             if not self.pipe.poll(120):
                 raise ModelStartupError("STARTUP_TIMEOUT")
+=======
+            if not self.pipe.poll(180 if ollama_digest is not None else 120):
+                raise ChatError("Model startup timed out.")
+>>>>>>> origin/main
             metadata = self.pipe.recv()
             if "startup_error" in metadata:
                 raise ModelStartupError(metadata["startup_error"])

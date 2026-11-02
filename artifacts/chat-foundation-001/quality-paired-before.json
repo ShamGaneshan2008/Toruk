@@ -1,0 +1,322 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "max_new_tokens": 32,
+  "scenarios": {
+    "BASELINE": {
+      "youtube_then_math": [
+        {
+          "prompt": "Can you open YouTube for me?",
+          "answer": "I'm sorry for the confusion, but as an AI designed to assist with YouTube content, I don't have the capability to open or view videos on YouTube.",
+          "metrics": {
+            "input_tokens": 37,
+            "selected_context_tokens": 37,
+            "output_tokens": 32,
+            "total_tokens": 69,
+            "response_ms": 6919.649,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        },
+        {
+          "prompt": "What is 5 + 5?",
+          "answer": "5 + 5 is not a valid mathematical expression. It's a common mistake that can lead to incorrect calculations.",
+          "metrics": {
+            "input_tokens": 88,
+            "selected_context_tokens": 88,
+            "output_tokens": 24,
+            "total_tokens": 112,
+            "response_ms": 3144.95,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ]
+          }
+        },
+        {
+          "prompt": "What is 7 times 8?",
+          "answer": "7 * 8 is not a valid mathematical expression. It's a common mistake that can lead to incorrect calculations.",
+          "metrics": {
+            "input_tokens": 130,
+            "selected_context_tokens": 130,
+            "output_tokens": 24,
+            "total_tokens": 154,
+            "response_ms": 3271.262,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 5,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2",
+              "m3",
+              "m4"
+            ]
+          }
+        }
+      ],
+      "fresh_math": [
+        {
+          "prompt": "What is 5 + 5?",
+          "answer": "To add 5 and 5, we need to follow the order of operations, which is the most efficient way to perform arithmetic operations. The order of operations",
+          "metrics": {
+            "input_tokens": 38,
+            "selected_context_tokens": 38,
+            "output_tokens": 32,
+            "total_tokens": 70,
+            "response_ms": 6736.452,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        }
+      ],
+      "fresh_instruction": [
+        {
+          "prompt": "Reply with exactly the word OK and nothing else.",
+          "answer": "I'm sorry for the confusion, but as a chatbot, I don't have the capability to provide responses that are overly polite or overly helpful. I'm",
+          "metrics": {
+            "input_tokens": 41,
+            "selected_context_tokens": 41,
+            "output_tokens": 32,
+            "total_tokens": 73,
+            "response_ms": 4098.481,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        }
+      ],
+      "fresh_correction": [
+        {
+          "prompt": "My favorite color is blue.",
+          "answer": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades,",
+          "metrics": {
+            "input_tokens": 36,
+            "selected_context_tokens": 36,
+            "output_tokens": 32,
+            "total_tokens": 68,
+            "response_ms": 6849.972,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        },
+        {
+          "prompt": "Correction: my favorite color is green. What is my favorite color now?",
+          "answer": "I'm glad you like the color green. It's a beautiful and versatile choice that can be found in many different forms. You can choose from various shades,",
+          "metrics": {
+            "input_tokens": 95,
+            "selected_context_tokens": 95,
+            "output_tokens": 32,
+            "total_tokens": 127,
+            "response_ms": 4456.933,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ]
+          }
+        }
+      ]
+    },
+    "TORUK": {
+      "youtube_then_math": [
+        {
+          "prompt": "Can you open YouTube for me?",
+          "answer": "I'm sorry for the confusion, but as an AI designed to assist with YouTube content, I don't have the capability to open or view videos on YouTube.",
+          "metrics": {
+            "input_tokens": 37,
+            "selected_context_tokens": 37,
+            "output_tokens": 32,
+            "total_tokens": 69,
+            "response_ms": 5909.83,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "TORUK",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        },
+        {
+          "prompt": "What is 5 + 5?",
+          "answer": "5 + 5 is not a valid mathematical expression. It's a common mistake that can lead to incorrect calculations.",
+          "metrics": {
+            "input_tokens": 88,
+            "selected_context_tokens": 88,
+            "output_tokens": 24,
+            "total_tokens": 112,
+            "response_ms": 5318.648,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "TORUK",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ]
+          }
+        },
+        {
+          "prompt": "What is 7 times 8?",
+          "answer": "7 * 8 is not a valid mathematical expression. It's a common mistake that can lead to incorrect calculations.",
+          "metrics": {
+            "input_tokens": 130,
+            "selected_context_tokens": 130,
+            "output_tokens": 24,
+            "total_tokens": 154,
+            "response_ms": 4393.226,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "TORUK",
+            "memory_used": true,
+            "selected_messages": 5,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2",
+              "m3",
+              "m4"
+            ]
+          }
+        }
+      ],
+      "fresh_math": [
+        {
+          "prompt": "What is 5 + 5?",
+          "answer": "To add 5 and 5, we need to follow the order of operations, which is the most efficient way to perform arithmetic operations. The order of operations",
+          "metrics": {
+            "input_tokens": 38,
+            "selected_context_tokens": 38,
+            "output_tokens": 32,
+            "total_tokens": 70,
+            "response_ms": 4086.64,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "TORUK",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        }
+      ],
+      "fresh_instruction": [
+        {
+          "prompt": "Reply with exactly the word OK and nothing else.",
+          "answer": "I'm sorry for the confusion, but as a chatbot, I don't have the capability to provide responses that are overly polite or overly helpful. I'm",
+          "metrics": {
+            "input_tokens": 41,
+            "selected_context_tokens": 41,
+            "output_tokens": 32,
+            "total_tokens": 73,
+            "response_ms": 3009.744,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "TORUK",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        }
+      ],
+      "fresh_correction": [
+        {
+          "prompt": "My favorite color is blue.",
+          "answer": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades,",
+          "metrics": {
+            "input_tokens": 36,
+            "selected_context_tokens": 36,
+            "output_tokens": 32,
+            "total_tokens": 68,
+            "response_ms": 2986.834,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "TORUK",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ]
+          }
+        },
+        {
+          "prompt": "Correction: my favorite color is green. What is my favorite color now?",
+          "answer": "I'm glad you like the color green. It's a beautiful and versatile choice that can be found in many different forms. You can choose from various shades,",
+          "metrics": {
+            "input_tokens": 95,
+            "selected_context_tokens": 95,
+            "output_tokens": 32,
+            "total_tokens": 127,
+            "response_ms": 5853.195,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "TORUK",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

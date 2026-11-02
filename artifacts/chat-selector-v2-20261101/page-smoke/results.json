@@ -1,0 +1,1436 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE and TORUK",
+  "model": "ollama/llama3.2:latest@a80c4f17acd5",
+  "probe_settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 285,
+      "selected_context_tokens": 285,
+      "output_tokens": 4,
+      "total_tokens": 289,
+      "total_prompt_eval_tokens": 855,
+      "selector_scan_bytes": 0,
+      "selector_ms": 0,
+      "response_ms": 688.915,
+      "backend": "Toruk",
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "backbone": "ollama/llama3.2:latest",
+      "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "selector_kind": "toruk-chat-selector-v2",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 833.372
+    }
+  },
+  "toruk": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 285,
+      "selected_context_tokens": 95,
+      "output_tokens": 4,
+      "total_tokens": 99,
+      "total_prompt_eval_tokens": 475,
+      "selector_scan_bytes": 903,
+      "selector_ms": 0.781,
+      "response_ms": 459.063,
+      "backend": "Toruk",
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "backbone": "ollama/llama3.2:latest",
+      "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "selector_kind": "toruk-chat-selector-v2",
+      "mode": "TORUK",
+      "memory_used": true,
+      "selected_messages": 4,
+      "selected_message_ids": [
+        "m0",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 601.526
+    }
+  },
+  "probes": {
+    "BASELINE": {
+      "youtube_then_math": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "I'm not capable of directly opening YouTube or any other application. I can provide you with instructions on how to open YouTube on your device, though.\n\nTo open",
+            "metrics": {
+              "input_tokens": 27,
+              "selected_context_tokens": 27,
+              "output_tokens": 32,
+              "total_tokens": 59,
+              "total_prompt_eval_tokens": 81,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 1212.152,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 1,
+              "selected_message_ids": [
+                "m0"
+              ],
+              "proxy_ms": 1389.069
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm not capable of directly opening YouTube or any other application. I can provide you with instructions on how to open YouTube on your device, though.\n\nTo open"
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 75,
+              "selected_context_tokens": 75,
+              "output_tokens": 8,
+              "total_tokens": 83,
+              "total_prompt_eval_tokens": 225,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 610.727,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2"
+              ],
+              "proxy_ms": 752.359
+            }
+          }
+        }
+      ],
+      "reported_history": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "The answer to 5 is 5.",
+            "metrics": {
+              "input_tokens": 68,
+              "selected_context_tokens": 68,
+              "output_tokens": 10,
+              "total_tokens": 78,
+              "total_prompt_eval_tokens": 204,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 597.886,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2"
+              ],
+              "proxy_ms": 876.579
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              },
+              {
+                "role": "assistant",
+                "content": "The answer to 5 is 5."
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 93,
+              "selected_context_tokens": 93,
+              "output_tokens": 8,
+              "total_tokens": 101,
+              "total_prompt_eval_tokens": 279,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 593.243,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 5,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2",
+                "m3",
+                "m4"
+              ],
+              "proxy_ms": 762.507
+            }
+          }
+        }
+      ],
+      "full_history_generated": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "I'm a text-based chatbot, I don't have the ability to directly open YouTube or any other website. I can provide you with a link to YouTube",
+            "metrics": {
+              "input_tokens": 121,
+              "selected_context_tokens": 121,
+              "output_tokens": 32,
+              "total_tokens": 153,
+              "total_prompt_eval_tokens": 363,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 1159.678,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 7,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2",
+                "m3",
+                "m4",
+                "m5",
+                "m6"
+              ],
+              "proxy_ms": 1302.882
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a text-based chatbot, I don't have the ability to directly open YouTube or any other website. I can provide you with a link to YouTube"
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 is a number.",
+            "metrics": {
+              "input_tokens": 167,
+              "selected_context_tokens": 167,
+              "output_tokens": 6,
+              "total_tokens": 173,
+              "total_prompt_eval_tokens": 501,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 528.494,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 9,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2",
+                "m3",
+                "m4",
+                "m5",
+                "m6",
+                "m7",
+                "m8"
+              ],
+              "proxy_ms": 672.042
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a text-based chatbot, I don't have the ability to directly open YouTube or any other website. I can provide you with a link to YouTube"
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              },
+              {
+                "role": "assistant",
+                "content": "5 is a number."
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 188,
+              "selected_context_tokens": 188,
+              "output_tokens": 8,
+              "total_tokens": 196,
+              "total_prompt_eval_tokens": 564,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 1018.663,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 11,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2",
+                "m3",
+                "m4",
+                "m5",
+                "m6",
+                "m7",
+                "m8",
+                "m9",
+                "m10"
+              ],
+              "proxy_ms": 1253.512
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a text-based chatbot, I don't have the ability to directly open YouTube or any other website. I can provide you with a link to YouTube"
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              },
+              {
+                "role": "assistant",
+                "content": "5 is a number."
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              },
+              {
+                "role": "assistant",
+                "content": "5 + 5 = 10"
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 64,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "D\u00e9j\u00e0 vu! I already told you that 5 + 5 = 10.",
+            "metrics": {
+              "input_tokens": 211,
+              "selected_context_tokens": 211,
+              "output_tokens": 19,
+              "total_tokens": 230,
+              "total_prompt_eval_tokens": 633,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 924.844,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 13,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2",
+                "m3",
+                "m4",
+                "m5",
+                "m6",
+                "m7",
+                "m8",
+                "m9",
+                "m10",
+                "m11",
+                "m12"
+              ],
+              "proxy_ms": 1255.878
+            }
+          }
+        }
+      ],
+      "fresh_math": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 31,
+              "selected_context_tokens": 31,
+              "output_tokens": 8,
+              "total_tokens": 39,
+              "total_prompt_eval_tokens": 93,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 2471.97,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 1,
+              "selected_message_ids": [
+                "m0"
+              ],
+              "proxy_ms": 3741.208
+            }
+          }
+        }
+      ],
+      "fresh_name": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "My name is Mira."
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "Hello Mira! It's nice to meet you. Is there something I can help you with, or would you like to chat?",
+            "metrics": {
+              "input_tokens": 31,
+              "selected_context_tokens": 31,
+              "output_tokens": 28,
+              "total_tokens": 59,
+              "total_prompt_eval_tokens": 93,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 1058.923,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 1,
+              "selected_message_ids": [
+                "m0"
+              ],
+              "proxy_ms": 1230.246
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "My name is Mira."
+              },
+              {
+                "role": "assistant",
+                "content": "Hello Mira! It's nice to meet you. Is there something I can help you with, or would you like to chat?"
+              },
+              {
+                "role": "user",
+                "content": "What is my name?"
+              }
+            ],
+            "mode": "BASELINE",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "Your name is Mira.",
+            "metrics": {
+              "input_tokens": 73,
+              "selected_context_tokens": 73,
+              "output_tokens": 7,
+              "total_tokens": 80,
+              "total_prompt_eval_tokens": 219,
+              "selector_scan_bytes": 0,
+              "selector_ms": 0,
+              "response_ms": 699.665,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "BASELINE",
+              "memory_used": false,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2"
+              ],
+              "proxy_ms": 842.445
+            }
+          }
+        }
+      ]
+    },
+    "TORUK": {
+      "youtube_then_math": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "I'm not capable of directly opening YouTube or any other application. I can provide you with instructions on how to open YouTube on your device, though.\n\nTo open",
+            "metrics": {
+              "input_tokens": 27,
+              "selected_context_tokens": 27,
+              "output_tokens": 32,
+              "total_tokens": 59,
+              "total_prompt_eval_tokens": 81,
+              "selector_scan_bytes": 12,
+              "selector_ms": 0.013,
+              "response_ms": 1105.145,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": false,
+              "selected_messages": 1,
+              "selected_message_ids": [
+                "m0"
+              ],
+              "proxy_ms": 1228.867
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm not capable of directly opening YouTube or any other application. I can provide you with instructions on how to open YouTube on your device, though.\n\nTo open"
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 75,
+              "selected_context_tokens": 75,
+              "output_tokens": 8,
+              "total_tokens": 83,
+              "total_prompt_eval_tokens": 225,
+              "selector_scan_bytes": 184,
+              "selector_ms": 0.008,
+              "response_ms": 581.544,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": false,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2"
+              ],
+              "proxy_ms": 737.353
+            }
+          }
+        }
+      ],
+      "reported_history": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "The answer to 5 is 5.",
+            "metrics": {
+              "input_tokens": 68,
+              "selected_context_tokens": 68,
+              "output_tokens": 10,
+              "total_tokens": 78,
+              "total_prompt_eval_tokens": 204,
+              "selector_scan_bytes": 138,
+              "selector_ms": 0.006,
+              "response_ms": 592.948,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": false,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2"
+              ],
+              "proxy_ms": 775.467
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              },
+              {
+                "role": "assistant",
+                "content": "The answer to 5 is 5."
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 93,
+              "selected_context_tokens": 54,
+              "output_tokens": 8,
+              "total_tokens": 62,
+              "total_prompt_eval_tokens": 201,
+              "selector_scan_bytes": 170,
+              "selector_ms": 0.089,
+              "response_ms": 659.773,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": true,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m2",
+                "m3",
+                "m4"
+              ],
+              "proxy_ms": 801.833
+            }
+          }
+        }
+      ],
+      "full_history_generated": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "I'm not capable of directly opening YouTube or any other application. I'm a text-based AI assistant that can provide information and answer questions, but I don't",
+            "metrics": {
+              "input_tokens": 121,
+              "selected_context_tokens": 74,
+              "output_tokens": 32,
+              "total_tokens": 106,
+              "total_prompt_eval_tokens": 269,
+              "selector_scan_bytes": 283,
+              "selector_ms": 0.11,
+              "response_ms": 2778.832,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": true,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m4",
+                "m5",
+                "m6"
+              ],
+              "proxy_ms": 2945.73
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm not capable of directly opening YouTube or any other application. I'm a text-based AI assistant that can provide information and answer questions, but I don't"
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "The answer to 5 is 5.",
+            "metrics": {
+              "input_tokens": 167,
+              "selected_context_tokens": 73,
+              "output_tokens": 10,
+              "total_tokens": 83,
+              "total_prompt_eval_tokens": 313,
+              "selector_scan_bytes": 454,
+              "selector_ms": 0.082,
+              "response_ms": 2949.574,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": true,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m6",
+                "m7",
+                "m8"
+              ],
+              "proxy_ms": 4705.251
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm not capable of directly opening YouTube or any other application. I'm a text-based AI assistant that can provide information and answer questions, but I don't"
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              },
+              {
+                "role": "assistant",
+                "content": "The answer to 5 is 5."
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 192,
+              "selected_context_tokens": 54,
+              "output_tokens": 8,
+              "total_tokens": 62,
+              "total_prompt_eval_tokens": 300,
+              "selector_scan_bytes": 486,
+              "selector_ms": 0.179,
+              "response_ms": 988.755,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": true,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m8",
+                "m9",
+                "m10"
+              ],
+              "proxy_ms": 1240.813
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": "Hello! How can I help you today?"
+              },
+              {
+                "role": "user",
+                "content": "what are you?"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm a chatbot designed to assist users with various topics."
+              },
+              {
+                "role": "user",
+                "content": "i am JinSakai"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+              },
+              {
+                "role": "user",
+                "content": "open youtube"
+              },
+              {
+                "role": "assistant",
+                "content": "I'm not capable of directly opening YouTube or any other application. I'm a text-based AI assistant that can provide information and answer questions, but I don't"
+              },
+              {
+                "role": "user",
+                "content": "what is 5"
+              },
+              {
+                "role": "assistant",
+                "content": "The answer to 5 is 5."
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              },
+              {
+                "role": "assistant",
+                "content": "5 + 5 = 10"
+              },
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 64,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 215,
+              "selected_context_tokens": 54,
+              "output_tokens": 8,
+              "total_tokens": 62,
+              "total_prompt_eval_tokens": 323,
+              "selector_scan_bytes": 507,
+              "selector_ms": 0.162,
+              "response_ms": 740.619,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": true,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m10",
+                "m11",
+                "m12"
+              ],
+              "proxy_ms": 927.31
+            }
+          }
+        }
+      ],
+      "fresh_math": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "what is 5+5"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "5 + 5 = 10",
+            "metrics": {
+              "input_tokens": 31,
+              "selected_context_tokens": 31,
+              "output_tokens": 8,
+              "total_tokens": 39,
+              "total_prompt_eval_tokens": 93,
+              "selector_scan_bytes": 11,
+              "selector_ms": 0.007,
+              "response_ms": 484.696,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": false,
+              "selected_messages": 1,
+              "selected_message_ids": [
+                "m0"
+              ],
+              "proxy_ms": 600.029
+            }
+          }
+        }
+      ],
+      "fresh_name": [
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "My name is Mira."
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "Hello Mira! It's nice to meet you. Is there something I can help you with, or would you like to chat?",
+            "metrics": {
+              "input_tokens": 31,
+              "selected_context_tokens": 31,
+              "output_tokens": 28,
+              "total_tokens": 59,
+              "total_prompt_eval_tokens": 93,
+              "selector_scan_bytes": 16,
+              "selector_ms": 0.007,
+              "response_ms": 1087.494,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": false,
+              "selected_messages": 1,
+              "selected_message_ids": [
+                "m0"
+              ],
+              "proxy_ms": 1229.928
+            }
+          }
+        },
+        {
+          "request": {
+            "messages": [
+              {
+                "role": "user",
+                "content": "My name is Mira."
+              },
+              {
+                "role": "assistant",
+                "content": "Hello Mira! It's nice to meet you. Is there something I can help you with, or would you like to chat?"
+              },
+              {
+                "role": "user",
+                "content": "What is my name?"
+              }
+            ],
+            "mode": "TORUK",
+            "max_new_tokens": 32,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "http_status": 200,
+          "response": {
+            "answer": "Your name is Mira.",
+            "metrics": {
+              "input_tokens": 73,
+              "selected_context_tokens": 73,
+              "output_tokens": 7,
+              "total_tokens": 80,
+              "total_prompt_eval_tokens": 219,
+              "selector_scan_bytes": 133,
+              "selector_ms": 0.006,
+              "response_ms": 510.882,
+              "backend": "Toruk",
+              "model": "ollama/llama3.2:latest@a80c4f17acd5",
+              "backbone": "ollama/llama3.2:latest",
+              "backbone_digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+              "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+              "selector_kind": "toruk-chat-selector-v2",
+              "mode": "TORUK",
+              "memory_used": false,
+              "selected_messages": 3,
+              "selected_message_ids": [
+                "m0",
+                "m1",
+                "m2"
+              ],
+              "proxy_ms": 628.707
+            }
+          }
+        }
+      ]
+    }
+  },
+  "outage_status": 503
+}
