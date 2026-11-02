@@ -1,0 +1,550 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+  "status": {
+    "ready": true,
+    "backend": "Toruk",
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_sha256": null,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+    "context_tokens": 512,
+    "memory_supported": false,
+    "modes": [
+      "BASELINE"
+    ],
+    "error": null
+  },
+  "quality_claim": "Development probes; HTTP success does not establish quality.",
+  "probe_protocol_sha256": "ee92ce4a331b0104e1e89a192bda4f246aebca2f2b4035659926dc9bc52fbfcd",
+  "probe_settings": {
+    "max_new_tokens": 64,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 290,
+      "selected_context_tokens": 290,
+      "output_tokens": 5,
+      "total_tokens": 295,
+      "response_ms": 2303.777,
+      "backend": "Toruk",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 2308.048
+    }
+  },
+  "toruk": null,
+  "probes": {
+    "arithmetic": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is 2 + 3?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "The sum of two and three is five.\n\nTo break it down step-by-step:\n\n1. Identify the numbers involved: Two (2) and Three (3).\n2. Understand that addition means combining quantities.\n3. Add the numbers together: \\(2 + 3 = 5\\).\n\nSo, the answer to",
+          "metrics": {
+            "input_tokens": 37,
+            "selected_context_tokens": 37,
+            "output_tokens": 64,
+            "total_tokens": 101,
+            "response_ms": 8662.691,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 8666.512
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "capital": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is the capital of France?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "The capital of France is Paris.",
+          "metrics": {
+            "input_tokens": 36,
+            "selected_context_tokens": 36,
+            "output_tokens": 8,
+            "total_tokens": 44,
+            "response_ms": 1662.293,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 1665.475
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "explanation": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "In one sentence, what do plants use sunlight for?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "Plants use sunlight to convert light energy into chemical energy stored in glucose and other organic compounds.",
+          "metrics": {
+            "input_tokens": 40,
+            "selected_context_tokens": 40,
+            "output_tokens": 20,
+            "total_tokens": 60,
+            "response_ms": 3507.041,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 3511.521
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "follow_up": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My name is Mira."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "Hello Mira! It's nice to meet you. How can I assist you today?",
+          "metrics": {
+            "input_tokens": 35,
+            "selected_context_tokens": 35,
+            "output_tokens": 19,
+            "total_tokens": 54,
+            "response_ms": 3516.214,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 3519.716
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My name is Mira."
+            },
+            {
+              "role": "assistant",
+              "content": "Hello Mira! It's nice to meet you. How can I assist you today?"
+            },
+            {
+              "role": "user",
+              "content": "What is my name?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "Your name is Mira.",
+          "metrics": {
+            "input_tokens": 68,
+            "selected_context_tokens": 68,
+            "output_tokens": 7,
+            "total_tokens": 75,
+            "response_ms": 1866.873,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 1870.842
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "correction": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My favorite color is blue."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "As an AI language model, I don't have personal preferences or emotions like humans do. However, I can tell you that blue is often associated with calmness and serenity, making it a popular choice for many people. It's also known to evoke feelings of trustworthiness and reliability in some cultures. If you",
+          "metrics": {
+            "input_tokens": 35,
+            "selected_context_tokens": 35,
+            "output_tokens": 64,
+            "total_tokens": 99,
+            "response_ms": 10296.316,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 10299.728
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My favorite color is blue."
+            },
+            {
+              "role": "assistant",
+              "content": "As an AI language model, I don't have personal preferences or emotions like humans do. However, I can tell you that blue is often associated with calmness and serenity, making it a popular choice for many people. It's also known to evoke feelings of trustworthiness and reliability in some cultures. If you"
+            },
+            {
+              "role": "user",
+              "content": "Correction: my favorite color is green. What is my favorite color now?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "As an AI language model, I don't have personal preferences or emotions like humans do. However, if you're asking about the most popular colors among humans, blue is still widely recognized as one of the most commonly used colors in design and branding.",
+          "metrics": {
+            "input_tokens": 124,
+            "selected_context_tokens": 124,
+            "output_tokens": 51,
+            "total_tokens": 175,
+            "response_ms": 8670.496,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 8673.546
+          }
+        },
+        "score": {
+          "quality": false,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "earlier_fact": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "Sure! Here's the code you provided: **CEDAR-27**. I'll remember that number for your convenience in future conversations.",
+          "metrics": {
+            "input_tokens": 47,
+            "selected_context_tokens": 47,
+            "output_tokens": 30,
+            "total_tokens": 77,
+            "response_ms": 5223.917,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 5227.091
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation."
+            },
+            {
+              "role": "assistant",
+              "content": "Sure! Here's the code you provided: **CEDAR-27**. I'll remember that number for your convenience in future conversations."
+            },
+            {
+              "role": "user",
+              "content": "What is the capital of Japan?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "The capital of Japan is Tokyo.",
+          "metrics": {
+            "input_tokens": 93,
+            "selected_context_tokens": 93,
+            "output_tokens": 8,
+            "total_tokens": 101,
+            "response_ms": 1927.827,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 1930.895
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation."
+            },
+            {
+              "role": "assistant",
+              "content": "Sure! Here's the code you provided: **CEDAR-27**. I'll remember that number for your convenience in future conversations."
+            },
+            {
+              "role": "user",
+              "content": "What is the capital of Japan?"
+            },
+            {
+              "role": "assistant",
+              "content": "The capital of Japan is Tokyo."
+            },
+            {
+              "role": "user",
+              "content": "What bicycle lock code did I give you earlier?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm sorry, but I don't have any specific information about the bicycle lock codes given to me earlier. The code you mentioned was \"CEDAR-27\", which seems to be a random string generated by my system. If you need more details or assistance with something else, feel free to ask!",
+          "metrics": {
+            "input_tokens": 120,
+            "selected_context_tokens": 120,
+            "output_tokens": 63,
+            "total_tokens": 183,
+            "response_ms": 11739.869,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 5,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2",
+              "m3",
+              "m4"
+            ],
+            "proxy_ms": 11744.008
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "unknown": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is the name of my childhood teacher? I have not told you. If you don't know, say so."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm sorry, but as an AI language model, I do not have personal experiences or memories of my own childhood teachers. My responses are based on patterns and data that I have been trained on, and I cannot recall specific information about my own past teachers. Is there anything else I can help you with?",
+          "metrics": {
+            "input_tokens": 53,
+            "selected_context_tokens": 53,
+            "output_tokens": 63,
+            "total_tokens": 116,
+            "response_ms": 10349.702,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 10352.776
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": false
+        }
+      }
+    ],
+    "conflict": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "Without any additional context or information about your personal preferences for the seasons, it's impossible to determine which season you prefer based solely on one note. The notes provided do not offer any clues about your personal feelings towards each season.\n\nIf you want to know what season you like best, you might consider asking someone who knows more",
+          "metrics": {
+            "input_tokens": 61,
+            "selected_context_tokens": 61,
+            "output_tokens": 64,
+            "total_tokens": 125,
+            "response_ms": 8405.975,
+            "backend": "Toruk",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+            "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 8408.202
+          }
+        },
+        "score": {
+          "quality": false,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": true
+        }
+      }
+    ]
+  },
+  "outage_status": 503
+}

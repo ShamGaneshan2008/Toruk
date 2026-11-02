@@ -1,15 +1,18 @@
 """Local browser-proxy-inference smoke with pinned backbone and M6 selector."""
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
 import sys
 from pathlib import Path
+from typing import Any
 
+from evaluate_chat_release_v2 import score_answer
 from smoke_vercel_local import free_port, read, wait_ready
 
-from toruk_lm.chat_foundation import BACKBONE_ID, BACKBONE_REVISION
+from toruk_lm.chat_foundation import backbone_spec
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT = ROOT / "artifacts/chat-foundation-001"
@@ -32,6 +35,7 @@ def main() -> None:
     parser.add_argument("--max-new-tokens", type=int, choices=(32, 64), default=32)
     parser.add_argument("--output-dir", type=Path, default=ARTIFACT)
     args = parser.parse_args()
+    spec = backbone_spec(json.loads((args.backbone_dir / "toruk-backbone.json").read_text()))
     args.output_dir.mkdir(parents=True, exist_ok=True)
     backend_port, web_port = free_port(), free_port()
     token = "local-chat-foundation-smoke-token"
@@ -85,7 +89,7 @@ def main() -> None:
             assert "BASELINE: recent turns" in page and "TORUK: selected turns" in page
             _, status = read(base + "/api/status")
             assert isinstance(status, dict) and status["ready"]
-            assert status["model"] == f"{BACKBONE_ID}@{BACKBONE_REVISION[:12]}"
+            assert status["model"] == f"{spec['model']}@{spec['revision'][:12]}"
             assert status["memory_supported"] is (not args.baseline_only)
             fixture = json.loads((ROOT / "configs/chat-foundation-eval-v1.json").read_text())
             messages = next(
@@ -121,19 +125,13 @@ def main() -> None:
                 )
                 assert code == 400 and isinstance(unsupported, dict) and "answer" not in unsupported
             probes = {}
+            protocol = (ROOT / "configs/chat-qualification-v1.json").read_bytes()
             if args.chat_probes:
-                scenarios = {
-                    "arithmetic": ["What is 2 + 3?"],
-                    "follow_up": ["My name is Mira.", "What is my name?"],
-                    "correction": [
-                        "My favorite color is blue.",
-                        "Correction: my favorite color is green. What is my favorite color now?",
-                    ],
-                }
-                for name, prompts in scenarios.items():
+                scenarios = json.loads(protocol)["scenarios"]
+                for name, scenario in scenarios.items():
                     history = []
-                    turns = []
-                    for prompt in prompts:
+                    turns: list[dict[str, Any]] = []
+                    for prompt in scenario["prompts"]:
                         history.append({"role": "user", "content": prompt})
                         code, answer = read(
                             base + "/api/chat",
@@ -156,6 +154,7 @@ def main() -> None:
                         assert answer["metrics"]["model"] == status["model"]
                         history.append({"role": "assistant", "content": answer["answer"]})
                     probes[name] = turns
+                    turns[-1]["score"] = score_answer(turns[-1]["response"]["answer"], scenario)
             backend.terminate()
             backend.wait(timeout=10)
             outage_code, outage = read(
@@ -166,6 +165,9 @@ def main() -> None:
                 "page": "PASS",
                 "mode": "BASELINE" if args.baseline_only else "BASELINE and TORUK",
                 "model": status["model"],
+                "status": status,
+                "quality_claim": "Development probes; HTTP success does not establish quality.",
+                "probe_protocol_sha256": hashlib.sha256(protocol).hexdigest(),
                 "probe_settings": {
                     "max_new_tokens": args.max_new_tokens,
                     "temperature": 0,

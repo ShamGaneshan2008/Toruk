@@ -1,0 +1,469 @@
+{
+  "schema": "toruk-context-eval-v1",
+  "split": "dev",
+  "settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "scoring": "casefolded word-boundary accepted phrase and no forbidden phrase; unsupported = incorrect non-abstention. Automatically flagged, manually review raw answers.",
+  "cases": [
+    {
+      "id": "dev-recall-0",
+      "category": "long_range_recall",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The parcel tracking code is DEV-41."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "What is the parcel tracking code? Reply with only the code."
+        }
+      ],
+      "accepted": [
+        "DEV-41"
+      ],
+      "forbidden": [],
+      "required_evidence": [
+        "m0"
+      ]
+    },
+    {
+      "id": "dev-revision-0",
+      "category": "corrections",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The delivery day is Monday."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "Correction: it is Friday."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The delivery day label is printed on white paper."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "What is the delivery day now? Reply with only the day."
+        }
+      ],
+      "accepted": [
+        "Friday"
+      ],
+      "forbidden": [
+        "Monday"
+      ],
+      "required_evidence": [
+        "m0",
+        "m2"
+      ]
+    },
+    {
+      "id": "dev-conflict-0",
+      "category": "conflicting_facts",
+      "messages": [
+        {
+          "role": "user",
+          "content": "One note says the studio wall color is blue."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "Another note says the studio wall color is red. Neither note is confirmed."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+        }
+      ],
+      "accepted": [
+        "unknown",
+        "conflict",
+        "cannot determine",
+        "don't know",
+        "not enough information"
+      ],
+      "forbidden": [
+        "blue",
+        "red"
+      ],
+      "required_evidence": [
+        "m0",
+        "m2"
+      ]
+    },
+    {
+      "id": "dev-irrelevant-0",
+      "category": "irrelevant_history",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My favorite notebook has the label DEV-41."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "Which planet is closest to the Sun? Reply with only the planet name."
+        }
+      ],
+      "accepted": [
+        "mercury"
+      ],
+      "forbidden": [],
+      "required_evidence": []
+    },
+    {
+      "id": "dev-chain-0",
+      "category": "multi_hop_facts",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The camera belongs to Davin."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "Davin uses locker Ralo."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "Locker Ralo is at depot Aspen."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "Locker Varo is at depot Maple."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "At which depot is the camera owner's locker? Reply with only the depot."
+        }
+      ],
+      "accepted": [
+        "Aspen"
+      ],
+      "forbidden": [
+        "maple"
+      ],
+      "required_evidence": [
+        "m0",
+        "m2",
+        "m4"
+      ]
+    },
+    {
+      "id": "dev-unknown-0",
+      "category": "unknown_answers",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My parcel tracking code is DEV-41."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+        }
+      ],
+      "accepted": [
+        "unknown",
+        "don't know",
+        "do not know",
+        "not provided",
+        "haven't provided",
+        "haven't told",
+        "not specified",
+        "cannot determine",
+        "don't have"
+      ],
+      "forbidden": [],
+      "required_evidence": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "branch": "main",
+  "initial_backend_port": 8766,
+  "initial_frontend_port": 3000,
+  "initial_backend_ready": false,
+  "initial_error": "Toruk model is unavailable or incompatible; check inference-host logs.",
+  "original_checkpoint": "artifacts/minimal-lm-demo-001/train/checkpoint.pt",
+  "checkpoint_exists": false,
+  "observed_direct_loader_error_before_fix": "ChatError: Cannot load checkpoint: [Errno 2] No such file or directory: 'artifacts\\minimal-lm-demo-001\\train\\checkpoint.pt'",
+  "original_status_route": "/api/status",
+  "original_slash_status_route": "404 Not found; not a model diagnosis",
+  "new_slash_status_route": "alias of /api/status",
+  "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+  "backbone_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "backbone_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+  "weight_bytes": 988097824,
+  "dependencies": {
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "safetensors": "0.8.0"
+  },
+  "model_already_installed": true,
+  "download_performed_this_task": false,
+  "model_loaded_after_restart": true,
+  "backend_ready_after_restart": true,
+  "proxy_ready_after_restart": true,
+  "controls_enabled_in_actual_page_handler_test": true,
+  "interactive_browser_test": "blocked: Browser runtime discovery returned []",
+  "memory_used": false,
+  "claim": "Backbone capability only; no Toruk accuracy or token-efficiency contribution established"
+}

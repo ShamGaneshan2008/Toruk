@@ -1,0 +1,550 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "status": {
+    "ready": true,
+    "backend": "Toruk",
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_sha256": null,
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+    "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "context_tokens": 512,
+    "memory_supported": false,
+    "modes": [
+      "BASELINE"
+    ],
+    "error": null
+  },
+  "quality_claim": "Development probes; HTTP success does not establish quality.",
+  "probe_protocol_sha256": "ee92ce4a331b0104e1e89a192bda4f246aebca2f2b4035659926dc9bc52fbfcd",
+  "probe_settings": {
+    "max_new_tokens": 64,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "The vault code is LIME42.",
+    "metrics": {
+      "input_tokens": 297,
+      "selected_context_tokens": 297,
+      "output_tokens": 10,
+      "total_tokens": 307,
+      "response_ms": 1384.467,
+      "backend": "Toruk",
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+      "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 1390.955
+    }
+  },
+  "toruk": null,
+  "probes": {
+    "arithmetic": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is 2 + 3?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "2 + 3 is a simple arithmetic operation that can be performed using basic arithmetic operations. In mathematics, addition is a fundamental operation that combines two numbers to produce a single number.\n\nIn this case, we have two numbers, 2 and 3, and we want to add them together. The basic arithmetic",
+          "metrics": {
+            "input_tokens": 38,
+            "selected_context_tokens": 38,
+            "output_tokens": 64,
+            "total_tokens": 102,
+            "response_ms": 5640.665,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 5647.64
+          }
+        },
+        "score": {
+          "quality": false,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "capital": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is the capital of France?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "The capital of France is Paris.",
+          "metrics": {
+            "input_tokens": 37,
+            "selected_context_tokens": 37,
+            "output_tokens": 8,
+            "total_tokens": 45,
+            "response_ms": 870.258,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 875.049
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "explanation": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "In one sentence, what do plants use sunlight for?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "Plants use sunlight for photosynthesis, converting light energy into chemical energy stored in glucose and other organic compounds.",
+          "metrics": {
+            "input_tokens": 41,
+            "selected_context_tokens": 41,
+            "output_tokens": 21,
+            "total_tokens": 62,
+            "response_ms": 2039.732,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 2044.172
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "follow_up": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My name is Mira."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm Mira, a friendly AI chatbot designed to assist users in various aspects of life. I'm here to help you with your queries, whether it's about a specific topic, a task, or a problem you're facing. I'm ready to help, and I'm here to assist you. What's on",
+          "metrics": {
+            "input_tokens": 35,
+            "selected_context_tokens": 35,
+            "output_tokens": 64,
+            "total_tokens": 99,
+            "response_ms": 5487.732,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 5491.68
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My name is Mira."
+            },
+            {
+              "role": "assistant",
+              "content": "I'm Mira, a friendly AI chatbot designed to assist users in various aspects of life. I'm here to help you with your queries, whether it's about a specific topic, a task, or a problem you're facing. I'm ready to help, and I'm here to assist you. What's on"
+            },
+            {
+              "role": "user",
+              "content": "What is my name?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "My name is Mira, and I'm a helpful AI chatbot designed to assist users in various aspects of life. I'm ready to help, and I'm here to assist you. What's your name?",
+          "metrics": {
+            "input_tokens": 115,
+            "selected_context_tokens": 115,
+            "output_tokens": 43,
+            "total_tokens": 158,
+            "response_ms": 3877.897,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 3882.077
+          }
+        },
+        "score": {
+          "quality": false,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "correction": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My favorite color is blue."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light blues to deep blues, and even some vibrant shades like navy or charcoal. Blue is also a great choice for adding a touch of sophistication to any outfit",
+          "metrics": {
+            "input_tokens": 36,
+            "selected_context_tokens": 36,
+            "output_tokens": 64,
+            "total_tokens": 100,
+            "response_ms": 5323.645,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 5329.284
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My favorite color is blue."
+            },
+            {
+              "role": "assistant",
+              "content": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light blues to deep blues, and even some vibrant shades like navy or charcoal. Blue is also a great choice for adding a touch of sophistication to any outfit"
+            },
+            {
+              "role": "user",
+              "content": "Correction: my favorite color is green. What is my favorite color now?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm glad you like the color green. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light greens to dark greens, and even some vibrant shades like navy or charcoal. Green is also a great choice for adding a touch of sophistication to any outfit",
+          "metrics": {
+            "input_tokens": 127,
+            "selected_context_tokens": 127,
+            "output_tokens": 64,
+            "total_tokens": 191,
+            "response_ms": 5668.669,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 5674.531
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "earlier_fact": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+          "metrics": {
+            "input_tokens": 48,
+            "selected_context_tokens": 48,
+            "output_tokens": 63,
+            "total_tokens": 111,
+            "response_ms": 5452.732,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 5457.118
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation."
+            },
+            {
+              "role": "assistant",
+              "content": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information."
+            },
+            {
+              "role": "user",
+              "content": "What is the capital of Japan?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "The capital of Japan is Tokyo.",
+          "metrics": {
+            "input_tokens": 128,
+            "selected_context_tokens": 128,
+            "output_tokens": 8,
+            "total_tokens": 136,
+            "response_ms": 832.059,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 3,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2"
+            ],
+            "proxy_ms": 836.527
+          }
+        }
+      },
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation."
+            },
+            {
+              "role": "assistant",
+              "content": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information."
+            },
+            {
+              "role": "user",
+              "content": "What is the capital of Japan?"
+            },
+            {
+              "role": "assistant",
+              "content": "The capital of Japan is Tokyo."
+            },
+            {
+              "role": "user",
+              "content": "What bicycle lock code did I give you earlier?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+          "metrics": {
+            "input_tokens": 156,
+            "selected_context_tokens": 156,
+            "output_tokens": 63,
+            "total_tokens": 219,
+            "response_ms": 6312.152,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 5,
+            "selected_message_ids": [
+              "m0",
+              "m1",
+              "m2",
+              "m3",
+              "m4"
+            ],
+            "proxy_ms": 6315.804
+          }
+        },
+        "score": {
+          "quality": false,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": null
+        }
+      }
+    ],
+    "unknown": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is the name of my childhood teacher? I have not told you. If you don't know, say so."
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide specific names or information about teachers. I'm here to assist you with your questions and provide guidance. If you're unsure, please let me know and I'll do my best to assist you.",
+          "metrics": {
+            "input_tokens": 54,
+            "selected_context_tokens": 54,
+            "output_tokens": 61,
+            "total_tokens": 115,
+            "response_ms": 5847.494,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 5851.257
+          }
+        },
+        "score": {
+          "quality": true,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": false
+        }
+      }
+    ],
+    "conflict": [
+      {
+        "request": {
+          "messages": [
+            {
+              "role": "user",
+              "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?"
+            }
+          ]
+        },
+        "http_status": 200,
+        "response": {
+          "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide a specific answer or answer a question. My purpose is to assist you in finding the most suitable information for your needs. I'm designed to provide information and answer questions in a clear and concise manner. If you have",
+          "metrics": {
+            "input_tokens": 62,
+            "selected_context_tokens": 62,
+            "output_tokens": 64,
+            "total_tokens": 126,
+            "response_ms": 5863.15,
+            "backend": "Toruk",
+            "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+            "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+            "mode": "BASELINE",
+            "memory_used": false,
+            "selected_messages": 1,
+            "selected_message_ids": [
+              "m0"
+            ],
+            "proxy_ms": 5867.438
+          }
+        },
+        "score": {
+          "quality": false,
+          "factual_correct": null,
+          "correction_correct": null,
+          "unsupported_answer": true
+        }
+      }
+    ]
+  },
+  "outage_status": 503
+}

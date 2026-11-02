@@ -19,6 +19,39 @@ class ChatError(Exception):
     """A readable request or local inference error."""
 
 
+STARTUP_ERRORS = {
+    "CHECKPOINT_MISSING": "The selected demo model is missing. Start Toruk with the installed "
+    "chat backbone; see the local chat guide.",
+    "CHECKPOINT_INCOMPATIBLE": "Unsupported checkpoint. Start Toruk with a supported chat model; "
+    "see the local chat guide.",
+    "CHECKPOINT_INVALID": "The selected demo model cannot be read. Use the chat backbone "
+    "described in the local chat guide.",
+    "BACKBONE_MISSING": "Chat model files are missing. Complete the local model setup, "
+    "then restart Toruk.",
+    "BACKBONE_INVALID": "Chat model files failed verification. Restore the pinned model "
+    "using the local chat guide, then restart Toruk.",
+    "CHAT_DEPENDENCIES_MISSING": "Chat support is not installed. Complete the chat dependency "
+    "setup in the local chat guide, then restart Toruk.",
+    "BACKBONE_INCOMPATIBLE": "The installed chat model cannot load. Check the local chat setup "
+    "and restart Toruk.",
+    "SELECTOR_UNAVAILABLE": "The optional Toruk memory model cannot load. Start basic chat "
+    "without the optional memory model, or restore the evaluated memory model.",
+    "STARTUP_TIMEOUT": "Chat model startup timed out. Close unused applications and restart "
+    "Toruk; check that the laptop has enough available memory.",
+    "MODEL_LOAD_FAILED": "The chat model could not start. Check the backend terminal and "
+    "the local chat guide, then restart Toruk.",
+    "WORKER_STOPPED": "The chat model stopped. Restart the backend, then retry the connection.",
+}
+
+
+class ModelStartupError(ChatError):
+    """Only the allowlisted code crosses the worker or public status boundary."""
+
+    def __init__(self, code: str, detail: str | None = None) -> None:
+        self.code = code if code in STARTUP_ERRORS else "MODEL_LOAD_FAILED"
+        super().__init__(detail or STARTUP_ERRORS[self.code])
+
+
 class ChatBackend(Protocol):
     label: str
     context: int
@@ -31,22 +64,33 @@ class OrdinaryChatBackend:
 
     def __init__(self, checkpoint: Path) -> None:
         setup(23, 1)
+        if not checkpoint.is_file():
+            raise ModelStartupError("CHECKPOINT_MISSING")
         try:
             saved = load_checkpoint(checkpoint)
             self.model = load_model(checkpoint)
         except ValueError as error:
             if "unsupported checkpoint format" in str(error):
-                raise ChatError(
+                raise ModelStartupError(
+                    "CHECKPOINT_INCOMPATIBLE",
                     "Unsupported checkpoint. Local chat accepts toruk-ordinary-v1 only; "
-                    "controlled and recurrent checkpoints use a different inference path."
+                    "controlled and recurrent checkpoints use a different inference path.",
                 ) from error
-            raise ChatError(f"Checkpoint validation failed: {error}") from error
+            raise ModelStartupError(
+                "CHECKPOINT_INVALID", f"Checkpoint validation failed: {error}"
+            ) from error
         except (OSError, RuntimeError) as error:
-            raise ChatError(f"Cannot load checkpoint: {error}") from error
+            raise ModelStartupError(
+                "CHECKPOINT_INVALID", f"Cannot load checkpoint: {error}"
+            ) from error
         self.tokenizer = ByteTokenizer()
         self.context = self.model.config.context
-        self.label = f"{checkpoint.resolve()} · {saved['format']} · context {self.context}"
+        self.label = (
+            f"Smoke fixture (not chat-trained) · {checkpoint.resolve()} · "
+            f"{saved['format']} · context {self.context}"
+        )
         self.model_id = f"toruk-ordinary-v1:{sha256_file(checkpoint)[:12]}"
+        self.backbone_id = "Toruk ordinary byte LM (smoke fixture; not chat-trained)"
 
     def reply(self, messages: list[dict[str, str]], max_new_tokens: int) -> str:
         return str(self.reply_with_metrics(messages, max_new_tokens)["answer"])
@@ -86,7 +130,7 @@ class OrdinaryChatBackend:
                 "response_ms": round((time.perf_counter() - started) * 1000, 3),
                 "backend": "Toruk",
                 "model": self.model_id,
-                "backbone": "Toruk ordinary byte LM",
+                "backbone": self.backbone_id,
                 "mode": mode,
                 "memory_used": False,
                 "selected_message_ids": [f"m{index}" for index in range(len(messages))],

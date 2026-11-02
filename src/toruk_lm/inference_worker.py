@@ -8,10 +8,16 @@ from multiprocessing.connection import Connection
 from pathlib import Path
 from typing import Any
 
-from toruk_lm.chat_runtime import ChatError
+from toruk_lm.chat_runtime import ChatError, ModelStartupError
 
 
-def model_worker(pipe: Connection, source: Path, selector: Path | None, pretrained: bool) -> None:
+def model_worker(
+    pipe: Connection,
+    source: Path,
+    selector: Path | None,
+    pretrained: bool,
+    context_selector: str | None = None,
+) -> None:
     def watch_parent() -> None:
         parent = mp.parent_process()
         while parent is not None:
@@ -25,14 +31,24 @@ def model_worker(pipe: Connection, source: Path, selector: Path | None, pretrain
 
     try:
         backend = (
-            PretrainedChatBackend(source, selector) if pretrained else OrdinaryChatBackend(source)
+            PretrainedChatBackend(source, selector, context_selector)
+            if pretrained
+            else OrdinaryChatBackend(source)
         )
+    except Exception as error:
+        code = error.code if isinstance(error, ModelStartupError) else "MODEL_LOAD_FAILED"
+        # Never send exception text, paths, credentials or user content to the parent.
+        pipe.send({"startup_error": code})
+        pipe.close()
+        return
+    try:
         pipe.send(
             {
                 "model_id": backend.model_id,
                 "backbone_id": getattr(backend, "backbone_id", "Toruk ordinary byte LM"),
                 "context": backend.context,
                 "selector": bool(getattr(backend, "selector", None)),
+                "selector_id": getattr(backend, "selector_id", None),
                 "selector_sha256": getattr(getattr(backend, "selector", None), "sha256", None),
                 "backbone_revision": getattr(backend, "backbone_revision", None),
                 "backbone_sha256": getattr(backend, "backbone_sha256", None),
@@ -59,25 +75,35 @@ class ProcessBackend:
     selector_sha256: str | None
 
     def __init__(
-        self, source: Path, selector: Path | None, pretrained: bool, timeout: float = 45
+        self,
+        source: Path,
+        selector: Path | None,
+        pretrained: bool,
+        timeout: float = 45,
+        context_selector: str | None = None,
     ) -> None:
         self.timeout = timeout
         context = mp.get_context("spawn")
         self.pipe, child = context.Pipe()
         self.process = context.Process(
-            target=model_worker, args=(child, source, selector, pretrained)
+            target=model_worker, args=(child, source, selector, pretrained, context_selector)
         )
         self.process.start()
         child.close()
         try:
             if not self.pipe.poll(120):
-                raise ChatError("Model startup timed out.")
+                raise ModelStartupError("STARTUP_TIMEOUT")
             metadata = self.pipe.recv()
+            if "startup_error" in metadata:
+                raise ModelStartupError(metadata["startup_error"])
             for name, value in metadata.items():
                 setattr(self, name, value)
+        except ModelStartupError:
+            self.close()
+            raise
         except (EOFError, OSError, ChatError) as error:
             self.close()
-            raise ChatError("Model startup failed; check provisioned model identity.") from error
+            raise ModelStartupError("MODEL_LOAD_FAILED") from error
 
     @property
     def ready(self) -> bool:

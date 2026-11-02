@@ -171,7 +171,7 @@ To requalify the intended model locally without Docker, download into a fresh fo
 then run the existing two-mode integration. These commands download but do not upload:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/download_chat_backbone.py --output artifacts/chat-foundation-001/backbone
+.\.venv\Scripts\python.exe scripts/download_chat_backbone.py --model smollm2 --output artifacts/chat-foundation-001/backbone
 .\.venv\Scripts\python.exe scripts/measure_inference_host.py --backbone-dir artifacts/chat-foundation-001/backbone --selector-checkpoint artifacts/m6-validation-001/recurrent/checkpoint.pt --output-dir .readiness/chat-host-measurement
 .\.venv\Scripts\python.exe scripts/smoke_chat_foundation.py
 ```

@@ -64,6 +64,22 @@ For local checks, install `python -m pip install -e ".[dev]"` and run `python sc
 
 ### Experimental local chat page
 
+For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md).
+For the explicitly labeled heuristic TORUK comparison and frozen evaluation commands,
+see [context selection](docs/context-selection.md).
+It runs pinned **Qwen/Qwen2.5-0.5B-Instruct** through the existing web proxy, with
+bounded input/output and per-request token/latency measurements. Qwen supplies the
+language ability; it is not Toruk-trained. The evaluated Toruk selector is missing
+in this checkout, so this local setup uses BASELINE and makes no efficiency claim.
+See the [fresh audit and real responses](docs/research/next-chat-20261031.md).
+
+#### Ordinary-model smoke fixture only
+
+The historical minimal-demo checkpoint below may be absent in a fresh checkout.
+It is not the instruct-chat startup command. For chat, use `--backbone-dir` from
+the [current PowerShell guide](docs/local-chat.md). The status page now explains
+missing-model setup failures and offers **Retry connection** after backend restart.
+
 The optional local page wraps Toruk's ordinary text-continuation generator. It does not make the model a trained chat assistant. The measured demo learned only a repeating four-byte pattern; answers to ordinary questions may be poor or nonsensical.
 
 From Windows PowerShell, with the project environment installed:

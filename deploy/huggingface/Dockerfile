@@ -12,7 +12,7 @@ ENV PYTHONPATH=/app/src
 RUN echo '479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d  /app/selector.pt' | sha256sum -c -
 RUN mkdir /app/backbone && chown app:app /app/backbone
 USER app
-RUN python /app/download_chat_backbone.py --output /app/backbone
+RUN python /app/download_chat_backbone.py --model smollm2 --output /app/backbone
 EXPOSE 7860
 HEALTHCHECK --interval=30s --timeout=5s --start-period=150s CMD python -c "import json,urllib.request; assert json.load(urllib.request.urlopen('http://127.0.0.1:7860/healthz',timeout=3))['ready']"
 CMD ["python", "-m", "toruk_lm.inference_server", "--backbone-dir", "/app/backbone", "--selector-checkpoint", "/app/selector.pt", "--host", "0.0.0.0", "--port", "7860"]

@@ -1,0 +1,11 @@
+unformatted: File would be reformatted
+   --> tests\test_chat_foundation.py:139:75
+    |
+138 |     messages = [
+    -         {"role": "user" if i % 2 == 0 else "assistant", "content": str(i)}
+    -         for i in range(39)
+139 +         {"role": "user" if i % 2 == 0 else "assistant", "content": str(i)} for i in range(39)
+140 |     ]
+    |
+
+1 file would be reformatted, 52 files already formatted

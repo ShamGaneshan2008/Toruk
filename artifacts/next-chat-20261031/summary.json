@@ -1,0 +1,56 @@
+{
+  "smol-expanded": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+    "final_turn_rubric": 4,
+    "cases": 8,
+    "all_requests": 12,
+    "final_turn_totals": {
+      "input_tokens": 630,
+      "selected_context_tokens": 630,
+      "output_tokens": 388,
+      "response_ms": 36120.017
+    },
+    "all_request_totals": {
+      "input_tokens": 877,
+      "selected_context_tokens": 877,
+      "output_tokens": 587,
+      "response_ms": 53216.185
+    }
+  },
+  "qwen": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "final_turn_rubric": 6,
+    "cases": 8,
+    "all_requests": 12,
+    "final_turn_totals": {
+      "input_tokens": 539,
+      "selected_context_tokens": 539,
+      "output_tokens": 340,
+      "response_ms": 54864.94
+    },
+    "all_request_totals": {
+      "input_tokens": 749,
+      "selected_context_tokens": 749,
+      "output_tokens": 461,
+      "response_ms": 75829.214
+    }
+  },
+  "qwen-instructions": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "final_turn_rubric": 7,
+    "cases": 8,
+    "all_requests": 12,
+    "final_turn_totals": {
+      "input_tokens": 938,
+      "selected_context_tokens": 938,
+      "output_tokens": 146,
+      "response_ms": 26651.686
+    },
+    "all_request_totals": {
+      "input_tokens": 1373,
+      "selected_context_tokens": 1373,
+      "output_tokens": 187,
+      "response_ms": 35269.784
+    }
+  }
+}

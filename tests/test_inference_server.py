@@ -2,12 +2,14 @@ import json
 import multiprocessing as mp
 import threading
 from http.server import ThreadingHTTPServer
+from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 import pytest
+import torch
 
-from toruk_lm.chat_runtime import ChatError
+from toruk_lm.chat_runtime import ChatError, ModelStartupError
 from toruk_lm.inference_server import make_handler, validate_request
 from toruk_lm.inference_worker import ProcessBackend
 
@@ -67,6 +69,8 @@ def server():
 def test_stateless_inference_and_telemetry(server):
     backend, base = server
     assert call(base, "/api/status")["model"] == backend.model_id
+    assert call(base, "/healthz")["ready"] is True
+    assert call(base, "/api/status")["error_code"] is None
     request = {"messages": [{"role": "user", "content": "hello"}], "max_new_tokens": 16}
     for _ in range(2):
         result = call(base, "/api/infer", request)
@@ -115,11 +119,58 @@ def test_private_message_and_path_are_absent_from_logs(server, capsys):
 def test_dead_worker_is_unavailable_instead_of_accepting_requests(server):
     backend, base = server
     backend.ready = False
-    assert call(base, "/healthz")["ready"] is False
+    status = call(base, "/api/status")
+    assert status["ready"] is False
+    assert status["error_code"] == "WORKER_STOPPED"
+    assert "Restart" in status["error"]
+    with pytest.raises(HTTPError) as unhealthy:
+        call(base, "/healthz")
+    assert unhealthy.value.code == 503
     with pytest.raises(HTTPError) as error:
         call(base, "/api/infer", {"messages": [{"role": "user", "content": "hello"}]})
     assert error.value.code == 503
     assert backend.calls == []
+
+
+@pytest.mark.parametrize(
+    ("pretrained", "saved", "expected"),
+    [
+        (False, None, "CHECKPOINT_MISSING"),
+        (True, None, "BACKBONE_MISSING"),
+        (False, {"format": "toruk-controlled-v1"}, "CHECKPOINT_INCOMPATIBLE"),
+    ],
+)
+def test_worker_preserves_safe_startup_reason(tmp_path: Path, pretrained, saved, expected):
+    private_source = tmp_path / "private-sentinel-7492"
+    if saved is not None:
+        torch.save(saved, private_source)
+    with pytest.raises(ModelStartupError) as error:
+        ProcessBackend(private_source, None, pretrained)
+    assert error.value.code == expected
+    assert "private-sentinel" not in str(error.value)
+
+
+def test_missing_backbone_readiness_is_actionable_and_safe():
+    http = ThreadingHTTPServer(
+        ("127.0.0.1", 0), make_handler(None, "BACKBONE_MISSING", "secret-token")
+    )
+    thread = threading.Thread(target=http.serve_forever, daemon=True)
+    thread.start()
+    try:
+        base = f"http://127.0.0.1:{http.server_port}"
+        status = call(base, "/api/status")
+        assert status == call(base, "/status")
+        assert not status["ready"]
+        assert status["error_code"] == "BACKBONE_MISSING"
+        assert "setup" in status["error"] and "restart" in status["error"]
+        assert "secret-token" not in json.dumps(status)
+        with pytest.raises(HTTPError) as unhealthy:
+            call(base, "/healthz")
+        assert unhealthy.value.code == 503
+    finally:
+        http.shutdown()
+        http.server_close()
+        thread.join(timeout=5)
 
 
 def test_auth_and_input_limits(server):

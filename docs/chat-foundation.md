@@ -12,7 +12,7 @@ From the repository root, with its existing CPU Python environment:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -e '.[chat]'
-.\.venv\Scripts\python.exe scripts/download_chat_backbone.py --output artifacts/chat-foundation-001/backbone
+.\.venv\Scripts\python.exe scripts/download_chat_backbone.py --model smollm2 --output artifacts/chat-foundation-001/backbone
 $env:TORUK_BACKEND_TOKEN = 'choose-a-long-random-secret'
 .\.venv\Scripts\python.exe -m toruk_lm.inference_server --backbone-dir artifacts/chat-foundation-001/backbone --selector-checkpoint artifacts/m6-validation-001/recurrent/checkpoint.pt --host 127.0.0.1 --port 8766
 ```

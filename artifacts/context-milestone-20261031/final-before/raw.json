@@ -1,0 +1,5222 @@
+{
+  "schema": "toruk-context-result-v1",
+  "fixture_sha256": "ff84f244aa623997e69e89228ef328be20d8382371645d5eef6b28b05fc4a14c",
+  "fixture": {
+    "schema": "toruk-context-eval-v1",
+    "split": "final",
+    "settings": {
+      "max_new_tokens": 32,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "scoring": "casefolded word-boundary accepted phrase and no forbidden phrase; unsupported = incorrect non-abstention. Automatically flagged, manually review raw answers.",
+    "cases": [
+      {
+        "id": "final-recall-1",
+        "category": "long_range_recall",
+        "messages": [
+          {
+            "role": "user",
+            "content": "The parcel tracking code is YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the parcel tracking code? Reply with only the code."
+          }
+        ],
+        "accepted": [
+          "YEW-83"
+        ],
+        "forbidden": [],
+        "required_evidence": [
+          "m0"
+        ]
+      },
+      {
+        "id": "final-revision-1",
+        "category": "corrections",
+        "messages": [
+          {
+            "role": "user",
+            "content": "The delivery day is Wednesday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Correction: it is Saturday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The delivery day label is printed on white paper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the delivery day now? Reply with only the day."
+          }
+        ],
+        "accepted": [
+          "Saturday"
+        ],
+        "forbidden": [
+          "Wednesday"
+        ],
+        "required_evidence": [
+          "m0",
+          "m2"
+        ]
+      },
+      {
+        "id": "final-conflict-1",
+        "category": "conflicting_facts",
+        "messages": [
+          {
+            "role": "user",
+            "content": "One note says the studio wall color is cyan."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Another note says the studio wall color is coral. Neither note is confirmed."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+          }
+        ],
+        "accepted": [
+          "unknown",
+          "conflict",
+          "cannot determine",
+          "don't know",
+          "not enough information"
+        ],
+        "forbidden": [
+          "cyan",
+          "coral"
+        ],
+        "required_evidence": [
+          "m0",
+          "m2"
+        ]
+      },
+      {
+        "id": "final-irrelevant-1",
+        "category": "irrelevant_history",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My favorite notebook has the label YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Which planet is closest to the Sun? Reply with only the planet name."
+          }
+        ],
+        "accepted": [
+          "mercury"
+        ],
+        "forbidden": [],
+        "required_evidence": []
+      },
+      {
+        "id": "final-chain-1",
+        "category": "multi_hop_facts",
+        "messages": [
+          {
+            "role": "user",
+            "content": "The camera belongs to Nerin."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Nerin uses locker Talo."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Talo is at depot Juniper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Varo is at depot Maple."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "At which depot is the camera owner's locker? Reply with only the depot."
+          }
+        ],
+        "accepted": [
+          "Juniper"
+        ],
+        "forbidden": [
+          "maple"
+        ],
+        "required_evidence": [
+          "m0",
+          "m2",
+          "m4"
+        ]
+      },
+      {
+        "id": "final-unknown-1",
+        "category": "unknown_answers",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My parcel tracking code is YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+          }
+        ],
+        "accepted": [
+          "unknown",
+          "don't know",
+          "do not know",
+          "not provided",
+          "haven't provided",
+          "haven't told",
+          "not specified",
+          "cannot determine",
+          "don't have"
+        ],
+        "forbidden": [],
+        "required_evidence": []
+      },
+      {
+        "id": "final-recall-2",
+        "category": "long_range_recall",
+        "messages": [
+          {
+            "role": "user",
+            "content": "The parcel tracking code is ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the parcel tracking code? Reply with only the code."
+          }
+        ],
+        "accepted": [
+          "ELM-62"
+        ],
+        "forbidden": [],
+        "required_evidence": [
+          "m0"
+        ]
+      },
+      {
+        "id": "final-revision-2",
+        "category": "corrections",
+        "messages": [
+          {
+            "role": "user",
+            "content": "The delivery day is Sunday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Correction: it is Tuesday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The delivery day label is printed on white paper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the delivery day now? Reply with only the day."
+          }
+        ],
+        "accepted": [
+          "Tuesday"
+        ],
+        "forbidden": [
+          "Sunday"
+        ],
+        "required_evidence": [
+          "m0",
+          "m2"
+        ]
+      },
+      {
+        "id": "final-conflict-2",
+        "category": "conflicting_facts",
+        "messages": [
+          {
+            "role": "user",
+            "content": "One note says the studio wall color is amber."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Another note says the studio wall color is violet. Neither note is confirmed."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+          }
+        ],
+        "accepted": [
+          "unknown",
+          "conflict",
+          "cannot determine",
+          "don't know",
+          "not enough information"
+        ],
+        "forbidden": [
+          "amber",
+          "violet"
+        ],
+        "required_evidence": [
+          "m0",
+          "m2"
+        ]
+      },
+      {
+        "id": "final-irrelevant-2",
+        "category": "irrelevant_history",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My favorite notebook has the label ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is 6 + 7? Reply with only the number."
+          }
+        ],
+        "accepted": [
+          "13",
+          "thirteen"
+        ],
+        "forbidden": [],
+        "required_evidence": []
+      },
+      {
+        "id": "final-chain-2",
+        "category": "multi_hop_facts",
+        "messages": [
+          {
+            "role": "user",
+            "content": "The camera belongs to Sorin."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Sorin uses locker Bela."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Bela is at depot Cedar."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Varo is at depot Maple."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "At which depot is the camera owner's locker? Reply with only the depot."
+          }
+        ],
+        "accepted": [
+          "Cedar"
+        ],
+        "forbidden": [
+          "maple"
+        ],
+        "required_evidence": [
+          "m0",
+          "m2",
+          "m4"
+        ]
+      },
+      {
+        "id": "final-unknown-2",
+        "category": "unknown_answers",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My parcel tracking code is ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+          }
+        ],
+        "accepted": [
+          "unknown",
+          "don't know",
+          "do not know",
+          "not provided",
+          "haven't provided",
+          "haven't told",
+          "not specified",
+          "cannot determine",
+          "don't have"
+        ],
+        "forbidden": [],
+        "required_evidence": []
+      }
+    ]
+  },
+  "selector": "lexical-v1",
+  "backbone": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "model_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "model_type": "qwen2"
+  },
+  "model_files_sha256": {
+    "toruk-backbone.json": "18be9c880ab5caad20df8b118734baa5e206a14fec157386adf518dde5b07c4a",
+    "config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+  },
+  "source": {
+    "base_commit": "66028db306a0176edfb48a163cba2f0b3106432a",
+    "source_sha256": "69eae778a3a2eb11baab142281c4c393a6bb9d13132e8b7e82960bf3d307d998",
+    "source_files": {
+      ".github/workflows/ci.yml": "b99426cce507c63bd661adfd79a94850fe8c87c1ab4250daf44d03f8dfb55c4a",
+      ".gitignore": "83975219b61de488d96df91e297a83280254ed7b3e826e09e777d271afea99d8",
+      "configs/chat-comparison-v1.json": "1117746915368ef60d4f6b45c468c46fe3343d415b37b5bb936de7c87da3d582",
+      "configs/chat-foundation-eval-v1.json": "e621b655c0f3b686dae06cb11157e1d8ecacfccb9e603fe345cb982d859af89e",
+      "configs/chat-qualification-v1.json": "ee92ce4a331b0104e1e89a192bda4f246aebca2f2b4035659926dc9bc52fbfcd",
+      "configs/chat-release-eval-v2.json": "178f1580f46ee1149d4158974ada184669d1945b20524d5f57531a230a9591e6",
+      "configs/context-eval-dev-v1.json": "d1f692826829461798b557a82f9e021a166928bc2aa99c82ee71e18cb2c637d1",
+      "configs/context-eval-final-v1.json": "ff84f244aa623997e69e89228ef328be20d8382371645d5eef6b28b05fc4a14c",
+      "configs/foundation.json": "800791119eeac1c5668605820063f8dc8040cd8f1ea6373f37c027a5dd2606f3",
+      "configs/minimal-lm-demo-v1.json": "57cfd28d2f6455e34a17e92b170a78b6f5107d5ede967d503625725594afd305",
+      "configs/reproduce-primary-v1.json": "582191d1d4da1ffaaf5658fc0fa82f0ca6f5377545869a40fc7f104e2f922a04",
+      "configs/reproduce-smoke-v1.json": "a6aa262bb3feac7f744aea64f123de5602336cf1823dd7ca75e51618de5fc6f2",
+      "MANIFEST.in": "308a81a5beb704804c7f7faec510818060795aa694fd606f9ab6ffa2c68bffa2",
+      "pyproject.toml": "496ca5ef1353bd38c92b12547f8c54ef52d4123c55785dc811dc78c5d5c483ec",
+      "scripts/check.py": "3f5ced37d419d4136d2c84bfdc1b2031e6af725eca4a77dd9070f56979f41af9",
+      "scripts/check_wheel.py": "d17bd73f1cfdd076e69d3c816b310748ca7a90919b9af6ff5f2e878b1486325c",
+      "scripts/compare_chat_context.py": "b979e085e1318f15bd2a7aa2f44cbea11fd9c53a71ddafc77a97f83fe59b897a",
+      "scripts/download_chat_backbone.py": "35a153b26835e0394e615c3f9fa3b2ccfbfe80aa0cc87f85c3ef476f92a1a625",
+      "scripts/evaluate_chat_foundation.py": "7f62c57d4176582902c4669def892a3c1d8d0f862149484344fedc430197a601",
+      "scripts/evaluate_chat_release_v2.py": "a1953ac866978d27adc0adc9fba8bab5ad6c1836f158534903e0d33bd9f43612",
+      "scripts/evaluate_context_selection.py": "184376c28e31e345ad6e426c896c4deaeeed4ee9377f73fbfe64a2e0eb015cd7",
+      "scripts/make_context_eval.py": "79bfcb4e3cff15dd32f17807bd931ee371d5e2e11cc07809b02f4abc8477d537",
+      "scripts/measure_inference_host.py": "7399e2b1d7438421882c1ddbc2b5582eb34459cb640d8d819258c10fe655b1e7",
+      "scripts/prepare_inference_package.py": "2458b3b7a976029ce7781367929d2fe5f62b56c66a8b8ecde8c70389e3f2a277",
+      "scripts/replay_archived_cell.py": "bc8f4f282884804f649e503ae9e9ddacddba0792c9c9122939c9833e5132ca8f",
+      "scripts/seal_m8.py": "298b8600c510c262898989e2f521ea7d879383ef56ed0c426c0ccda3d97efae7",
+      "scripts/seal_run.py": "cf49547b27fa732e7a1ce94fd16003daaa5644c1eec0893d0d3ab7e361d0c853",
+      "scripts/smoke_chat_foundation.py": "9f413f9f4ac30c0eae4865f5acdbd8f27f0e4999e791fa20c60d5e960d994eff",
+      "scripts/smoke_chat_readiness.py": "627c5d256d383d10c8cdbe4787618d8d284092df94e45d7b3d2e4547c7d819ac",
+      "scripts/smoke_vercel_local.py": "680a37052946621e8ce92e0d6bbfce6d36cd48994da95dd2b173bde8a929e729",
+      "scripts/verify.py": "f6b6aadbb0368aea1f6dea98d3f310c6ff74be09ab3151402e2d69f6dce91364",
+      "src/toruk_lm/__init__.py": "ecc19b70baf0d7a94586eaf67bc1cc6bf2dc119b4bc82ad95107e63ad0a22229",
+      "src/toruk_lm/__main__.py": "25e078db81166f4b06162e32c0ed40433a060f7785fd0a1c471fcb1771a652f9",
+      "src/toruk_lm/chat_foundation.py": "161823a66157bb113abf21d7f39475256d0144325fba0da853f6100ea84db33b",
+      "src/toruk_lm/chat_runtime.py": "807a34862e2db89f4dcad42a59e9b017a563c1c09ee06102a956295695e48f4f",
+      "src/toruk_lm/chat_server.py": "455720de050a3426c32408adf0f4fecf12c8bec65a19ec7392f68244e1a903c4",
+      "src/toruk_lm/cli.py": "33a6d2e13dacc3a94c9ca262368bfe023e2e514aabf215e3003b41c560bdab29",
+      "src/toruk_lm/comparisons.py": "e02faa41d7027d13e8a1b6275e3eb11723691c653d8ababb2a70b1bfb69a554c",
+      "src/toruk_lm/context_selection.py": "512f55f0497fd278da5b4e8bdecc5a3d017d79260bbb6238abc3de2d3bdf7a0d",
+      "src/toruk_lm/controlled.py": "eec1b16d9cbaad935a085dfce6e177829cc3ac3ab71ebfc3143733352f4bd03c",
+      "src/toruk_lm/data.py": "ed6a05d6acd6117737cfbc5149e3027ebc0be2780286a165908cb41d3ec5fe11",
+      "src/toruk_lm/effect_predictor.py": "3c121a95a774f54da7904d5464394e62252ee936725b0c69dd77978d3b9dd59e",
+      "src/toruk_lm/effect_training.py": "fa1dab50a9b3d7744d4e0798027d38373330b0f0bc6c53ff1cf96d5c0af5665b",
+      "src/toruk_lm/engine.py": "daff977dd7fa49d54d852b3a28c72a41bc5bf9a0c844dc9f517e5b8b26a6bc61",
+      "src/toruk_lm/generalization.py": "c9469cc5cdc8609d53550982b53da97b5598bda3d32a498e3cea56f307b4ec5d",
+      "src/toruk_lm/inference_server.py": "50bd904306659890402466de7f9abc3f335daa30aef07886f438e046c5ac2bf2",
+      "src/toruk_lm/inference_worker.py": "f89fb813c59fc54c3f0e353acd0276c5b2957bfc753b5e65d4256fd048eab3be",
+      "src/toruk_lm/model.py": "df9266dc010064fbd6dde9727247312c1c9a177d609c5ea7fee7100602bfe673",
+      "src/toruk_lm/recurrent.py": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d",
+      "src/toruk_lm/reproducibility.py": "c78cfdde8a9ab72a6604c03b37839ad74f0f9b7044f1e6fe9f00163fea7c760c",
+      "src/toruk_lm/reproduction.py": "6970e7c6e510f6fd94c10af93d8618a2219ed19e619f7843dad6484ca8795202",
+      "src/toruk_lm/tokenizer.py": "e22977465d986dadb601095eeae1aa55f74eedd39897de0a6d52657c863f1434",
+      "src/toruk_lm/validation.py": "1a808f81652014d4b6e0d7612195fde977f9df515b666786f402d44498670463",
+      "src/toruk_lm/worlds.py": "b8a9f400d8e69a3cb7ac894ee61692bdf4b1ac28dd55acaf0d4a70807c98c8ab",
+      "tests/test_chat.py": "832d101a135830b639b7161f2bc2f3c61b6aca5a7fa7e8ea99fc68644679848e",
+      "tests/test_chat_foundation.py": "64e531bd5888e10412394e5c1ab867352df838fd1479a79ff3a4b39e8389d02a",
+      "tests/test_chat_release_eval.py": "24e9b27838f195f409c0098b649de10c02a9ed4b459c4f47d9df722756a4c217",
+      "tests/test_check_records.py": "cf61f2b873a2e47db7c54c06da16e2cefb1f554e9ffe908a435eef65b21c14fe",
+      "tests/test_comparisons.py": "842c70103e288cb084abb412bf618c64211daa05f185abc18d0ba34b071e1f48",
+      "tests/test_context_selection.py": "dba6b3b9abed9cef71c5e497009db0dee08dda5b11b285d8e0b839bc6514db08",
+      "tests/test_controlled_validation.py": "d6682125494b12aa8dad5c7a9f09767e37693c9fbe0fc25989ca0851a8716dd1",
+      "tests/test_effects.py": "b66856b37a6da011af5d214fd28d57f249c632f24cf1c7ba91eebb316bbba7e8",
+      "tests/test_foundation.py": "d31b9fb689fb413fee51e827a19f20506a05a4128192ee28b89e12fe31f85457",
+      "tests/test_generalization.py": "6488ec61130382814e8164084cfa1fc2c2f27db6804f562ed274e4543a6718aa",
+      "tests/test_inference_server.py": "955025f94db6bd86832822fd4fea954cc78fe454855f0cfa2fbca094ecf4d5e7",
+      "tests/test_merged_cli.py": "f6958a067c766ce3df1df19eb0f199ad043da71e07366a19a9ab722e8d69f06a",
+      "tests/test_recurrent.py": "1b8c82ca33b2c10eb5a8868a81d5e352e0e918acca6dbbe8782c82935610d837",
+      "tests/test_reproducibility.py": "a6500f0d59fbe1feba0c99f5e5ec160fe210155168757f586fbe3ff5ae07120f",
+      "tests/test_reproduction.py": "57f5aa0e475b1da3ffc90299743c7927dc009c1f947498cea98c829ed193e942",
+      "tests/test_summary_accounting.py": "51be6a2cb4200f2c1f7ae9afb6909144dc42c5dd0c5cf37cdb566b5ec9b6ffcf",
+      "tests/test_validation.py": "023fa9660680092b641e4ff635341b3dab8929f95dcb7df8da941cb19ac02204",
+      "tests/test_worlds.py": "c0c41d0e4f8d0af0e0ee7b8bd5b64cc4fe96163004750305d7f434e7f70e45c1"
+    }
+  },
+  "libraries": {
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "safetensors": "0.8.0"
+  },
+  "generation_config": {
+    "bos_token_id": 151643,
+    "pad_token_id": 151643,
+    "do_sample": true,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "repetition_penalty": 1.1,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "transformers_version": "4.37.0"
+  },
+  "tokenizer_config": {
+    "add_bos_token": false,
+    "add_prefix_space": false,
+    "added_tokens_decoder": {
+      "151643": {
+        "content": "<|endoftext|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151644": {
+        "content": "<|im_start|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151645": {
+        "content": "<|im_end|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151646": {
+        "content": "<|object_ref_start|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151647": {
+        "content": "<|object_ref_end|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151648": {
+        "content": "<|box_start|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151649": {
+        "content": "<|box_end|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151650": {
+        "content": "<|quad_start|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151651": {
+        "content": "<|quad_end|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151652": {
+        "content": "<|vision_start|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151653": {
+        "content": "<|vision_end|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151654": {
+        "content": "<|vision_pad|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151655": {
+        "content": "<|image_pad|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151656": {
+        "content": "<|video_pad|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": true
+      },
+      "151657": {
+        "content": "<tool_call>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      },
+      "151658": {
+        "content": "</tool_call>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      },
+      "151659": {
+        "content": "<|fim_prefix|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      },
+      "151660": {
+        "content": "<|fim_middle|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      },
+      "151661": {
+        "content": "<|fim_suffix|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      },
+      "151662": {
+        "content": "<|fim_pad|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      },
+      "151663": {
+        "content": "<|repo_name|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      },
+      "151664": {
+        "content": "<|file_sep|>",
+        "lstrip": false,
+        "normalized": false,
+        "rstrip": false,
+        "single_word": false,
+        "special": false
+      }
+    },
+    "additional_special_tokens": [
+      "<|im_start|>",
+      "<|im_end|>",
+      "<|object_ref_start|>",
+      "<|object_ref_end|>",
+      "<|box_start|>",
+      "<|box_end|>",
+      "<|quad_start|>",
+      "<|quad_end|>",
+      "<|vision_start|>",
+      "<|vision_end|>",
+      "<|vision_pad|>",
+      "<|image_pad|>",
+      "<|video_pad|>"
+    ],
+    "bos_token": null,
+    "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+    "clean_up_tokenization_spaces": false,
+    "eos_token": "<|im_end|>",
+    "errors": "replace",
+    "model_max_length": 131072,
+    "pad_token": "<|endoftext|>",
+    "split_special_tokens": false,
+    "tokenizer_class": "Qwen2Tokenizer",
+    "unk_token": null
+  },
+  "settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "id": "final-recall-1",
+      "category": "long_range_recall",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The parcel tracking code is YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the parcel tracking code? Reply with only the code."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 3148.738,
+      "answer": "YEW-83",
+      "metrics": {
+        "input_tokens": 277,
+        "selected_context_tokens": 277,
+        "output_tokens": 6,
+        "total_tokens": 283,
+        "response_ms": 3141.124,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 13,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 3145.915
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The parcel tracking code is YEW-83."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is the parcel tracking code? Reply with only the code."
+        }
+      ]
+    },
+    {
+      "id": "final-recall-1",
+      "category": "long_range_recall",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The parcel tracking code is YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the parcel tracking code? Reply with only the code."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2270.602,
+      "answer": "YEW-83",
+      "metrics": {
+        "input_tokens": 277,
+        "selected_context_tokens": 169,
+        "output_tokens": 6,
+        "total_tokens": 175,
+        "response_ms": 2263.265,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m8",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2267.571
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The parcel tracking code is YEW-83."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is the parcel tracking code? Reply with only the code."
+        }
+      ]
+    },
+    {
+      "id": "final-revision-1",
+      "category": "corrections",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The delivery day is Wednesday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Correction: it is Saturday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The delivery day label is printed on white paper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the delivery day now? Reply with only the day."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1606.829,
+      "answer": "Wednesday",
+      "metrics": {
+        "input_tokens": 314,
+        "selected_context_tokens": 157,
+        "output_tokens": 2,
+        "total_tokens": 159,
+        "response_ms": 1600.881,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m4",
+          "m14",
+          "m15",
+          "m16"
+        ],
+        "proxy_ms": 1604.297
+      },
+      "score": {
+        "correct": false,
+        "unsupported_flag": true
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": false,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The delivery day is Wednesday."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "The delivery day label is printed on white paper."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m15",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "What is the delivery day now? Reply with only the day."
+        }
+      ]
+    },
+    {
+      "id": "final-revision-1",
+      "category": "corrections",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The delivery day is Wednesday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Correction: it is Saturday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The delivery day label is printed on white paper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the delivery day now? Reply with only the day."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2630.165,
+      "answer": "Wednesday",
+      "metrics": {
+        "input_tokens": 314,
+        "selected_context_tokens": 314,
+        "output_tokens": 2,
+        "total_tokens": 316,
+        "response_ms": 2624.544,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 17,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12",
+          "m13",
+          "m14",
+          "m15",
+          "m16"
+        ],
+        "proxy_ms": 2627.642
+      },
+      "score": {
+        "correct": false,
+        "unsupported_flag": true
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The delivery day is Wednesday."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Correction: it is Saturday."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "The delivery day label is printed on white paper."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m15",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "What is the delivery day now? Reply with only the day."
+        }
+      ]
+    },
+    {
+      "id": "final-conflict-1",
+      "category": "conflicting_facts",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "One note says the studio wall color is cyan."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Another note says the studio wall color is coral. Neither note is confirmed."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1727.064,
+      "answer": "UNKNOWN",
+      "metrics": {
+        "input_tokens": 305,
+        "selected_context_tokens": 167,
+        "output_tokens": 2,
+        "total_tokens": 169,
+        "response_ms": 1720.026,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m2",
+          "m12",
+          "m13",
+          "m14"
+        ],
+        "proxy_ms": 1723.351
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "One note says the studio wall color is cyan."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Another note says the studio wall color is coral. Neither note is confirmed."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+        }
+      ]
+    },
+    {
+      "id": "final-conflict-1",
+      "category": "conflicting_facts",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "One note says the studio wall color is cyan."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Another note says the studio wall color is coral. Neither note is confirmed."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2608.05,
+      "answer": "UNKNOWN",
+      "metrics": {
+        "input_tokens": 305,
+        "selected_context_tokens": 305,
+        "output_tokens": 2,
+        "total_tokens": 307,
+        "response_ms": 2599.772,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 15,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12",
+          "m13",
+          "m14"
+        ],
+        "proxy_ms": 2605.035
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "One note says the studio wall color is cyan."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Another note says the studio wall color is coral. Neither note is confirmed."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+        }
+      ]
+    },
+    {
+      "id": "final-irrelevant-1",
+      "category": "irrelevant_history",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My favorite notebook has the label YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Which planet is closest to the Sun? Reply with only the planet name."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2500.972,
+      "answer": "Mercury",
+      "metrics": {
+        "input_tokens": 280,
+        "selected_context_tokens": 280,
+        "output_tokens": 3,
+        "total_tokens": 283,
+        "response_ms": 2493.773,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 13,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2498.486
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My favorite notebook has the label YEW-83."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "Which planet is closest to the Sun? Reply with only the planet name."
+        }
+      ]
+    },
+    {
+      "id": "final-irrelevant-1",
+      "category": "irrelevant_history",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My favorite notebook has the label YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Which planet is closest to the Sun? Reply with only the planet name."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1819.799,
+      "answer": "Mercury",
+      "metrics": {
+        "input_tokens": 280,
+        "selected_context_tokens": 178,
+        "output_tokens": 3,
+        "total_tokens": 181,
+        "response_ms": 1815.547,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m6",
+          "m8",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 1818.223
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "Which planet is closest to the Sun? Reply with only the planet name."
+        }
+      ]
+    },
+    {
+      "id": "final-chain-1",
+      "category": "multi_hop_facts",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The camera belongs to Nerin."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Nerin uses locker Talo."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Talo is at depot Juniper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Varo is at depot Maple."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "At which depot is the camera owner's locker? Reply with only the depot."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 3229.949,
+      "answer": "Depot Juniper",
+      "metrics": {
+        "input_tokens": 339,
+        "selected_context_tokens": 339,
+        "output_tokens": 5,
+        "total_tokens": 344,
+        "response_ms": 3225.285,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 19,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12",
+          "m13",
+          "m14",
+          "m15",
+          "m16",
+          "m17",
+          "m18"
+        ],
+        "proxy_ms": 3228.372
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2",
+        "m4"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The camera belongs to Nerin."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Nerin uses locker Talo."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Locker Talo is at depot Juniper."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Locker Varo is at depot Maple."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m15",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "At which depot is the camera owner's locker? Reply with only the depot."
+        }
+      ]
+    },
+    {
+      "id": "final-chain-1",
+      "category": "multi_hop_facts",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The camera belongs to Nerin."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Nerin uses locker Talo."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Talo is at depot Juniper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Varo is at depot Maple."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "At which depot is the camera owner's locker? Reply with only the depot."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1761.107,
+      "answer": "Juniper",
+      "metrics": {
+        "input_tokens": 339,
+        "selected_context_tokens": 161,
+        "output_tokens": 3,
+        "total_tokens": 164,
+        "response_ms": 1755.351,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m4",
+          "m6",
+          "m16",
+          "m17",
+          "m18"
+        ],
+        "proxy_ms": 1759.316
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2",
+        "m4"
+      ],
+      "all_evidence_retained": false,
+      "selected_evidence": [
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Locker Talo is at depot Juniper."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Locker Varo is at depot Maple."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "At which depot is the camera owner's locker? Reply with only the depot."
+        }
+      ]
+    },
+    {
+      "id": "final-unknown-1",
+      "category": "unknown_answers",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My parcel tracking code is YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2572.046,
+      "answer": "Unknown.",
+      "metrics": {
+        "input_tokens": 283,
+        "selected_context_tokens": 283,
+        "output_tokens": 3,
+        "total_tokens": 286,
+        "response_ms": 2566.986,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 13,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2570.122
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My parcel tracking code is YEW-83."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+        }
+      ]
+    },
+    {
+      "id": "final-unknown-1",
+      "category": "unknown_answers",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My parcel tracking code is YEW-83."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2335.199,
+      "answer": "I don't know.",
+      "metrics": {
+        "input_tokens": 283,
+        "selected_context_tokens": 182,
+        "output_tokens": 6,
+        "total_tokens": 188,
+        "response_ms": 2331,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m6",
+          "m8",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2333.594
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+        }
+      ]
+    },
+    {
+      "id": "final-recall-2",
+      "category": "long_range_recall",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The parcel tracking code is ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the parcel tracking code? Reply with only the code."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 3086.679,
+      "answer": "ELM-62",
+      "metrics": {
+        "input_tokens": 277,
+        "selected_context_tokens": 277,
+        "output_tokens": 6,
+        "total_tokens": 283,
+        "response_ms": 3081.264,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 13,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 3084.529
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The parcel tracking code is ELM-62."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is the parcel tracking code? Reply with only the code."
+        }
+      ]
+    },
+    {
+      "id": "final-recall-2",
+      "category": "long_range_recall",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The parcel tracking code is ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the parcel tracking code? Reply with only the code."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2075.882,
+      "answer": "ELM-62",
+      "metrics": {
+        "input_tokens": 277,
+        "selected_context_tokens": 169,
+        "output_tokens": 6,
+        "total_tokens": 175,
+        "response_ms": 2071.685,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m8",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2074.295
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The parcel tracking code is ELM-62."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is the parcel tracking code? Reply with only the code."
+        }
+      ]
+    },
+    {
+      "id": "final-revision-2",
+      "category": "corrections",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The delivery day is Sunday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Correction: it is Tuesday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The delivery day label is printed on white paper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the delivery day now? Reply with only the day."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1658.853,
+      "answer": "Sunday",
+      "metrics": {
+        "input_tokens": 314,
+        "selected_context_tokens": 157,
+        "output_tokens": 2,
+        "total_tokens": 159,
+        "response_ms": 1653.704,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m4",
+          "m14",
+          "m15",
+          "m16"
+        ],
+        "proxy_ms": 1656.525
+      },
+      "score": {
+        "correct": false,
+        "unsupported_flag": true
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": false,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The delivery day is Sunday."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "The delivery day label is printed on white paper."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m15",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "What is the delivery day now? Reply with only the day."
+        }
+      ]
+    },
+    {
+      "id": "final-revision-2",
+      "category": "corrections",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The delivery day is Sunday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Correction: it is Tuesday."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The delivery day label is printed on white paper."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the delivery day now? Reply with only the day."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2678.618,
+      "answer": "Sunday",
+      "metrics": {
+        "input_tokens": 314,
+        "selected_context_tokens": 314,
+        "output_tokens": 2,
+        "total_tokens": 316,
+        "response_ms": 2673.414,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 17,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12",
+          "m13",
+          "m14",
+          "m15",
+          "m16"
+        ],
+        "proxy_ms": 2676.733
+      },
+      "score": {
+        "correct": false,
+        "unsupported_flag": true
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The delivery day is Sunday."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Correction: it is Tuesday."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "The delivery day label is printed on white paper."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m15",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "What is the delivery day now? Reply with only the day."
+        }
+      ]
+    },
+    {
+      "id": "final-conflict-2",
+      "category": "conflicting_facts",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "One note says the studio wall color is amber."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Another note says the studio wall color is violet. Neither note is confirmed."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1753.046,
+      "answer": "UNKNOWN",
+      "metrics": {
+        "input_tokens": 305,
+        "selected_context_tokens": 167,
+        "output_tokens": 2,
+        "total_tokens": 169,
+        "response_ms": 1722.578,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m0",
+          "m2",
+          "m12",
+          "m13",
+          "m14"
+        ],
+        "proxy_ms": 1726.512
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "One note says the studio wall color is amber."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Another note says the studio wall color is violet. Neither note is confirmed."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+        }
+      ]
+    },
+    {
+      "id": "final-conflict-2",
+      "category": "conflicting_facts",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "One note says the studio wall color is amber."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Another note says the studio wall color is violet. Neither note is confirmed."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2572.555,
+      "answer": "UNKNOWN",
+      "metrics": {
+        "input_tokens": 305,
+        "selected_context_tokens": 305,
+        "output_tokens": 2,
+        "total_tokens": 307,
+        "response_ms": 2565.092,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 15,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12",
+          "m13",
+          "m14"
+        ],
+        "proxy_ms": 2569.495
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "One note says the studio wall color is amber."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Another note says the studio wall color is violet. Neither note is confirmed."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "What is the studio wall color? Reply UNKNOWN if the notes conflict."
+        }
+      ]
+    },
+    {
+      "id": "final-irrelevant-2",
+      "category": "irrelevant_history",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My favorite notebook has the label ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is 6 + 7? Reply with only the number."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2566.256,
+      "answer": "13",
+      "metrics": {
+        "input_tokens": 279,
+        "selected_context_tokens": 279,
+        "output_tokens": 3,
+        "total_tokens": 282,
+        "response_ms": 2559.874,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 13,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2563.984
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My favorite notebook has the label ELM-62."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is 6 + 7? Reply with only the number."
+        }
+      ]
+    },
+    {
+      "id": "final-irrelevant-2",
+      "category": "irrelevant_history",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My favorite notebook has the label ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is 6 + 7? Reply with only the number."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1825.116,
+      "answer": "13",
+      "metrics": {
+        "input_tokens": 279,
+        "selected_context_tokens": 177,
+        "output_tokens": 3,
+        "total_tokens": 180,
+        "response_ms": 1819.74,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m6",
+          "m8",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 1823.09
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is 6 + 7? Reply with only the number."
+        }
+      ]
+    },
+    {
+      "id": "final-chain-2",
+      "category": "multi_hop_facts",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The camera belongs to Sorin."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Sorin uses locker Bela."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Bela is at depot Cedar."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Varo is at depot Maple."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "At which depot is the camera owner's locker? Reply with only the depot."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 3227.151,
+      "answer": "Cedar Depot",
+      "metrics": {
+        "input_tokens": 339,
+        "selected_context_tokens": 339,
+        "output_tokens": 4,
+        "total_tokens": 343,
+        "response_ms": 3221.904,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 19,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12",
+          "m13",
+          "m14",
+          "m15",
+          "m16",
+          "m17",
+          "m18"
+        ],
+        "proxy_ms": 3225.001
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2",
+        "m4"
+      ],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The camera belongs to Sorin."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Sorin uses locker Bela."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Locker Bela is at depot Cedar."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Locker Varo is at depot Maple."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m13",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m14",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m15",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "At which depot is the camera owner's locker? Reply with only the depot."
+        }
+      ]
+    },
+    {
+      "id": "final-chain-2",
+      "category": "multi_hop_facts",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "The camera belongs to Sorin."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Sorin uses locker Bela."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Bela is at depot Cedar."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "Locker Varo is at depot Maple."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "At which depot is the camera owner's locker? Reply with only the depot."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 1891.583,
+      "answer": "Cedar",
+      "metrics": {
+        "input_tokens": 339,
+        "selected_context_tokens": 160,
+        "output_tokens": 3,
+        "total_tokens": 163,
+        "response_ms": 1884.34,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m4",
+          "m6",
+          "m16",
+          "m17",
+          "m18"
+        ],
+        "proxy_ms": 1889.16
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [
+        "m0",
+        "m2",
+        "m4"
+      ],
+      "all_evidence_retained": false,
+      "selected_evidence": [
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Locker Bela is at depot Cedar."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Locker Varo is at depot Maple."
+        },
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "At which depot is the camera owner's locker? Reply with only the depot."
+        }
+      ]
+    },
+    {
+      "id": "final-unknown-2",
+      "category": "unknown_answers",
+      "mode": "TORUK",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My parcel tracking code is ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+          }
+        ],
+        "mode": "TORUK",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2713.682,
+      "answer": "I don't know.",
+      "metrics": {
+        "input_tokens": 283,
+        "selected_context_tokens": 182,
+        "output_tokens": 6,
+        "total_tokens": 188,
+        "response_ms": 2707.93,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "TORUK",
+        "memory_used": true,
+        "selector_id": "lexical-v1",
+        "selected_messages": 5,
+        "selected_message_ids": [
+          "m6",
+          "m8",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2711.464
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+        }
+      ]
+    },
+    {
+      "id": "final-unknown-2",
+      "category": "unknown_answers",
+      "mode": "BASELINE",
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "My parcel tracking code is ELM-62."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+          },
+          {
+            "role": "assistant",
+            "content": "Noted."
+          },
+          {
+            "role": "user",
+            "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+          }
+        ],
+        "mode": "BASELINE",
+        "max_new_tokens": 32,
+        "temperature": 0,
+        "top_p": 1
+      },
+      "http_status": 200,
+      "e2e_ms": 2720.868,
+      "answer": "Unknown.",
+      "metrics": {
+        "input_tokens": 283,
+        "selected_context_tokens": 283,
+        "output_tokens": 3,
+        "total_tokens": 286,
+        "response_ms": 2716.259,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 13,
+        "selected_message_ids": [
+          "m0",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "proxy_ms": 2719.09
+      },
+      "score": {
+        "correct": true,
+        "unsupported_flag": false
+      },
+      "required_evidence": [],
+      "all_evidence_retained": true,
+      "selected_evidence": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My parcel tracking code is ELM-62."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am planning a garden with herbs, vegetables, a winding path and a shaded bench."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "My workshop includes morning talks, a lunch break, afternoon practice and a closing discussion."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A walking route passes a river, a museum, a busy market and a quiet library."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The lunch recipe needs lentils, ginger, onions, tomatoes and some fresh bread."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "My office inventory includes pencils, notebooks, folders, calendars and a small lamp."
+        },
+        {
+          "id": "m11",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m12",
+          "role": "user",
+          "content": "What is my childhood teacher's name? I have not provided it. Reply UNKNOWN if unknown."
+        }
+      ]
+    }
+  ],
+  "backend_status": {
+    "ready": true,
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_sha256": "4c3ddbb70c2e156820de590da98029924bab20483c50be77c02460cb0c47d1ed",
+    "selector_id": "lexical-v1",
+    "backbone_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "backbone_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "backend": "Toruk",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+    "context_tokens": 512,
+    "memory_supported": true,
+    "modes": [
+      "BASELINE",
+      "TORUK"
+    ],
+    "error_code": null,
+    "error": null
+  },
+  "summary": {
+    "BASELINE": {
+      "n": 12,
+      "correct": 10,
+      "unsupported_flags": 2,
+      "failures": 0,
+      "mean_selected_tokens": 299.5833333333333,
+      "median_selected_tokens": 294.0,
+      "selected_tokens": 3595,
+      "output_tokens": 41,
+      "available_tokens": 3595,
+      "mean_e2e_ms": 2795.1705833333335,
+      "median_e2e_ms": 2654.3914999999997,
+      "all_evidence_retained": 12
+    },
+    "TORUK": {
+      "n": 12,
+      "correct": 10,
+      "unsupported_flags": 2,
+      "failures": 0,
+      "mean_selected_tokens": 168.83333333333334,
+      "median_selected_tokens": 168.0,
+      "selected_tokens": 2026,
+      "output_tokens": 44,
+      "available_tokens": 3595,
+      "mean_e2e_ms": 1953.2301666666667,
+      "median_e2e_ms": 1822.4575,
+      "all_evidence_retained": 8
+    },
+    "selected_token_reduction_pct": 43.64394993045897,
+    "target_met_on_this_fixture": true
+  }
+}

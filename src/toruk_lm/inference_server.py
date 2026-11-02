@@ -16,7 +16,9 @@ from toruk_lm.chat_runtime import (
     MAX_MESSAGE_BYTES,
     MAX_MESSAGES,
     MAX_NEW_TOKENS,
+    STARTUP_ERRORS,
     ChatError,
+    ModelStartupError,
     OrdinaryChatBackend,
 )
 from toruk_lm.inference_worker import ProcessBackend
@@ -94,11 +96,17 @@ def make_handler(
     token: str,
 ) -> type[BaseHTTPRequestHandler]:
     gate = threading.Semaphore(1)
-    public_error = (
-        load_error
-        if load_error and "Unsupported checkpoint" in load_error
-        else "Toruk model is unavailable or incompatible; check inference-host logs."
-    )
+    error_code = load_error if load_error in STARTUP_ERRORS else "MODEL_LOAD_FAILED"
+    # Compatibility for callers using the previous handler factory; never echo details.
+    if load_error and "Unsupported checkpoint" in load_error:
+        error_code = "CHECKPOINT_INCOMPATIBLE"
+
+    def readiness_error() -> tuple[str | None, str | None]:
+        if backend is None:
+            return error_code, STARTUP_ERRORS[error_code]
+        if not getattr(backend, "ready", True):
+            return "WORKER_STOPPED", STARTUP_ERRORS["WORKER_STOPPED"]
+        return None, None
 
     class Handler(BaseHTTPRequestHandler):
         def setup(self) -> None:
@@ -119,17 +127,21 @@ def make_handler(
             self.wfile.write(body)
 
         def do_GET(self) -> None:
-            if self.path not in ("/api/status", "/healthz"):
+            if self.path not in ("/api/status", "/status", "/healthz"):
                 self._json(HTTPStatus.NOT_FOUND, {"error": "Not found."})
                 return
+            code, public_error = readiness_error()
             self._json(
-                HTTPStatus.OK,
+                HTTPStatus.SERVICE_UNAVAILABLE
+                if self.path == "/healthz" and code
+                else HTTPStatus.OK,
                 {
                     "ready": backend is not None and getattr(backend, "ready", True),
                     "experimental": True,
                     "chat_quality": "unqualified",
                     "efficiency_claim": "unsupported",
                     "selector_sha256": getattr(backend, "selector_sha256", None),
+                    "selector_id": getattr(backend, "selector_id", None),
                     "backbone_revision": getattr(backend, "backbone_revision", None),
                     "backbone_sha256": getattr(backend, "backbone_sha256", None),
                     "backend": "Toruk",
@@ -142,7 +154,8 @@ def make_handler(
                     "modes": ["BASELINE", "TORUK"]
                     if getattr(backend, "selector", None)
                     else ["BASELINE"],
-                    "error": public_error if backend is None else None,
+                    "error_code": code,
+                    "error": public_error,
                 },
             )
 
@@ -155,7 +168,10 @@ def make_handler(
                 self._json(HTTPStatus.UNAUTHORIZED, {"error": "Unauthorized."})
                 return
             if backend is None or not getattr(backend, "ready", True):
-                self._json(HTTPStatus.SERVICE_UNAVAILABLE, {"error": public_error})
+                code, public_error = readiness_error()
+                self._json(
+                    HTTPStatus.SERVICE_UNAVAILABLE, {"error_code": code, "error": public_error}
+                )
                 return
             if not gate.acquire(blocking=False):
                 self._json(HTTPStatus.SERVICE_UNAVAILABLE, {"error": "Inference is busy; retry."})
@@ -192,7 +208,9 @@ def main() -> None:
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--checkpoint", type=Path)
     source.add_argument("--backbone-dir", type=Path)
-    parser.add_argument("--selector-checkpoint", type=Path)
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument("--selector-checkpoint", type=Path)
+    selection.add_argument("--context-selector", choices=("lexical-v1", "lexical-v2"))
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8766)
     args = parser.parse_args()
@@ -204,17 +222,33 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     backend: ProcessBackend | None
     try:
-        if args.selector_checkpoint and not args.backbone_dir:
-            parser.error("--selector-checkpoint requires --backbone-dir")
+        if (args.selector_checkpoint or args.context_selector) and not args.backbone_dir:
+            parser.error("Context selection requires --backbone-dir")
         backend = ProcessBackend(
-            args.backbone_dir or args.checkpoint, args.selector_checkpoint, bool(args.backbone_dir)
+            args.backbone_dir or args.checkpoint,
+            args.selector_checkpoint,
+            bool(args.backbone_dir),
+            context_selector=args.context_selector,
         )
         error = None
     except ChatError as failure:
-        backend, error = None, str(failure)
-        logging.error("Checkpoint load failed")
+        error = failure.code if isinstance(failure, ModelStartupError) else "MODEL_LOAD_FAILED"
+        backend = None
+        logging.error("CHAT DISABLED [%s]: %s", error, STARTUP_ERRORS[error])
+        logging.error(
+            "For instruct chat use --backbone-dir artifacts/qwen-chat-001/backbone; "
+            "see docs/local-chat.md. No fallback model was loaded."
+        )
     server = BoundedHTTPServer((args.host, args.port), make_handler(backend, error, token))
-    logging.info("Toruk inference listening on %s:%s", args.host, args.port)
+    if backend:
+        logging.info("Chat ready: %s", backend.model_id)
+        logging.info("Toruk inference listening on %s:%s", args.host, args.port)
+    else:
+        logging.error(
+            "Readiness service only on %s:%s; inference disabled until restart.",
+            args.host,
+            args.port,
+        )
     try:
         server.serve_forever()
     except KeyboardInterrupt:

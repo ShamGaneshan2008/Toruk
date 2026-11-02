@@ -12,6 +12,20 @@ const request = (messages, budget = 16) => new Request('http://localhost/api/cha
 const user = [{role: 'user', content: 'hello'}];
 const metrics = {input_tokens: 20, selected_context_tokens: 16, output_tokens: 3, total_tokens: 19, response_ms: 4.5, backend: 'Toruk', model: 'toruk-ordinary-v1:test', backbone: 'Toruk ordinary byte LM', mode: 'BASELINE', memory_used: false, selected_message_ids: ['m0']};
 
+test('unready model has an actionable reason and never forwards backend exception text', async () => {
+  for (const code of ['CHECKPOINT_MISSING', 'BACKBONE_MISSING', 'CHAT_DEPENDENCIES_MISSING', 'WORKER_STOPPED', 'unknown-private-code']) {
+    const backend = {ready: false, backend: 'Toruk', error_code: code, error: 'private-token C:/private/path raw-exception'};
+    const response = await statusResponse({env, fetchImpl: async () => Response.json(backend)});
+    const body = await response.json();
+    assert.equal(body.ready, false);
+    assert.match(body.error, /Start|setup|Restart|restart|guide/);
+    assert.doesNotMatch(JSON.stringify(body), /private-token|private\/path|raw-exception|unknown-private-code/);
+    const post = await chatResponse(request(user), {env, fetchImpl: async () => Response.json(backend, {status: 503})});
+    assert.equal(post.status, 503);
+    assert.equal((await post.json()).error_code, body.error_code);
+  }
+});
+
 test('unconfigured and unavailable inference return errors, never answers', async () => {
   const status = await statusResponse({env: {}});
   assert.equal((await status.json()).ready, false);

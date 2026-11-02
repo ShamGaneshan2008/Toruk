@@ -1,0 +1,573 @@
+{
+  "before": {
+    "summary": {
+      "BASELINE": {
+        "n": 12,
+        "correct": 10,
+        "unsupported_flags": 2,
+        "failures": 0,
+        "mean_selected_tokens": 299.5833333333333,
+        "median_selected_tokens": 294.0,
+        "selected_tokens": 3595,
+        "output_tokens": 41,
+        "available_tokens": 3595,
+        "mean_e2e_ms": 2795.1705833333335,
+        "median_e2e_ms": 2654.3914999999997,
+        "all_evidence_retained": 12
+      },
+      "TORUK": {
+        "n": 12,
+        "correct": 10,
+        "unsupported_flags": 2,
+        "failures": 0,
+        "mean_selected_tokens": 168.83333333333334,
+        "median_selected_tokens": 168.0,
+        "selected_tokens": 2026,
+        "output_tokens": 44,
+        "available_tokens": 3595,
+        "mean_e2e_ms": 1953.2301666666667,
+        "median_e2e_ms": 1822.4575,
+        "all_evidence_retained": 8
+      },
+      "selected_token_reduction_pct": 43.64394993045897,
+      "target_met_on_this_fixture": true
+    },
+    "rows": [
+      {
+        "id": "final-recall-1",
+        "mode": "BASELINE",
+        "answer": "YEW-83",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-recall-1",
+        "mode": "TORUK",
+        "answer": "YEW-83",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-revision-1",
+        "mode": "TORUK",
+        "answer": "Wednesday",
+        "correct": false,
+        "evidence_complete": false,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-revision-1",
+        "mode": "BASELINE",
+        "answer": "Wednesday",
+        "correct": false,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-conflict-1",
+        "mode": "TORUK",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-conflict-1",
+        "mode": "BASELINE",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-1",
+        "mode": "BASELINE",
+        "answer": "Mercury",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-1",
+        "mode": "TORUK",
+        "answer": "Mercury",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-1",
+        "mode": "BASELINE",
+        "answer": "Depot Juniper",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-1",
+        "mode": "TORUK",
+        "answer": "Juniper",
+        "correct": true,
+        "evidence_complete": false,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": true,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-unknown-1",
+        "mode": "BASELINE",
+        "answer": "Unknown.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-unknown-1",
+        "mode": "TORUK",
+        "answer": "I don't know.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-recall-2",
+        "mode": "BASELINE",
+        "answer": "ELM-62",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-recall-2",
+        "mode": "TORUK",
+        "answer": "ELM-62",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-revision-2",
+        "mode": "TORUK",
+        "answer": "Sunday",
+        "correct": false,
+        "evidence_complete": false,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-revision-2",
+        "mode": "BASELINE",
+        "answer": "Sunday",
+        "correct": false,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-conflict-2",
+        "mode": "TORUK",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-conflict-2",
+        "mode": "BASELINE",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-2",
+        "mode": "BASELINE",
+        "answer": "13",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-2",
+        "mode": "TORUK",
+        "answer": "13",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-2",
+        "mode": "BASELINE",
+        "answer": "Cedar Depot",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-2",
+        "mode": "TORUK",
+        "answer": "Cedar",
+        "correct": true,
+        "evidence_complete": false,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": true,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-unknown-2",
+        "mode": "TORUK",
+        "answer": "I don't know.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-unknown-2",
+        "mode": "BASELINE",
+        "answer": "Unknown.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      }
+    ],
+    "BASELINE_audit": {
+      "unsupported_stale_or_ungrounded": 2,
+      "grounded_correct": 10
+    },
+    "TORUK_audit": {
+      "unsupported_stale_or_ungrounded": 4,
+      "grounded_correct": 8
+    }
+  },
+  "after": {
+    "summary": {
+      "BASELINE": {
+        "n": 12,
+        "correct": 10,
+        "unsupported_flags": 2,
+        "failures": 0,
+        "mean_selected_tokens": 299.5833333333333,
+        "median_selected_tokens": 294.0,
+        "selected_tokens": 3595,
+        "output_tokens": 41,
+        "available_tokens": 3595,
+        "mean_e2e_ms": 2541.74825,
+        "median_e2e_ms": 2445.1155,
+        "all_evidence_retained": 12
+      },
+      "TORUK": {
+        "n": 12,
+        "correct": 10,
+        "unsupported_flags": 2,
+        "failures": 0,
+        "mean_selected_tokens": 170.66666666666666,
+        "median_selected_tokens": 168.5,
+        "selected_tokens": 2048,
+        "output_tokens": 44,
+        "available_tokens": 3595,
+        "mean_e2e_ms": 1710.4403333333332,
+        "median_e2e_ms": 1627.5149999999999,
+        "all_evidence_retained": 10
+      },
+      "selected_token_reduction_pct": 43.031988873435324,
+      "target_met_on_this_fixture": true
+    },
+    "rows": [
+      {
+        "id": "final-recall-1",
+        "mode": "BASELINE",
+        "answer": "YEW-83",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-recall-1",
+        "mode": "TORUK",
+        "answer": "YEW-83",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-revision-1",
+        "mode": "TORUK",
+        "answer": "Wednesday",
+        "correct": false,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-revision-1",
+        "mode": "BASELINE",
+        "answer": "Wednesday",
+        "correct": false,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-conflict-1",
+        "mode": "TORUK",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-conflict-1",
+        "mode": "BASELINE",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-1",
+        "mode": "BASELINE",
+        "answer": "Mercury",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-1",
+        "mode": "TORUK",
+        "answer": "Mercury",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-1",
+        "mode": "BASELINE",
+        "answer": "Depot Juniper",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-1",
+        "mode": "TORUK",
+        "answer": "Juniper",
+        "correct": true,
+        "evidence_complete": false,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": true,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-unknown-1",
+        "mode": "BASELINE",
+        "answer": "Unknown.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-unknown-1",
+        "mode": "TORUK",
+        "answer": "I don't know.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-recall-2",
+        "mode": "BASELINE",
+        "answer": "ELM-62",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-recall-2",
+        "mode": "TORUK",
+        "answer": "ELM-62",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-revision-2",
+        "mode": "TORUK",
+        "answer": "Sunday",
+        "correct": false,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-revision-2",
+        "mode": "BASELINE",
+        "answer": "Sunday",
+        "correct": false,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": true,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-conflict-2",
+        "mode": "TORUK",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-conflict-2",
+        "mode": "BASELINE",
+        "answer": "UNKNOWN",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-2",
+        "mode": "BASELINE",
+        "answer": "13",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-irrelevant-2",
+        "mode": "TORUK",
+        "answer": "13",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-2",
+        "mode": "BASELINE",
+        "answer": "Cedar Depot",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-chain-2",
+        "mode": "TORUK",
+        "answer": "Cedar",
+        "correct": true,
+        "evidence_complete": false,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": true,
+        "grounded_correct": false
+      },
+      {
+        "id": "final-unknown-2",
+        "mode": "TORUK",
+        "answer": "I don't know.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      },
+      {
+        "id": "final-unknown-2",
+        "mode": "BASELINE",
+        "answer": "Unknown.",
+        "correct": true,
+        "evidence_complete": true,
+        "unsupported_or_stale_flag": false,
+        "correct_with_incomplete_evidence": false,
+        "grounded_correct": true
+      }
+    ],
+    "BASELINE_audit": {
+      "unsupported_stale_or_ungrounded": 2,
+      "grounded_correct": 10
+    },
+    "TORUK_audit": {
+      "unsupported_stale_or_ungrounded": 4,
+      "grounded_correct": 8
+    }
+  },
+  "baseline_answers_and_input_counts_identical": true,
+  "frozen_source_and_fixture_identical": true,
+  "answer_regressions_v2_vs_v1": []
+}

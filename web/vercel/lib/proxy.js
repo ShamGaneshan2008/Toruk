@@ -5,6 +5,26 @@ const MAX_BODY_BYTES = 16384;
 const MAX_NEW_TOKENS = 64;
 const TIMEOUT_MS = 60000;
 
+// Only these fixed messages may describe a model-load failure in the browser.
+const READINESS_ERRORS = {
+  CHECKPOINT_MISSING: 'The selected demo model is missing. Start Toruk with the installed chat backbone; see the local chat guide.',
+  CHECKPOINT_INCOMPATIBLE: 'The selected model is incompatible. Start Toruk with the supported chat backbone.',
+  CHECKPOINT_INVALID: 'The selected demo model cannot be read. Use the chat backbone described in the local chat guide.',
+  BACKBONE_MISSING: 'Chat model files are missing. Complete the local model setup, then restart Toruk.',
+  BACKBONE_INVALID: 'Chat model files failed verification. Restore the pinned model using the local chat guide, then restart Toruk.',
+  CHAT_DEPENDENCIES_MISSING: 'Chat support is not installed. Complete the chat dependency setup in the local chat guide, then restart Toruk.',
+  BACKBONE_INCOMPATIBLE: 'The installed chat model cannot load. Check the local chat setup and restart Toruk.',
+  SELECTOR_UNAVAILABLE: 'The optional Toruk memory model cannot load. Start basic chat without the optional memory model, or restore the evaluated memory model.',
+  STARTUP_TIMEOUT: 'Chat model startup timed out. Close unused applications and restart Toruk; check that the laptop has enough available memory.',
+  MODEL_LOAD_FAILED: 'The chat model could not start. Check the backend terminal and the local chat guide, then restart Toruk.',
+  WORKER_STOPPED: 'The chat model stopped. Restart the backend, then retry the connection.',
+};
+
+function readinessError(code) {
+  const known = typeof code === 'string' && Object.hasOwn(READINESS_ERRORS, code);
+  return {error_code: known ? code : 'MODEL_LOAD_FAILED', error: READINESS_ERRORS[known ? code : 'MODEL_LOAD_FAILED']};
+}
+
 function json(value, status = 200) {
   return Response.json(value, {status, headers: {'Cache-Control': 'no-store'}});
 }
@@ -60,9 +80,9 @@ export async function statusResponse({env = process.env, fetchImpl = fetch} = {}
     if (!response.ok) throw new Error('backend status error');
     const data = await response.json();
     if (data.backend !== 'Toruk' || typeof data.ready !== 'boolean') throw new Error('invalid backend status');
-    return json({ready: data.ready, backend: 'Toruk', experimental: true, chat_quality: 'unqualified', efficiency_claim: 'unsupported', selector_sha256: data.selector_sha256 ?? null, model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], error: data.error || null});
+    return json({ready: data.ready, backend: 'Toruk', experimental: true, chat_quality: 'unqualified', efficiency_claim: 'unsupported', selector_id: data.selector_id ?? null, selector_sha256: data.selector_sha256 ?? null, model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], ...(data.ready ? {error: null, error_code: null} : readinessError(data.error_code))});
   } catch {
-    return json({ready: false, backend: 'Toruk', model: 'Unavailable', error: 'Toruk inference host is unavailable.'});
+    return json({ready: false, backend: 'Toruk', model: 'Unavailable', error_code: 'BACKEND_UNAVAILABLE', error: 'Toruk inference is unavailable. Start or restart the backend, then retry the connection.'});
   }
 }
 
@@ -88,6 +108,10 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
     if (response.status === 400) {
       const bad = await response.json();
       return json({error: bad.error || 'Invalid generation request.'}, 400);
+    }
+    if (response.status === 503) {
+      const unavailable = await response.json();
+      if (unavailable.error_code) return json(readinessError(unavailable.error_code), 503);
     }
     if (!response.ok) throw new Error('backend response failed');
     const data = await response.json();

@@ -5,9 +5,7 @@ import json
 from pathlib import Path
 
 from toruk_lm.chat_foundation import (
-    BACKBONE_ID,
-    BACKBONE_REVISION,
-    BACKBONE_SHA256,
+    BACKBONES,
     weight_sha256,
 )
 
@@ -17,17 +15,24 @@ FILES = (
     "model.safetensors",
     "tokenizer.json",
     "tokenizer_config.json",
-    "special_tokens_map.json",
     "README.md",
 )
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Download pinned 135M instruct backbone")
-    parser.add_argument(
-        "--output", type=Path, default=Path("artifacts/chat-foundation-001/backbone")
-    )
+    parser = argparse.ArgumentParser(description="Download a pinned small instruct backbone")
+    parser.add_argument("--model", choices=tuple(BACKBONES), default="qwen2.5")
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
+    spec = BACKBONES[args.model]
+    if args.output is None:
+        folder = "qwen-chat-001" if args.model == "qwen2.5" else "chat-foundation-001"
+        args.output = Path("artifacts") / folder / "backbone"
+    files = (
+        (*FILES, "special_tokens_map.json")
+        if args.model == "smollm2"
+        else (*FILES, "merges.txt", "vocab.json", "LICENSE")
+    )
     if args.output.exists() and any(args.output.iterdir()):
         parser.error("use a fresh output directory")
     try:
@@ -36,27 +41,27 @@ def main() -> None:
         parser.error(f"install optional chat dependencies first: {error}")
     args.output.mkdir(parents=True, exist_ok=True)
     snapshot_download(
-        repo_id=BACKBONE_ID,
-        revision=BACKBONE_REVISION,
-        allow_patterns=list(FILES),
+        repo_id=spec["model"],
+        revision=spec["revision"],
+        allow_patterns=list(files),
         local_dir=args.output,
         max_workers=1,
     )
-    for name in FILES:
+    for name in files:
         if not (args.output / name).is_file():
             raise ValueError(f"missing backbone file: {name}")
     digest = weight_sha256(args.output / "model.safetensors")
-    if digest != BACKBONE_SHA256:
+    if digest != spec["model_sha256"]:
         raise ValueError("model.safetensors SHA-256 mismatch")
     manifest = {
-        "model": BACKBONE_ID,
-        "revision": BACKBONE_REVISION,
+        "model": spec["model"],
+        "revision": spec["revision"],
         "model_sha256": digest,
     }
     (args.output / "toruk-backbone.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
     )
-    print(json.dumps({**manifest, "bytes": sum((args.output / f).stat().st_size for f in FILES)}))
+    print(json.dumps({**manifest, "bytes": sum((args.output / f).stat().st_size for f in files)}))
 
 
 if __name__ == "__main__":

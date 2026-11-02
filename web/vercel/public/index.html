@@ -43,22 +43,23 @@
       <button id="clear" type="button">New chat</button>
     </header>
     <main id="main">
-      <div id="notice" class="notice">Experimental chat. Public chatbot launch is blocked on answer quality and hosted verification. The ordinary Toruk checkpoint learned only a repeating pattern. A separately installed pretrained backbone can provide conversational text, but its language ability is not a Toruk research result. On a fixed 20-question local check, both BASELINE and TORUK answered 6 correctly; TORUK selected 14.96% fewer prompt tokens, below its 35% target. Context selection may omit relevant facts. No answer-quality or efficiency advantage is verified. Verify important answers. History clears on refresh.</div>
+      <div id="notice" class="notice">Experimental chat. The displayed pretrained backbone supplies language ability. Toruk's optional context selection is experimental and may omit relevant facts. No Toruk answer-quality or token-efficiency advantage is verified. Answers can be wrong; verify important information. History clears on refresh.</div>
       <div id="error" class="error" role="alert" aria-live="assertive"></div>
+      <button id="retry" type="button">Retry connection</button>
       <div id="transcript" class="transcript" aria-live="polite"></div>
     </main>
     <footer>
       <form id="form">
         <div class="controls">
-          <textarea id="message" aria-label="Your message" placeholder="Type a message…" maxlength="1024"></textarea>
-          <button id="send" type="submit">Send</button>
+          <textarea id="message" aria-label="Your message" placeholder="Type a message…" maxlength="1024" disabled></textarea>
+          <button id="send" type="submit" disabled>Send</button>
         </div>
         <div class="options">
           <label for="length">Maximum output</label>
           <select id="length"><option value="16">16 tokens</option><option value="32" selected>32 tokens</option><option value="64">64 tokens</option></select>
           <label for="mode">Context</label>
           <select id="mode"><option value="BASELINE">BASELINE: recent turns</option><option value="TORUK" disabled>TORUK: selected turns</option></select>
-          <span id="memory-status">Memory: disabled</span>
+          <span id="memory-status">Context selection: disabled</span>
           <label for="temperature">Temperature</label>
           <select id="temperature"><option value="0" selected>0 (greedy)</option><option value="0.7">0.7</option><option value="1">1</option></select>
           <label for="top-p">Top-p</label>
@@ -70,12 +71,13 @@
     </footer>
   </div>
   <script type="module">
-    import {pendingMessages, completedMessages, clearedMessages} from './chat_state.js';
+    import {pendingMessages, completedMessages, clearedMessages, setChatAvailability} from './chat_state.js';
     const transcript = document.getElementById('transcript');
     const error = document.getElementById('error');
     const model = document.getElementById('model');
     const message = document.getElementById('message');
     const send = document.getElementById('send');
+    const retry = document.getElementById('retry');
     const loading = document.getElementById('loading');
     const main = document.getElementById('main');
     const metrics = document.getElementById('metrics');
@@ -91,7 +93,7 @@
       if (!items.length) {
         const hint = document.createElement('div');
         hint.className = 'empty';
-        hint.textContent = 'Type a message to try Toruk text continuation.';
+        hint.textContent = 'Ask a question. The backbone shown above generates the answer.';
         transcript.append(hint);
       }
       for (const item of items) {
@@ -109,12 +111,11 @@
     }
     function setSending(value) {
       sending = value;
-      send.disabled = value || !ready;
-      message.disabled = value || !ready;
+      setChatAvailability({message, send, retry}, ready, value);
       loading.textContent = value ? 'Toruk is generating…' : '';
     }
     function updateMemoryStatus() {
-      memoryStatus.textContent = mode.value === 'TORUK' ? 'Memory: enabled (experimental)' : 'Memory: disabled';
+      memoryStatus.textContent = mode.value === 'TORUK' ? 'Context selection: enabled (experimental)' : 'Context selection: disabled';
     }
     async function request(path, body) {
       const response = await fetch(path, {
@@ -126,11 +127,15 @@
       return data;
     }
     async function loadStatus() {
+      ready = false;
+      setSending(false);
+      retry.disabled = true;
+      error.textContent = '';
       try {
         const response = await fetch('/api/status');
         const data = await response.json();
-        ready = data.ready;
-        model.textContent = `Backend: ${data.backend} · Backbone: ${data.backbone || data.model} · Model: ${data.model}`;
+        ready = response.ok && data.ready === true;
+        model.textContent = `Backend: ${data.backend} · Backbone: ${data.backbone || data.model} · Model: ${data.model} · Selector: ${data.selector_id || 'none'}`;
         mode.querySelector('option[value="TORUK"]').disabled = !data.memory_supported;
         if (!data.memory_supported) mode.value = 'BASELINE';
         updateMemoryStatus();
@@ -138,7 +143,8 @@
         if (data.error) error.textContent = data.error;
         setSending(false);
       } catch (cause) {
-        error.textContent = `Cannot reach local server: ${cause.message}`;
+        ready = false;
+        error.textContent = 'Cannot reach the chat service. Start the local servers, then retry the connection.';
         model.textContent = 'Unavailable';
         setSending(false);
       }
@@ -189,6 +195,7 @@
       message.focus();
     });
     mode.addEventListener('change', updateMemoryStatus);
+    retry.addEventListener('click', loadStatus);
     updateMemoryStatus();
     loadStatus();
   </script>

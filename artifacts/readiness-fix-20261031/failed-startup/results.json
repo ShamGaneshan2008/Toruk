@@ -1,0 +1,42 @@
+[
+  {
+    "status": {
+      "ready": false,
+      "backend": "Toruk",
+      "experimental": true,
+      "chat_quality": "unqualified",
+      "efficiency_claim": "unsupported",
+      "selector_sha256": null,
+      "model": "Unavailable",
+      "backbone": "Unavailable",
+      "context_tokens": null,
+      "memory_supported": false,
+      "modes": [
+        "BASELINE"
+      ],
+      "error_code": "CHECKPOINT_MISSING",
+      "error": "The selected demo model is missing. Start Toruk with the installed chat backbone; see the local chat guide."
+    },
+    "chat_http_status": 503
+  },
+  {
+    "status": {
+      "ready": false,
+      "backend": "Toruk",
+      "experimental": true,
+      "chat_quality": "unqualified",
+      "efficiency_claim": "unsupported",
+      "selector_sha256": null,
+      "model": "Unavailable",
+      "backbone": "Unavailable",
+      "context_tokens": null,
+      "memory_supported": false,
+      "modes": [
+        "BASELINE"
+      ],
+      "error_code": "BACKBONE_MISSING",
+      "error": "Chat model files are missing. Complete the local model setup, then restart Toruk."
+    },
+    "chat_http_status": 503
+  }
+]

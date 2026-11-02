@@ -12,6 +12,7 @@ MODULES = (
     "__init__",
     "chat_runtime",
     "chat_foundation",
+    "context_selection",
     "inference_server",
     "inference_worker",
     "controlled",
