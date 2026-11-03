@@ -11,13 +11,9 @@ from typing import Any
 import torch
 from torch.nn import functional as F
 
-<<<<<<< HEAD
 from toruk_lm.chat_runtime import ChatError, ModelStartupError
-from toruk_lm.context_selection import LexicalContextSelector
-=======
-from toruk_lm.chat_runtime import ChatError
 from toruk_lm.chat_selector import load_chat_selector
->>>>>>> origin/main
+from toruk_lm.context_selection import LexicalContextSelector
 from toruk_lm.controlled import load_controlled
 from toruk_lm.recurrent import RecurrentLM
 from toruk_lm.tokenizer import ByteTokenizer
@@ -61,20 +57,27 @@ def backbone_spec(manifest: object) -> dict[str, str]:
 
 def read_backbone_manifest(model_dir: Path) -> dict[str, str]:
     """Require a local, content-identified model before loading executable model code."""
+    manifest_path = model_dir / "toruk-backbone.json"
+    if not manifest_path.is_file():
+        raise ModelStartupError("BACKBONE_MISSING", "Backbone manifest unavailable.")
     try:
-        manifest = json.loads((model_dir / "toruk-backbone.json").read_text(encoding="utf-8"))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     except (OSError, ValueError) as error:
-        raise ChatError(f"Backbone manifest unavailable: {error}") from error
+        raise ModelStartupError("BACKBONE_INVALID", "Backbone manifest unavailable.") from error
     if (
         not isinstance(manifest, dict)
         or set(manifest) != {"model", "revision", "model_sha256"}
         or not all(isinstance(value, str) and value for value in manifest.values())
         or not re.fullmatch(r"[0-9a-f]{64}", manifest["model_sha256"])
     ):
-        raise ChatError("Backbone identity or revision mismatch.")
+        raise ModelStartupError("BACKBONE_INVALID", "Backbone identity or revision mismatch.")
+    if any(spec["model"] == manifest["model"] for spec in BACKBONES.values()):
+        backbone_spec(manifest)
     weights = model_dir / "model.safetensors"
-    if not weights.is_file() or weight_sha256(weights) != manifest["model_sha256"]:
-        raise ChatError("Backbone weights are missing or have the wrong SHA-256.")
+    if not weights.is_file():
+        raise ModelStartupError("BACKBONE_MISSING")
+    if weight_sha256(weights) != manifest["model_sha256"]:
+        raise ModelStartupError("BACKBONE_INVALID", "Backbone weights have the wrong SHA-256.")
     return manifest
 
 
@@ -153,7 +156,6 @@ class TorukContextSelector:
 class PretrainedChatBackend:
     """Local content-identified backbone; TORUK changes context, never weights."""
 
-<<<<<<< HEAD
     def __init__(
         self,
         model_dir: Path,
@@ -162,23 +164,10 @@ class PretrainedChatBackend:
     ) -> None:
         if selector_checkpoint and context_selector:
             raise ChatError("Choose a learned selector checkpoint or a heuristic selector.")
-        manifest_path = model_dir / "toruk-backbone.json"
-        if not manifest_path.is_file():
-            raise ModelStartupError("BACKBONE_MISSING", "Backbone manifest unavailable.")
-        try:
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except (OSError, ValueError) as error:
-            raise ModelStartupError("BACKBONE_INVALID", "Backbone manifest unavailable.") from error
-        spec = backbone_spec(manifest)
-        weights = model_dir / "model.safetensors"
-        if not weights.is_file():
-            raise ModelStartupError("BACKBONE_MISSING")
-        if weight_sha256(weights) != spec["model_sha256"]:
-            raise ModelStartupError("BACKBONE_INVALID", "Backbone weights have the wrong SHA-256.")
-=======
-    def __init__(self, model_dir: Path, selector_checkpoint: Path | None = None) -> None:
         manifest = read_backbone_manifest(model_dir)
->>>>>>> origin/main
+        spec = next(
+            (item for item in BACKBONES.values() if item["model"] == manifest["model"]), None
+        )
         try:
             from transformers import AutoModelForCausalLM, AutoTokenizer
         except ImportError as error:
@@ -199,41 +188,30 @@ class PretrainedChatBackend:
                 dtype=torch.float32,
             )
         except (OSError, ValueError, RuntimeError) as error:
-<<<<<<< HEAD
             raise ModelStartupError("BACKBONE_INCOMPATIBLE") from error
-        if self.model.config.model_type != spec["model_type"] or not self.tokenizer.chat_template:
+        if (
+            spec and self.model.config.model_type != spec["model_type"]
+        ) or not self.tokenizer.chat_template:
             raise ModelStartupError("BACKBONE_INCOMPATIBLE")
-=======
-            raise ChatError(f"Cannot load pinned chat backbone: {error}") from error
-        if not self.tokenizer.chat_template:
-            raise ChatError("Backbone architecture or chat template is incompatible.")
->>>>>>> origin/main
         if self.tokenizer.eos_token_id is None or self.tokenizer.pad_token_id is None:
             raise ModelStartupError("BACKBONE_INCOMPATIBLE")
         self.model.eval()
         self.context = MAX_PROMPT_TOKENS
-<<<<<<< HEAD
-        self.backbone_id = spec["model"]
-        self.backbone_revision = spec["revision"]
-        self.backbone_sha256 = spec["model_sha256"]
-        self.model_id = f"{self.backbone_id}@{self.backbone_revision[:12]}"
-        # Preserve the historical SmolLM prompt for archived study reproduction.
-        self.system_prompt = CHAT_INSTRUCTIONS if spec["model_type"] == "qwen2" else ""
-        self.selector: TorukContextSelector | LexicalContextSelector | None = (
-            TorukContextSelector(selector_checkpoint) if selector_checkpoint is not None else None
-=======
         self.backbone_id = manifest["model"]
         self.backbone_revision = manifest["revision"]
         self.backbone_sha256 = manifest["model_sha256"]
         self.model_id = f"{self.backbone_id}@{self.backbone_revision[:12]}"
-        self.selector = (
+        # Preserve the historical SmolLM prompt for archived study reproduction.
+        self.system_prompt = CHAT_INSTRUCTIONS if spec and spec["model_type"] == "qwen2" else ""
+        self.selector: Any = (
             load_chat_selector(selector_checkpoint) if selector_checkpoint is not None else None
->>>>>>> origin/main
         )
         if context_selector:
             self.selector = LexicalContextSelector(context_selector)
         self.selector_id = (
-            getattr(self.selector, "selector_id", "m6-recurrent") if self.selector else None
+            getattr(self.selector, "selector_id", getattr(self.selector, "kind", "m6-recurrent"))
+            if self.selector
+            else None
         )
 
     def _tokens(self, messages: list[dict[str, str]]) -> torch.Tensor:
@@ -308,11 +286,8 @@ class PretrainedChatBackend:
                 "backend": "Toruk",
                 "model": self.model_id,
                 "backbone": self.backbone_id,
-<<<<<<< HEAD
-=======
                 "selector_sha256": getattr(self.selector, "sha256", None),
                 "selector_kind": getattr(self.selector, "kind", None),
->>>>>>> origin/main
                 "mode": mode,
                 "memory_used": memory_used,
                 "selector_id": getattr(self, "selector_id", None) if mode == "TORUK" else None,

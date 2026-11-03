@@ -12,11 +12,6 @@ from typing import Any
 from evaluate_chat_release_v2 import score_answer
 from smoke_vercel_local import free_port, read, wait_ready
 
-<<<<<<< HEAD
-from toruk_lm.chat_foundation import backbone_spec
-
-=======
->>>>>>> origin/main
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT = ROOT / "artifacts/chat-foundation-001"
 
@@ -40,12 +35,8 @@ def main() -> None:
     parser.add_argument("--max-new-tokens", type=int, choices=(32, 64), default=32)
     parser.add_argument("--output-dir", type=Path, default=ARTIFACT)
     args = parser.parse_args()
-<<<<<<< HEAD
-    spec = backbone_spec(json.loads((args.backbone_dir / "toruk-backbone.json").read_text()))
-=======
     if bool(args.ollama_model) != bool(args.ollama_digest):
         parser.error("--ollama-model requires --ollama-digest and vice versa")
->>>>>>> origin/main
     args.output_dir.mkdir(parents=True, exist_ok=True)
     backend_port, web_port = free_port(), free_port()
     token = "local-chat-foundation-smoke-token"
@@ -106,9 +97,6 @@ def main() -> None:
             assert "BASELINE: recent turns" in page and "TORUK: selected turns" in page
             _, status = read(base + "/api/status")
             assert isinstance(status, dict) and status["ready"]
-<<<<<<< HEAD
-            assert status["model"] == f"{spec['model']}@{spec['revision'][:12]}"
-=======
             if args.ollama_model:
                 assert status["model"] == f"ollama/{args.ollama_model}@{args.ollama_digest[:12]}"
                 assert status["backbone"] == f"ollama/{args.ollama_model}"
@@ -118,7 +106,6 @@ def main() -> None:
                 )
                 assert status["model"] == f"{manifest['model']}@{manifest['revision'][:12]}"
                 assert status["backbone"] == manifest["model"]
->>>>>>> origin/main
             assert status["memory_supported"] is (not args.baseline_only)
             if not args.baseline_only:
                 selector_hash = hashlib.sha256(args.selector_checkpoint.read_bytes()).hexdigest()
@@ -131,9 +118,7 @@ def main() -> None:
                         if metadata.get("protocol") == "chat-selector-v2"
                         else "toruk-chat-selector-v1"
                     )
-                assert status["selector_kind"] == (
-                    selector_kind
-                )
+                assert status["selector_kind"] == (selector_kind)
             fixture = json.loads((ROOT / "configs/chat-foundation-eval-v1.json").read_text())
             messages = next(
                 case["messages"] for case in fixture["cases"] if case["id"] == "long_retrieval"
@@ -172,110 +157,35 @@ def main() -> None:
             probes = {}
             protocol = (ROOT / "configs/chat-qualification-v1.json").read_bytes()
             if args.chat_probes:
-<<<<<<< HEAD
                 scenarios = json.loads(protocol)["scenarios"]
-                for name, scenario in scenarios.items():
-                    history = []
-                    turns: list[dict[str, Any]] = []
-                    for prompt in scenario["prompts"]:
-                        history.append({"role": "user", "content": prompt})
-                        code, answer = read(
-                            base + "/api/chat",
-                            {
-                                "messages": history,
-                                "mode": "BASELINE",
-                                "max_new_tokens": args.max_new_tokens,
-=======
-                scenarios = {
-                    "youtube_then_math": ["open youtube", "what is 5+5"],
-                    "reported_history": ["what is 5", "what is 5+5"],
-                    "full_history_generated": [
-                        "open youtube",
-                        "what is 5",
-                        "what is 5+5",
-                        "what is 5+5",
-                    ],
-                    "fresh_math": ["what is 5+5"],
-                    "fresh_name": ["My name is Mira.", "What is my name?"],
-                }
-                for probe_mode in ("BASELINE",) if args.baseline_only else ("BASELINE", "TORUK"):
-                    probes[probe_mode] = {}
-                    for name, prompts in scenarios.items():
+                modes = ("BASELINE",) if args.baseline_only else ("BASELINE", "TORUK")
+                for probe_mode in modes:
+                    mode_probes = {}
+                    for name, scenario in scenarios.items():
                         history = []
-                        if name == "reported_history":
-                            history = [
-                                {"role": "user", "content": "open youtube"},
-                                {
-                                    "role": "assistant",
-                                    "content": (
-                                        "I'm sorry for any confusion, but as a chatbot, I don't "
-                                        "have the capability to access or interact with "
-                                        "online content."
-                                    ),
-                                },
-                            ]
-                        elif name == "full_history_generated":
-                            history = [
-                                {"role": "user", "content": "hello"},
-                                {
-                                    "role": "assistant",
-                                    "content": "Hello! How can I help you today?",
-                                },
-                                {"role": "user", "content": "what are you?"},
-                                {
-                                    "role": "assistant",
-                                    "content": (
-                                        "I'm a chatbot designed to assist users with "
-                                        "various topics."
-                                    ),
-                                },
-                                {"role": "user", "content": "i am JinSakai"},
-                                {
-                                    "role": "assistant",
-                                    "content": (
-                                        "I'm sorry for any confusion, but as a chatbot, I don't "
-                                        "have the ability to assist with specific queries or "
-                                        "provide information about specific topics."
-                                    ),
-                                },
-                            ]
-                        turns = []
-                        for prompt_index, prompt in enumerate(prompts):
+                        turns: list[dict[str, Any]] = []
+                        for prompt in scenario["prompts"]:
                             history.append({"role": "user", "content": prompt})
-                            budget = (
-                                64
-                                if name == "full_history_generated" and prompt_index == 3
-                                else args.max_new_tokens
-                            )
                             request_body = {
                                 "messages": list(history),
                                 "mode": probe_mode,
-                                "max_new_tokens": budget,
->>>>>>> origin/main
+                                "max_new_tokens": args.max_new_tokens,
                                 "temperature": 0,
                                 "top_p": 1,
                             }
-<<<<<<< HEAD
-                        )
-                        assert code == 200 and isinstance(answer, dict)
-                        assert answer["metrics"]["model"] == status["model"]
-                        history.append({"role": "assistant", "content": answer["answer"]})
-                    probes[name] = turns
-                    turns[-1]["score"] = score_answer(turns[-1]["response"]["answer"], scenario)
-=======
                             code, answer = read(base + "/api/chat", request_body)
                             turns.append(
-                                {
-                                    "request": request_body,
-                                    "http_status": code,
-                                    "response": answer,
-                                }
+                                {"request": request_body, "http_status": code, "response": answer}
                             )
                             assert code == 200 and isinstance(answer, dict)
                             assert answer["metrics"]["model"] == status["model"]
                             history.append({"role": "assistant", "content": answer["answer"]})
-                        probes[probe_mode][name] = turns
->>>>>>> origin/main
+                        turns[-1]["score"] = score_answer(turns[-1]["response"]["answer"], scenario)
+                        mode_probes[name] = turns
+                    if args.baseline_only:
+                        probes = mode_probes
+                    else:
+                        probes[probe_mode] = mode_probes
             backend.terminate()
             backend.wait(timeout=10)
             outage_code, outage = read(

@@ -148,6 +148,17 @@ Restore the original evaluated weights before testing that path or making a matc
 same-backbone efficiency comparison. Synthetic smoke checkpoints are incompatible
 with the historical selector's evidence and cannot be silently substituted.
 
+The separate [Ollama local-backbone path](research/local-backbone-llama32-20261101.md)
+uses `--ollama-model` with its full `--ollama-digest`. Both local backbone paths
+accept an explicit trained JSON `--selector-checkpoint`; the heuristic
+`--context-selector` option requires `--backbone-dir`. Choose one selector option.
+These integrations do not establish an accuracy or efficiency advantage.
+
+Frozen selector artifacts have byte-sensitive hashes. Keep the repository's
+`.gitattributes` rules: the v2 `selector.json` and `data/manifest.json` require
+CRLF, while the frozen scripts and split data require LF. Changing only line
+endings can invalidate the recorded checkpoint and evaluation hashes.
+
 Historical SmolLM remains supported via `--model smollm2` in the downloader and its
 existing backbone directory in the inference server. Its original template remains
 unchanged for archived research reproduction. The Hugging Face deployment recipe

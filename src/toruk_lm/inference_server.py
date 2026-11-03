@@ -146,11 +146,8 @@ def make_handler(
                     "chat_quality": "unqualified",
                     "efficiency_claim": "unsupported",
                     "selector_sha256": getattr(backend, "selector_sha256", None),
-<<<<<<< HEAD
                     "selector_id": getattr(backend, "selector_id", None),
-=======
                     "selector_kind": getattr(backend, "selector_kind", None),
->>>>>>> origin/main
                     "backbone_revision": getattr(backend, "backbone_revision", None),
                     "backbone_sha256": getattr(backend, "backbone_sha256", None),
                     "backbone_digest": getattr(backend, "backbone_digest", None),
@@ -218,15 +215,11 @@ def main() -> None:
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--checkpoint", type=Path)
     source.add_argument("--backbone-dir", type=Path)
-<<<<<<< HEAD
+    source.add_argument("--ollama-model")
+    parser.add_argument("--ollama-digest")
     selection = parser.add_mutually_exclusive_group()
     selection.add_argument("--selector-checkpoint", type=Path)
     selection.add_argument("--context-selector", choices=("lexical-v1", "lexical-v2"))
-=======
-    source.add_argument("--ollama-model")
-    parser.add_argument("--ollama-digest")
-    parser.add_argument("--selector-checkpoint", type=Path)
->>>>>>> origin/main
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8766)
     args = parser.parse_args()
@@ -238,15 +231,8 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     backend: ProcessBackend | None
     try:
-<<<<<<< HEAD
-        if (args.selector_checkpoint or args.context_selector) and not args.backbone_dir:
-            parser.error("Context selection requires --backbone-dir")
-        backend = ProcessBackend(
-            args.backbone_dir or args.checkpoint,
-            args.selector_checkpoint,
-            bool(args.backbone_dir),
-            context_selector=args.context_selector,
-=======
+        if args.context_selector and not args.backbone_dir:
+            parser.error("--context-selector requires --backbone-dir")
         if args.selector_checkpoint and not (args.backbone_dir or args.ollama_model):
             parser.error("--selector-checkpoint requires --backbone-dir or --ollama-model")
         if bool(args.ollama_model) != bool(args.ollama_digest):
@@ -258,7 +244,7 @@ def main() -> None:
             args.selector_checkpoint,
             bool(args.backbone_dir),
             ollama_digest=args.ollama_digest,
->>>>>>> origin/main
+            context_selector=args.context_selector,
         )
         error = None
     except ChatError as failure:

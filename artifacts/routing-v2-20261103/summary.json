@@ -1,0 +1,3662 @@
+{
+  "methods": {
+    "learned": {
+      "31": {
+        "0": {
+          "accuracy": 0.20833333333333334,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 11,
+              "worlds": 24
+            }
+          },
+          "correct": 35,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 16459,
+          "history_tokens_scanned": 30001,
+          "known_correct": 9,
+          "known_worlds": 120,
+          "response_ms": 555.3639999952793,
+          "selected_tokens": 15793,
+          "unknown_queries": 48,
+          "unsupported": 22,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "32": {
+          "accuracy": 0.19047619047619047,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 9,
+              "worlds": 24
+            }
+          },
+          "correct": 32,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 18307,
+          "history_tokens_scanned": 143554,
+          "known_correct": 8,
+          "known_worlds": 120,
+          "response_ms": 631.6678999965006,
+          "selected_tokens": 17663,
+          "unknown_queries": 48,
+          "unsupported": 24,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "8": {
+          "accuracy": 0.2261904761904762,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 13,
+              "worlds": 24
+            }
+          },
+          "correct": 38,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 16809,
+          "history_tokens_scanned": 58385,
+          "known_correct": 10,
+          "known_worlds": 120,
+          "response_ms": 570.4370999965249,
+          "selected_tokens": 16131,
+          "unknown_queries": 48,
+          "unsupported": 20,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.26785714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 6,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 5,
+                "worlds": 8
+              }
+            },
+            "correct": 15,
+            "forward_positions": 5496,
+            "history_tokens_scanned": 10003,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 187.77789999785455,
+            "selected_tokens": 5266,
+            "unknown_queries": 16,
+            "unsupported": 5,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.17857142857142858,
+            "categories": {
+              "ambiguity": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 3,
+                "worlds": 8
+              }
+            },
+            "correct": 10,
+            "forward_positions": 5483,
+            "history_tokens_scanned": 9976,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 185.37249999462801,
+            "selected_tokens": 5259,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.17857142857142858,
+            "categories": {
+              "ambiguity": {
+                "correct": 6,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 3,
+                "worlds": 8
+              }
+            },
+            "correct": 10,
+            "forward_positions": 5480,
+            "history_tokens_scanned": 10022,
+            "known_correct": 1,
+            "known_worlds": 40,
+            "response_ms": 182.21360000279674,
+            "selected_tokens": 5268,
+            "unknown_queries": 16,
+            "unsupported": 7,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 1.8016843000004883,
+        "sampled_peak_rss": 221794304
+      },
+      "47": {
+        "0": {
+          "accuracy": 0.16071428571428573,
+          "categories": {
+            "ambiguity": {
+              "correct": 14,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 6,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 5,
+              "worlds": 24
+            }
+          },
+          "correct": 27,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 16472,
+          "history_tokens_scanned": 30001,
+          "known_correct": 8,
+          "known_worlds": 120,
+          "response_ms": 598.2251000068572,
+          "selected_tokens": 15793,
+          "unknown_queries": 48,
+          "unsupported": 29,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "32": {
+          "accuracy": 0.16071428571428573,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 6,
+              "worlds": 24
+            }
+          },
+          "correct": 27,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 18337,
+          "history_tokens_scanned": 143554,
+          "known_correct": 6,
+          "known_worlds": 120,
+          "response_ms": 685.2034000003187,
+          "selected_tokens": 17663,
+          "unknown_queries": 48,
+          "unsupported": 27,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "8": {
+          "accuracy": 0.15476190476190477,
+          "categories": {
+            "ambiguity": {
+              "correct": 14,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 3,
+              "worlds": 24
+            }
+          },
+          "correct": 26,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 16817,
+          "history_tokens_scanned": 58385,
+          "known_correct": 9,
+          "known_worlds": 120,
+          "response_ms": 602.0074000025488,
+          "selected_tokens": 16131,
+          "unknown_queries": 48,
+          "unsupported": 31,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.17857142857142858,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 2,
+                "worlds": 8
+              }
+            },
+            "correct": 10,
+            "forward_positions": 5494,
+            "history_tokens_scanned": 10003,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 218.35530000134895,
+            "selected_tokens": 5266,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.14285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 6,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 2,
+                "worlds": 8
+              }
+            },
+            "correct": 8,
+            "forward_positions": 5470,
+            "history_tokens_scanned": 9976,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 187.68410000484437,
+            "selected_tokens": 5259,
+            "unknown_queries": 16,
+            "unsupported": 8,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.16071428571428573,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 1,
+                "worlds": 8
+              }
+            },
+            "correct": 9,
+            "forward_positions": 5508,
+            "history_tokens_scanned": 10022,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 192.18570000066393,
+            "selected_tokens": 5268,
+            "unknown_queries": 16,
+            "unsupported": 11,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 1.9314666999998735,
+        "sampled_peak_rss": 221622272
+      }
+    },
+    "lexical": {
+      "31": {
+        "0": {
+          "accuracy": 0.20833333333333334,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 11,
+              "worlds": 24
+            }
+          },
+          "correct": 35,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 19190,
+          "history_tokens_scanned": 30001,
+          "known_correct": 9,
+          "known_worlds": 120,
+          "response_ms": 602.5407999977688,
+          "selected_tokens": 18518,
+          "unknown_queries": 48,
+          "unsupported": 22,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "32": {
+          "accuracy": 0.19642857142857142,
+          "categories": {
+            "ambiguity": {
+              "correct": 16,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 11,
+              "worlds": 24
+            }
+          },
+          "correct": 33,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 19131,
+          "history_tokens_scanned": 143554,
+          "known_correct": 6,
+          "known_worlds": 120,
+          "response_ms": 606.2692000059542,
+          "selected_tokens": 18487,
+          "unknown_queries": 48,
+          "unsupported": 21,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "8": {
+          "accuracy": 0.23214285714285715,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 6,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 12,
+              "worlds": 24
+            }
+          },
+          "correct": 39,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 19165,
+          "history_tokens_scanned": 58385,
+          "known_correct": 12,
+          "known_worlds": 120,
+          "response_ms": 601.9694000069649,
+          "selected_tokens": 18471,
+          "unknown_queries": 48,
+          "unsupported": 21,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.25,
+            "categories": {
+              "ambiguity": {
+                "correct": 6,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 4,
+                "worlds": 8
+              }
+            },
+            "correct": 14,
+            "forward_positions": 6394,
+            "history_tokens_scanned": 10003,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 205.64299999659852,
+            "selected_tokens": 6160,
+            "unknown_queries": 16,
+            "unsupported": 6,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.17857142857142858,
+            "categories": {
+              "ambiguity": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 3,
+                "worlds": 8
+              }
+            },
+            "correct": 10,
+            "forward_positions": 6395,
+            "history_tokens_scanned": 9976,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 198.5646999992241,
+            "selected_tokens": 6169,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.19642857142857142,
+            "categories": {
+              "ambiguity": {
+                "correct": 6,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 4,
+                "worlds": 8
+              }
+            },
+            "correct": 11,
+            "forward_positions": 6401,
+            "history_tokens_scanned": 10022,
+            "known_correct": 1,
+            "known_worlds": 40,
+            "response_ms": 198.33310000194615,
+            "selected_tokens": 6189,
+            "unknown_queries": 16,
+            "unsupported": 6,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 1.8603289000002405,
+        "sampled_peak_rss": 220233728
+      },
+      "47": {
+        "0": {
+          "accuracy": 0.1488095238095238,
+          "categories": {
+            "ambiguity": {
+              "correct": 13,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 6,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 4,
+              "worlds": 24
+            }
+          },
+          "correct": 25,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 19201,
+          "history_tokens_scanned": 30001,
+          "known_correct": 8,
+          "known_worlds": 120,
+          "response_ms": 614.662000003591,
+          "selected_tokens": 18518,
+          "unknown_queries": 48,
+          "unsupported": 31,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "32": {
+          "accuracy": 0.1488095238095238,
+          "categories": {
+            "ambiguity": {
+              "correct": 12,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 7,
+              "worlds": 24
+            }
+          },
+          "correct": 25,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 19167,
+          "history_tokens_scanned": 143554,
+          "known_correct": 6,
+          "known_worlds": 120,
+          "response_ms": 621.4953999988211,
+          "selected_tokens": 18487,
+          "unknown_queries": 48,
+          "unsupported": 29,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "8": {
+          "accuracy": 0.14285714285714285,
+          "categories": {
+            "ambiguity": {
+              "correct": 12,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 3,
+              "worlds": 24
+            }
+          },
+          "correct": 24,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 144,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 19159,
+          "history_tokens_scanned": 58385,
+          "known_correct": 9,
+          "known_worlds": 120,
+          "response_ms": 609.713599990755,
+          "selected_tokens": 18471,
+          "unknown_queries": 48,
+          "unsupported": 33,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.17857142857142858,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 2,
+                "worlds": 8
+              }
+            },
+            "correct": 10,
+            "forward_positions": 6390,
+            "history_tokens_scanned": 10003,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 205.407200000991,
+            "selected_tokens": 6160,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.10714285714285714,
+            "categories": {
+              "ambiguity": {
+                "correct": 5,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 1,
+                "worlds": 8
+              }
+            },
+            "correct": 6,
+            "forward_positions": 6383,
+            "history_tokens_scanned": 9976,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 206.38290000169945,
+            "selected_tokens": 6169,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.16071428571428573,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 1,
+                "worlds": 8
+              }
+            },
+            "correct": 9,
+            "forward_positions": 6428,
+            "history_tokens_scanned": 10022,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 202.8719000009005,
+            "selected_tokens": 6189,
+            "unknown_queries": 16,
+            "unsupported": 11,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 1.892240899999706,
+        "sampled_peak_rss": 219930624
+      }
+    },
+    "new": {
+      "31": {
+        "0": {
+          "accuracy": 0.36904761904761907,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 62,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 32085,
+          "forward_positions": 51261,
+          "history_tokens_scanned": 30001,
+          "known_correct": 14,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 2026.4641999965534,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 456192,
+          "update_tokens": 28417,
+          "worlds": 168,
+          "write_correct": 1584,
+          "write_records": 1584
+        },
+        "32": {
+          "accuracy": 0.36904761904761907,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 62,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 139494,
+          "forward_positions": 158670,
+          "history_tokens_scanned": 143554,
+          "known_correct": 14,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 6962.921500002267,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 2225664,
+          "update_tokens": 135826,
+          "worlds": 168,
+          "write_correct": 7728,
+          "write_records": 7728
+        },
+        "8": {
+          "accuracy": 0.36904761904761907,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 62,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 58933,
+          "forward_positions": 78109,
+          "history_tokens_scanned": 58385,
+          "known_correct": 14,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 3240.153100011412,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 898560,
+          "update_tokens": 55265,
+          "worlds": 168,
+          "write_correct": 3120,
+          "write_records": 3120
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.39285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 22,
+            "forward_positions": 17081,
+            "history_tokens_scanned": 10003,
+            "known_correct": 6,
+            "known_worlds": 40,
+            "response_ms": 666.0679000005985,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9475,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.39285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 22,
+            "forward_positions": 17054,
+            "history_tokens_scanned": 9976,
+            "known_correct": 6,
+            "known_worlds": 40,
+            "response_ms": 687.2037999974054,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9448,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.32142857142857145,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 18,
+            "forward_positions": 17126,
+            "history_tokens_scanned": 10022,
+            "known_correct": 2,
+            "known_worlds": 40,
+            "response_ms": 673.1924999985495,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9494,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 12.686131499999647,
+        "sampled_peak_rss": 223174656
+      },
+      "47": {
+        "0": {
+          "accuracy": 0.36904761904761907,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 62,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 32085,
+          "forward_positions": 51261,
+          "history_tokens_scanned": 30001,
+          "known_correct": 14,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 2011.8845000006331,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 456192,
+          "update_tokens": 28417,
+          "worlds": 168,
+          "write_correct": 1584,
+          "write_records": 1584
+        },
+        "32": {
+          "accuracy": 0.36904761904761907,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 62,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 139494,
+          "forward_positions": 158670,
+          "history_tokens_scanned": 143554,
+          "known_correct": 14,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 6973.427799999627,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 2225664,
+          "update_tokens": 135826,
+          "worlds": 168,
+          "write_correct": 7728,
+          "write_records": 7728
+        },
+        "8": {
+          "accuracy": 0.36904761904761907,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 62,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 58933,
+          "forward_positions": 78109,
+          "history_tokens_scanned": 58385,
+          "known_correct": 14,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 3257.560599997305,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 898560,
+          "update_tokens": 55265,
+          "worlds": 168,
+          "write_correct": 3120,
+          "write_records": 3120
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.39285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 22,
+            "forward_positions": 17081,
+            "history_tokens_scanned": 10003,
+            "known_correct": 6,
+            "known_worlds": 40,
+            "response_ms": 677.3958999992828,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9475,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.39285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 22,
+            "forward_positions": 17054,
+            "history_tokens_scanned": 9976,
+            "known_correct": 6,
+            "known_worlds": 40,
+            "response_ms": 669.4981999999072,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9448,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.32142857142857145,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 18,
+            "forward_positions": 17126,
+            "history_tokens_scanned": 10022,
+            "known_correct": 2,
+            "known_worlds": 40,
+            "response_ms": 664.990400001443,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9494,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 12.701153300000442,
+        "sampled_peak_rss": 222683136
+      }
+    },
+    "new_zero": {
+      "31": {
+        "0": {
+          "accuracy": 0.2857142857142857,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 48,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 32085,
+          "forward_positions": 50901,
+          "history_tokens_scanned": 30001,
+          "known_correct": 0,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 2004.8549999964962,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 456192,
+          "update_tokens": 28417,
+          "worlds": 168,
+          "write_correct": 1584,
+          "write_records": 1584
+        },
+        "32": {
+          "accuracy": 0.2857142857142857,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 48,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 139494,
+          "forward_positions": 158310,
+          "history_tokens_scanned": 143554,
+          "known_correct": 0,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 7030.659699999887,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 2225664,
+          "update_tokens": 135826,
+          "worlds": 168,
+          "write_correct": 7728,
+          "write_records": 7728
+        },
+        "8": {
+          "accuracy": 0.2857142857142857,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 48,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 58933,
+          "forward_positions": 77749,
+          "history_tokens_scanned": 58385,
+          "known_correct": 0,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 3315.426000001935,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 898560,
+          "update_tokens": 55265,
+          "worlds": 168,
+          "write_correct": 3120,
+          "write_records": 3120
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.2857142857142857,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 16,
+            "forward_positions": 16961,
+            "history_tokens_scanned": 10003,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 715.5160999973305,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9475,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.2857142857142857,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 16,
+            "forward_positions": 16934,
+            "history_tokens_scanned": 9976,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 643.4363000007579,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9448,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.2857142857142857,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 16,
+            "forward_positions": 17006,
+            "history_tokens_scanned": 10022,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 645.9025999984078,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9494,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 12.822937799999636,
+        "sampled_peak_rss": 222154752
+      },
+      "47": {
+        "0": {
+          "accuracy": 0.2857142857142857,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 48,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 32085,
+          "forward_positions": 50901,
+          "history_tokens_scanned": 30001,
+          "known_correct": 0,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 1933.0372999993415,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 456192,
+          "update_tokens": 28417,
+          "worlds": 168,
+          "write_correct": 1584,
+          "write_records": 1584
+        },
+        "32": {
+          "accuracy": 0.2857142857142857,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 48,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 139494,
+          "forward_positions": 158310,
+          "history_tokens_scanned": 143554,
+          "known_correct": 0,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 6831.070999997792,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 2225664,
+          "update_tokens": 135826,
+          "worlds": 168,
+          "write_correct": 7728,
+          "write_records": 7728
+        },
+        "8": {
+          "accuracy": 0.2857142857142857,
+          "categories": {
+            "ambiguity": {
+              "correct": 24,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 24,
+              "worlds": 24
+            }
+          },
+          "correct": 48,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 58933,
+          "forward_positions": 77749,
+          "history_tokens_scanned": 58385,
+          "known_correct": 0,
+          "known_worlds": 120,
+          "read_correct": 192,
+          "read_queries": 192,
+          "response_ms": 3136.1943000083556,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 0,
+          "update_cells": 898560,
+          "update_tokens": 55265,
+          "worlds": 168,
+          "write_correct": 3120,
+          "write_records": 3120
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.2857142857142857,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 16,
+            "forward_positions": 16961,
+            "history_tokens_scanned": 10003,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 649.5000000013533,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9475,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.2857142857142857,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 16,
+            "forward_positions": 16934,
+            "history_tokens_scanned": 9976,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 642.3834999959581,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9448,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.2857142857142857,
+            "categories": {
+              "ambiguity": {
+                "correct": 8,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 8,
+                "worlds": 8
+              }
+            },
+            "correct": 16,
+            "forward_positions": 17006,
+            "history_tokens_scanned": 10022,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 641.15380000203,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 0,
+            "update_cells": 152064,
+            "update_tokens": 9494,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 12.345092999999906,
+        "sampled_peak_rss": 222830592
+      }
+    },
+    "old": {
+      "31": {
+        "0": {
+          "accuracy": 0.13690476190476192,
+          "categories": {
+            "ambiguity": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 12,
+              "worlds": 24
+            }
+          },
+          "correct": 23,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 51415,
+          "history_tokens_scanned": 30001,
+          "known_correct": 6,
+          "known_worlds": 120,
+          "read_correct": 97,
+          "read_queries": 192,
+          "response_ms": 1900.8123000112391,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 31,
+          "update_cells": 456192,
+          "update_tokens": 28417,
+          "worlds": 168,
+          "write_correct": 667,
+          "write_records": 1584
+        },
+        "32": {
+          "accuracy": 0.10714285714285714,
+          "categories": {
+            "ambiguity": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 8,
+              "worlds": 24
+            }
+          },
+          "correct": 18,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 158936,
+          "history_tokens_scanned": 143554,
+          "known_correct": 7,
+          "known_worlds": 120,
+          "read_correct": 97,
+          "read_queries": 192,
+          "response_ms": 6282.469199993102,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 37,
+          "update_cells": 2225664,
+          "update_tokens": 135826,
+          "worlds": 168,
+          "write_correct": 3239,
+          "write_records": 7728
+        },
+        "8": {
+          "accuracy": 0.125,
+          "categories": {
+            "ambiguity": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 11,
+              "worlds": 24
+            }
+          },
+          "correct": 21,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 78311,
+          "history_tokens_scanned": 58385,
+          "known_correct": 7,
+          "known_worlds": 120,
+          "read_correct": 97,
+          "read_queries": 192,
+          "response_ms": 2986.6014000072028,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 34,
+          "update_cells": 898560,
+          "update_tokens": 55265,
+          "worlds": 168,
+          "write_correct": 1294,
+          "write_records": 3120
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.14285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 4,
+                "worlds": 8
+              }
+            },
+            "correct": 8,
+            "forward_positions": 17135,
+            "history_tokens_scanned": 10003,
+            "known_correct": 2,
+            "known_worlds": 40,
+            "response_ms": 597.5282000053994,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 152064,
+            "update_tokens": 9475,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.125,
+            "categories": {
+              "ambiguity": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 5,
+                "worlds": 8
+              }
+            },
+            "correct": 7,
+            "forward_positions": 17088,
+            "history_tokens_scanned": 9976,
+            "known_correct": 1,
+            "known_worlds": 40,
+            "response_ms": 594.1103000041039,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 152064,
+            "update_tokens": 9448,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.14285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 3,
+                "worlds": 8
+              }
+            },
+            "correct": 8,
+            "forward_positions": 17192,
+            "history_tokens_scanned": 10022,
+            "known_correct": 3,
+            "known_worlds": 40,
+            "response_ms": 709.1738000017358,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 11,
+            "update_cells": 152064,
+            "update_tokens": 9494,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 12.47694059999958,
+        "sampled_peak_rss": 224034816
+      },
+      "47": {
+        "0": {
+          "accuracy": 0.23214285714285715,
+          "categories": {
+            "ambiguity": {
+              "correct": 7,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 8,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 6,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 11,
+              "worlds": 24
+            }
+          },
+          "correct": 39,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 51243,
+          "history_tokens_scanned": 30001,
+          "known_correct": 21,
+          "known_worlds": 120,
+          "read_correct": 86,
+          "read_queries": 192,
+          "response_ms": 1802.9443000050378,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 30,
+          "update_cells": 456192,
+          "update_tokens": 28417,
+          "worlds": 168,
+          "write_correct": 1266,
+          "write_records": 1584
+        },
+        "32": {
+          "accuracy": 0.19047619047619047,
+          "categories": {
+            "ambiguity": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 7,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 10,
+              "worlds": 24
+            }
+          },
+          "correct": 32,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 158689,
+          "history_tokens_scanned": 143554,
+          "known_correct": 17,
+          "known_worlds": 120,
+          "read_correct": 86,
+          "read_queries": 192,
+          "response_ms": 6018.571799996607,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 33,
+          "update_cells": 2225664,
+          "update_tokens": 135826,
+          "worlds": 168,
+          "write_correct": 6637,
+          "write_records": 7728
+        },
+        "8": {
+          "accuracy": 0.19642857142857142,
+          "categories": {
+            "ambiguity": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 7,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 10,
+              "worlds": 24
+            }
+          },
+          "correct": 33,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 78112,
+          "history_tokens_scanned": 58385,
+          "known_correct": 18,
+          "known_worlds": 120,
+          "read_correct": 86,
+          "read_queries": 192,
+          "response_ms": 2842.2252999953344,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 33,
+          "update_cells": 898560,
+          "update_tokens": 55265,
+          "worlds": 168,
+          "write_correct": 2587,
+          "write_records": 3120
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.17857142857142858,
+            "categories": {
+              "ambiguity": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 3,
+                "worlds": 8
+              }
+            },
+            "correct": 10,
+            "forward_positions": 17084,
+            "history_tokens_scanned": 10003,
+            "known_correct": 7,
+            "known_worlds": 40,
+            "response_ms": 599.0422000013496,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 13,
+            "update_cells": 152064,
+            "update_tokens": 9475,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.26785714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 5,
+                "worlds": 8
+              }
+            },
+            "correct": 15,
+            "forward_positions": 17047,
+            "history_tokens_scanned": 9976,
+            "known_correct": 7,
+            "known_worlds": 40,
+            "response_ms": 608.9084000022922,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 8,
+            "update_cells": 152064,
+            "update_tokens": 9448,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.25,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 3,
+                "worlds": 8
+              }
+            },
+            "correct": 14,
+            "forward_positions": 17112,
+            "history_tokens_scanned": 10022,
+            "known_correct": 7,
+            "known_worlds": 40,
+            "response_ms": 594.9937000013961,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 9,
+            "update_cells": 152064,
+            "update_tokens": 9494,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 11.89250280000033,
+        "sampled_peak_rss": 223641600
+      }
+    },
+    "recent": {
+      "31": {
+        "0": {
+          "accuracy": 0.17857142857142858,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 8,
+              "worlds": 24
+            }
+          },
+          "correct": 30,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 22784,
+          "history_tokens_scanned": 30001,
+          "known_correct": 7,
+          "known_worlds": 120,
+          "response_ms": 661.3097000008565,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 25,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "32": {
+          "accuracy": 0.19047619047619047,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 9,
+              "worlds": 24
+            }
+          },
+          "correct": 32,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 22760,
+          "history_tokens_scanned": 143554,
+          "known_correct": 8,
+          "known_worlds": 120,
+          "response_ms": 683.5497000001851,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 24,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "8": {
+          "accuracy": 0.23214285714285715,
+          "categories": {
+            "ambiguity": {
+              "correct": 15,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 7,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 11,
+              "worlds": 24
+            }
+          },
+          "correct": 39,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 22776,
+          "history_tokens_scanned": 58385,
+          "known_correct": 13,
+          "known_worlds": 120,
+          "response_ms": 664.9584000015238,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 22,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.23214285714285715,
+            "categories": {
+              "ambiguity": {
+                "correct": 6,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 4,
+                "worlds": 8
+              }
+            },
+            "correct": 13,
+            "forward_positions": 7590,
+            "history_tokens_scanned": 10003,
+            "known_correct": 3,
+            "known_worlds": 40,
+            "response_ms": 221.18570000475302,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 6,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.16071428571428573,
+            "categories": {
+              "ambiguity": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 2,
+                "worlds": 8
+              }
+            },
+            "correct": 9,
+            "forward_positions": 7592,
+            "history_tokens_scanned": 9976,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 219.54179999829648,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 11,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.14285714285714285,
+            "categories": {
+              "ambiguity": {
+                "correct": 6,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 2,
+                "worlds": 8
+              }
+            },
+            "correct": 8,
+            "forward_positions": 7602,
+            "history_tokens_scanned": 10022,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 220.58219999780704,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 8,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 2.055074099999729,
+        "sampled_peak_rss": 219516928
+      },
+      "47": {
+        "0": {
+          "accuracy": 0.1488095238095238,
+          "categories": {
+            "ambiguity": {
+              "correct": 12,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 5,
+              "worlds": 24
+            }
+          },
+          "correct": 25,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 83,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 22780,
+          "history_tokens_scanned": 30001,
+          "known_correct": 8,
+          "known_worlds": 120,
+          "response_ms": 693.044399995415,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 31,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "32": {
+          "accuracy": 0.16071428571428573,
+          "categories": {
+            "ambiguity": {
+              "correct": 13,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 4,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 3,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 7,
+              "worlds": 24
+            }
+          },
+          "correct": 27,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 22782,
+          "history_tokens_scanned": 143554,
+          "known_correct": 7,
+          "known_worlds": 120,
+          "response_ms": 721.420500000022,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 28,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "8": {
+          "accuracy": 0.1488095238095238,
+          "categories": {
+            "ambiguity": {
+              "correct": 12,
+              "worlds": 24
+            },
+            "correction": {
+              "correct": 0,
+              "worlds": 24
+            },
+            "distant": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "distraction": {
+              "correct": 5,
+              "worlds": 24
+            },
+            "multi": {
+              "correct": 1,
+              "worlds": 24
+            },
+            "preservation": {
+              "correct": 2,
+              "worlds": 24
+            },
+            "unknown": {
+              "correct": 3,
+              "worlds": 24
+            }
+          },
+          "correct": 25,
+          "evidence_ingested": 144,
+          "evidence_queries": 144,
+          "evidence_suffix_exposed": 0,
+          "extra_routing_embedding_positions": 0,
+          "forward_positions": 22788,
+          "history_tokens_scanned": 58385,
+          "known_correct": 10,
+          "known_worlds": 120,
+          "response_ms": 700.350599995545,
+          "selected_tokens": 22100,
+          "unknown_queries": 48,
+          "unsupported": 33,
+          "update_cells": 0,
+          "update_tokens": 0,
+          "worlds": 168
+        },
+        "eval_seeds": {
+          "8101": {
+            "accuracy": 0.17857142857142858,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 2,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 2,
+                "worlds": 8
+              }
+            },
+            "correct": 10,
+            "forward_positions": 7588,
+            "history_tokens_scanned": 10003,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 230.05589999593212,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8102": {
+            "accuracy": 0.10714285714285714,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 2,
+                "worlds": 8
+              }
+            },
+            "correct": 6,
+            "forward_positions": 7568,
+            "history_tokens_scanned": 9976,
+            "known_correct": 0,
+            "known_worlds": 40,
+            "response_ms": 224.30480000275566,
+            "selected_tokens": 7358,
+            "unknown_queries": 16,
+            "unsupported": 10,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          },
+          "8103": {
+            "accuracy": 0.16071428571428573,
+            "categories": {
+              "ambiguity": {
+                "correct": 4,
+                "worlds": 8
+              },
+              "correction": {
+                "correct": 1,
+                "worlds": 8
+              },
+              "distant": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "distraction": {
+                "correct": 3,
+                "worlds": 8
+              },
+              "multi": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "preservation": {
+                "correct": 0,
+                "worlds": 8
+              },
+              "unknown": {
+                "correct": 1,
+                "worlds": 8
+              }
+            },
+            "correct": 9,
+            "forward_positions": 7624,
+            "history_tokens_scanned": 10022,
+            "known_correct": 4,
+            "known_worlds": 40,
+            "response_ms": 238.68369999672723,
+            "selected_tokens": 7384,
+            "unknown_queries": 16,
+            "unsupported": 11,
+            "update_cells": 0,
+            "update_tokens": 0,
+            "worlds": 56
+          }
+        },
+        "process_seconds": 2.162249499999234,
+        "sampled_peak_rss": 219406336
+      }
+    }
+  },
+  "uncertainty": {
+    "learned": {
+      "accuracy95": [
+        0.15476190476190477,
+        0.21428571428571427
+      ],
+      "difference_vs_lexical95": [
+        -0.005952380952380952,
+        0.020833333333333332
+      ],
+      "difference_vs_old95": [
+        -0.044642857142857144,
+        0.044642857142857144
+      ],
+      "difference_vs_recent95": [
+        0.005952380952380952,
+        0.03869047619047619
+      ]
+    },
+    "lexical": {
+      "accuracy95": [
+        0.1488095238095238,
+        0.20833333333333334
+      ],
+      "difference_vs_lexical95": [
+        0.0,
+        0.0
+      ],
+      "difference_vs_old95": [
+        -0.05357142857142857,
+        0.03869047619047619
+      ],
+      "difference_vs_recent95": [
+        0.0,
+        0.03273809523809524
+      ]
+    },
+    "new": {
+      "accuracy95": [
+        0.3333333333333333,
+        0.40476190476190477
+      ],
+      "difference_vs_lexical95": [
+        0.14285714285714285,
+        0.24107142857142858
+      ],
+      "difference_vs_old95": [
+        0.13988095238095238,
+        0.22916666666666666
+      ],
+      "difference_vs_recent95": [
+        0.16071428571428573,
+        0.25297619047619047
+      ]
+    },
+    "new_zero": {
+      "accuracy95": [
+        0.2857142857142857,
+        0.2857142857142857
+      ],
+      "difference_vs_lexical95": [
+        0.07738095238095238,
+        0.13690476190476192
+      ],
+      "difference_vs_old95": [
+        0.06547619047619048,
+        0.13392857142857142
+      ],
+      "difference_vs_recent95": [
+        0.09226190476190477,
+        0.15178571428571427
+      ]
+    },
+    "old": {
+      "accuracy95": [
+        0.15178571428571427,
+        0.22023809523809523
+      ],
+      "difference_vs_lexical95": [
+        -0.03869047619047619,
+        0.05357142857142857
+      ],
+      "difference_vs_old95": [
+        0.0,
+        0.0
+      ],
+      "difference_vs_recent95": [
+        -0.023809523809523808,
+        0.06547619047619048
+      ]
+    },
+    "recent": {
+      "accuracy95": [
+        0.13392857142857142,
+        0.19345238095238096
+      ],
+      "difference_vs_lexical95": [
+        -0.03273809523809524,
+        0.0
+      ],
+      "difference_vs_old95": [
+        -0.06547619047619048,
+        0.023809523809523808
+      ],
+      "difference_vs_recent95": [
+        0.0,
+        0.0
+      ]
+    },
+    "target_read_world_macro_difference95": [
+      0.47023809523809523,
+      0.5773809523809523
+    ],
+    "target_write_world_macro_difference95": [
+      0.37462797619047616,
+      0.40029761904761907
+    ]
+  }
+}

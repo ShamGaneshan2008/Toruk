@@ -1,0 +1,60 @@
+{
+  "all_selection_parity": true,
+  "bit_exact_weights": false,
+  "dev_f1": 0.8571428571428571,
+  "dev_stale_evidence_diagnostic": {
+    "evidence_ids": [
+      2
+    ],
+    "expected": [
+      "Patna"
+    ],
+    "id": "dev-conflict-00",
+    "messages": [
+      {
+        "content": "For Devmember00, record town: Surat.",
+        "role": "user"
+      },
+      {
+        "content": "Recorded.",
+        "role": "assistant"
+      },
+      {
+        "content": "The later entry replaces the old one: For Devmember00, record town: Patna.",
+        "role": "user"
+      },
+      {
+        "content": "Noted.",
+        "role": "assistant"
+      },
+      {
+        "content": "Tell me the town for Devmember00.",
+        "role": "user"
+      }
+    ],
+    "selected_ids": [
+      0,
+      2,
+      3,
+      4
+    ]
+  },
+  "device": {
+    "cuda": false,
+    "platform": "Windows-11-10.0.26100-SP0",
+    "torch": "2.14.1+cpu"
+  },
+  "failure": "final-conflict-00 retains obsolete Nashik and replacement Ranchi, answers Nashik. Evidence retention is insufficient.",
+  "fair_comparison": "Historical matched Llama3.2 final: baseline 26/28, selector 22/28; no quality gain.",
+  "gate_decision": "External selector unqualified as improved memory. Selection behavior reproduced on 252 cases; stale and corrected evidence remain co-exposed on development. Test learned overwrite and neural answer read with a new bounded prototype.",
+  "m6_checkpoint_present": false,
+  "max_parameter_abs_difference": 7.152557373046875e-07,
+  "parameter_tolerance": 1e-06,
+  "private_architecture_present_before_work": false,
+  "reason": "CPU numeric differences below 1e-6 and fresh timing/process metadata; no byte-exact retraining claim.",
+  "replay_checkpoint_sha256": "58767fbd30a44c783950a76fa4e72099d683d960b52307a71461e67906f10bf9",
+  "selection_parity_cases": 252,
+  "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+  "threshold_parity": true,
+  "train_f1": 0.5714285714285714
+}

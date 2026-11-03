@@ -1,0 +1,1949 @@
+{
+  "format": "toruk-integrated-analysis-v1",
+  "freeze_sha256": "539abc923eee5bc8783838063183058ad8f3853adbc2cc448ca0258063ed95a6",
+  "posthoc_routing_diagnostic": true,
+  "seeds": {
+    "31": {
+      "examples": {
+        "gain": [
+          {
+            "expected": "red",
+            "id": "final-correction-002",
+            "integrated": "red",
+            "ordinary": "?",
+            "query": "Which color belongs to Ada?"
+          },
+          {
+            "expected": "blue",
+            "id": "final-correction-015",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which color belongs to Ada?"
+          },
+          {
+            "expected": "cat",
+            "id": "final-long_recall-002",
+            "integrated": "cat",
+            "ordinary": "?",
+            "query": "Which color belongs to Ada?"
+          }
+        ],
+        "preservation_failure": [
+          {
+            "expected": "blue",
+            "id": "final-preservation-000",
+            "integrated": "?",
+            "ordinary": "dog",
+            "query": "Which pet belongs to Ada?"
+          },
+          {
+            "expected": "green",
+            "id": "final-preservation-001",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          },
+          {
+            "expected": "cat",
+            "id": "final-preservation-002",
+            "integrated": "?",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          }
+        ],
+        "regression": [
+          {
+            "expected": "red",
+            "id": "final-correction-003",
+            "integrated": "?",
+            "ordinary": "red",
+            "query": "Which color belongs to Cyd?"
+          },
+          {
+            "expected": "red",
+            "id": "final-local-014",
+            "integrated": "?",
+            "ordinary": "red",
+            "query": "Which color belongs to Ben?"
+          },
+          {
+            "expected": "?",
+            "id": "final-unknown-001",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          }
+        ],
+        "unsupported": [
+          {
+            "expected": "?",
+            "id": "final-unknown-001",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          },
+          {
+            "expected": "?",
+            "id": "final-unknown-002",
+            "integrated": "green",
+            "ordinary": "?",
+            "query": "Which color belongs to Cyd?"
+          },
+          {
+            "expected": "?",
+            "id": "final-unknown-003",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which color belongs to Ben?"
+          }
+        ]
+      },
+      "methods": {
+        "external": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 12
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 1
+            },
+            "local": {
+              "cases": 16,
+              "correct": 3
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 0
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 0
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 13
+            }
+          },
+          "checkpoint_sha256": "27042916257f812f4f84676524050abf715c522c6dfa3398cd0a02769f3dd233",
+          "correct": 29,
+          "decoder_steps": 272,
+          "evaluation_process_seconds": 2.494326000000001,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 4,
+          "memory_update_tokens": 0,
+          "obsolete_answers": 0,
+          "parameters": 70208,
+          "peak_process_bytes": 212598784,
+          "response_ms": 299.4307999983903,
+          "selected_prompt_tokens": 9304,
+          "state_bytes": 0,
+          "total_forward_token_positions": 9576,
+          "training_peak_process_bytes": 309719040,
+          "training_seconds": 49.333870899999965,
+          "unsupported": 7
+        },
+        "integrated": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 7
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 2
+            },
+            "local": {
+              "cases": 16,
+              "correct": 4
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 3
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 0
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 7
+            }
+          },
+          "checkpoint_sha256": "12ab8faa7e31f02e8973dbe56ffb2f70b0efdebb73da1b09b58a562c38866cb6",
+          "correct": 23,
+          "decoder_steps": 368,
+          "evaluation_process_seconds": 3.2986627999998746,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 9,
+          "memory_update_tokens": 21127,
+          "obsolete_answers": 2,
+          "parameters": 70208,
+          "peak_process_bytes": 212750336,
+          "response_ms": 1088.313199998538,
+          "selected_prompt_tokens": 11728,
+          "state_bytes": 1152,
+          "total_forward_token_positions": 33223,
+          "training_peak_process_bytes": 310620160,
+          "training_seconds": 38.24506109999993,
+          "unsupported": 18
+        },
+        "ordinary": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 11
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 1
+            },
+            "local": {
+              "cases": 16,
+              "correct": 1
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 1
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 0
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 8
+            }
+          },
+          "checkpoint_sha256": "27042916257f812f4f84676524050abf715c522c6dfa3398cd0a02769f3dd233",
+          "correct": 22,
+          "decoder_steps": 287,
+          "evaluation_process_seconds": 2.5959881000003406,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 3,
+          "memory_update_tokens": 0,
+          "obsolete_answers": 0,
+          "parameters": 70208,
+          "peak_process_bytes": 210432000,
+          "response_ms": 348.75849999980346,
+          "selected_prompt_tokens": 11728,
+          "state_bytes": 0,
+          "total_forward_token_positions": 12015,
+          "training_peak_process_bytes": 309719040,
+          "training_seconds": 49.333870899999965,
+          "unsupported": 13
+        },
+        "zero": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 16
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 0
+            },
+            "local": {
+              "cases": 16,
+              "correct": 0
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 0
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 0
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 16
+            }
+          },
+          "checkpoint_sha256": "12ab8faa7e31f02e8973dbe56ffb2f70b0efdebb73da1b09b58a562c38866cb6",
+          "correct": 32,
+          "decoder_steps": 192,
+          "evaluation_process_seconds": 3.403342900000098,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 0,
+          "memory_update_tokens": 21127,
+          "obsolete_answers": 0,
+          "parameters": 70208,
+          "peak_process_bytes": 212226048,
+          "response_ms": 1124.4150999982594,
+          "selected_prompt_tokens": 11728,
+          "state_bytes": 1152,
+          "total_forward_token_positions": 33047,
+          "training_peak_process_bytes": 310620160,
+          "training_seconds": 38.24506109999993,
+          "unsupported": 0
+        }
+      },
+      "routing": {
+        "interpretation": "Offline argmax diagnostics use gold addresses only for scoring; no answer is regenerated with gold state or addresses.",
+        "read_cases": 96,
+        "read_correct": 20,
+        "rows": [
+          {
+            "id": "final-correction-000",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-001",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-002",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-003",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-005",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-006",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-007",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-008",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-010",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-011",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-012",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-013",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-014",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 8
+          },
+          {
+            "id": "final-correction-015",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-000",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-001",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-002",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-003",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-preservation-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-005",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-006",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-007",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-008",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-010",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-011",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-012",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-013",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-014",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-015",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-000",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-001",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-002",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-003",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-long_recall-004",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-005",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-006",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-007",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-008",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-long_recall-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-010",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-011",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-012",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 9
+          },
+          {
+            "id": "final-long_recall-013",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-014",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-015",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-local-000",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 11
+          },
+          {
+            "id": "final-local-001",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 9
+          },
+          {
+            "id": "final-local-002",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-local-003",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 11
+          },
+          {
+            "id": "final-local-004",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-local-005",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 12
+          },
+          {
+            "id": "final-local-006",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 12
+          },
+          {
+            "id": "final-local-007",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-local-008",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 10
+          },
+          {
+            "id": "final-local-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 12
+          },
+          {
+            "id": "final-local-010",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-local-011",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 11
+          },
+          {
+            "id": "final-local-012",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 11
+          },
+          {
+            "id": "final-local-013",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 11
+          },
+          {
+            "id": "final-local-014",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 9
+          },
+          {
+            "id": "final-local-015",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 12
+          },
+          {
+            "id": "final-unknown-000",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-001",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-002",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-003",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-005",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-006",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-007",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-008",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-009",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-010",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-unknown-011",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-012",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-013",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-014",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-unknown-015",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 11
+          },
+          {
+            "id": "final-conflict-000",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 11
+          },
+          {
+            "id": "final-conflict-001",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-002",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-003",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-005",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-006",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 12
+          },
+          {
+            "id": "final-conflict-007",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 12
+          },
+          {
+            "id": "final-conflict-008",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-009",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-010",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 12
+          },
+          {
+            "id": "final-conflict-011",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-012",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-013",
+            "read_expected": 1,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-014",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-015",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 11
+          }
+        ],
+        "write_cases": 971,
+        "write_correct": 129
+      }
+    },
+    "47": {
+      "examples": {
+        "gain": [
+          {
+            "expected": "blue",
+            "id": "final-correction-001",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which color belongs to Ben?"
+          },
+          {
+            "expected": "owl",
+            "id": "final-correction-006",
+            "integrated": "owl",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          },
+          {
+            "expected": "owl",
+            "id": "final-correction-012",
+            "integrated": "owl",
+            "ordinary": "?",
+            "query": "Which pet belongs to Ada?"
+          }
+        ],
+        "preservation_failure": [
+          {
+            "expected": "blue",
+            "id": "final-preservation-000",
+            "integrated": "dog",
+            "ordinary": "?",
+            "query": "Which pet belongs to Ada?"
+          },
+          {
+            "expected": "green",
+            "id": "final-preservation-001",
+            "integrated": "?",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          },
+          {
+            "expected": "cat",
+            "id": "final-preservation-002",
+            "integrated": "owl",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          }
+        ],
+        "regression": [
+          {
+            "expected": "cat",
+            "id": "final-local-002",
+            "integrated": "blue",
+            "ordinary": "cat",
+            "query": "Which color belongs to Ada?"
+          },
+          {
+            "expected": "red",
+            "id": "final-local-009",
+            "integrated": "owl",
+            "ordinary": "red",
+            "query": "Which color belongs to Cyd?"
+          },
+          {
+            "expected": "red",
+            "id": "final-local-011",
+            "integrated": "dog",
+            "ordinary": "red",
+            "query": "Which color belongs to Cyd?"
+          }
+        ],
+        "unsupported": [
+          {
+            "expected": "?",
+            "id": "final-unknown-000",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which color belongs to Ben?"
+          },
+          {
+            "expected": "?",
+            "id": "final-unknown-001",
+            "integrated": "blue",
+            "ordinary": "?",
+            "query": "Which pet belongs to Cyd?"
+          },
+          {
+            "expected": "?",
+            "id": "final-unknown-009",
+            "integrated": "owl",
+            "ordinary": "?",
+            "query": "Which pet belongs to Ben?"
+          }
+        ]
+      },
+      "methods": {
+        "external": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 15
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 0
+            },
+            "local": {
+              "cases": 16,
+              "correct": 4
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 0
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 0
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 15
+            }
+          },
+          "checkpoint_sha256": "3f7f417d65f9e4553dfc1a503de5d2a6f95a5ad932162b34209dd823ac78423a",
+          "correct": 34,
+          "decoder_steps": 230,
+          "evaluation_process_seconds": 2.595726800000193,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 4,
+          "memory_update_tokens": 0,
+          "obsolete_answers": 0,
+          "parameters": 70208,
+          "peak_process_bytes": 211521536,
+          "response_ms": 308.1233999982942,
+          "selected_prompt_tokens": 9304,
+          "state_bytes": 0,
+          "total_forward_token_positions": 9534,
+          "training_peak_process_bytes": 310169600,
+          "training_seconds": 34.001000900000236,
+          "unsupported": 2
+        },
+        "integrated": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 2
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 3
+            },
+            "local": {
+              "cases": 16,
+              "correct": 5
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 5
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 1
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 9
+            }
+          },
+          "checkpoint_sha256": "e073857e21cb2aad44e8b08e4bb2e167ab3d5e3f8f9e65aac3e0f9f9fd48017e",
+          "correct": 25,
+          "decoder_steps": 353,
+          "evaluation_process_seconds": 3.4277345999998943,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 14,
+          "memory_update_tokens": 21127,
+          "obsolete_answers": 4,
+          "parameters": 70208,
+          "peak_process_bytes": 213041152,
+          "response_ms": 1112.8966000010223,
+          "selected_prompt_tokens": 11728,
+          "state_bytes": 1152,
+          "total_forward_token_positions": 33208,
+          "training_peak_process_bytes": 310267904,
+          "training_seconds": 39.14831809999987,
+          "unsupported": 21
+        },
+        "ordinary": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 15
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 0
+            },
+            "local": {
+              "cases": 16,
+              "correct": 4
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 0
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 0
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 15
+            }
+          },
+          "checkpoint_sha256": "3f7f417d65f9e4553dfc1a503de5d2a6f95a5ad932162b34209dd823ac78423a",
+          "correct": 34,
+          "decoder_steps": 229,
+          "evaluation_process_seconds": 2.6067942999998195,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 4,
+          "memory_update_tokens": 0,
+          "obsolete_answers": 0,
+          "parameters": 70208,
+          "peak_process_bytes": 211251200,
+          "response_ms": 340.9521000012319,
+          "selected_prompt_tokens": 11728,
+          "state_bytes": 0,
+          "total_forward_token_positions": 11957,
+          "training_peak_process_bytes": 310169600,
+          "training_seconds": 34.001000900000236,
+          "unsupported": 2
+        },
+        "zero": {
+          "cases": 96,
+          "categories": {
+            "conflict": {
+              "cases": 16,
+              "correct": 16
+            },
+            "correction": {
+              "cases": 16,
+              "correct": 0
+            },
+            "local": {
+              "cases": 16,
+              "correct": 0
+            },
+            "long_recall": {
+              "cases": 16,
+              "correct": 0
+            },
+            "preservation": {
+              "cases": 16,
+              "correct": 0
+            },
+            "unknown": {
+              "cases": 16,
+              "correct": 16
+            }
+          },
+          "checkpoint_sha256": "e073857e21cb2aad44e8b08e4bb2e167ab3d5e3f8f9e65aac3e0f9f9fd48017e",
+          "correct": 32,
+          "decoder_steps": 192,
+          "evaluation_process_seconds": 3.4264695000001666,
+          "history_input_tokens": 22098,
+          "known_cases": 64,
+          "known_correct": 0,
+          "memory_update_tokens": 21127,
+          "obsolete_answers": 0,
+          "parameters": 70208,
+          "peak_process_bytes": 212865024,
+          "response_ms": 1076.3675000011972,
+          "selected_prompt_tokens": 11728,
+          "state_bytes": 1152,
+          "total_forward_token_positions": 33047,
+          "training_peak_process_bytes": 310267904,
+          "training_seconds": 39.14831809999987,
+          "unsupported": 0
+        }
+      },
+      "routing": {
+        "interpretation": "Offline argmax diagnostics use gold addresses only for scoring; no answer is regenerated with gold state or addresses.",
+        "read_cases": 96,
+        "read_correct": 29,
+        "rows": [
+          {
+            "id": "final-correction-000",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-001",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-002",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-003",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 7,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-005",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-006",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-007",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-008",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-010",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-011",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 9
+          },
+          {
+            "id": "final-correction-012",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 5,
+            "writes": 11
+          },
+          {
+            "id": "final-correction-013",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 10
+          },
+          {
+            "id": "final-correction-014",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 2,
+            "writes": 8
+          },
+          {
+            "id": "final-correction-015",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-000",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 3,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-001",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-002",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-003",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-preservation-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-005",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-006",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 7,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-007",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-008",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 7,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-010",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-011",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 10
+          },
+          {
+            "id": "final-preservation-012",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-013",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 2,
+            "writes": 9
+          },
+          {
+            "id": "final-preservation-014",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          },
+          {
+            "id": "final-preservation-015",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-000",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-001",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-002",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-003",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 9
+          },
+          {
+            "id": "final-long_recall-004",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-005",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-006",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-007",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-008",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 9
+          },
+          {
+            "id": "final-long_recall-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-010",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 11
+          },
+          {
+            "id": "final-long_recall-011",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-012",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 3,
+            "writes": 9
+          },
+          {
+            "id": "final-long_recall-013",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 8
+          },
+          {
+            "id": "final-long_recall-014",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-long_recall-015",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-local-000",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 11
+          },
+          {
+            "id": "final-local-001",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 9
+          },
+          {
+            "id": "final-local-002",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 10
+          },
+          {
+            "id": "final-local-003",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 11
+          },
+          {
+            "id": "final-local-004",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 10
+          },
+          {
+            "id": "final-local-005",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 7,
+            "writes": 12
+          },
+          {
+            "id": "final-local-006",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 12
+          },
+          {
+            "id": "final-local-007",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 3,
+            "writes": 11
+          },
+          {
+            "id": "final-local-008",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 10
+          },
+          {
+            "id": "final-local-009",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 12
+          },
+          {
+            "id": "final-local-010",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-local-011",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 11
+          },
+          {
+            "id": "final-local-012",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 11
+          },
+          {
+            "id": "final-local-013",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 11
+          },
+          {
+            "id": "final-local-014",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 9
+          },
+          {
+            "id": "final-local-015",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 12
+          },
+          {
+            "id": "final-unknown-000",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-001",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-002",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 0,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-003",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-005",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-006",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-007",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-008",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-009",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 9
+          },
+          {
+            "id": "final-unknown-010",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 11
+          },
+          {
+            "id": "final-unknown-011",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-012",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 2,
+            "writes": 10
+          },
+          {
+            "id": "final-unknown-013",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 8
+          },
+          {
+            "id": "final-unknown-014",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 11
+          },
+          {
+            "id": "final-unknown-015",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 11
+          },
+          {
+            "id": "final-conflict-000",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 11
+          },
+          {
+            "id": "final-conflict-001",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-002",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-003",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-004",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-005",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-006",
+            "read_expected": 3,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 12
+          },
+          {
+            "id": "final-conflict-007",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 7,
+            "writes": 12
+          },
+          {
+            "id": "final-conflict-008",
+            "read_expected": 4,
+            "read_predicted": 0,
+            "write_correct": 3,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-009",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-010",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 12
+          },
+          {
+            "id": "final-conflict-011",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 5,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-012",
+            "read_expected": 5,
+            "read_predicted": 0,
+            "write_correct": 6,
+            "writes": 10
+          },
+          {
+            "id": "final-conflict-013",
+            "read_expected": 1,
+            "read_predicted": 1,
+            "write_correct": 5,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-014",
+            "read_expected": 0,
+            "read_predicted": 0,
+            "write_correct": 4,
+            "writes": 13
+          },
+          {
+            "id": "final-conflict-015",
+            "read_expected": 2,
+            "read_predicted": 0,
+            "write_correct": 1,
+            "writes": 11
+          }
+        ],
+        "write_cases": 971,
+        "write_correct": 350
+      }
+    }
+  },
+  "verdict": {
+    "chatbot": "Still uses a separate pretrained Qwen/Ollama backbone; this prototype is research-only.",
+    "correction_preservation": "Failed; preservation 0/16 and 1/16, with more unsupported answers.",
+    "known_facts": "Small observed gains on known facts in both seeds, with very low absolute correctness; no robust useful-memory claim.",
+    "mechanism": "Implemented; CPU train/reload/resume and state influence verified.",
+    "paper_result": "Insufficient; finite symbols, two training seeds, one final world seed, template-transfer failures.",
+    "total_cost": "Failed; state updates increase forwarded work and full-history latency."
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "checks": [
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "artifacts/integrated-memory-v1-20261102/package"
+      ],
+      "label": "build",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/build.json",
+      "returncode": 0,
+      "seconds": 4.63430550000021,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "label": "cli-diagnose",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/cli-diagnose.json",
+      "returncode": 0,
+      "seconds": 2.4441587999999683,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "label": "cli-help",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/cli-help.json",
+      "returncode": 0,
+      "seconds": 2.3561847000000853,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "label": "diff-check",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/diff-check.json",
+      "returncode": 0,
+      "seconds": 0.06093650000002526,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/ordinary-31.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/external-31.json",
+        "--selector",
+        "artifacts/chat-selector-v2-20261101/selector.json"
+      ],
+      "label": "final-external-31",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-external-31.json",
+      "returncode": 0,
+      "seconds": 2.494326000000001,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/ordinary-47.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/external-47.json",
+        "--selector",
+        "artifacts/chat-selector-v2-20261101/selector.json"
+      ],
+      "label": "final-external-47",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-external-47.json",
+      "returncode": 0,
+      "seconds": 2.595726800000193,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/integrated-31.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/integrated-31.json"
+      ],
+      "label": "final-integrated-31",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-integrated-31.json",
+      "returncode": 0,
+      "seconds": 3.2986627999998746,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/integrated-47.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/integrated-47.json"
+      ],
+      "label": "final-integrated-47",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-integrated-47.json",
+      "returncode": 0,
+      "seconds": 3.4277345999998943,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/ordinary-31.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/ordinary-31.json"
+      ],
+      "label": "final-ordinary-31",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-ordinary-31.json",
+      "returncode": 0,
+      "seconds": 2.5959881000003406,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/ordinary-47.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/ordinary-47.json"
+      ],
+      "label": "final-ordinary-47",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-ordinary-47.json",
+      "returncode": 0,
+      "seconds": 2.6067942999998195,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "artifacts/integrated-memory-v1-20261102/package-final"
+      ],
+      "label": "final-package-build",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-package-build.json",
+      "returncode": 0,
+      "seconds": 3.635828699999365,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/integrated-31.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/zero-31.json",
+        "--zero-state"
+      ],
+      "label": "final-zero-31",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-zero-31.json",
+      "returncode": 0,
+      "seconds": 3.403342900000098,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "evaluate",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--checkpoint",
+        "artifacts/integrated-memory-v1-20261102/train/integrated-47.pt",
+        "--split",
+        "final",
+        "--freeze",
+        "artifacts/integrated-memory-v1-20261102/freeze.json",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/final/zero-47.json",
+        "--zero-state"
+      ],
+      "label": "final-zero-47",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/final-zero-47.json",
+      "returncode": 0,
+      "seconds": 3.4264695000001666,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts/analyze_integrated_memory.py",
+        "scripts/download_chat_backbone.py",
+        "scripts/smoke_chat_foundation.py"
+      ],
+      "label": "focused-format",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/focused-format.json",
+      "returncode": 0,
+      "seconds": 0.11237970000001951,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts/analyze_integrated_memory.py",
+        "scripts/download_chat_backbone.py",
+        "scripts/smoke_chat_foundation.py"
+      ],
+      "label": "focused-lint",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/focused-lint.json",
+      "returncode": 0,
+      "seconds": 0.11486169999989215,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "label": "format-all",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/format-all.json",
+      "returncode": 1,
+      "seconds": 0.1100111000000652,
+      "status": "FAIL"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "train",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/reproduction/integrated-31.pt",
+        "--variant",
+        "integrated",
+        "--steps",
+        "800",
+        "--seed",
+        "31"
+      ],
+      "label": "full-training-replay",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/full-training-replay.json",
+      "returncode": 0,
+      "seconds": 43.456811700000344,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/check_wheel.py",
+        "--wheel",
+        "artifacts/integrated-memory-v1-20261102/package/toruk_lm-0.1.0-py3-none-any.whl",
+        "--sdist",
+        "artifacts/integrated-memory-v1-20261102/package/toruk_lm-0.1.0.tar.gz",
+        "--output",
+        ".readiness/integrated-v1-wheel-install",
+        "--config",
+        "configs/reproduce-smoke-v1.json"
+      ],
+      "label": "installed-wheel",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/installed-wheel.json",
+      "returncode": 0,
+      "seconds": 13.402620300000308,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "train",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/train/integrated-47.pt",
+        "--variant",
+        "integrated",
+        "--steps",
+        "800",
+        "--seed",
+        "47"
+      ],
+      "label": "integrated-train-47",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/integrated-train-47.json",
+      "returncode": 0,
+      "seconds": 43.0690055,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        ".",
+        "--output-format",
+        "concise"
+      ],
+      "label": "lint-all",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/lint-all.json",
+      "returncode": 1,
+      "seconds": 0.12228210000012041,
+      "status": "FAIL"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "run",
+        "check"
+      ],
+      "label": "node-check",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/node-check.json",
+      "returncode": 0,
+      "seconds": 1.256934800000181,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "label": "node-tests",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/node-tests.json",
+      "returncode": 0,
+      "seconds": 1.1070574999998826,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "train",
+        "--data",
+        "artifacts/integrated-memory-v1-20261102/data",
+        "--output",
+        "artifacts/integrated-memory-v1-20261102/train/ordinary-47.pt",
+        "--variant",
+        "ordinary",
+        "--steps",
+        "800",
+        "--seed",
+        "47"
+      ],
+      "label": "ordinary-train-47",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/ordinary-train-47.json",
+      "returncode": 0,
+      "seconds": 38.036996700000145,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "label": "package-dependencies",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/package-dependencies.json",
+      "returncode": 0,
+      "seconds": 0.6952462999997806,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "label": "python-tests",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/python-tests.json",
+      "returncode": 0,
+      "seconds": 141.20928809999987,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.integrated_study",
+        "--help"
+      ],
+      "label": "study-help",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/study-help.json",
+      "returncode": 0,
+      "seconds": 2.3522815999999693,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux",
+        "--cache-dir",
+        ".readiness/integrated-v1-mypy-linux"
+      ],
+      "label": "types-linux",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/types-linux.json",
+      "returncode": 0,
+      "seconds": 51.58690810000007,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--cache-dir",
+        ".readiness/integrated-v1-mypy"
+      ],
+      "label": "types-windows",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/types-windows.json",
+      "returncode": 0,
+      "seconds": 2.0727224000002025,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.readiness\\integrated-v1-wheel-install\\env\\Scripts\\python.exe",
+        "-I",
+        "artifacts/integrated-memory-v1-20261102/reproduction/check_installed.py",
+        "artifacts/integrated-memory-v1-20261102"
+      ],
+      "label": "wheel-memory-replay",
+      "record": "artifacts/integrated-memory-v1-20261102/checks/wheel-memory-replay.json",
+      "returncode": 0,
+      "seconds": 2.3948673999993844,
+      "status": "PASS"
+    }
+  ],
+  "failed_checks": [
+    "format-all",
+    "lint-all"
+  ],
+  "known_failure_scope": "49 lint issues and three formatting failures in frozen selector-v2 scripts. Initial wrapper invocation failure retained separately under foundation."
+}

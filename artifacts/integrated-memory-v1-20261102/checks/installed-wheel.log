@@ -1,0 +1,148 @@
+Processing c:\users\susee\vs_code_project\toruk\artifacts\integrated-memory-v1-20261102\package\toruk_lm-0.1.0-py3-none-any.whl
+Installing collected packages: toruk-lm
+Successfully installed toruk-lm-0.1.0
+{"command": ["C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\integrated-v1-wheel-install\\env\\Scripts\\python.exe", "-I", "-c", "import json, pathlib, sys, toruk_lm; p=pathlib.Path(toruk_lm.__file__).resolve(); assert p.is_relative_to(pathlib.Path(sys.prefix)); print(json.dumps({'package_file':str(p),'version':toruk_lm.__version__}))"]}
+{"package_file": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\integrated-v1-wheel-install\\env\\Lib\\site-packages\\toruk_lm\\__init__.py", "version": "0.1.0"}
+{"command": ["C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\integrated-v1-wheel-install\\env\\Scripts\\python.exe", "-I", "-m", "toruk_lm", "--help"]}
+usage: toruk [-h]
+             {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+             ...
+
+Toruk-LM research foundation
+
+positional arguments:
+  {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+    diagnose            report actual runtime and CUDA availability
+    validate-config     validate a versioned reproduction config
+    audit-evidence      validate sealed evidence and rescore raw answers
+    compare-replay      require exact generated answers and score parity
+    make-fixture        generate document-separated smoke-test text
+    validate            verify split checksums, config and checkpoint identity
+    reproduce           run a bounded foundation or versioned research config
+    summarize           verify a sealed run and regenerate result tables
+    train               train ordinary LM; CPU; fixed learning rate
+    evaluate            local-context loss and autoregressive continuations
+    generate            greedy local-context inference
+    make-worlds         create frozen controlled worlds and LM exports
+    evaluate-worlds     validation-only generated factual answers
+    train-controlled    bounded ordinary/recurrent world training
+    evaluate-controlled
+                        validation-only world answers
+    effect-labels       offline bounded paired supervision
+    fit-effect          fit effect predictor on training labels only
+    evaluate-effect     offline validation effect diagnostics
+    controlled-pilot    bounded validation prerequisite/comparison pipeline
+    verify-m6           reproduce frozen M6 answers without retraining
+    generalization      bounded exploratory M7 held-out failure study
+    evaluate-heldout    one protocol-bound M7 cell/checkpoint
+
+options:
+  -h, --help            show this help message and exit
+{"command": ["C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\integrated-v1-wheel-install\\env\\Scripts\\python.exe", "-I", "-m", "toruk_lm", "diagnose"]}
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "logical_cpus": 12,
+  "torch": "2.14.1+cpu",
+  "cuda_available": false,
+  "cuda_devices": [],
+  "training_device": "cpu",
+  "tokenizer": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7"
+}
+{"command": ["C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\integrated-v1-wheel-install\\env\\Scripts\\python.exe", "-I", "-m", "toruk_lm", "validate-config", "--config", "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\configs\\reproduce-smoke-v1.json"]}
+{
+  "status": "PASS",
+  "config": {
+    "schema": "toruk-reproduce-v1",
+    "mode": "smoke",
+    "seed": 23,
+    "fixture_seed": 17,
+    "steps": 2,
+    "worlds": 2,
+    "answer_budget": 2,
+    "seconds": 110
+  }
+}
+{"command": ["C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\integrated-v1-wheel-install\\env\\Scripts\\python.exe", "-I", "-m", "toruk_lm", "reproduce", "--config", "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\configs\\reproduce-smoke-v1.json", "--output", "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\integrated-v1-wheel-install\\smoke"]}
+{
+  "status": "PASS",
+  "purpose": "execution smoke; no research-quality claim",
+  "results": {
+    "ordinary": {
+      "groups": {
+        "ambiguous": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "corrected": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unchanged_entity": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unknown": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_date": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_number": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        }
+      },
+      "resume": "PASS",
+      "checkpoint_sha256": "97b242bddabea40d21d92905889275475ba2b255fa918a18746c9f1a9d42aa0a"
+    },
+    "recurrent": {
+      "groups": {
+        "ambiguous": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "corrected": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unchanged_entity": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unknown": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_date": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_number": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        }
+      },
+      "resume": "PASS",
+      "checkpoint_sha256": "b59acc4b68c5a9c9936cf97d28300be84fab3a0361c06cb07cb8f2a444f1305c"
+    }
+  },
+  "elapsed_seconds": 2.3401076000000103,
+  "cumulative_process_peak_bytes": 296718336,
+  "package_sha256": "72184e796131de9ccd17e50fab5636fa23aa097b0676c5bb4a2733a023eacde7",
+  "config_sha256": "a6aa262bb3feac7f744aea64f123de5602336cf1823dd7ca75e51618de5fc6f2"
+}

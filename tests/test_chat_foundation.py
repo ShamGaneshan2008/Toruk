@@ -7,22 +7,15 @@ import pytest
 import torch
 
 from toruk_lm.chat_foundation import (
-<<<<<<< HEAD
     BACKBONES,
     PretrainedChatBackend,
     backbone_spec,
-    validate_sampling,
-)
-from toruk_lm.chat_runtime import ChatError, ModelStartupError
-from toruk_lm.context_selection import LexicalContextSelector
-=======
-    PretrainedChatBackend,
     read_backbone_manifest,
     validate_sampling,
     weight_sha256,
 )
-from toruk_lm.chat_runtime import ChatError
->>>>>>> origin/main
+from toruk_lm.chat_runtime import ChatError, ModelStartupError
+from toruk_lm.context_selection import LexicalContextSelector
 from toruk_lm.inference_server import validate_request
 
 
@@ -31,11 +24,8 @@ class FakeTokenizer:
     pad_token_id = 2
 
     def apply_chat_template(self, messages, **kwargs):
-<<<<<<< HEAD
         self.messages = messages
-=======
         self.seen_messages = list(messages)
->>>>>>> origin/main
         assert kwargs["add_generation_prompt"]
         assert kwargs["return_dict"]
         return {"input_ids": torch.ones((1, 20 * len(messages)), dtype=torch.long)}
@@ -65,10 +55,7 @@ def backend():
     value.model = FakeModel()
     value.model_id = "SmolLM2:test"
     value.backbone_id = "SmolLM2"
-<<<<<<< HEAD
     value.system_prompt = ""
-=======
->>>>>>> origin/main
     value.selector = FakeSelector()
     return value
 
@@ -141,7 +128,6 @@ def test_missing_or_incompatible_backbone_and_invalid_options(tmp_path: Path):
         value.reply_with_metrics([{"role": "user", "content": "hi"}], 8, mode="TORUK")
 
 
-<<<<<<< HEAD
 def test_missing_optional_chat_dependencies_have_a_safe_code(tmp_path, monkeypatch):
     import builtins
 
@@ -164,7 +150,8 @@ def test_missing_optional_chat_dependencies_have_a_safe_code(tmp_path, monkeypat
         PretrainedChatBackend(tmp_path)
     assert error.value.code == "CHAT_DEPENDENCIES_MISSING"
     assert "private-dependency-detail" not in str(error.value)
-=======
+
+
 def test_backbone_manifest_accepts_other_verified_identity(tmp_path: Path):
     weights = tmp_path / "model.safetensors"
     weights.write_bytes(b"a separate local model")
@@ -178,7 +165,6 @@ def test_backbone_manifest_accepts_other_verified_identity(tmp_path: Path):
     weights.write_bytes(b"tampered")
     with pytest.raises(ChatError, match="SHA-256"):
         read_backbone_manifest(tmp_path)
->>>>>>> origin/main
 
 
 def test_server_request_parses_mode_and_controls():
@@ -220,3 +206,40 @@ def test_system_instructions_survive_trimming_and_are_counted():
     assert value.tokenizer.messages[0] == {"role": "system", "content": value.system_prompt}
     assert value.tokenizer.messages[-1] == messages[-1]
     assert messages[chosen[0]]["role"] == "user"
+
+
+@pytest.mark.parametrize("model_name", ["Qwen/Qwen2.5-0.5B-Instruct", "example/local-instruct"])
+def test_verified_backbone_loads_with_trained_selector(tmp_path, monkeypatch, model_name):
+    import sys
+    from types import SimpleNamespace
+
+    import toruk_lm.chat_foundation as foundation
+
+    spec = BACKBONES["qwen2.5"]
+    manifest = {
+        "model": model_name,
+        "revision": spec["revision"],
+        "model_sha256": spec["model_sha256"],
+    }
+    (tmp_path / "toruk-backbone.json").write_text(json.dumps(manifest))
+    (tmp_path / "model.safetensors").write_bytes(b"fixture")
+    monkeypatch.setattr(foundation, "weight_sha256", lambda path: spec["model_sha256"])
+    tokenizer = FakeTokenizer()
+    tokenizer.chat_template = "fixture"
+    model = SimpleNamespace(config=SimpleNamespace(model_type="qwen2"), eval=lambda: None)
+    monkeypatch.setitem(
+        sys.modules,
+        "transformers",
+        SimpleNamespace(
+            AutoTokenizer=SimpleNamespace(from_pretrained=lambda *a, **k: tokenizer),
+            AutoModelForCausalLM=SimpleNamespace(from_pretrained=lambda *a, **k: model),
+        ),
+    )
+    selector = SimpleNamespace(kind="toruk-chat-selector-v2")
+    checkpoint = tmp_path / "selector.json"
+    monkeypatch.setattr(foundation, "load_chat_selector", lambda path: selector)
+    value = PretrainedChatBackend(tmp_path, checkpoint)
+    assert value.selector is selector
+    assert value.selector_id == "toruk-chat-selector-v2"
+    assert value.backbone_id == model_name
+    assert bool(value.system_prompt) == (model_name == spec["model"])

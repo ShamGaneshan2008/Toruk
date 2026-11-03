@@ -1,0 +1,77 @@
+{
+  "chat_selector_v1": {
+    "bytes": 1129,
+    "exists": true,
+    "path": "artifacts/chat-selector-v1-20261101/selector.json",
+    "sha256": "f1129f3256fcb313300e6ad530c332369fd442a397c022414d63e540f636e666"
+  },
+  "chat_selector_v2": {
+    "bytes": 1958,
+    "exists": true,
+    "path": "artifacts/chat-selector-v2-20261101/selector.json",
+    "sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548"
+  },
+  "chat_wiring": {
+    "integrated_model": "research CLI only; incompatible with pretrained chat backbone",
+    "language": "third-party pinned Qwen, or separately configured Ollama",
+    "ordinary_model": "optional labeled continuation smoke path; not instruct chat",
+    "selectors": "explicit JSON v1/v2, heuristic, or historical controlled checkpoint",
+    "server": "src/toruk_lm/inference_server.py -> inference_worker.py -> chat_foundation.py"
+  },
+  "controlled_smoke_only": {
+    "bytes": 117111,
+    "exists": true,
+    "format": "toruk-controlled-v1",
+    "path": "artifacts/checks/public-gate-20261027/research-smoke/recurrent-full/checkpoint.pt",
+    "sha256": "793f15e6ac51090056872f4ef557a942e020b9723833f114dab840234e24f116"
+  },
+  "historical_controlled_recurrent": {
+    "exists": false,
+    "path": "artifacts/m6-validation-001/recurrent/checkpoint.pt"
+  },
+  "integrated_31": {
+    "bytes": 875182,
+    "exists": true,
+    "format": "toruk-integrated-lm-v1",
+    "path": "artifacts\\integrated-memory-v1-20261102\\train\\integrated-31.pt",
+    "sha256": "12ab8faa7e31f02e8973dbe56ffb2f70b0efdebb73da1b09b58a562c38866cb6"
+  },
+  "integrated_47": {
+    "bytes": 875118,
+    "exists": true,
+    "format": "toruk-integrated-lm-v1",
+    "path": "artifacts\\integrated-memory-v1-20261102\\train\\integrated-47.pt",
+    "sha256": "e073857e21cb2aad44e8b08e4bb2e167ab3d5e3f8f9e65aac3e0f9f9fd48017e"
+  },
+  "ordinary_31": {
+    "bytes": 854594,
+    "exists": true,
+    "format": "toruk-integrated-lm-v1",
+    "path": "artifacts\\integrated-memory-v1-20261102\\train\\ordinary-31.pt",
+    "sha256": "27042916257f812f4f84676524050abf715c522c6dfa3398cd0a02769f3dd233"
+  },
+  "ordinary_47": {
+    "bytes": 854530,
+    "exists": true,
+    "format": "toruk-integrated-lm-v1",
+    "path": "artifacts\\integrated-memory-v1-20261102\\train\\ordinary-47.pt",
+    "sha256": "3f7f417d65f9e4553dfc1a503de5d2a6f95a5ad932162b34209dd823ac78423a"
+  },
+  "ordinary_foundation": {
+    "bytes": 573431,
+    "exists": true,
+    "format": "toruk-ordinary-v1",
+    "path": "artifacts/foundation-001/train/checkpoint.pt",
+    "sha256": "0285d3fb6adc4e49a92b6c2f4f8226f607d8660d46d3a19d5fea33ca48065e94"
+  },
+  "ordinary_minimal_demo": {
+    "exists": false,
+    "path": "artifacts/minimal-lm-demo-001/train/checkpoint.pt"
+  },
+  "qwen_chat_backbone": {
+    "bytes": 988097824,
+    "exists": true,
+    "path": "artifacts/qwen-chat-001/backbone/model.safetensors",
+    "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+  }
+}

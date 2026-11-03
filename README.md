@@ -89,8 +89,8 @@ For the explicitly labeled heuristic TORUK comparison and frozen evaluation comm
 see [context selection](docs/context-selection.md).
 It runs pinned **Qwen/Qwen2.5-0.5B-Instruct** through the existing web proxy, with
 bounded input/output and per-request token/latency measurements. Qwen supplies the
-language ability; it is not Toruk-trained. The evaluated Toruk selector is missing
-in this checkout, so this local setup uses BASELINE and makes no efficiency claim.
+language ability; it is not Toruk-trained. The historical M6 checkpoint is missing
+in this checkout; BASELINE works without a selector and makes no efficiency claim.
 See the [fresh audit and real responses](docs/research/next-chat-20261031.md).
 
 #### Ordinary-model smoke fixture only
@@ -121,6 +121,23 @@ The same local page can also use a digest-pinned Ollama Llama 3.2 3B backbone on
 A separately trained [Toruk chat selector v1](docs/research/chat-selector-v1-results.md) now ranks earlier turns using supervised evidence labels. It improves a narrow synthetic held-out comparison against recent-turn context, but fails an existing vault-code paraphrase. It does not train the conversational backbone or establish general semantic memory.
 
 The newer [v2 held out comparison](docs/research/chat-selector-v2-results.md) used a separately trained selector and distinct fact templates across train, development, and final splits. On 28 final cases, recent context answered 26 correctly; both a simple lexical selector and Toruk v2 answered 22. Toruk selected fewer prompt tokens but did not improve answer quality or demonstrate total-resource efficiency. The local page can load the v2 checkpoint and displays its true identity.
+
+A separate [direct memory-to-decoder CPU prototype](docs/research/integrated-memory-v1-results.md)
+has now been trained from scratch and evaluated under new wording. Across two
+training seeds it answered 23/96 and 25/96 final questions correctly, versus
+22/96 and 34/96 for matched local context. It produced more unsupported answers
+and required more inference work. This is a negative controlled result, not a
+completed conversational model. The chatbot still uses its pretrained backbone.
+
+The [independent qualification](docs/research/qualification-v1-results.md) adds
+three fresh evaluation seeds, a deterministic selector, memory ablations and
+history-load stress tests. All variants fail the minimum factual-quality gate;
+the evidence package retains raw failures, resource accounting and uncertainty.
+
+The [failure-driven routing follow-up](docs/research/routing-v2-results.md) improves
+held-out routing at two training seeds and removes unsupported answers on its
+small frozen set. Factual value outputs still collapse, known-world accuracy is
+14/120, and useful-memory and release gates remain failed. Chat is unchanged.
 
 The [reproducibility guide](docs/reproducibility.md) provides versioned config
 validation, a tiny CPU smoke run, and artifact rescoring commands. These verify

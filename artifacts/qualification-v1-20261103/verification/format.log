@@ -1,0 +1,460 @@
+unformatted: File would be reformatted
+   --> scripts\build_chat_selector_data_v2.py:11:15
+    |
+10  | SIZES = {"train": 24, "dev": 8, "final": 4}  # per category
+    - CATEGORIES = ("correction", "preservation", "conflict", "irrelevant", "long_recall", "multi_fact", "unknown")
+11  + CATEGORIES = (
+12  +     "correction",
+13  +     "preservation",
+14  +     "conflict",
+15  +     "irrelevant",
+16  +     "long_recall",
+17  +     "multi_fact",
+18  +     "unknown",
+19  + )
+20  | NOUNS = {
+--------------------------------------------------------------------------------
+27  |     "dev": ("For {name}, record {slot}: {value}.", "Tell me the {slot} for {name}."),
+    -     "final": ("Please remember this entry: {name} has {value} as the {slot}.", "Which {slot} belongs to {name}?"),
+28  +     "final": (
+29  +         "Please remember this entry: {name} has {value} as the {slot}.",
+30  +         "Which {slot} belongs to {name}?",
+31  +     ),
+32  | }
+--------------------------------------------------------------------------------
+54  |     if category == "multi_fact":
+    -         messages.append({"role": "user", "content": frame.format(name=name, slot=code_slot, value=code)})
+55  +         messages.append(
+56  +             {"role": "user", "content": frame.format(name=name, slot=code_slot, value=code)}
+57  +         )
+58  |         evidence.append(1)
+--------------------------------------------------------------------------------
+67  |         distraction = frame.format(name=other, slot=slot, value=rng.choice(VALUES[split][:4]))
+    -         distraction += " The lighthouse log describes a bridge, a market, and a rainy evening. " * (2 if long else 1)
+68  +         distraction += " The lighthouse log describes a bridge, a market, and a rainy evening. " * (
+69  +             2 if long else 1
+70  +         )
+71  |         if pair == (3 if long else 0) and category in ("correction", "conflict"):
+    -             marker = "Correction: " if category == "correction" else "The later entry replaces the old one: "
+72  +             marker = (
+73  +                 "Correction: "
+74  +                 if category == "correction"
+75  +                 else "The later entry replaces the old one: "
+76  +             )
+77  |             distraction = marker + frame.format(name=name, slot=slot, value=new)
+--------------------------------------------------------------------------------
+84  |             distraction = frame.format(name=name, slot=other_slot, value="Harp")
+    -         messages.extend([{"role": "user", "content": distraction}, {"role": "assistant", "content": "Noted."}])
+85  +         messages.extend(
+86  +             [{"role": "user", "content": distraction}, {"role": "assistant", "content": "Noted."}]
+87  +         )
+88  |     if category == "multi_fact":
+--------------------------------------------------------------------------------
+94  |     messages.append({"role": "user", "content": query})
+    -     return {"id": f"{split}-{category}-{number:02d}", "split": split, "category": category,
+    -             "world": f"{split}-{name}", "template_family": split, "messages": messages,
+    -             "evidence_ids": evidence, "expected": expected, "forbidden": forbidden,
+    -             "history_length": "long" if long else "short"}
+95  +     return {
+96  +         "id": f"{split}-{category}-{number:02d}",
+97  +         "split": split,
+98  +         "category": category,
+99  +         "world": f"{split}-{name}",
+100 +         "template_family": split,
+101 +         "messages": messages,
+102 +         "evidence_ids": evidence,
+103 +         "expected": expected,
+104 +         "forbidden": forbidden,
+105 +         "history_length": "long" if long else "short",
+106 +     }
+107 |
+--------------------------------------------------------------------------------
+118 |         rng = random.Random(seed)
+    -         cases = [make_case(split, category, n, rng) for category in CATEGORIES for n in range(SIZES[split])]
+119 +         cases = [
+120 +             make_case(split, category, n, rng)
+121 +             for category in CATEGORIES
+122 +             for n in range(SIZES[split])
+123 +         ]
+124 |         raw = "".join(json.dumps(case, sort_keys=True) + "\n" for case in cases).encode()
+125 |         (args.output_dir / f"{split}.jsonl").write_bytes(raw)
+126 |         hashes[split] = hashlib.sha256(raw).hexdigest()
+    -     manifest = {"format": "toruk-chat-selector-data-v2", "seeds": SEEDS,
+    -                 "sizes_per_category": SIZES, "categories": CATEGORIES,
+    -                 "template_families": {split: FRAMES[split] for split in SEEDS},
+    -                 "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+    -                 "split_sha256": hashes}
+    -     (args.output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+127 +     manifest = {
+128 +         "format": "toruk-chat-selector-data-v2",
+129 +         "seeds": SEEDS,
+130 +         "sizes_per_category": SIZES,
+131 +         "categories": CATEGORIES,
+132 +         "template_families": {split: FRAMES[split] for split in SEEDS},
+133 +         "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+134 +         "split_sha256": hashes,
+135 +     }
+136 +     (args.output_dir / "manifest.json").write_text(
+137 +         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+138 +     )
+139 |     print(json.dumps(manifest, indent=2))
+    |
+
+unformatted: File would be reformatted
+   --> scripts\evaluate_chat_selector_v2.py:16:12
+    |
+15  |
+    - UNKNOWN = ("don't know", "do not know", "not supplied", "not provided", "no information", "cannot determine")
+16  + UNKNOWN = (
+17  +     "don't know",
+18  +     "do not know",
+19  +     "not supplied",
+20  +     "not provided",
+21  +     "no information",
+22  +     "cannot determine",
+23  + )
+24  |
+--------------------------------------------------------------------------------
+33  |         query = words(messages[-1]["content"])
+    -         scored = [(len(query & words(message["content"])), index)
+    -                   for index, message in enumerate(messages[:-3]) if message["role"] == "user"]
+34  +         scored = [
+35  +             (len(query & words(message["content"])), index)
+36  +             for index, message in enumerate(messages[:-3])
+37  +             if message["role"] == "user"
+38  +         ]
+39  |         chosen = {index for overlap, index in sorted(scored, reverse=True)[:2] if overlap > 0}
+--------------------------------------------------------------------------------
+44  | def contains(answer: str, value: str) -> bool:
+    -     return re.search(r"(?<!\w)" + re.escape(value.casefold()) + r"(?!\w)", answer.casefold()) is not None
+45  +     return (
+46  +         re.search(r"(?<!\w)" + re.escape(value.casefold()) + r"(?!\w)", answer.casefold())
+47  +         is not None
+48  +     )
+49  |
+--------------------------------------------------------------------------------
+54  |         asserted = bool(re.search(r"\b(?:TRAIN|DEV|FINAL)CODE\d+\b", answer, re.I))
+    -         asserted = asserted or any(contains(answer, value) for value in ("Mysuru", "Nashik", "Udaipur", "Ranchi"))
+55  +         asserted = asserted or any(
+56  +             contains(answer, value) for value in ("Mysuru", "Nashik", "Udaipur", "Ranchi")
+57  +         )
+58  |         return uncertain and not asserted, not uncertain or asserted
+--------------------------------------------------------------------------------
+81  |     frozen = json.loads(args.freeze.read_text(encoding="utf-8"))
+    -     expected = {"manifest": sha(manifest_path), "final": sha(args.data_dir / "final.jsonl"),
+    -                 "checkpoint": sha(args.selector_checkpoint), "evaluator": sha(Path(__file__)),
+    -                 "protocol": sha(Path("docs/research/chat-selector-v2-protocol.md"))}
+82  +     expected = {
+83  +         "manifest": sha(manifest_path),
+84  +         "final": sha(args.data_dir / "final.jsonl"),
+85  +         "checkpoint": sha(args.selector_checkpoint),
+86  +         "evaluator": sha(Path(__file__)),
+87  +         "protocol": sha(Path("docs/research/chat-selector-v2-protocol.md")),
+88  +     }
+89  |     if any(frozen.get(key) != value for key, value in expected.items()):
+--------------------------------------------------------------------------------
+93  |     checkpoint = json.loads(args.selector_checkpoint.read_text(encoding="utf-8"))
+    -     if checkpoint.get("protocol") != "chat-selector-v2" or checkpoint.get("data_manifest_sha256") != expected["manifest"]:
+94  +     if (
+95  +         checkpoint.get("protocol") != "chat-selector-v2"
+96  +         or checkpoint.get("data_manifest_sha256") != expected["manifest"]
+97  +     ):
+98  |         raise ValueError("selector checkpoint is not bound to v2 data")
+    -     cases = [json.loads(line) for line in (args.data_dir / "final.jsonl").read_text(encoding="utf-8").splitlines()]
+99  +     cases = [
+100 +         json.loads(line)
+101 +         for line in (args.data_dir / "final.jsonl").read_text(encoding="utf-8").splitlines()
+102 +     ]
+103 |     if any(case["split"] != "final" or case["template_family"] != "final" for case in cases):
+--------------------------------------------------------------------------------
+113 |         for method in ("BASELINE", "LEXICAL", "TORUK"):
+    -             backend.selector = trained if method == "TORUK" else lexical if method == "LEXICAL" else None
+114 +             backend.selector = (
+115 +                 trained if method == "TORUK" else lexical if method == "LEXICAL" else None
+116 +             )
+117 |             try:
+    -                 response = backend.reply_with_metrics(case["messages"], 32, mode="BASELINE" if method == "BASELINE" else "TORUK", temperature=0, top_p=1)
+118 +                 response = backend.reply_with_metrics(
+119 +                     case["messages"],
+120 +                     32,
+121 +                     mode="BASELINE" if method == "BASELINE" else "TORUK",
+122 +                     temperature=0,
+123 +                     top_p=1,
+124 +                 )
+125 |                 answer, metrics = response["answer"], response["metrics"]
+126 |                 correct, unsupported = score(answer, case)
+127 |                 selected = {int(item[1:]) for item in metrics["selected_message_ids"]}
+128 |                 recent = set(range(len(case["messages"]) - 3, len(case["messages"])))
+    -                 row = {"id": case["id"], "category": case["category"], "method": method,
+    -                        "history_length": case["history_length"], "messages": case["messages"],
+    -                        "evidence_ids": case["evidence_ids"], "expected": case["expected"],
+    -                        "forbidden": case["forbidden"], "answer": answer, "correct": correct,
+    -                        "unsupported": unsupported, "evidence_retained": all(i in selected for i in case["evidence_ids"]) if case["evidence_ids"] else None,
+    -                        "unnecessary_older_selected": len(selected - recent) if not case["evidence_ids"] else None,
+    -                        "metrics": metrics}
+129 +                 row = {
+130 +                     "id": case["id"],
+131 +                     "category": case["category"],
+132 +                     "method": method,
+133 +                     "history_length": case["history_length"],
+134 +                     "messages": case["messages"],
+135 +                     "evidence_ids": case["evidence_ids"],
+136 +                     "expected": case["expected"],
+137 +                     "forbidden": case["forbidden"],
+138 +                     "answer": answer,
+139 +                     "correct": correct,
+140 +                     "unsupported": unsupported,
+141 +                     "evidence_retained": all(i in selected for i in case["evidence_ids"])
+142 +                     if case["evidence_ids"]
+143 +                     else None,
+144 +                     "unnecessary_older_selected": len(selected - recent)
+145 +                     if not case["evidence_ids"]
+146 +                     else None,
+147 +                     "metrics": metrics,
+148 +                 }
+149 |             except Exception as error:
+    -                 row = {"id": case["id"], "category": case["category"], "method": method,
+    -                        "messages": case["messages"], "expected": case["expected"],
+    -                        "evidence_ids": case["evidence_ids"], "error": f"{type(error).__name__}: {error}",
+    -                        "correct": False, "unsupported": False, "evidence_retained": False if case["evidence_ids"] else None}
+150 +                 row = {
+151 +                     "id": case["id"],
+152 +                     "category": case["category"],
+153 +                     "method": method,
+154 +                     "messages": case["messages"],
+155 +                     "expected": case["expected"],
+156 +                     "evidence_ids": case["evidence_ids"],
+157 +                     "error": f"{type(error).__name__}: {error}",
+158 +                     "correct": False,
+159 +                     "unsupported": False,
+160 +                     "evidence_retained": False if case["evidence_ids"] else None,
+161 +                 }
+162 |             rows.append(row)
+    -             args.output.write_text(json.dumps({"status": "RUNNING", "rows": rows}, indent=2) + "\n", encoding="utf-8")
+163 +             args.output.write_text(
+164 +                 json.dumps({"status": "RUNNING", "rows": rows}, indent=2) + "\n", encoding="utf-8"
+165 +             )
+166 |             print(case["id"], method, row["correct"], flush=True)
+--------------------------------------------------------------------------------
+170 |         valid = [row for row in subset if "metrics" in row]
+    -         summary[method] = {"correct": sum(row["correct"] for row in subset), "cases": len(subset),
+    -                            "unsupported": sum(row["unsupported"] for row in subset),
+    -                            "errors": len(subset) - len(valid),
+    -                            "known_evidence_retained": sum(row["evidence_retained"] is True for row in subset),
+    -                            "known_evidence_cases": sum(row["evidence_retained"] is not None for row in subset),
+    -                            "unnecessary_older_selected": sum(row.get("unnecessary_older_selected") or 0 for row in subset),
+    -                            "available_history_tokens": sum(row["metrics"]["input_tokens"] for row in valid),
+    -                            "selected_tokens": sum(row["metrics"]["selected_context_tokens"] for row in valid),
+    -                            "total_prompt_eval_tokens": sum(row["metrics"]["total_prompt_eval_tokens"] for row in valid),
+    -                            "selector_scan_bytes": sum(row["metrics"]["selector_scan_bytes"] for row in valid),
+    -                            "selector_ms": round(sum(row["metrics"]["selector_ms"] for row in valid), 3),
+    -                            "response_ms": round(sum(row["metrics"]["response_ms"] for row in valid), 3),
+    -                            "by_category": {category: {"correct": sum(row["correct"] for row in subset if row["category"] == category),
+    -                                                       "cases": sum(row["category"] == category for row in subset)}
+    -                                            for category in manifest["categories"]}}
+    -     result = {"schema": "toruk-chat-selector-final-v2", "status": "COMPLETE", "freeze": frozen,
+    -               "model": backend.model_id, "selector_sha256": trained.sha256,
+    -               "settings": {"temperature": 0, "top_p": 1, "max_new_tokens": 32, "max_prompt_tokens": 512},
+    -               "memory_before": before,
+    -               "memory_after": {"available_ram_gib": available_ram_gib(), "gpu_memory_mib": gpu_memory_mib()},
+    -               "wall_seconds": round(time.perf_counter() - start, 3), "summary": summary, "rows": rows}
+171 +         summary[method] = {
+172 +             "correct": sum(row["correct"] for row in subset),
+173 +             "cases": len(subset),
+174 +             "unsupported": sum(row["unsupported"] for row in subset),
+175 +             "errors": len(subset) - len(valid),
+176 +             "known_evidence_retained": sum(row["evidence_retained"] is True for row in subset),
+177 +             "known_evidence_cases": sum(row["evidence_retained"] is not None for row in subset),
+178 +             "unnecessary_older_selected": sum(
+179 +                 row.get("unnecessary_older_selected") or 0 for row in subset
+180 +             ),
+181 +             "available_history_tokens": sum(row["metrics"]["input_tokens"] for row in valid),
+182 +             "selected_tokens": sum(row["metrics"]["selected_context_tokens"] for row in valid),
+183 +             "total_prompt_eval_tokens": sum(
+184 +                 row["metrics"]["total_prompt_eval_tokens"] for row in valid
+185 +             ),
+186 +             "selector_scan_bytes": sum(row["metrics"]["selector_scan_bytes"] for row in valid),
+187 +             "selector_ms": round(sum(row["metrics"]["selector_ms"] for row in valid), 3),
+188 +             "response_ms": round(sum(row["metrics"]["response_ms"] for row in valid), 3),
+189 +             "by_category": {
+190 +                 category: {
+191 +                     "correct": sum(row["correct"] for row in subset if row["category"] == category),
+192 +                     "cases": sum(row["category"] == category for row in subset),
+193 +                 }
+194 +                 for category in manifest["categories"]
+195 +             },
+196 +         }
+197 +     result = {
+198 +         "schema": "toruk-chat-selector-final-v2",
+199 +         "status": "COMPLETE",
+200 +         "freeze": frozen,
+201 +         "model": backend.model_id,
+202 +         "selector_sha256": trained.sha256,
+203 +         "settings": {"temperature": 0, "top_p": 1, "max_new_tokens": 32, "max_prompt_tokens": 512},
+204 +         "memory_before": before,
+205 +         "memory_after": {
+206 +             "available_ram_gib": available_ram_gib(),
+207 +             "gpu_memory_mib": gpu_memory_mib(),
+208 +         },
+209 +         "wall_seconds": round(time.perf_counter() - start, 3),
+210 +         "summary": summary,
+211 +         "rows": rows,
+212 +     }
+213 |     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    |
+
+unformatted: File would be reformatted
+   --> scripts\train_chat_selector_v2.py:27:26
+    |
+26  |             if message["role"] == "user":
+    -                 x.append(features(messages[-1]["content"], message["content"], message["role"], index, len(messages)))
+27  +                 x.append(
+28  +                     features(
+29  +                         messages[-1]["content"],
+30  +                         message["content"],
+31  +                         message["role"],
+32  +                         index,
+33  +                         len(messages),
+34  +                     )
+35  +                 )
+36  |                 y.append(float(index in case["evidence_ids"]))
+--------------------------------------------------------------------------------
+52  |     class Counters(ctypes.Structure):
+    -         _fields_ = [("cb", ctypes.c_ulong), ("PageFaultCount", ctypes.c_ulong),
+    -                     ("PeakWorkingSetSize", ctypes.c_size_t), ("WorkingSetSize", ctypes.c_size_t),
+    -                     ("QuotaPeakPagedPoolUsage", ctypes.c_size_t), ("QuotaPagedPoolUsage", ctypes.c_size_t),
+    -                     ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t), ("QuotaNonPagedPoolUsage", ctypes.c_size_t),
+    -                     ("PagefileUsage", ctypes.c_size_t), ("PeakPagefileUsage", ctypes.c_size_t)]
+53  +         _fields_ = [
+54  +             ("cb", ctypes.c_ulong),
+55  +             ("PageFaultCount", ctypes.c_ulong),
+56  +             ("PeakWorkingSetSize", ctypes.c_size_t),
+57  +             ("WorkingSetSize", ctypes.c_size_t),
+58  +             ("QuotaPeakPagedPoolUsage", ctypes.c_size_t),
+59  +             ("QuotaPagedPoolUsage", ctypes.c_size_t),
+60  +             ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t),
+61  +             ("QuotaNonPagedPoolUsage", ctypes.c_size_t),
+62  +             ("PagefileUsage", ctypes.c_size_t),
+63  +             ("PeakPagefileUsage", ctypes.c_size_t),
+64  +         ]
+65  +
+66  |     counters = Counters()
+67  |     counters.cb = ctypes.sizeof(counters)
+    -     if ctypes.windll.psapi.GetProcessMemoryInfo(ctypes.windll.kernel32.GetCurrentProcess(), ctypes.byref(counters), counters.cb):
+68  +     if ctypes.windll.psapi.GetProcessMemoryInfo(
+69  +         ctypes.windll.kernel32.GetCurrentProcess(), ctypes.byref(counters), counters.cb
+70  +     ):
+71  |         return counters.PeakWorkingSetSize
+72  |     try:
+    -         return int(subprocess.check_output(["powershell", "-NoProfile", "-Command",
+    -                                             f"(Get-Process -Id {os.getpid()}).PeakWorkingSet64"], text=True).strip())
+73  +         return int(
+74  +             subprocess.check_output(
+75  +                 [
+76  +                     "powershell",
+77  +                     "-NoProfile",
+78  +                     "-Command",
+79  +                     f"(Get-Process -Id {os.getpid()}).PeakWorkingSet64",
+80  +                 ],
+81  +                 text=True,
+82  +             ).strip()
+83  +         )
+84  |     except (OSError, ValueError, subprocess.CalledProcessError):
+--------------------------------------------------------------------------------
+100 |     for split in ("train", "dev"):
+    -         if hashlib.sha256((args.data_dir / f"{split}.jsonl").read_bytes()).hexdigest() != manifest["split_sha256"][split]:
+101 +         if (
+102 +             hashlib.sha256((args.data_dir / f"{split}.jsonl").read_bytes()).hexdigest()
+103 +             != manifest["split_sha256"][split]
+104 +         ):
+105 |             raise ValueError(f"{split} hash mismatch")
+106 |     train, dev = (read_cases(args.data_dir / f"{split}.jsonl") for split in ("train", "dev"))
+    -     if any(case["split"] != "train" for case in train) or any(case["split"] != "dev" for case in dev):
+107 +     if any(case["split"] != "train" for case in train) or any(
+108 +         case["split"] != "dev" for case in dev
+109 +     ):
+110 |         raise ValueError("split label mismatch")
+--------------------------------------------------------------------------------
+126 |         optimizer.zero_grad()
+    -         loss = F.binary_cross_entropy_with_logits(model(x).squeeze(-1), y, pos_weight=torch.tensor(5.0))
+127 +         loss = F.binary_cross_entropy_with_logits(
+128 +             model(x).squeeze(-1), y, pos_weight=torch.tensor(5.0)
+129 +         )
+130 |         loss.backward()
+--------------------------------------------------------------------------------
+138 |     threshold = max(thresholds, key=lambda t: (f1(dev_scores, dy.tolist(), t), t))
+    -     checkpoint = {"format": FORMAT, "features": list(FEATURES),
+    -                   "weights": model.weight.detach().squeeze(0).tolist(),
+    -                   "bias": float(model.bias.detach().item()), "threshold": threshold,
+    -                   "protocol": "chat-selector-v2", "data_manifest_sha256": hashlib.sha256(manifest_raw).hexdigest(),
+    -                   "train_sha256": manifest["split_sha256"]["train"], "dev_sha256": manifest["split_sha256"]["dev"],
+    -                   "training": {"pilot": args.pilot, "seed": 173, "steps": steps, "optimizer": "Adam",
+    -                                "lr": 0.03, "objective": "weighted evidence-turn BCE", "positive_weight": 5,
+    -                                "train_cases": len(train), "dev_cases": len(dev), "train_examples": len(y),
+    -                                "dev_examples": len(dy), "curve": curve, "train_evidence_f1": f1(train_scores, y.tolist(), threshold),
+    -                                "dev_evidence_f1": f1(dev_scores, dy.tolist(), threshold),
+    -                                "seconds": round(time.perf_counter() - started, 4),
+    -                                "peak_working_set_bytes": peak_working_set()}}
+139 +     checkpoint = {
+140 +         "format": FORMAT,
+141 +         "features": list(FEATURES),
+142 +         "weights": model.weight.detach().squeeze(0).tolist(),
+143 +         "bias": float(model.bias.detach().item()),
+144 +         "threshold": threshold,
+145 +         "protocol": "chat-selector-v2",
+146 +         "data_manifest_sha256": hashlib.sha256(manifest_raw).hexdigest(),
+147 +         "train_sha256": manifest["split_sha256"]["train"],
+148 +         "dev_sha256": manifest["split_sha256"]["dev"],
+149 +         "training": {
+150 +             "pilot": args.pilot,
+151 +             "seed": 173,
+152 +             "steps": steps,
+153 +             "optimizer": "Adam",
+154 +             "lr": 0.03,
+155 +             "objective": "weighted evidence-turn BCE",
+156 +             "positive_weight": 5,
+157 +             "train_cases": len(train),
+158 +             "dev_cases": len(dev),
+159 +             "train_examples": len(y),
+160 +             "dev_examples": len(dy),
+161 +             "curve": curve,
+162 +             "train_evidence_f1": f1(train_scores, y.tolist(), threshold),
+163 +             "dev_evidence_f1": f1(dev_scores, dy.tolist(), threshold),
+164 +             "seconds": round(time.perf_counter() - started, 4),
+165 +             "peak_working_set_bytes": peak_working_set(),
+166 +         },
+167 +     }
+168 |     args.output.parent.mkdir(parents=True, exist_ok=True)
+169 |     args.output.write_text(json.dumps(checkpoint, indent=2) + "\n", encoding="utf-8")
+170 |     loaded = ChatRelevanceSelector(args.output)
+    -     replay = [loaded.score(dev[0]["messages"][-1]["content"], dev[0]["messages"][0]["content"],
+    -                            "user", 0, len(dev[0]["messages"])) for _ in range(2)]
+171 +     replay = [
+172 +         loaded.score(
+173 +             dev[0]["messages"][-1]["content"],
+174 +             dev[0]["messages"][0]["content"],
+175 +             "user",
+176 +             0,
+177 +             len(dev[0]["messages"]),
+178 +         )
+179 +         for _ in range(2)
+180 +     ]
+181 |     if replay[0] != replay[1]:
+182 |         raise AssertionError("checkpoint replay was not deterministic")
+    -     print(json.dumps({"checkpoint_sha256": loaded.sha256, "threshold": threshold,
+    -                       "replay_score": replay[0], "training": checkpoint["training"]}, indent=2))
+183 +     print(
+184 +         json.dumps(
+185 +             {
+186 +                 "checkpoint_sha256": loaded.sha256,
+187 +                 "threshold": threshold,
+188 +                 "replay_score": replay[0],
+189 +                 "training": checkpoint["training"],
+190 +             },
+191 +             indent=2,
+192 +         )
+193 +     )
+194 |
+    |
+
+3 files would be reformatted, 76 files already formatted

@@ -1,0 +1,296 @@
+{
+  "overall": "FAIL",
+  "verify_runner_exit_code": 1,
+  "commit": "9163780930ea91c09d596e3e6284dc9e96f67109",
+  "working_tree": "uncommitted; not tested remotely",
+  "remote_run": 41472041835,
+  "remote_status": "failure",
+  "checks": {
+    "build-fresh": {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "artifacts/checks/ci-integration-20261103140657/package"
+      ],
+      "exit_code": 0,
+      "seconds": 3.5622599999996964,
+      "log": "artifacts/checks/ci-integration-20261103140657/build-fresh.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "build": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation"
+      ],
+      "exit_code": 1,
+      "seconds": 1.8496155000002545,
+      "log": "artifacts/checks/ci-integration-20261103140657/build.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "diagnose": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "exit_code": 0,
+      "seconds": 2.2263106999998854,
+      "log": "artifacts/checks/ci-integration-20261103140657/diagnose.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "diff-check": {
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06465320000006614,
+      "log": "artifacts/checks/ci-integration-20261103140657/diff-check.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "format": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "exit_code": 1,
+      "seconds": 0.09834919999957492,
+      "log": "artifacts/checks/ci-integration-20261103140657/format.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "help": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "exit_code": 0,
+      "seconds": 2.3548011999992013,
+      "log": "artifacts/checks/ci-integration-20261103140657/help.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "import": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import toruk_lm; print(toruk_lm.__version__)"
+      ],
+      "exit_code": 0,
+      "seconds": 0.041132700000162004,
+      "log": "artifacts/checks/ci-integration-20261103140657/import.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "install-local": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 3.179597299999841,
+      "log": "artifacts/checks/ci-integration-20261103140657/install-local.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "lint": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 1,
+      "seconds": 0.10704050000003917,
+      "log": "artifacts/checks/ci-integration-20261103140657/lint.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "node-check": {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "run",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0835252000006221,
+      "log": "artifacts/checks/ci-integration-20261103140657/node-check.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "node-tests": {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "exit_code": 0,
+      "seconds": 0.980368699999417,
+      "log": "artifacts/checks/ci-integration-20261103140657/node-tests.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "package": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6465693000000101,
+      "log": "artifacts/checks/ci-integration-20261103140657/package.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "reproduce": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/foundation.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\checks\\ci-integration-20261103140657\\pipeline"
+      ],
+      "exit_code": 0,
+      "seconds": 4.100642700000208,
+      "log": "artifacts/checks/ci-integration-20261103140657/reproduce.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "research-config": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate-config",
+        "--config",
+        "configs/reproduce-smoke-v1.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.179552600000534,
+      "log": "artifacts/checks/ci-integration-20261103140657/research-config.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "research-smoke": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/reproduce-smoke-v1.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\checks\\ci-integration-20261103140657\\research-smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 4.765150899999753,
+      "log": "artifacts/checks/ci-integration-20261103140657/research-smoke.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "staged-diff-check": {
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0336832000002687,
+      "log": "artifacts/checks/ci-integration-20261103140657/staged-diff-check.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "summarize": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "summarize",
+        "--run",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\checks\\ci-integration-20261103140657\\pipeline",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\checks\\ci-integration-20261103140657\\tables"
+      ],
+      "exit_code": 0,
+      "seconds": 3.892840299999989,
+      "log": "artifacts/checks/ci-integration-20261103140657/summarize.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "tests": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "seconds": 136.19243880000067,
+      "log": "artifacts/checks/ci-integration-20261103140657/tests.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "types-linux": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "exit_code": 0,
+      "seconds": 48.55039519999991,
+      "log": "artifacts/checks/ci-integration-20261103140657/types-linux.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "types": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "exit_code": 0,
+      "seconds": 45.95269769999959,
+      "log": "artifacts/checks/ci-integration-20261103140657/types.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    },
+    "validate": {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate",
+        "--manifest",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\checks\\ci-integration-20261103140657\\pipeline\\data\\manifest.json",
+        "--config",
+        "configs/foundation.json",
+        "--checkpoint",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\checks\\ci-integration-20261103140657\\pipeline\\train\\checkpoint.pt"
+      ],
+      "exit_code": 0,
+      "seconds": 2.1375895000001037,
+      "log": "artifacts/checks/ci-integration-20261103140657/validate.log",
+      "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42"
+    }
+  }
+}

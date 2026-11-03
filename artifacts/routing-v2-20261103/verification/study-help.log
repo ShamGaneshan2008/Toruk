@@ -1,0 +1,14 @@
+usage: study_routing_v2.py [-h] --run RUN [--seed {31,47}]
+                           [--method {recent,lexical,learned,old,new,new_zero}]
+                           {register,train,development,freeze,evaluate,run,analyze}
+
+Path A: one routing intervention; frozen baseline comparison and raw evidence.
+
+positional arguments:
+  {register,train,development,freeze,evaluate,run,analyze}
+
+options:
+  -h, --help            show this help message and exit
+  --run RUN
+  --seed {31,47}
+  --method {recent,lexical,learned,old,new,new_zero}

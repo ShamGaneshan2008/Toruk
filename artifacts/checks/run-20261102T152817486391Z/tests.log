@@ -1,0 +1,184 @@
+
+=================================== ERRORS ====================================
+_______________ ERROR collecting tests/test_chat_foundation.py ________________
+.venv\Lib\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+.venv\Lib\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv\Lib\site-packages\_pytest\assertion\rewrite.py:179: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\_pytest\assertion\rewrite.py:348: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\ast.py:52: in parse
+    return compile(source, filename, mode, flags,
+E     File "C:\Users\susee\VS_CODE_PROJECT\Toruk\tests\test_chat_foundation.py", line 23
+E       )
+E       ^
+E   SyntaxError: unmatched ')'
+______________ ERROR collecting tests/test_chat_release_eval.py _______________
+.venv\Lib\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+.venv\Lib\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv\Lib\site-packages\_pytest\assertion\rewrite.py:188: in exec_module
+    exec(co, module.__dict__)
+tests\test_chat_release_eval.py:11: in <module>
+    from evaluate_chat_release_v2 import score_answer, validate_fixture  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts\evaluate_chat_release_v2.py:14: in <module>
+    from evaluate_chat_foundation import MAX_PRIVATE_BYTES, private_bytes
+scripts\evaluate_chat_foundation.py:12: in <module>
+    from toruk_lm.chat_foundation import PretrainedChatBackend
+E     File "C:\Users\susee\VS_CODE_PROJECT\Toruk\src\toruk_lm\chat_foundation.py", line 14
+E       <<<<<<< HEAD
+E       ^^
+E   SyntaxError: invalid syntax
+_______________ ERROR collecting tests/test_chat_selector_v2.py _______________
+.venv\Lib\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+.venv\Lib\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv\Lib\site-packages\_pytest\assertion\rewrite.py:188: in exec_module
+    exec(co, module.__dict__)
+tests\test_chat_selector_v2.py:10: in <module>
+    from scripts.evaluate_chat_selector_v2 import LexicalSelector, score
+scripts\evaluate_chat_selector_v2.py:10: in <module>
+    from evaluate_local_backbone import gpu_memory_mib
+scripts\evaluate_local_backbone.py:11: in <module>
+    from evaluate_chat_release_v2 import aggregate, score_answer, validate_fixture
+scripts\evaluate_chat_release_v2.py:14: in <module>
+    from evaluate_chat_foundation import MAX_PRIVATE_BYTES, private_bytes
+scripts\evaluate_chat_foundation.py:12: in <module>
+    from toruk_lm.chat_foundation import PretrainedChatBackend
+E     File "C:\Users\susee\VS_CODE_PROJECT\Toruk\src\toruk_lm\chat_foundation.py", line 14
+E       <<<<<<< HEAD
+E       ^^
+E   SyntaxError: invalid syntax
+______________ ERROR collecting tests/test_context_selection.py _______________
+.venv\Lib\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+.venv\Lib\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv\Lib\site-packages\_pytest\assertion\rewrite.py:188: in exec_module
+    exec(co, module.__dict__)
+tests\test_context_selection.py:10: in <module>
+    from toruk_lm.inference_server import validate_request
+E     File "C:\Users\susee\VS_CODE_PROJECT\Toruk\src\toruk_lm\inference_server.py", line 149
+E       <<<<<<< HEAD
+E       ^^
+E   SyntaxError: invalid syntax
+_______________ ERROR collecting tests/test_inference_server.py _______________
+.venv\Lib\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+.venv\Lib\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv\Lib\site-packages\_pytest\assertion\rewrite.py:188: in exec_module
+    exec(co, module.__dict__)
+tests\test_inference_server.py:13: in <module>
+    from toruk_lm.inference_server import make_handler, validate_request
+E     File "C:\Users\susee\VS_CODE_PROJECT\Toruk\src\toruk_lm\inference_server.py", line 149
+E       <<<<<<< HEAD
+E       ^^
+E   SyntaxError: invalid syntax
+_________________ ERROR collecting tests/test_ollama_chat.py __________________
+.venv\Lib\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+.venv\Lib\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+..\..\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv\Lib\site-packages\_pytest\assertion\rewrite.py:188: in exec_module
+    exec(co, module.__dict__)
+tests\test_ollama_chat.py:8: in <module>
+    from toruk_lm.ollama_chat import OllamaChatBackend
+src\toruk_lm\ollama_chat.py:11: in <module>
+    from toruk_lm.chat_foundation import MAX_PROMPT_TOKENS, validate_sampling
+E     File "C:\Users\susee\VS_CODE_PROJECT\Toruk\src\toruk_lm\chat_foundation.py", line 14
+E       <<<<<<< HEAD
+E       ^^
+E   SyntaxError: invalid syntax
+============================== warnings summary ===============================
+.venv\Lib\site-packages\_pytest\cacheprovider.py:469
+  C:\Users\susee\VS_CODE_PROJECT\Toruk\.venv\Lib\site-packages\_pytest\cacheprovider.py:469: PytestCacheWarning: cache could not write path C:\Users\susee\VS_CODE_PROJECT\Toruk\.pytest_cache\v\cache\nodeids: [Errno 13] Permission denied: 'C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.pytest_cache\\v\\cache\\nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+.venv\Lib\site-packages\_pytest\cacheprovider.py:423
+  C:\Users\susee\VS_CODE_PROJECT\Toruk\.venv\Lib\site-packages\_pytest\cacheprovider.py:423: PytestCacheWarning: could not create cache path C:\Users\susee\VS_CODE_PROJECT\Toruk\.pytest_cache\v\cache\lastfailed: [WinError 5] Access is denied: 'C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_chat_foundation.py
+ERROR tests/test_chat_release_eval.py
+ERROR tests/test_chat_selector_v2.py
+ERROR tests/test_context_selection.py
+ERROR tests/test_inference_server.py
+ERROR tests/test_ollama_chat.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!
+2 warnings, 6 errors in 2.54s

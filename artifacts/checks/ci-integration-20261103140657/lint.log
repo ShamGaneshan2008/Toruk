@@ -1,0 +1,539 @@
+E501 Line too long (109 > 100)
+  --> scripts\build_chat_selector_data_v2.py:11:101
+   |
+ 9 | SEEDS = {"train": 711, "dev": 991, "final": 1423}
+10 | SIZES = {"train": 24, "dev": 8, "final": 4}  # per category
+11 | CATEGORIES = ("correction", "preservation", "conflict", "irrelevant", "long_recall", "multi_fact", "unknown")
+   |                                                                                                     ^^^^^^^^^
+12 | NOUNS = {
+13 |     "train": ("city", "archive key", "hobby"),
+   |
+
+E501 Line too long (114 > 100)
+  --> scripts\build_chat_selector_data_v2.py:20:101
+   |
+18 |     "train": ("{name}'s {slot} is {value}.", "What is {name}'s {slot}?"),
+19 |     "dev": ("For {name}, record {slot}: {value}.", "Tell me the {slot} for {name}."),
+20 |     "final": ("Please remember this entry: {name} has {value} as the {slot}.", "Which {slot} belongs to {name}?"),
+   |                                                                                                     ^^^^^^^^^^^^^^
+21 | }
+22 | VALUES = {
+   |
+
+E501 Line too long (105 > 100)
+  --> scripts\build_chat_selector_data_v2.py:44:101
+   |
+42 |         expected = [code]
+43 |     if category == "multi_fact":
+44 |         messages.append({"role": "user", "content": frame.format(name=name, slot=code_slot, value=code)})
+   |                                                                                                     ^^^^^
+45 |         evidence.append(1)
+46 |         expected.append(code)
+   |
+
+E501 Line too long (117 > 100)
+  --> scripts\build_chat_selector_data_v2.py:55:101
+   |
+53 |         other = f"{split.capitalize()}visitor{number:02d}{pair}"
+54 |         distraction = frame.format(name=other, slot=slot, value=rng.choice(VALUES[split][:4]))
+55 |         distraction += " The lighthouse log describes a bridge, a market, and a rainy evening. " * (2 if long else 1)
+   |                                                                                                     ^^^^^^^^^^^^^^^^^
+56 |         if pair == (3 if long else 0) and category in ("correction", "conflict"):
+57 |             marker = "Correction: " if category == "correction" else "The later entry replaces the old one: "
+   |
+
+E501 Line too long (109 > 100)
+  --> scripts\build_chat_selector_data_v2.py:57:101
+   |
+55 |         distraction += " The lighthouse log describes a bridge, a market, and a rainy evening. " * (2 if long else 1)
+56 |         if pair == (3 if long else 0) and category in ("correction", "conflict"):
+57 |             marker = "Correction: " if category == "correction" else "The later entry replaces the old one: "
+   |                                                                                                     ^^^^^^^^^
+58 |             distraction = marker + frame.format(name=name, slot=slot, value=new)
+59 |             evidence = [len(messages)]
+   |
+
+E501 Line too long (111 > 100)
+  --> scripts\build_chat_selector_data_v2.py:66:101
+   |
+64 |         if pair == (3 if long else 0) and category == "irrelevant":
+65 |             distraction = frame.format(name=name, slot=other_slot, value="Harp")
+66 |         messages.extend([{"role": "user", "content": distraction}, {"role": "assistant", "content": "Noted."}])
+   |                                                                                                     ^^^^^^^^^^^
+67 |     if category == "multi_fact":
+68 |         query = f"Give both the {slot} and {code_slot} for {name}."
+   |
+
+E501 Line too long (108 > 100)
+  --> scripts\build_chat_selector_data_v2.py:90:101
+   |
+88 |     for split, seed in SEEDS.items():
+89 |         rng = random.Random(seed)
+90 |         cases = [make_case(split, category, n, rng) for category in CATEGORIES for n in range(SIZES[split])]
+   |                                                                                                     ^^^^^^^^
+91 |         raw = "".join(json.dumps(case, sort_keys=True) + "\n" for case in cases).encode()
+92 |         (args.output_dir / f"{split}.jsonl").write_bytes(raw)
+   |
+
+E501 Line too long (107 > 100)
+   --> scripts\build_chat_selector_data_v2.py:99:101
+    |
+ 97 |                 "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+ 98 |                 "split_sha256": hashes}
+ 99 |     (args.output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    |                                                                                                     ^^^^^^^
+100 |     print(json.dumps(manifest, indent=2))
+    |
+
+F401 [*] `toruk_lm.chat_selector.ChatRelevanceSelector` imported but unused
+  --> scripts\evaluate_chat_selector_v2.py:13:36
+   |
+11 | from probe_ollama_backbone import available_ram_gib
+12 |
+13 | from toruk_lm.chat_selector import ChatRelevanceSelector, words
+   |                                    ^^^^^^^^^^^^^^^^^^^^^
+14 | from toruk_lm.ollama_chat import OllamaChatBackend
+   |
+help: Remove unused import: `toruk_lm.chat_selector.ChatRelevanceSelector`
+   |
+12 |
+   - from toruk_lm.chat_selector import ChatRelevanceSelector, words
+13 + from toruk_lm.chat_selector import words
+14 | from toruk_lm.ollama_chat import OllamaChatBackend
+   |
+
+E501 Line too long (109 > 100)
+  --> scripts\evaluate_chat_selector_v2.py:16:101
+   |
+14 | from toruk_lm.ollama_chat import OllamaChatBackend
+15 |
+16 | UNKNOWN = ("don't know", "do not know", "not supplied", "not provided", "no information", "cannot determine")
+   |                                                                                                     ^^^^^^^^^
+
+E501 Line too long (105 > 100)
+  --> scripts\evaluate_chat_selector_v2.py:35:101
+   |
+34 | def contains(answer: str, value: str) -> bool:
+35 |     return re.search(r"(?<!\w)" + re.escape(value.casefold()) + r"(?!\w)", answer.casefold()) is not None
+   |                                                                                                     ^^^^^
+
+E501 Line too long (114 > 100)
+  --> scripts\evaluate_chat_selector_v2.py:42:101
+   |
+40 |         uncertain = any(phrase in answer.casefold() for phrase in UNKNOWN)
+41 |         asserted = bool(re.search(r"\b(?:TRAIN|DEV|FINAL)CODE\d+\b", answer, re.I))
+42 |         asserted = asserted or any(contains(answer, value) for value in ("Mysuru", "Nashik", "Udaipur", "Ranchi"))
+   |                                                                                                     ^^^^^^^^^^^^^^
+43 |         return uncertain and not asserted, not uncertain or asserted
+44 |     complete = all(contains(answer, value) for value in case["expected"])
+   |
+
+E501 Line too long (122 > 100)
+  --> scripts\evaluate_chat_selector_v2.py:75:101
+   |
+73 |         raise ValueError("final split or model digest mismatch")
+74 |     checkpoint = json.loads(args.selector_checkpoint.read_text(encoding="utf-8"))
+75 |     if checkpoint.get("protocol") != "chat-selector-v2" or checkpoint.get("data_manifest_sha256") != expected["manifest"]:
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+76 |         raise ValueError("selector checkpoint is not bound to v2 data")
+77 |     cases = [json.loads(line) for line in (args.data_dir / "final.jsonl").read_text(encoding="utf-8").splitlines()]
+   |
+
+E501 Line too long (115 > 100)
+  --> scripts\evaluate_chat_selector_v2.py:77:101
+   |
+75 |     if checkpoint.get("protocol") != "chat-selector-v2" or checkpoint.get("data_manifest_sha256") != expected["manifest"]:
+76 |         raise ValueError("selector checkpoint is not bound to v2 data")
+77 |     cases = [json.loads(line) for line in (args.data_dir / "final.jsonl").read_text(encoding="utf-8").splitlines()]
+   |                                                                                                     ^^^^^^^^^^^^^^^
+78 |     if any(case["split"] != "final" or case["template_family"] != "final" for case in cases):
+79 |         raise ValueError("unexpected final case")
+   |
+
+E501 Line too long (105 > 100)
+  --> scripts\evaluate_chat_selector_v2.py:89:101
+   |
+87 |     for case in cases:
+88 |         for method in ("BASELINE", "LEXICAL", "TORUK"):
+89 |             backend.selector = trained if method == "TORUK" else lexical if method == "LEXICAL" else None
+   |                                                                                                     ^^^^^
+90 |             try:
+91 |                 response = backend.reply_with_metrics(case["messages"], 32, mode="BASELINE" if method == "BASELINE" else "TORUK", temp…
+   |
+
+E501 Line too long (153 > 100)
+  --> scripts\evaluate_chat_selector_v2.py:91:101
+   |
+89 | …else lexical if method == "LEXICAL" else None
+90 | …
+91 | …messages"], 32, mode="BASELINE" if method == "BASELINE" else "TORUK", temperature=0, top_p=1)
+   |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+92 | …se["metrics"]
+93 | …
+   |
+
+E501 Line too long (155 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:100:101
+    |
+ 98 | …expected": case["expected"],
+ 99 | …": answer, "correct": correct,
+100 | …etained": all(i in selected for i in case["evidence_ids"]) if case["evidence_ids"] else None,
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+101 | …ted - recent) if not case["evidence_ids"] else None,
+102 | …
+    |
+
+E501 Line too long (114 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:101:101
+    |
+ 99 | …                "forbidden": case["forbidden"], "answer": answer, "correct": correct,
+100 | …                "unsupported": unsupported, "evidence_retained": all(i in selected for i in case["evidence_ids"]) if case["evidence_…
+101 | …                "unnecessary_older_selected": len(selected - recent) if not case["evidence_ids"] else None,
+    |                                                                                               ^^^^^^^^^^^^^^
+102 | …                "metrics": metrics}
+103 | …     except Exception as error:
+    |
+
+E501 Line too long (105 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:106:101
+    |
+104 |                 row = {"id": case["id"], "category": case["category"], "method": method,
+105 |                        "messages": case["messages"], "expected": case["expected"],
+106 |                        "evidence_ids": case["evidence_ids"], "error": f"{type(error).__name__}: {error}",
+    |                                                                                                     ^^^^^
+107 |                        "correct": False, "unsupported": False, "evidence_retained": False if case["evidence_ids"] else None}
+108 |             rows.append(row)
+    |
+
+E501 Line too long (124 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:107:101
+    |
+105 |                        "messages": case["messages"], "expected": case["expected"],
+106 |                        "evidence_ids": case["evidence_ids"], "error": f"{type(error).__name__}: {error}",
+107 |                        "correct": False, "unsupported": False, "evidence_retained": False if case["evidence_ids"] else None}
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+108 |             rows.append(row)
+109 |             args.output.write_text(json.dumps({"status": "RUNNING", "rows": rows}, indent=2) + "\n", encoding="utf-8")
+    |
+
+E501 Line too long (118 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:109:101
+    |
+107 |                        "correct": False, "unsupported": False, "evidence_retained": False if case["evidence_ids"] else None}
+108 |             rows.append(row)
+109 |             args.output.write_text(json.dumps({"status": "RUNNING", "rows": rows}, indent=2) + "\n", encoding="utf-8")
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^
+110 |             print(case["id"], method, row["correct"], flush=True)
+111 |     summary = {}
+    |
+
+E501 Line too long (110 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:118:101
+    |
+116 | …                     "unsupported": sum(row["unsupported"] for row in subset),
+117 | …                     "errors": len(subset) - len(valid),
+118 | …                     "known_evidence_retained": sum(row["evidence_retained"] is True for row in subset),
+    |                                                                                                ^^^^^^^^^^
+119 | …                     "known_evidence_cases": sum(row["evidence_retained"] is not None for row in subset),
+120 | …                     "unnecessary_older_selected": sum(row.get("unnecessary_older_selected") or 0 for row in subset),
+    |
+
+E501 Line too long (111 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:119:101
+    |
+117 | …                     "errors": len(subset) - len(valid),
+118 | …                     "known_evidence_retained": sum(row["evidence_retained"] is True for row in subset),
+119 | …                     "known_evidence_cases": sum(row["evidence_retained"] is not None for row in subset),
+    |                                                                                                ^^^^^^^^^^^
+120 | …                     "unnecessary_older_selected": sum(row.get("unnecessary_older_selected") or 0 for row in subset),
+121 | …                     "available_history_tokens": sum(row["metrics"]["input_tokens"] for row in valid),
+    |
+
+E501 Line too long (123 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:120:101
+    |
+118 | …                     "known_evidence_retained": sum(row["evidence_retained"] is True for row in subset),
+119 | …                     "known_evidence_cases": sum(row["evidence_retained"] is not None for row in subset),
+120 | …                     "unnecessary_older_selected": sum(row.get("unnecessary_older_selected") or 0 for row in subset),
+    |                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^
+121 | …                     "available_history_tokens": sum(row["metrics"]["input_tokens"] for row in valid),
+122 | …                     "selected_tokens": sum(row["metrics"]["selected_context_tokens"] for row in valid),
+    |
+
+E501 Line too long (108 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:121:101
+    |
+119 | …                     "known_evidence_cases": sum(row["evidence_retained"] is not None for row in subset),
+120 | …                     "unnecessary_older_selected": sum(row.get("unnecessary_older_selected") or 0 for row in subset),
+121 | …                     "available_history_tokens": sum(row["metrics"]["input_tokens"] for row in valid),
+    |                                                                                                ^^^^^^^^
+122 | …                     "selected_tokens": sum(row["metrics"]["selected_context_tokens"] for row in valid),
+123 | …                     "total_prompt_eval_tokens": sum(row["metrics"]["total_prompt_eval_tokens"] for row in valid),
+    |
+
+E501 Line too long (110 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:122:101
+    |
+120 | …                     "unnecessary_older_selected": sum(row.get("unnecessary_older_selected") or 0 for row in subset),
+121 | …                     "available_history_tokens": sum(row["metrics"]["input_tokens"] for row in valid),
+122 | …                     "selected_tokens": sum(row["metrics"]["selected_context_tokens"] for row in valid),
+    |                                                                                                ^^^^^^^^^^
+123 | …                     "total_prompt_eval_tokens": sum(row["metrics"]["total_prompt_eval_tokens"] for row in valid),
+124 | …                     "selector_scan_bytes": sum(row["metrics"]["selector_scan_bytes"] for row in valid),
+    |
+
+E501 Line too long (120 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:123:101
+    |
+121 | …                     "available_history_tokens": sum(row["metrics"]["input_tokens"] for row in valid),
+122 | …                     "selected_tokens": sum(row["metrics"]["selected_context_tokens"] for row in valid),
+123 | …                     "total_prompt_eval_tokens": sum(row["metrics"]["total_prompt_eval_tokens"] for row in valid),
+    |                                                                                                ^^^^^^^^^^^^^^^^^^^^
+124 | …                     "selector_scan_bytes": sum(row["metrics"]["selector_scan_bytes"] for row in valid),
+125 | …                     "selector_ms": round(sum(row["metrics"]["selector_ms"] for row in valid), 3),
+    |
+
+E501 Line too long (110 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:124:101
+    |
+122 | …                     "selected_tokens": sum(row["metrics"]["selected_context_tokens"] for row in valid),
+123 | …                     "total_prompt_eval_tokens": sum(row["metrics"]["total_prompt_eval_tokens"] for row in valid),
+124 | …                     "selector_scan_bytes": sum(row["metrics"]["selector_scan_bytes"] for row in valid),
+    |                                                                                                ^^^^^^^^^^
+125 | …                     "selector_ms": round(sum(row["metrics"]["selector_ms"] for row in valid), 3),
+126 | …                     "response_ms": round(sum(row["metrics"]["response_ms"] for row in valid), 3),
+    |
+
+E501 Line too long (104 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:125:101
+    |
+123 | …                     "total_prompt_eval_tokens": sum(row["metrics"]["total_prompt_eval_tokens"] for row in valid),
+124 | …                     "selector_scan_bytes": sum(row["metrics"]["selector_scan_bytes"] for row in valid),
+125 | …                     "selector_ms": round(sum(row["metrics"]["selector_ms"] for row in valid), 3),
+    |                                                                                                ^^^^
+126 | …                     "response_ms": round(sum(row["metrics"]["response_ms"] for row in valid), 3),
+127 | …                     "by_category": {category: {"correct": sum(row["correct"] for row in subset if row["category"] == category),
+    |
+
+E501 Line too long (104 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:126:101
+    |
+124 | …                     "selector_scan_bytes": sum(row["metrics"]["selector_scan_bytes"] for row in valid),
+125 | …                     "selector_ms": round(sum(row["metrics"]["selector_ms"] for row in valid), 3),
+126 | …                     "response_ms": round(sum(row["metrics"]["response_ms"] for row in valid), 3),
+    |                                                                                                ^^^^
+127 | …                     "by_category": {category: {"correct": sum(row["correct"] for row in subset if row["category"] == category),
+128 | …                                                "cases": sum(row["category"] == category for row in subset)}
+    |
+
+E501 Line too long (134 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:127:101
+    |
+125 | …                     "selector_ms": round(sum(row["metrics"]["selector_ms"] for row in valid), 3),
+126 | …                     "response_ms": round(sum(row["metrics"]["response_ms"] for row in valid), 3),
+127 | …                     "by_category": {category: {"correct": sum(row["correct"] for row in subset if row["category"] == category),
+    |                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+128 | …                                                "cases": sum(row["category"] == category for row in subset)}
+129 | …                                     for category in manifest["categories"]}}
+    |
+
+E501 Line too long (114 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:128:101
+    |
+126 |                            "response_ms": round(sum(row["metrics"]["response_ms"] for row in valid), 3),
+127 |                            "by_category": {category: {"correct": sum(row["correct"] for row in subset if row["category"] == category),
+128 |                                                       "cases": sum(row["category"] == category for row in subset)}
+    |                                                                                                     ^^^^^^^^^^^^^^
+129 |                                            for category in manifest["categories"]}}
+130 |     result = {"schema": "toruk-chat-selector-final-v2", "status": "COMPLETE", "freeze": frozen,
+    |
+
+E501 Line too long (105 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:132:101
+    |
+130 |     result = {"schema": "toruk-chat-selector-final-v2", "status": "COMPLETE", "freeze": frozen,
+131 |               "model": backend.model_id, "selector_sha256": trained.sha256,
+132 |               "settings": {"temperature": 0, "top_p": 1, "max_new_tokens": 32, "max_prompt_tokens": 512},
+    |                                                                                                     ^^^^^
+133 |               "memory_before": before,
+134 |               "memory_after": {"available_ram_gib": available_ram_gib(), "gpu_memory_mib": gpu_memory_mib()},
+    |
+
+E501 Line too long (109 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:134:101
+    |
+132 |               "settings": {"temperature": 0, "top_p": 1, "max_new_tokens": 32, "max_prompt_tokens": 512},
+133 |               "memory_before": before,
+134 |               "memory_after": {"available_ram_gib": available_ram_gib(), "gpu_memory_mib": gpu_memory_mib()},
+    |                                                                                                     ^^^^^^^^^
+135 |               "wall_seconds": round(time.perf_counter() - start, 3), "summary": summary, "rows": rows}
+136 |     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    |
+
+E501 Line too long (102 > 100)
+   --> scripts\evaluate_chat_selector_v2.py:135:101
+    |
+133 |               "memory_before": before,
+134 |               "memory_after": {"available_ram_gib": available_ram_gib(), "gpu_memory_mib": gpu_memory_mib()},
+135 |               "wall_seconds": round(time.perf_counter() - start, 3), "summary": summary, "rows": rows}
+    |                                                                                                     ^^
+136 |     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+137 |     print(json.dumps(summary, indent=2))
+    |
+
+E501 Line too long (118 > 100)
+  --> scripts\train_chat_selector_v2.py:27:101
+   |
+25 |         for index, message in enumerate(messages[:-3]):
+26 |             if message["role"] == "user":
+27 |                 x.append(features(messages[-1]["content"], message["content"], message["role"], index, len(messages)))
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^
+28 |                 y.append(float(index in case["evidence_ids"]))
+29 |     return torch.tensor(x, dtype=torch.float32), torch.tensor(y, dtype=torch.float32)
+   |
+
+E501 Line too long (107 > 100)
+  --> scripts\train_chat_selector_v2.py:47:101
+   |
+45 |         _fields_ = [("cb", ctypes.c_ulong), ("PageFaultCount", ctypes.c_ulong),
+46 |                     ("PeakWorkingSetSize", ctypes.c_size_t), ("WorkingSetSize", ctypes.c_size_t),
+47 |                     ("QuotaPeakPagedPoolUsage", ctypes.c_size_t), ("QuotaPagedPoolUsage", ctypes.c_size_t),
+   |                                                                                                     ^^^^^^^
+48 |                     ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t), ("QuotaNonPagedPoolUsage", ctypes.c_size_t),
+49 |                     ("PagefileUsage", ctypes.c_size_t), ("PeakPagefileUsage", ctypes.c_size_t)]
+   |
+
+E501 Line too long (113 > 100)
+  --> scripts\train_chat_selector_v2.py:48:101
+   |
+46 |                     ("PeakWorkingSetSize", ctypes.c_size_t), ("WorkingSetSize", ctypes.c_size_t),
+47 |                     ("QuotaPeakPagedPoolUsage", ctypes.c_size_t), ("QuotaPagedPoolUsage", ctypes.c_size_t),
+48 |                     ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t), ("QuotaNonPagedPoolUsage", ctypes.c_size_t),
+   |                                                                                                     ^^^^^^^^^^^^^
+49 |                     ("PagefileUsage", ctypes.c_size_t), ("PeakPagefileUsage", ctypes.c_size_t)]
+50 |     counters = Counters()
+   |
+
+E501 Line too long (129 > 100)
+  --> scripts\train_chat_selector_v2.py:52:101
+   |
+50 |     counters = Counters()
+51 |     counters.cb = ctypes.sizeof(counters)
+52 |     if ctypes.windll.psapi.GetProcessMemoryInfo(ctypes.windll.kernel32.GetCurrentProcess(), ctypes.byref(counters), counters.cb):
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+53 |         return counters.PeakWorkingSetSize
+54 |     try:
+   |
+
+E501 Line too long (117 > 100)
+  --> scripts\train_chat_selector_v2.py:56:101
+   |
+54 |     try:
+55 |         return int(subprocess.check_output(["powershell", "-NoProfile", "-Command",
+56 |                                             f"(Get-Process -Id {os.getpid()}).PeakWorkingSet64"], text=True).strip())
+   |                                                                                                     ^^^^^^^^^^^^^^^^^
+57 |     except (OSError, ValueError, subprocess.CalledProcessError):
+58 |         return None
+   |
+
+E501 Line too long (122 > 100)
+  --> scripts\train_chat_selector_v2.py:74:101
+   |
+72 |         raise ValueError("wrong dataset format")
+73 |     for split in ("train", "dev"):
+74 |         if hashlib.sha256((args.data_dir / f"{split}.jsonl").read_bytes()).hexdigest() != manifest["split_sha256"][split]:
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^
+75 |             raise ValueError(f"{split} hash mismatch")
+76 |     train, dev = (read_cases(args.data_dir / f"{split}.jsonl") for split in ("train", "dev"))
+   |
+
+E501 Line too long (102 > 100)
+  --> scripts\train_chat_selector_v2.py:77:101
+   |
+75 |             raise ValueError(f"{split} hash mismatch")
+76 |     train, dev = (read_cases(args.data_dir / f"{split}.jsonl") for split in ("train", "dev"))
+77 |     if any(case["split"] != "train" for case in train) or any(case["split"] != "dev" for case in dev):
+   |                                                                                                     ^^
+78 |         raise ValueError("split label mismatch")
+79 |     if args.pilot:
+   |
+
+E501 Line too long (104 > 100)
+  --> scripts\train_chat_selector_v2.py:95:101
+   |
+93 |     for step in range(1, steps + 1):
+94 |         optimizer.zero_grad()
+95 |         loss = F.binary_cross_entropy_with_logits(model(x).squeeze(-1), y, pos_weight=torch.tensor(5.0))
+   |                                                                                                     ^^^^
+96 |         loss.backward()
+97 |         optimizer.step()
+   |
+
+E501 Line too long (115 > 100)
+   --> scripts\train_chat_selector_v2.py:108:101
+    |
+106 |                   "weights": model.weight.detach().squeeze(0).tolist(),
+107 |                   "bias": float(model.bias.detach().item()), "threshold": threshold,
+108 |                   "protocol": "chat-selector-v2", "data_manifest_sha256": hashlib.sha256(manifest_raw).hexdigest(),
+    |                                                                                                     ^^^^^^^^^^^^^^^
+109 |                   "train_sha256": manifest["split_sha256"]["train"], "dev_sha256": manifest["split_sha256"]["dev"],
+110 |                   "training": {"pilot": args.pilot, "seed": 173, "steps": steps, "optimizer": "Adam",
+    |
+
+E501 Line too long (115 > 100)
+   --> scripts\train_chat_selector_v2.py:109:101
+    |
+107 |                   "bias": float(model.bias.detach().item()), "threshold": threshold,
+108 |                   "protocol": "chat-selector-v2", "data_manifest_sha256": hashlib.sha256(manifest_raw).hexdigest(),
+109 |                   "train_sha256": manifest["split_sha256"]["train"], "dev_sha256": manifest["split_sha256"]["dev"],
+    |                                                                                                     ^^^^^^^^^^^^^^^
+110 |                   "training": {"pilot": args.pilot, "seed": 173, "steps": steps, "optimizer": "Adam",
+111 |                                "lr": 0.03, "objective": "weighted evidence-turn BCE", "positive_weight": 5,
+    |
+
+E501 Line too long (101 > 100)
+   --> scripts\train_chat_selector_v2.py:110:101
+    |
+108 |                   "protocol": "chat-selector-v2", "data_manifest_sha256": hashlib.sha256(manifest_raw).hexdigest(),
+109 |                   "train_sha256": manifest["split_sha256"]["train"], "dev_sha256": manifest["split_sha256"]["dev"],
+110 |                   "training": {"pilot": args.pilot, "seed": 173, "steps": steps, "optimizer": "Adam",
+    |                                                                                                     ^
+111 |                                "lr": 0.03, "objective": "weighted evidence-turn BCE", "positive_weight": 5,
+112 |                                "train_cases": len(train), "dev_cases": len(dev), "train_examples": len(y),
+    |
+
+E501 Line too long (107 > 100)
+   --> scripts\train_chat_selector_v2.py:111:101
+    |
+109 |                   "train_sha256": manifest["split_sha256"]["train"], "dev_sha256": manifest["split_sha256"]["dev"],
+110 |                   "training": {"pilot": args.pilot, "seed": 173, "steps": steps, "optimizer": "Adam",
+111 |                                "lr": 0.03, "objective": "weighted evidence-turn BCE", "positive_weight": 5,
+    |                                                                                                     ^^^^^^^
+112 |                                "train_cases": len(train), "dev_cases": len(dev), "train_examples": len(y),
+113 |                                "dev_examples": len(dy), "curve": curve, "train_evidence_f1": f1(train_scores, y.tolist(), threshold),
+    |
+
+E501 Line too long (106 > 100)
+   --> scripts\train_chat_selector_v2.py:112:101
+    |
+110 |                   "training": {"pilot": args.pilot, "seed": 173, "steps": steps, "optimizer": "Adam",
+111 |                                "lr": 0.03, "objective": "weighted evidence-turn BCE", "positive_weight": 5,
+112 |                                "train_cases": len(train), "dev_cases": len(dev), "train_examples": len(y),
+    |                                                                                                     ^^^^^^
+113 |                                "dev_examples": len(dy), "curve": curve, "train_evidence_f1": f1(train_scores, y.tolist(), threshold),
+114 |                                "dev_evidence_f1": f1(dev_scores, dy.tolist(), threshold),
+    |
+
+E501 Line too long (133 > 100)
+   --> scripts\train_chat_selector_v2.py:113:101
+    |
+111 | …                     "lr": 0.03, "objective": "weighted evidence-turn BCE", "positive_weight": 5,
+112 | …                     "train_cases": len(train), "dev_cases": len(dev), "train_examples": len(y),
+113 | …                     "dev_examples": len(dy), "curve": curve, "train_evidence_f1": f1(train_scores, y.tolist(), threshold),
+    |                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+114 | …                     "dev_evidence_f1": f1(dev_scores, dy.tolist(), threshold),
+115 | …                     "seconds": round(time.perf_counter() - started, 4),
+    |
+
+Found 49 errors.
+[*] 1 fixable with `--fix`.

@@ -1,0 +1,173 @@
+{
+  "checked_utc": "2026-11-03 14:08:37 UTC",
+  "commit": "9163780930ea91c09d596e3e6284dc9e96f67109",
+  "local_changes_remote_status": "NOT_RUN; dirty working tree",
+  "runs": [
+    {
+      "id": 41472041835,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41472041835"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 125367869282,
+      "name": "web",
+      "conclusion": "failure",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm --prefix web/vercel run check",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Run npm --prefix web/vercel test",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ],
+      "failure_excerpt": [
+        "2026-11-02T15:29:19.8230888Z /home/runner/work/Toruk/Toruk/web/vercel/lib/proxy.js:83",
+        "2026-11-02T15:29:19.8231932Z <<<<<<< HEAD",
+        "2026-11-02T15:29:19.8233334Z SyntaxError: Unexpected token '<<'",
+        "2026-11-02T15:29:19.8385381Z ##[error]Process completed with exit code 1."
+      ]
+    },
+    {
+      "id": 125367870051,
+      "name": "check",
+      "conclusion": "failure",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -e '.[dev]'",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip check",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -c \"import toruk_lm; print(toruk_lm.__version__)\"",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm --help",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm diagnose",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Run python -m ruff format --check src tests scripts",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m mypy",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m mypy --platform linux",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m pytest -q",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ],
+      "failure_excerpt": [
+        "2026-11-02T15:29:56.0219721Z 68 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0220634Z 68 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0221630Z 68 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0222585Z 68 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0223983Z 68 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0224909Z 68 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0229433Z 144 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0230377Z 144 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0231096Z 144 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0231912Z 144 | <<<<<<< HEAD",
+        "2026-11-02T15:29:56.0239994Z Found 527 errors.",
+        "2026-11-02T15:29:56.0250201Z ##[error]Process completed with exit code 1."
+      ]
+    }
+  ]
+}
