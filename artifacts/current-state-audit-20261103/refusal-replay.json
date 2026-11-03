@@ -1,0 +1,382 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "reference_sha256": "40d79bd7ac6cb54f33689b18b2f16ea412fe73e5d16195d348867fe644116b6e",
+  "backbone_manifest": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "model_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c"
+  },
+  "generation_config": {
+    "max_length": null,
+    "max_new_tokens": null,
+    "min_length": null,
+    "min_new_tokens": null,
+    "early_stopping": null,
+    "max_time": null,
+    "stop_strings": null,
+    "do_sample": null,
+    "num_beams": null,
+    "use_mtp": null,
+    "use_cache": null,
+    "cache_implementation": null,
+    "cache_config": null,
+    "max_cache_len": null,
+    "temperature": null,
+    "top_k": null,
+    "top_p": null,
+    "min_p": null,
+    "top_h": null,
+    "typical_p": null,
+    "epsilon_cutoff": null,
+    "eta_cutoff": null,
+    "repetition_penalty": null,
+    "encoder_repetition_penalty": null,
+    "length_penalty": null,
+    "no_repeat_ngram_size": null,
+    "bad_words_ids": null,
+    "renormalize_logits": null,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": null,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "sequence_bias": null,
+    "token_healing": null,
+    "guidance_scale": null,
+    "watermarking_config": null,
+    "num_return_sequences": null,
+    "output_attentions": null,
+    "output_hidden_states": null,
+    "output_scores": null,
+    "output_logits": null,
+    "return_dict_in_generate": null,
+    "pad_token_id": 2,
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "encoder_no_repeat_ngram_size": null,
+    "decoder_start_token_id": null,
+    "is_assistant": null,
+    "num_assistant_tokens": null,
+    "num_assistant_tokens_schedule": null,
+    "assistant_confidence_threshold": null,
+    "prompt_lookup_num_tokens": null,
+    "max_matching_ngram_size": null,
+    "assistant_early_exit": null,
+    "assistant_lookbehind": null,
+    "target_lookbehind": null,
+    "assistant_ensemble_weight": null,
+    "speculation_type": null,
+    "compile_config": null,
+    "disable_compile": null,
+    "continuous_batching_config": null,
+    "low_memory": null,
+    "penalty_alpha": null,
+    "dola_layers": null,
+    "diversity_penalty": null,
+    "num_beam_groups": null,
+    "constraints": null,
+    "force_words_ids": null,
+    "prefill_chunk_size": null,
+    "_from_model_config": true,
+    "transformers_version": "5.20.2"
+  },
+  "rows": [
+    {
+      "scenario": "fresh_math",
+      "history": [
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "settings": {
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1,
+        "max_new_tokens": 32
+      },
+      "before": {
+        "answer": "5 + 5 = 10.",
+        "metrics": {
+          "input_tokens": 36,
+          "selected_context_tokens": 36,
+          "output_tokens": 10,
+          "total_tokens": 46,
+          "response_ms": 611.435,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "after": {
+        "answer": "5 + 5 = 10.",
+        "metrics": {
+          "input_tokens": 36,
+          "selected_context_tokens": 36,
+          "output_tokens": 10,
+          "total_tokens": 46,
+          "response_ms": 482.366,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "same_answer": true,
+      "same_prompt_token_counts": true
+    },
+    {
+      "scenario": "full_history_matched",
+      "history": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "settings": {
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1,
+        "max_new_tokens": 32
+      },
+      "before": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 216,
+          "output_tokens": 28,
+          "total_tokens": 244,
+          "response_ms": 1578.078,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      },
+      "after": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 216,
+          "output_tokens": 28,
+          "total_tokens": 244,
+          "response_ms": 1462.932,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      },
+      "same_answer": true,
+      "same_prompt_token_counts": true
+    },
+    {
+      "scenario": "full_history_matched",
+      "history": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what are you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a chatbot designed to assist users with various topics."
+        },
+        {
+          "role": "user",
+          "content": "i am JinSakai"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics."
+        },
+        {
+          "role": "user",
+          "content": "open youtube"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content."
+        },
+        {
+          "role": "user",
+          "content": "what is 5+5"
+        }
+      ],
+      "settings": {
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1,
+        "max_new_tokens": 64
+      },
+      "before": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 216,
+          "output_tokens": 28,
+          "total_tokens": 244,
+          "response_ms": 1546.878,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      },
+      "after": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "input_tokens": 216,
+          "selected_context_tokens": 216,
+          "output_tokens": 28,
+          "total_tokens": 244,
+          "response_ms": 1467.937,
+          "backend": "Toruk",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      },
+      "same_answer": true,
+      "same_prompt_token_counts": true
+    }
+  ],
+  "historical_toruk_replay": "BLOCKED: original evaluated M6 selector absent; not substituted",
+  "interpretation": "Diagnostic only. An identical refusal is backbone/history behavior, not a transport fix."
+}

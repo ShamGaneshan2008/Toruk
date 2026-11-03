@@ -1,0 +1,11 @@
+scripts\replay_refusal_diagnostic.py:8: error: Skipping analyzing "toruk_lm.chat_foundation": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+scripts\replay_routing_v2.py:12: error: Skipping analyzing "toruk_lm.integrated_memory": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+scripts\replay_routing_v2.py:12: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+scripts\replay_routing_v2.py:13: error: Skipping analyzing "toruk_lm.integrated_study": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+scripts\replay_routing_v2.py:14: error: Skipping analyzing "toruk_lm.pooled_router": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+scripts\replay_routing_v2.py:188: error: Generator has incompatible item type "int"; expected "bool"  [misc]
+scripts\replay_routing_v2.py:188: error: Argument 1 to "len" has incompatible type "list[dict[str, Any]] | str | int"; expected "Sized"  [arg-type]
+scripts\replay_routing_v2.py:189: error: Generator has incompatible item type "int"; expected "bool"  [misc]
+scripts\replay_routing_v2.py:189: error: Invalid index type "str" for "str"; expected type "SupportsIndex | slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]"  [index]
+scripts\replay_routing_v2.py:189: error: Item "int" of "list[dict[str, Any]] | str | int" has no attribute "__iter__" (not iterable)  [union-attr]
+Found 9 errors in 2 files (checked 2 source files)

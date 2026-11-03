@@ -1,0 +1,153 @@
+{
+  "checked_utc": "2026-11-03 14:47:18 UTC",
+  "head": "f7862c0789ed772c1068832962eba176a4fbcd1b",
+  "runs": [
+    {
+      "id": 41653980796,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41653980796"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "web",
+      "conclusion": "success",
+      "head_sha": "f7862c0789ed772c1068832962eba176a4fbcd1b",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm --prefix web/vercel run check",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm --prefix web/vercel test",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "check",
+      "conclusion": "failure",
+      "head_sha": "f7862c0789ed772c1068832962eba176a4fbcd1b",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -e '.[dev]'",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip check",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -c \"import toruk_lm; print(toruk_lm.__version__)\"",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm --help",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm diagnose",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Run python -m ruff format --check src tests scripts",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m mypy",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m mypy --platform linux",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m pytest -q",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "current_audit_changes": "NOT_RUN remotely; uncommitted"
+}

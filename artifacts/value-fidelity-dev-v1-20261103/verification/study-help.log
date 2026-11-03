@@ -1,0 +1,15 @@
+usage: value_fidelity_dev.py [-h] --run RUN [--seed {31,47}]
+                             [--method {recent,lexical,old,augmented,zero}]
+                             {register,train,seal,evaluate,analyze,run}
+
+Fixed-budget training-rendering intervention; development only, no final
+split.
+
+positional arguments:
+  {register,train,seal,evaluate,analyze,run}
+
+options:
+  -h, --help            show this help message and exit
+  --run RUN
+  --seed {31,47}
+  --method {recent,lexical,old,augmented,zero}

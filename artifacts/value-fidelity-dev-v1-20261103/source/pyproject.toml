@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toruk-lm"
+version = "0.1.0"
+description = "Toruk-LM research language model foundations"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.6,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "build>=1,<2", "psutil>=5.9,<8"]
+chat = ["transformers>=4.48,<6", "safetensors>=0.5,<1"]
+
+[project.scripts]
+toruk = "toruk_lm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+toruk_lm = ["chat_ui.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["artifacts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+# CI runs Python 3.12; current NumPy stubs use Python 3.12 type aliases.
+# Ruff continues to check source syntax against Python 3.11.
+python_version = "3.12"
+files = ["src/toruk_lm"]
+check_untyped_defs = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+

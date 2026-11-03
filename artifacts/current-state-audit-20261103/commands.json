@@ -1,0 +1,505 @@
+[
+  {
+    "label": "alias-rejection-expected",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/replay_routing_v2.py",
+      "--sealed-run",
+      "artifacts/routing-v2-20261103",
+      "--inputs",
+      "artifacts/current-state-audit-20261103/alias-binding-probe",
+      "--output",
+      "artifacts/current-state-audit-20261103/should-not-generate.json"
+    ],
+    "exit_code": 1,
+    "seconds": 2.31008810000003,
+    "interpretation": "EXPECTED REJECTION; exit 1 required",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/alias-rejection-expected.json",
+    "log": "artifacts/current-state-audit-20261103/checks/alias-rejection-expected.log"
+  },
+  {
+    "label": "build",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "build",
+      "--no-isolation",
+      "--outdir",
+      "artifacts/current-state-audit-20261103/package"
+    ],
+    "exit_code": 0,
+    "seconds": 3.7977888000004896,
+    "interpretation": "PASS",
+    "source_sha256": "3759efa47a853b6c81ac580341a08e41ec013527bc0dc15afcab7457996d8989",
+    "record": "artifacts/current-state-audit-20261103/checks/build.json",
+    "log": "artifacts/current-state-audit-20261103/checks/build.log"
+  },
+  {
+    "label": "chat-baseline-and-selector",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/smoke_chat_foundation.py",
+      "--backbone-dir",
+      "artifacts/qwen-chat-001/backbone",
+      "--selector-checkpoint",
+      "artifacts/chat-selector-v2-20261101/selector.json",
+      "--output-dir",
+      "artifacts/current-state-audit-20261103/chat-paired"
+    ],
+    "exit_code": 0,
+    "seconds": 16.52968620000047,
+    "interpretation": "PASS",
+    "source_sha256": "f15eafaed113a1b0e2dbd0d4b8a23607766e526c14bb1a8f260cd24978e99a42",
+    "record": "artifacts/current-state-audit-20261103/checks/chat-baseline-and-selector.json",
+    "log": "artifacts/current-state-audit-20261103/checks/chat-baseline-and-selector.log"
+  },
+  {
+    "label": "cli-diagnose",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "toruk_lm",
+      "diagnose"
+    ],
+    "exit_code": 0,
+    "seconds": 2.622816299999613,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/cli-diagnose.json",
+    "log": "artifacts/current-state-audit-20261103/checks/cli-diagnose.log"
+  },
+  {
+    "label": "cli-help",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "toruk_lm",
+      "--help"
+    ],
+    "exit_code": 0,
+    "seconds": 2.977375500000562,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/cli-help.json",
+    "log": "artifacts/current-state-audit-20261103/checks/cli-help.log"
+  },
+  {
+    "label": "controlled-cli-smoke",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "toruk_lm",
+      "reproduce",
+      "--config",
+      "configs/reproduce-smoke-v1.json",
+      "--output",
+      "artifacts/current-state-audit-20261103/controlled-smoke"
+    ],
+    "exit_code": 0,
+    "seconds": 5.051410299998679,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/controlled-cli-smoke.json",
+    "log": "artifacts/current-state-audit-20261103/checks/controlled-cli-smoke.log"
+  },
+  {
+    "label": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.048284300000887015,
+    "interpretation": "PASS",
+    "source_sha256": "3759efa47a853b6c81ac580341a08e41ec013527bc0dc15afcab7457996d8989",
+    "record": "artifacts/current-state-audit-20261103/checks/diff-check.json",
+    "log": "artifacts/current-state-audit-20261103/checks/diff-check.log"
+  },
+  {
+    "label": "docker-engine",
+    "command": [
+      "docker",
+      "version",
+      "--format",
+      "{{json .Server}}"
+    ],
+    "exit_code": 1,
+    "seconds": 0.21968589999960386,
+    "interpretation": "BLOCKED prerequisite",
+    "source_sha256": "0d1a39928d410085cb53dc9ba71a31f741bcb20e6cfc865b2a67598af371682d",
+    "record": "artifacts/current-state-audit-20261103/checks/docker-engine.json",
+    "log": "artifacts/current-state-audit-20261103/checks/docker-engine.log"
+  },
+  {
+    "label": "final-format",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/replay_routing_v2.py",
+      "scripts/replay_refusal_diagnostic.py",
+      "tests/test_sealed_replay.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.09814449999976205,
+    "interpretation": "PASS",
+    "source_sha256": "3759efa47a853b6c81ac580341a08e41ec013527bc0dc15afcab7457996d8989",
+    "record": "artifacts/current-state-audit-20261103/checks/final-format.json",
+    "log": "artifacts/current-state-audit-20261103/checks/final-format.log"
+  },
+  {
+    "label": "final-lint",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "scripts/replay_routing_v2.py",
+      "scripts/replay_refusal_diagnostic.py",
+      "tests/test_sealed_replay.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.10589520000030461,
+    "interpretation": "PASS",
+    "source_sha256": "3759efa47a853b6c81ac580341a08e41ec013527bc0dc15afcab7457996d8989",
+    "record": "artifacts/current-state-audit-20261103/checks/final-lint.json",
+    "log": "artifacts/current-state-audit-20261103/checks/final-lint.log"
+  },
+  {
+    "label": "focused-format",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/replay_routing_v2.py",
+      "scripts/replay_refusal_diagnostic.py",
+      "tests/test_sealed_replay.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.12039539999932458,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/focused-format.json",
+    "log": "artifacts/current-state-audit-20261103/checks/focused-format.log"
+  },
+  {
+    "label": "focused-lint",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      "scripts/replay_routing_v2.py",
+      "scripts/replay_refusal_diagnostic.py",
+      "tests/test_sealed_replay.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.11223659999996016,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/focused-lint.json",
+    "log": "artifacts/current-state-audit-20261103/checks/focused-lint.log"
+  },
+  {
+    "label": "focused-tests-final",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_sealed_replay.py",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "exit_code": 0,
+    "seconds": 3.4226099000006798,
+    "interpretation": "PASS",
+    "source_sha256": "3759efa47a853b6c81ac580341a08e41ec013527bc0dc15afcab7457996d8989",
+    "record": "artifacts/current-state-audit-20261103/checks/focused-tests-final.json",
+    "log": "artifacts/current-state-audit-20261103/checks/focused-tests-final.log"
+  },
+  {
+    "label": "frozen-package-scoring",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/audit_routing_v2.py",
+      "--run",
+      "artifacts/routing-v2-20261103",
+      "--manifest"
+    ],
+    "exit_code": 0,
+    "seconds": 0.3771250999998301,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/frozen-package-scoring.json",
+    "log": "artifacts/current-state-audit-20261103/checks/frozen-package-scoring.log"
+  },
+  {
+    "label": "host-package-prerequisite",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/prepare_inference_package.py",
+      "--output",
+      "artifacts/current-state-audit-20261103/host-package",
+      "--selector",
+      "artifacts/m6-validation-001/recurrent/checkpoint.pt"
+    ],
+    "exit_code": 2,
+    "seconds": 0.08276810000006662,
+    "interpretation": "BLOCKED prerequisite",
+    "source_sha256": "0d1a39928d410085cb53dc9ba71a31f741bcb20e6cfc865b2a67598af371682d",
+    "record": "artifacts/current-state-audit-20261103/checks/host-package-prerequisite.json",
+    "log": "artifacts/current-state-audit-20261103/checks/host-package-prerequisite.log"
+  },
+  {
+    "label": "node-check",
+    "command": [
+      "npm.cmd",
+      "--prefix",
+      "web/vercel",
+      "run",
+      "check"
+    ],
+    "exit_code": 0,
+    "seconds": 1.1749956000003294,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/node-check.json",
+    "log": "artifacts/current-state-audit-20261103/checks/node-check.log"
+  },
+  {
+    "label": "node-tests",
+    "command": [
+      "npm.cmd",
+      "--prefix",
+      "web/vercel",
+      "test"
+    ],
+    "exit_code": 0,
+    "seconds": 1.151278999999704,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/node-tests.json",
+    "log": "artifacts/current-state-audit-20261103/checks/node-tests.log"
+  },
+  {
+    "label": "ordinary-generate",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "toruk_lm",
+      "generate",
+      "--checkpoint",
+      "artifacts/foundation-001/train/checkpoint.pt",
+      "--prompt",
+      "A small research model",
+      "--max-new-tokens",
+      "12"
+    ],
+    "exit_code": 0,
+    "seconds": 4.005891499999052,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/ordinary-generate.json",
+    "log": "artifacts/current-state-audit-20261103/checks/ordinary-generate.log"
+  },
+  {
+    "label": "page-handlers",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/smoke_qualification_ui.py",
+      "--output-dir",
+      "artifacts/current-state-audit-20261103/page-handlers"
+    ],
+    "exit_code": 0,
+    "seconds": 26.50707969999985,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/page-handlers.json",
+    "log": "artifacts/current-state-audit-20261103/checks/page-handlers.log"
+  },
+  {
+    "label": "primary-result-replay",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/replay_routing_v2.py",
+      "--sealed-run",
+      "artifacts/routing-v2-20261103",
+      "--loads",
+      "0",
+      "--output",
+      "artifacts/current-state-audit-20261103/primary-replay.json"
+    ],
+    "exit_code": 0,
+    "seconds": 18.58404569999948,
+    "interpretation": "PASS",
+    "source_sha256": "0d1a39928d410085cb53dc9ba71a31f741bcb20e6cfc865b2a67598af371682d",
+    "record": "artifacts/current-state-audit-20261103/checks/primary-result-replay.json",
+    "log": "artifacts/current-state-audit-20261103/checks/primary-result-replay.log"
+  },
+  {
+    "label": "python-tests",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "exit_code": 0,
+    "seconds": 145.73749289999887,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/python-tests.json",
+    "log": "artifacts/current-state-audit-20261103/checks/python-tests.log"
+  },
+  {
+    "label": "refusal-replay",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/replay_refusal_diagnostic.py",
+      "--reference",
+      "artifacts/chat-repetition-exact-20261101/full-history-matched.json",
+      "--backbone-dir",
+      "artifacts/chat-foundation-001/backbone",
+      "--output",
+      "artifacts/current-state-audit-20261103/refusal-replay.json"
+    ],
+    "exit_code": 0,
+    "seconds": 11.602062699999806,
+    "interpretation": "PASS",
+    "source_sha256": "04f740c2603ea99665c06fe2ba58123b0744bf233fb516898e5a904c04123ed8",
+    "record": "artifacts/current-state-audit-20261103/checks/refusal-replay.json",
+    "log": "artifacts/current-state-audit-20261103/checks/refusal-replay.log"
+  },
+  {
+    "label": "replay-help",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "scripts/replay_routing_v2.py",
+      "--help"
+    ],
+    "exit_code": 0,
+    "seconds": 2.455628700001398,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/replay-help.json",
+    "log": "artifacts/current-state-audit-20261103/checks/replay-help.log"
+  },
+  {
+    "label": "replay-types",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "--follow-imports",
+      "silent",
+      "scripts/replay_routing_v2.py",
+      "scripts/replay_refusal_diagnostic.py"
+    ],
+    "exit_code": 1,
+    "seconds": 25.283358899999257,
+    "interpretation": "Retained initial failure; superseded by passing combined check",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/replay-types.json",
+    "log": "artifacts/current-state-audit-20261103/checks/replay-types.log"
+  },
+  {
+    "label": "repository-format",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "src",
+      "tests",
+      "scripts"
+    ],
+    "exit_code": 1,
+    "seconds": 0.1288433999998233,
+    "interpretation": "Known frozen-script failures retained",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/repository-format.json",
+    "log": "artifacts/current-state-audit-20261103/checks/repository-format.log"
+  },
+  {
+    "label": "repository-lint",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check",
+      ".",
+      "--output-format",
+      "concise"
+    ],
+    "exit_code": 1,
+    "seconds": 0.14147030000094674,
+    "interpretation": "Known frozen-script failures retained",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/repository-lint.json",
+    "log": "artifacts/current-state-audit-20261103/checks/repository-lint.log"
+  },
+  {
+    "label": "types-linux-with-replay",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "--platform",
+      "linux",
+      "--follow-imports",
+      "silent",
+      "src/toruk_lm",
+      "scripts/replay_routing_v2.py",
+      "scripts/replay_refusal_diagnostic.py"
+    ],
+    "exit_code": 0,
+    "seconds": 46.059122800001205,
+    "interpretation": "PASS",
+    "source_sha256": "3759efa47a853b6c81ac580341a08e41ec013527bc0dc15afcab7457996d8989",
+    "record": "artifacts/current-state-audit-20261103/checks/types-linux-with-replay.json",
+    "log": "artifacts/current-state-audit-20261103/checks/types-linux-with-replay.log"
+  },
+  {
+    "label": "types-with-replay",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "--follow-imports",
+      "silent",
+      "src/toruk_lm",
+      "scripts/replay_routing_v2.py",
+      "scripts/replay_refusal_diagnostic.py"
+    ],
+    "exit_code": 0,
+    "seconds": 25.413956599999437,
+    "interpretation": "PASS",
+    "source_sha256": "3759efa47a853b6c81ac580341a08e41ec013527bc0dc15afcab7457996d8989",
+    "record": "artifacts/current-state-audit-20261103/checks/types-with-replay.json",
+    "log": "artifacts/current-state-audit-20261103/checks/types-with-replay.log"
+  },
+  {
+    "label": "types",
+    "command": [
+      ".\\.venv\\Scripts\\python.exe",
+      "-m",
+      "mypy"
+    ],
+    "exit_code": 0,
+    "seconds": 56.833856499999456,
+    "interpretation": "PASS",
+    "source_sha256": "07076216630be09aa8a4c448b5c4922d31f9d657368b45bdab072282acadd00d",
+    "record": "artifacts/current-state-audit-20261103/checks/types.json",
+    "log": "artifacts/current-state-audit-20261103/checks/types.log"
+  }
+]

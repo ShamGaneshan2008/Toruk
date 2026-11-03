@@ -1,0 +1,8 @@
+FAIL {"31": {"status": "FAIL", "checks": {"overall_at_least_80": false, "known_at_least_80": false, "correction_at_least_80": false, "preservation_at_least_80": false, "unsupported_at_most_5": true, "memory_zero_known_drop_at_least_50pp": false}, "known_accuracy": 0.4166666666666667, "known_accuracy_drop_zero": 0.4166666666666667}, "47": {"status": "FAIL", "checks": {"overall_at_least_80": false, "known_at_least_80": false, "correction_at_least_80": false, "preservation_at_least_80": false, "unsupported_at_most_5": true, "memory_zero_known_drop_at_least_50pp": false}, "known_accuracy": 0.2833333333333333, "known_accuracy_drop_zero": 0.2833333333333333}}
+| Method | Exact /168 seed31/47 | Known /120 | Unsupported /48 | Selected tokens | Forward positions | Extra routing positions | Latency ms | Peak RSS MiB |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| recent | 46.0 / 30.0 | 8.0 / 6.0 | 10.0 / 24.0 | 22088.0 / 22088.0 | 22659.0 / 22749.0 | 0.0 / 0.0 | 639.4 / 648.4 | 205.0 / 205.5 |
+| lexical | 45.0 / 36.0 | 7.0 / 11.0 | 10.0 / 23.0 | 18425.0 / 18425.0 | 19015.0 / 19079.0 | 0.0 / 0.0 | 572.4 / 581.3 | 205.3 / 206.2 |
+| old | 113.0 / 113.0 | 65.0 / 65.0 | 0.0 / 0.0 | 22088.0 / 22088.0 | 55908.0 / 55908.0 | 36731.0 / 36731.0 | 2212.9 / 2354.4 | 207.1 / 207.7 |
+| augmented | 98.0 / 82.0 | 50.0 / 34.0 | 0.0 / 0.0 | 22088.0 / 22088.0 | 55925.0 / 55911.0 | 36731.0 / 36731.0 | 2136.4 / 2134.2 | 207.4 / 207.5 |
+| zero | 48.0 / 48.0 | 0.0 / 0.0 | 0.0 / 0.0 | 22088.0 / 22088.0 | 55547.0 / 55547.0 | 36731.0 / 36731.0 | 2095.7 / 2111.9 | 207.3 / 207.1 |

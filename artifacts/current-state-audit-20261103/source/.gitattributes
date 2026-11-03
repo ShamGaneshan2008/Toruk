@@ -1,0 +1,32 @@
+# Preserve byte-for-byte hashes in frozen chat-selector experiments on Windows.
+*.log -text -diff
+/artifacts/chat-selector-v1-20261101/** text eol=lf
+/artifacts/chat-selector-v2-20261101/** text eol=lf
+/docs/research/chat-selector-v1-protocol.md text eol=lf
+/docs/research/chat-selector-v2-protocol.md text eol=lf
+/scripts/build_chat_selector_data.py text eol=lf
+/scripts/build_chat_selector_data_v2.py text eol=lf
+/scripts/train_chat_selector.py text eol=lf
+/scripts/train_chat_selector_v2.py text eol=lf
+/scripts/evaluate_trained_chat_selector.py text eol=lf
+/scripts/evaluate_chat_selector_v2.py text eol=lf
+# These two frozen hashes were recorded from CRLF bytes.
+/artifacts/chat-selector-v2-20261101/selector.json text eol=crlf
+/artifacts/chat-selector-v2-20261101/data/manifest.json text eol=crlf
+# Preserve this study's raw artifact identities; normalize its new source/protocol.
+/artifacts/integrated-memory-v1-20261102/** -text whitespace=cr-at-eol
+/src/toruk_lm/integrated_memory.py text eol=lf
+/src/toruk_lm/integrated_study.py text eol=lf
+/docs/research/integrated-memory-v1-protocol.md text eol=lf
+# Keep raw research evidence stable through Windows checkout and publication.
+/artifacts/qualification-v1-20261103/** -text whitespace=cr-at-eol
+/artifacts/routing-v2-20261103/** -text whitespace=cr-at-eol
+/artifacts/checks/ci-integration-20261103140657/** -text whitespace=cr-at-eol
+/artifacts/checks/run-20261102T152817486391Z/** -text whitespace=cr-at-eol
+/docs/research/qualification-v1-protocol.md text eol=lf
+/docs/research/routing-v2-protocol.md text eol=lf
+# Literal Git graph padding and archived source EOFs are hash-bound evidence.
+/artifacts/qualification-v1-20261103/branch-graph.txt -whitespace
+/artifacts/qualification-v1-20261103/source/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+/artifacts/routing-v2-20261103/source/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+/artifacts/current-state-audit-20261103/** -text whitespace=cr-at-eol

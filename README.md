@@ -139,6 +139,16 @@ held-out routing at two training seeds and removes unsupported answers on its
 small frozen set. Factual value outputs still collapse, known-world accuracy is
 14/120, and useful-memory and release gates remain failed. Chat is unchanged.
 
+The [current-state audit](docs/research/current-state-audit-20261103.md) reproduces
+the frozen primary comparison and retains its negative result. Its new replay
+command verifies the dataset and checkpoint files actually consumed, including
+copied runs. This strengthens reproducibility without changing model answers.
+
+The [development-only value-fidelity gate](docs/research/value-fidelity-dev-v1-results.md)
+tested training wording variation in the existing architecture. Known-world
+accuracy fell to 50/120 and 34/120 versus 65/120 for the old checkpoints on the
+same fresh development worlds. Both gates failed; no final study was opened.
+
 The [reproducibility guide](docs/reproducibility.md) provides versioned config
 validation, a tiny CPU smoke run, and artifact rescoring commands. These verify
 execution and traceability; they do not establish a memory or accuracy advantage.

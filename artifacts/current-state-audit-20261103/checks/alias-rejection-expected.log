@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 214, in <module>
+    main()
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 210, in main
+    replay(args.sealed_run, args.inputs or args.sealed_run, args.output, sorted(set(args.loads)))
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 64, in replay
+    bound = bind_run_files(reference, inputs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 43, in bind_run_files
+    require_digest(actual, declared_digest(frozen["files"], reference / name))
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 26, in require_digest
+    raise ValueError(f"consumed input differs from seal: {actual}")
+ValueError: consumed input differs from seal: artifacts\current-state-audit-20261103\alias-binding-probe\final.json

@@ -1,0 +1,11 @@
+{
+  "branch": "C",
+  "before": "historical verifier accepts empty alias final.json and absent alias checkpoints",
+  "after": "new consumed-input binding rejects alias before model loading/generation",
+  "live_rejection_exit_code": 1,
+  "unexpected_answer_file_exists": false,
+  "unit_tests": 8,
+  "frozen_answers_changed": false,
+  "model_architecture_changed": false,
+  "legacy_limit": "historical frozen driver retained; use replay_routing_v2.py for bound reproduction"
+}
