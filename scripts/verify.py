@@ -44,6 +44,12 @@ def main():
             "--output",
             str(options.output_dir.resolve() / "owned-lm-smoke"),
         ],
+        "conversation-data": [
+            "scripts/conversation_readiness.py",
+            "validate",
+            "--output",
+            str(options.output_dir.resolve() / "conversation-data"),
+        ],
         "owned-lm-generate": [
             "-m",
             "toruk_lm.owned_lm",

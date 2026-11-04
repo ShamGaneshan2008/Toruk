@@ -1,5 +1,19 @@
 # Experiment registry
 
+## 2026-11-04 conversational training readiness
+
+Starting clean HEAD `337cba2c667419c7a3e0a244cecd040b375d7927`. All 16 prior
+owned-LM conditions / 768 answers reproduce exactly through fresh inference.
+The new [readiness report](research/conversation-readiness-v1-results.md) separates
+synthetic conversation data preparation from an unrun training pilot. A strict
+cross-stage answer-overlap audit finds reserved `10` in one pretraining note;
+this incidental overlap is not proof of semantic leakage, but fails the requested
+literal exclusion policy. The pipeline emits 64/16/25 conversation splits and a
+filtered 191-document pretraining corpus. Diagnostic raw replies compare the
+unchanged owned checkpoint with explicitly external Qwen, including the full
+refusal-to-math history. No new default chat integration or conversational
+qualification is claimed.
+
 ## 2026-11-04 owned next-token LM v1
 
 The [versioned design](research/owned-lm-v1-design.md) was written before model

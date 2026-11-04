@@ -33,6 +33,20 @@ resume, evaluation and generation; `owned_data.py` supplies versioned IID synthe
 documents. The unchanged `recurrent.py` core is reused, not a new memory algorithm.
 No pretrained backbone, selector or symbolic evidence parser participates here.
 
+`conversation_data.py` is an offline data-readiness prerequisite, not a trained
+chat adapter. Its versioned JSON role-line format escapes newlines inside content,
+uses explicit alternating turns and an `assistant:` generation prefix. Each
+conversation is one independent document; a future trainer must reset state at
+its boundary. It validates cross-split conversations and complete held-out answer
+text in new and inherited training documents, emitting a filtered pretraining
+corpus without altering the inherited checkpoint's identity. The
+[readiness report](research/conversation-readiness-v1-results.md) records the
+strict gate failure, literal-overlap caveat and unrun conversational pilot.
+This is separate from existing next-token checkpoints and the API/UI, which still
+use the identified pretrained chat backbone. No experimental owned-LM chat option
+has been added. Fine-tuning initialization across datasets is future work: the
+existing resume operation correctly rejects changed dataset/config identities.
+
 Toruk-LM is the model family; `toruk_lm` is the package. The ordinary decoder uses
 learned byte/position embeddings, pre-norm causal self-attention and a GELU MLP
 per layer, final normalization, and an untied output projection. Dropout is zero.

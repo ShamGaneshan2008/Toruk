@@ -19,6 +19,11 @@ comparison failed the declared quality criterion and cost more than the ordinary
 LM. It is not ready for conversation and does not replace the pretrained chat
 backbone. See the [design and measured results](docs/research/owned-lm-v1-results.md).
 
+The [conversational readiness audit](docs/research/conversation-readiness-v1-results.md)
+adds a synthetic role-formatted data pipeline and a strict inherited-data exposure
+gate. Conversational training remains blocked under that gate; no trained chat
+pilot or new default chat model is claimed.
+
 ## Implemented conversational chat flow
 
 ```mermaid

@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "conditions": [
+    {
+      "condition": "31-memory_off-full",
+      "nll": 0.5317504726854236,
+      "correct": 7,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78190,
+      "seconds": 0.6268264000009367,
+      "memory": {
+        "rss": 291962880,
+        "process_lifetime_peak_rss": 291962880
+      }
+    },
+    {
+      "condition": "31-memory_on-full",
+      "nll": 0.5198295887384351,
+      "correct": 8,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78190,
+      "seconds": 1.1890117000002647,
+      "memory": {
+        "rss": 292773888,
+        "process_lifetime_peak_rss": 292773888
+      }
+    },
+    {
+      "condition": "31-memory_on-no_read",
+      "nll": 0.5618476841508288,
+      "correct": 6,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78190,
+      "seconds": 0.9847085000001243,
+      "memory": {
+        "rss": 293453824,
+        "process_lifetime_peak_rss": 293584896
+      }
+    },
+    {
+      "condition": "31-memory_on-no_update",
+      "nll": 0.5635173105215533,
+      "correct": 6,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78190,
+      "seconds": 1.2609391999994841,
+      "memory": {
+        "rss": 293490688,
+        "process_lifetime_peak_rss": 293584896
+      }
+    },
+    {
+      "condition": "31-ordinary-full",
+      "nll": 0.5317504726854236,
+      "correct": 7,
+      "questions": 48,
+      "parameters": 43072,
+      "training_targets": 78190,
+      "seconds": 0.6012288000001718,
+      "memory": {
+        "rss": 293392384,
+        "process_lifetime_peak_rss": 293666816
+      }
+    },
+    {
+      "condition": "31-ordinary-rolling",
+      "nll": 0.5317504726854236,
+      "correct": 2,
+      "questions": 48,
+      "parameters": 43072,
+      "training_targets": 78190,
+      "seconds": 0.5668369999984861,
+      "memory": {
+        "rss": 291934208,
+        "process_lifetime_peak_rss": 293666816
+      }
+    },
+    {
+      "condition": "31-ordinary_matched-full",
+      "nll": 0.49727289809793385,
+      "correct": 7,
+      "questions": 48,
+      "parameters": 56620,
+      "training_targets": 78190,
+      "seconds": 0.5958772999983921,
+      "memory": {
+        "rss": 295792640,
+        "process_lifetime_peak_rss": 295792640
+      }
+    },
+    {
+      "condition": "31-ordinary_matched-rolling",
+      "nll": 0.49727289809793385,
+      "correct": 0,
+      "questions": 48,
+      "parameters": 56620,
+      "training_targets": 78190,
+      "seconds": 0.55044640000051,
+      "memory": {
+        "rss": 296161280,
+        "process_lifetime_peak_rss": 296161280
+      }
+    },
+    {
+      "condition": "47-memory_off-full",
+      "nll": 0.5299796503354597,
+      "correct": 7,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78000,
+      "seconds": 0.5491882999995141,
+      "memory": {
+        "rss": 296787968,
+        "process_lifetime_peak_rss": 296787968
+      }
+    },
+    {
+      "condition": "47-memory_on-full",
+      "nll": 0.5219573890873395,
+      "correct": 9,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78000,
+      "seconds": 1.038459999999759,
+      "memory": {
+        "rss": 295305216,
+        "process_lifetime_peak_rss": 296792064
+      }
+    },
+    {
+      "condition": "47-memory_on-no_read",
+      "nll": 0.5595236961562572,
+      "correct": 5,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78000,
+      "seconds": 0.8779546999994636,
+      "memory": {
+        "rss": 295321600,
+        "process_lifetime_peak_rss": 296792064
+      }
+    },
+    {
+      "condition": "47-memory_on-no_update",
+      "nll": 0.5614362275229182,
+      "correct": 6,
+      "questions": 48,
+      "parameters": 56064,
+      "training_targets": 78000,
+      "seconds": 1.1306996999992407,
+      "memory": {
+        "rss": 295784448,
+        "process_lifetime_peak_rss": 296792064
+      }
+    },
+    {
+      "condition": "47-ordinary-full",
+      "nll": 0.5299796503354597,
+      "correct": 7,
+      "questions": 48,
+      "parameters": 43072,
+      "training_targets": 78000,
+      "seconds": 0.5627359999998589,
+      "memory": {
+        "rss": 295751680,
+        "process_lifetime_peak_rss": 296792064
+      }
+    },
+    {
+      "condition": "47-ordinary-rolling",
+      "nll": 0.5299796503354597,
+      "correct": 2,
+      "questions": 48,
+      "parameters": 43072,
+      "training_targets": 78000,
+      "seconds": 0.3906514000009338,
+      "memory": {
+        "rss": 295424000,
+        "process_lifetime_peak_rss": 296792064
+      }
+    },
+    {
+      "condition": "47-ordinary_matched-full",
+      "nll": 0.49977614755639654,
+      "correct": 8,
+      "questions": 48,
+      "parameters": 56620,
+      "training_targets": 78000,
+      "seconds": 0.6000812999991467,
+      "memory": {
+        "rss": 296644608,
+        "process_lifetime_peak_rss": 296792064
+      }
+    },
+    {
+      "condition": "47-ordinary_matched-rolling",
+      "nll": 0.49977614755639654,
+      "correct": 0,
+      "questions": 48,
+      "parameters": 56620,
+      "training_targets": 78000,
+      "seconds": 0.7001022999993438,
+      "memory": {
+        "rss": 296800256,
+        "process_lifetime_peak_rss": 296800256
+      }
+    }
+  ],
+  "answers": 768,
+  "seconds": 14.550205800000185,
+  "platform": "Windows-11-10.0.26100-SP0",
+  "torch": "2.14.1+cpu",
+  "new_training_targets": 0
+}

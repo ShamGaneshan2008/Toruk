@@ -36,6 +36,8 @@ jobs:
       # Validate the independent evaluation contract without downloading chat weights.
       # Full inference reproduction requires the separately pinned local backbone.
       - run: python scripts/independent_replication.py validate-cases --run artifacts/ci-independent-cases
+      # No model download/training: role framing, splits and a fail-closed exposure gate.
+      - run: python scripts/conversation_readiness.py validate --output artifacts/ci-conversation-data
       # Bounded from-scratch next-token train/resume/eval/ablation; no chat weights.
       - run: python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output artifacts/ci-owned-lm
       - run: python -m toruk_lm.owned_lm generate --checkpoint artifacts/ci-owned-lm/models/23-memory_on/checkpoint.pt --prompt "Experimental CPU smoke" --max-new-tokens 4

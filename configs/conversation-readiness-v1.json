@@ -1,0 +1,38 @@
+{
+  "schema": "toruk-conversation-readiness-v1",
+  "seed": 7301,
+  "train_per_category": 8,
+  "development_per_category": 2,
+  "test_per_category": 3,
+  "cpu_threads": 1,
+  "device": "cpu",
+  "max_new_tokens": 16,
+  "max_prompt_bytes": 2048,
+  "max_document_targets": 384,
+  "max_evaluation_seconds": 180,
+  "max_run_disk_bytes": 67108864,
+  "owned_max_rss_bytes": 536870912,
+  "external_max_rss_bytes": 4294967296,
+  "conversational_training_enabled": false,
+  "training_targets_cap": 0,
+  "training_seconds_cap": 0,
+  "future_pilot_proposal": {
+    "steps": 128,
+    "batch_documents": 2,
+    "training_targets_cap": 98304,
+    "wall_seconds_cap": 60,
+    "disk_bytes_cap": 16777216,
+    "rss_bytes_cap": 536870912,
+    "condition": "Requires a new starting checkpoint trained on the audited clean corpus and an explicit weights-only warm-start contract; not executed by this readiness workflow."
+  },
+  "leakage_policy": "Reject complete held-out assistant answers as case-insensitive standalone text in any inherited or new training document; record exact matching rows. Never rewrite a checkpoint's dataset identity.",
+  "product_gate": {
+    "minimum_exact_fraction": 0.8,
+    "minimum_category_fraction": 0.6,
+    "maximum_unsupported_unknown": 0,
+    "maximum_refusal_carryover_errors": 0,
+    "maximum_invalid_outputs": 0,
+    "minimum_termination_fraction": 0.95,
+    "requires_clean_lineage_and_pilot": true
+  }
+}

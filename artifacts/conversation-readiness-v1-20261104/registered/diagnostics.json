@@ -1,0 +1,2388 @@
+{
+  "schema": "toruk-conversation-diagnostic-v1",
+  "rows": [
+    {
+      "case": "test-instruction-0",
+      "category": "instruction",
+      "expected": "Evalueinstruction0",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " sun.\nNote 2: wi",
+      "generation": {
+        "answer": " sun.\nNote 2: wi",
+        "generated_ids": [
+          35,
+          118,
+          120,
+          113,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          53,
+          61,
+          35,
+          122,
+          108
+        ],
+        "input_tokens": 49,
+        "forward_positions": 425,
+        "commits": 2,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.032804799999212264,
+      "cpu_seconds": 0.046875,
+      "memory": {
+        "rss": 288100352,
+        "process_lifetime_peak_rss": 288100352
+      }
+    },
+    {
+      "case": "test-instruction-1",
+      "category": "instruction",
+      "expected": "Evalueinstruction1",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " sun.\nNote 2: wi",
+      "generation": {
+        "answer": " sun.\nNote 2: wi",
+        "generated_ids": [
+          35,
+          118,
+          120,
+          113,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          53,
+          61,
+          35,
+          122,
+          108
+        ],
+        "input_tokens": 49,
+        "forward_positions": 425,
+        "commits": 2,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.027529400000275928,
+      "cpu_seconds": 0.015625,
+      "memory": {
+        "rss": 288235520,
+        "process_lifetime_peak_rss": 288235520
+      }
+    },
+    {
+      "case": "test-instruction-2",
+      "category": "instruction",
+      "expected": "Evalueinstruction2",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " sun.\nNote 2: wi",
+      "generation": {
+        "answer": " sun.\nNote 2: wi",
+        "generated_ids": [
+          35,
+          118,
+          120,
+          113,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          53,
+          61,
+          35,
+          122,
+          108
+        ],
+        "input_tokens": 49,
+        "forward_positions": 425,
+        "commits": 2,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.027421999999205582,
+      "cpu_seconds": 0.015625,
+      "memory": {
+        "rss": 288243712,
+        "process_lifetime_peak_rss": 288243712
+      }
+    },
+    {
+      "case": "test-factual-0",
+      "category": "factual",
+      "expected": "Evaluefactual0",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swer rain.\nNote",
+      "generation": {
+        "answer": " swer rain.\nNote",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          104,
+          117,
+          35,
+          117,
+          100,
+          108,
+          113,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104
+        ],
+        "input_tokens": 108,
+        "forward_positions": 436,
+        "commits": 3,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.029387699998551398,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 288497664,
+        "process_lifetime_peak_rss": 288497664
+      }
+    },
+    {
+      "case": "test-factual-1",
+      "category": "factual",
+      "expected": "Evaluefactual1",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swer rain.\nNote",
+      "generation": {
+        "answer": " swer rain.\nNote",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          104,
+          117,
+          35,
+          117,
+          100,
+          108,
+          113,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104
+        ],
+        "input_tokens": 108,
+        "forward_positions": 436,
+        "commits": 3,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.029037000000244007,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 288497664,
+        "process_lifetime_peak_rss": 288497664
+      }
+    },
+    {
+      "case": "test-factual-2",
+      "category": "factual",
+      "expected": "Evaluefactual2",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swer rain.\nNote",
+      "generation": {
+        "answer": " swer rain.\nNote",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          104,
+          117,
+          35,
+          117,
+          100,
+          108,
+          113,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104
+        ],
+        "input_tokens": 108,
+        "forward_positions": 436,
+        "commits": 3,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.028775700000551296,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 288501760,
+        "process_lifetime_peak_rss": 288501760
+      }
+    },
+    {
+      "case": "test-uncertainty-0",
+      "category": "uncertainty",
+      "expected": "Unknown.",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " is red.\nNote 2:",
+      "generation": {
+        "answer": " is red.\nNote 2:",
+        "generated_ids": [
+          35,
+          108,
+          118,
+          35,
+          117,
+          104,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          53,
+          61
+        ],
+        "input_tokens": 94,
+        "forward_positions": 262,
+        "commits": 3,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": true,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.027586499998506042,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 288681984,
+        "process_lifetime_peak_rss": 288681984
+      }
+    },
+    {
+      "case": "test-uncertainty-1",
+      "category": "uncertainty",
+      "expected": "Unknown.",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " is red.\nNote 2:",
+      "generation": {
+        "answer": " is red.\nNote 2:",
+        "generated_ids": [
+          35,
+          108,
+          118,
+          35,
+          117,
+          104,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          53,
+          61
+        ],
+        "input_tokens": 94,
+        "forward_positions": 262,
+        "commits": 3,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": true,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.026787599999806844,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 288681984,
+        "process_lifetime_peak_rss": 288681984
+      }
+    },
+    {
+      "case": "test-uncertainty-2",
+      "category": "uncertainty",
+      "expected": "Unknown.",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " is red.\nNote 2:",
+      "generation": {
+        "answer": " is red.\nNote 2:",
+        "generated_ids": [
+          35,
+          108,
+          118,
+          35,
+          117,
+          104,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          53,
+          61
+        ],
+        "input_tokens": 94,
+        "forward_positions": 262,
+        "commits": 3,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": true,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.027773900001193397,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 288686080,
+        "process_lifetime_peak_rss": 288686080
+      }
+    },
+    {
+      "case": "test-correction-0",
+      "category": "correction",
+      "expected": "Evaluecorrection0",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swiswer Answer ",
+      "generation": {
+        "answer": " swiswer Answer ",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          108,
+          118,
+          122,
+          104,
+          117,
+          35,
+          68,
+          113,
+          118,
+          122,
+          104,
+          117,
+          35
+        ],
+        "input_tokens": 234,
+        "forward_positions": 530,
+        "commits": 7,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.03856100000120932,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289112064,
+        "process_lifetime_peak_rss": 289112064
+      }
+    },
+    {
+      "case": "test-correction-1",
+      "category": "correction",
+      "expected": "Evaluecorrection1",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swiswer Answer ",
+      "generation": {
+        "answer": " swiswer Answer ",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          108,
+          118,
+          122,
+          104,
+          117,
+          35,
+          68,
+          113,
+          118,
+          122,
+          104,
+          117,
+          35
+        ],
+        "input_tokens": 234,
+        "forward_positions": 530,
+        "commits": 7,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.038739599998734775,
+      "cpu_seconds": 0.046875,
+      "memory": {
+        "rss": 289198080,
+        "process_lifetime_peak_rss": 289198080
+      }
+    },
+    {
+      "case": "test-correction-2",
+      "category": "correction",
+      "expected": "Evaluecorrection2",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swinswisunswer ",
+      "generation": {
+        "answer": " swinswisunswer ",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          108,
+          113,
+          118,
+          122,
+          108,
+          118,
+          120,
+          113,
+          118,
+          122,
+          104,
+          117,
+          35
+        ],
+        "input_tokens": 234,
+        "forward_positions": 530,
+        "commits": 7,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.04084970000076282,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289202176,
+        "process_lifetime_peak_rss": 289202176
+      }
+    },
+    {
+      "case": "test-distant-0",
+      "category": "distant",
+      "expected": "Evaluedistant0",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " r gold.\nNote 5:",
+      "generation": {
+        "answer": " r gold.\nNote 5:",
+        "generated_ids": [
+          35,
+          117,
+          35,
+          106,
+          114,
+          111,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          61
+        ],
+        "input_tokens": 269,
+        "forward_positions": 613,
+        "commits": 8,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.03847440000026836,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289337344,
+        "process_lifetime_peak_rss": 289337344
+      }
+    },
+    {
+      "case": "test-distant-1",
+      "category": "distant",
+      "expected": "Evaluedistant1",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " r gold.\nNote 5:",
+      "generation": {
+        "answer": " r gold.\nNote 5:",
+        "generated_ids": [
+          35,
+          117,
+          35,
+          106,
+          114,
+          111,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          61
+        ],
+        "input_tokens": 269,
+        "forward_positions": 613,
+        "commits": 8,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.03686409999863827,
+      "cpu_seconds": 0.046875,
+      "memory": {
+        "rss": 289341440,
+        "process_lifetime_peak_rss": 289341440
+      }
+    },
+    {
+      "case": "test-distant-2",
+      "category": "distant",
+      "expected": "Evaluedistant2",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " r gold.\nNote 5:",
+      "generation": {
+        "answer": " r gold.\nNote 5:",
+        "generated_ids": [
+          35,
+          117,
+          35,
+          106,
+          114,
+          111,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          61
+        ],
+        "input_tokens": 269,
+        "forward_positions": 613,
+        "commits": 8,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.038306200000079116,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289345536,
+        "process_lifetime_peak_rss": 289345536
+      }
+    },
+    {
+      "case": "test-exact-0",
+      "category": "exact",
+      "expected": "E/Q-0_x!",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " r gold.\nNote 5:",
+      "generation": {
+        "answer": " r gold.\nNote 5:",
+        "generated_ids": [
+          35,
+          117,
+          35,
+          106,
+          114,
+          111,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          61
+        ],
+        "input_tokens": 141,
+        "forward_positions": 485,
+        "commits": 4,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.031319300000177464,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289345536,
+        "process_lifetime_peak_rss": 289345536
+      }
+    },
+    {
+      "case": "test-exact-1",
+      "category": "exact",
+      "expected": "E/Q-1_x!",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " r gold.\nNote 5:",
+      "generation": {
+        "answer": " r gold.\nNote 5:",
+        "generated_ids": [
+          35,
+          117,
+          35,
+          106,
+          114,
+          111,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          61
+        ],
+        "input_tokens": 141,
+        "forward_positions": 485,
+        "commits": 4,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.033525600001667044,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289587200,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-exact-2",
+      "category": "exact",
+      "expected": "E/Q-2_x!",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " r gold.\nNote 5:",
+      "generation": {
+        "answer": " r gold.\nNote 5:",
+        "generated_ids": [
+          35,
+          117,
+          35,
+          106,
+          114,
+          111,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          61
+        ],
+        "input_tokens": 141,
+        "forward_positions": 485,
+        "commits": 4,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.03962940000019444,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289312768,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-math-0",
+      "category": "math",
+      "expected": "10",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " wer racind.\nNot",
+      "generation": {
+        "answer": " wer racind.\nNot",
+        "generated_ids": [
+          35,
+          122,
+          104,
+          117,
+          35,
+          117,
+          100,
+          102,
+          108,
+          113,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119
+        ],
+        "input_tokens": 72,
+        "forward_positions": 336,
+        "commits": 2,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.027015499999833992,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289312768,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-math-1",
+      "category": "math",
+      "expected": "10",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " wer racind.\nNot",
+      "generation": {
+        "answer": " wer racind.\nNot",
+        "generated_ids": [
+          35,
+          122,
+          104,
+          117,
+          35,
+          117,
+          100,
+          102,
+          108,
+          113,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119
+        ],
+        "input_tokens": 72,
+        "forward_positions": 336,
+        "commits": 2,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.03237049999916053,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289378304,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-math-2",
+      "category": "math",
+      "expected": "10",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " wer racind.\nNot",
+      "generation": {
+        "answer": " wer racind.\nNot",
+        "generated_ids": [
+          35,
+          122,
+          104,
+          117,
+          35,
+          117,
+          100,
+          102,
+          108,
+          113,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119
+        ],
+        "input_tokens": 72,
+        "forward_positions": 336,
+        "commits": 2,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.03158360000088578,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289378304,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-refusal-0",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " r rain.\nNote 5:",
+      "generation": {
+        "answer": " r rain.\nNote 5:",
+        "generated_ids": [
+          35,
+          117,
+          35,
+          117,
+          100,
+          108,
+          113,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          61
+        ],
+        "input_tokens": 94,
+        "forward_positions": 262,
+        "commits": 3,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": true
+      },
+      "seconds": 0.029297699999006,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289349632,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-refusal-1",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swind.\nNote 585",
+      "generation": {
+        "answer": " swind.\nNote 585",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          108,
+          113,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          59,
+          56
+        ],
+        "input_tokens": 139,
+        "forward_positions": 451,
+        "commits": 4,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": true
+      },
+      "seconds": 0.03116319999935513,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289353728,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-refusal-2",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": " swind.\nNote 585",
+      "generation": {
+        "answer": " swind.\nNote 585",
+        "generated_ids": [
+          35,
+          118,
+          122,
+          108,
+          113,
+          103,
+          49,
+          13,
+          81,
+          114,
+          119,
+          104,
+          35,
+          56,
+          59,
+          56
+        ],
+        "input_tokens": 139,
+        "forward_positions": 451,
+        "commits": 4,
+        "allocated_state_bytes": 512,
+        "budget_exhausted": true
+      },
+      "error": null,
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": true
+      },
+      "seconds": 0.031834400000661844,
+      "cpu_seconds": 0.03125,
+      "memory": {
+        "rss": 289357824,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-observed-full-refusal",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "toruk_owned",
+      "model_id": "toruk-owned-next-token-v1@493572c06e03",
+      "training_stage": "before_conversational_training",
+      "raw_answer": "",
+      "generation": {},
+      "error": "generation prefix exceeds CPU smoke budget",
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": true
+      },
+      "seconds": 4.450000051292591e-05,
+      "cpu_seconds": 0.0,
+      "memory": {
+        "rss": 289357824,
+        "process_lifetime_peak_rss": 289587200
+      }
+    },
+    {
+      "case": "test-instruction-0",
+      "category": "instruction",
+      "expected": "Evalueinstruction0",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluating instruction 0",
+      "response": {
+        "answer": "Evaluating instruction 0",
+        "metrics": {
+          "input_tokens": 96,
+          "selected_context_tokens": 96,
+          "output_tokens": 7,
+          "total_tokens": 103,
+          "response_ms": 1646.658,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.6467056999990746,
+      "cpu_seconds": 4.015625,
+      "memory": {
+        "rss": 2412138496,
+        "process_lifetime_peak_rss": 2418790400
+      }
+    },
+    {
+      "case": "test-instruction-1",
+      "category": "instruction",
+      "expected": "Evalueinstruction1",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluating instruction 1.",
+      "response": {
+        "answer": "Evaluating instruction 1.",
+        "metrics": {
+          "input_tokens": 96,
+          "selected_context_tokens": 96,
+          "output_tokens": 8,
+          "total_tokens": 104,
+          "response_ms": 1942.814,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.9428623000003427,
+      "cpu_seconds": 3.859375,
+      "memory": {
+        "rss": 2412707840,
+        "process_lifetime_peak_rss": 2418790400
+      }
+    },
+    {
+      "case": "test-instruction-2",
+      "category": "instruction",
+      "expected": "Evalueinstruction2",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluating instruction 2.",
+      "response": {
+        "answer": "Evaluating instruction 2.",
+        "metrics": {
+          "input_tokens": 96,
+          "selected_context_tokens": 96,
+          "output_tokens": 8,
+          "total_tokens": 104,
+          "response_ms": 1882.289,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.8823280000015075,
+      "cpu_seconds": 3.734375,
+      "memory": {
+        "rss": 2413338624,
+        "process_lifetime_peak_rss": 2418790400
+      }
+    },
+    {
+      "case": "test-factual-0",
+      "category": "factual",
+      "expected": "Evaluefactual0",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluefactual0",
+      "response": {
+        "answer": "Evaluefactual0",
+        "metrics": {
+          "input_tokens": 114,
+          "selected_context_tokens": 114,
+          "output_tokens": 6,
+          "total_tokens": 120,
+          "response_ms": 1609.764,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.6097950000003038,
+      "cpu_seconds": 3.1875,
+      "memory": {
+        "rss": 2421673984,
+        "process_lifetime_peak_rss": 2428399616
+      }
+    },
+    {
+      "case": "test-factual-1",
+      "category": "factual",
+      "expected": "Evaluefactual1",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluefactual1",
+      "response": {
+        "answer": "Evaluefactual1",
+        "metrics": {
+          "input_tokens": 114,
+          "selected_context_tokens": 114,
+          "output_tokens": 6,
+          "total_tokens": 120,
+          "response_ms": 1656.323,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.6563673999989987,
+      "cpu_seconds": 3.3125,
+      "memory": {
+        "rss": 2421874688,
+        "process_lifetime_peak_rss": 2428399616
+      }
+    },
+    {
+      "case": "test-factual-2",
+      "category": "factual",
+      "expected": "Evaluefactual2",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluefactual2",
+      "response": {
+        "answer": "Evaluefactual2",
+        "metrics": {
+          "input_tokens": 114,
+          "selected_context_tokens": 114,
+          "output_tokens": 6,
+          "total_tokens": 120,
+          "response_ms": 1750.046,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.7500866999998834,
+      "cpu_seconds": 3.453125,
+      "memory": {
+        "rss": 2422001664,
+        "process_lifetime_peak_rss": 2428731392
+      }
+    },
+    {
+      "case": "test-uncertainty-0",
+      "category": "uncertainty",
+      "expected": "Unknown.",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Unknown",
+      "response": {
+        "answer": "Unknown",
+        "metrics": {
+          "input_tokens": 107,
+          "selected_context_tokens": 107,
+          "output_tokens": 2,
+          "total_tokens": 109,
+          "response_ms": 1167.951,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": true,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.1679896999994526,
+      "cpu_seconds": 2.328125,
+      "memory": {
+        "rss": 2422165504,
+        "process_lifetime_peak_rss": 2428731392
+      }
+    },
+    {
+      "case": "test-uncertainty-1",
+      "category": "uncertainty",
+      "expected": "Unknown.",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Unknown",
+      "response": {
+        "answer": "Unknown",
+        "metrics": {
+          "input_tokens": 107,
+          "selected_context_tokens": 107,
+          "output_tokens": 2,
+          "total_tokens": 109,
+          "response_ms": 1030.261,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": true,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.0302934000010282,
+      "cpu_seconds": 2.0625,
+      "memory": {
+        "rss": 2421526528,
+        "process_lifetime_peak_rss": 2428731392
+      }
+    },
+    {
+      "case": "test-uncertainty-2",
+      "category": "uncertainty",
+      "expected": "Unknown.",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Unknown",
+      "response": {
+        "answer": "Unknown",
+        "metrics": {
+          "input_tokens": 107,
+          "selected_context_tokens": 107,
+          "output_tokens": 2,
+          "total_tokens": 109,
+          "response_ms": 976.484,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": true,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 0.9765181000002485,
+      "cpu_seconds": 1.9375,
+      "memory": {
+        "rss": 2422046720,
+        "process_lifetime_peak_rss": 2428731392
+      }
+    },
+    {
+      "case": "test-correction-0",
+      "category": "correction",
+      "expected": "Evaluecorrection0",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Eoldcorrection0",
+      "response": {
+        "answer": "Eoldcorrection0",
+        "metrics": {
+          "input_tokens": 156,
+          "selected_context_tokens": 156,
+          "output_tokens": 6,
+          "total_tokens": 162,
+          "response_ms": 2072.763,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 2.072799600000508,
+      "cpu_seconds": 4.125,
+      "memory": {
+        "rss": 2430906368,
+        "process_lifetime_peak_rss": 2437054464
+      }
+    },
+    {
+      "case": "test-correction-1",
+      "category": "correction",
+      "expected": "Evaluecorrection1",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Eoldcorrection1",
+      "response": {
+        "answer": "Eoldcorrection1",
+        "metrics": {
+          "input_tokens": 156,
+          "selected_context_tokens": 156,
+          "output_tokens": 6,
+          "total_tokens": 162,
+          "response_ms": 1777.553,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.777592200000072,
+      "cpu_seconds": 3.546875,
+      "memory": {
+        "rss": 2431324160,
+        "process_lifetime_peak_rss": 2439139328
+      }
+    },
+    {
+      "case": "test-correction-2",
+      "category": "correction",
+      "expected": "Evaluecorrection2",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluecorrection2",
+      "response": {
+        "answer": "Evaluecorrection2",
+        "metrics": {
+          "input_tokens": 156,
+          "selected_context_tokens": 156,
+          "output_tokens": 6,
+          "total_tokens": 162,
+          "response_ms": 2092.347,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 2.09238809999988,
+      "cpu_seconds": 4.078125,
+      "memory": {
+        "rss": 2431242240,
+        "process_lifetime_peak_rss": 2439139328
+      }
+    },
+    {
+      "case": "test-distant-0",
+      "category": "distant",
+      "expected": "Evaluedistant0",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluatedistant0",
+      "response": {
+        "answer": "Evaluatedistant0",
+        "metrics": {
+          "input_tokens": 164,
+          "selected_context_tokens": 164,
+          "output_tokens": 5,
+          "total_tokens": 169,
+          "response_ms": 2069.141,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 2.0691848999995273,
+      "cpu_seconds": 4.125,
+      "memory": {
+        "rss": 2435293184,
+        "process_lifetime_peak_rss": 2442268672
+      }
+    },
+    {
+      "case": "test-distant-1",
+      "category": "distant",
+      "expected": "Evaluedistant1",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluedistant1",
+      "response": {
+        "answer": "Evaluedistant1",
+        "metrics": {
+          "input_tokens": 164,
+          "selected_context_tokens": 164,
+          "output_tokens": 5,
+          "total_tokens": 169,
+          "response_ms": 1961.28,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.9613174999994953,
+      "cpu_seconds": 3.90625,
+      "memory": {
+        "rss": 2434899968,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-distant-2",
+      "category": "distant",
+      "expected": "Evaluedistant2",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "Evaluatedistant2",
+      "response": {
+        "answer": "Evaluatedistant2",
+        "metrics": {
+          "input_tokens": 164,
+          "selected_context_tokens": 164,
+          "output_tokens": 5,
+          "total_tokens": 169,
+          "response_ms": 1930.198,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 5,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.930235800000446,
+      "cpu_seconds": 3.875,
+      "memory": {
+        "rss": 2435211264,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-exact-0",
+      "category": "exact",
+      "expected": "E/Q-0_x!",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "E/Q-0_x!",
+      "response": {
+        "answer": "E/Q-0_x!",
+        "metrics": {
+          "input_tokens": 130,
+          "selected_context_tokens": 130,
+          "output_tokens": 7,
+          "total_tokens": 137,
+          "response_ms": 1982.884,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.982915699998557,
+      "cpu_seconds": 3.96875,
+      "memory": {
+        "rss": 2435751936,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-exact-1",
+      "category": "exact",
+      "expected": "E/Q-1_x!",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "E/Q-1_x!",
+      "response": {
+        "answer": "E/Q-1_x!",
+        "metrics": {
+          "input_tokens": 130,
+          "selected_context_tokens": 130,
+          "output_tokens": 7,
+          "total_tokens": 137,
+          "response_ms": 1968.837,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.968870299999253,
+      "cpu_seconds": 3.90625,
+      "memory": {
+        "rss": 2435751936,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-exact-2",
+      "category": "exact",
+      "expected": "E/Q-2_x!",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "E/Q-2_x!",
+      "response": {
+        "answer": "E/Q-2_x!",
+        "metrics": {
+          "input_tokens": 130,
+          "selected_context_tokens": 130,
+          "output_tokens": 7,
+          "total_tokens": 137,
+          "response_ms": 2106.563,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 2.1065973000004306,
+      "cpu_seconds": 4.21875,
+      "memory": {
+        "rss": 2434539520,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-math-0",
+      "category": "math",
+      "expected": "10",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "10",
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "input_tokens": 107,
+          "selected_context_tokens": 107,
+          "output_tokens": 3,
+          "total_tokens": 110,
+          "response_ms": 1397.978,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.3980288000002474,
+      "cpu_seconds": 2.71875,
+      "memory": {
+        "rss": 2430447616,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-math-1",
+      "category": "math",
+      "expected": "10",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "10",
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "input_tokens": 107,
+          "selected_context_tokens": 107,
+          "output_tokens": 3,
+          "total_tokens": 110,
+          "response_ms": 1301.441,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.301476200000252,
+      "cpu_seconds": 2.59375,
+      "memory": {
+        "rss": 2431262720,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-math-2",
+      "category": "math",
+      "expected": "10",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "10",
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "input_tokens": 107,
+          "selected_context_tokens": 107,
+          "output_tokens": 3,
+          "total_tokens": 110,
+          "response_ms": 1170.604,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 1,
+          "selected_message_ids": [
+            "m0"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.1706401000010374,
+      "cpu_seconds": 2.328125,
+      "memory": {
+        "rss": 2428665856,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-refusal-0",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "The sum of five plus five is ten.",
+      "response": {
+        "answer": "The sum of five plus five is ten.",
+        "metrics": {
+          "input_tokens": 113,
+          "selected_context_tokens": 113,
+          "output_tokens": 10,
+          "total_tokens": 123,
+          "response_ms": 2279.583,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": true
+      },
+      "seconds": 2.27962959999968,
+      "cpu_seconds": 4.5625,
+      "memory": {
+        "rss": 2429931520,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-refusal-1",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "10",
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "input_tokens": 126,
+          "selected_context_tokens": 126,
+          "output_tokens": 3,
+          "total_tokens": 129,
+          "response_ms": 1307.381,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.307416400000875,
+      "cpu_seconds": 2.609375,
+      "memory": {
+        "rss": 2429857792,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-refusal-2",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "10",
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "input_tokens": 126,
+          "selected_context_tokens": 126,
+          "output_tokens": 3,
+          "total_tokens": 129,
+          "response_ms": 1386.571,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 3,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ]
+        }
+      },
+      "scores": {
+        "exact": true,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": false,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": false
+      },
+      "seconds": 1.3866046000002825,
+      "cpu_seconds": 2.765625,
+      "memory": {
+        "rss": 2429489152,
+        "process_lifetime_peak_rss": 2442285056
+      }
+    },
+    {
+      "case": "test-observed-full-refusal",
+      "category": "refusal",
+      "expected": "10",
+      "origin": "external_pretrained",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "raw_answer": "The sum of 5 and 5 is 10.",
+      "response": {
+        "answer": "The sum of 5 and 5 is 10.",
+        "metrics": {
+          "input_tokens": 269,
+          "selected_context_tokens": 269,
+          "output_tokens": 14,
+          "total_tokens": 283,
+          "response_ms": 3515.739,
+          "backend": "Toruk",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "selector_sha256": null,
+          "selector_kind": null,
+          "mode": "BASELINE",
+          "memory_used": false,
+          "selector_id": null,
+          "selected_messages": 11,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ]
+        }
+      },
+      "scores": {
+        "exact": false,
+        "false_assertion_proxy": false,
+        "wrong_nonempty": true,
+        "repeated_trigrams": 0,
+        "invalid_utf8": false,
+        "refusal_carryover_error": true
+      },
+      "seconds": 3.515786500000104,
+      "cpu_seconds": 7.0,
+      "memory": {
+        "rss": 2441777152,
+        "process_lifetime_peak_rss": 2455289856
+      }
+    }
+  ],
+  "seconds": 50.70596990000013,
+  "pilot": "NOT_RUN",
+  "product_gate": "FAIL: no eligible starting checkpoint and no trained pilot",
+  "decoding": {
+    "temperature": 0,
+    "max_new_tokens": 16,
+    "owned_tokenizer": "UTF8 bytes",
+    "external_tokenizer": "native BPE",
+    "prompt_format_owned": "toruk-json-role-lines-v1",
+    "external_threads": 2
+  },
+  "resource_enforcement": "Time, disk and RSS checks at request boundaries; outer check.py timeout. Not an OS memory hard limit."
+}
