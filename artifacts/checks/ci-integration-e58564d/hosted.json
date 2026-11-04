@@ -1,0 +1,310 @@
+{
+  "head": "e58564dc1a4f75ad7b9b8e425b35fc20c3a9d751",
+  "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41872392347",
+  "conclusion": "success",
+  "event": "push",
+  "jobs": [
+    {
+      "name": "check",
+      "conclusion": "success",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41872392347/job/126722693098",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T16:55:37Z",
+          "completed_at": "2026-11-04T16:55:37Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T16:55:37Z",
+          "completed_at": "2026-11-04T16:55:40Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T16:55:40Z",
+          "completed_at": "2026-11-04T16:55:40Z"
+        },
+        {
+          "name": "Run python -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T16:55:40Z",
+          "completed_at": "2026-11-04T16:56:02Z"
+        },
+        {
+          "name": "Run python -m pip install -e '.[dev,chat]'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T16:56:02Z",
+          "completed_at": "2026-11-04T16:56:20Z"
+        },
+        {
+          "name": "Run python -m pip check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-04T16:56:20Z",
+          "completed_at": "2026-11-04T16:56:20Z"
+        },
+        {
+          "name": "Run python -c \"import toruk_lm; print(toruk_lm.__version__)\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-04T16:56:20Z",
+          "completed_at": "2026-11-04T16:56:21Z"
+        },
+        {
+          "name": "Run python -m toruk_lm --help",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-04T16:56:21Z",
+          "completed_at": "2026-11-04T16:56:22Z"
+        },
+        {
+          "name": "Run python -m toruk_lm diagnose",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-04T16:56:22Z",
+          "completed_at": "2026-11-04T16:56:24Z"
+        },
+        {
+          "name": "Run python scripts/check_frozen_sources.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-04T16:56:24Z",
+          "completed_at": "2026-11-04T16:56:24Z"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-04T16:56:24Z",
+          "completed_at": "2026-11-04T16:56:24Z"
+        },
+        {
+          "name": "Run python -m ruff format --check src tests scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-04T16:56:24Z",
+          "completed_at": "2026-11-04T16:56:24Z"
+        },
+        {
+          "name": "Run python -m mypy",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-04T16:56:24Z",
+          "completed_at": "2026-11-04T16:57:03Z"
+        },
+        {
+          "name": "Run python -m mypy --platform linux",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-04T16:57:03Z",
+          "completed_at": "2026-11-04T16:57:04Z"
+        },
+        {
+          "name": "Run python -m pytest -q",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-04T16:57:04Z",
+          "completed_at": "2026-11-04T16:58:32Z"
+        },
+        {
+          "name": "Run python scripts/independent_replication.py validate-cases --run artifacts/ci-independent-cases",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-04T16:58:32Z",
+          "completed_at": "2026-11-04T16:58:33Z"
+        },
+        {
+          "name": "Run python scripts/conversation_readiness.py validate --output artifacts/ci-conversation-data",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-04T16:58:33Z",
+          "completed_at": "2026-11-04T16:58:34Z"
+        },
+        {
+          "name": "Run python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output artifacts/ci-owned-lm",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-11-04T16:58:34Z",
+          "completed_at": "2026-11-04T16:58:38Z"
+        },
+        {
+          "name": "Run python -m toruk_lm.owned_lm generate --checkpoint artifacts/ci-owned-lm/models/23-memory_on/checkpoint.pt --prompt \"Experimental CPU smoke\" --max-new-tokens 4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-04T16:58:38Z",
+          "completed_at": "2026-11-04T16:58:41Z"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-04T16:58:41Z",
+          "completed_at": "2026-11-04T16:58:43Z"
+        },
+        {
+          "name": "Run python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-04T16:58:43Z",
+          "completed_at": "2026-11-04T16:58:44Z"
+        },
+        {
+          "name": "Run python -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-11-04T16:58:44Z",
+          "completed_at": "2026-11-04T16:58:47Z"
+        },
+        {
+          "name": "Run python -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-11-04T16:58:47Z",
+          "completed_at": "2026-11-04T16:58:48Z"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-11-04T16:58:48Z",
+          "completed_at": "2026-11-04T16:58:51Z"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-11-04T16:58:51Z",
+          "completed_at": "2026-11-04T16:58:52Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-11-04T16:58:52Z",
+          "completed_at": "2026-11-04T16:58:52Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-11-04T16:58:52Z",
+          "completed_at": "2026-11-04T16:58:53Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-11-04T16:58:53Z",
+          "completed_at": "2026-11-04T16:58:53Z"
+        }
+      ]
+    },
+    {
+      "name": "web",
+      "conclusion": "success",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41872392347/job/126722693415",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T16:55:36Z",
+          "completed_at": "2026-11-04T16:55:37Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T16:55:37Z",
+          "completed_at": "2026-11-04T16:55:39Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T16:55:39Z",
+          "completed_at": "2026-11-04T16:55:39Z"
+        },
+        {
+          "name": "Run npm --prefix web/vercel run check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T16:55:39Z",
+          "completed_at": "2026-11-04T16:55:40Z"
+        },
+        {
+          "name": "Run npm --prefix web/vercel test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T16:55:40Z",
+          "completed_at": "2026-11-04T16:55:40Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-04T16:55:40Z",
+          "completed_at": "2026-11-04T16:55:40Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-04T16:55:40Z",
+          "completed_at": "2026-11-04T16:55:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-04T16:55:40Z",
+          "completed_at": "2026-11-04T16:55:40Z"
+        }
+      ]
+    }
+  ]
+}

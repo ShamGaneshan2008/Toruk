@@ -1,0 +1,338 @@
+[
+  {
+    "id": "development-instruction-0",
+    "split": "development",
+    "category": "instruction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply only Dvalueinstruction0."
+      }
+    ],
+    "answer": "Dvalueinstruction0",
+    "prefix": "user:\"Reply only Dvalueinstruction0.\"\nassistant:",
+    "text": "user:\"Reply only Dvalueinstruction0.\"\nassistant:\"Dvalueinstruction0\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-instruction-1",
+    "split": "development",
+    "category": "instruction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply only Dvalueinstruction1."
+      }
+    ],
+    "answer": "Dvalueinstruction1",
+    "prefix": "user:\"Reply only Dvalueinstruction1.\"\nassistant:",
+    "text": "user:\"Reply only Dvalueinstruction1.\"\nassistant:\"Dvalueinstruction1\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-factual-0",
+    "split": "development",
+    "category": "factual",
+    "messages": [
+      {
+        "role": "user",
+        "content": "The label for Dpersonfactual0 is Dvaluefactual0. What is its label? Reply only the label."
+      }
+    ],
+    "answer": "Dvaluefactual0",
+    "prefix": "user:\"The label for Dpersonfactual0 is Dvaluefactual0. What is its label? Reply only the label.\"\nassistant:",
+    "text": "user:\"The label for Dpersonfactual0 is Dvaluefactual0. What is its label? Reply only the label.\"\nassistant:\"Dvaluefactual0\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-factual-1",
+    "split": "development",
+    "category": "factual",
+    "messages": [
+      {
+        "role": "user",
+        "content": "The label for Dpersonfactual1 is Dvaluefactual1. What is its label? Reply only the label."
+      }
+    ],
+    "answer": "Dvaluefactual1",
+    "prefix": "user:\"The label for Dpersonfactual1 is Dvaluefactual1. What is its label? Reply only the label.\"\nassistant:",
+    "text": "user:\"The label for Dpersonfactual1 is Dvaluefactual1. What is its label? Reply only the label.\"\nassistant:\"Dvaluefactual1\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-uncertainty-0",
+    "split": "development",
+    "category": "uncertainty",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is Dpersonuncertainty0's unseen label? If missing, reply only Not stated."
+      }
+    ],
+    "answer": "Not stated.",
+    "prefix": "user:\"What is Dpersonuncertainty0's unseen label? If missing, reply only Not stated.\"\nassistant:",
+    "text": "user:\"What is Dpersonuncertainty0's unseen label? If missing, reply only Not stated.\"\nassistant:\"Not stated.\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-uncertainty-1",
+    "split": "development",
+    "category": "uncertainty",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is Dpersonuncertainty1's unseen label? If missing, reply only Not stated."
+      }
+    ],
+    "answer": "Not stated.",
+    "prefix": "user:\"What is Dpersonuncertainty1's unseen label? If missing, reply only Not stated.\"\nassistant:",
+    "text": "user:\"What is Dpersonuncertainty1's unseen label? If missing, reply only Not stated.\"\nassistant:\"Not stated.\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-correction-0",
+    "split": "development",
+    "category": "correction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dpersoncorrection0's label is Doldcorrection0."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Correction: the label is now Dvaluecorrection0."
+      },
+      {
+        "role": "assistant",
+        "content": "Updated."
+      },
+      {
+        "role": "user",
+        "content": "What is Dpersoncorrection0's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Dvaluecorrection0",
+    "prefix": "user:\"Dpersoncorrection0's label is Doldcorrection0.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Dvaluecorrection0.\"\nassistant:\"Updated.\"\nuser:\"What is Dpersoncorrection0's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Dpersoncorrection0's label is Doldcorrection0.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Dvaluecorrection0.\"\nassistant:\"Updated.\"\nuser:\"What is Dpersoncorrection0's label? Reply only the exact label.\"\nassistant:\"Dvaluecorrection0\"\n",
+    "obsolete": "Doldcorrection0"
+  },
+  {
+    "id": "development-correction-1",
+    "split": "development",
+    "category": "correction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dpersoncorrection1's label is Doldcorrection1."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Correction: the label is now Dvaluecorrection1."
+      },
+      {
+        "role": "assistant",
+        "content": "Updated."
+      },
+      {
+        "role": "user",
+        "content": "What is Dpersoncorrection1's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Dvaluecorrection1",
+    "prefix": "user:\"Dpersoncorrection1's label is Doldcorrection1.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Dvaluecorrection1.\"\nassistant:\"Updated.\"\nuser:\"What is Dpersoncorrection1's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Dpersoncorrection1's label is Doldcorrection1.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Dvaluecorrection1.\"\nassistant:\"Updated.\"\nuser:\"What is Dpersoncorrection1's label? Reply only the exact label.\"\nassistant:\"Dvaluecorrection1\"\n",
+    "obsolete": "Doldcorrection1"
+  },
+  {
+    "id": "development-distant-0",
+    "split": "development",
+    "category": "distant",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dpersondistant0's label is Dvaluedistant0."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Unrelated note: wind wind wind wind wind wind wind wind wind wind wind wind wind wind wind "
+      },
+      {
+        "role": "assistant",
+        "content": "Noted."
+      },
+      {
+        "role": "user",
+        "content": "What is Dpersondistant0's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Dvaluedistant0",
+    "prefix": "user:\"Dpersondistant0's label is Dvaluedistant0.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: wind wind wind wind wind wind wind wind wind wind wind wind wind wind wind \"\nassistant:\"Noted.\"\nuser:\"What is Dpersondistant0's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Dpersondistant0's label is Dvaluedistant0.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: wind wind wind wind wind wind wind wind wind wind wind wind wind wind wind \"\nassistant:\"Noted.\"\nuser:\"What is Dpersondistant0's label? Reply only the exact label.\"\nassistant:\"Dvaluedistant0\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-distant-1",
+    "split": "development",
+    "category": "distant",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dpersondistant1's label is Dvaluedistant1."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Unrelated note: cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud "
+      },
+      {
+        "role": "assistant",
+        "content": "Noted."
+      },
+      {
+        "role": "user",
+        "content": "What is Dpersondistant1's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Dvaluedistant1",
+    "prefix": "user:\"Dpersondistant1's label is Dvaluedistant1.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud \"\nassistant:\"Noted.\"\nuser:\"What is Dpersondistant1's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Dpersondistant1's label is Dvaluedistant1.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud \"\nassistant:\"Noted.\"\nuser:\"What is Dpersondistant1's label? Reply only the exact label.\"\nassistant:\"Dvaluedistant1\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-exact-0",
+    "split": "development",
+    "category": "exact",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dpersonexact0's label is D/Q-0_x!."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "What is Dpersonexact0's label? Reply only the exact label."
+      }
+    ],
+    "answer": "D/Q-0_x!",
+    "prefix": "user:\"Dpersonexact0's label is D/Q-0_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Dpersonexact0's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Dpersonexact0's label is D/Q-0_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Dpersonexact0's label? Reply only the exact label.\"\nassistant:\"D/Q-0_x!\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-exact-1",
+    "split": "development",
+    "category": "exact",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dpersonexact1's label is D/Q-1_x!."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "What is Dpersonexact1's label? Reply only the exact label."
+      }
+    ],
+    "answer": "D/Q-1_x!",
+    "prefix": "user:\"Dpersonexact1's label is D/Q-1_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Dpersonexact1's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Dpersonexact1's label is D/Q-1_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Dpersonexact1's label? Reply only the exact label.\"\nassistant:\"D/Q-1_x!\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-math-0",
+    "split": "development",
+    "category": "math",
+    "messages": [
+      {
+        "role": "user",
+        "content": "For Dpersonmath0, what is 7+7? Reply only the number."
+      }
+    ],
+    "answer": "14",
+    "prefix": "user:\"For Dpersonmath0, what is 7+7? Reply only the number.\"\nassistant:",
+    "text": "user:\"For Dpersonmath0, what is 7+7? Reply only the number.\"\nassistant:\"14\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-math-1",
+    "split": "development",
+    "category": "math",
+    "messages": [
+      {
+        "role": "user",
+        "content": "For Dpersonmath1, what is 7+7? Reply only the number."
+      }
+    ],
+    "answer": "14",
+    "prefix": "user:\"For Dpersonmath1, what is 7+7? Reply only the number.\"\nassistant:",
+    "text": "user:\"For Dpersonmath1, what is 7+7? Reply only the number.\"\nassistant:\"14\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-refusal-0",
+    "split": "development",
+    "category": "refusal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "open YouTube"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot access online content."
+      },
+      {
+        "role": "user",
+        "content": "For Dpersonrefusal0, what is 8+8? Reply only the number."
+      }
+    ],
+    "answer": "16",
+    "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Dpersonrefusal0, what is 8+8? Reply only the number.\"\nassistant:",
+    "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Dpersonrefusal0, what is 8+8? Reply only the number.\"\nassistant:\"16\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "development-refusal-1",
+    "split": "development",
+    "category": "refusal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "open YouTube"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot access online content."
+      },
+      {
+        "role": "user",
+        "content": "For Dpersonrefusal1, what is 8+8? Reply only the number."
+      }
+    ],
+    "answer": "16",
+    "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Dpersonrefusal1, what is 8+8? Reply only the number.\"\nassistant:",
+    "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Dpersonrefusal1, what is 8+8? Reply only the number.\"\nassistant:\"16\"\n",
+    "obsolete": ""
+  }
+]
