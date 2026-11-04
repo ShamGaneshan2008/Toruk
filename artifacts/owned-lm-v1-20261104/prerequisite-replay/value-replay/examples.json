@@ -1,0 +1,4531 @@
+{
+  "31": {
+    "gains": [
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 210,
+              "forward_positions": 310,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 201,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 12.016899998343433,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 190,
+              "write_correct": 11,
+              "write_predictions": [
+                4,
+                2,
+                5,
+                4,
+                1,
+                1,
+                3,
+                3,
+                3,
+                3,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-3",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 210,
+              "forward_positions": 311,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 201,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 12.634200000320561,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 190,
+              "write_correct": 11,
+              "write_predictions": [
+                4,
+                2,
+                5,
+                4,
+                1,
+                1,
+                3,
+                3,
+                3,
+                3,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-3",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "owl",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 162,
+              "forward_positions": 262,
+              "generated_ids": [
+                114,
+                122,
+                111,
+                2
+              ],
+              "history_tokens_scanned": 152,
+              "key": 5,
+              "query": "is pet? Cyd's What",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 10.421400000268477,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 144,
+              "write_correct": 8,
+              "write_predictions": [
+                2,
+                5,
+                1,
+                2,
+                4,
+                0,
+                4,
+                4
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "preservation",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-preservation-7",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 162,
+              "forward_positions": 262,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 152,
+              "key": 5,
+              "query": "is pet? Cyd's What",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 10.34070000059728,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 144,
+              "write_correct": 8,
+              "write_predictions": [
+                2,
+                5,
+                1,
+                2,
+                4,
+                0,
+                4,
+                4
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "preservation",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-preservation-7",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                2
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "green",
+              "extra_routing_embedding_positions": 168,
+              "forward_positions": 270,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 158,
+              "key": 3,
+              "query": "is pet? Ben's What",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 10.053899999547866,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 150,
+              "write_correct": 8,
+              "write_predictions": [
+                2,
+                5,
+                3,
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distant",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-distant-5",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                2
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "green",
+              "extra_routing_embedding_positions": 168,
+              "forward_positions": 268,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 158,
+              "key": 3,
+              "query": "is pet? Ben's What",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 10.265299999446142,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 150,
+              "write_correct": 8,
+              "write_predictions": [
+                2,
+                5,
+                3,
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distant",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-distant-5",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "dog",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                2
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "dog",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 307,
+              "generated_ids": [
+                103,
+                114,
+                106,
+                2
+              ],
+              "history_tokens_scanned": 198,
+              "key": 0,
+              "query": "What Ada's is color?",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 12.142199999289005,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 187,
+              "write_correct": 11,
+              "write_predictions": [
+                1,
+                4,
+                0,
+                1,
+                5,
+                3,
+                5,
+                5,
+                3,
+                3,
+                5
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "distant",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-distant-7",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                2
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "dog",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 307,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 198,
+              "key": 0,
+              "query": "What Ada's is color?",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 11.83619999937946,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 187,
+              "write_correct": 11,
+              "write_predictions": [
+                1,
+                4,
+                0,
+                1,
+                5,
+                3,
+                5,
+                5,
+                3,
+                3,
+                5
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "distant",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-distant-7",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "owl",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 164,
+              "forward_positions": 264,
+              "generated_ids": [
+                114,
+                122,
+                111,
+                2
+              ],
+              "history_tokens_scanned": 154,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 10.672000000340631,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 146,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                3,
+                4,
+                5,
+                0,
+                0,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distraction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-distraction-2",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 164,
+              "forward_positions": 265,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 154,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 9.903699999995297,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 146,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                3,
+                4,
+                5,
+                0,
+                0,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distraction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-distraction-2",
+          "load": 0
+        }
+      }
+    ],
+    "known_failures": [
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 164,
+              "forward_positions": 266,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 154,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 10.501699998712866,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 146,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                0,
+                1,
+                5,
+                2,
+                4,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-0",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 164,
+              "forward_positions": 265,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 154,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 10.484899999937625,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 146,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                0,
+                1,
+                5,
+                2,
+                4,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-0",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 307,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 198,
+              "key": 0,
+              "query": "is color? Ada's What",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 12.435500000719912,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 187,
+              "write_correct": 11,
+              "write_predictions": [
+                0,
+                5,
+                2,
+                0,
+                3,
+                1,
+                1,
+                1,
+                3,
+                1,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-1",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 308,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 198,
+              "key": 0,
+              "query": "is color? Ada's What",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 12.603600000147708,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 187,
+              "write_correct": 11,
+              "write_predictions": [
+                0,
+                5,
+                2,
+                0,
+                3,
+                1,
+                1,
+                1,
+                3,
+                1,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-1",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "dog",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                103,
+                114,
+                106,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 10.289700001521851,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "red",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                117,
+                104,
+                103,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 9.59309999961988,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "owl",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 307,
+              "generated_ids": [
+                114,
+                122,
+                111,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 12.507299999924726,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 308,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 13.285799999721348,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 201,
+              "forward_positions": 301,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 191,
+              "key": 4,
+              "query": "is color? Cyd's What",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 11.820699999589124,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unsupported": false,
+              "update_cells": 2880,
+              "update_tokens": 181,
+              "write_correct": 10,
+              "write_predictions": [
+                4,
+                0,
+                3,
+                4,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+              ],
+              "write_records": 10
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-5",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 201,
+              "forward_positions": 302,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 191,
+              "key": 4,
+              "query": "is color? Cyd's What",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 11.738100000002305,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unsupported": false,
+              "update_cells": 2880,
+              "update_tokens": 181,
+              "write_correct": 10,
+              "write_predictions": [
+                4,
+                0,
+                3,
+                4,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+              ],
+              "write_records": 10
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-5",
+          "load": 0
+        }
+      }
+    ],
+    "regressions": [
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "dog",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                103,
+                114,
+                106,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 10.289700001521851,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "red",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                117,
+                104,
+                103,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 9.59309999961988,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "owl",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 307,
+              "generated_ids": [
+                114,
+                122,
+                111,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 12.507299999924726,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 308,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 13.285799999721348,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 157,
+              "forward_positions": 259,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 147,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 10.041699999419507,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 139,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                2,
+                4,
+                5,
+                1,
+                1,
+                0,
+                0
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-7",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 157,
+              "forward_positions": 257,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 147,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 9.665199999290053,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 139,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                2,
+                4,
+                5,
+                1,
+                1,
+                0,
+                0
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-7",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "dog",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 179,
+              "forward_positions": 279,
+              "generated_ids": [
+                103,
+                114,
+                106,
+                2
+              ],
+              "history_tokens_scanned": 168,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 11.237300001084805,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 159,
+              "write_correct": 9,
+              "write_predictions": [
+                2,
+                4,
+                5,
+                2,
+                3,
+                3,
+                1,
+                1,
+                1
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "preservation",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-preservation-2",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "red",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 179,
+              "forward_positions": 279,
+              "generated_ids": [
+                117,
+                104,
+                103,
+                2
+              ],
+              "history_tokens_scanned": 168,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 10.45689999955357,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 159,
+              "write_correct": 9,
+              "write_predictions": [
+                2,
+                4,
+                5,
+                2,
+                3,
+                3,
+                1,
+                1,
+                1
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "preservation",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-preservation-2",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 178,
+              "forward_positions": 280,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 169,
+              "key": 3,
+              "query": "is pet? Ben's What",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 11.46350000090024,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 160,
+              "write_correct": 9,
+              "write_predictions": [
+                0,
+                3,
+                2,
+                0,
+                5,
+                5,
+                5,
+                1,
+                1
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "preservation",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-preservation-5",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 178,
+              "forward_positions": 278,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 169,
+              "key": 3,
+              "query": "is pet? Ben's What",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 11.103799999546027,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 160,
+              "write_correct": 9,
+              "write_predictions": [
+                0,
+                3,
+                2,
+                0,
+                5,
+                5,
+                5,
+                1,
+                1
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "preservation",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-preservation-5",
+          "load": 0
+        }
+      }
+    ],
+    "unsupported": []
+  },
+  "47": {
+    "gains": [
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 210,
+              "forward_positions": 310,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 201,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 12.303800000154297,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 190,
+              "write_correct": 11,
+              "write_predictions": [
+                4,
+                2,
+                5,
+                4,
+                1,
+                1,
+                3,
+                3,
+                3,
+                3,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-3",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 210,
+              "forward_positions": 311,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 201,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 12.312199998632423,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 190,
+              "write_correct": 11,
+              "write_predictions": [
+                4,
+                2,
+                5,
+                4,
+                1,
+                1,
+                3,
+                3,
+                3,
+                3,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-3",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                2
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "green",
+              "extra_routing_embedding_positions": 168,
+              "forward_positions": 270,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 158,
+              "key": 3,
+              "query": "is pet? Ben's What",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 10.21480000053998,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 150,
+              "write_correct": 8,
+              "write_predictions": [
+                2,
+                5,
+                3,
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distant",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-distant-5",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                2
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "green",
+              "extra_routing_embedding_positions": 168,
+              "forward_positions": 268,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 158,
+              "key": 3,
+              "query": "is pet? Ben's What",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 10.311500000170781,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 150,
+              "write_correct": 8,
+              "write_predictions": [
+                2,
+                5,
+                3,
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distant",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-distant-5",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "green",
+              "extra_routing_embedding_positions": 181,
+              "forward_positions": 283,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 172,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 11.057799998525297,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 163,
+              "write_correct": 9,
+              "write_predictions": [
+                1,
+                2,
+                4,
+                1,
+                3,
+                0,
+                0,
+                0,
+                3
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "distraction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-distraction-6",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "green",
+              "extra_routing_embedding_positions": 181,
+              "forward_positions": 282,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 172,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 10.978800000884803,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 163,
+              "write_correct": 9,
+              "write_predictions": [
+                1,
+                2,
+                4,
+                1,
+                3,
+                0,
+                0,
+                0,
+                3
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "distraction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-distraction-6",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 168,
+              "forward_positions": 268,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 156,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 10.251900001094327,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 148,
+              "write_correct": 8,
+              "write_predictions": [
+                4,
+                5,
+                3,
+                4,
+                0,
+                2,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distraction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-distraction-7",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 168,
+              "forward_positions": 269,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 156,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 13.017699999181787,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 148,
+              "write_correct": 8,
+              "write_predictions": [
+                4,
+                5,
+                3,
+                4,
+                0,
+                2,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "distraction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-distraction-7",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 220,
+              "forward_positions": 320,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 211,
+              "key": 2,
+              "query": "is color? Ben's What",
+              "read_correct": true,
+              "read_predicted": 2,
+              "response_ms": 12.884300000223448,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 200,
+              "write_correct": 11,
+              "write_predictions": [
+                2,
+                5,
+                0,
+                2,
+                4,
+                4,
+                4,
+                4,
+                1,
+                1,
+                4
+              ],
+              "write_records": 11
+            },
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "green",
+              "extra_routing_embedding_positions": 218,
+              "forward_positions": 320,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 211,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 12.480900000809925,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 200,
+              "write_correct": 11,
+              "write_predictions": [
+                2,
+                5,
+                0,
+                2,
+                4,
+                4,
+                4,
+                4,
+                1,
+                1,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "multi",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-multi-5",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "cat",
+              "extra_routing_embedding_positions": 220,
+              "forward_positions": 320,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 211,
+              "key": 2,
+              "query": "is color? Ben's What",
+              "read_correct": true,
+              "read_predicted": 2,
+              "response_ms": 12.213199999678181,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 200,
+              "write_correct": 11,
+              "write_predictions": [
+                2,
+                5,
+                0,
+                2,
+                4,
+                4,
+                4,
+                4,
+                1,
+                1,
+                4
+              ],
+              "write_records": 11
+            },
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "green",
+              "extra_routing_embedding_positions": 218,
+              "forward_positions": 318,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 211,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 11.99330000054033,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 200,
+              "write_correct": 11,
+              "write_predictions": [
+                2,
+                5,
+                0,
+                2,
+                4,
+                4,
+                4,
+                4,
+                1,
+                1,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "multi",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-multi-5",
+          "load": 0
+        }
+      }
+    ],
+    "known_failures": [
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 164,
+              "forward_positions": 264,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 154,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 11.336300000039046,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 146,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                0,
+                1,
+                5,
+                2,
+                4,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-0",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 164,
+              "forward_positions": 265,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 154,
+              "key": 5,
+              "query": "What Cyd's is pet?",
+              "read_correct": true,
+              "read_predicted": 5,
+              "response_ms": 11.070200000176555,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 146,
+              "write_correct": 8,
+              "write_predictions": [
+                5,
+                0,
+                1,
+                5,
+                2,
+                4,
+                2,
+                2
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-0",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 307,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 198,
+              "key": 0,
+              "query": "is color? Ada's What",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 13.006600000153412,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 187,
+              "write_correct": 11,
+              "write_predictions": [
+                0,
+                5,
+                2,
+                0,
+                3,
+                1,
+                1,
+                1,
+                3,
+                1,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-1",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 308,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 198,
+              "key": 0,
+              "query": "is color? Ada's What",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 12.472600001274259,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 187,
+              "write_correct": 11,
+              "write_predictions": [
+                0,
+                5,
+                2,
+                0,
+                3,
+                1,
+                1,
+                1,
+                3,
+                1,
+                1
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-1",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 9.931700000379351,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "red",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                117,
+                104,
+                103,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 9.595300000000861,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 309,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 13.433799998892937,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 308,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 12.694300001385272,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 201,
+              "forward_positions": 301,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 191,
+              "key": 4,
+              "query": "is color? Cyd's What",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 12.091100001271116,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unsupported": false,
+              "update_cells": 2880,
+              "update_tokens": 181,
+              "write_correct": 10,
+              "write_predictions": [
+                4,
+                0,
+                3,
+                4,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+              ],
+              "write_records": 10
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-5",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 201,
+              "forward_positions": 302,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 191,
+              "key": 4,
+              "query": "is color? Cyd's What",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 11.678699998810771,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unsupported": false,
+              "update_cells": 2880,
+              "update_tokens": 181,
+              "write_correct": 10,
+              "write_predictions": [
+                4,
+                0,
+                3,
+                4,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+              ],
+              "write_records": 10
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-5",
+          "load": 0
+        }
+      }
+    ],
+    "regressions": [
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 9.931700000379351,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "red",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": true,
+              "expected": "red",
+              "extra_routing_embedding_positions": 156,
+              "forward_positions": 256,
+              "generated_ids": [
+                117,
+                104,
+                103,
+                2
+              ],
+              "history_tokens_scanned": 146,
+              "key": 1,
+              "query": "is pet? Ada's What",
+              "read_correct": true,
+              "read_predicted": 1,
+              "response_ms": 9.595300000000861,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 138,
+              "write_correct": 8,
+              "write_predictions": [
+                1,
+                0,
+                4,
+                1,
+                3,
+                3,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-2",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "green",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 309,
+              "generated_ids": [
+                106,
+                117,
+                104,
+                104,
+                113,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 13.433799998892937,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "blue",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                3
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "blue",
+              "extra_routing_embedding_positions": 207,
+              "forward_positions": 308,
+              "generated_ids": [
+                101,
+                111,
+                120,
+                104,
+                2
+              ],
+              "history_tokens_scanned": 200,
+              "key": 3,
+              "query": "What Ben's is pet?",
+              "read_correct": true,
+              "read_predicted": 3,
+              "response_ms": 12.694300001385272,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "selected_tokens": 114,
+              "suffix_record_ids": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "unsupported": false,
+              "update_cells": 3168,
+              "update_tokens": 189,
+              "write_correct": 11,
+              "write_predictions": [
+                3,
+                2,
+                0,
+                3,
+                5,
+                5,
+                4,
+                5,
+                5,
+                5,
+                4
+              ],
+              "write_records": 11
+            }
+          ],
+          "category": "correction",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-correction-4",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 162,
+              "forward_positions": 262,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 150,
+              "key": 2,
+              "query": "is color? Ben's What",
+              "read_correct": true,
+              "read_predicted": 2,
+              "response_ms": 9.993300000132876,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 142,
+              "write_correct": 8,
+              "write_predictions": [
+                4,
+                2,
+                1,
+                4,
+                5,
+                5,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "preservation",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-preservation-1",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "owl",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 162,
+              "forward_positions": 262,
+              "generated_ids": [
+                114,
+                122,
+                111,
+                2
+              ],
+              "history_tokens_scanned": 150,
+              "key": 2,
+              "query": "is color? Ben's What",
+              "read_correct": true,
+              "read_predicted": 2,
+              "response_ms": 10.114900000189664,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "unsupported": false,
+              "update_cells": 2304,
+              "update_tokens": 142,
+              "write_correct": 8,
+              "write_predictions": [
+                4,
+                2,
+                1,
+                4,
+                5,
+                5,
+                5,
+                3
+              ],
+              "write_records": 8
+            }
+          ],
+          "category": "preservation",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-preservation-1",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 179,
+              "forward_positions": 279,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 168,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 10.590599998977268,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 159,
+              "write_correct": 9,
+              "write_predictions": [
+                2,
+                4,
+                5,
+                2,
+                3,
+                3,
+                1,
+                1,
+                1
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "preservation",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-preservation-2",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "red",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "red",
+              "extra_routing_embedding_positions": 179,
+              "forward_positions": 279,
+              "generated_ids": [
+                117,
+                104,
+                103,
+                2
+              ],
+              "history_tokens_scanned": 168,
+              "key": 4,
+              "query": "What Cyd's is color?",
+              "read_correct": true,
+              "read_predicted": 4,
+              "response_ms": 10.469900000316557,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "unsupported": false,
+              "update_cells": 2592,
+              "update_tokens": 159,
+              "write_correct": 9,
+              "write_predictions": [
+                2,
+                4,
+                5,
+                2,
+                3,
+                3,
+                1,
+                1,
+                1
+              ],
+              "write_records": 9
+            }
+          ],
+          "category": "preservation",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-preservation-2",
+          "load": 0
+        }
+      },
+      {
+        "augmented": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "cat",
+              "correct": false,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 188,
+              "forward_positions": 288,
+              "generated_ids": [
+                102,
+                100,
+                119,
+                2
+              ],
+              "history_tokens_scanned": 178,
+              "key": 0,
+              "query": "is color? Ada's What",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 11.822100001154467,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unsupported": false,
+              "update_cells": 2880,
+              "update_tokens": 168,
+              "write_correct": 10,
+              "write_predictions": [
+                5,
+                0,
+                4,
+                5,
+                3,
+                1,
+                1,
+                3,
+                1,
+                1
+              ],
+              "write_records": 10
+            }
+          ],
+          "category": "preservation",
+          "correct": false,
+          "eval_seed": 9101,
+          "id": "9101-preservation-3",
+          "load": 0
+        },
+        "old": {
+          "answers": [
+            {
+              "allocated_state_bytes": 1152,
+              "answer": "owl",
+              "correct": true,
+              "effective_state_bytes": 1152,
+              "evidence": [
+                1
+              ],
+              "evidence_ingested": true,
+              "evidence_suffix_exposed": false,
+              "expected": "owl",
+              "extra_routing_embedding_positions": 188,
+              "forward_positions": 288,
+              "generated_ids": [
+                114,
+                122,
+                111,
+                2
+              ],
+              "history_tokens_scanned": 178,
+              "key": 0,
+              "query": "is color? Ada's What",
+              "read_correct": true,
+              "read_predicted": 0,
+              "response_ms": 11.072299999796087,
+              "selected_record_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "selected_tokens": 116,
+              "suffix_record_ids": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "unsupported": false,
+              "update_cells": 2880,
+              "update_tokens": 168,
+              "write_correct": 10,
+              "write_predictions": [
+                5,
+                0,
+                4,
+                5,
+                3,
+                1,
+                1,
+                3,
+                1,
+                1
+              ],
+              "write_records": 10
+            }
+          ],
+          "category": "preservation",
+          "correct": true,
+          "eval_seed": 9101,
+          "id": "9101-preservation-3",
+          "load": 0
+        }
+      }
+    ],
+    "unsupported": []
+  }
+}

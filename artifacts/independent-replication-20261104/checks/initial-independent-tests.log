@@ -1,0 +1,17 @@
+.F.......                                                                [100%]
+================================== FAILURES ===================================
+_________ test_validation_rejects_short_gaps_and_duplicate_scenarios __________
+
+    def test_validation_rejects_short_gaps_and_duplicate_scenarios() -> None:
+        cases = data.build()
+        cases[0]["messages"] = cases[0]["messages"][:4]
+>       with pytest.raises(ValueError, match="18 trailing"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: '18 trailing'
+E         Actual message: 'Missing question or source ledger'
+
+tests\test_independent_replication.py:36: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_independent_replication.py::test_validation_rejects_short_gaps_and_duplicate_scenarios
+1 failed, 8 passed in 4.03s

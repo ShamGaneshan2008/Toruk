@@ -1,0 +1,44 @@
+B023 Function definition does not bind loop variable `messages`
+  --> scripts\independent_cases.py:45:13
+   |
+43 |             nonlocal gaps_used
+44 |             text = rng.choice(FILLERS).format(n=rng.randint(31, 97))
+45 |             messages.extend(
+   |             ^^^^^^^^
+46 |                 [
+47 |                     {"role": "user", "content": f"Side note {gaps_used + 1}: {text}"},
+   |
+
+E501 Line too long (109 > 100)
+  --> scripts\report_independent_replication.py:47:101
+   |
+45 |         "bootstrap_seed": 741,
+46 |         "unit": "scenario, paired across methods",
+47 |         "limitation": "Authored scenarios are not a random population sample; no training-seed uncertainty.",
+   |                                                                                                     ^^^^^^^^^
+48 |     }
+   |
+
+E501 Line too long (131 > 100)
+   --> scripts\report_independent_replication.py:105:101
+    |
+103 |     }
+104 |     lines = [
+105 |         "| Dataset / method | Correct | Unsupported proxy | Prompt / output tokens | Request s | CPU s | Selector ms | Peak GiB |",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+106 |         "|---|---:|---:|---:|---:|---:|---:|---:|",
+107 |     ]
+    |
+
+E501 Line too long (101 > 100)
+   --> scripts\report_independent_replication.py:139:101
+    |
+137 |             lines.append(
+138 |                 f"| {suite} / {method} | {stat['correct']}/{stat['n']} | "
+139 |                 f"{stat['unsupported_proxy']} | {stat['prompt_tokens']} / {stat['output_tokens']} | "
+    |                                                                                                     ^
+140 |                 f"{stat['request_ms'] / 1000:.2f} | {stat['request_cpu_ms'] / 1000:.2f} | "
+141 |                 f"{stat['selector_ms']:.3f} | {stat['cumulative_process_peak_bytes'] / 2**30:.3f} |"
+    |
+
+Found 4 errors.

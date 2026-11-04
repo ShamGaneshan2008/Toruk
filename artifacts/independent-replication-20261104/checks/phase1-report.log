@@ -1,0 +1,10 @@
+| Split / method | Exact /6 | Gist /2 | Clear /2 | Ambiguous /1 | Missing /1 | All /12 | Unsupported proxy |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| development / recent | 0 | 0 | 0 | 0 | 1 | 1 | 1 |
+| development / lexical | 4 | 0 | 1 | 0 | 1 | 6 | 2 |
+| development / old | 4 | 1 | 1 | 0 | 1 | 7 | 2 |
+| development / new | 3 | 2 | 2 | 0 | 0 | 7 | 3 |
+| heldout / recent | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
+| heldout / lexical | 2 | 1 | 1 | 0 | 0 | 4 | 2 |
+| heldout / old | 2 | 1 | 1 | 0 | 0 | 4 | 2 |
+| heldout / new | 4 | 2 | 2 | 0 | 0 | 8 | 3 |

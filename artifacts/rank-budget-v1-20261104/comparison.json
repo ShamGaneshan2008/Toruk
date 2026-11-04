@@ -1,0 +1,248 @@
+{
+  "gates": {
+    "correct_at_least_6": true,
+    "unsupported_proxy_at_most_2": false,
+    "request_ms_per_correct_at_least_10_percent_lower": true
+  },
+  "success": false,
+  "before": {
+    "correct": 4,
+    "n": 12,
+    "by_task": {
+      "exact": {
+        "correct": 2,
+        "n": 6
+      },
+      "gist": {
+        "correct": 1,
+        "n": 2
+      },
+      "missing": {
+        "correct": 0,
+        "n": 1
+      },
+      "vague_ambiguous": {
+        "correct": 0,
+        "n": 1
+      },
+      "vague_clear": {
+        "correct": 1,
+        "n": 2
+      }
+    },
+    "unsupported_proxy": 2,
+    "failures": {
+      "lost_evidence": 5,
+      "generation_despite_evidence": 3
+    },
+    "prompt_tokens": 2552,
+    "output_tokens": 221,
+    "request_ms": 42160.316,
+    "selector_probe_ms": 3.460599999243641,
+    "fit_probe_ms": 10.69609999944987,
+    "peak_rss_bytes": 2474401792,
+    "max_source_bytes": 350,
+    "work": {
+      "history_tokenization_tokens": 10304,
+      "fit_tokenization_tokens": 2552,
+      "fit_attempts": 12,
+      "scan_bytes": 20451
+    }
+  },
+  "after": {
+    "correct": 8,
+    "n": 12,
+    "by_task": {
+      "exact": {
+        "correct": 4,
+        "n": 6
+      },
+      "gist": {
+        "correct": 2,
+        "n": 2
+      },
+      "missing": {
+        "correct": 0,
+        "n": 1
+      },
+      "vague_ambiguous": {
+        "correct": 0,
+        "n": 1
+      },
+      "vague_clear": {
+        "correct": 2,
+        "n": 2
+      }
+    },
+    "unsupported_proxy": 3,
+    "failures": {
+      "generation_despite_evidence": 4
+    },
+    "prompt_tokens": 2931,
+    "output_tokens": 193,
+    "request_ms": 43959.381,
+    "selector_probe_ms": 3.8861000007273105,
+    "fit_probe_ms": 13.320499999736057,
+    "peak_rss_bytes": 2470252544,
+    "max_source_bytes": 350,
+    "work": {
+      "history_tokenization_tokens": 10304,
+      "fit_tokenization_tokens": 2931,
+      "fit_attempts": 12,
+      "scan_bytes": 20451
+    }
+  },
+  "changes": {
+    "development": [
+      {
+        "id": "v2-development-gist_correction",
+        "before": "Zephyr7 currently discards undelivered messages.",
+        "after": "Zephyr7 currently queues outgoing messages during disconnection and then sends them on recovery.",
+        "before_correct": false,
+        "after_correct": true,
+        "before_evidence_retained": false,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-development-clear_gap",
+        "before": "The user did not provide enough context for me to determine which specific credential was assigned to the project mentioned before. The source provided does not contain any relevant information about credentials or projects. Therefore, I cannot accurately answer the question based on the given",
+        "after": "D/9: 9_x!",
+        "before_correct": false,
+        "after_correct": true,
+        "before_evidence_retained": false,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-development-missing",
+        "before": "I'm sorry, but I don't have any specific information about a \"private locker credential\" named Seren. Without more context, it's impossible for me to provide accurate details about a person named Seren. Could you please clarify your",
+        "after": "I'm sorry, but I don't have any specific information about a \"private locker credential\" that relates to Seren. The conversation provided does not mention anyone named Seren or their personal details. Therefore, I cannot provide an answer based",
+        "before_correct": true,
+        "after_correct": false,
+        "before_evidence_retained": true,
+        "after_evidence_retained": true
+      }
+    ],
+    "heldout": [
+      {
+        "id": "v2-heldout-exact_code",
+        "before": "Clouds drift east.",
+        "after": "H/0: 9_x!",
+        "before_correct": false,
+        "after_correct": true,
+        "before_evidence_retained": false,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-heldout-exact_code_gap",
+        "before": "Marigold1 winds up to be a vague reference, as it doesn't provide enough context to determine its meaning or purpose. Therefore, I cannot confidently return a verbatim description of \"Marigold1.\"",
+        "after": "H/1: 9_x!",
+        "before_correct": false,
+        "after_correct": true,
+        "before_evidence_retained": false,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-heldout-correction",
+        "before": "H/3: 9_x!",
+        "after": "obsolete-2-3",
+        "before_correct": true,
+        "after_correct": false,
+        "before_evidence_retained": false,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-heldout-preservation",
+        "before": "2043-03-11",
+        "after": "H/4: 9_x!",
+        "before_correct": false,
+        "after_correct": true,
+        "before_evidence_retained": false,
+        "after_evidence_retained": false
+      },
+      {
+        "id": "v2-heldout-gist",
+        "before": "Marigold6 uses a network outage as a trigger for sending unsent messages again. When an internet connection becomes available, Marigold6 will attempt to resend the unsent messages.",
+        "after": "Marigold6 retains unsent messages due to an earlier network outage that caused them to fail to send messages successfully. The system attempts to resend these messages once they become available again online.",
+        "before_correct": false,
+        "after_correct": true,
+        "before_evidence_retained": true,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-heldout-clear",
+        "before": "clouds drift east",
+        "after": "H/8: 9_x!",
+        "before_correct": false,
+        "after_correct": true,
+        "before_evidence_retained": false,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-heldout-ambiguous",
+        "before": "clouds drift east",
+        "after": "H/10: 9_x!",
+        "before_correct": false,
+        "after_correct": false,
+        "before_evidence_retained": false,
+        "after_evidence_retained": true
+      },
+      {
+        "id": "v2-heldout-missing",
+        "before": "I'm sorry, but I don't have any specific information about Ysolde's personal locker that I can provide. The conversation provided does not contain any details about her locker or any other personal items. To answer your question accurately, I",
+        "after": "I'm sorry, but I don't have any specific information about Ysolde's personal locker that I can provide. The conversation provided does not contain any details about her locker or any other personal items. To answer your question, I would",
+        "before_correct": false,
+        "after_correct": false,
+        "before_evidence_retained": true,
+        "after_evidence_retained": true
+      }
+    ]
+  },
+  "distant_facts": {
+    "development": {
+      "before": {
+        "correct": 5,
+        "n": 10,
+        "all_marked_sources_retained": 7,
+        "failures": {
+          "generation_despite_evidence": 4,
+          "lost_evidence": 2
+        }
+      },
+      "after": {
+        "correct": 7,
+        "n": 10,
+        "all_marked_sources_retained": 9,
+        "failures": {
+          "generation_despite_evidence": 5
+        }
+      }
+    },
+    "heldout": {
+      "before": {
+        "correct": 4,
+        "n": 10,
+        "all_marked_sources_retained": 5,
+        "failures": {
+          "lost_evidence": 5,
+          "generation_despite_evidence": 3
+        }
+      },
+      "after": {
+        "correct": 8,
+        "n": 10,
+        "all_marked_sources_retained": 9,
+        "failures": {
+          "generation_despite_evidence": 4
+        }
+      }
+    }
+  },
+  "baseline_parity": {
+    "development/recent": true,
+    "development/lexical": true,
+    "development/old": true,
+    "heldout/recent": true,
+    "heldout/lexical": true,
+    "heldout/old": true
+  }
+}

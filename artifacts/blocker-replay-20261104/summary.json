@@ -1,0 +1,357 @@
+{
+  "development": {
+    "recent": {
+      "correct": 1,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 0,
+          "n": 6
+        },
+        "gist": {
+          "correct": 0,
+          "n": 2
+        },
+        "missing": {
+          "correct": 1,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 0,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 1,
+      "failures": {
+        "lost_evidence": 11
+      },
+      "prompt_tokens": 5898,
+      "output_tokens": 246,
+      "request_ms": 63408.257,
+      "selector_probe_ms": 0.033699999903546995,
+      "fit_probe_ms": 128.86919999982638,
+      "peak_rss_bytes": 2468601856,
+      "max_source_bytes": 1810,
+      "work": {
+        "history_tokenization_tokens": 8089,
+        "fit_tokenization_tokens": 50125,
+        "fit_attempts": 86,
+        "scan_bytes": 0
+      }
+    },
+    "lexical": {
+      "correct": 6,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 4,
+          "n": 6
+        },
+        "gist": {
+          "correct": 0,
+          "n": 2
+        },
+        "missing": {
+          "correct": 1,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 1,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 2,
+      "failures": {
+        "generation_despite_evidence": 5,
+        "lost_evidence": 1
+      },
+      "prompt_tokens": 2124,
+      "output_tokens": 164,
+      "request_ms": 33077.674,
+      "selector_probe_ms": 1.0873000005631184,
+      "fit_probe_ms": 9.185600000137129,
+      "peak_rss_bytes": 2468601856,
+      "max_source_bytes": 311,
+      "work": {
+        "history_tokenization_tokens": 8089,
+        "fit_tokenization_tokens": 2124,
+        "fit_attempts": 12,
+        "scan_bytes": 20293
+      }
+    },
+    "old": {
+      "correct": 7,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 4,
+          "n": 6
+        },
+        "gist": {
+          "correct": 1,
+          "n": 2
+        },
+        "missing": {
+          "correct": 1,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 1,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 2,
+      "failures": {
+        "generation_despite_evidence": 3,
+        "lost_evidence": 2
+      },
+      "prompt_tokens": 1889,
+      "output_tokens": 197,
+      "request_ms": 36786.381,
+      "selector_probe_ms": 3.2714999999825523,
+      "fit_probe_ms": 8.593999999902735,
+      "peak_rss_bytes": 2468601856,
+      "max_source_bytes": 286,
+      "work": {
+        "history_tokenization_tokens": 8089,
+        "fit_tokenization_tokens": 1889,
+        "fit_attempts": 12,
+        "scan_bytes": 20293
+      }
+    },
+    "new": {
+      "correct": 6,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 3,
+          "n": 6
+        },
+        "gist": {
+          "correct": 1,
+          "n": 2
+        },
+        "missing": {
+          "correct": 1,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 1,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 3,
+      "failures": {
+        "generation_despite_evidence": 4,
+        "lost_evidence": 2
+      },
+      "prompt_tokens": 2641,
+      "output_tokens": 207,
+      "request_ms": 42470.159,
+      "selector_probe_ms": 3.347099999700731,
+      "fit_probe_ms": 11.035800000172458,
+      "peak_rss_bytes": 2468601856,
+      "max_source_bytes": 286,
+      "work": {
+        "history_tokenization_tokens": 10260,
+        "fit_tokenization_tokens": 2641,
+        "fit_attempts": 12,
+        "scan_bytes": 20293
+      }
+    }
+  },
+  "heldout": {
+    "recent": {
+      "correct": 0,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 0,
+          "n": 6
+        },
+        "gist": {
+          "correct": 0,
+          "n": 2
+        },
+        "missing": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 0,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 2,
+      "failures": {
+        "lost_evidence": 11,
+        "generation_despite_evidence": 1
+      },
+      "prompt_tokens": 5886,
+      "output_tokens": 167,
+      "request_ms": 52344.859,
+      "selector_probe_ms": 0.03250000031584932,
+      "fit_probe_ms": 151.04520000022603,
+      "peak_rss_bytes": 2474401792,
+      "max_source_bytes": 1842,
+      "work": {
+        "history_tokenization_tokens": 8138,
+        "fit_tokenization_tokens": 50782,
+        "fit_attempts": 87,
+        "scan_bytes": 0
+      }
+    },
+    "lexical": {
+      "correct": 4,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 2,
+          "n": 6
+        },
+        "gist": {
+          "correct": 1,
+          "n": 2
+        },
+        "missing": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 1,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 2,
+      "failures": {
+        "lost_evidence": 5,
+        "generation_despite_evidence": 3
+      },
+      "prompt_tokens": 2152,
+      "output_tokens": 207,
+      "request_ms": 37650.93,
+      "selector_probe_ms": 1.101799999787545,
+      "fit_probe_ms": 9.270899999592075,
+      "peak_rss_bytes": 2474401792,
+      "max_source_bytes": 350,
+      "work": {
+        "history_tokenization_tokens": 8138,
+        "fit_tokenization_tokens": 2152,
+        "fit_attempts": 12,
+        "scan_bytes": 20451
+      }
+    },
+    "old": {
+      "correct": 4,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 2,
+          "n": 6
+        },
+        "gist": {
+          "correct": 1,
+          "n": 2
+        },
+        "missing": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 1,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 2,
+      "failures": {
+        "lost_evidence": 5,
+        "generation_despite_evidence": 3
+      },
+      "prompt_tokens": 1816,
+      "output_tokens": 191,
+      "request_ms": 34130.337999999996,
+      "selector_probe_ms": 3.2568999999966763,
+      "fit_probe_ms": 8.460000000468426,
+      "peak_rss_bytes": 2474401792,
+      "max_source_bytes": 350,
+      "work": {
+        "history_tokenization_tokens": 8138,
+        "fit_tokenization_tokens": 1816,
+        "fit_attempts": 12,
+        "scan_bytes": 20451
+      }
+    },
+    "new": {
+      "correct": 4,
+      "n": 12,
+      "by_task": {
+        "exact": {
+          "correct": 2,
+          "n": 6
+        },
+        "gist": {
+          "correct": 1,
+          "n": 2
+        },
+        "missing": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_ambiguous": {
+          "correct": 0,
+          "n": 1
+        },
+        "vague_clear": {
+          "correct": 1,
+          "n": 2
+        }
+      },
+      "unsupported_proxy": 2,
+      "failures": {
+        "lost_evidence": 5,
+        "generation_despite_evidence": 3
+      },
+      "prompt_tokens": 2552,
+      "output_tokens": 221,
+      "request_ms": 42160.316,
+      "selector_probe_ms": 3.460599999243641,
+      "fit_probe_ms": 10.69609999944987,
+      "peak_rss_bytes": 2474401792,
+      "max_source_bytes": 350,
+      "work": {
+        "history_tokenization_tokens": 10304,
+        "fit_tokenization_tokens": 2552,
+        "fit_attempts": 12,
+        "scan_bytes": 20451
+      }
+    }
+  }
+}

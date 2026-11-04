@@ -1,0 +1,70 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+  "status": {
+    "ready": true,
+    "backend": "Toruk",
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_id": null,
+    "selector_kind": null,
+    "backbone_digest": null,
+    "selector_sha256": null,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+    "context_tokens": 512,
+    "memory_supported": false,
+    "modes": [
+      "BASELINE"
+    ],
+    "error": null,
+    "error_code": null
+  },
+  "quality_claim": "Development probes; HTTP success does not establish quality.",
+  "probe_protocol_sha256": "ee92ce4a331b0104e1e89a192bda4f246aebca2f2b4035659926dc9bc52fbfcd",
+  "probe_settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 350,
+      "selected_context_tokens": 350,
+      "output_tokens": 5,
+      "total_tokens": 355,
+      "response_ms": 3352.44,
+      "backend": "Toruk",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+      "selector_sha256": null,
+      "selector_kind": null,
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selector_id": null,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 3359.473
+    }
+  },
+  "toruk": null,
+  "probes": {},
+  "outage_status": 503
+}

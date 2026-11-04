@@ -33,6 +33,9 @@ jobs:
       - run: python -m mypy
       - run: python -m mypy --platform linux
       - run: python -m pytest -q
+      # Validate the independent evaluation contract without downloading chat weights.
+      # Full inference reproduction requires the separately pinned local backbone.
+      - run: python scripts/independent_replication.py validate-cases --run artifacts/ci-independent-cases
       - run: python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke
       - run: python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt
       - run: python -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables

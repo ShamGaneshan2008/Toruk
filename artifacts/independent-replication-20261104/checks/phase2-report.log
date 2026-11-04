@@ -1,0 +1,14 @@
+| Dataset / method | Correct | Unsupported proxy | Prompt / output tokens | Request s | CPU s | Selector ms | Peak GiB |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| controlled / recent | 0/12 | 2 | 5886 / 167 | 59.07 | 118.20 | 0.000 | 2.300 |
+| controlled / lexical | 4/12 | 2 | 2152 / 207 | 40.21 | 80.00 | 1.189 | 2.300 |
+| controlled / toruk | 8/12 | 3 | 2931 / 193 | 43.84 | 86.91 | 4.068 | 2.300 |
+| controlled / no_envelope | 7/12 | 3 | 2161 / 186 | 37.18 | 73.98 | 3.975 | 2.300 |
+| controlled / no_learned_rank | 0/12 | 2 | 2869 / 262 | 50.47 | 100.67 | 0.359 | 2.300 |
+| controlled / restore_cutoff | 4/12 | 2 | 2552 / 221 | 44.95 | 89.03 | 4.033 | 2.300 |
+| independent / recent | 3/24 | 3 | 12136 / 450 | 134.92 | 269.73 | 0.000 | 2.299 |
+| independent / lexical | 6/24 | 9 | 4293 / 204 | 52.92 | 105.53 | 3.488 | 2.299 |
+| independent / toruk | 9/24 | 8 | 5783 / 204 | 63.33 | 126.34 | 11.017 | 2.299 |
+| independent / no_envelope | 9/24 | 8 | 4247 / 230 | 56.48 | 112.67 | 10.504 | 2.299 |
+| independent / no_learned_rank | 1/24 | 5 | 5886 / 698 | 120.81 | 240.98 | 0.826 | 2.299 |
+| independent / restore_cutoff | 8/24 | 8 | 5362 / 300 | 71.62 | 142.73 | 10.663 | 2.299 |

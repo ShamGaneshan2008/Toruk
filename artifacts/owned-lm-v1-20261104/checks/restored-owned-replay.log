@@ -1,0 +1,41 @@
+routing PASS
+value PASS
+value-oracle PASS
+{
+  "status": "PASS",
+  "restoration": "Only registered archived pyproject.toml in an isolated copied workspace",
+  "routing_answers": 2304,
+  "value_answers": 1920,
+  "value_differences": [],
+  "value_gates": {
+    "31": {
+      "checks": {
+        "correction_at_least_80": false,
+        "known_at_least_80": false,
+        "memory_zero_known_drop_at_least_50pp": false,
+        "overall_at_least_80": false,
+        "preservation_at_least_80": false,
+        "unsupported_at_most_5": true
+      },
+      "known_accuracy": 0.4166666666666667,
+      "known_accuracy_drop_zero": 0.4166666666666667,
+      "status": "FAIL"
+    },
+    "47": {
+      "checks": {
+        "correction_at_least_80": false,
+        "known_at_least_80": false,
+        "memory_zero_known_drop_at_least_50pp": false,
+        "overall_at_least_80": false,
+        "preservation_at_least_80": false,
+        "unsupported_at_most_5": true
+      },
+      "known_accuracy": 0.2833333333333333,
+      "known_accuracy_drop_zero": 0.2833333333333333,
+      "status": "FAIL"
+    }
+  },
+  "original_metadata_sha256": "4227d013fcbb64d3c520c6fb2419fba628e4b02f17a46859110cdb7294a8acb1",
+  "isolated_metadata_sha256": "73f3439c08e19baae10b4f8794a7140e0cc2e2eccedbb6b2f40f29923dcb4b61",
+  "new_training_steps": 0
+}

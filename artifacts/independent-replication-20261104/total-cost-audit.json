@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "recalculated": {
+    "phase1": {
+      "prompt_tokens": 25588,
+      "output_tokens": 1539,
+      "request_ms": 299990.26900000003,
+      "rows": 96,
+      "request_cpu_ms": "NOT_MEASURED by historical driver",
+      "subprocess_wall_seconds": 321.5633633999996
+    },
+    "phase2": {
+      "controlled": {
+        "prompt_tokens": 18551,
+        "output_tokens": 1236,
+        "request_ms": 275725.309,
+        "request_cpu_ms": 548796.875,
+        "history_token_positions": 55326,
+        "fit_token_positions": 63447,
+        "logical_scan_bytes": 102255,
+        "rows": 72,
+        "stage_cost": {
+          "startup_seconds": 7.424811999999292,
+          "loop_seconds": 275.75537540000005,
+          "function_wall_seconds": 283.18018759999995,
+          "rows": 72,
+          "note": "Full subprocess additionally includes Python/import startup; see check log."
+        },
+        "subprocess_wall_seconds": 285.9578524000008
+      },
+      "independent": {
+        "prompt_tokens": 37707,
+        "output_tokens": 2086,
+        "request_ms": 500078.695,
+        "request_cpu_ms": 998000.0,
+        "history_token_positions": 151806,
+        "fit_token_positions": 277697,
+        "logical_scan_bytes": 297965,
+        "rows": 144,
+        "stage_cost": {
+          "startup_seconds": 7.227535999999418,
+          "loop_seconds": 500.14028450000023,
+          "function_wall_seconds": 507.3678208000001,
+          "rows": 144,
+          "note": "Full subprocess additionally includes Python/import startup; see check log."
+        },
+        "subprocess_wall_seconds": 510.15370580000035
+      }
+    },
+    "total_model_answers": 312,
+    "total_model_prompt_tokens": 81846,
+    "total_model_output_tokens": 4861,
+    "total_inference_subprocess_wall_seconds": 1117.6749216000007,
+    "phase2_request_cpu_ms": 1546796.875,
+    "new_research_training_steps": 0,
+    "verification_training": "Separate bounded CLI/unit smokes; see verification logs, excluded from research inference totals",
+    "paid_api_calls": 0,
+    "energy_electricity_flops_historical_training_cost": "NOT_MEASURED",
+    "controlled_main_prompt_answer_parity": 36,
+    "restored_cutoff_previous_envelope_parity": 12
+  }
+}

@@ -1,0 +1,18 @@
+recent 31 development exact 46 / 168
+lexical 31 development exact 45 / 168
+old 31 development exact 113 / 168
+augmented 31 development exact 98 / 168
+zero 31 development exact 48 / 168
+recent 47 development exact 30 / 168
+lexical 47 development exact 36 / 168
+old 47 development exact 113 / 168
+augmented 47 development exact 82 / 168
+zero 47 development exact 48 / 168
+FAIL {"31": {"status": "FAIL", "checks": {"overall_at_least_80": false, "known_at_least_80": false, "correction_at_least_80": false, "preservation_at_least_80": false, "unsupported_at_most_5": true, "memory_zero_known_drop_at_least_50pp": false}, "known_accuracy": 0.4166666666666667, "known_accuracy_drop_zero": 0.4166666666666667}, "47": {"status": "FAIL", "checks": {"overall_at_least_80": false, "known_at_least_80": false, "correction_at_least_80": false, "preservation_at_least_80": false, "unsupported_at_most_5": true, "memory_zero_known_drop_at_least_50pp": false}, "known_accuracy": 0.2833333333333333, "known_accuracy_drop_zero": 0.2833333333333333}}
+| Method | Exact /168 seed31/47 | Known /120 | Unsupported /48 | Selected tokens | Forward positions | Extra routing positions | Latency ms | Peak RSS MiB |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| recent | 46.0 / 30.0 | 8.0 / 6.0 | 10.0 / 24.0 | 22088.0 / 22088.0 | 22659.0 / 22749.0 | 0.0 / 0.0 | 647.2 / 685.5 | 204.3 / 208.5 |
+| lexical | 45.0 / 36.0 | 7.0 / 11.0 | 10.0 / 23.0 | 18425.0 / 18425.0 | 19015.0 / 19079.0 | 0.0 / 0.0 | 589.3 / 604.5 | 207.5 / 207.8 |
+| old | 113.0 / 113.0 | 65.0 / 65.0 | 0.0 / 0.0 | 22088.0 / 22088.0 | 55908.0 / 55908.0 | 36731.0 / 36731.0 | 2213.3 / 2177.6 | 208.9 / 209.1 |
+| augmented | 98.0 / 82.0 | 50.0 / 34.0 | 0.0 / 0.0 | 22088.0 / 22088.0 | 55925.0 / 55911.0 | 36731.0 / 36731.0 | 2200.0 / 2391.1 | 208.9 / 208.8 |
+| zero | 48.0 / 48.0 | 0.0 / 0.0 | 0.0 / 0.0 | 22088.0 / 22088.0 | 55547.0 / 55547.0 | 36731.0 / 36731.0 | 2140.2 / 2205.4 | 208.7 / 209.3 |

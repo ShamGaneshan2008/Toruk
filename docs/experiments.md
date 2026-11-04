@@ -1,5 +1,40 @@
 # Experiment registry
 
+## 2026-11-04 independent replication and exploratory paper package
+
+Base `84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca`, preserving the dirty previous
+milestone. Fresh inference reproduces all 96 prior prompts, answers, scores and
+deterministic work fields. The mechanism is frozen before construction of 24
+independent-procedure scenario cards. Six methods generate 144 independent and
+72 controlled answers; every row passes the tokenizer/source/scoring audit.
+Controlled recent/lexical/Toruk scores are 0/4/8 of 12; independent scores are
+3/6/9 of 24. Toruk's independent request latency is 19.7% higher and model-token
+work 33.1% higher than lexical. Both registered efficiency/quality gates fail.
+The envelope ablation ties independent correctness at lower cost; actual learned
+ranking and cutoff ablations, raw failures, uncertainty and all accounting are
+retained. No general advantage or novelty priority is claimed. See the
+[results](research/independent-replication-v1-results.md),
+[draft/evidence index](research/independent-replication-v1/README.md), and
+`artifacts/independent-replication-20261104/`. No new research training, hosted
+CI run, commit, push, publication or deployment.
+
+## 2026-11-04 fixed-budget evidence-selection follow-up
+
+Base `84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca`, initially clean `main`.
+Fresh inference reproduces all 96 latest recall V2 prompts, answers, source
+provenance and deterministic resource counters. One research-only cutoff ablation
+retains the unchanged learned top-two ranking without the 0.2 threshold.
+Development correctness is 6/12 -> 7/12; one frozen heldout run is 4/12 -> 8/12.
+Heldout unsupported proxy increases 2/12 -> 3/12 due to a stale correction,
+so the preregistered success criterion fails. Prompt tokens rise 14.9% and total
+request latency 4.3%; latency per correct answer falls 47.9%. No total-cost or
+generalization claim follows from these fixed published questions. Chat defaults
+and all original model/scorer/data bytes remain unchanged. See the
+[protocol](research/rank-budget-v1-protocol.md),
+[full results and commands](research/rank-budget-v1-results.md), and
+`artifacts/rank-budget-v1-20261104/` for raw evidence and checks. No research
+training, push or deployment.
+
 ## 2026-10-21 M8 evidence audit
 
 Current branch `main`, base `34d3037310050bd8e5dd2e52c2566c2fd9a21b78`.

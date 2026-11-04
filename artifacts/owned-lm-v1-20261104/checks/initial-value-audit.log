@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\audit_value_fidelity_dev.py", line 114, in <module>
+    main()
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\audit_value_fidelity_dev.py", line 17, in main
+    study.verify(run, models=True)
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\value_fidelity_dev.py", line 193, in verify
+    raise ValueError(f"registered input drift: {name}")
+ValueError: registered input drift: pyproject.toml

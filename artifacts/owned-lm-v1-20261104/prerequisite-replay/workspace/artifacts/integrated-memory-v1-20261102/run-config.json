@@ -1,0 +1,35 @@
+{
+  "batch_size": 16,
+  "decision_before_final": "Keep planned 800 steps for both seeds and variants. Retain development preservation failure; no further tuning.",
+  "device": "CPU",
+  "downloads": false,
+  "format": "toruk-integrated-study-config-v1",
+  "lr": 0.003,
+  "model": {
+    "answer_tokens": 12,
+    "local_tokens": 96,
+    "max_records": 16,
+    "query_tokens": 64,
+    "record_tokens": 64,
+    "slots": 6,
+    "width": 48
+  },
+  "objectives": "answer CE + 0.25*(write/read address CE)",
+  "optimizer": "Adam",
+  "packages": {
+    "build": "1.6.1",
+    "mypy": "1.20.2",
+    "pytest": "9.1.1",
+    "ruff": "0.17.1",
+    "torch": "2.14.1+cpu"
+  },
+  "paid_compute": false,
+  "platform": "Windows-11-10.0.26100-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "seeds": [
+    31,
+    47
+  ],
+  "steps": 800,
+  "torch_threads": 1
+}

@@ -1,0 +1,731 @@
+{
+  "starting": {
+    "head": "84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca",
+    "prior_seal_entries_verified": 126,
+    "status_after_creating_evidence_directory": " M .gitignore\n M README.md\n M docs/architecture.md\n M docs/experiments.md\n M docs/research/recall-results-20261104.md\n?? artifacts/blocker-replay-20261104/\n?? artifacts/rank-budget-v1-20261104/\n?? docs/research/rank-budget-v1-protocol.md\n?? docs/research/rank-budget-v1-results.md\n?? scripts/compare_recall_runs.py\n?? scripts/rank_budget_study.py\n?? scripts/report_rank_budget.py\n?? src/toruk_lm/rank_budget.py\n?? tests/test_compare_recall_runs.py\n?? tests/test_rank_budget.py\n",
+    "initial_git_status": " M .gitignore\n M README.md\n M docs/architecture.md\n M docs/experiments.md\n M docs/research/recall-results-20261104.md\n?? artifacts/blocker-replay-20261104/\n?? artifacts/rank-budget-v1-20261104/\n?? docs/research/rank-budget-v1-protocol.md\n?? docs/research/rank-budget-v1-results.md\n?? scripts/compare_recall_runs.py\n?? scripts/rank_budget_study.py\n?? scripts/report_rank_budget.py\n?? src/toruk_lm/rank_budget.py\n?? tests/test_compare_recall_runs.py\n?? tests/test_rank_budget.py\n"
+  },
+  "ending_commit": "84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca",
+  "ending_git_status": " M .github/workflows/ci.yml\n M .gitignore\n M MANIFEST.in\n M README.md\n M docs/architecture.md\n M docs/experiments.md\n M docs/local-chat.md\n M docs/research/recall-results-20261104.md\n M scripts/verify.py\n?? artifacts/blocker-replay-20261104/\n?? artifacts/independent-replication-20261104/\n?? artifacts/rank-budget-v1-20261104/\n?? configs/independent-chat-cards-v1.json\n?? docs/research/independent-replication-v1-protocol.md\n?? docs/research/independent-replication-v1-results.md\n?? docs/research/independent-replication-v1/\n?? docs/research/rank-budget-v1-protocol.md\n?? docs/research/rank-budget-v1-results.md\n?? scripts/compare_recall_runs.py\n?? scripts/independent_cases.py\n?? scripts/independent_replication.py\n?? scripts/rank_budget_study.py\n?? scripts/report_independent_replication.py\n?? scripts/report_rank_budget.py\n?? src/toruk_lm/rank_budget.py\n?? tests/test_compare_recall_runs.py\n?? tests/test_independent_replication.py\n?? tests/test_rank_budget.py\n",
+  "task_changed_files": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "MANIFEST.in",
+    "README.md",
+    "docs/architecture.md",
+    "docs/experiments.md",
+    "docs/local-chat.md",
+    "docs/research/rank-budget-v1-results.md",
+    "scripts/verify.py",
+    "configs/independent-chat-cards-v1.json",
+    "scripts/independent_cases.py",
+    "scripts/independent_replication.py",
+    "scripts/report_independent_replication.py",
+    "tests/test_independent_replication.py",
+    "docs/research/independent-replication-v1-protocol.md",
+    "docs/research/independent-replication-v1-results.md",
+    "docs/research/independent-replication-v1/claim-ledger.json",
+    "docs/research/independent-replication-v1/claim-ledger.md",
+    "docs/research/independent-replication-v1/draft.md",
+    "docs/research/independent-replication-v1/positioning.md",
+    "docs/research/independent-replication-v1/README.md",
+    "docs/research/independent-replication-v1/references.bib",
+    "docs/research/independent-replication-v1/reproduce.md"
+  ],
+  "new_artifact_directory": "artifacts/independent-replication-20261104",
+  "previous_evidence_files_preserved": 126,
+  "reproduction": "96/96 exact prompts/answers/scores/evidence/work fields",
+  "independent_model_answers": 144,
+  "controlled_model_answers": 72,
+  "new_audit": "216/216 PASS",
+  "central_claim": "NOT_ESTABLISHED; both frozen efficiency/quality gates fail",
+  "gates": {
+    "controlled": {
+      "correct_at_least_lexical": true,
+      "unsupported_proxy_no_greater": false,
+      "request_ms_strictly_lower": false,
+      "prompt_plus_output_strictly_lower": false,
+      "positive_paired_quality_or_latency_interval": false
+    },
+    "independent": {
+      "correct_at_least_lexical": true,
+      "unsupported_proxy_no_greater": true,
+      "request_ms_strictly_lower": false,
+      "prompt_plus_output_strictly_lower": false,
+      "positive_paired_quality_or_latency_interval": false
+    }
+  },
+  "records": [
+    {
+      "record": "artifacts/independent-replication-20261104/checks/controlled-ablations.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "evaluate",
+        "--run",
+        "artifacts/independent-replication-20261104/evaluation",
+        "--suite",
+        "controlled"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 285.9578524000008
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/controlled-assertion-review.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "artifacts/independent-replication-20261104/review_controlled.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.09933279999950173
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-assertion-review.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "artifacts/independent-replication-20261104/review_independent.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.10627719999956753
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-inference.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "evaluate",
+        "--run",
+        "artifacts/independent-replication-20261104/evaluation",
+        "--suite",
+        "independent"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 510.15370580000035
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-lint.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/independent_cases.py",
+        "scripts/independent_replication.py",
+        "scripts/report_independent_replication.py",
+        "tests/test_independent_replication.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.09711050000078103
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-tests-final.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_independent_replication.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.114556800000173
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-tests.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_independent_replication.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.270402999999533
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-types-final.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "scripts/independent_cases.py",
+        "scripts/independent_replication.py",
+        "scripts/report_independent_replication.py",
+        "--disable-error-code",
+        "import-untyped",
+        "--disable-error-code",
+        "misc"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.361542499999814
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-types.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "scripts/independent_cases.py",
+        "scripts/independent_replication.py",
+        "scripts/report_independent_replication.py",
+        "--disable-error-code",
+        "import-untyped",
+        "--disable-error-code",
+        "misc"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 46.36319989999993
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/initial-independent-assertion-review.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "artifacts/independent-replication-20261104/review_independent.py"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.08196339999994962
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/initial-independent-lint.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/independent_cases.py",
+        "scripts/independent_replication.py",
+        "scripts/report_independent_replication.py",
+        "tests/test_independent_replication.py"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.09615639999992709
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/initial-independent-tests.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_independent_replication.py"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 4.914345500000309
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/phase1-compare.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/compare_recall_runs.py",
+        "--reference",
+        "artifacts/rank-budget-v1-20261104",
+        "--replay",
+        "artifacts/independent-replication-20261104/phase1",
+        "--output",
+        "artifacts/independent-replication-20261104/phase1/comparison.json"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.10241599999972095
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/phase1-development.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/rank_budget_study.py",
+        "development",
+        "--run",
+        "artifacts/independent-replication-20261104/phase1"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 164.09386600000016
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/phase1-heldout.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/rank_budget_study.py",
+        "heldout",
+        "--run",
+        "artifacts/independent-replication-20261104/phase1"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 157.46949739999945
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/phase1-report.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/rank_budget_study.py",
+        "report",
+        "--run",
+        "artifacts/independent-replication-20261104/phase1"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 9.044638600000326
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/phase2-audit.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "audit",
+        "--run",
+        "artifacts/independent-replication-20261104/evaluation"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 8.509565100000145
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/phase2-register.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "register",
+        "--run",
+        "artifacts/independent-replication-20261104/evaluation",
+        "--phase1",
+        "artifacts/independent-replication-20261104/phase1"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.786463600000388
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/phase2-report.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/report_independent_replication.py",
+        "--run",
+        "artifacts/independent-replication-20261104/evaluation"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.8443506000003254
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/total-cost-audit.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "artifacts/independent-replication-20261104/calculate_total_cost.py",
+        "--output",
+        "artifacts/independent-replication-20261104/total-cost-audit.json"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.1124485000000277
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/build-final.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "artifacts/independent-replication-20261104/verification/package/final"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.07559399999991
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/build.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\package"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.937569600000643
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/diagnose.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.237835200000518
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/diff-check.json",
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.06190190000052098
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/final-whitespace.json",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.05801849999988917
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/format.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.09541510000053677
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/frozen-sources.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/check_frozen_sources.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.0683219000002282
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/help.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.1345344000001205
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/import.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import toruk_lm; print(toruk_lm.__version__)"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.03858730000047217
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/independent-cases.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "validate-cases",
+        "--run",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\independent-cases"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.17147229999955
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/install-local.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.481252599999607
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/lint.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.10194520000004559
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/node-check.json",
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "run",
+        "check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.0663676999993186
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/node-tests.json",
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.9304479000002175
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/package.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.663732500000151
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/reproduce.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/foundation.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\pipeline"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.9658105999997133
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/research-config.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate-config",
+        "--config",
+        "configs/reproduce-smoke-v1.json"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.0791104999998424
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/research-smoke.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/reproduce-smoke-v1.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\research-smoke"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.66708699999981
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/staged-diff-check.json",
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.033247100000153296
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/summarize.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "summarize",
+        "--run",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\pipeline",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\tables"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.7399679999998625
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/tests.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 134.17840439999964
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/types-linux.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 43.78699510000024
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/types.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 45.48496549999982
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/verification/validate.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate",
+        "--manifest",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\pipeline\\data\\manifest.json",
+        "--config",
+        "configs/foundation.json",
+        "--checkpoint",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\independent-replication-20261104\\verification\\pipeline\\train\\checkpoint.pt"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.089924599999904
+    }
+  ],
+  "initial_failures_retained": [
+    {
+      "record": "artifacts/independent-replication-20261104/checks/independent-types.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "scripts/independent_cases.py",
+        "scripts/independent_replication.py",
+        "scripts/report_independent_replication.py",
+        "--disable-error-code",
+        "import-untyped",
+        "--disable-error-code",
+        "misc"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 46.36319989999993
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/initial-independent-assertion-review.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "artifacts/independent-replication-20261104/review_independent.py"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.08196339999994962
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/initial-independent-lint.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/independent_cases.py",
+        "scripts/independent_replication.py",
+        "scripts/report_independent_replication.py",
+        "tests/test_independent_replication.py"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.09615639999992709
+    },
+    {
+      "record": "artifacts/independent-replication-20261104/checks/initial-independent-tests.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_independent_replication.py"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 4.914345500000309
+    }
+  ],
+  "additional_read_only_inspection_failure": "One ad-hoc python -c summary inspection had a mismatched delimiter; no file/inference changed. Corrected inspection and total-cost audit passed.",
+  "engineering": {
+    "python_ci_equivalents": "20/20 PASS",
+    "full_python_tests": "204 passed; zero skips",
+    "focused_new_tests": "9 passed",
+    "node_tests": "13 passed; one optional live test skipped",
+    "lint_format": "PASS; 111 files",
+    "runtime_types": "Windows/Linux PASS, 30 files each",
+    "research_types": "PASS; 3 files with documented suppressions",
+    "build_final": "PASS; required draft, ledger, case/config and evaluator paths verified in sdist",
+    "whitespace": "PASS",
+    "hosted_ci": "NOT_RUN"
+  },
+  "archive": "artifacts/independent-replication-20261104/toruk-replication-package.zip",
+  "archive_audit": "artifacts/independent-replication-20261104/package-audit.json",
+  "next_submission_step": "External replication with independent human adjudication on a real conversational benchmark."
+}

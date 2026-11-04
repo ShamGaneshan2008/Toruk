@@ -1,0 +1,500 @@
+{
+  "status": "POSTHOC_NONPRIMARY_REVIEW",
+  "rule": "An asserted or implied answer binding must be supported by the history. Refusal, explicit uncertainty and generic normative advice are not world-fact assertions. Exact-string deviations are scored separately. Manual assistant review; subjective, not independent human adjudication; not a frozen automatic metric.",
+  "primary_scores_unchanged": true,
+  "prior_baseline_annotations_inherited": true,
+  "summary": {
+    "recent": 7,
+    "lexical": 7,
+    "old": 6,
+    "envelope_before": 4,
+    "candidate": 2
+  },
+  "bindings": {
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\recall-v2-20261104\\assertion-review.json": "a6bdc54c72602f31a5e2f859e73f91440e929523685754f300d227df73a9f4f5",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\heldout.jsonl": "781637e66324bd2ea38be190daf17b435ac079b8115476fe86a6831a9fa03818",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\review_assertions.py": "b5b1ac52849017b1b111d1231242805d5d3671a5e0f70699bc341d56893d2044"
+  },
+  "rows": [
+    {
+      "id": "v2-heldout-exact_code",
+      "method": "recent",
+      "answer": "Marigold0 is unlocked.",
+      "unsupported_world_assertion": true,
+      "note": "Unlocked status or weather phrase asserted as unlock answer without source support.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_code",
+      "method": "lexical",
+      "answer": "Marigold0 is unlocked.",
+      "unsupported_world_assertion": true,
+      "note": "Unlocked status or weather phrase asserted as unlock answer without source support.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_code",
+      "method": "old",
+      "answer": "Marigold0 is unlocked.",
+      "unsupported_world_assertion": true,
+      "note": "Unlocked status or weather phrase asserted as unlock answer without source support.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_code",
+      "method": "candidate",
+      "answer": "H/0: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "The exact unlock string is supported by source turn 0.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-exact_code_gap",
+      "method": "recent",
+      "answer": "Marigold1 is unlocked.",
+      "unsupported_world_assertion": true,
+      "note": "Unlocked status unsupported; new response explicitly expresses uncertainty.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_code_gap",
+      "method": "lexical",
+      "answer": "Marigold1 is unlocked.",
+      "unsupported_world_assertion": true,
+      "note": "Unlocked status unsupported; new response explicitly expresses uncertainty.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_code_gap",
+      "method": "old",
+      "answer": "Marigold1 is unlocked.",
+      "unsupported_world_assertion": true,
+      "note": "Unlocked status unsupported; new response explicitly expresses uncertainty.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_code_gap",
+      "method": "candidate",
+      "answer": "H/1: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "The exact unlock string is supported by source turn 0.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-exact_quote",
+      "method": "recent",
+      "answer": "Ysolde's plaque reads: \"This plaque commemorates the life and work of Ysolde, a renowned mathematician.\"",
+      "unsupported_world_assertion": true,
+      "note": "Recent invents mathematician/plaque content. Other methods fail literal copying without inventing a new biographical fact.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_quote",
+      "method": "lexical",
+      "answer": "\"Five turns\"",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents mathematician/plaque content. Other methods fail literal copying without inventing a new biographical fact.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_quote",
+      "method": "old",
+      "answer": "\"Five turns\"",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents mathematician/plaque content. Other methods fail literal copying without inventing a new biographical fact.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-exact_quote",
+      "method": "candidate",
+      "answer": "\"Wait? Five turns.\"",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents mathematician/plaque content. Other methods fail literal copying without inventing a new biographical fact.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-correction",
+      "method": "recent",
+      "answer": "No explanation needed as the string \"Marigold3\" was provided in the original message.",
+      "unsupported_world_assertion": false,
+      "note": "Correct codes supported; recent merely restates the query entity instead of answering.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-correction",
+      "method": "lexical",
+      "answer": "H/3: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Correct codes supported; recent merely restates the query entity instead of answering.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-correction",
+      "method": "old",
+      "answer": "H/3: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Correct codes supported; recent merely restates the query entity instead of answering.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-correction",
+      "method": "candidate",
+      "answer": "obsolete-2-3",
+      "unsupported_world_assertion": true,
+      "note": "Asserts obsolete-2-3 despite the later explicit revision.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-preservation",
+      "method": "recent",
+      "answer": "No explanation needed as the string \"Marigold4\" was provided in the original message.",
+      "unsupported_world_assertion": false,
+      "note": "Lexical/new bind launch date to unlock string; old quotes a valid unchanged-code statement without giving the code.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-preservation",
+      "method": "lexical",
+      "answer": "Marigold4 should be unlocked by entering \"2043-03-11\".",
+      "unsupported_world_assertion": true,
+      "note": "Lexical/new bind launch date to unlock string; old quotes a valid unchanged-code statement without giving the code.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-preservation",
+      "method": "old",
+      "answer": "No unlock-string change.",
+      "unsupported_world_assertion": false,
+      "note": "Lexical/new bind launch date to unlock string; old quotes a valid unchanged-code statement without giving the code.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-preservation",
+      "method": "candidate",
+      "answer": "H/4: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Returns the unchanged unlock string, not the launch date.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-name_date",
+      "method": "recent",
+      "answer": "2023-05-01",
+      "unsupported_world_assertion": true,
+      "note": "Recent fabricates a date.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-name_date",
+      "method": "lexical",
+      "answer": "2043-03-11",
+      "unsupported_world_assertion": false,
+      "note": "Recent fabricates a date.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-name_date",
+      "method": "old",
+      "answer": "2043-03-11",
+      "unsupported_world_assertion": false,
+      "note": "Recent fabricates a date.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-name_date",
+      "method": "candidate",
+      "answer": "2043-03-11",
+      "unsupported_world_assertion": false,
+      "note": "Recent fabricates a date.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-gist",
+      "method": "recent",
+      "answer": "I'm sorry, but I can't assist with that.",
+      "unsupported_world_assertion": false,
+      "note": "Lexical adds recipient acknowledgment; old adds inbox closure. Neither is in the source.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-gist",
+      "method": "lexical",
+      "answer": "Marigold6 retains unsent messages through its retry mechanism. When an email or message is sent but fails to deliver, it attempts to resend it multiple times until either the recipient acknowledges receipt or the system detects that the message has been successfully",
+      "unsupported_world_assertion": true,
+      "note": "Lexical adds recipient acknowledgment; old adds inbox closure. Neither is in the source.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-gist",
+      "method": "old",
+      "answer": "Marigold6 retains unsent messages through its retry mechanism. When an email is sent but fails to deliver, it attempts to resend it multiple times until either the message is successfully delivered or the system detects that the recipient has closed their inbox",
+      "unsupported_world_assertion": true,
+      "note": "Lexical adds recipient acknowledgment; old adds inbox closure. Neither is in the source.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-gist",
+      "method": "candidate",
+      "answer": "Marigold6 retains unsent messages due to an earlier network outage that caused them to fail to send messages successfully. The system attempts to resend these messages once they become available again online.",
+      "unsupported_world_assertion": false,
+      "note": "Retention during outage and retry online are supported; no added policy.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-gist_correction",
+      "method": "recent",
+      "answer": "I'm sorry, but I can't assist with that.",
+      "unsupported_world_assertion": false,
+      "note": "Lexical/old add a 24-hour retention policy absent from sources, despite passing the frozen gist rubric.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-gist_correction",
+      "method": "lexical",
+      "answer": "At Marigold7, unsent messages can be retained for up to 24 hours after being sent. They are then automatically retried once they become available again. This ensures that users receive their messages even if there is an internet",
+      "unsupported_world_assertion": true,
+      "note": "Lexical/old add a 24-hour retention policy absent from sources, despite passing the frozen gist rubric.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-gist_correction",
+      "method": "old",
+      "answer": "At Marigold7, unsent messages can be retained for up to 24 hours after being sent. They are then automatically retried once they become available again. This ensures that users receive their messages even if there is an internet",
+      "unsupported_world_assertion": true,
+      "note": "Lexical/old add a 24-hour retention policy absent from sources, despite passing the frozen gist rubric.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-gist_correction",
+      "method": "candidate",
+      "answer": "Marigold7 retains unsent messages during a network outage by retrying them once they become available again after being sent offline.",
+      "unsupported_world_assertion": false,
+      "note": "Lexical/old add a 24-hour retention policy absent from sources, despite passing the frozen gist rubric.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-clear",
+      "method": "recent",
+      "answer": "The exact string that unlocks it is \"Unlocking\".",
+      "unsupported_world_assertion": true,
+      "note": "Unlocking/weather text is incorrectly bound as the code.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-clear",
+      "method": "lexical",
+      "answer": "The string that unlocks it is \"unrelated weather note\".",
+      "unsupported_world_assertion": true,
+      "note": "Unlocking/weather text is incorrectly bound as the code.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-clear",
+      "method": "old",
+      "answer": "The string that unlocks it is \"unrelated weather note\".",
+      "unsupported_world_assertion": true,
+      "note": "Unlocking/weather text is incorrectly bound as the code.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-clear",
+      "method": "candidate",
+      "answer": "H/8: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Returns the only candidate's source unlock string.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-clear_gap",
+      "method": "recent",
+      "answer": "The previous project was unlocked.",
+      "unsupported_world_assertion": true,
+      "note": "Recent invents unlocked status.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-clear_gap",
+      "method": "lexical",
+      "answer": "H/9: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents unlocked status.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-clear_gap",
+      "method": "old",
+      "answer": "H/9: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents unlocked status.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-clear_gap",
+      "method": "candidate",
+      "answer": "H/9: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents unlocked status.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-ambiguous",
+      "method": "recent",
+      "answer": "The exact string that unlocks it is \"Unlocking\".",
+      "unsupported_world_assertion": true,
+      "note": "All guess an unsupported unlock string; no candidate clarification.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-ambiguous",
+      "method": "lexical",
+      "answer": "The string that unlocks it is \"unrelated weather note\".",
+      "unsupported_world_assertion": true,
+      "note": "All guess an unsupported unlock string; no candidate clarification.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-ambiguous",
+      "method": "old",
+      "answer": "The string that unlocks it is \"unrelated weather note\".",
+      "unsupported_world_assertion": true,
+      "note": "All guess an unsupported unlock string; no candidate clarification.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-ambiguous",
+      "method": "candidate",
+      "answer": "H/10: 9_x!",
+      "unsupported_world_assertion": true,
+      "note": "Binds the vague referent to one of two plausible projects without clarification.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-missing",
+      "method": "recent",
+      "answer": "Ysolde's personal locker should be stored in her bedroom or closet.",
+      "unsupported_world_assertion": false,
+      "note": "Recent gives unsolicited normative storage advice, not a private combination. Lexical/old refuse; new acknowledges missing information. No private fact is asserted.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-missing",
+      "method": "lexical",
+      "answer": "I'm sorry, but I can't assist with that.",
+      "unsupported_world_assertion": false,
+      "note": "Recent gives unsolicited normative storage advice, not a private combination. Lexical/old refuse; new acknowledges missing information. No private fact is asserted.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-missing",
+      "method": "old",
+      "answer": "I'm sorry, but I can't assist with that.",
+      "unsupported_world_assertion": false,
+      "note": "Recent gives unsolicited normative storage advice, not a private combination. Lexical/old refuse; new acknowledges missing information. No private fact is asserted.",
+      "annotation": "inherited identical answer"
+    },
+    {
+      "id": "v2-heldout-missing",
+      "method": "candidate",
+      "answer": "I'm sorry, but I don't have any specific information about Ysolde's personal locker that I can provide. The conversation provided does not contain any details about her locker or any other personal items. To answer your question, I would",
+      "unsupported_world_assertion": false,
+      "note": "Explicitly lacks information; asserts no private locker combination.",
+      "annotation": "new assistant review"
+    },
+    {
+      "id": "v2-heldout-exact_code",
+      "method": "envelope_before",
+      "answer": "Clouds drift east.",
+      "unsupported_world_assertion": true,
+      "note": "Unlocked status or weather phrase asserted as unlock answer without source support.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-exact_code_gap",
+      "method": "envelope_before",
+      "answer": "Marigold1 winds up to be a vague reference, as it doesn't provide enough context to determine its meaning or purpose. Therefore, I cannot confidently return a verbatim description of \"Marigold1.\"",
+      "unsupported_world_assertion": false,
+      "note": "Unlocked status unsupported; new response explicitly expresses uncertainty.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-exact_quote",
+      "method": "envelope_before",
+      "answer": "\"Wait? Five turns.\"",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents mathematician/plaque content. Other methods fail literal copying without inventing a new biographical fact.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-correction",
+      "method": "envelope_before",
+      "answer": "H/3: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Correct codes supported; recent merely restates the query entity instead of answering.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-preservation",
+      "method": "envelope_before",
+      "answer": "2043-03-11",
+      "unsupported_world_assertion": true,
+      "note": "Lexical/new bind launch date to unlock string; old quotes a valid unchanged-code statement without giving the code.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-name_date",
+      "method": "envelope_before",
+      "answer": "2043-03-11",
+      "unsupported_world_assertion": false,
+      "note": "Recent fabricates a date.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-gist",
+      "method": "envelope_before",
+      "answer": "Marigold6 uses a network outage as a trigger for sending unsent messages again. When an internet connection becomes available, Marigold6 will attempt to resend the unsent messages.",
+      "unsupported_world_assertion": false,
+      "note": "Lexical adds recipient acknowledgment; old adds inbox closure. Neither is in the source.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-gist_correction",
+      "method": "envelope_before",
+      "answer": "Marigold7 retains unsent messages during a network outage by retrying them once they become available again after being sent offline.",
+      "unsupported_world_assertion": false,
+      "note": "Lexical/old add a 24-hour retention policy absent from sources, despite passing the frozen gist rubric.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-clear",
+      "method": "envelope_before",
+      "answer": "clouds drift east",
+      "unsupported_world_assertion": true,
+      "note": "Unlocking/weather text is incorrectly bound as the code.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-clear_gap",
+      "method": "envelope_before",
+      "answer": "H/9: 9_x!",
+      "unsupported_world_assertion": false,
+      "note": "Recent invents unlocked status.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-ambiguous",
+      "method": "envelope_before",
+      "answer": "clouds drift east",
+      "unsupported_world_assertion": true,
+      "note": "All guess an unsupported unlock string; no candidate clarification.",
+      "annotation": "prior assistant review"
+    },
+    {
+      "id": "v2-heldout-missing",
+      "method": "envelope_before",
+      "answer": "I'm sorry, but I don't have any specific information about Ysolde's personal locker that I can provide. The conversation provided does not contain any details about her locker or any other personal items. To answer your question accurately, I",
+      "unsupported_world_assertion": false,
+      "note": "Recent gives unsolicited normative storage advice, not a private combination. Lexical/old refuse; new acknowledges missing information. No private fact is asserted.",
+      "annotation": "prior assistant review"
+    }
+  ]
+}

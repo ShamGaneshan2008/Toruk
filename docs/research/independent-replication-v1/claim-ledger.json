@@ -1,0 +1,274 @@
+{
+  "schema": "toruk-claim-ledger-v1",
+  "date": "2026-11-04",
+  "central_claim_status": "NOT_ESTABLISHED; both measured efficiency/quality gates fail",
+  "claims": [
+    {
+      "id": "C01",
+      "status": "SUPPORTED_IMPLEMENTATION",
+      "statement": "Conversational language ability comes from unchanged external Qwen, not a Toruk-trained decoder.",
+      "evidence": [
+        "../../../src/toruk_lm/chat_foundation.py",
+        "../../../artifacts/independent-replication-20261104/mechanism-freeze.json"
+      ],
+      "locator_and_limit": "PretrainedChatBackend.__init__; actual model/revision/weight bindings"
+    },
+    {
+      "id": "C02",
+      "status": "SUPPORTED_IMPLEMENTATION",
+      "statement": "Toruk ranks earlier user turns with eight fixed learned features and retains two plus the latest three.",
+      "evidence": [
+        "../../../src/toruk_lm/chat_selector.py",
+        "../../../src/toruk_lm/rank_budget.py",
+        "../../../artifacts/chat-selector-v2-20261101/selector.json"
+      ],
+      "locator_and_limit": "FEATURES; RankBudgetSelector.select; checkpoint training seed 173"
+    },
+    {
+      "id": "C03",
+      "status": "SUPPORTED_EXECUTION",
+      "statement": "This study performs no new research training.",
+      "evidence": [
+        "../../../scripts/independent_replication.py",
+        "../../../artifacts/independent-replication-20261104/evaluation/registration.json",
+        "../../../artifacts/independent-replication-20261104/total-cost-accounting.json"
+      ],
+      "locator_and_limit": "new_training_steps; evaluate only loads frozen models; verification smokes are separate"
+    },
+    {
+      "id": "C04",
+      "status": "SUPPORTED_WITH_SCOPE",
+      "statement": "Input, source and prompt limits are bounded; there is no persistent memory state in this chat path.",
+      "evidence": [
+        "../../../src/toruk_lm/source_spans.py",
+        "../../../src/toruk_lm/chat_foundation.py",
+        "../../../src/toruk_lm/rank_budget.py"
+      ],
+      "locator_and_limit": "MAX_MESSAGES/MAX_INPUT_BYTES/MAX_SOURCES/MAX_SOURCE_BYTES; _fit; per-request select"
+    },
+    {
+      "id": "C05",
+      "status": "SUPPORTED_EXECUTION",
+      "statement": "Comparisons share actual model/tokenizer/settings and a balanced six-method order.",
+      "evidence": [
+        "../../../scripts/independent_replication.py",
+        "../../../artifacts/independent-replication-20261104/evaluation/registration.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/independent.jsonl"
+      ],
+      "locator_and_limit": "METHODS; evaluate; per-row order/metrics; settings and dependency bindings"
+    },
+    {
+      "id": "C06",
+      "status": "SUPPORTED_ABLATION",
+      "statement": "Ablations remove the envelope, learned scores, or cutoff relaxation; no imaginary memory module is evaluated.",
+      "evidence": [
+        "../../../scripts/independent_replication.py",
+        "../../../src/toruk_lm/source_spans.py",
+        "../../../src/toruk_lm/rank_budget.py"
+      ],
+      "locator_and_limit": "methods; ConstantRanker; restoration of ChatRelevanceSelector.threshold"
+    },
+    {
+      "id": "C07",
+      "status": "SUPPORTED_DATASET",
+      "statement": "Controlled data are the fixed published recall V2 cases; historical V1 has weaker separation.",
+      "evidence": [
+        "../recall-v2-protocol.md",
+        "../recall-results-20261104.md",
+        "../../../artifacts/independent-replication-20261104/phase1/heldout.json"
+      ],
+      "locator_and_limit": "12 deterministic cases; V1 limitations retained"
+    },
+    {
+      "id": "C08",
+      "status": "LIMITED_GENERALIZATION",
+      "statement": "Reusing the published controlled set is replication/diagnosis, not a new unseen test.",
+      "evidence": [
+        "../rank-budget-v1-results.md",
+        "../../../artifacts/independent-replication-20261104/phase1/comparison.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/controlled.json"
+      ],
+      "locator_and_limit": "Original questions/results existed before this study"
+    },
+    {
+      "id": "C09",
+      "status": "SUPPORTED_DATASET",
+      "statement": "A different authored-card procedure creates 24 operational cases, seed 20261104, with variable heterogeneous gaps.",
+      "evidence": [
+        "../../../configs/independent-chat-cards-v1.json",
+        "../../../scripts/independent_cases.py",
+        "../../../artifacts/independent-replication-20261104/evaluation/independent.json"
+      ],
+      "locator_and_limit": "assemble; four per category; 47?57 messages; 19?25 trailing pairs"
+    },
+    {
+      "id": "C10",
+      "status": "LIMITED_LEAKAGE_CHECK",
+      "statement": "No exact normalized task-bearing text overlaps historical selector and recall data.",
+      "evidence": [
+        "../../../scripts/independent_cases.py",
+        "../../../artifacts/independent-replication-20261104/evaluation/leakage-audit.json"
+      ],
+      "locator_and_limit": "leakage_audit; zero exact overlaps; not a semantic/pretraining contamination proof"
+    },
+    {
+      "id": "C11",
+      "status": "LIMITED_INDEPENDENCE",
+      "statement": "Dataset procedure differs, but investigators and graders are not independently human-validated.",
+      "evidence": [
+        "../independent-replication-v1-protocol.md",
+        "../../../artifacts/independent-replication-20261104/evaluation/assertion-review.json"
+      ],
+      "locator_and_limit": "Authored synthetic scenarios; same assistant; no independent adjudicators"
+    },
+    {
+      "id": "C12",
+      "status": "SUPPORTED_WITH_RUBRIC_LIMITS",
+      "statement": "Primary scoring bytes remain fixed, including narrow uncertainty matching and unsupported proxy.",
+      "evidence": [
+        "../../../scripts/recall_study.py",
+        "../../../artifacts/independent-replication-20261104/evaluation/registration.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/audit.json"
+      ],
+      "locator_and_limit": "score; SHA256 binding; all score fields rederived"
+    },
+    {
+      "id": "C13",
+      "status": "SUBJECTIVE_NONPRIMARY",
+      "statement": "A method-label-omitted review of 151 unique answers annotates all 216 outputs; it is not complete semantic ground truth.",
+      "evidence": [
+        "../../../artifacts/independent-replication-20261104/evaluation/assertion-review.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/review-items-independent-utf8.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/review-items-controlled.json"
+      ],
+      "locator_and_limit": "151 unique annotations; rows length 216; generic/refusal commentary scope explicitly limited"
+    },
+    {
+      "id": "C14",
+      "status": "SUPPORTED_MEASUREMENT_WITH_SCOPE",
+      "statement": "Actual tokenization/fitting/selection/generation/request CPU and memory metrics are recorded and prompts audited.",
+      "evidence": [
+        "../../../scripts/independent_replication.py",
+        "../../../tests/test_independent_replication.py",
+        "../../../artifacts/independent-replication-20261104/evaluation/audit.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/independent.jsonl"
+      ],
+      "locator_and_limit": "MeasuredBackend; instrument; CPU time/OS high water; audit 216 rows; logical bytes are a proxy"
+    },
+    {
+      "id": "C15",
+      "status": "DESCRIPTIVE_UNCERTAINTY",
+      "statement": "Wilson and paired-bootstrap intervals are computed over scenarios, not training seeds or a random conversational population.",
+      "evidence": [
+        "../../../scripts/report_independent_replication.py",
+        "../../../artifacts/independent-replication-20261104/evaluation/summary.json"
+      ],
+      "locator_and_limit": "wilson; paired_interval; 10000 resamples seed 741"
+    },
+    {
+      "id": "C16",
+      "status": "REPRODUCED_NEGATIVE_GATE",
+      "statement": "All 96 original rows reproduce; the prior fix still fails the unsupported-proxy bound.",
+      "evidence": [
+        "../../../artifacts/independent-replication-20261104/phase1/comparison.json",
+        "../../../artifacts/independent-replication-20261104/phase1/summary.json",
+        "../rank-budget-v1-protocol.md"
+      ],
+      "locator_and_limit": "Exact prompts/answers/scoring/work; prior unsupported count 3 > 2"
+    },
+    {
+      "id": "C17",
+      "status": "MEASURED_FROZEN_RUBRIC",
+      "statement": "Main scores: controlled recent/lexical/Toruk 0/4/8 of 12; independent 3/6/9 of 24.",
+      "evidence": [
+        "../../../artifacts/independent-replication-20261104/evaluation/summary.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/controlled.jsonl",
+        "../../../artifacts/independent-replication-20261104/evaluation/independent.jsonl"
+      ],
+      "locator_and_limit": "Separate suites; scores are not complete semantic correctness"
+    },
+    {
+      "id": "C18",
+      "status": "CENTRAL_GATE_FAILED",
+      "statement": "Toruk does not meet the registered lower-cost/no-quality-regression criterion on either set.",
+      "evidence": [
+        "../independent-replication-v1-protocol.md",
+        "../../../artifacts/independent-replication-20261104/evaluation/summary.json"
+      ],
+      "locator_and_limit": "suites.*.gates; both frozen_proxy_efficiency_gate_passed are false"
+    },
+    {
+      "id": "C19",
+      "status": "MEASURED_ABLATIONS",
+      "statement": "Independent no-envelope/constant-rank/restore-cutoff scores are 9/1/8 of 24; main Toruk is 9.",
+      "evidence": [
+        "../../../artifacts/independent-replication-20261104/evaluation/summary.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/table.md"
+      ],
+      "locator_and_limit": "ablations; gains, regressions and paired intervals retained; equal counts are not equivalence proof"
+    },
+    {
+      "id": "C20",
+      "status": "MEASURED_FAILURES",
+      "statement": "Available sources can still yield stale corrections and changed exact strings; both assistant-origin cases fail.",
+      "evidence": [
+        "../../../artifacts/independent-replication-20261104/evaluation/toruk-failures.json",
+        "../../../artifacts/independent-replication-20261104/evaluation/independent.jsonl",
+        "../../../artifacts/independent-replication-20261104/evaluation/assertion-review.json"
+      ],
+      "locator_and_limit": "Archive bin, rehearsal date, engraving, source-role and missing-evidence examples"
+    },
+    {
+      "id": "C21",
+      "status": "MEASURED_COST_VECTOR",
+      "statement": "312 inference answers use 81846 model prompt tokens, 4861 output tokens and 1117.67 subprocess seconds; Phase 2 CPU is 1546.80 seconds.",
+      "evidence": [
+        "../../../artifacts/independent-replication-20261104/total-cost-accounting.json",
+        "../../../artifacts/independent-replication-20261104/checks/independent-inference.json",
+        "../../../artifacts/independent-replication-20261104/checks/controlled-ablations.json"
+      ],
+      "locator_and_limit": "Per-request CPU excludes startup/audit; Phase 1 CPU unmeasured; memory is cumulative OS process high water"
+    },
+    {
+      "id": "C22",
+      "status": "NOT_ESTABLISHED",
+      "statement": "Lower lifecycle cost, energy, FLOPs, historical training cost and stable cross-hardware savings are not established.",
+      "evidence": [
+        "../../../artifacts/independent-replication-20261104/total-cost-accounting.json",
+        "../independent-replication-v1-protocol.md"
+      ],
+      "locator_and_limit": "Unmeasured fields and accounting scopes are explicit; no dollar-cost saving asserted"
+    },
+    {
+      "id": "C23",
+      "status": "PRIMARY_SOURCE_POSITIONING",
+      "statement": "Selected prior work already covers recurrence, retrieval, token/gist compression and current long-term memory evaluation.",
+      "evidence": [
+        "positioning.md",
+        "references.bib"
+      ],
+      "locator_and_limit": "Each matrix row links a primary paper and date; third-party metrics are author-reported, not replicated"
+    },
+    {
+      "id": "C24",
+      "status": "UNSUPPORTED_BROAD_COMPARISON",
+      "statement": "First-of-kind, IEEE Xplore absence, full-context/strong-compressor superiority and general semantic memory are unsupported.",
+      "evidence": [
+        "positioning.md",
+        "../../../src/toruk_lm/rank_budget.py",
+        "../independent-replication-v1-protocol.md"
+      ],
+      "locator_and_limit": "Targeted non-exhaustive search; only actual local recent/lexical baselines; no persistent chat memory"
+    },
+    {
+      "id": "C25",
+      "status": "NEXT_SUBMISSION_STEP",
+      "statement": "External replication with independent human adjudication on a real conversational benchmark is the key remaining validation step.",
+      "evidence": [
+        "../independent-replication-v1-results.md",
+        "../../../artifacts/independent-replication-20261104/evaluation/summary.json"
+      ],
+      "locator_and_limit": "Inference from small authored samples, scoring limitations and failed central gate; not a completed result"
+    }
+  ]
+}

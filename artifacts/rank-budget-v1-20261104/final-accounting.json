@@ -1,0 +1,643 @@
+{
+  "starting_commit": "84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca",
+  "starting_branch": "main",
+  "starting_git_status": "clean",
+  "final_commit": "84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca",
+  "final_git_status": " M .gitignore\n M README.md\n M docs/architecture.md\n M docs/experiments.md\n M docs/research/recall-results-20261104.md\n?? artifacts/blocker-replay-20261104/\n?? artifacts/rank-budget-v1-20261104/\n?? docs/research/rank-budget-v1-protocol.md\n?? docs/research/rank-budget-v1-results.md\n?? scripts/compare_recall_runs.py\n?? scripts/rank_budget_study.py\n?? scripts/report_rank_budget.py\n?? src/toruk_lm/rank_budget.py\n?? tests/test_compare_recall_runs.py\n?? tests/test_rank_budget.py\n",
+  "changed_files": [
+    ".gitignore",
+    "README.md",
+    "artifacts/blocker-replay-20261104/checks/development.json",
+    "artifacts/blocker-replay-20261104/checks/development.log",
+    "artifacts/blocker-replay-20261104/checks/heldout.json",
+    "artifacts/blocker-replay-20261104/checks/heldout.log",
+    "artifacts/blocker-replay-20261104/comparison.json",
+    "artifacts/blocker-replay-20261104/development-cost.json",
+    "artifacts/blocker-replay-20261104/development.json",
+    "artifacts/blocker-replay-20261104/development.jsonl",
+    "artifacts/blocker-replay-20261104/heldout-cost.json",
+    "artifacts/blocker-replay-20261104/heldout.json",
+    "artifacts/blocker-replay-20261104/heldout.jsonl",
+    "artifacts/blocker-replay-20261104/intervention.json",
+    "artifacts/blocker-replay-20261104/registration.json",
+    "artifacts/blocker-replay-20261104/summary.json",
+    "artifacts/blocker-replay-20261104/table.md",
+    "artifacts/blocker-replay-20261104/training.json",
+    "artifacts/blocker-replay-20261104/work.json",
+    "artifacts/rank-budget-v1-20261104/assertion-review.json",
+    "artifacts/rank-budget-v1-20261104/checks/development.json",
+    "artifacts/rank-budget-v1-20261104/checks/development.log",
+    "artifacts/rank-budget-v1-20261104/checks/heldout.json",
+    "artifacts/rank-budget-v1-20261104/checks/heldout.log",
+    "artifacts/rank-budget-v1-20261104/comparison.json",
+    "artifacts/rank-budget-v1-20261104/development-cost.json",
+    "artifacts/rank-budget-v1-20261104/development-freeze.json",
+    "artifacts/rank-budget-v1-20261104/development.json",
+    "artifacts/rank-budget-v1-20261104/development.jsonl",
+    "artifacts/rank-budget-v1-20261104/final-accounting.json",
+    "artifacts/rank-budget-v1-20261104/heldout-cost.json",
+    "artifacts/rank-budget-v1-20261104/heldout.json",
+    "artifacts/rank-budget-v1-20261104/heldout.jsonl",
+    "artifacts/rank-budget-v1-20261104/input-audit.json",
+    "artifacts/rank-budget-v1-20261104/intervention.json",
+    "artifacts/rank-budget-v1-20261104/outputs-seal.json",
+    "artifacts/rank-budget-v1-20261104/registration.json",
+    "artifacts/rank-budget-v1-20261104/review_assertions.py",
+    "artifacts/rank-budget-v1-20261104/summary.json",
+    "artifacts/rank-budget-v1-20261104/table.md",
+    "artifacts/rank-budget-v1-20261104/training.json",
+    "artifacts/rank-budget-v1-20261104/verification/build.json",
+    "artifacts/rank-budget-v1-20261104/verification/build.log",
+    "artifacts/rank-budget-v1-20261104/verification/diagnose.json",
+    "artifacts/rank-budget-v1-20261104/verification/diagnose.log",
+    "artifacts/rank-budget-v1-20261104/verification/diff-check.json",
+    "artifacts/rank-budget-v1-20261104/verification/diff-check.log",
+    "artifacts/rank-budget-v1-20261104/verification/format.json",
+    "artifacts/rank-budget-v1-20261104/verification/format.log",
+    "artifacts/rank-budget-v1-20261104/verification/frozen-sources.json",
+    "artifacts/rank-budget-v1-20261104/verification/frozen-sources.log",
+    "artifacts/rank-budget-v1-20261104/verification/help.json",
+    "artifacts/rank-budget-v1-20261104/verification/help.log",
+    "artifacts/rank-budget-v1-20261104/verification/import.json",
+    "artifacts/rank-budget-v1-20261104/verification/import.log",
+    "artifacts/rank-budget-v1-20261104/verification/install-local.json",
+    "artifacts/rank-budget-v1-20261104/verification/install-local.log",
+    "artifacts/rank-budget-v1-20261104/verification/lint.json",
+    "artifacts/rank-budget-v1-20261104/verification/lint.log",
+    "artifacts/rank-budget-v1-20261104/verification/node-check.json",
+    "artifacts/rank-budget-v1-20261104/verification/node-check.log",
+    "artifacts/rank-budget-v1-20261104/verification/node-tests-utf8.json",
+    "artifacts/rank-budget-v1-20261104/verification/node-tests-utf8.log",
+    "artifacts/rank-budget-v1-20261104/verification/node-tests.json",
+    "artifacts/rank-budget-v1-20261104/verification/node-tests.log",
+    "artifacts/rank-budget-v1-20261104/verification/package.json",
+    "artifacts/rank-budget-v1-20261104/verification/package.log",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/data/manifest.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/data/test.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/data/train.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/data/validation.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/eval/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/eval/predictions.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/generation.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/manifest.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/summary/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/summary/table.csv",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/summary/table.md",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/train/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/pipeline/train/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/reproduce.json",
+    "artifacts/rank-budget-v1-20261104/verification/reproduce.log",
+    "artifacts/rank-budget-v1-20261104/verification/research-config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-config.log",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke.log",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/data/manifest.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/data/test.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/data/train.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/data/train_lm.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/data/validation.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/data/validation_lm.jsonl",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/manifest.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-eval/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-eval/predictions.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-full/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-full/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-part/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-part/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-resume/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/ordinary-resume/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-eval/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-eval/predictions.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-full/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-full/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-part/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-part/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-resume/config.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/recurrent-resume/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/stages.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-smoke/summary.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-types.json",
+    "artifacts/rank-budget-v1-20261104/verification/research-types.log",
+    "artifacts/rank-budget-v1-20261104/verification/staged-diff-check.json",
+    "artifacts/rank-budget-v1-20261104/verification/staged-diff-check.log",
+    "artifacts/rank-budget-v1-20261104/verification/summarize.json",
+    "artifacts/rank-budget-v1-20261104/verification/summarize.log",
+    "artifacts/rank-budget-v1-20261104/verification/tables/metrics.json",
+    "artifacts/rank-budget-v1-20261104/verification/tables/table.csv",
+    "artifacts/rank-budget-v1-20261104/verification/tables/table.md",
+    "artifacts/rank-budget-v1-20261104/verification/tests.json",
+    "artifacts/rank-budget-v1-20261104/verification/tests.log",
+    "artifacts/rank-budget-v1-20261104/verification/types-linux.json",
+    "artifacts/rank-budget-v1-20261104/verification/types-linux.log",
+    "artifacts/rank-budget-v1-20261104/verification/types.json",
+    "artifacts/rank-budget-v1-20261104/verification/types.log",
+    "artifacts/rank-budget-v1-20261104/verification/validate.json",
+    "artifacts/rank-budget-v1-20261104/verification/validate.log",
+    "artifacts/rank-budget-v1-20261104/work.json",
+    "docs/architecture.md",
+    "docs/experiments.md",
+    "docs/research/rank-budget-v1-protocol.md",
+    "docs/research/rank-budget-v1-results.md",
+    "docs/research/recall-results-20261104.md",
+    "scripts/compare_recall_runs.py",
+    "scripts/rank_budget_study.py",
+    "scripts/report_rank_budget.py",
+    "src/toruk_lm/rank_budget.py",
+    "tests/test_compare_recall_runs.py",
+    "tests/test_rank_budget.py"
+  ],
+  "recorded_commands": [
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\checks\\development.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/rank_budget_study.py",
+        "development",
+        "--run",
+        "artifacts/rank-budget-v1-20261104"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 173.1318655
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\checks\\heldout.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/rank_budget_study.py",
+        "heldout",
+        "--run",
+        "artifacts/rank-budget-v1-20261104"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 189.87325469999996
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\build.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\verification\\package"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.431398100000024
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\diagnose.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.4676580000000286
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\diff-check.json",
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.05264480000005278
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\format.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.13347569999996267
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\frozen-sources.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/check_frozen_sources.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.08365200000025652
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\help.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.5769642000000204
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\import.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import toruk_lm; print(toruk_lm.__version__)"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.054892499999823485
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\install-local.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.187178799999856
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\lint.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.12439249999988533
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\node-check.json",
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "run",
+        "check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.8674575999998524
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\node-tests-utf8.json",
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.9878489999996418
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\node-tests.json",
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.0250065000000177
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\package.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.0560276000001068
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\reproduce.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/foundation.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\verification\\pipeline"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.896058699999685
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\research-config.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate-config",
+        "--config",
+        "configs/reproduce-smoke-v1.json"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.135922599999958
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\research-smoke.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/reproduce-smoke-v1.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\verification\\research-smoke"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.978608700000223
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\research-types.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "scripts/rank_budget_study.py",
+        "scripts/report_rank_budget.py",
+        "scripts/compare_recall_runs.py",
+        "--disable-error-code",
+        "import-untyped",
+        "--disable-error-code",
+        "misc"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 104.5464007999999
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\staged-diff-check.json",
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.03449319999981526
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\summarize.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "summarize",
+        "--run",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\verification\\pipeline",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\verification\\tables"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.940556900000047
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\tests.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 144.50817729999972
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\types-linux.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 60.12124989999984
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\types.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 86.83233250000012
+    },
+    {
+      "record": "artifacts\\rank-budget-v1-20261104\\verification\\validate.json",
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate",
+        "--manifest",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\verification\\pipeline\\data\\manifest.json",
+        "--config",
+        "configs/foundation.json",
+        "--checkpoint",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\rank-budget-v1-20261104\\verification\\pipeline\\train\\checkpoint.pt"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.337525700000242
+    },
+    {
+      "record": "artifacts\\blocker-replay-20261104\\checks\\development.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/recall_v2.py",
+        "development",
+        "--run",
+        "artifacts/blocker-replay-20261104"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 202.4562707
+    },
+    {
+      "record": "artifacts\\blocker-replay-20261104\\checks\\heldout.json",
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/recall_v2.py",
+        "heldout",
+        "--run",
+        "artifacts/blocker-replay-20261104"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 176.5151945
+    }
+  ],
+  "additional_commands_and_wrapper_failures": [
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/recall_v2.py",
+        "development",
+        "--run",
+        "artifacts/recall-v2-20261104"
+      ],
+      "returncode": 1,
+      "meaning": "Expected refusal to overwrite original outputs; seal verification passed first."
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/check.py",
+        "--output-dir",
+        "artifacts/rank-budget-v1-20261104/verification",
+        "node-tests",
+        "--",
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "returncode": 1,
+      "meaning": "Underlying Node tests passed; wrapper printing raised cp1252 UnicodeEncodeError after saving PASS records. UTF-8 rerun passed."
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/recall_v2.py",
+        "register",
+        "--run",
+        "artifacts\\blocker-replay-20261104"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/rank_budget_study.py",
+        "register",
+        "--run",
+        "artifacts\\rank-budget-v1-20261104"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/compare_recall_runs.py",
+        "--reference",
+        "artifacts/recall-v2-20261104",
+        "--replay",
+        "artifacts/blocker-replay-20261104",
+        "--output",
+        "artifacts/blocker-replay-20261104/comparison.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/report_recall.py",
+        "--run",
+        "artifacts/blocker-replay-20261104"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/rank_budget_study.py",
+        "report",
+        "--run",
+        "artifacts/rank-budget-v1-20261104"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/report_rank_budget.py",
+        "--reference",
+        "artifacts/blocker-replay-20261104",
+        "--run",
+        "artifacts/rank-budget-v1-20261104"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "artifacts/rank-budget-v1-20261104/review_assertions.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_rank_budget.py",
+        "tests/test_compare_recall_runs.py"
+      ],
+      "returncode": 0,
+      "result": "10 passed"
+    }
+  ],
+  "python_ci_equivalents": "19/19 PASS",
+  "full_python_tests": "195 passed; 0 skipped",
+  "node_tests": "13 passed; 1 optional live test skipped; 0 failed",
+  "remote_ci": "NOT_RUN for uncommitted changes",
+  "heldout_candidate_runs": 1,
+  "success_criterion": {
+    "correct_at_least_6": true,
+    "unsupported_proxy_at_most_2": false,
+    "request_ms_per_correct_at_least_10_percent_lower": true
+  },
+  "success": false,
+  "mechanism_promoted_to_chat_default": false,
+  "next_blocker": "Faithful generation from retained evidence, especially rejecting obsolete corrected values."
+}

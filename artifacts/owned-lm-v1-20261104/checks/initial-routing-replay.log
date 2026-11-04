@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 214, in <module>
+    main()
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 210, in main
+    replay(args.sealed_run, args.inputs or args.sealed_run, args.output, sorted(set(args.loads)))
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\replay_routing_v2.py", line 61, in replay
+    study.verify_final(reference)
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\study_routing_v2.py", line 407, in verify_final
+    verify_registered(run)
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\study_routing_v2.py", line 353, in verify_registered
+    raise ValueError(f"registration drift: {name}")
+ValueError: registration drift: pyproject.toml

@@ -1,0 +1,39 @@
+[
+  {
+    "command": [
+      "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+      "scripts/replay_routing_v2.py",
+      "--sealed-run",
+      "artifacts/routing-v2-20261103",
+      "--output",
+      "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\owned-lm-v1-20261104\\prerequisite-replay\\routing.json",
+      "--loads",
+      "0"
+    ],
+    "cwd": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\owned-lm-v1-20261104\\prerequisite-replay\\workspace",
+    "returncode": 0,
+    "seconds": 19.27886530000069
+  },
+  {
+    "command": [
+      "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+      "scripts/replay_owned_prerequisites.py",
+      "--value-worker",
+      "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\owned-lm-v1-20261104\\prerequisite-replay\\value-replay"
+    ],
+    "cwd": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\owned-lm-v1-20261104\\prerequisite-replay\\workspace",
+    "returncode": 0,
+    "seconds": 20.107273800000257
+  },
+  {
+    "command": [
+      "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+      "scripts/audit_value_fidelity_dev.py",
+      "--run",
+      "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\owned-lm-v1-20261104\\prerequisite-replay\\value-replay"
+    ],
+    "cwd": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\owned-lm-v1-20261104\\prerequisite-replay\\workspace",
+    "returncode": 0,
+    "seconds": 2.224669499999436
+  }
+]

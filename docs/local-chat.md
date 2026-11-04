@@ -5,6 +5,8 @@ not a Toruk-trained model ([official model card](https://huggingface.co/Qwen/Qwe
 Toruk supplies the server, limits, telemetry, and optional experimental context selection.
 The fresh [audit](research/next-chat-20261031.md) includes actual answers and failures.
 Chat remains experimental; the efficiency claim is unsupported.
+For the frozen research comparisons, actual-component ablations and exploratory
+draft, see the [independent replication package](research/independent-replication-v1-results.md).
 An optional, explicitly named heuristic selector can now be enabled for the
 [same-backbone context comparison](context-selection.md). It is separate from the
 missing evaluated M6 checkpoint and does not restore that learned-memory result.

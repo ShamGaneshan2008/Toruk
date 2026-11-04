@@ -68,6 +68,29 @@ scope and limits.
 
 ## Current chat history selection
 
+The [independent replication package](research/independent-replication-v1-results.md)
+evaluates this frozen mechanism without changing it. `independent_replication.py`
+counts actual history/fitting tokenization, selection, generation and request
+CPU time; records original/selected sources and generated token IDs; and audits
+saved prompts against the tokenizer. A separate authored-card assembly procedure
+uses heterogeneous distractors. Ablations remove only the envelope, learned
+ranking, or cutoff relaxation. There is no persistent memory writer or semantic
+compressor in this path. Its independent efficiency/quality gate fails despite
+a higher narrow-rubric score; the draft documents this tradeoff.
+
+The research-only `rank_budget.py` follow-up wraps the frozen learned ranker
+with `RankBudgetSelector`: keep its two highest-scoring earlier user turns
+without the absolute 0.2 cutoff, plus the same three recent turns. It retains
+chronological order and the existing source envelope, input/storage limits and
+512-token final prompt fit. It adds no persistent state, fact parser, generation
+rule or model weights. Low-scoring irrelevant turns can now enter the prompt;
+ranking mistakes, two-source capacity and decoder errors remain possible.
+`scripts/rank_budget_study.py` seals the fixed V2 cases and runtime, freezes
+development outputs, and requires that freeze before heldout inference. The
+browser/server defaults are unchanged. See the
+[protocol](research/rank-budget-v1-protocol.md) and
+[measured result](research/rank-budget-v1-results.md).
+
 The separate [exact/gist/reference experiment](research/recall-v2-protocol.md)
 adds a research-only source transcript envelope around the existing selected
 turns. It preserves source text and provenance, then uses the same 512-token

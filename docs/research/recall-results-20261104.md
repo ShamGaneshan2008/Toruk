@@ -312,6 +312,14 @@ Both artifact directories retain raw inputs, seals, outputs, costs and failures.
 The final accounting file records exact changed paths, Git status and final
 command exits. No historical artifact or checkpoint was rewritten.
 
+The subsequent [fixed-budget follow-up](rank-budget-v1-results.md), starting at
+`84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca`, reproduces all 96 V2 prompts,
+answers and deterministic resource counters exactly before testing one cutoff
+ablation. Correctness rises 4/12 to 8/12 on the same published heldout questions,
+but the unsupported proxy rises 2/12 to 3/12 and a correction answer becomes
+obsolete. Its preregistered success criterion fails. Original V1/V2 evidence and
+scores above remain unchanged; the candidate is research-only.
+
 See [final command ledger and Git status](../../artifacts/recall-v2-20261104/final-accounting.md)
 and its [machine-readable record](../../artifacts/recall-v2-20261104/final-accounting.json).
 The working tree contains three modified tracked files plus the new code, tests,

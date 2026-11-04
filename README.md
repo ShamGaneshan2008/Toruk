@@ -161,6 +161,23 @@ byte-perfect recall or total-resource efficiency. The ordinary chat path is
 unchanged. An [explanation notebook](docs/toruk-explanation.ipynb) walks through
 these limits with concrete examples.
 
+The [fixed-budget selector follow-up](docs/research/rank-budget-v1-results.md)
+first reproduces all 96 recall V2 prompts and answers, then removes only the
+learned selector's absolute score cutoff. On the same published heldout cases,
+correctness rises from 4/12 to 8/12, but a corrected credential regresses to its
+obsolete value and the unsupported-answer proxy rises from 2/12 to 3/12. The
+success gate fails; prompt tokens and absolute request latency increase. This
+research-only candidate does not change chat defaults or establish a general
+accuracy or total-cost advantage.
+
+The [independent replication package](docs/research/independent-replication-v1-results.md)
+reproduces the prior 96 rows exactly and tests the frozen selector on 24 separately
+authored scenarios. Toruk scores 9/24 versus lexical retrieval's 6/24, but uses
+33.1% more model tokens and 19.7% more request time; the paired quality interval
+includes zero. Its efficiency/quality gate fails. Actual-component ablations,
+raw answers, full-history accounting, a primary-source comparison matrix and an
+exploratory draft are retained. This does not establish a general advantage.
+
 ## Evaluation principles
 
 Language quality and factual answers require different measurements. Toruk aims to report ordinary-text loss separately from answers generated without seeing reference answers. Controlled evaluations cover recall, corrections, unchanged facts and unknown answers; reliable learning and capacity boundaries remain research goals.
@@ -180,4 +197,4 @@ Toruk is under active research. This page describes its goals and public develop
 
 ## Attribution and license
 
-Toruk builds on established causal language modeling and memory research. Ordinary recurrent memory and gating are not claimed as new inventions here. The current implementation uses [PyTorch](https://pytorch.org/). No project license has been specified, and there is no paper or citation to provide yet.
+Toruk builds on established causal language modeling and memory research. Ordinary recurrent memory and gating are not claimed as new inventions here. The current implementation uses [PyTorch](https://pytorch.org/). No project license has been specified. There is no published paper; the local replication package contains an exploratory draft, not a submitted or verified positive result.

@@ -1,0 +1,24 @@
+{
+  "mechanism_exists": "PASS: learned routing/state influence tested; distinct trained checkpoints",
+  "minimum_quality_by_method": {
+    "learned": "FAIL",
+    "lexical": "FAIL",
+    "new": "FAIL",
+    "new_zero": "FAIL",
+    "old": "FAIL",
+    "recent": "FAIL"
+  },
+  "path": "A",
+  "requested_gates": {
+    "fewer_selected_tokens_preserved_quality": "FAIL: same integrated prompt budget; quality gate required",
+    "generalization": "FAIL on useful factual transfer; broader conversation unestablished",
+    "lower_total_resource_cost": "FAIL: full history updates and extra routing work; no qualified cost reduction",
+    "protected_preview_readiness": "FAIL: Path A; no qualified integrated chat candidate or preview gate",
+    "public_chatbot_readiness": "FAIL: no qualified public release candidate",
+    "research_paper_readiness": "FAIL: qualified evidence prerequisites unmet",
+    "toruk_owned_useful_learned_memory": "FAIL",
+    "useful_conversational_answers": "INCONCLUSIVE: synthetic research decoder; Qwen integration smoke only"
+  },
+  "target_factual_improved_both_seeds": "FAIL",
+  "target_routing_improved_both_seeds": "PASS"
+}

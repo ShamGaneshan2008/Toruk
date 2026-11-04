@@ -31,6 +31,12 @@ def main():
         "types": ["-m", "mypy"],
         "types-linux": ["-m", "mypy", "--platform", "linux"],
         "tests": ["-m", "pytest", "-q"],
+        "independent-cases": [
+            "scripts/independent_replication.py",
+            "validate-cases",
+            "--run",
+            str(options.output_dir.resolve() / "independent-cases"),
+        ],
         "reproduce": [
             "-m",
             "toruk_lm",
