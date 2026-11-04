@@ -1,0 +1,11 @@
+{
+  "commit": "94d11797355b3373fa2ff7547415676d52ad4c07",
+  "run": 41802844536,
+  "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41802844536",
+  "web": "success",
+  "frozen_sources_lint_format": "success",
+  "python": "failure at mypy; subsequent steps skipped",
+  "error": "src/toruk_lm/chat_foundation.py:172: Cannot find implementation or library stub for module named transformers [import-not-found]",
+  "cause": "CI installed dev extras only; local environment also had chat extras",
+  "correction": "Install .[dev,chat] in CI; no model weights are downloaded"
+}

@@ -31,3 +31,11 @@ loaded old default-dist build command still failed on the protected archive;
 that failure is retained in build.log. The separately recorded build-fresh
 command succeeds with the final fresh-output arguments. Git diff checks pass.
 Rebuildable distribution binaries remain local; text evidence is published.
+
+The first pushed commit, `94d11797355b3373fa2ff7547415676d52ad4c07`, passed
+remote web, frozen-source, lint and format checks. Actions run 41802844536 then
+exposed a missing optional Transformers dependency in mypy: the runner installed
+only `.[dev]`, while local checks had chat dependencies available. The workflow
+now installs `.[dev,chat]` so the checked chat imports have their dependencies.
+This installs libraries, not model weights. The first failure is retained in
+`artifacts/checks/recall-ci-integration-20261104/first-remote-failure.json`.
