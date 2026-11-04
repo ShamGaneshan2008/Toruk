@@ -1,0 +1,14 @@
+{
+  "schema": "toruk-owned-lm-study-v1",
+  "model": {"context": 32, "width": 16, "heads": 2, "layers": 1, "slots": 2, "max_document_tokens": 384},
+  "steps": 2,
+  "batch_documents": 1,
+  "learning_rate": 0.003,
+  "seeds": [23],
+  "train_per_category": 2,
+  "dev_per_category": 1,
+  "heldout_per_category": 1,
+  "max_new_tokens": 8,
+  "max_seconds": 60,
+  "scope": "bounded CPU execution/resume smoke only; not a research-quality result"
+}

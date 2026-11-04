@@ -1,0 +1,2322 @@
+{
+  "variant": "memory_off",
+  "seed": 31,
+  "steps": 256,
+  "resumed_from": 0,
+  "training_targets_total": 78190,
+  "forward_positions_this_run": 78190,
+  "seconds": 6.3306896000012784,
+  "cpu_seconds": 6.34375,
+  "parameters": 56064,
+  "active_gradient_parameters": 43072,
+  "memory": {
+    "rss": 303616000,
+    "process_lifetime_peak_rss": 304242688
+  },
+  "trace": [
+    {
+      "step": 1,
+      "nll": 5.799890518188477,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-13",
+        "train-unknown-7"
+      ]
+    },
+    {
+      "step": 2,
+      "nll": 5.6896443367004395,
+      "targets": 341,
+      "document_ids": [
+        "train-correction-11",
+        "train-distant-26"
+      ]
+    },
+    {
+      "step": 3,
+      "nll": 5.527642726898193,
+      "targets": 356,
+      "document_ids": [
+        "train-correction-13",
+        "train-correction-0"
+      ]
+    },
+    {
+      "step": 4,
+      "nll": 5.437536716461182,
+      "targets": 294,
+      "document_ids": [
+        "train-preservation-4",
+        "train-exact-23"
+      ]
+    },
+    {
+      "step": 5,
+      "nll": 5.205361366271973,
+      "targets": 281,
+      "document_ids": [
+        "train-distant-21",
+        "train-local-17"
+      ]
+    },
+    {
+      "step": 6,
+      "nll": 5.126161575317383,
+      "targets": 327,
+      "document_ids": [
+        "train-unknown-14",
+        "train-preservation-0"
+      ]
+    },
+    {
+      "step": 7,
+      "nll": 4.9589619636535645,
+      "targets": 293,
+      "document_ids": [
+        "train-local-30",
+        "train-local-10"
+      ]
+    },
+    {
+      "step": 8,
+      "nll": 4.854740619659424,
+      "targets": 326,
+      "document_ids": [
+        "train-unknown-5",
+        "train-preservation-2"
+      ]
+    },
+    {
+      "step": 9,
+      "nll": 4.655210018157959,
+      "targets": 284,
+      "document_ids": [
+        "train-local-2",
+        "train-exact-31"
+      ]
+    },
+    {
+      "step": 10,
+      "nll": 4.52964973449707,
+      "targets": 298,
+      "document_ids": [
+        "train-distant-9",
+        "train-preservation-6"
+      ]
+    },
+    {
+      "step": 11,
+      "nll": 4.41644287109375,
+      "targets": 310,
+      "document_ids": [
+        "train-correction-1",
+        "train-local-3"
+      ]
+    },
+    {
+      "step": 12,
+      "nll": 4.3210577964782715,
+      "targets": 300,
+      "document_ids": [
+        "train-preservation-13",
+        "train-exact-29"
+      ]
+    },
+    {
+      "step": 13,
+      "nll": 4.165366172790527,
+      "targets": 312,
+      "document_ids": [
+        "train-preservation-17",
+        "train-exact-22"
+      ]
+    },
+    {
+      "step": 14,
+      "nll": 4.129490852355957,
+      "targets": 292,
+      "document_ids": [
+        "train-correction-25",
+        "train-local-31"
+      ]
+    },
+    {
+      "step": 15,
+      "nll": 3.984771251678467,
+      "targets": 312,
+      "document_ids": [
+        "train-correction-22",
+        "train-exact-12"
+      ]
+    },
+    {
+      "step": 16,
+      "nll": 3.8345742225646973,
+      "targets": 281,
+      "document_ids": [
+        "train-preservation-28",
+        "train-distant-29"
+      ]
+    },
+    {
+      "step": 17,
+      "nll": 3.788938522338867,
+      "targets": 339,
+      "document_ids": [
+        "train-correction-9",
+        "train-preservation-10"
+      ]
+    },
+    {
+      "step": 18,
+      "nll": 3.633498191833496,
+      "targets": 309,
+      "document_ids": [
+        "train-preservation-16",
+        "train-local-29"
+      ]
+    },
+    {
+      "step": 19,
+      "nll": 3.5865838527679443,
+      "targets": 281,
+      "document_ids": [
+        "train-exact-6",
+        "train-unknown-8"
+      ]
+    },
+    {
+      "step": 20,
+      "nll": 3.455097198486328,
+      "targets": 307,
+      "document_ids": [
+        "train-preservation-8",
+        "train-unknown-18"
+      ]
+    },
+    {
+      "step": 21,
+      "nll": 3.2978675365448,
+      "targets": 281,
+      "document_ids": [
+        "train-distant-2",
+        "train-unknown-10"
+      ]
+    },
+    {
+      "step": 22,
+      "nll": 3.2564287185668945,
+      "targets": 282,
+      "document_ids": [
+        "train-unknown-23",
+        "train-distant-18"
+      ]
+    },
+    {
+      "step": 23,
+      "nll": 3.1339542865753174,
+      "targets": 311,
+      "document_ids": [
+        "train-local-25",
+        "train-preservation-14"
+      ]
+    },
+    {
+      "step": 24,
+      "nll": 3.018925666809082,
+      "targets": 312,
+      "document_ids": [
+        "train-local-5",
+        "train-distant-0"
+      ]
+    },
+    {
+      "step": 25,
+      "nll": 3.039451837539673,
+      "targets": 302,
+      "document_ids": [
+        "train-local-8",
+        "train-exact-8"
+      ]
+    },
+    {
+      "step": 26,
+      "nll": 3.0033349990844727,
+      "targets": 281,
+      "document_ids": [
+        "train-unknown-6",
+        "train-exact-28"
+      ]
+    },
+    {
+      "step": 27,
+      "nll": 2.954824686050415,
+      "targets": 343,
+      "document_ids": [
+        "train-correction-16",
+        "train-unknown-12"
+      ]
+    },
+    {
+      "step": 28,
+      "nll": 2.745344877243042,
+      "targets": 283,
+      "document_ids": [
+        "train-distant-16",
+        "train-distant-1"
+      ]
+    },
+    {
+      "step": 29,
+      "nll": 2.7485272884368896,
+      "targets": 296,
+      "document_ids": [
+        "train-unknown-11",
+        "train-unknown-13"
+      ]
+    },
+    {
+      "step": 30,
+      "nll": 2.7803955078125,
+      "targets": 297,
+      "document_ids": [
+        "train-distant-31",
+        "train-correction-12"
+      ]
+    },
+    {
+      "step": 31,
+      "nll": 2.711188793182373,
+      "targets": 325,
+      "document_ids": [
+        "train-correction-6",
+        "train-local-20"
+      ]
+    },
+    {
+      "step": 32,
+      "nll": 2.5244247913360596,
+      "targets": 297,
+      "document_ids": [
+        "train-local-15",
+        "train-distant-17"
+      ]
+    },
+    {
+      "step": 33,
+      "nll": 2.552286148071289,
+      "targets": 305,
+      "document_ids": [
+        "train-local-1",
+        "train-preservation-26"
+      ]
+    },
+    {
+      "step": 34,
+      "nll": 2.5822248458862305,
+      "targets": 331,
+      "document_ids": [
+        "train-distant-4",
+        "train-correction-30"
+      ]
+    },
+    {
+      "step": 35,
+      "nll": 2.526803493499756,
+      "targets": 286,
+      "document_ids": [
+        "train-exact-3",
+        "train-unknown-20"
+      ]
+    },
+    {
+      "step": 36,
+      "nll": 2.3557891845703125,
+      "targets": 310,
+      "document_ids": [
+        "train-preservation-1",
+        "train-local-28"
+      ]
+    },
+    {
+      "step": 37,
+      "nll": 2.3800978660583496,
+      "targets": 292,
+      "document_ids": [
+        "train-local-14",
+        "train-correction-28"
+      ]
+    },
+    {
+      "step": 38,
+      "nll": 2.173142194747925,
+      "targets": 273,
+      "document_ids": [
+        "train-distant-19",
+        "train-distant-20"
+      ]
+    },
+    {
+      "step": 39,
+      "nll": 2.2798030376434326,
+      "targets": 315,
+      "document_ids": [
+        "train-unknown-3",
+        "train-preservation-24"
+      ]
+    },
+    {
+      "step": 40,
+      "nll": 2.254674196243286,
+      "targets": 317,
+      "document_ids": [
+        "train-unknown-4",
+        "train-exact-26"
+      ]
+    },
+    {
+      "step": 41,
+      "nll": 2.1897804737091064,
+      "targets": 285,
+      "document_ids": [
+        "train-exact-1",
+        "train-local-18"
+      ]
+    },
+    {
+      "step": 42,
+      "nll": 2.115095853805542,
+      "targets": 285,
+      "document_ids": [
+        "train-local-22",
+        "train-exact-15"
+      ]
+    },
+    {
+      "step": 43,
+      "nll": 2.0750279426574707,
+      "targets": 315,
+      "document_ids": [
+        "train-distant-6",
+        "train-exact-21"
+      ]
+    },
+    {
+      "step": 44,
+      "nll": 2.0386600494384766,
+      "targets": 298,
+      "document_ids": [
+        "train-local-4",
+        "train-exact-30"
+      ]
+    },
+    {
+      "step": 45,
+      "nll": 2.1302082538604736,
+      "targets": 323,
+      "document_ids": [
+        "train-local-19",
+        "train-correction-26"
+      ]
+    },
+    {
+      "step": 46,
+      "nll": 1.785861849784851,
+      "targets": 248,
+      "document_ids": [
+        "train-distant-14",
+        "train-distant-25"
+      ]
+    },
+    {
+      "step": 47,
+      "nll": 1.973987102508545,
+      "targets": 316,
+      "document_ids": [
+        "train-exact-25",
+        "train-exact-17"
+      ]
+    },
+    {
+      "step": 48,
+      "nll": 2.113635301589966,
+      "targets": 312,
+      "document_ids": [
+        "train-unknown-27",
+        "train-correction-19"
+      ]
+    },
+    {
+      "step": 49,
+      "nll": 2.0758204460144043,
+      "targets": 315,
+      "document_ids": [
+        "train-preservation-21",
+        "train-exact-20"
+      ]
+    },
+    {
+      "step": 50,
+      "nll": 2.066173553466797,
+      "targets": 366,
+      "document_ids": [
+        "train-preservation-25",
+        "train-correction-15"
+      ]
+    },
+    {
+      "step": 51,
+      "nll": 1.9454905986785889,
+      "targets": 281,
+      "document_ids": [
+        "train-preservation-12",
+        "train-exact-19"
+      ]
+    },
+    {
+      "step": 52,
+      "nll": 1.753029704093933,
+      "targets": 282,
+      "document_ids": [
+        "train-unknown-31",
+        "train-distant-24"
+      ]
+    },
+    {
+      "step": 53,
+      "nll": 1.832221269607544,
+      "targets": 265,
+      "document_ids": [
+        "train-local-11",
+        "train-unknown-25"
+      ]
+    },
+    {
+      "step": 54,
+      "nll": 1.6905792951583862,
+      "targets": 281,
+      "document_ids": [
+        "train-local-16",
+        "train-local-0"
+      ]
+    },
+    {
+      "step": 55,
+      "nll": 1.8397578001022339,
+      "targets": 311,
+      "document_ids": [
+        "train-unknown-30",
+        "train-preservation-5"
+      ]
+    },
+    {
+      "step": 56,
+      "nll": 1.8556936979293823,
+      "targets": 305,
+      "document_ids": [
+        "train-preservation-15",
+        "train-preservation-7"
+      ]
+    },
+    {
+      "step": 57,
+      "nll": 1.7712525129318237,
+      "targets": 358,
+      "document_ids": [
+        "train-local-13",
+        "train-correction-7"
+      ]
+    },
+    {
+      "step": 58,
+      "nll": 1.776782512664795,
+      "targets": 303,
+      "document_ids": [
+        "train-exact-2",
+        "train-exact-5"
+      ]
+    },
+    {
+      "step": 59,
+      "nll": 1.6283930540084839,
+      "targets": 346,
+      "document_ids": [
+        "train-distant-12",
+        "train-preservation-31"
+      ]
+    },
+    {
+      "step": 60,
+      "nll": 1.7464779615402222,
+      "targets": 311,
+      "document_ids": [
+        "train-distant-27",
+        "train-correction-8"
+      ]
+    },
+    {
+      "step": 61,
+      "nll": 1.6890558004379272,
+      "targets": 296,
+      "document_ids": [
+        "train-exact-11",
+        "train-preservation-19"
+      ]
+    },
+    {
+      "step": 62,
+      "nll": 1.8478394746780396,
+      "targets": 343,
+      "document_ids": [
+        "train-preservation-18",
+        "train-correction-29"
+      ]
+    },
+    {
+      "step": 63,
+      "nll": 1.6387478113174438,
+      "targets": 323,
+      "document_ids": [
+        "train-unknown-2",
+        "train-preservation-9"
+      ]
+    },
+    {
+      "step": 64,
+      "nll": 1.7130125761032104,
+      "targets": 367,
+      "document_ids": [
+        "train-correction-10",
+        "train-preservation-11"
+      ]
+    },
+    {
+      "step": 65,
+      "nll": 1.558787226676941,
+      "targets": 318,
+      "document_ids": [
+        "train-preservation-22",
+        "train-preservation-3"
+      ]
+    },
+    {
+      "step": 66,
+      "nll": 1.4256373643875122,
+      "targets": 280,
+      "document_ids": [
+        "train-distant-10",
+        "train-exact-27"
+      ]
+    },
+    {
+      "step": 67,
+      "nll": 1.6825072765350342,
+      "targets": 331,
+      "document_ids": [
+        "train-correction-24",
+        "train-unknown-0"
+      ]
+    },
+    {
+      "step": 68,
+      "nll": 1.6312110424041748,
+      "targets": 352,
+      "document_ids": [
+        "train-correction-17",
+        "train-preservation-30"
+      ]
+    },
+    {
+      "step": 69,
+      "nll": 1.4864848852157593,
+      "targets": 303,
+      "document_ids": [
+        "train-exact-14",
+        "train-local-27"
+      ]
+    },
+    {
+      "step": 70,
+      "nll": 1.3683881759643555,
+      "targets": 253,
+      "document_ids": [
+        "train-local-26",
+        "train-exact-16"
+      ]
+    },
+    {
+      "step": 71,
+      "nll": 1.30799400806427,
+      "targets": 280,
+      "document_ids": [
+        "train-local-7",
+        "train-distant-22"
+      ]
+    },
+    {
+      "step": 72,
+      "nll": 1.3190408945083618,
+      "targets": 285,
+      "document_ids": [
+        "train-distant-7",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 73,
+      "nll": 1.4427400827407837,
+      "targets": 246,
+      "document_ids": [
+        "train-unknown-19",
+        "train-unknown-1"
+      ]
+    },
+    {
+      "step": 74,
+      "nll": 1.4125183820724487,
+      "targets": 278,
+      "document_ids": [
+        "train-unknown-26",
+        "train-preservation-27"
+      ]
+    },
+    {
+      "step": 75,
+      "nll": 1.390794277191162,
+      "targets": 308,
+      "document_ids": [
+        "train-correction-14",
+        "train-distant-13"
+      ]
+    },
+    {
+      "step": 76,
+      "nll": 1.291713833808899,
+      "targets": 294,
+      "document_ids": [
+        "train-unknown-16",
+        "train-local-12"
+      ]
+    },
+    {
+      "step": 77,
+      "nll": 1.3526047468185425,
+      "targets": 286,
+      "document_ids": [
+        "train-local-21",
+        "train-exact-10"
+      ]
+    },
+    {
+      "step": 78,
+      "nll": 1.5928581953048706,
+      "targets": 370,
+      "document_ids": [
+        "train-correction-23",
+        "train-correction-21"
+      ]
+    },
+    {
+      "step": 79,
+      "nll": 1.3036086559295654,
+      "targets": 342,
+      "document_ids": [
+        "train-correction-31",
+        "train-local-24"
+      ]
+    },
+    {
+      "step": 80,
+      "nll": 1.2807186841964722,
+      "targets": 278,
+      "document_ids": [
+        "train-preservation-29",
+        "train-unknown-28"
+      ]
+    },
+    {
+      "step": 81,
+      "nll": 1.3929435014724731,
+      "targets": 297,
+      "document_ids": [
+        "train-preservation-20",
+        "train-unknown-17"
+      ]
+    },
+    {
+      "step": 82,
+      "nll": 1.3821107149124146,
+      "targets": 360,
+      "document_ids": [
+        "train-correction-18",
+        "train-preservation-23"
+      ]
+    },
+    {
+      "step": 83,
+      "nll": 1.2253401279449463,
+      "targets": 286,
+      "document_ids": [
+        "train-exact-7",
+        "train-distant-5"
+      ]
+    },
+    {
+      "step": 84,
+      "nll": 1.0226689577102661,
+      "targets": 250,
+      "document_ids": [
+        "train-distant-30",
+        "train-distant-23"
+      ]
+    },
+    {
+      "step": 85,
+      "nll": 1.3397549390792847,
+      "targets": 330,
+      "document_ids": [
+        "train-local-23",
+        "train-correction-20"
+      ]
+    },
+    {
+      "step": 86,
+      "nll": 1.1437550783157349,
+      "targets": 287,
+      "document_ids": [
+        "train-exact-9",
+        "train-local-6"
+      ]
+    },
+    {
+      "step": 87,
+      "nll": 1.1957786083221436,
+      "targets": 249,
+      "document_ids": [
+        "train-exact-18",
+        "train-unknown-22"
+      ]
+    },
+    {
+      "step": 88,
+      "nll": 1.2463154792785645,
+      "targets": 343,
+      "document_ids": [
+        "train-unknown-21",
+        "train-correction-2"
+      ]
+    },
+    {
+      "step": 89,
+      "nll": 1.090908169746399,
+      "targets": 294,
+      "document_ids": [
+        "train-distant-15",
+        "train-unknown-9"
+      ]
+    },
+    {
+      "step": 90,
+      "nll": 1.2033751010894775,
+      "targets": 329,
+      "document_ids": [
+        "train-distant-8",
+        "train-correction-5"
+      ]
+    },
+    {
+      "step": 91,
+      "nll": 1.2998327016830444,
+      "targets": 327,
+      "document_ids": [
+        "train-unknown-24",
+        "train-correction-27"
+      ]
+    },
+    {
+      "step": 92,
+      "nll": 1.1692067384719849,
+      "targets": 253,
+      "document_ids": [
+        "train-local-9",
+        "train-unknown-29"
+      ]
+    },
+    {
+      "step": 93,
+      "nll": 1.1369373798370361,
+      "targets": 363,
+      "document_ids": [
+        "train-correction-3",
+        "train-distant-11"
+      ]
+    },
+    {
+      "step": 94,
+      "nll": 1.1522619724273682,
+      "targets": 312,
+      "document_ids": [
+        "train-unknown-15",
+        "train-correction-4"
+      ]
+    },
+    {
+      "step": 95,
+      "nll": 0.9889177083969116,
+      "targets": 284,
+      "document_ids": [
+        "train-exact-4",
+        "train-distant-28"
+      ]
+    },
+    {
+      "step": 96,
+      "nll": 1.0383156538009644,
+      "targets": 270,
+      "document_ids": [
+        "train-exact-24",
+        "train-distant-3"
+      ]
+    },
+    {
+      "step": 97,
+      "nll": 0.977899968624115,
+      "targets": 281,
+      "document_ids": [
+        "train-local-4",
+        "train-distant-27"
+      ]
+    },
+    {
+      "step": 98,
+      "nll": 1.042797327041626,
+      "targets": 284,
+      "document_ids": [
+        "train-local-23",
+        "train-local-27"
+      ]
+    },
+    {
+      "step": 99,
+      "nll": 1.086837649345398,
+      "targets": 329,
+      "document_ids": [
+        "train-correction-20",
+        "train-distant-26"
+      ]
+    },
+    {
+      "step": 100,
+      "nll": 1.0547631978988647,
+      "targets": 295,
+      "document_ids": [
+        "train-preservation-27",
+        "train-unknown-30"
+      ]
+    },
+    {
+      "step": 101,
+      "nll": 1.071408748626709,
+      "targets": 364,
+      "document_ids": [
+        "train-correction-7",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 102,
+      "nll": 1.0521047115325928,
+      "targets": 377,
+      "document_ids": [
+        "train-correction-18",
+        "train-preservation-31"
+      ]
+    },
+    {
+      "step": 103,
+      "nll": 1.0639935731887817,
+      "targets": 288,
+      "document_ids": [
+        "train-exact-4",
+        "train-unknown-14"
+      ]
+    },
+    {
+      "step": 104,
+      "nll": 0.9477989673614502,
+      "targets": 321,
+      "document_ids": [
+        "train-distant-15",
+        "train-preservation-16"
+      ]
+    },
+    {
+      "step": 105,
+      "nll": 0.9905266165733337,
+      "targets": 330,
+      "document_ids": [
+        "train-preservation-14",
+        "train-unknown-3"
+      ]
+    },
+    {
+      "step": 106,
+      "nll": 0.9457968473434448,
+      "targets": 296,
+      "document_ids": [
+        "train-distant-22",
+        "train-preservation-5"
+      ]
+    },
+    {
+      "step": 107,
+      "nll": 0.9926677346229553,
+      "targets": 312,
+      "document_ids": [
+        "train-exact-21",
+        "train-local-13"
+      ]
+    },
+    {
+      "step": 108,
+      "nll": 0.9607199430465698,
+      "targets": 343,
+      "document_ids": [
+        "train-correction-2",
+        "train-distant-1"
+      ]
+    },
+    {
+      "step": 109,
+      "nll": 1.0200036764144897,
+      "targets": 316,
+      "document_ids": [
+        "train-correction-4",
+        "train-exact-3"
+      ]
+    },
+    {
+      "step": 110,
+      "nll": 1.0380208492279053,
+      "targets": 351,
+      "document_ids": [
+        "train-correction-24",
+        "train-exact-11"
+      ]
+    },
+    {
+      "step": 111,
+      "nll": 1.0244723558425903,
+      "targets": 332,
+      "document_ids": [
+        "train-correction-3",
+        "train-exact-19"
+      ]
+    },
+    {
+      "step": 112,
+      "nll": 0.9649015069007874,
+      "targets": 291,
+      "document_ids": [
+        "train-preservation-2",
+        "train-unknown-22"
+      ]
+    },
+    {
+      "step": 113,
+      "nll": 1.0014349222183228,
+      "targets": 269,
+      "document_ids": [
+        "train-unknown-15",
+        "train-unknown-27"
+      ]
+    },
+    {
+      "step": 114,
+      "nll": 0.9219526052474976,
+      "targets": 254,
+      "document_ids": [
+        "train-unknown-7",
+        "train-exact-27"
+      ]
+    },
+    {
+      "step": 115,
+      "nll": 1.0119301080703735,
+      "targets": 287,
+      "document_ids": [
+        "train-exact-20",
+        "train-local-24"
+      ]
+    },
+    {
+      "step": 116,
+      "nll": 1.014249563217163,
+      "targets": 263,
+      "document_ids": [
+        "train-local-15",
+        "train-exact-12"
+      ]
+    },
+    {
+      "step": 117,
+      "nll": 0.8995867371559143,
+      "targets": 310,
+      "document_ids": [
+        "train-preservation-29",
+        "train-exact-25"
+      ]
+    },
+    {
+      "step": 118,
+      "nll": 0.8723469376564026,
+      "targets": 284,
+      "document_ids": [
+        "train-exact-17",
+        "train-unknown-25"
+      ]
+    },
+    {
+      "step": 119,
+      "nll": 0.9678219556808472,
+      "targets": 292,
+      "document_ids": [
+        "train-correction-27",
+        "train-unknown-1"
+      ]
+    },
+    {
+      "step": 120,
+      "nll": 1.1021822690963745,
+      "targets": 344,
+      "document_ids": [
+        "train-exact-2",
+        "train-correction-11"
+      ]
+    },
+    {
+      "step": 121,
+      "nll": 0.818087100982666,
+      "targets": 282,
+      "document_ids": [
+        "train-unknown-0",
+        "train-unknown-21"
+      ]
+    },
+    {
+      "step": 122,
+      "nll": 0.8102846741676331,
+      "targets": 313,
+      "document_ids": [
+        "train-unknown-29",
+        "train-preservation-17"
+      ]
+    },
+    {
+      "step": 123,
+      "nll": 0.9446604251861572,
+      "targets": 281,
+      "document_ids": [
+        "train-local-16",
+        "train-local-11"
+      ]
+    },
+    {
+      "step": 124,
+      "nll": 0.8249516487121582,
+      "targets": 312,
+      "document_ids": [
+        "train-preservation-23",
+        "train-local-0"
+      ]
+    },
+    {
+      "step": 125,
+      "nll": 0.9070070385932922,
+      "targets": 326,
+      "document_ids": [
+        "train-unknown-10",
+        "train-correction-13"
+      ]
+    },
+    {
+      "step": 126,
+      "nll": 0.9056494832038879,
+      "targets": 291,
+      "document_ids": [
+        "train-preservation-4",
+        "train-local-26"
+      ]
+    },
+    {
+      "step": 127,
+      "nll": 0.9079657196998596,
+      "targets": 273,
+      "document_ids": [
+        "train-unknown-31",
+        "train-exact-29"
+      ]
+    },
+    {
+      "step": 128,
+      "nll": 0.9392637014389038,
+      "targets": 290,
+      "document_ids": [
+        "train-unknown-26",
+        "train-preservation-8"
+      ]
+    },
+    {
+      "step": 129,
+      "nll": 0.9040341973304749,
+      "targets": 357,
+      "document_ids": [
+        "train-correction-23",
+        "train-preservation-7"
+      ]
+    },
+    {
+      "step": 130,
+      "nll": 0.747701108455658,
+      "targets": 312,
+      "document_ids": [
+        "train-distant-10",
+        "train-unknown-4"
+      ]
+    },
+    {
+      "step": 131,
+      "nll": 0.8339175581932068,
+      "targets": 283,
+      "document_ids": [
+        "train-local-9",
+        "train-local-21"
+      ]
+    },
+    {
+      "step": 132,
+      "nll": 0.9731385707855225,
+      "targets": 306,
+      "document_ids": [
+        "train-correction-21",
+        "train-local-28"
+      ]
+    },
+    {
+      "step": 133,
+      "nll": 0.7830103039741516,
+      "targets": 323,
+      "document_ids": [
+        "train-local-12",
+        "train-preservation-18"
+      ]
+    },
+    {
+      "step": 134,
+      "nll": 0.6748190522193909,
+      "targets": 248,
+      "document_ids": [
+        "train-distant-13",
+        "train-distant-3"
+      ]
+    },
+    {
+      "step": 135,
+      "nll": 0.8896889686584473,
+      "targets": 347,
+      "document_ids": [
+        "train-correction-31",
+        "train-exact-9"
+      ]
+    },
+    {
+      "step": 136,
+      "nll": 0.8299894332885742,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-1",
+        "train-local-1"
+      ]
+    },
+    {
+      "step": 137,
+      "nll": 0.9038276076316833,
+      "targets": 321,
+      "document_ids": [
+        "train-preservation-22",
+        "train-correction-12"
+      ]
+    },
+    {
+      "step": 138,
+      "nll": 0.8155035972595215,
+      "targets": 251,
+      "document_ids": [
+        "train-unknown-28",
+        "train-exact-22"
+      ]
+    },
+    {
+      "step": 139,
+      "nll": 0.6903611421585083,
+      "targets": 310,
+      "document_ids": [
+        "train-preservation-28",
+        "train-unknown-20"
+      ]
+    },
+    {
+      "step": 140,
+      "nll": 0.8442067503929138,
+      "targets": 325,
+      "document_ids": [
+        "train-correction-15",
+        "train-local-3"
+      ]
+    },
+    {
+      "step": 141,
+      "nll": 0.8350229263305664,
+      "targets": 329,
+      "document_ids": [
+        "train-correction-16",
+        "train-exact-15"
+      ]
+    },
+    {
+      "step": 142,
+      "nll": 0.6894102692604065,
+      "targets": 252,
+      "document_ids": [
+        "train-local-29",
+        "train-distant-29"
+      ]
+    },
+    {
+      "step": 143,
+      "nll": 0.6921181082725525,
+      "targets": 329,
+      "document_ids": [
+        "train-preservation-1",
+        "train-local-22"
+      ]
+    },
+    {
+      "step": 144,
+      "nll": 0.8826087713241577,
+      "targets": 302,
+      "document_ids": [
+        "train-exact-7",
+        "train-exact-5"
+      ]
+    },
+    {
+      "step": 145,
+      "nll": 0.6614603400230408,
+      "targets": 252,
+      "document_ids": [
+        "train-local-17",
+        "train-distant-31"
+      ]
+    },
+    {
+      "step": 146,
+      "nll": 0.8411366939544678,
+      "targets": 302,
+      "document_ids": [
+        "train-correction-29",
+        "train-exact-10"
+      ]
+    },
+    {
+      "step": 147,
+      "nll": 0.7520459294319153,
+      "targets": 328,
+      "document_ids": [
+        "train-correction-14",
+        "train-local-19"
+      ]
+    },
+    {
+      "step": 148,
+      "nll": 0.6726217865943909,
+      "targets": 324,
+      "document_ids": [
+        "train-preservation-24",
+        "train-preservation-3"
+      ]
+    },
+    {
+      "step": 149,
+      "nll": 0.7756996750831604,
+      "targets": 309,
+      "document_ids": [
+        "train-preservation-0",
+        "train-unknown-12"
+      ]
+    },
+    {
+      "step": 150,
+      "nll": 0.7217584252357483,
+      "targets": 267,
+      "document_ids": [
+        "train-unknown-17",
+        "train-distant-4"
+      ]
+    },
+    {
+      "step": 151,
+      "nll": 0.8077305555343628,
+      "targets": 306,
+      "document_ids": [
+        "train-preservation-11",
+        "train-distant-24"
+      ]
+    },
+    {
+      "step": 152,
+      "nll": 0.7682270407676697,
+      "targets": 327,
+      "document_ids": [
+        "train-local-18",
+        "train-correction-17"
+      ]
+    },
+    {
+      "step": 153,
+      "nll": 0.7007548213005066,
+      "targets": 345,
+      "document_ids": [
+        "train-distant-18",
+        "train-correction-6"
+      ]
+    },
+    {
+      "step": 154,
+      "nll": 0.6514377593994141,
+      "targets": 328,
+      "document_ids": [
+        "train-preservation-6",
+        "train-unknown-24"
+      ]
+    },
+    {
+      "step": 155,
+      "nll": 0.6997902989387512,
+      "targets": 340,
+      "document_ids": [
+        "train-correction-1",
+        "train-local-7"
+      ]
+    },
+    {
+      "step": 156,
+      "nll": 0.5653977990150452,
+      "targets": 252,
+      "document_ids": [
+        "train-distant-16",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 157,
+      "nll": 0.6486196517944336,
+      "targets": 312,
+      "document_ids": [
+        "train-unknown-13",
+        "train-distant-11"
+      ]
+    },
+    {
+      "step": 158,
+      "nll": 0.7929651737213135,
+      "targets": 318,
+      "document_ids": [
+        "train-preservation-25",
+        "train-local-30"
+      ]
+    },
+    {
+      "step": 159,
+      "nll": 0.694843590259552,
+      "targets": 295,
+      "document_ids": [
+        "train-correction-25",
+        "train-distant-23"
+      ]
+    },
+    {
+      "step": 160,
+      "nll": 0.7618580460548401,
+      "targets": 313,
+      "document_ids": [
+        "train-exact-8",
+        "train-unknown-8"
+      ]
+    },
+    {
+      "step": 161,
+      "nll": 0.6365988850593567,
+      "targets": 317,
+      "document_ids": [
+        "train-exact-26",
+        "train-distant-17"
+      ]
+    },
+    {
+      "step": 162,
+      "nll": 0.7445171475410461,
+      "targets": 281,
+      "document_ids": [
+        "train-exact-13",
+        "train-unknown-11"
+      ]
+    },
+    {
+      "step": 163,
+      "nll": 0.779687225818634,
+      "targets": 320,
+      "document_ids": [
+        "train-exact-6",
+        "train-correction-30"
+      ]
+    },
+    {
+      "step": 164,
+      "nll": 0.6169132590293884,
+      "targets": 278,
+      "document_ids": [
+        "train-unknown-2",
+        "train-unknown-19"
+      ]
+    },
+    {
+      "step": 165,
+      "nll": 0.6803059577941895,
+      "targets": 297,
+      "document_ids": [
+        "train-unknown-5",
+        "train-local-20"
+      ]
+    },
+    {
+      "step": 166,
+      "nll": 0.5617954730987549,
+      "targets": 280,
+      "document_ids": [
+        "train-preservation-10",
+        "train-distant-8"
+      ]
+    },
+    {
+      "step": 167,
+      "nll": 0.5766857266426086,
+      "targets": 309,
+      "document_ids": [
+        "train-distant-21",
+        "train-preservation-12"
+      ]
+    },
+    {
+      "step": 168,
+      "nll": 0.7236287593841553,
+      "targets": 342,
+      "document_ids": [
+        "train-local-8",
+        "train-correction-10"
+      ]
+    },
+    {
+      "step": 169,
+      "nll": 0.7513719797134399,
+      "targets": 308,
+      "document_ids": [
+        "train-exact-30",
+        "train-preservation-15"
+      ]
+    },
+    {
+      "step": 170,
+      "nll": 0.6897424459457397,
+      "targets": 313,
+      "document_ids": [
+        "train-exact-23",
+        "train-correction-9"
+      ]
+    },
+    {
+      "step": 171,
+      "nll": 0.7746303677558899,
+      "targets": 364,
+      "document_ids": [
+        "train-correction-26",
+        "train-preservation-26"
+      ]
+    },
+    {
+      "step": 172,
+      "nll": 0.7606843113899231,
+      "targets": 247,
+      "document_ids": [
+        "train-local-14",
+        "train-local-31"
+      ]
+    },
+    {
+      "step": 173,
+      "nll": 0.6714839339256287,
+      "targets": 320,
+      "document_ids": [
+        "train-distant-12",
+        "train-exact-14"
+      ]
+    },
+    {
+      "step": 174,
+      "nll": 0.6163559556007385,
+      "targets": 271,
+      "document_ids": [
+        "train-distant-5",
+        "train-exact-16"
+      ]
+    },
+    {
+      "step": 175,
+      "nll": 0.7164952754974365,
+      "targets": 326,
+      "document_ids": [
+        "train-correction-8",
+        "train-distant-28"
+      ]
+    },
+    {
+      "step": 176,
+      "nll": 0.6438585519790649,
+      "targets": 280,
+      "document_ids": [
+        "train-unknown-9",
+        "train-unknown-23"
+      ]
+    },
+    {
+      "step": 177,
+      "nll": 0.64234858751297,
+      "targets": 307,
+      "document_ids": [
+        "train-distant-30",
+        "train-preservation-21"
+      ]
+    },
+    {
+      "step": 178,
+      "nll": 0.6304720640182495,
+      "targets": 249,
+      "document_ids": [
+        "train-distant-20",
+        "train-exact-18"
+      ]
+    },
+    {
+      "step": 179,
+      "nll": 0.5686464905738831,
+      "targets": 293,
+      "document_ids": [
+        "train-unknown-6",
+        "train-preservation-9"
+      ]
+    },
+    {
+      "step": 180,
+      "nll": 0.6658978462219238,
+      "targets": 326,
+      "document_ids": [
+        "train-correction-19",
+        "train-exact-28"
+      ]
+    },
+    {
+      "step": 181,
+      "nll": 0.5231212377548218,
+      "targets": 267,
+      "document_ids": [
+        "train-distant-2",
+        "train-local-6"
+      ]
+    },
+    {
+      "step": 182,
+      "nll": 0.694974958896637,
+      "targets": 310,
+      "document_ids": [
+        "train-correction-0",
+        "train-local-10"
+      ]
+    },
+    {
+      "step": 183,
+      "nll": 0.6518681049346924,
+      "targets": 295,
+      "document_ids": [
+        "train-distant-0",
+        "train-local-25"
+      ]
+    },
+    {
+      "step": 184,
+      "nll": 0.7650607228279114,
+      "targets": 309,
+      "document_ids": [
+        "train-preservation-30",
+        "train-exact-24"
+      ]
+    },
+    {
+      "step": 185,
+      "nll": 0.6158021092414856,
+      "targets": 297,
+      "document_ids": [
+        "train-unknown-16",
+        "train-local-5"
+      ]
+    },
+    {
+      "step": 186,
+      "nll": 0.5893676280975342,
+      "targets": 294,
+      "document_ids": [
+        "train-distant-14",
+        "train-preservation-20"
+      ]
+    },
+    {
+      "step": 187,
+      "nll": 0.7010603547096252,
+      "targets": 294,
+      "document_ids": [
+        "train-local-2",
+        "train-preservation-19"
+      ]
+    },
+    {
+      "step": 188,
+      "nll": 0.5362757444381714,
+      "targets": 251,
+      "document_ids": [
+        "train-distant-25",
+        "train-distant-9"
+      ]
+    },
+    {
+      "step": 189,
+      "nll": 0.7064074277877808,
+      "targets": 297,
+      "document_ids": [
+        "train-distant-6",
+        "train-exact-31"
+      ]
+    },
+    {
+      "step": 190,
+      "nll": 0.6891353130340576,
+      "targets": 310,
+      "document_ids": [
+        "train-correction-28",
+        "train-unknown-18"
+      ]
+    },
+    {
+      "step": 191,
+      "nll": 0.5990749597549438,
+      "targets": 371,
+      "document_ids": [
+        "train-preservation-13",
+        "train-correction-5"
+      ]
+    },
+    {
+      "step": 192,
+      "nll": 0.5855892300605774,
+      "targets": 338,
+      "document_ids": [
+        "train-correction-22",
+        "train-distant-19"
+      ]
+    },
+    {
+      "step": 193,
+      "nll": 0.6101070046424866,
+      "targets": 294,
+      "document_ids": [
+        "train-distant-3",
+        "train-correction-25"
+      ]
+    },
+    {
+      "step": 194,
+      "nll": 0.5521434545516968,
+      "targets": 278,
+      "document_ids": [
+        "train-distant-19",
+        "train-exact-10"
+      ]
+    },
+    {
+      "step": 195,
+      "nll": 0.5149143934249878,
+      "targets": 269,
+      "document_ids": [
+        "train-distant-9",
+        "train-distant-26"
+      ]
+    },
+    {
+      "step": 196,
+      "nll": 0.6612514853477478,
+      "targets": 253,
+      "document_ids": [
+        "train-local-9",
+        "train-unknown-7"
+      ]
+    },
+    {
+      "step": 197,
+      "nll": 0.6002300977706909,
+      "targets": 276,
+      "document_ids": [
+        "train-local-15",
+        "train-distant-15"
+      ]
+    },
+    {
+      "step": 198,
+      "nll": 0.5620807409286499,
+      "targets": 326,
+      "document_ids": [
+        "train-unknown-16",
+        "train-correction-2"
+      ]
+    },
+    {
+      "step": 199,
+      "nll": 0.7271875143051147,
+      "targets": 323,
+      "document_ids": [
+        "train-exact-12",
+        "train-correction-11"
+      ]
+    },
+    {
+      "step": 200,
+      "nll": 0.529274046421051,
+      "targets": 307,
+      "document_ids": [
+        "train-distant-10",
+        "train-preservation-10"
+      ]
+    },
+    {
+      "step": 201,
+      "nll": 0.5594930052757263,
+      "targets": 285,
+      "document_ids": [
+        "train-distant-6",
+        "train-exact-16"
+      ]
+    },
+    {
+      "step": 202,
+      "nll": 0.5492077469825745,
+      "targets": 345,
+      "document_ids": [
+        "train-preservation-31",
+        "train-exact-28"
+      ]
+    },
+    {
+      "step": 203,
+      "nll": 0.7919817566871643,
+      "targets": 283,
+      "document_ids": [
+        "train-exact-25",
+        "train-exact-23"
+      ]
+    },
+    {
+      "step": 204,
+      "nll": 0.551243245601654,
+      "targets": 254,
+      "document_ids": [
+        "train-unknown-17",
+        "train-distant-29"
+      ]
+    },
+    {
+      "step": 205,
+      "nll": 0.6197476983070374,
+      "targets": 328,
+      "document_ids": [
+        "train-preservation-9",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 206,
+      "nll": 0.5591055750846863,
+      "targets": 373,
+      "document_ids": [
+        "train-preservation-20",
+        "train-correction-23"
+      ]
+    },
+    {
+      "step": 207,
+      "nll": 0.5482288599014282,
+      "targets": 325,
+      "document_ids": [
+        "train-local-5",
+        "train-preservation-3"
+      ]
+    },
+    {
+      "step": 208,
+      "nll": 0.5974202156066895,
+      "targets": 299,
+      "document_ids": [
+        "train-unknown-10",
+        "train-unknown-14"
+      ]
+    },
+    {
+      "step": 209,
+      "nll": 0.6095298528671265,
+      "targets": 257,
+      "document_ids": [
+        "train-exact-20",
+        "train-exact-18"
+      ]
+    },
+    {
+      "step": 210,
+      "nll": 0.5355710983276367,
+      "targets": 341,
+      "document_ids": [
+        "train-preservation-16",
+        "train-unknown-21"
+      ]
+    },
+    {
+      "step": 211,
+      "nll": 0.4710821211338043,
+      "targets": 284,
+      "document_ids": [
+        "train-distant-12",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 212,
+      "nll": 0.5161901116371155,
+      "targets": 299,
+      "document_ids": [
+        "train-preservation-23",
+        "train-unknown-29"
+      ]
+    },
+    {
+      "step": 213,
+      "nll": 0.4931533932685852,
+      "targets": 312,
+      "document_ids": [
+        "train-preservation-28",
+        "train-distant-17"
+      ]
+    },
+    {
+      "step": 214,
+      "nll": 0.6109822988510132,
+      "targets": 285,
+      "document_ids": [
+        "train-distant-5",
+        "train-local-2"
+      ]
+    },
+    {
+      "step": 215,
+      "nll": 0.5443680286407471,
+      "targets": 269,
+      "document_ids": [
+        "train-exact-2",
+        "train-unknown-19"
+      ]
+    },
+    {
+      "step": 216,
+      "nll": 0.5392838716506958,
+      "targets": 311,
+      "document_ids": [
+        "train-preservation-1",
+        "train-local-10"
+      ]
+    },
+    {
+      "step": 217,
+      "nll": 0.5389498472213745,
+      "targets": 294,
+      "document_ids": [
+        "train-local-26",
+        "train-correction-0"
+      ]
+    },
+    {
+      "step": 218,
+      "nll": 0.5318464636802673,
+      "targets": 343,
+      "document_ids": [
+        "train-unknown-30",
+        "train-correction-5"
+      ]
+    },
+    {
+      "step": 219,
+      "nll": 0.5903120636940002,
+      "targets": 313,
+      "document_ids": [
+        "train-exact-11",
+        "train-preservation-2"
+      ]
+    },
+    {
+      "step": 220,
+      "nll": 0.5879601240158081,
+      "targets": 292,
+      "document_ids": [
+        "train-preservation-30",
+        "train-exact-15"
+      ]
+    },
+    {
+      "step": 221,
+      "nll": 0.4670845568180084,
+      "targets": 293,
+      "document_ids": [
+        "train-correction-19",
+        "train-unknown-26"
+      ]
+    },
+    {
+      "step": 222,
+      "nll": 0.5573974251747131,
+      "targets": 307,
+      "document_ids": [
+        "train-distant-27",
+        "train-correction-21"
+      ]
+    },
+    {
+      "step": 223,
+      "nll": 0.48504433035850525,
+      "targets": 298,
+      "document_ids": [
+        "train-preservation-24",
+        "train-unknown-11"
+      ]
+    },
+    {
+      "step": 224,
+      "nll": 0.5753235816955566,
+      "targets": 255,
+      "document_ids": [
+        "train-exact-6",
+        "train-distant-22"
+      ]
+    },
+    {
+      "step": 225,
+      "nll": 0.6424760818481445,
+      "targets": 301,
+      "document_ids": [
+        "train-local-21",
+        "train-unknown-27"
+      ]
+    },
+    {
+      "step": 226,
+      "nll": 0.6094247698783875,
+      "targets": 300,
+      "document_ids": [
+        "train-local-19",
+        "train-unknown-4"
+      ]
+    },
+    {
+      "step": 227,
+      "nll": 0.529527485370636,
+      "targets": 341,
+      "document_ids": [
+        "train-distant-21",
+        "train-correction-9"
+      ]
+    },
+    {
+      "step": 228,
+      "nll": 0.4924956262111664,
+      "targets": 343,
+      "document_ids": [
+        "train-preservation-27",
+        "train-correction-18"
+      ]
+    },
+    {
+      "step": 229,
+      "nll": 0.4679512083530426,
+      "targets": 268,
+      "document_ids": [
+        "train-distant-2",
+        "train-exact-22"
+      ]
+    },
+    {
+      "step": 230,
+      "nll": 0.6775119304656982,
+      "targets": 271,
+      "document_ids": [
+        "train-exact-24",
+        "train-exact-19"
+      ]
+    },
+    {
+      "step": 231,
+      "nll": 0.491624116897583,
+      "targets": 343,
+      "document_ids": [
+        "train-correction-1",
+        "train-exact-30"
+      ]
+    },
+    {
+      "step": 232,
+      "nll": 0.5452958941459656,
+      "targets": 308,
+      "document_ids": [
+        "train-preservation-0",
+        "train-local-25"
+      ]
+    },
+    {
+      "step": 233,
+      "nll": 0.5531769394874573,
+      "targets": 255,
+      "document_ids": [
+        "train-exact-29",
+        "train-unknown-28"
+      ]
+    },
+    {
+      "step": 234,
+      "nll": 0.5665050745010376,
+      "targets": 339,
+      "document_ids": [
+        "train-correction-4",
+        "train-local-13"
+      ]
+    },
+    {
+      "step": 235,
+      "nll": 0.4651842713356018,
+      "targets": 298,
+      "document_ids": [
+        "train-distant-11",
+        "train-distant-4"
+      ]
+    },
+    {
+      "step": 236,
+      "nll": 0.5105887055397034,
+      "targets": 332,
+      "document_ids": [
+        "train-exact-8",
+        "train-preservation-14"
+      ]
+    },
+    {
+      "step": 237,
+      "nll": 0.4943939447402954,
+      "targets": 309,
+      "document_ids": [
+        "train-correction-31",
+        "train-distant-20"
+      ]
+    },
+    {
+      "step": 238,
+      "nll": 0.6365067362785339,
+      "targets": 336,
+      "document_ids": [
+        "train-preservation-25",
+        "train-correction-8"
+      ]
+    },
+    {
+      "step": 239,
+      "nll": 0.5219857096672058,
+      "targets": 328,
+      "document_ids": [
+        "train-correction-24",
+        "train-local-1"
+      ]
+    },
+    {
+      "step": 240,
+      "nll": 0.5479086637496948,
+      "targets": 294,
+      "document_ids": [
+        "train-unknown-31",
+        "train-unknown-8"
+      ]
+    },
+    {
+      "step": 241,
+      "nll": 0.5430207848548889,
+      "targets": 308,
+      "document_ids": [
+        "train-local-31",
+        "train-preservation-21"
+      ]
+    },
+    {
+      "step": 242,
+      "nll": 0.4735803008079529,
+      "targets": 344,
+      "document_ids": [
+        "train-unknown-5",
+        "train-correction-14"
+      ]
+    },
+    {
+      "step": 243,
+      "nll": 0.6253928542137146,
+      "targets": 286,
+      "document_ids": [
+        "train-local-11",
+        "train-exact-1"
+      ]
+    },
+    {
+      "step": 244,
+      "nll": 0.49911266565322876,
+      "targets": 346,
+      "document_ids": [
+        "train-exact-7",
+        "train-correction-16"
+      ]
+    },
+    {
+      "step": 245,
+      "nll": 0.5551409125328064,
+      "targets": 314,
+      "document_ids": [
+        "train-correction-29",
+        "train-local-16"
+      ]
+    },
+    {
+      "step": 246,
+      "nll": 0.5780027508735657,
+      "targets": 296,
+      "document_ids": [
+        "train-unknown-24",
+        "train-local-20"
+      ]
+    },
+    {
+      "step": 247,
+      "nll": 0.5227162837982178,
+      "targets": 359,
+      "document_ids": [
+        "train-correction-7",
+        "train-local-12"
+      ]
+    },
+    {
+      "step": 248,
+      "nll": 0.6175464391708374,
+      "targets": 326,
+      "document_ids": [
+        "train-exact-21",
+        "train-preservation-4"
+      ]
+    },
+    {
+      "step": 249,
+      "nll": 0.5192674398422241,
+      "targets": 352,
+      "document_ids": [
+        "train-preservation-11",
+        "train-correction-13"
+      ]
+    },
+    {
+      "step": 250,
+      "nll": 0.5327920317649841,
+      "targets": 327,
+      "document_ids": [
+        "train-exact-5",
+        "train-correction-28"
+      ]
+    },
+    {
+      "step": 251,
+      "nll": 0.5460811257362366,
+      "targets": 335,
+      "document_ids": [
+        "train-preservation-12",
+        "train-correction-26"
+      ]
+    },
+    {
+      "step": 252,
+      "nll": 0.4935360550880432,
+      "targets": 338,
+      "document_ids": [
+        "train-correction-17",
+        "train-preservation-19"
+      ]
+    },
+    {
+      "step": 253,
+      "nll": 0.5207421779632568,
+      "targets": 290,
+      "document_ids": [
+        "train-preservation-22",
+        "train-distant-24"
+      ]
+    },
+    {
+      "step": 254,
+      "nll": 0.5349326133728027,
+      "targets": 286,
+      "document_ids": [
+        "train-exact-14",
+        "train-distant-25"
+      ]
+    },
+    {
+      "step": 255,
+      "nll": 0.535483717918396,
+      "targets": 376,
+      "document_ids": [
+        "train-correction-12",
+        "train-correction-3"
+      ]
+    },
+    {
+      "step": 256,
+      "nll": 0.5696224570274353,
+      "targets": 326,
+      "document_ids": [
+        "train-correction-20",
+        "train-local-28"
+      ]
+    }
+  ]
+}

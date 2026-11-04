@@ -13,6 +13,12 @@ Toruk investigates how a language model can carry useful information through a l
 
 The repository includes a compact causal language model and research prototypes for bounded memory, effect prediction, and correction/preservation training. Bounded validation and exploratory held-out studies have run; useful recall, reliable revision, generalization, and resource advantages remain unestablished.
 
+A separate experimental Toruk-owned byte LM now supports full next-token training,
+bounded recurrent state, checkpoint resume and generation. Its small synthetic
+comparison failed the declared quality criterion and cost more than the ordinary
+LM. It is not ready for conversation and does not replace the pretrained chat
+backbone. See the [design and measured results](docs/research/owned-lm-v1-results.md).
+
 ## Implemented conversational chat flow
 
 ```mermaid

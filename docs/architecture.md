@@ -1,5 +1,38 @@
 # Current implementation
 
+The additive [owned next-token LM v1](research/owned-lm-v1-design.md) reuses the
+existing recurrent decoder for complete-document next-token training and explicit
+state reset. Its checkpoint type is `toruk-owned-next-token-v1`; experimental CLI
+entry point is `python -m toruk_lm.owned_lm`. This path is separate from ordinary
+foundation and pretrained chat checkpoints. Its [bounded synthetic evaluation](research/owned-lm-v1-results.md)
+failed the declared quality criterion. The sections below retain the ordinary and
+historical research contracts; statements about the ordinary decoder's absence of
+state do not apply to the experimental owned recurrent model.
+
+```mermaid
+flowchart LR
+    doc[Independent document / BOS] --> bytes[Byte IDs / local segments]
+    bytes --> decoder[Causal transformer decoder]
+    state[Bounded dense slots / reset to zero per document] --> read[Per-layer cross-attention read]
+    read --> decoder
+    decoder --> logits[Next-token logits / all-target cross entropy]
+    decoder --> mean[Masked mean hidden state]
+    mean --> update[Gated tanh update after segment logits]
+    state --> update
+    update --> next[State for next segment]
+    next --> read
+```
+
+Gradients flow through updates across at most 384 document targets. Primary model:
+259 byte/special tokens, width 32, two layers, four heads, 32 local positions,
+four 32-float slots (512 state tensor bytes), 56,064 parameters. Nothing except
+parameters/optimizer/RNG/data progress crosses unrelated document boundaries.
+`owned_lm.py` exposes actual read/update ablations; `owned_training.py` implements
+document-boundary AdamW training, strict format/runtime validation, atomic save,
+resume, evaluation and generation; `owned_data.py` supplies versioned IID synthetic
+documents. The unchanged `recurrent.py` core is reused, not a new memory algorithm.
+No pretrained backbone, selector or symbolic evidence parser participates here.
+
 Toruk-LM is the model family; `toruk_lm` is the package. The ordinary decoder uses
 learned byte/position embeddings, pre-norm causal self-attention and a GELU MLP
 per layer, final normalization, and an untied output projection. Dropout is zero.

@@ -1,0 +1,14 @@
+{
+  "schema": "toruk-owned-lm-study-v1",
+  "model": {"context": 32, "width": 32, "heads": 4, "layers": 2, "slots": 4, "max_document_tokens": 384},
+  "steps": 256,
+  "batch_documents": 2,
+  "learning_rate": 0.003,
+  "seeds": [31, 47],
+  "train_per_category": 32,
+  "dev_per_category": 4,
+  "heldout_per_category": 8,
+  "max_new_tokens": 16,
+  "max_seconds": 600,
+  "scope": "synthetic IID finite-symbol next-token study; no conversational qualification"
+}

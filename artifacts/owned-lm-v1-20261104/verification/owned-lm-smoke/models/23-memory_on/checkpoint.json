@@ -1,0 +1,34 @@
+{
+  "variant": "memory_on",
+  "seed": 23,
+  "steps": 2,
+  "resumed_from": 0,
+  "training_targets_total": 282,
+  "forward_positions_this_run": 282,
+  "seconds": 0.03334349999931874,
+  "cpu_seconds": 0.03125,
+  "parameters": 14352,
+  "active_gradient_parameters": 14352,
+  "memory": {
+    "rss": 294060032,
+    "process_lifetime_peak_rss": 294060032
+  },
+  "trace": [
+    {
+      "step": 1,
+      "nll": 5.868844032287598,
+      "targets": 158,
+      "document_ids": [
+        "train-exact-1"
+      ]
+    },
+    {
+      "step": 2,
+      "nll": 5.787680149078369,
+      "targets": 124,
+      "document_ids": [
+        "train-local-1"
+      ]
+    }
+  ]
+}

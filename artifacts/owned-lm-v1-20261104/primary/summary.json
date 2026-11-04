@@ -1,0 +1,982 @@
+{
+  "schema": "toruk-owned-study-results-v1",
+  "profile": {
+    "variant": "memory_on",
+    "seed": 31,
+    "steps": 2,
+    "resumed_from": 0,
+    "training_targets_total": 608,
+    "forward_positions_this_run": 608,
+    "seconds": 0.10868630000004487,
+    "cpu_seconds": 0.109375,
+    "parameters": 56064,
+    "active_gradient_parameters": 56064,
+    "memory": {
+      "rss": 294817792,
+      "process_lifetime_peak_rss": 294817792
+    },
+    "trace": [
+      {
+        "step": 1,
+        "nll": 5.801092147827148,
+        "targets": 267,
+        "document_ids": [
+          "train-exact-13",
+          "train-unknown-7"
+        ]
+      },
+      {
+        "step": 2,
+        "nll": 5.682898044586182,
+        "targets": 341,
+        "document_ids": [
+          "train-correction-11",
+          "train-distant-26"
+        ]
+      }
+    ]
+  },
+  "training": {
+    "31-ordinary": {
+      "variant": "ordinary",
+      "seed": 31,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78190,
+      "forward_positions_this_run": 78190,
+      "seconds": 6.460373300000356,
+      "cpu_seconds": 6.4375,
+      "parameters": 43072,
+      "active_gradient_parameters": 43072,
+      "memory": {
+        "rss": 299331584,
+        "process_lifetime_peak_rss": 299331584
+      }
+    },
+    "31-ordinary_matched": {
+      "variant": "ordinary_matched",
+      "seed": 31,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78190,
+      "forward_positions_this_run": 78190,
+      "seconds": 6.758933600000091,
+      "cpu_seconds": 6.71875,
+      "parameters": 56620,
+      "active_gradient_parameters": 56620,
+      "memory": {
+        "rss": 303476736,
+        "process_lifetime_peak_rss": 303476736
+      }
+    },
+    "31-memory_off": {
+      "variant": "memory_off",
+      "seed": 31,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78190,
+      "forward_positions_this_run": 78190,
+      "seconds": 6.3306896000012784,
+      "cpu_seconds": 6.34375,
+      "parameters": 56064,
+      "active_gradient_parameters": 43072,
+      "memory": {
+        "rss": 303616000,
+        "process_lifetime_peak_rss": 304242688
+      }
+    },
+    "31-memory_on": {
+      "variant": "memory_on",
+      "seed": 31,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78190,
+      "forward_positions_this_run": 78190,
+      "seconds": 11.81583850000061,
+      "cpu_seconds": 11.8125,
+      "parameters": 56064,
+      "active_gradient_parameters": 56064,
+      "memory": {
+        "rss": 303230976,
+        "process_lifetime_peak_rss": 305295360
+      }
+    },
+    "47-ordinary": {
+      "variant": "ordinary",
+      "seed": 47,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78000,
+      "forward_positions_this_run": 78000,
+      "seconds": 6.474901999999929,
+      "cpu_seconds": 6.4375,
+      "parameters": 43072,
+      "active_gradient_parameters": 43072,
+      "memory": {
+        "rss": 305451008,
+        "process_lifetime_peak_rss": 305676288
+      }
+    },
+    "47-ordinary_matched": {
+      "variant": "ordinary_matched",
+      "seed": 47,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78000,
+      "forward_positions_this_run": 78000,
+      "seconds": 6.503671899999972,
+      "cpu_seconds": 6.5,
+      "parameters": 56620,
+      "active_gradient_parameters": 56620,
+      "memory": {
+        "rss": 306593792,
+        "process_lifetime_peak_rss": 306593792
+      }
+    },
+    "47-memory_off": {
+      "variant": "memory_off",
+      "seed": 47,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78000,
+      "forward_positions_this_run": 78000,
+      "seconds": 6.348313899999994,
+      "cpu_seconds": 6.328125,
+      "parameters": 56064,
+      "active_gradient_parameters": 43072,
+      "memory": {
+        "rss": 305979392,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "47-memory_on": {
+      "variant": "memory_on",
+      "seed": 47,
+      "steps": 256,
+      "resumed_from": 0,
+      "training_targets_total": 78000,
+      "forward_positions_this_run": 78000,
+      "seconds": 11.28640859999905,
+      "cpu_seconds": 11.28125,
+      "parameters": 56064,
+      "active_gradient_parameters": 56064,
+      "memory": {
+        "rss": 305655808,
+        "process_lifetime_peak_rss": 306688000
+      }
+    }
+  },
+  "heldout": {
+    "31-ordinary-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-ordinary\\checkpoint.pt",
+      "checkpoint_sha256": "fe353bc84f2b08bc389e86f18297e797786e61c4cf30397d754d4a248b589a04",
+      "variant": "ordinary",
+      "seed": 31,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5317504726854236,
+      "byte_perplexity": 1.7019088476342452,
+      "questions": 48,
+      "correct": 7,
+      "unsupported": 8,
+      "wrong_nonempty": 41,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 2
+        },
+        "distant": {
+          "n": 8,
+          "correct": 2
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 2
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 1
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 0.6162256999996316,
+      "cpu_seconds": 0.609375,
+      "memory": {
+        "rss": 305274880,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "31-ordinary-rolling": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-ordinary\\checkpoint.pt",
+      "checkpoint_sha256": "fe353bc84f2b08bc389e86f18297e797786e61c4cf30397d754d4a248b589a04",
+      "variant": "ordinary",
+      "seed": 31,
+      "ablation": "full",
+      "rolling_diagnostic": true,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5317504726854236,
+      "byte_perplexity": 1.7019088476342452,
+      "questions": 48,
+      "correct": 2,
+      "unsupported": 8,
+      "wrong_nonempty": 46,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 1
+        },
+        "distant": {
+          "n": 8,
+          "correct": 0
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 1
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 0.5562442999998893,
+      "cpu_seconds": 0.5625,
+      "memory": {
+        "rss": 305471488,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "31-ordinary_matched-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-ordinary_matched\\checkpoint.pt",
+      "checkpoint_sha256": "6e1aa6f6f475068942fedf4fac073ef8fa0d3381e47fdb0f7a5e1a49e68ff35c",
+      "variant": "ordinary_matched",
+      "seed": 31,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.49727289809793385,
+      "byte_perplexity": 1.6442311650574186,
+      "questions": 48,
+      "correct": 7,
+      "unsupported": 5,
+      "wrong_nonempty": 41,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 0
+        },
+        "distant": {
+          "n": 8,
+          "correct": 1
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 3
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 3
+        }
+      },
+      "seconds": 0.6407010000002629,
+      "cpu_seconds": 0.640625,
+      "memory": {
+        "rss": 305987584,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "31-ordinary_matched-rolling": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-ordinary_matched\\checkpoint.pt",
+      "checkpoint_sha256": "6e1aa6f6f475068942fedf4fac073ef8fa0d3381e47fdb0f7a5e1a49e68ff35c",
+      "variant": "ordinary_matched",
+      "seed": 31,
+      "ablation": "full",
+      "rolling_diagnostic": true,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.49727289809793385,
+      "byte_perplexity": 1.6442311650574186,
+      "questions": 48,
+      "correct": 0,
+      "unsupported": 8,
+      "wrong_nonempty": 48,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 0
+        },
+        "distant": {
+          "n": 8,
+          "correct": 0
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 0.5724095000005036,
+      "cpu_seconds": 0.578125,
+      "memory": {
+        "rss": 306016256,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "31-memory_off-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-memory_off\\checkpoint.pt",
+      "checkpoint_sha256": "51886d948a30ee4c6aecdcdac6a3e35e23293326ee92d044c0e3ba3d0e36a4fe",
+      "variant": "memory_off",
+      "seed": 31,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5317504726854236,
+      "byte_perplexity": 1.7019088476342452,
+      "questions": 48,
+      "correct": 7,
+      "unsupported": 8,
+      "wrong_nonempty": 41,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 2
+        },
+        "distant": {
+          "n": 8,
+          "correct": 2
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 2
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 1
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 0.7744793000001664,
+      "cpu_seconds": 0.78125,
+      "memory": {
+        "rss": 305692672,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "31-memory_on-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "493572c06e0323ae319f17eed3e56e546c4ebe6068b6af1b02ee785f26fd3e6c",
+      "variant": "memory_on",
+      "seed": 31,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5198295887384351,
+      "byte_perplexity": 1.6817410376667667,
+      "questions": 48,
+      "correct": 8,
+      "unsupported": 8,
+      "wrong_nonempty": 40,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 2
+        },
+        "distant": {
+          "n": 8,
+          "correct": 2
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 2
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 2
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 1.4356325000007928,
+      "cpu_seconds": 1.4375,
+      "memory": {
+        "rss": 305594368,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "31-memory_on-no_read": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "493572c06e0323ae319f17eed3e56e546c4ebe6068b6af1b02ee785f26fd3e6c",
+      "variant": "memory_on",
+      "seed": 31,
+      "ablation": "no_read",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5618476841508288,
+      "byte_perplexity": 1.7539101803121127,
+      "questions": 48,
+      "correct": 6,
+      "unsupported": 8,
+      "wrong_nonempty": 42,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 2
+        },
+        "distant": {
+          "n": 8,
+          "correct": 1
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 2
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 1
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 1.0011556999997993,
+      "cpu_seconds": 1.0,
+      "memory": {
+        "rss": 305889280,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "31-memory_on-no_update": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "493572c06e0323ae319f17eed3e56e546c4ebe6068b6af1b02ee785f26fd3e6c",
+      "variant": "memory_on",
+      "seed": 31,
+      "ablation": "no_update",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5635173105215533,
+      "byte_perplexity": 1.7568410010079625,
+      "questions": 48,
+      "correct": 6,
+      "unsupported": 8,
+      "wrong_nonempty": 42,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 2
+        },
+        "distant": {
+          "n": 8,
+          "correct": 1
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 2
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 1
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 1.2439508000006754,
+      "cpu_seconds": 1.234375,
+      "memory": {
+        "rss": 306024448,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "47-ordinary-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-ordinary\\checkpoint.pt",
+      "checkpoint_sha256": "020606e8a8843c61809024abb86b8e4149766bff85ec9129b5cf6d5eb9a8b644",
+      "variant": "ordinary",
+      "seed": 47,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5299796503354597,
+      "byte_perplexity": 1.6988977362677626,
+      "questions": 48,
+      "correct": 7,
+      "unsupported": 4,
+      "wrong_nonempty": 41,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 0
+        },
+        "distant": {
+          "n": 8,
+          "correct": 1
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 2
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 4
+        }
+      },
+      "seconds": 0.549596400000155,
+      "cpu_seconds": 0.546875,
+      "memory": {
+        "rss": 306069504,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "47-ordinary-rolling": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-ordinary\\checkpoint.pt",
+      "checkpoint_sha256": "020606e8a8843c61809024abb86b8e4149766bff85ec9129b5cf6d5eb9a8b644",
+      "variant": "ordinary",
+      "seed": 47,
+      "ablation": "full",
+      "rolling_diagnostic": true,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5299796503354597,
+      "byte_perplexity": 1.6988977362677626,
+      "questions": 48,
+      "correct": 2,
+      "unsupported": 8,
+      "wrong_nonempty": 46,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 1
+        },
+        "distant": {
+          "n": 8,
+          "correct": 0
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 1
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 0.38529899999957706,
+      "cpu_seconds": 0.390625,
+      "memory": {
+        "rss": 306180096,
+        "process_lifetime_peak_rss": 306688000
+      }
+    },
+    "47-ordinary_matched-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-ordinary_matched\\checkpoint.pt",
+      "checkpoint_sha256": "cf7600d4956b05e8d474681d1ddf6c0befcfe972af5e2f52f5e05613fa4dbcb8",
+      "variant": "ordinary_matched",
+      "seed": 47,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.49977614755639654,
+      "byte_perplexity": 1.6483522417204213,
+      "questions": 48,
+      "correct": 8,
+      "unsupported": 6,
+      "wrong_nonempty": 40,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 1
+        },
+        "distant": {
+          "n": 8,
+          "correct": 3
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 1
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 1
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 2
+        }
+      },
+      "seconds": 0.6018117000003258,
+      "cpu_seconds": 0.609375,
+      "memory": {
+        "rss": 306741248,
+        "process_lifetime_peak_rss": 306741248
+      }
+    },
+    "47-ordinary_matched-rolling": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-ordinary_matched\\checkpoint.pt",
+      "checkpoint_sha256": "cf7600d4956b05e8d474681d1ddf6c0befcfe972af5e2f52f5e05613fa4dbcb8",
+      "variant": "ordinary_matched",
+      "seed": 47,
+      "ablation": "full",
+      "rolling_diagnostic": true,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.49977614755639654,
+      "byte_perplexity": 1.6483522417204213,
+      "questions": 48,
+      "correct": 0,
+      "unsupported": 8,
+      "wrong_nonempty": 48,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 0
+        },
+        "distant": {
+          "n": 8,
+          "correct": 0
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 0
+        }
+      },
+      "seconds": 0.7030756000003748,
+      "cpu_seconds": 0.703125,
+      "memory": {
+        "rss": 305774592,
+        "process_lifetime_peak_rss": 306823168
+      }
+    },
+    "47-memory_off-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-memory_off\\checkpoint.pt",
+      "checkpoint_sha256": "e5746a021cf24dc2188f7e98367ba9f8fc404362bc1ea44241ae7211ec113b96",
+      "variant": "memory_off",
+      "seed": 47,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5299796503354597,
+      "byte_perplexity": 1.6988977362677626,
+      "questions": 48,
+      "correct": 7,
+      "unsupported": 4,
+      "wrong_nonempty": 41,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 0
+        },
+        "distant": {
+          "n": 8,
+          "correct": 1
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 2
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 4
+        }
+      },
+      "seconds": 0.5553770999995322,
+      "cpu_seconds": 0.546875,
+      "memory": {
+        "rss": 305803264,
+        "process_lifetime_peak_rss": 306823168
+      }
+    },
+    "47-memory_on-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "8f9eb245b6a5f58b598732440178905de49a138653aa49f923838b61213c6e30",
+      "variant": "memory_on",
+      "seed": 47,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5219573890873395,
+      "byte_perplexity": 1.685323256605283,
+      "questions": 48,
+      "correct": 9,
+      "unsupported": 4,
+      "wrong_nonempty": 39,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 1
+        },
+        "distant": {
+          "n": 8,
+          "correct": 2
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 2
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 4
+        }
+      },
+      "seconds": 1.0355128999999579,
+      "cpu_seconds": 1.03125,
+      "memory": {
+        "rss": 307306496,
+        "process_lifetime_peak_rss": 307306496
+      }
+    },
+    "47-memory_on-no_read": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "8f9eb245b6a5f58b598732440178905de49a138653aa49f923838b61213c6e30",
+      "variant": "memory_on",
+      "seed": 47,
+      "ablation": "no_read",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5595236961562572,
+      "byte_perplexity": 1.7498388468070165,
+      "questions": 48,
+      "correct": 5,
+      "unsupported": 7,
+      "wrong_nonempty": 43,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 1
+        },
+        "distant": {
+          "n": 8,
+          "correct": 2
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 1
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 1
+        }
+      },
+      "seconds": 0.8833302000002732,
+      "cpu_seconds": 0.875,
+      "memory": {
+        "rss": 307023872,
+        "process_lifetime_peak_rss": 307625984
+      }
+    },
+    "47-memory_on-no_update": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\47-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "8f9eb245b6a5f58b598732440178905de49a138653aa49f923838b61213c6e30",
+      "variant": "memory_on",
+      "seed": 47,
+      "ablation": "no_update",
+      "rolling_diagnostic": false,
+      "dataset": "219cf601e3d4767222757fa315239802a5baccb0fc9dbd1a1e3842077bee3032",
+      "nll": 0.5614362275229182,
+      "byte_perplexity": 1.7531886707887803,
+      "questions": 48,
+      "correct": 6,
+      "unsupported": 7,
+      "wrong_nonempty": 42,
+      "categories": {
+        "correction": {
+          "n": 8,
+          "correct": 1
+        },
+        "distant": {
+          "n": 8,
+          "correct": 2
+        },
+        "exact": {
+          "n": 8,
+          "correct": 0
+        },
+        "local": {
+          "n": 8,
+          "correct": 1
+        },
+        "preservation": {
+          "n": 8,
+          "correct": 1
+        },
+        "unknown": {
+          "n": 8,
+          "correct": 1
+        }
+      },
+      "seconds": 1.152896800000235,
+      "cpu_seconds": 1.15625,
+      "memory": {
+        "rss": 306614272,
+        "process_lifetime_peak_rss": 307625984
+      }
+    }
+  },
+  "criterion": {
+    "passed": false,
+    "checks": {
+      "31-ordinary-loss": false,
+      "31-ordinary-recall": false,
+      "31-ordinary-correction-preservation": true,
+      "31-ordinary-unsupported": true,
+      "31-ordinary_matched-loss": false,
+      "31-ordinary_matched-recall": true,
+      "31-ordinary_matched-correction-preservation": true,
+      "31-ordinary_matched-unsupported": false,
+      "31-memory_off-loss": false,
+      "31-memory_off-recall": false,
+      "31-memory_off-correction-preservation": true,
+      "31-memory_off-unsupported": true,
+      "47-ordinary-loss": false,
+      "47-ordinary-recall": true,
+      "47-ordinary-correction-preservation": true,
+      "47-ordinary-unsupported": true,
+      "47-ordinary_matched-loss": false,
+      "47-ordinary_matched-recall": false,
+      "47-ordinary_matched-correction-preservation": true,
+      "47-ordinary_matched-unsupported": true,
+      "47-memory_off-loss": false,
+      "47-memory_off-recall": true,
+      "47-memory_off-correction-preservation": true,
+      "47-memory_off-unsupported": true,
+      "no_read-loss": true,
+      "no_update-loss": true
+    }
+  },
+  "resume_equal": true,
+  "seconds": 80.26035330000013,
+  "cpu_seconds": 79.75,
+  "categories": [
+    "distant",
+    "correction",
+    "preservation",
+    "exact",
+    "local",
+    "unknown"
+  ],
+  "scope": "synthetic IID finite-symbol next-token study; no conversational qualification"
+}

@@ -1,5 +1,19 @@
 # Experiment registry
 
+## 2026-11-04 owned next-token LM v1
+
+The [versioned design](research/owned-lm-v1-design.md) was written before model
+coding. The [results and reproduction commands](research/owned-lm-v1-results.md)
+separate owned-model engineering identity from quality. Strict isolated replays
+restored earlier metadata and reproduced 4,224 owned-model answers; the latest
+216 chat answers also reproduced exactly. New full-document byte-LM fits used
+matched training tokens, two seeds, independent document resets, actual read/update
+ablations and a parameter-matched ordinary control. The declared quality criterion
+failed; the conversational pretrained backbone remains separate. Artifacts:
+`artifacts/owned-lm-v1-20261104/primary`, including registration, freeze, raw answers,
+costs and source/checkpoint/data identities. Only a bounded synthetic IID setting
+was evaluated; no conversational qualification or memory-efficiency gain is claimed.
+
 ## 2026-11-04 independent replication and exploratory paper package
 
 Base `84ad607473f76b04f9dd1c2aaae2e3201f4ee0ca`, preserving the dirty previous
