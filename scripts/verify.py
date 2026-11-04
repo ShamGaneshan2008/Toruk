@@ -25,6 +25,7 @@ def main():
         "import": ["-c", "import toruk_lm; print(toruk_lm.__version__)"],
         "help": ["-m", "toruk_lm", "--help"],
         "diagnose": ["-m", "toruk_lm", "diagnose"],
+        "frozen-sources": ["scripts/check_frozen_sources.py"],
         "lint": ["-m", "ruff", "check", "."],
         "format": ["-m", "ruff", "format", "--check", "src", "tests", "scripts"],
         "types": ["-m", "mypy"],
@@ -75,7 +76,13 @@ def main():
             "--output",
             str(options.output_dir.resolve() / "research-smoke"),
         ],
-        "build": ["-m", "build", "--no-isolation"],
+        "build": [
+            "-m",
+            "build",
+            "--no-isolation",
+            "--outdir",
+            str(options.output_dir.resolve() / "package"),
+        ],
         "diff-check": ["git", "diff", "--check"],
         "staged-diff-check": ["git", "diff", "--cached", "--check"],
     }

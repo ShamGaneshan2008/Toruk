@@ -153,6 +153,14 @@ The [reproducibility guide](docs/reproducibility.md) provides versioned config
 validation, a tiny CPU smoke run, and artifact rescoring commands. These verify
 execution and traceability; they do not establish a memory or accuracy advantage.
 
+The [exact/gist/reference diagnostic](docs/research/recall-results-20261104.md)
+separates literal copying, meaning preservation and vague references. Its bounded
+source-transcript experiment retains provenance, but exact quotation and ambiguous
+reference failures remain. It does not establish a compressed-gist memory,
+byte-perfect recall or total-resource efficiency. The ordinary chat path is
+unchanged. An [explanation notebook](docs/toruk-explanation.ipynb) walks through
+these limits with concrete examples.
+
 ## Evaluation principles
 
 Language quality and factual answers require different measurements. Toruk aims to report ordinary-text loss separately from answers generated without seeing reference answers. Controlled evaluations cover recall, corrections, unchanged facts and unknown answers; reliable learning and capacity boundaries remain research goals.

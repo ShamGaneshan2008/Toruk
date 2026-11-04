@@ -33,3 +33,16 @@
 /artifacts/value-fidelity-dev-v1-20261103/** -text whitespace=cr-at-eol
 /docs/research/value-fidelity-dev-v1-protocol.md text eol=lf
 /artifacts/value-fidelity-dev-v1-20261103/source/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+# Recall studies bind these exact source and evidence bytes across checkouts.
+/artifacts/recall-v1-20261104/** -text whitespace=cr-at-eol
+/artifacts/recall-v2-20261104/** -text whitespace=cr-at-eol
+/scripts/recall_study.py -text
+/scripts/recall_after.py -text
+/scripts/recall_v2.py -text
+/scripts/report_recall.py -text
+/src/toruk_lm/source_spans.py -text
+/tests/test_source_spans.py -text
+/tests/test_recall_protocol.py -text
+/docs/research/recall-v1-protocol.md -text
+/docs/research/recall-v2-protocol.md -text
+/artifacts/checks/recall-ci-integration-20261104/** -text whitespace=cr-at-eol

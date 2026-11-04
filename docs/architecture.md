@@ -68,6 +68,14 @@ scope and limits.
 
 ## Current chat history selection
 
+The separate [exact/gist/reference experiment](research/recall-v2-protocol.md)
+adds a research-only source transcript envelope around the existing selected
+turns. It preserves source text and provenance, then uses the same 512-token
+prompt fit and pretrained decoder. It does not create a compressed gist store,
+guarantee exact copying, or enforce clarification. The ordinary browser/server
+path does not use this intervention. Its implementation and measured failures
+are recorded separately from existing frozen selectors and integrated models.
+
 The local conversational page can run either the historical M6 controlled-world
 checkpoint as an experimental turn selector or the separate
 `toruk-chat-selector-v1` JSON checkpoint. V1 is an eight-feature logistic

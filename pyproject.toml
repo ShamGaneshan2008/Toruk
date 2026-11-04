@@ -33,6 +33,21 @@ extend-exclude = ["artifacts"]
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
 
+[tool.ruff.lint.per-file-ignores]
+# Preserve the registered study's exact prompt/scorer bytes, including long literals.
+"scripts/recall_study.py" = ["E501"]
+# Archived experiments: preserve hash-bound bytes; all other lint rules still apply.
+"scripts/build_chat_selector_data_v2.py" = ["E501"]
+"scripts/train_chat_selector_v2.py" = ["E501"]
+"scripts/evaluate_chat_selector_v2.py" = ["E501", "F401"]
+
+[tool.ruff.format]
+exclude = [
+    "scripts/build_chat_selector_data_v2.py",
+    "scripts/train_chat_selector_v2.py",
+    "scripts/evaluate_chat_selector_v2.py",
+]
+
 [tool.mypy]
 # CI runs Python 3.12; current NumPy stubs use Python 3.12 type aliases.
 # Ruff continues to check source syntax against Python 3.11.

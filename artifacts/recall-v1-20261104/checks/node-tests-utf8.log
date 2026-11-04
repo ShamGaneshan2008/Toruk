@@ -1,0 +1,26 @@
+
+> test
+> node --test tests/*.test.mjs
+
+✔ unready model has an actionable reason and never forwards backend exception text (34.5741ms)
+✔ unconfigured and unavailable inference return errors, never answers (2.2805ms)
+✔ normal Toruk proxy validates metrics and keeps token off the browser response (0.7417ms)
+✔ empty and long messages, invalid budget, and malformed backend are rejected (1.4958ms)
+✔ status and client history clear remain independent of backend sessions (1.2743ms)
+✔ status retains the full backbone and trained selector identities (0.4948ms)
+✔ follow-up request forwards the browser history in order (0.8518ms)
+✔ full reported history reaches inference without dropped or rewritten turns (0.687ms)
+✔ TORUK metrics are accepted only for a matching TORUK request (0.5585ms)
+✔ production and preview reject a plaintext backend URL (0.7747ms)
+✔ backend timeout is a bounded visible error (0.6707ms)
+✔ static Vercel project declares bounded API functions and visible mode labels (12.9462ms)
+✔ page disables chat with a reason, recovers on Retry, and sends generated history (36.0112ms)
+﹣ live page handlers send a normal question and follow-up through the real proxy (0.6306ms) # SKIP
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 153.6462

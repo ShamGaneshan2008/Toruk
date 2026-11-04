@@ -1,0 +1,96 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE and TORUK",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+  "status": {
+    "ready": true,
+    "backend": "Toruk",
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_id": "toruk-chat-selector-v2",
+    "selector_kind": "toruk-chat-selector-v2",
+    "backbone_digest": null,
+    "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+    "context_tokens": 512,
+    "memory_supported": true,
+    "modes": [
+      "BASELINE",
+      "TORUK"
+    ],
+    "error": null,
+    "error_code": null
+  },
+  "quality_claim": "Development probes; HTTP success does not establish quality.",
+  "probe_protocol_sha256": "ee92ce4a331b0104e1e89a192bda4f246aebca2f2b4035659926dc9bc52fbfcd",
+  "probe_settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 350,
+      "selected_context_tokens": 350,
+      "output_tokens": 5,
+      "total_tokens": 355,
+      "response_ms": 3640.314,
+      "backend": "Toruk",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "selector_kind": "toruk-chat-selector-v2",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selector_id": null,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 3646.854
+    }
+  },
+  "toruk": {
+    "answer": "LIME42",
+    "metrics": {
+      "input_tokens": 350,
+      "selected_context_tokens": 165,
+      "output_tokens": 5,
+      "total_tokens": 170,
+      "response_ms": 2370.688,
+      "backend": "Toruk",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "selector_kind": "toruk-chat-selector-v2",
+      "mode": "TORUK",
+      "memory_used": true,
+      "selector_id": "toruk-chat-selector-v2",
+      "selected_messages": 4,
+      "selected_message_ids": [
+        "m0",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "proxy_ms": 2377.192
+    }
+  },
+  "probes": {},
+  "outage_status": 503
+}

@@ -25,6 +25,8 @@ jobs:
       - run: python -c "import toruk_lm; print(toruk_lm.__version__)"
       - run: python -m toruk_lm --help
       - run: python -m toruk_lm diagnose
+      # Archived experiment sources are byte-frozen, not reformatted for CI.
+      - run: python scripts/check_frozen_sources.py
       - run: python -m ruff check .
       - run: python -m ruff format --check src tests scripts
       - run: python -m mypy
