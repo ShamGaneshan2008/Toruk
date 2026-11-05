@@ -1,0 +1,67 @@
+{
+  "schema": "toruk-owned-study-registration-v1",
+  "config": {
+    "schema": "toruk-owned-lm-study-v1",
+    "model": {
+      "context": 32,
+      "width": 16,
+      "heads": 2,
+      "layers": 1,
+      "slots": 2,
+      "max_document_tokens": 384
+    },
+    "steps": 2,
+    "batch_documents": 1,
+    "learning_rate": 0.003,
+    "seeds": [
+      23
+    ],
+    "train_per_category": 2,
+    "dev_per_category": 1,
+    "heldout_per_category": 1,
+    "max_new_tokens": 8,
+    "max_seconds": 60,
+    "scope": "bounded CPU execution/resume smoke only; not a research-quality result"
+  },
+  "config_sha256": "57fb75eaa90bc6dc41186d2e4b48cf1d2ebbf0f6d320c1d8ded5745b316cc8a5",
+  "runtime": {
+    "owned_lm.py": "290c88f4d654f78e57184d8137ae5b80d51ce0c6e26d3671bce8cec194e375f6",
+    "owned_data.py": "5f39c8c455928ef3ff1e7b4a2811ad182dfcfc4c7b92c8550f4bccc497b63a44",
+    "owned_training.py": "5c4e51f280fcc496fb709c62f8424448fa3e6b1776b593cde15e98e306c7dd26",
+    "model.py": "df9266dc010064fbd6dde9727247312c1c9a177d609c5ea7fee7100602bfe673",
+    "recurrent.py": "44700d91ada2496b0c63966d09b6ecb2d557510138d6d7849bd84da71bb5d47c",
+    "engine.py": "daff977dd7fa49d54d852b3a28c72a41bc5bf9a0c844dc9f517e5b8b26a6bc61",
+    "tokenizer.py": "e22977465d986dadb601095eeae1aa55f74eedd39897de0a6d52657c863f1434"
+  },
+  "driver_sha256": "0f428861d9708873d1ae8fd1dc6b1aaf31c6fb1645149179a79117e01815f4d3",
+  "design_sha256": "06e9f282ef9ef5d552741fd7cc670b93972f54c57f12b746c82eb4f50633f4e0",
+  "manifest": {
+    "schema": "toruk-owned-documents-v1",
+    "splits": {
+      "train": {
+        "seed": 3201,
+        "count": 12,
+        "sha256": "4b0965ea1c98ee367dc7053543c0ccb922f523dc0c6cbc6bc5119153f1b10f20",
+        "training_targets": 1870
+      },
+      "dev": {
+        "seed": 4201,
+        "count": 6,
+        "sha256": "e04592a4422ab5a4b134e9ab0bd3d161c9a7df971a5f4b2661f8ecc1b3f1ac5f",
+        "training_targets": 885
+      },
+      "heldout": {
+        "seed": 5201,
+        "count": 6,
+        "sha256": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+        "training_targets": 921
+      }
+    }
+  },
+  "head": "265f88137f41b5a646ec56c232b4bd1b49dadd38",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.1+cpu",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "heldout_policy": "single scoring pass after checkpoint freeze; no tuning from heldout",
+  "success_criterion": "design section Numerical criterion; all gates required"
+}

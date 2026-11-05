@@ -1,5 +1,5 @@
 export function pendingMessages(messages, content) {
-  return [...messages, {role: 'user', content}].slice(-19);
+  return [...messages, {role: 'user', content}];
 }
 
 export function completedMessages(pending, answer) {

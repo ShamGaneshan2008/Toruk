@@ -47,6 +47,20 @@ use the identified pretrained chat backbone. No experimental owned-LM chat optio
 has been added. Fine-tuning initialization across datasets is future work: the
 existing resume operation correctly rejects changed dataset/config identities.
 
+The subsequent [conversation-framing pilot](research/conversation-format-v1-results.md)
+uses the unchanged owned trainer and architecture with random initialization,
+not weights-only transfer. It compares the existing clean conversation training
+split with filtered synthetic-note training, then saves/resumes the candidate at
+step 256 to 512. Its research-only runner seals data, source and checkpoint hashes
+before held-out inference. Owned output content is decoded only from a complete
+JSON string; raw continuations remain available. The 512-byte generation-prefix
+limit is unchanged and visibly rejects the full refusal transcript. Framing
+improves, but content correctness remains zero and no API/UI option is added.
+The read/update interventions remove actual recurrent operations; their framing
+effects do not demonstrate factual memory. This supersedes the earlier statement
+that no conversational training pilot exists, while retaining that readiness
+report's original NOT_RUN result and exposed-checkpoint prohibition.
+
 Toruk-LM is the model family; `toruk_lm` is the package. The ordinary decoder uses
 learned byte/position embeddings, pre-norm causal self-attention and a GELU MLP
 per layer, final normalization, and an untied output projection. Dropout is zero.

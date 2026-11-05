@@ -1,0 +1,90 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\susee\VS_CODE_PROJECT\Toruk\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\susee\VS_CODE_PROJECT\Toruk
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 26 items
+
+tests/test_web_integration.py::test_page_proxy_python_http_contract PASSED [  3%]
+tests/test_inference_server.py::test_stateless_inference_and_telemetry PASSED [  7%]
+tests/test_inference_server.py::test_non_ascii_authorization_is_rejected_without_dropping_connection PASSED [ 11%]
+tests/test_inference_server.py::test_deadline_kills_worker_and_fails_closed PASSED [ 15%]
+tests/test_inference_server.py::test_private_message_and_path_are_absent_from_logs PASSED [ 19%]
+tests/test_inference_server.py::test_dead_worker_is_unavailable_instead_of_accepting_requests PASSED [ 23%]
+tests/test_inference_server.py::test_worker_preserves_safe_startup_reason[False-None-CHECKPOINT_MISSING] PASSED [ 26%]
+tests/test_inference_server.py::test_worker_preserves_safe_startup_reason[True-None-BACKBONE_MISSING] PASSED [ 30%]
+tests/test_inference_server.py::test_worker_preserves_safe_startup_reason[False-saved2-CHECKPOINT_INCOMPATIBLE] PASSED [ 34%]
+tests/test_inference_server.py::test_missing_backbone_readiness_is_actionable_and_safe PASSED [ 38%]
+tests/test_inference_server.py::test_auth_and_input_limits PASSED        [ 42%]
+tests/test_inference_server.py::test_unsupported_and_failed_backend PASSED [ 46%]
+tests/test_inference_server.py::test_overlapping_requests_are_bounded_by_single_generation_slot PASSED [ 50%]
+tests/test_chat.py::test_http_message_empty_input_and_clear PASSED       [ 53%]
+tests/test_chat.py::test_generation_error_and_limits PASSED              [ 57%]
+tests/test_chat.py::test_loading_state_and_clear_invalidates_pending_reply PASSED [ 61%]
+tests/test_chat.py::test_supported_checkpoint_uses_existing_generation_path PASSED [ 65%]
+tests/test_chat.py::test_unsupported_and_malformed_checkpoints_remain_visible PASSED [ 69%]
+tests/test_chat.py::test_unsupported_checkpoint_is_visible_over_http PASSED [ 73%]
+tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed["blue] PASSED [ 76%]
+tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed["blue"\nuser:] PASSED [ 80%]
+tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed[18] PASSED [ 84%]
+tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed[{"answer":"blue"}] PASSED [ 88%]
+tests/test_conversation_format_study.py::test_json_transport_decoding_preserves_exact_content PASSED [ 92%]
+tests/test_conversation_format_study.py::test_external_uses_native_content PASSED [ 96%]
+tests/test_conversation_format_study.py::test_release_audit_rejects_a_single_refusal_error PASSED [100%]
+
+=================================== PASSES ====================================
+_____________________ test_unsupported_and_failed_backend _____________________
+------------------------------ Captured log call ------------------------------
+ERROR    root:inference_server.py:205 Inference failed
+___________________ test_http_message_empty_input_and_clear ___________________
+---------------------------- Captured stderr call -----------------------------
+127.0.0.1 - - [05/Nov/2026 21:37:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2026 21:37:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2026 21:37:35] "POST /api/chat HTTP/1.1" 400 -
+127.0.0.1 - - [05/Nov/2026 21:37:35] "POST /api/chat HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2026 21:37:35] "POST /api/clear HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2026 21:37:35] "GET /api/status HTTP/1.1" 200 -
+__________ test_unsupported_and_malformed_checkpoints_remain_visible __________
+------------------------------ Captured log call ------------------------------
+ERROR    root:chat_server.py:21 Checkpoint load failed: Unsupported checkpoint. Local chat accepts toruk-ordinary-v1 only; controlled and recurrent checkpoints use a different inference path.
+ERROR    root:chat_server.py:21 Checkpoint load failed: Checkpoint validation failed: cannot read checkpoint C:\Users\susee\AppData\Local\Temp\pytest-of-susee\pytest-352\test_unsupported_and_malformed0\malformed.pt: Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 110
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+______________ test_unsupported_checkpoint_is_visible_over_http _______________
+---------------------------- Captured stderr call -----------------------------
+127.0.0.1 - - [05/Nov/2026 21:37:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2026 21:37:37] "POST /api/chat HTTP/1.1" 503 -
+------------------------------ Captured log call ------------------------------
+ERROR    root:chat_server.py:21 Checkpoint load failed: Unsupported checkpoint. Local chat accepts toruk-ordinary-v1 only; controlled and recurrent checkpoints use a different inference path.
+=========================== short test summary info ===========================
+PASSED tests/test_web_integration.py::test_page_proxy_python_http_contract
+PASSED tests/test_inference_server.py::test_stateless_inference_and_telemetry
+PASSED tests/test_inference_server.py::test_non_ascii_authorization_is_rejected_without_dropping_connection
+PASSED tests/test_inference_server.py::test_deadline_kills_worker_and_fails_closed
+PASSED tests/test_inference_server.py::test_private_message_and_path_are_absent_from_logs
+PASSED tests/test_inference_server.py::test_dead_worker_is_unavailable_instead_of_accepting_requests
+PASSED tests/test_inference_server.py::test_worker_preserves_safe_startup_reason[False-None-CHECKPOINT_MISSING]
+PASSED tests/test_inference_server.py::test_worker_preserves_safe_startup_reason[True-None-BACKBONE_MISSING]
+PASSED tests/test_inference_server.py::test_worker_preserves_safe_startup_reason[False-saved2-CHECKPOINT_INCOMPATIBLE]
+PASSED tests/test_inference_server.py::test_missing_backbone_readiness_is_actionable_and_safe
+PASSED tests/test_inference_server.py::test_auth_and_input_limits
+PASSED tests/test_inference_server.py::test_unsupported_and_failed_backend
+PASSED tests/test_inference_server.py::test_overlapping_requests_are_bounded_by_single_generation_slot
+PASSED tests/test_chat.py::test_http_message_empty_input_and_clear
+PASSED tests/test_chat.py::test_generation_error_and_limits
+PASSED tests/test_chat.py::test_loading_state_and_clear_invalidates_pending_reply
+PASSED tests/test_chat.py::test_supported_checkpoint_uses_existing_generation_path
+PASSED tests/test_chat.py::test_unsupported_and_malformed_checkpoints_remain_visible
+PASSED tests/test_chat.py::test_unsupported_checkpoint_is_visible_over_http
+PASSED tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed["blue]
+PASSED tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed["blue"\nuser:]
+PASSED tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed[18]
+PASSED tests/test_conversation_format_study.py::test_incomplete_or_wrong_type_response_is_not_framed[{"answer":"blue"}]
+PASSED tests/test_conversation_format_study.py::test_json_transport_decoding_preserves_exact_content
+PASSED tests/test_conversation_format_study.py::test_external_uses_native_content
+PASSED tests/test_conversation_format_study.py::test_release_audit_rejects_a_single_refusal_error
+============================= 26 passed in 22.72s =============================

@@ -99,7 +99,11 @@ test('live page handlers send a normal question and follow-up through the real p
       const body = await response.clone().json();
       turns.push({request: JSON.parse(options.body), http_status: response.status, response: body});
       assert.equal(response.status, 200);
-      assert.match(body.metrics.backbone, /Qwen2\.5-0\.5B-Instruct/);
+      if (process.env.TORUK_TEST_BACKBONE) {
+        assert.equal(body.metrics.backbone, process.env.TORUK_TEST_BACKBONE);
+      } else {
+        assert.match(body.metrics.backbone, /Qwen2\.5-0\.5B-Instruct/);
+      }
     }
     return response;
   }, await page.text());

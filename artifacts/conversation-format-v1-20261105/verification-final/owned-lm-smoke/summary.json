@@ -1,0 +1,520 @@
+{
+  "schema": "toruk-owned-study-results-v1",
+  "profile": {
+    "variant": "memory_on",
+    "seed": 23,
+    "steps": 2,
+    "resumed_from": 0,
+    "training_targets_total": 282,
+    "forward_positions_this_run": 282,
+    "seconds": 0.03947999999991225,
+    "cpu_seconds": 0.03125,
+    "parameters": 14352,
+    "active_gradient_parameters": 14352,
+    "memory": {
+      "rss": 290009088,
+      "process_lifetime_peak_rss": 290009088
+    },
+    "trace": [
+      {
+        "step": 1,
+        "nll": 5.868844032287598,
+        "targets": 158,
+        "document_ids": [
+          "train-exact-1"
+        ]
+      },
+      {
+        "step": 2,
+        "nll": 5.787680149078369,
+        "targets": 124,
+        "document_ids": [
+          "train-local-1"
+        ]
+      }
+    ]
+  },
+  "training": {
+    "23-ordinary": {
+      "variant": "ordinary",
+      "seed": 23,
+      "steps": 2,
+      "resumed_from": 0,
+      "training_targets_total": 282,
+      "forward_positions_this_run": 282,
+      "seconds": 0.020079599999917264,
+      "cpu_seconds": 0.03125,
+      "parameters": 12112,
+      "active_gradient_parameters": 12112,
+      "memory": {
+        "rss": 290312192,
+        "process_lifetime_peak_rss": 290312192
+      }
+    },
+    "23-ordinary_matched": {
+      "variant": "ordinary_matched",
+      "seed": 23,
+      "steps": 2,
+      "resumed_from": 0,
+      "training_targets_total": 282,
+      "forward_positions_this_run": 282,
+      "seconds": 0.022948700000142708,
+      "cpu_seconds": 0.03125,
+      "parameters": 14058,
+      "active_gradient_parameters": 14058,
+      "memory": {
+        "rss": 292253696,
+        "process_lifetime_peak_rss": 292253696
+      }
+    },
+    "23-memory_off": {
+      "variant": "memory_off",
+      "seed": 23,
+      "steps": 2,
+      "resumed_from": 0,
+      "training_targets_total": 282,
+      "forward_positions_this_run": 282,
+      "seconds": 0.019980999999916094,
+      "cpu_seconds": 0.015625,
+      "parameters": 14352,
+      "active_gradient_parameters": 12112,
+      "memory": {
+        "rss": 293703680,
+        "process_lifetime_peak_rss": 293703680
+      }
+    },
+    "23-memory_on": {
+      "variant": "memory_on",
+      "seed": 23,
+      "steps": 2,
+      "resumed_from": 0,
+      "training_targets_total": 282,
+      "forward_positions_this_run": 282,
+      "seconds": 0.03206739999995989,
+      "cpu_seconds": 0.03125,
+      "parameters": 14352,
+      "active_gradient_parameters": 14352,
+      "memory": {
+        "rss": 294551552,
+        "process_lifetime_peak_rss": 294551552
+      }
+    }
+  },
+  "heldout": {
+    "23-ordinary-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-ordinary\\checkpoint.pt",
+      "checkpoint_sha256": "b391d7865d5b6b947f9d90a4a1e0ee3196d07358df230830342e7bbbbad4a3fd",
+      "variant": "ordinary",
+      "seed": 23,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.743653934242671,
+      "byte_perplexity": 312.2030989629505,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.049300299999686104,
+      "cpu_seconds": 0.0625,
+      "memory": {
+        "rss": 294846464,
+        "process_lifetime_peak_rss": 294846464
+      }
+    },
+    "23-ordinary-rolling": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-ordinary\\checkpoint.pt",
+      "checkpoint_sha256": "b391d7865d5b6b947f9d90a4a1e0ee3196d07358df230830342e7bbbbad4a3fd",
+      "variant": "ordinary",
+      "seed": 23,
+      "ablation": "full",
+      "rolling_diagnostic": true,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.743653934242671,
+      "byte_perplexity": 312.2030989629505,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.03818849999970553,
+      "cpu_seconds": 0.046875,
+      "memory": {
+        "rss": 294965248,
+        "process_lifetime_peak_rss": 294965248
+      }
+    },
+    "23-ordinary_matched-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-ordinary_matched\\checkpoint.pt",
+      "checkpoint_sha256": "86511d15cc48fde30d5ae795d5bb4f93e8f2bef48a2690c194fefb68a0eb306f",
+      "variant": "ordinary_matched",
+      "seed": 23,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.623082528544042,
+      "byte_perplexity": 276.7411322294539,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.07161249999990105,
+      "cpu_seconds": 0.078125,
+      "memory": {
+        "rss": 295604224,
+        "process_lifetime_peak_rss": 295604224
+      }
+    },
+    "23-ordinary_matched-rolling": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-ordinary_matched\\checkpoint.pt",
+      "checkpoint_sha256": "86511d15cc48fde30d5ae795d5bb4f93e8f2bef48a2690c194fefb68a0eb306f",
+      "variant": "ordinary_matched",
+      "seed": 23,
+      "ablation": "full",
+      "rolling_diagnostic": true,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.623082528544042,
+      "byte_perplexity": 276.7411322294539,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.03642829999989772,
+      "cpu_seconds": 0.046875,
+      "memory": {
+        "rss": 295739392,
+        "process_lifetime_peak_rss": 295739392
+      }
+    },
+    "23-memory_off-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-memory_off\\checkpoint.pt",
+      "checkpoint_sha256": "c40fe8fcb39c96dff2f7cc16efc76494c50b324ce14a2f1d6009f5bc05b97f23",
+      "variant": "memory_off",
+      "seed": 23,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.743653934242671,
+      "byte_perplexity": 312.2030989629505,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.05062469999984387,
+      "cpu_seconds": 0.046875,
+      "memory": {
+        "rss": 296202240,
+        "process_lifetime_peak_rss": 296202240
+      }
+    },
+    "23-memory_on-full": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "b09b3088654ca13693ad11b7c986b54a70d73db533675e222dc40f46f8e9332a",
+      "variant": "memory_on",
+      "seed": 23,
+      "ablation": "full",
+      "rolling_diagnostic": false,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.718839133860104,
+      "byte_perplexity": 304.55117452297617,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.10219000000006417,
+      "cpu_seconds": 0.09375,
+      "memory": {
+        "rss": 295714816,
+        "process_lifetime_peak_rss": 296501248
+      }
+    },
+    "23-memory_on-no_read": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "b09b3088654ca13693ad11b7c986b54a70d73db533675e222dc40f46f8e9332a",
+      "variant": "memory_on",
+      "seed": 23,
+      "ablation": "no_read",
+      "rolling_diagnostic": false,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.74301051368672,
+      "byte_perplexity": 312.00228568207035,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.0724344000000201,
+      "cpu_seconds": 0.078125,
+      "memory": {
+        "rss": 295858176,
+        "process_lifetime_peak_rss": 296501248
+      }
+    },
+    "23-memory_on-no_update": {
+      "schema": "toruk-owned-evaluation-v1",
+      "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification-final\\owned-lm-smoke\\models\\23-memory_on\\checkpoint.pt",
+      "checkpoint_sha256": "b09b3088654ca13693ad11b7c986b54a70d73db533675e222dc40f46f8e9332a",
+      "variant": "memory_on",
+      "seed": 23,
+      "ablation": "no_update",
+      "rolling_diagnostic": false,
+      "dataset": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "nll": 5.739743442928882,
+      "byte_perplexity": 310.9846154436748,
+      "questions": 6,
+      "correct": 0,
+      "unsupported": 1,
+      "wrong_nonempty": 6,
+      "categories": {
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "exact": {
+          "n": 1,
+          "correct": 0
+        },
+        "local": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "unknown": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "seconds": 0.08572599999979502,
+      "cpu_seconds": 0.09375,
+      "memory": {
+        "rss": 295878656,
+        "process_lifetime_peak_rss": 296501248
+      }
+    }
+  },
+  "criterion": {
+    "passed": false,
+    "checks": {
+      "23-ordinary-loss": false,
+      "23-ordinary-recall": false,
+      "23-ordinary-correction-preservation": true,
+      "23-ordinary-unsupported": true,
+      "23-ordinary_matched-loss": false,
+      "23-ordinary_matched-recall": false,
+      "23-ordinary_matched-correction-preservation": true,
+      "23-ordinary_matched-unsupported": true,
+      "23-memory_off-loss": false,
+      "23-memory_off-recall": false,
+      "23-memory_off-correction-preservation": true,
+      "23-memory_off-unsupported": true,
+      "no_read-loss": true,
+      "no_update-loss": true
+    }
+  },
+  "resume_equal": true,
+  "seconds": 2.6753953000002184,
+  "cpu_seconds": 2.34375,
+  "categories": [
+    "distant",
+    "correction",
+    "preservation",
+    "exact",
+    "local",
+    "unknown"
+  ],
+  "scope": "bounded CPU execution/resume smoke only; not a research-quality result"
+}

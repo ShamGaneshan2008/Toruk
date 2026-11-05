@@ -1,0 +1,19 @@
+{
+  "candidate": {
+    "targets": 157008,
+    "seconds": 25.360519300000078,
+    "cpu_seconds": 25.28125,
+    "peak_rss": 303816704,
+    "resume_boundary": 256
+  },
+  "control": {
+    "targets": 155783,
+    "seconds": 23.328575699999874,
+    "cpu_seconds": 23.25,
+    "peak_rss": 301391872
+  },
+  "total_optimized_targets": 312791,
+  "checkpoint_bytes": 2212769,
+  "dollars": "No paid API, accelerator or job; energy/dollar cost not measured.",
+  "rss_monitor_caveat": "Parent-process samples can miss the Windows venv launcher's child. Use the actual training process OS lifetime high-water marks above. Trainer checks RSS at fit boundaries, not every optimizer boundary. This is a protocol enforcement deviation; observed peaks are below the caps."
+}

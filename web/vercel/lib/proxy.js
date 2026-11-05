@@ -5,6 +5,42 @@ const MAX_BODY_BYTES = 16384;
 const MAX_NEW_TOKENS = 64;
 const TIMEOUT_MS = 60000;
 
+class BodyTooLarge extends Error {}
+
+async function readLimitedBody(request) {
+  if (!request.body) return '';
+  const reader = request.body.getReader();
+  const chunks = [];
+  let bytes = 0;
+  try {
+    while (true) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      bytes += value.byteLength;
+      if (bytes > MAX_BODY_BYTES) {
+        void reader.cancel().catch(() => {});
+        throw new BodyTooLarge();
+      }
+      chunks.push(Buffer.from(value));
+    }
+    return new TextDecoder('utf-8', {fatal: true}).decode(Buffer.concat(chunks, bytes));
+  } finally {
+    reader.releaseLock();
+  }
+}
+
+function validMetrics(m, payload) {
+  const counts = ['input_tokens', 'selected_context_tokens', 'output_tokens', 'total_tokens'];
+  if (!m || counts.some(key => !Number.isSafeInteger(m[key]) || m[key] < 0)) return false;
+  if (!Number.isFinite(m.response_ms) || m.response_ms < 0 || m.output_tokens > payload.max_new_tokens) return false;
+  if (m.total_tokens !== m.selected_context_tokens + m.output_tokens) return false;
+  if (m.backend !== 'Toruk' || typeof m.model !== 'string' || !m.model.trim() || typeof m.backbone !== 'string' || !m.backbone.trim()) return false;
+  if (m.mode !== payload.mode || typeof m.memory_used !== 'boolean' || (m.mode === 'BASELINE' && m.memory_used)) return false;
+  const ids = m.selected_message_ids;
+  return Array.isArray(ids) && ids.length > 0 && new Set(ids).size === ids.length
+    && ids.every(id => typeof id === 'string' && /^m(?:[0-9]|1[0-9])$/.test(id) && Number(id.slice(1)) < payload.messages.length);
+}
+
 // Only these fixed messages may describe a model-load failure in the browser.
 const READINESS_ERRORS = {
   CHECKPOINT_MISSING: 'The selected demo model is missing. Start Toruk with the installed chat backbone; see the local chat guide.',
@@ -90,10 +126,14 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
   if (request.method !== 'POST') return json({error: 'POST required.'}, 405);
   const length = Number(request.headers.get('content-length') || 0);
   if (length > MAX_BODY_BYTES) return json({error: 'Request body is too large.'}, 413);
+  let raw;
+  try {
+    raw = await readLimitedBody(request);
+  } catch (error) {
+    return json({error: error instanceof BodyTooLarge ? 'Request body is too large.' : 'Could not read a valid UTF-8 request body.'}, error instanceof BodyTooLarge ? 413 : 400);
+  }
   let payload;
   try {
-    const raw = await request.text();
-    if (Buffer.byteLength(raw, 'utf8') > MAX_BODY_BYTES) return json({error: 'Request body is too large.'}, 413);
     payload = validate(JSON.parse(raw));
   } catch (error) {
     return json({error: error instanceof SyntaxError ? 'Invalid JSON.' : error.message}, 400);
@@ -106,8 +146,7 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
       method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload),
     }, fetchImpl);
     if (response.status === 400) {
-      const bad = await response.json();
-      return json({error: bad.error || 'Invalid generation request.'}, 400);
+      return json({error: 'The inference backend rejected this request. Check the context mode and generation settings.'}, 400);
     }
     if (response.status === 503) {
       const unavailable = await response.json();
@@ -116,7 +155,7 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
     if (!response.ok) throw new Error('backend response failed');
     const data = await response.json();
     const m = data.metrics;
-    if (typeof data.answer !== 'string' || !m || m.backend !== 'Toruk' || !Number.isInteger(m.input_tokens) || !Number.isInteger(m.selected_context_tokens) || !Number.isInteger(m.output_tokens) || !Number.isInteger(m.total_tokens) || typeof m.response_ms !== 'number' || typeof m.model !== 'string' || typeof m.backbone !== 'string' || m.mode !== payload.mode || typeof m.memory_used !== 'boolean' || !Array.isArray(m.selected_message_ids) || m.selected_message_ids.some(id => !/^m(?:[0-9]|1[0-9])$/.test(id))) throw new Error('invalid backend response');
+    if (typeof data.answer !== 'string' || !data.answer.trim() || !validMetrics(m, payload)) throw new Error('invalid backend response');
     const metrics = {...m, proxy_ms: Math.round((performance.now() - started) * 1000) / 1000};
     logger.info(JSON.stringify({event: 'toruk_chat', mode: payload.mode, input_tokens: m.input_tokens, selected_context_tokens: m.selected_context_tokens, output_tokens: m.output_tokens, response_ms: m.response_ms, proxy_ms: metrics.proxy_ms}));
     return json({answer: data.answer, metrics});

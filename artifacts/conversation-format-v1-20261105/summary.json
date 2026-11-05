@@ -1,0 +1,909 @@
+{
+  "development": {
+    "historical": {
+      "n": 16,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 0,
+      "terminated": 1,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 2,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 9,
+      "seconds": 0.8524810999997499,
+      "cpu_seconds": 0.828125,
+      "prompt_tokens": 2233,
+      "output_tokens": 499,
+      "owned_forward_positions": 10380,
+      "peak_rss": 290971648,
+      "categories": {
+        "correction": {
+          "n": 2,
+          "exact": 0
+        },
+        "distant": {
+          "n": 2,
+          "exact": 0
+        },
+        "exact": {
+          "n": 2,
+          "exact": 0
+        },
+        "factual": {
+          "n": 2,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 2,
+          "exact": 0
+        },
+        "math": {
+          "n": 2,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 2,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 2,
+          "exact": 0
+        }
+      }
+    },
+    "control": {
+      "n": 16,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 0,
+      "terminated": 0,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 2,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 11,
+      "seconds": 0.9153777000001355,
+      "cpu_seconds": 0.921875,
+      "prompt_tokens": 2233,
+      "output_tokens": 512,
+      "owned_forward_positions": 10681,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 2,
+          "exact": 0
+        },
+        "distant": {
+          "n": 2,
+          "exact": 0
+        },
+        "exact": {
+          "n": 2,
+          "exact": 0
+        },
+        "factual": {
+          "n": 2,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 2,
+          "exact": 0
+        },
+        "math": {
+          "n": 2,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 2,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 2,
+          "exact": 0
+        }
+      }
+    },
+    "candidate": {
+      "n": 16,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 14,
+      "terminated": 14,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 2,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 10,
+      "seconds": 0.5058514999996078,
+      "cpu_seconds": 0.546875,
+      "prompt_tokens": 2233,
+      "output_tokens": 266,
+      "owned_forward_positions": 6812,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 2,
+          "exact": 0
+        },
+        "distant": {
+          "n": 2,
+          "exact": 0
+        },
+        "exact": {
+          "n": 2,
+          "exact": 0
+        },
+        "factual": {
+          "n": 2,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 2,
+          "exact": 0
+        },
+        "math": {
+          "n": 2,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 2,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 2,
+          "exact": 0
+        }
+      }
+    },
+    "no_read": {
+      "n": 16,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 13,
+      "terminated": 13,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 2,
+      "stale": 0,
+      "repeated_trigrams": 1,
+      "unique_nonempty": 8,
+      "seconds": 0.3487393999996584,
+      "cpu_seconds": 0.328125,
+      "prompt_tokens": 2233,
+      "output_tokens": 274,
+      "owned_forward_positions": 6962,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 2,
+          "exact": 0
+        },
+        "distant": {
+          "n": 2,
+          "exact": 0
+        },
+        "exact": {
+          "n": 2,
+          "exact": 0
+        },
+        "factual": {
+          "n": 2,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 2,
+          "exact": 0
+        },
+        "math": {
+          "n": 2,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 2,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 2,
+          "exact": 0
+        }
+      }
+    },
+    "no_update": {
+      "n": 16,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 11,
+      "terminated": 11,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 2,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 8,
+      "seconds": 0.5235386000003928,
+      "cpu_seconds": 0.53125,
+      "prompt_tokens": 2233,
+      "output_tokens": 302,
+      "owned_forward_positions": 7304,
+      "peak_rss": 293928960,
+      "categories": {
+        "correction": {
+          "n": 2,
+          "exact": 0
+        },
+        "distant": {
+          "n": 2,
+          "exact": 0
+        },
+        "exact": {
+          "n": 2,
+          "exact": 0
+        },
+        "factual": {
+          "n": 2,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 2,
+          "exact": 0
+        },
+        "math": {
+          "n": 2,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 2,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 2,
+          "exact": 0
+        }
+      }
+    }
+  },
+  "primary": {
+    "historical": {
+      "n": 24,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 0,
+      "terminated": 1,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 11,
+      "seconds": 1.2674112999998215,
+      "cpu_seconds": 1.265625,
+      "prompt_tokens": 3300,
+      "output_tokens": 755,
+      "owned_forward_positions": 15671,
+      "peak_rss": 291930112,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 3,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "control": {
+      "n": 24,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 0,
+      "terminated": 0,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 11,
+      "seconds": 1.3177206000000297,
+      "cpu_seconds": 1.296875,
+      "prompt_tokens": 3300,
+      "output_tokens": 768,
+      "owned_forward_positions": 15972,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 3,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "candidate": {
+      "n": 24,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 20,
+      "terminated": 21,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 12,
+      "seconds": 0.7892537000011544,
+      "cpu_seconds": 0.828125,
+      "prompt_tokens": 3300,
+      "output_tokens": 417,
+      "owned_forward_positions": 10492,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 3,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "no_read": {
+      "n": 24,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 19,
+      "terminated": 19,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 1,
+      "unique_nonempty": 9,
+      "seconds": 0.5628947000000153,
+      "cpu_seconds": 0.5625,
+      "prompt_tokens": 3300,
+      "output_tokens": 428,
+      "owned_forward_positions": 10708,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 3,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "no_update": {
+      "n": 24,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 16,
+      "terminated": 16,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 9,
+      "seconds": 0.8001392000001033,
+      "cpu_seconds": 0.734375,
+      "prompt_tokens": 3300,
+      "output_tokens": 470,
+      "owned_forward_positions": 11221,
+      "peak_rss": 293928960,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 3,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "external_qwen": {
+      "n": 24,
+      "exact": 20,
+      "raw_exact": 20,
+      "framed": 0,
+      "terminated": 0,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 0,
+      "stale": 3,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 18,
+      "seconds": 34.90879399999949,
+      "cpu_seconds": 70.328125,
+      "prompt_tokens": 2990,
+      "output_tokens": 128,
+      "owned_forward_positions": 0,
+      "peak_rss": 2446229504,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 3
+        },
+        "exact": {
+          "n": 3,
+          "exact": 3
+        },
+        "factual": {
+          "n": 3,
+          "exact": 3
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 3
+        },
+        "math": {
+          "n": 3,
+          "exact": 3
+        },
+        "refusal": {
+          "n": 3,
+          "exact": 2
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 3
+        }
+      }
+    }
+  },
+  "regression": {
+    "historical": {
+      "n": 25,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 0,
+      "terminated": 0,
+      "errors": 1,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 9,
+      "seconds": 1.2864501999999902,
+      "cpu_seconds": 1.265625,
+      "prompt_tokens": 3273,
+      "output_tokens": 768,
+      "owned_forward_positions": 15945,
+      "peak_rss": 292204544,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 4,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "control": {
+      "n": 25,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 0,
+      "terminated": 0,
+      "errors": 1,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 12,
+      "seconds": 1.3095923999992465,
+      "cpu_seconds": 1.359375,
+      "prompt_tokens": 3273,
+      "output_tokens": 768,
+      "owned_forward_positions": 15945,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 4,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "candidate": {
+      "n": 25,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 20,
+      "terminated": 21,
+      "errors": 1,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 9,
+      "seconds": 0.7552573999992092,
+      "cpu_seconds": 0.796875,
+      "prompt_tokens": 3273,
+      "output_tokens": 409,
+      "owned_forward_positions": 10470,
+      "peak_rss": 293703680,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 4,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "no_read": {
+      "n": 25,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 20,
+      "terminated": 20,
+      "errors": 1,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 8,
+      "seconds": 0.5393584999999348,
+      "cpu_seconds": 0.578125,
+      "prompt_tokens": 3273,
+      "output_tokens": 408,
+      "owned_forward_positions": 10362,
+      "peak_rss": 293773312,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 4,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "no_update": {
+      "n": 25,
+      "exact": 0,
+      "raw_exact": 0,
+      "framed": 17,
+      "terminated": 17,
+      "errors": 1,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 0,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 8,
+      "seconds": 0.7710385999996561,
+      "cpu_seconds": 0.78125,
+      "prompt_tokens": 3273,
+      "output_tokens": 450,
+      "owned_forward_positions": 10875,
+      "peak_rss": 293928960,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 0
+        },
+        "distant": {
+          "n": 3,
+          "exact": 0
+        },
+        "exact": {
+          "n": 3,
+          "exact": 0
+        },
+        "factual": {
+          "n": 3,
+          "exact": 0
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 0
+        },
+        "refusal": {
+          "n": 4,
+          "exact": 0
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    },
+    "external_qwen": {
+      "n": 25,
+      "exact": 13,
+      "raw_exact": 13,
+      "framed": 0,
+      "terminated": 0,
+      "errors": 0,
+      "invalid_utf8": 0,
+      "unsupported_unknown_proxy": 3,
+      "stale": 2,
+      "repeated_trigrams": 0,
+      "unique_nonempty": 19,
+      "seconds": 38.47207350000053,
+      "cpu_seconds": 76.71875,
+      "prompt_tokens": 3256,
+      "output_tokens": 140,
+      "owned_forward_positions": 0,
+      "peak_rss": 2458595328,
+      "categories": {
+        "correction": {
+          "n": 3,
+          "exact": 1
+        },
+        "distant": {
+          "n": 3,
+          "exact": 1
+        },
+        "exact": {
+          "n": 3,
+          "exact": 3
+        },
+        "factual": {
+          "n": 3,
+          "exact": 3
+        },
+        "instruction": {
+          "n": 3,
+          "exact": 0
+        },
+        "math": {
+          "n": 3,
+          "exact": 3
+        },
+        "refusal": {
+          "n": 4,
+          "exact": 2
+        },
+        "uncertainty": {
+          "n": 3,
+          "exact": 0
+        }
+      }
+    }
+  }
+}

@@ -285,3 +285,12 @@ CI PASS, current edits NOT_RUN remotely, final test NOT_RUN.
 [results, failure examples and M8 requirements](research/m7-results.md),
 `artifacts/m7-analysis.json`, and `artifacts/m7-handoff`. No commit, push,
 publishing, new branch or paid compute.
+
+## 2026-11-05 conversation framing v1
+
+The [frozen protocol](research/conversation-format-v1-protocol.md) and
+[measured results](research/conversation-format-v1-results.md) record one data-only
+owned-model pilot after exact historical replay. Random-initialized conversation
+training improves response framing, but remains 0/24 on unseen-value answers.
+The integration gate fails. Evidence and exact command records are under
+`artifacts/conversation-format-v1-20261105/`; the pretrained chat default is unchanged.

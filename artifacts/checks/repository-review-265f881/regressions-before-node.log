@@ -1,0 +1,120 @@
+
+> test
+> node --test tests/*.test.mjs
+
+✖ long conversations fail visibly instead of silently dropping the earliest turns (1.5437ms)
+✖ empty backend replies cannot poison the next browser history (21.5794ms)
+✖ backend request errors do not expose private exception details (1.0681ms)
+✖ chunked request bodies are cancelled when they cross the byte limit (1.0663ms)
+✖ impossible token counts, timings and source IDs are rejected (1.0654ms)
+✔ unready model has an actionable reason and never forwards backend exception text (4.1732ms)
+✔ unconfigured and unavailable inference return errors, never answers (1.0647ms)
+✔ normal Toruk proxy validates metrics and keeps token off the browser response (0.5942ms)
+✔ empty and long messages, invalid budget, and malformed backend are rejected (1.3953ms)
+✔ status and client history clear remain independent of backend sessions (1.4579ms)
+✔ status retains the full backbone and trained selector identities (0.4461ms)
+✔ follow-up request forwards the browser history in order (0.679ms)
+✔ full reported history reaches inference without dropped or rewritten turns (0.6678ms)
+✔ TORUK metrics are accepted only for a matching TORUK request (0.4475ms)
+✔ production and preview reject a plaintext backend URL (0.4513ms)
+✔ backend timeout is a bounded visible error (0.6392ms)
+✔ static Vercel project declares bounded API functions and visible mode labels (9.9712ms)
+✔ page disables chat with a reason, recovers on Retry, and sends generated history (26.641ms)
+﹣ live page handlers send a normal question and follow-up through the real proxy (0.2847ms) # SKIP
+ℹ tests 19
+ℹ suites 0
+ℹ pass 13
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 122.5135
+
+✖ failing tests:
+
+test at tests\proxy.test.mjs:15:1
+✖ long conversations fail visibly instead of silently dropping the earliest turns (1.5437ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  19 !== 21
+  
+      at TestContext.<anonymous> (file:///C:/Users/susee/VS_CODE_PROJECT/Toruk/web/vercel/tests/proxy.test.mjs:19:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 19,
+    expected: 21,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\proxy.test.mjs:29:1
+✖ empty backend replies cannot poison the next browser history (21.5794ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/susee/VS_CODE_PROJECT/Toruk/web/vercel/tests/proxy.test.mjs:34:12)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\proxy.test.mjs:39:1
+✖ backend request errors do not expose private exception details (1.0681ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /private-token|private\/path/. Input:
+  
+  '{"error":"private-token C:/private/path"}'
+  
+      at TestContext.<anonymous> (file:///C:/Users/susee/VS_CODE_PROJECT/Toruk/web/vercel/tests/proxy.test.mjs:44:10)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"error":"private-token C:/private/path"}',
+    expected: /private-token|private\/path/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
+
+test at tests\proxy.test.mjs:47:1
+✖ chunked request bodies are cancelled when they cross the byte limit (1.0663ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/Users/susee/VS_CODE_PROJECT/Toruk/web/vercel/tests/proxy.test.mjs:62:10)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\proxy.test.mjs:66:1
+✖ impossible token counts, timings and source IDs are rejected (1.0654ms)
+  AssertionError [ERR_ASSERTION]: {"input_tokens":-1}
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/susee/VS_CODE_PROJECT/Toruk/web/vercel/tests/proxy.test.mjs:77:12)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

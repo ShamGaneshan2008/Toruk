@@ -81,6 +81,20 @@ def test_stateless_inference_and_telemetry(server):
     assert all(len(messages) == 1 for messages, _ in backend.calls)
 
 
+def test_non_ascii_authorization_is_rejected_without_dropping_connection(server):
+    backend, base = server
+    with pytest.raises(HTTPError) as failure:
+        call(
+            base,
+            "/api/infer",
+            {"messages": [{"role": "user", "content": "hi"}]},
+            token="s\u00ebcret",
+        )
+    assert failure.value.code == 401
+    assert json.load(failure.value) == {"error": "Unauthorized."}
+    assert backend.calls == []
+
+
 def stalled_worker(pipe):
     pipe.send("ready")
     pipe.recv()

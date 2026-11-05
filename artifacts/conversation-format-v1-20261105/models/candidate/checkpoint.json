@@ -1,0 +1,2322 @@
+{
+  "variant": "memory_on",
+  "seed": 31,
+  "steps": 512,
+  "resumed_from": 256,
+  "training_targets_total": 157008,
+  "forward_positions_this_run": 78504,
+  "seconds": 12.96824300000003,
+  "cpu_seconds": 12.921875,
+  "parameters": 56064,
+  "active_gradient_parameters": 56064,
+  "memory": {
+    "rss": 303054848,
+    "process_lifetime_peak_rss": 303816704
+  },
+  "trace": [
+    {
+      "step": 257,
+      "nll": 0.11142078787088394,
+      "targets": 213,
+      "document_ids": [
+        "train-instruction-3",
+        "train-refusal-5"
+      ]
+    },
+    {
+      "step": 258,
+      "nll": 0.13277454674243927,
+      "targets": 540,
+      "document_ids": [
+        "train-correction-7",
+        "train-distant-3"
+      ]
+    },
+    {
+      "step": 259,
+      "nll": 0.1541389524936676,
+      "targets": 540,
+      "document_ids": [
+        "train-distant-2",
+        "train-correction-5"
+      ]
+    },
+    {
+      "step": 260,
+      "nll": 0.10505811870098114,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-7",
+        "train-uncertainty-5"
+      ]
+    },
+    {
+      "step": 261,
+      "nll": 0.1090405210852623,
+      "targets": 508,
+      "document_ids": [
+        "train-correction-6",
+        "train-correction-4"
+      ]
+    },
+    {
+      "step": 262,
+      "nll": 0.11657106876373291,
+      "targets": 140,
+      "document_ids": [
+        "train-instruction-2",
+        "train-instruction-7"
+      ]
+    },
+    {
+      "step": 263,
+      "nll": 0.10697392374277115,
+      "targets": 146,
+      "document_ids": [
+        "train-instruction-5",
+        "train-math-4"
+      ]
+    },
+    {
+      "step": 264,
+      "nll": 0.18826836347579956,
+      "targets": 426,
+      "document_ids": [
+        "train-distant-1",
+        "train-factual-1"
+      ]
+    },
+    {
+      "step": 265,
+      "nll": 0.0807817131280899,
+      "targets": 286,
+      "document_ids": [
+        "train-refusal-7",
+        "train-refusal-3"
+      ]
+    },
+    {
+      "step": 266,
+      "nll": 0.15799082815647125,
+      "targets": 201,
+      "document_ids": [
+        "train-factual-7",
+        "train-math-7"
+      ]
+    },
+    {
+      "step": 267,
+      "nll": 0.07118269056081772,
+      "targets": 258,
+      "document_ids": [
+        "train-uncertainty-4",
+        "train-refusal-0"
+      ]
+    },
+    {
+      "step": 268,
+      "nll": 0.14250759780406952,
+      "targets": 453,
+      "document_ids": [
+        "train-distant-6",
+        "train-exact-2"
+      ]
+    },
+    {
+      "step": 269,
+      "nll": 0.11828471720218658,
+      "targets": 362,
+      "document_ids": [
+        "train-math-5",
+        "train-distant-5"
+      ]
+    },
+    {
+      "step": 270,
+      "nll": 0.12788432836532593,
+      "targets": 201,
+      "document_ids": [
+        "train-factual-2",
+        "train-math-0"
+      ]
+    },
+    {
+      "step": 271,
+      "nll": 0.13773831725120544,
+      "targets": 250,
+      "document_ids": [
+        "train-factual-0",
+        "train-factual-5"
+      ]
+    },
+    {
+      "step": 272,
+      "nll": 0.1076769232749939,
+      "targets": 295,
+      "document_ids": [
+        "train-refusal-2",
+        "train-exact-4"
+      ]
+    },
+    {
+      "step": 273,
+      "nll": 0.07347897440195084,
+      "targets": 230,
+      "document_ids": [
+        "train-uncertainty-1",
+        "train-uncertainty-3"
+      ]
+    },
+    {
+      "step": 274,
+      "nll": 0.10237567871809006,
+      "targets": 429,
+      "document_ids": [
+        "train-distant-0",
+        "train-refusal-1"
+      ]
+    },
+    {
+      "step": 275,
+      "nll": 0.1406458169221878,
+      "targets": 453,
+      "document_ids": [
+        "train-exact-0",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 276,
+      "nll": 0.12210114300251007,
+      "targets": 330,
+      "document_ids": [
+        "train-math-1",
+        "train-correction-3"
+      ]
+    },
+    {
+      "step": 277,
+      "nll": 0.15323805809020996,
+      "targets": 146,
+      "document_ids": [
+        "train-instruction-6",
+        "train-math-6"
+      ]
+    },
+    {
+      "step": 278,
+      "nll": 0.1041187271475792,
+      "targets": 185,
+      "document_ids": [
+        "train-uncertainty-7",
+        "train-instruction-4"
+      ]
+    },
+    {
+      "step": 279,
+      "nll": 0.057597752660512924,
+      "targets": 191,
+      "document_ids": [
+        "train-math-2",
+        "train-uncertainty-2"
+      ]
+    },
+    {
+      "step": 280,
+      "nll": 0.10084615647792816,
+      "targets": 268,
+      "document_ids": [
+        "train-refusal-4",
+        "train-factual-3"
+      ]
+    },
+    {
+      "step": 281,
+      "nll": 0.09268302470445633,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-5",
+        "train-uncertainty-6"
+      ]
+    },
+    {
+      "step": 282,
+      "nll": 0.10868404805660248,
+      "targets": 295,
+      "document_ids": [
+        "train-exact-3",
+        "train-refusal-6"
+      ]
+    },
+    {
+      "step": 283,
+      "nll": 0.12718631327152252,
+      "targets": 228,
+      "document_ids": [
+        "train-math-3",
+        "train-exact-1"
+      ]
+    },
+    {
+      "step": 284,
+      "nll": 0.1663932204246521,
+      "targets": 356,
+      "document_ids": [
+        "train-instruction-0",
+        "train-distant-4"
+      ]
+    },
+    {
+      "step": 285,
+      "nll": 0.12338396906852722,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-6",
+        "train-correction-1"
+      ]
+    },
+    {
+      "step": 286,
+      "nll": 0.1334453523159027,
+      "targets": 250,
+      "document_ids": [
+        "train-factual-6",
+        "train-factual-4"
+      ]
+    },
+    {
+      "step": 287,
+      "nll": 0.13124395906925201,
+      "targets": 324,
+      "document_ids": [
+        "train-instruction-1",
+        "train-correction-0"
+      ]
+    },
+    {
+      "step": 288,
+      "nll": 0.0916658416390419,
+      "targets": 369,
+      "document_ids": [
+        "train-uncertainty-0",
+        "train-correction-2"
+      ]
+    },
+    {
+      "step": 289,
+      "nll": 0.08025842159986496,
+      "targets": 369,
+      "document_ids": [
+        "train-correction-6",
+        "train-uncertainty-3"
+      ]
+    },
+    {
+      "step": 290,
+      "nll": 0.08844061195850372,
+      "targets": 213,
+      "document_ids": [
+        "train-refusal-6",
+        "train-instruction-0"
+      ]
+    },
+    {
+      "step": 291,
+      "nll": 0.06671740859746933,
+      "targets": 258,
+      "document_ids": [
+        "train-refusal-7",
+        "train-uncertainty-5"
+      ]
+    },
+    {
+      "step": 292,
+      "nll": 0.09723806381225586,
+      "targets": 330,
+      "document_ids": [
+        "train-correction-0",
+        "train-math-7"
+      ]
+    },
+    {
+      "step": 293,
+      "nll": 0.09755127876996994,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-4",
+        "train-correction-7"
+      ]
+    },
+    {
+      "step": 294,
+      "nll": 0.13808055222034454,
+      "targets": 377,
+      "document_ids": [
+        "train-math-2",
+        "train-distant-6"
+      ]
+    },
+    {
+      "step": 295,
+      "nll": 0.06350107491016388,
+      "targets": 286,
+      "document_ids": [
+        "train-refusal-1",
+        "train-refusal-3"
+      ]
+    },
+    {
+      "step": 296,
+      "nll": 0.09139002859592438,
+      "targets": 201,
+      "document_ids": [
+        "train-math-6",
+        "train-factual-6"
+      ]
+    },
+    {
+      "step": 297,
+      "nll": 0.12023276835680008,
+      "targets": 228,
+      "document_ids": [
+        "train-math-1",
+        "train-exact-5"
+      ]
+    },
+    {
+      "step": 298,
+      "nll": 0.1464020013809204,
+      "targets": 356,
+      "document_ids": [
+        "train-distant-2",
+        "train-instruction-5"
+      ]
+    },
+    {
+      "step": 299,
+      "nll": 0.12732255458831787,
+      "targets": 356,
+      "document_ids": [
+        "train-distant-0",
+        "train-instruction-4"
+      ]
+    },
+    {
+      "step": 300,
+      "nll": 0.10096445679664612,
+      "targets": 540,
+      "document_ids": [
+        "train-distant-3",
+        "train-correction-1"
+      ]
+    },
+    {
+      "step": 301,
+      "nll": 0.08407118171453476,
+      "targets": 240,
+      "document_ids": [
+        "train-uncertainty-7",
+        "train-factual-2"
+      ]
+    },
+    {
+      "step": 302,
+      "nll": 0.0900091752409935,
+      "targets": 508,
+      "document_ids": [
+        "train-correction-3",
+        "train-correction-2"
+      ]
+    },
+    {
+      "step": 303,
+      "nll": 0.08518356084823608,
+      "targets": 228,
+      "document_ids": [
+        "train-exact-6",
+        "train-math-3"
+      ]
+    },
+    {
+      "step": 304,
+      "nll": 0.09357685595750809,
+      "targets": 146,
+      "document_ids": [
+        "train-math-5",
+        "train-instruction-6"
+      ]
+    },
+    {
+      "step": 305,
+      "nll": 0.1048412099480629,
+      "targets": 411,
+      "document_ids": [
+        "train-factual-1",
+        "train-distant-4"
+      ]
+    },
+    {
+      "step": 306,
+      "nll": 0.10005462169647217,
+      "targets": 185,
+      "document_ids": [
+        "train-uncertainty-0",
+        "train-instruction-7"
+      ]
+    },
+    {
+      "step": 307,
+      "nll": 0.07767846435308456,
+      "targets": 240,
+      "document_ids": [
+        "train-uncertainty-4",
+        "train-factual-3"
+      ]
+    },
+    {
+      "step": 308,
+      "nll": 0.10322721302509308,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-3",
+        "train-correction-5"
+      ]
+    },
+    {
+      "step": 309,
+      "nll": 0.12444408237934113,
+      "targets": 426,
+      "document_ids": [
+        "train-distant-7",
+        "train-factual-4"
+      ]
+    },
+    {
+      "step": 310,
+      "nll": 0.12242406606674194,
+      "targets": 222,
+      "document_ids": [
+        "train-exact-1",
+        "train-instruction-3"
+      ]
+    },
+    {
+      "step": 311,
+      "nll": 0.08824323862791061,
+      "targets": 219,
+      "document_ids": [
+        "train-math-4",
+        "train-refusal-4"
+      ]
+    },
+    {
+      "step": 312,
+      "nll": 0.10477819293737411,
+      "targets": 324,
+      "document_ids": [
+        "train-instruction-1",
+        "train-correction-4"
+      ]
+    },
+    {
+      "step": 313,
+      "nll": 0.08767106384038925,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-7",
+        "train-uncertainty-1"
+      ]
+    },
+    {
+      "step": 314,
+      "nll": 0.06349414587020874,
+      "targets": 191,
+      "document_ids": [
+        "train-uncertainty-6",
+        "train-math-0"
+      ]
+    },
+    {
+      "step": 315,
+      "nll": 0.10070934891700745,
+      "targets": 250,
+      "document_ids": [
+        "train-factual-0",
+        "train-factual-5"
+      ]
+    },
+    {
+      "step": 316,
+      "nll": 0.08995740115642548,
+      "targets": 295,
+      "document_ids": [
+        "train-refusal-5",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 317,
+      "nll": 0.07613642513751984,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-2",
+        "train-uncertainty-2"
+      ]
+    },
+    {
+      "step": 318,
+      "nll": 0.10365571081638336,
+      "targets": 195,
+      "document_ids": [
+        "train-factual-7",
+        "train-instruction-2"
+      ]
+    },
+    {
+      "step": 319,
+      "nll": 0.10655798017978668,
+      "targets": 444,
+      "document_ids": [
+        "train-distant-1",
+        "train-refusal-0"
+      ]
+    },
+    {
+      "step": 320,
+      "nll": 0.10333774983882904,
+      "targets": 429,
+      "document_ids": [
+        "train-distant-5",
+        "train-refusal-2"
+      ]
+    },
+    {
+      "step": 321,
+      "nll": 0.09000270813703537,
+      "targets": 401,
+      "document_ids": [
+        "train-uncertainty-3",
+        "train-distant-0"
+      ]
+    },
+    {
+      "step": 322,
+      "nll": 0.09977933764457703,
+      "targets": 377,
+      "document_ids": [
+        "train-distant-6",
+        "train-math-5"
+      ]
+    },
+    {
+      "step": 323,
+      "nll": 0.06732477247714996,
+      "targets": 219,
+      "document_ids": [
+        "train-math-3",
+        "train-refusal-5"
+      ]
+    },
+    {
+      "step": 324,
+      "nll": 0.08499960601329803,
+      "targets": 379,
+      "document_ids": [
+        "train-correction-2",
+        "train-factual-4"
+      ]
+    },
+    {
+      "step": 325,
+      "nll": 0.10484001040458679,
+      "targets": 324,
+      "document_ids": [
+        "train-instruction-6",
+        "train-correction-6"
+      ]
+    },
+    {
+      "step": 326,
+      "nll": 0.09244482964277267,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-3",
+        "train-correction-7"
+      ]
+    },
+    {
+      "step": 327,
+      "nll": 0.08888375759124756,
+      "targets": 267,
+      "document_ids": [
+        "train-uncertainty-6",
+        "train-exact-1"
+      ]
+    },
+    {
+      "step": 328,
+      "nll": 0.09080927073955536,
+      "targets": 453,
+      "document_ids": [
+        "train-exact-0",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 329,
+      "nll": 0.0945887416601181,
+      "targets": 201,
+      "document_ids": [
+        "train-factual-0",
+        "train-math-7"
+      ]
+    },
+    {
+      "step": 330,
+      "nll": 0.08221187442541122,
+      "targets": 324,
+      "document_ids": [
+        "train-instruction-5",
+        "train-correction-1"
+      ]
+    },
+    {
+      "step": 331,
+      "nll": 0.07449974119663239,
+      "targets": 377,
+      "document_ids": [
+        "train-distant-1",
+        "train-math-1"
+      ]
+    },
+    {
+      "step": 332,
+      "nll": 0.08733966946601868,
+      "targets": 295,
+      "document_ids": [
+        "train-exact-7",
+        "train-refusal-6"
+      ]
+    },
+    {
+      "step": 333,
+      "nll": 0.1087661013007164,
+      "targets": 146,
+      "document_ids": [
+        "train-math-4",
+        "train-instruction-4"
+      ]
+    },
+    {
+      "step": 334,
+      "nll": 0.07592085003852844,
+      "targets": 330,
+      "document_ids": [
+        "train-math-2",
+        "train-correction-5"
+      ]
+    },
+    {
+      "step": 335,
+      "nll": 0.07802033424377441,
+      "targets": 240,
+      "document_ids": [
+        "train-factual-3",
+        "train-uncertainty-7"
+      ]
+    },
+    {
+      "step": 336,
+      "nll": 0.12131427228450775,
+      "targets": 411,
+      "document_ids": [
+        "train-distant-2",
+        "train-factual-5"
+      ]
+    },
+    {
+      "step": 337,
+      "nll": 0.08235757052898407,
+      "targets": 330,
+      "document_ids": [
+        "train-math-6",
+        "train-correction-3"
+      ]
+    },
+    {
+      "step": 338,
+      "nll": 0.10626217722892761,
+      "targets": 140,
+      "document_ids": [
+        "train-instruction-2",
+        "train-instruction-7"
+      ]
+    },
+    {
+      "step": 339,
+      "nll": 0.09987273812294006,
+      "targets": 356,
+      "document_ids": [
+        "train-instruction-3",
+        "train-distant-5"
+      ]
+    },
+    {
+      "step": 340,
+      "nll": 0.05520732328295708,
+      "targets": 258,
+      "document_ids": [
+        "train-uncertainty-0",
+        "train-refusal-4"
+      ]
+    },
+    {
+      "step": 341,
+      "nll": 0.07933176308870316,
+      "targets": 267,
+      "document_ids": [
+        "train-uncertainty-4",
+        "train-exact-5"
+      ]
+    },
+    {
+      "step": 342,
+      "nll": 0.09124378114938736,
+      "targets": 379,
+      "document_ids": [
+        "train-factual-1",
+        "train-correction-4"
+      ]
+    },
+    {
+      "step": 343,
+      "nll": 0.09406953305006027,
+      "targets": 222,
+      "document_ids": [
+        "train-instruction-1",
+        "train-exact-2"
+      ]
+    },
+    {
+      "step": 344,
+      "nll": 0.0917515903711319,
+      "targets": 195,
+      "document_ids": [
+        "train-factual-7",
+        "train-instruction-0"
+      ]
+    },
+    {
+      "step": 345,
+      "nll": 0.058621641248464584,
+      "targets": 286,
+      "document_ids": [
+        "train-refusal-0",
+        "train-refusal-7"
+      ]
+    },
+    {
+      "step": 346,
+      "nll": 0.0818653330206871,
+      "targets": 295,
+      "document_ids": [
+        "train-exact-6",
+        "train-refusal-3"
+      ]
+    },
+    {
+      "step": 347,
+      "nll": 0.0744551494717598,
+      "targets": 401,
+      "document_ids": [
+        "train-uncertainty-1",
+        "train-distant-3"
+      ]
+    },
+    {
+      "step": 348,
+      "nll": 0.07812943309545517,
+      "targets": 267,
+      "document_ids": [
+        "train-uncertainty-2",
+        "train-exact-4"
+      ]
+    },
+    {
+      "step": 349,
+      "nll": 0.09670572727918625,
+      "targets": 540,
+      "document_ids": [
+        "train-distant-4",
+        "train-correction-0"
+      ]
+    },
+    {
+      "step": 350,
+      "nll": 0.05304240435361862,
+      "targets": 286,
+      "document_ids": [
+        "train-refusal-2",
+        "train-refusal-1"
+      ]
+    },
+    {
+      "step": 351,
+      "nll": 0.0868847668170929,
+      "targets": 250,
+      "document_ids": [
+        "train-factual-2",
+        "train-factual-6"
+      ]
+    },
+    {
+      "step": 352,
+      "nll": 0.07287321239709854,
+      "targets": 191,
+      "document_ids": [
+        "train-uncertainty-5",
+        "train-math-0"
+      ]
+    },
+    {
+      "step": 353,
+      "nll": 0.07018910348415375,
+      "targets": 369,
+      "document_ids": [
+        "train-uncertainty-7",
+        "train-correction-1"
+      ]
+    },
+    {
+      "step": 354,
+      "nll": 0.0797455832362175,
+      "targets": 185,
+      "document_ids": [
+        "train-instruction-7",
+        "train-uncertainty-6"
+      ]
+    },
+    {
+      "step": 355,
+      "nll": 0.09570547193288803,
+      "targets": 453,
+      "document_ids": [
+        "train-exact-5",
+        "train-distant-1"
+      ]
+    },
+    {
+      "step": 356,
+      "nll": 0.050411488860845566,
+      "targets": 258,
+      "document_ids": [
+        "train-uncertainty-3",
+        "train-refusal-3"
+      ]
+    },
+    {
+      "step": 357,
+      "nll": 0.08453000336885452,
+      "targets": 277,
+      "document_ids": [
+        "train-exact-6",
+        "train-factual-1"
+      ]
+    },
+    {
+      "step": 358,
+      "nll": 0.07158094644546509,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-0",
+        "train-uncertainty-2"
+      ]
+    },
+    {
+      "step": 359,
+      "nll": 0.07766969501972198,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-2",
+        "train-correction-7"
+      ]
+    },
+    {
+      "step": 360,
+      "nll": 0.04076654091477394,
+      "targets": 230,
+      "document_ids": [
+        "train-uncertainty-0",
+        "train-uncertainty-5"
+      ]
+    },
+    {
+      "step": 361,
+      "nll": 0.08523481339216232,
+      "targets": 438,
+      "document_ids": [
+        "train-distant-4",
+        "train-exact-1"
+      ]
+    },
+    {
+      "step": 362,
+      "nll": 0.06264041364192963,
+      "targets": 369,
+      "document_ids": [
+        "train-correction-5",
+        "train-uncertainty-4"
+      ]
+    },
+    {
+      "step": 363,
+      "nll": 0.09267238527536392,
+      "targets": 201,
+      "document_ids": [
+        "train-factual-3",
+        "train-math-2"
+      ]
+    },
+    {
+      "step": 364,
+      "nll": 0.07382543385028839,
+      "targets": 377,
+      "document_ids": [
+        "train-distant-7",
+        "train-math-0"
+      ]
+    },
+    {
+      "step": 365,
+      "nll": 0.09036719799041748,
+      "targets": 324,
+      "document_ids": [
+        "train-instruction-3",
+        "train-correction-6"
+      ]
+    },
+    {
+      "step": 366,
+      "nll": 0.0777558907866478,
+      "targets": 330,
+      "document_ids": [
+        "train-correction-0",
+        "train-math-7"
+      ]
+    },
+    {
+      "step": 367,
+      "nll": 0.09172776341438293,
+      "targets": 213,
+      "document_ids": [
+        "train-instruction-4",
+        "train-refusal-1"
+      ]
+    },
+    {
+      "step": 368,
+      "nll": 0.07867798954248428,
+      "targets": 152,
+      "document_ids": [
+        "train-math-6",
+        "train-math-1"
+      ]
+    },
+    {
+      "step": 369,
+      "nll": 0.09516234695911407,
+      "targets": 195,
+      "document_ids": [
+        "train-factual-2",
+        "train-instruction-0"
+      ]
+    },
+    {
+      "step": 370,
+      "nll": 0.06560160964727402,
+      "targets": 397,
+      "document_ids": [
+        "train-refusal-4",
+        "train-correction-4"
+      ]
+    },
+    {
+      "step": 371,
+      "nll": 0.08072863519191742,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-4",
+        "train-correction-2"
+      ]
+    },
+    {
+      "step": 372,
+      "nll": 0.07593313604593277,
+      "targets": 201,
+      "document_ids": [
+        "train-math-4",
+        "train-factual-4"
+      ]
+    },
+    {
+      "step": 373,
+      "nll": 0.07927978038787842,
+      "targets": 362,
+      "document_ids": [
+        "train-distant-3",
+        "train-math-5"
+      ]
+    },
+    {
+      "step": 374,
+      "nll": 0.08136563748121262,
+      "targets": 587,
+      "document_ids": [
+        "train-distant-6",
+        "train-distant-0"
+      ]
+    },
+    {
+      "step": 375,
+      "nll": 0.0669017806649208,
+      "targets": 268,
+      "document_ids": [
+        "train-refusal-2",
+        "train-factual-5"
+      ]
+    },
+    {
+      "step": 376,
+      "nll": 0.053524695336818695,
+      "targets": 219,
+      "document_ids": [
+        "train-math-3",
+        "train-refusal-6"
+      ]
+    },
+    {
+      "step": 377,
+      "nll": 0.0784308910369873,
+      "targets": 324,
+      "document_ids": [
+        "train-instruction-2",
+        "train-correction-3"
+      ]
+    },
+    {
+      "step": 378,
+      "nll": 0.08077959716320038,
+      "targets": 356,
+      "document_ids": [
+        "train-distant-5",
+        "train-instruction-5"
+      ]
+    },
+    {
+      "step": 379,
+      "nll": 0.0758109986782074,
+      "targets": 429,
+      "document_ids": [
+        "train-distant-2",
+        "train-refusal-0"
+      ]
+    },
+    {
+      "step": 380,
+      "nll": 0.11198496073484421,
+      "targets": 222,
+      "document_ids": [
+        "train-exact-3",
+        "train-instruction-6"
+      ]
+    },
+    {
+      "step": 381,
+      "nll": 0.05793265625834465,
+      "targets": 268,
+      "document_ids": [
+        "train-refusal-5",
+        "train-factual-0"
+      ]
+    },
+    {
+      "step": 382,
+      "nll": 0.06774712353944778,
+      "targets": 268,
+      "document_ids": [
+        "train-refusal-7",
+        "train-factual-7"
+      ]
+    },
+    {
+      "step": 383,
+      "nll": 0.10177907347679138,
+      "targets": 267,
+      "document_ids": [
+        "train-uncertainty-1",
+        "train-exact-7"
+      ]
+    },
+    {
+      "step": 384,
+      "nll": 0.09632048010826111,
+      "targets": 195,
+      "document_ids": [
+        "train-instruction-1",
+        "train-factual-6"
+      ]
+    },
+    {
+      "step": 385,
+      "nll": 0.08635013550519943,
+      "targets": 277,
+      "document_ids": [
+        "train-exact-3",
+        "train-factual-7"
+      ]
+    },
+    {
+      "step": 386,
+      "nll": 0.08576203137636185,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-5",
+        "train-uncertainty-5"
+      ]
+    },
+    {
+      "step": 387,
+      "nll": 0.07711856812238693,
+      "targets": 201,
+      "document_ids": [
+        "train-math-1",
+        "train-factual-5"
+      ]
+    },
+    {
+      "step": 388,
+      "nll": 0.09326629340648651,
+      "targets": 453,
+      "document_ids": [
+        "train-distant-1",
+        "train-exact-7"
+      ]
+    },
+    {
+      "step": 389,
+      "nll": 0.07681144773960114,
+      "targets": 185,
+      "document_ids": [
+        "train-instruction-0",
+        "train-uncertainty-6"
+      ]
+    },
+    {
+      "step": 390,
+      "nll": 0.08507920801639557,
+      "targets": 438,
+      "document_ids": [
+        "train-distant-2",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 391,
+      "nll": 0.07715653628110886,
+      "targets": 379,
+      "document_ids": [
+        "train-correction-2",
+        "train-factual-6"
+      ]
+    },
+    {
+      "step": 392,
+      "nll": 0.06894250959157944,
+      "targets": 369,
+      "document_ids": [
+        "train-correction-6",
+        "train-uncertainty-1"
+      ]
+    },
+    {
+      "step": 393,
+      "nll": 0.08283456414937973,
+      "targets": 228,
+      "document_ids": [
+        "train-exact-1",
+        "train-math-7"
+      ]
+    },
+    {
+      "step": 394,
+      "nll": 0.059341561049222946,
+      "targets": 191,
+      "document_ids": [
+        "train-uncertainty-4",
+        "train-math-4"
+      ]
+    },
+    {
+      "step": 395,
+      "nll": 0.09397764503955841,
+      "targets": 213,
+      "document_ids": [
+        "train-refusal-4",
+        "train-instruction-2"
+      ]
+    },
+    {
+      "step": 396,
+      "nll": 0.09019690752029419,
+      "targets": 324,
+      "document_ids": [
+        "train-correction-4",
+        "train-instruction-5"
+      ]
+    },
+    {
+      "step": 397,
+      "nll": 0.07713183015584946,
+      "targets": 268,
+      "document_ids": [
+        "train-refusal-6",
+        "train-factual-0"
+      ]
+    },
+    {
+      "step": 398,
+      "nll": 0.03800692409276962,
+      "targets": 230,
+      "document_ids": [
+        "train-uncertainty-0",
+        "train-uncertainty-3"
+      ]
+    },
+    {
+      "step": 399,
+      "nll": 0.08605236560106277,
+      "targets": 268,
+      "document_ids": [
+        "train-factual-4",
+        "train-refusal-0"
+      ]
+    },
+    {
+      "step": 400,
+      "nll": 0.06253162026405334,
+      "targets": 219,
+      "document_ids": [
+        "train-refusal-7",
+        "train-math-6"
+      ]
+    },
+    {
+      "step": 401,
+      "nll": 0.07389891147613525,
+      "targets": 411,
+      "document_ids": [
+        "train-factual-2",
+        "train-distant-5"
+      ]
+    },
+    {
+      "step": 402,
+      "nll": 0.0666273757815361,
+      "targets": 397,
+      "document_ids": [
+        "train-refusal-3",
+        "train-correction-0"
+      ]
+    },
+    {
+      "step": 403,
+      "nll": 0.07732951641082764,
+      "targets": 146,
+      "document_ids": [
+        "train-instruction-7",
+        "train-math-5"
+      ]
+    },
+    {
+      "step": 404,
+      "nll": 0.10298829525709152,
+      "targets": 195,
+      "document_ids": [
+        "train-instruction-3",
+        "train-factual-3"
+      ]
+    },
+    {
+      "step": 405,
+      "nll": 0.08253803849220276,
+      "targets": 406,
+      "document_ids": [
+        "train-correction-1",
+        "train-exact-6"
+      ]
+    },
+    {
+      "step": 406,
+      "nll": 0.07423898577690125,
+      "targets": 587,
+      "document_ids": [
+        "train-distant-3",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 407,
+      "nll": 0.07765288650989532,
+      "targets": 429,
+      "document_ids": [
+        "train-refusal-1",
+        "train-distant-4"
+      ]
+    },
+    {
+      "step": 408,
+      "nll": 0.061504047363996506,
+      "targets": 540,
+      "document_ids": [
+        "train-correction-3",
+        "train-distant-0"
+      ]
+    },
+    {
+      "step": 409,
+      "nll": 0.08248592913150787,
+      "targets": 146,
+      "document_ids": [
+        "train-instruction-1",
+        "train-math-3"
+      ]
+    },
+    {
+      "step": 410,
+      "nll": 0.06954458355903625,
+      "targets": 555,
+      "document_ids": [
+        "train-correction-7",
+        "train-distant-6"
+      ]
+    },
+    {
+      "step": 411,
+      "nll": 0.06143197417259216,
+      "targets": 213,
+      "document_ids": [
+        "train-refusal-2",
+        "train-instruction-6"
+      ]
+    },
+    {
+      "step": 412,
+      "nll": 0.05160389095544815,
+      "targets": 219,
+      "document_ids": [
+        "train-math-2",
+        "train-refusal-5"
+      ]
+    },
+    {
+      "step": 413,
+      "nll": 0.09021325409412384,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-2",
+        "train-uncertainty-7"
+      ]
+    },
+    {
+      "step": 414,
+      "nll": 0.07762520760297775,
+      "targets": 379,
+      "document_ids": [
+        "train-correction-5",
+        "train-factual-1"
+      ]
+    },
+    {
+      "step": 415,
+      "nll": 0.09483274072408676,
+      "targets": 228,
+      "document_ids": [
+        "train-math-0",
+        "train-exact-4"
+      ]
+    },
+    {
+      "step": 416,
+      "nll": 0.074239082634449,
+      "targets": 185,
+      "document_ids": [
+        "train-uncertainty-2",
+        "train-instruction-4"
+      ]
+    },
+    {
+      "step": 417,
+      "nll": 0.06988973915576935,
+      "targets": 295,
+      "document_ids": [
+        "train-exact-2",
+        "train-refusal-7"
+      ]
+    },
+    {
+      "step": 418,
+      "nll": 0.05969346687197685,
+      "targets": 369,
+      "document_ids": [
+        "train-correction-4",
+        "train-uncertainty-7"
+      ]
+    },
+    {
+      "step": 419,
+      "nll": 0.04855464771389961,
+      "targets": 219,
+      "document_ids": [
+        "train-refusal-6",
+        "train-math-2"
+      ]
+    },
+    {
+      "step": 420,
+      "nll": 0.09373865276575089,
+      "targets": 140,
+      "document_ids": [
+        "train-instruction-2",
+        "train-instruction-5"
+      ]
+    },
+    {
+      "step": 421,
+      "nll": 0.05805167555809021,
+      "targets": 369,
+      "document_ids": [
+        "train-correction-3",
+        "train-uncertainty-0"
+      ]
+    },
+    {
+      "step": 422,
+      "nll": 0.08378338813781738,
+      "targets": 201,
+      "document_ids": [
+        "train-factual-5",
+        "train-math-1"
+      ]
+    },
+    {
+      "step": 423,
+      "nll": 0.0758906826376915,
+      "targets": 453,
+      "document_ids": [
+        "train-exact-3",
+        "train-distant-6"
+      ]
+    },
+    {
+      "step": 424,
+      "nll": 0.07326775044202805,
+      "targets": 508,
+      "document_ids": [
+        "train-correction-6",
+        "train-correction-7"
+      ]
+    },
+    {
+      "step": 425,
+      "nll": 0.05195040628314018,
+      "targets": 191,
+      "document_ids": [
+        "train-uncertainty-1",
+        "train-math-0"
+      ]
+    },
+    {
+      "step": 426,
+      "nll": 0.08793817460536957,
+      "targets": 277,
+      "document_ids": [
+        "train-exact-5",
+        "train-factual-7"
+      ]
+    },
+    {
+      "step": 427,
+      "nll": 0.06569327414035797,
+      "targets": 379,
+      "document_ids": [
+        "train-correction-2",
+        "train-factual-4"
+      ]
+    },
+    {
+      "step": 428,
+      "nll": 0.052268460392951965,
+      "targets": 219,
+      "document_ids": [
+        "train-refusal-1",
+        "train-math-5"
+      ]
+    },
+    {
+      "step": 429,
+      "nll": 0.06861869245767593,
+      "targets": 426,
+      "document_ids": [
+        "train-factual-1",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 430,
+      "nll": 0.053555216640233994,
+      "targets": 397,
+      "document_ids": [
+        "train-correction-5",
+        "train-refusal-5"
+      ]
+    },
+    {
+      "step": 431,
+      "nll": 0.09268861263990402,
+      "targets": 195,
+      "document_ids": [
+        "train-factual-0",
+        "train-instruction-3"
+      ]
+    },
+    {
+      "step": 432,
+      "nll": 0.08661297708749771,
+      "targets": 438,
+      "document_ids": [
+        "train-distant-3",
+        "train-exact-1"
+      ]
+    },
+    {
+      "step": 433,
+      "nll": 0.08785746246576309,
+      "targets": 228,
+      "document_ids": [
+        "train-exact-6",
+        "train-math-3"
+      ]
+    },
+    {
+      "step": 434,
+      "nll": 0.0841340497136116,
+      "targets": 228,
+      "document_ids": [
+        "train-exact-7",
+        "train-math-6"
+      ]
+    },
+    {
+      "step": 435,
+      "nll": 0.06880053877830505,
+      "targets": 185,
+      "document_ids": [
+        "train-uncertainty-5",
+        "train-instruction-4"
+      ]
+    },
+    {
+      "step": 436,
+      "nll": 0.04763518273830414,
+      "targets": 230,
+      "document_ids": [
+        "train-uncertainty-6",
+        "train-uncertainty-4"
+      ]
+    },
+    {
+      "step": 437,
+      "nll": 0.06769245117902756,
+      "targets": 540,
+      "document_ids": [
+        "train-correction-1",
+        "train-distant-5"
+      ]
+    },
+    {
+      "step": 438,
+      "nll": 0.08076557517051697,
+      "targets": 295,
+      "document_ids": [
+        "train-refusal-0",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 439,
+      "nll": 0.0465259850025177,
+      "targets": 258,
+      "document_ids": [
+        "train-uncertainty-3",
+        "train-refusal-4"
+      ]
+    },
+    {
+      "step": 440,
+      "nll": 0.06919290125370026,
+      "targets": 411,
+      "document_ids": [
+        "train-distant-0",
+        "train-factual-2"
+      ]
+    },
+    {
+      "step": 441,
+      "nll": 0.10868427902460098,
+      "targets": 140,
+      "document_ids": [
+        "train-instruction-6",
+        "train-instruction-0"
+      ]
+    },
+    {
+      "step": 442,
+      "nll": 0.07284309715032578,
+      "targets": 429,
+      "document_ids": [
+        "train-distant-4",
+        "train-refusal-2"
+      ]
+    },
+    {
+      "step": 443,
+      "nll": 0.06059085205197334,
+      "targets": 213,
+      "document_ids": [
+        "train-refusal-3",
+        "train-instruction-1"
+      ]
+    },
+    {
+      "step": 444,
+      "nll": 0.06569893658161163,
+      "targets": 240,
+      "document_ids": [
+        "train-uncertainty-2",
+        "train-factual-6"
+      ]
+    },
+    {
+      "step": 445,
+      "nll": 0.08420112729072571,
+      "targets": 379,
+      "document_ids": [
+        "train-correction-0",
+        "train-factual-3"
+      ]
+    },
+    {
+      "step": 446,
+      "nll": 0.07932766526937485,
+      "targets": 146,
+      "document_ids": [
+        "train-instruction-7",
+        "train-math-7"
+      ]
+    },
+    {
+      "step": 447,
+      "nll": 0.08765073120594025,
+      "targets": 438,
+      "document_ids": [
+        "train-exact-4",
+        "train-distant-2"
+      ]
+    },
+    {
+      "step": 448,
+      "nll": 0.07163374125957489,
+      "targets": 377,
+      "document_ids": [
+        "train-distant-1",
+        "train-math-4"
+      ]
+    },
+    {
+      "step": 449,
+      "nll": 0.07057496905326843,
+      "targets": 146,
+      "document_ids": [
+        "train-instruction-6",
+        "train-math-1"
+      ]
+    },
+    {
+      "step": 450,
+      "nll": 0.054831258952617645,
+      "targets": 429,
+      "document_ids": [
+        "train-distant-4",
+        "train-refusal-1"
+      ]
+    },
+    {
+      "step": 451,
+      "nll": 0.05521770194172859,
+      "targets": 377,
+      "document_ids": [
+        "train-math-3",
+        "train-distant-6"
+      ]
+    },
+    {
+      "step": 452,
+      "nll": 0.06298138946294785,
+      "targets": 152,
+      "document_ids": [
+        "train-math-6",
+        "train-math-2"
+      ]
+    },
+    {
+      "step": 453,
+      "nll": 0.07307878881692886,
+      "targets": 540,
+      "document_ids": [
+        "train-distant-0",
+        "train-correction-4"
+      ]
+    },
+    {
+      "step": 454,
+      "nll": 0.06975142657756805,
+      "targets": 508,
+      "document_ids": [
+        "train-correction-5",
+        "train-correction-1"
+      ]
+    },
+    {
+      "step": 455,
+      "nll": 0.06518567353487015,
+      "targets": 429,
+      "document_ids": [
+        "train-distant-5",
+        "train-refusal-3"
+      ]
+    },
+    {
+      "step": 456,
+      "nll": 0.0785149559378624,
+      "targets": 250,
+      "document_ids": [
+        "train-factual-6",
+        "train-factual-7"
+      ]
+    },
+    {
+      "step": 457,
+      "nll": 0.08172637969255447,
+      "targets": 295,
+      "document_ids": [
+        "train-refusal-0",
+        "train-exact-3"
+      ]
+    },
+    {
+      "step": 458,
+      "nll": 0.08258802443742752,
+      "targets": 295,
+      "document_ids": [
+        "train-exact-2",
+        "train-refusal-5"
+      ]
+    },
+    {
+      "step": 459,
+      "nll": 0.06074642390012741,
+      "targets": 240,
+      "document_ids": [
+        "train-factual-4",
+        "train-uncertainty-6"
+      ]
+    },
+    {
+      "step": 460,
+      "nll": 0.08920024335384369,
+      "targets": 228,
+      "document_ids": [
+        "train-exact-5",
+        "train-math-5"
+      ]
+    },
+    {
+      "step": 461,
+      "nll": 0.07063812017440796,
+      "targets": 295,
+      "document_ids": [
+        "train-refusal-7",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 462,
+      "nll": 0.07276105880737305,
+      "targets": 411,
+      "document_ids": [
+        "train-distant-3",
+        "train-factual-2"
+      ]
+    },
+    {
+      "step": 463,
+      "nll": 0.06119721755385399,
+      "targets": 369,
+      "document_ids": [
+        "train-uncertainty-7",
+        "train-correction-0"
+      ]
+    },
+    {
+      "step": 464,
+      "nll": 0.05912098288536072,
+      "targets": 444,
+      "document_ids": [
+        "train-distant-1",
+        "train-refusal-4"
+      ]
+    },
+    {
+      "step": 465,
+      "nll": 0.05938207730650902,
+      "targets": 240,
+      "document_ids": [
+        "train-uncertainty-4",
+        "train-factual-3"
+      ]
+    },
+    {
+      "step": 466,
+      "nll": 0.09559901058673859,
+      "targets": 222,
+      "document_ids": [
+        "train-exact-6",
+        "train-instruction-3"
+      ]
+    },
+    {
+      "step": 467,
+      "nll": 0.051993321627378464,
+      "targets": 219,
+      "document_ids": [
+        "train-math-0",
+        "train-refusal-6"
+      ]
+    },
+    {
+      "step": 468,
+      "nll": 0.07103752344846725,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-4",
+        "train-correction-3"
+      ]
+    },
+    {
+      "step": 469,
+      "nll": 0.0777149572968483,
+      "targets": 250,
+      "document_ids": [
+        "train-factual-5",
+        "train-factual-1"
+      ]
+    },
+    {
+      "step": 470,
+      "nll": 0.057998888194561005,
+      "targets": 240,
+      "document_ids": [
+        "train-uncertainty-1",
+        "train-factual-0"
+      ]
+    },
+    {
+      "step": 471,
+      "nll": 0.07767220586538315,
+      "targets": 377,
+      "document_ids": [
+        "train-math-7",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 472,
+      "nll": 0.09852346032857895,
+      "targets": 222,
+      "document_ids": [
+        "train-instruction-2",
+        "train-exact-1"
+      ]
+    },
+    {
+      "step": 473,
+      "nll": 0.06661800295114517,
+      "targets": 295,
+      "document_ids": [
+        "train-exact-7",
+        "train-refusal-2"
+      ]
+    },
+    {
+      "step": 474,
+      "nll": 0.05446476861834526,
+      "targets": 191,
+      "document_ids": [
+        "train-math-4",
+        "train-uncertainty-2"
+      ]
+    },
+    {
+      "step": 475,
+      "nll": 0.1099502444267273,
+      "targets": 140,
+      "document_ids": [
+        "train-instruction-7",
+        "train-instruction-0"
+      ]
+    },
+    {
+      "step": 476,
+      "nll": 0.09481033682823181,
+      "targets": 324,
+      "document_ids": [
+        "train-correction-6",
+        "train-instruction-4"
+      ]
+    },
+    {
+      "step": 477,
+      "nll": 0.06253964453935623,
+      "targets": 185,
+      "document_ids": [
+        "train-instruction-1",
+        "train-uncertainty-5"
+      ]
+    },
+    {
+      "step": 478,
+      "nll": 0.06299762427806854,
+      "targets": 185,
+      "document_ids": [
+        "train-uncertainty-3",
+        "train-instruction-5"
+      ]
+    },
+    {
+      "step": 479,
+      "nll": 0.06114321947097778,
+      "targets": 369,
+      "document_ids": [
+        "train-uncertainty-0",
+        "train-correction-7"
+      ]
+    },
+    {
+      "step": 480,
+      "nll": 0.08903137594461441,
+      "targets": 540,
+      "document_ids": [
+        "train-correction-2",
+        "train-distant-2"
+      ]
+    },
+    {
+      "step": 481,
+      "nll": 0.06436298042535782,
+      "targets": 508,
+      "document_ids": [
+        "train-correction-2",
+        "train-correction-3"
+      ]
+    },
+    {
+      "step": 482,
+      "nll": 0.0795188620686531,
+      "targets": 379,
+      "document_ids": [
+        "train-correction-4",
+        "train-factual-4"
+      ]
+    },
+    {
+      "step": 483,
+      "nll": 0.09037712961435318,
+      "targets": 222,
+      "document_ids": [
+        "train-instruction-0",
+        "train-exact-4"
+      ]
+    },
+    {
+      "step": 484,
+      "nll": 0.07117801159620285,
+      "targets": 406,
+      "document_ids": [
+        "train-exact-7",
+        "train-correction-0"
+      ]
+    },
+    {
+      "step": 485,
+      "nll": 0.0754350796341896,
+      "targets": 453,
+      "document_ids": [
+        "train-exact-1",
+        "train-distant-7"
+      ]
+    },
+    {
+      "step": 486,
+      "nll": 0.08677186071872711,
+      "targets": 195,
+      "document_ids": [
+        "train-factual-7",
+        "train-instruction-6"
+      ]
+    },
+    {
+      "step": 487,
+      "nll": 0.0672135129570961,
+      "targets": 587,
+      "document_ids": [
+        "train-distant-0",
+        "train-distant-6"
+      ]
+    },
+    {
+      "step": 488,
+      "nll": 0.07900991290807724,
+      "targets": 152,
+      "document_ids": [
+        "train-math-3",
+        "train-math-2"
+      ]
+    },
+    {
+      "step": 489,
+      "nll": 0.07769422978162766,
+      "targets": 201,
+      "document_ids": [
+        "train-factual-3",
+        "train-math-4"
+      ]
+    },
+    {
+      "step": 490,
+      "nll": 0.06307648867368698,
+      "targets": 406,
+      "document_ids": [
+        "train-correction-7",
+        "train-exact-3"
+      ]
+    },
+    {
+      "step": 491,
+      "nll": 0.06416042894124985,
+      "targets": 267,
+      "document_ids": [
+        "train-exact-6",
+        "train-uncertainty-0"
+      ]
+    },
+    {
+      "step": 492,
+      "nll": 0.07577943056821823,
+      "targets": 195,
+      "document_ids": [
+        "train-factual-2",
+        "train-instruction-7"
+      ]
+    },
+    {
+      "step": 493,
+      "nll": 0.08191006630659103,
+      "targets": 277,
+      "document_ids": [
+        "train-factual-5",
+        "train-exact-5"
+      ]
+    },
+    {
+      "step": 494,
+      "nll": 0.048439763486385345,
+      "targets": 230,
+      "document_ids": [
+        "train-uncertainty-3",
+        "train-uncertainty-1"
+      ]
+    },
+    {
+      "step": 495,
+      "nll": 0.0647103562951088,
+      "targets": 267,
+      "document_ids": [
+        "train-uncertainty-6",
+        "train-exact-2"
+      ]
+    },
+    {
+      "step": 496,
+      "nll": 0.07654497772455215,
+      "targets": 219,
+      "document_ids": [
+        "train-refusal-1",
+        "train-math-0"
+      ]
+    },
+    {
+      "step": 497,
+      "nll": 0.08721651136875153,
+      "targets": 540,
+      "document_ids": [
+        "train-correction-5",
+        "train-distant-4"
+      ]
+    },
+    {
+      "step": 498,
+      "nll": 0.04650433361530304,
+      "targets": 191,
+      "document_ids": [
+        "train-math-5",
+        "train-uncertainty-7"
+      ]
+    },
+    {
+      "step": 499,
+      "nll": 0.07162317633628845,
+      "targets": 397,
+      "document_ids": [
+        "train-correction-6",
+        "train-refusal-6"
+      ]
+    },
+    {
+      "step": 500,
+      "nll": 0.07077424228191376,
+      "targets": 185,
+      "document_ids": [
+        "train-instruction-5",
+        "train-uncertainty-5"
+      ]
+    },
+    {
+      "step": 501,
+      "nll": 0.04255944862961769,
+      "targets": 191,
+      "document_ids": [
+        "train-math-6",
+        "train-uncertainty-2"
+      ]
+    },
+    {
+      "step": 502,
+      "nll": 0.06415676325559616,
+      "targets": 411,
+      "document_ids": [
+        "train-distant-3",
+        "train-factual-0"
+      ]
+    },
+    {
+      "step": 503,
+      "nll": 0.09074679762125015,
+      "targets": 146,
+      "document_ids": [
+        "train-math-1",
+        "train-instruction-3"
+      ]
+    },
+    {
+      "step": 504,
+      "nll": 0.0471062958240509,
+      "targets": 258,
+      "document_ids": [
+        "train-refusal-2",
+        "train-uncertainty-4"
+      ]
+    },
+    {
+      "step": 505,
+      "nll": 0.11886521428823471,
+      "targets": 140,
+      "document_ids": [
+        "train-instruction-4",
+        "train-instruction-1"
+      ]
+    },
+    {
+      "step": 506,
+      "nll": 0.05921191722154617,
+      "targets": 429,
+      "document_ids": [
+        "train-refusal-5",
+        "train-distant-2"
+      ]
+    },
+    {
+      "step": 507,
+      "nll": 0.04467550665140152,
+      "targets": 286,
+      "document_ids": [
+        "train-refusal-3",
+        "train-refusal-7"
+      ]
+    },
+    {
+      "step": 508,
+      "nll": 0.10529304295778275,
+      "targets": 453,
+      "document_ids": [
+        "train-distant-1",
+        "train-exact-0"
+      ]
+    },
+    {
+      "step": 509,
+      "nll": 0.06613054871559143,
+      "targets": 268,
+      "document_ids": [
+        "train-factual-6",
+        "train-refusal-0"
+      ]
+    },
+    {
+      "step": 510,
+      "nll": 0.04661857336759567,
+      "targets": 219,
+      "document_ids": [
+        "train-math-7",
+        "train-refusal-4"
+      ]
+    },
+    {
+      "step": 511,
+      "nll": 0.06839469075202942,
+      "targets": 356,
+      "document_ids": [
+        "train-distant-5",
+        "train-instruction-2"
+      ]
+    },
+    {
+      "step": 512,
+      "nll": 0.09229482710361481,
+      "targets": 379,
+      "document_ids": [
+        "train-correction-1",
+        "train-factual-1"
+      ]
+    }
+  ]
+}

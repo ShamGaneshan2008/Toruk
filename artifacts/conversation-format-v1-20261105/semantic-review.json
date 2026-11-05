@@ -1,0 +1,30 @@
+{
+  "scope": "Post-hoc human review of retained raw answers; never used by training or frozen gates",
+  "primary": {
+    "owned_candidate": {
+      "content_correct": 0,
+      "unknown_proxy_failures": 3,
+      "unknown_semantic_false_assertions": "indeterminate: three malformed fragments",
+      "incorrect_contextual_label_assertions": 3
+    },
+    "external_qwen": {
+      "strict_exact": 20,
+      "semantic_correct": 21,
+      "unknown_false_assertions": 0,
+      "stale_corrections": 3,
+      "prose_arithmetic": "The sum of 9 plus 9 is 18."
+    }
+  },
+  "regression": {
+    "owned_candidate": {
+      "strict_exact": 0,
+      "full_refusal_history": "input-limit error"
+    },
+    "external_qwen": {
+      "strict_exact": 13,
+      "semantic_correct": 18,
+      "unknown_false_assertions": 0,
+      "full_refusal_answer": "The sum of 5 and 5 is 10."
+    }
+  }
+}

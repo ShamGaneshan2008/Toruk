@@ -1,0 +1,506 @@
+[
+  {
+    "id": "fresh-test-instruction-0",
+    "split": "test",
+    "category": "instruction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply only Hvalueinstruction0."
+      }
+    ],
+    "answer": "Hvalueinstruction0",
+    "prefix": "user:\"Reply only Hvalueinstruction0.\"\nassistant:",
+    "text": "user:\"Reply only Hvalueinstruction0.\"\nassistant:\"Hvalueinstruction0\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-instruction-1",
+    "split": "test",
+    "category": "instruction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply only Hvalueinstruction1."
+      }
+    ],
+    "answer": "Hvalueinstruction1",
+    "prefix": "user:\"Reply only Hvalueinstruction1.\"\nassistant:",
+    "text": "user:\"Reply only Hvalueinstruction1.\"\nassistant:\"Hvalueinstruction1\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-instruction-2",
+    "split": "test",
+    "category": "instruction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply only Hvalueinstruction2."
+      }
+    ],
+    "answer": "Hvalueinstruction2",
+    "prefix": "user:\"Reply only Hvalueinstruction2.\"\nassistant:",
+    "text": "user:\"Reply only Hvalueinstruction2.\"\nassistant:\"Hvalueinstruction2\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-factual-0",
+    "split": "test",
+    "category": "factual",
+    "messages": [
+      {
+        "role": "user",
+        "content": "The label for Hpersonfactual0 is Hvaluefactual0. What is its label? Reply only the label."
+      }
+    ],
+    "answer": "Hvaluefactual0",
+    "prefix": "user:\"The label for Hpersonfactual0 is Hvaluefactual0. What is its label? Reply only the label.\"\nassistant:",
+    "text": "user:\"The label for Hpersonfactual0 is Hvaluefactual0. What is its label? Reply only the label.\"\nassistant:\"Hvaluefactual0\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-factual-1",
+    "split": "test",
+    "category": "factual",
+    "messages": [
+      {
+        "role": "user",
+        "content": "The label for Hpersonfactual1 is Hvaluefactual1. What is its label? Reply only the label."
+      }
+    ],
+    "answer": "Hvaluefactual1",
+    "prefix": "user:\"The label for Hpersonfactual1 is Hvaluefactual1. What is its label? Reply only the label.\"\nassistant:",
+    "text": "user:\"The label for Hpersonfactual1 is Hvaluefactual1. What is its label? Reply only the label.\"\nassistant:\"Hvaluefactual1\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-factual-2",
+    "split": "test",
+    "category": "factual",
+    "messages": [
+      {
+        "role": "user",
+        "content": "The label for Hpersonfactual2 is Hvaluefactual2. What is its label? Reply only the label."
+      }
+    ],
+    "answer": "Hvaluefactual2",
+    "prefix": "user:\"The label for Hpersonfactual2 is Hvaluefactual2. What is its label? Reply only the label.\"\nassistant:",
+    "text": "user:\"The label for Hpersonfactual2 is Hvaluefactual2. What is its label? Reply only the label.\"\nassistant:\"Hvaluefactual2\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-uncertainty-0",
+    "split": "test",
+    "category": "uncertainty",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is Hpersonuncertainty0's unseen label? If missing, reply only Unavailable."
+      }
+    ],
+    "answer": "Unavailable.",
+    "prefix": "user:\"What is Hpersonuncertainty0's unseen label? If missing, reply only Unavailable.\"\nassistant:",
+    "text": "user:\"What is Hpersonuncertainty0's unseen label? If missing, reply only Unavailable.\"\nassistant:\"Unavailable.\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-uncertainty-1",
+    "split": "test",
+    "category": "uncertainty",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is Hpersonuncertainty1's unseen label? If missing, reply only Unavailable."
+      }
+    ],
+    "answer": "Unavailable.",
+    "prefix": "user:\"What is Hpersonuncertainty1's unseen label? If missing, reply only Unavailable.\"\nassistant:",
+    "text": "user:\"What is Hpersonuncertainty1's unseen label? If missing, reply only Unavailable.\"\nassistant:\"Unavailable.\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-uncertainty-2",
+    "split": "test",
+    "category": "uncertainty",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is Hpersonuncertainty2's unseen label? If missing, reply only Unavailable."
+      }
+    ],
+    "answer": "Unavailable.",
+    "prefix": "user:\"What is Hpersonuncertainty2's unseen label? If missing, reply only Unavailable.\"\nassistant:",
+    "text": "user:\"What is Hpersonuncertainty2's unseen label? If missing, reply only Unavailable.\"\nassistant:\"Unavailable.\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-correction-0",
+    "split": "test",
+    "category": "correction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersoncorrection0's label is Holdcorrection0."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Correction: the label is now Hvaluecorrection0."
+      },
+      {
+        "role": "assistant",
+        "content": "Updated."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersoncorrection0's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Hvaluecorrection0",
+    "prefix": "user:\"Hpersoncorrection0's label is Holdcorrection0.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Hvaluecorrection0.\"\nassistant:\"Updated.\"\nuser:\"What is Hpersoncorrection0's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersoncorrection0's label is Holdcorrection0.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Hvaluecorrection0.\"\nassistant:\"Updated.\"\nuser:\"What is Hpersoncorrection0's label? Reply only the exact label.\"\nassistant:\"Hvaluecorrection0\"\n",
+    "obsolete": "Holdcorrection0"
+  },
+  {
+    "id": "fresh-test-correction-1",
+    "split": "test",
+    "category": "correction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersoncorrection1's label is Holdcorrection1."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Correction: the label is now Hvaluecorrection1."
+      },
+      {
+        "role": "assistant",
+        "content": "Updated."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersoncorrection1's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Hvaluecorrection1",
+    "prefix": "user:\"Hpersoncorrection1's label is Holdcorrection1.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Hvaluecorrection1.\"\nassistant:\"Updated.\"\nuser:\"What is Hpersoncorrection1's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersoncorrection1's label is Holdcorrection1.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Hvaluecorrection1.\"\nassistant:\"Updated.\"\nuser:\"What is Hpersoncorrection1's label? Reply only the exact label.\"\nassistant:\"Hvaluecorrection1\"\n",
+    "obsolete": "Holdcorrection1"
+  },
+  {
+    "id": "fresh-test-correction-2",
+    "split": "test",
+    "category": "correction",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersoncorrection2's label is Holdcorrection2."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Correction: the label is now Hvaluecorrection2."
+      },
+      {
+        "role": "assistant",
+        "content": "Updated."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersoncorrection2's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Hvaluecorrection2",
+    "prefix": "user:\"Hpersoncorrection2's label is Holdcorrection2.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Hvaluecorrection2.\"\nassistant:\"Updated.\"\nuser:\"What is Hpersoncorrection2's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersoncorrection2's label is Holdcorrection2.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Hvaluecorrection2.\"\nassistant:\"Updated.\"\nuser:\"What is Hpersoncorrection2's label? Reply only the exact label.\"\nassistant:\"Hvaluecorrection2\"\n",
+    "obsolete": "Holdcorrection2"
+  },
+  {
+    "id": "fresh-test-distant-0",
+    "split": "test",
+    "category": "distant",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersondistant0's label is Hvaluedistant0."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain "
+      },
+      {
+        "role": "assistant",
+        "content": "Noted."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersondistant0's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Hvaluedistant0",
+    "prefix": "user:\"Hpersondistant0's label is Hvaluedistant0.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Hpersondistant0's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersondistant0's label is Hvaluedistant0.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Hpersondistant0's label? Reply only the exact label.\"\nassistant:\"Hvaluedistant0\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-distant-1",
+    "split": "test",
+    "category": "distant",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersondistant1's label is Hvaluedistant1."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain "
+      },
+      {
+        "role": "assistant",
+        "content": "Noted."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersondistant1's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Hvaluedistant1",
+    "prefix": "user:\"Hpersondistant1's label is Hvaluedistant1.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Hpersondistant1's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersondistant1's label is Hvaluedistant1.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Hpersondistant1's label? Reply only the exact label.\"\nassistant:\"Hvaluedistant1\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-distant-2",
+    "split": "test",
+    "category": "distant",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersondistant2's label is Hvaluedistant2."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "Unrelated note: cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud "
+      },
+      {
+        "role": "assistant",
+        "content": "Noted."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersondistant2's label? Reply only the exact label."
+      }
+    ],
+    "answer": "Hvaluedistant2",
+    "prefix": "user:\"Hpersondistant2's label is Hvaluedistant2.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud \"\nassistant:\"Noted.\"\nuser:\"What is Hpersondistant2's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersondistant2's label is Hvaluedistant2.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud \"\nassistant:\"Noted.\"\nuser:\"What is Hpersondistant2's label? Reply only the exact label.\"\nassistant:\"Hvaluedistant2\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-exact-0",
+    "split": "test",
+    "category": "exact",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersonexact0's label is H/Q-0_x!."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersonexact0's label? Reply only the exact label."
+      }
+    ],
+    "answer": "H/Q-0_x!",
+    "prefix": "user:\"Hpersonexact0's label is H/Q-0_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Hpersonexact0's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersonexact0's label is H/Q-0_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Hpersonexact0's label? Reply only the exact label.\"\nassistant:\"H/Q-0_x!\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-exact-1",
+    "split": "test",
+    "category": "exact",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersonexact1's label is H/Q-1_x!."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersonexact1's label? Reply only the exact label."
+      }
+    ],
+    "answer": "H/Q-1_x!",
+    "prefix": "user:\"Hpersonexact1's label is H/Q-1_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Hpersonexact1's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersonexact1's label is H/Q-1_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Hpersonexact1's label? Reply only the exact label.\"\nassistant:\"H/Q-1_x!\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-exact-2",
+    "split": "test",
+    "category": "exact",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hpersonexact2's label is H/Q-2_x!."
+      },
+      {
+        "role": "assistant",
+        "content": "Recorded."
+      },
+      {
+        "role": "user",
+        "content": "What is Hpersonexact2's label? Reply only the exact label."
+      }
+    ],
+    "answer": "H/Q-2_x!",
+    "prefix": "user:\"Hpersonexact2's label is H/Q-2_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Hpersonexact2's label? Reply only the exact label.\"\nassistant:",
+    "text": "user:\"Hpersonexact2's label is H/Q-2_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Hpersonexact2's label? Reply only the exact label.\"\nassistant:\"H/Q-2_x!\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-math-0",
+    "split": "test",
+    "category": "math",
+    "messages": [
+      {
+        "role": "user",
+        "content": "For Hpersonmath0, what is 9+9? Reply only the number."
+      }
+    ],
+    "answer": "18",
+    "prefix": "user:\"For Hpersonmath0, what is 9+9? Reply only the number.\"\nassistant:",
+    "text": "user:\"For Hpersonmath0, what is 9+9? Reply only the number.\"\nassistant:\"18\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-math-1",
+    "split": "test",
+    "category": "math",
+    "messages": [
+      {
+        "role": "user",
+        "content": "For Hpersonmath1, what is 9+9? Reply only the number."
+      }
+    ],
+    "answer": "18",
+    "prefix": "user:\"For Hpersonmath1, what is 9+9? Reply only the number.\"\nassistant:",
+    "text": "user:\"For Hpersonmath1, what is 9+9? Reply only the number.\"\nassistant:\"18\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-math-2",
+    "split": "test",
+    "category": "math",
+    "messages": [
+      {
+        "role": "user",
+        "content": "For Hpersonmath2, what is 9+9? Reply only the number."
+      }
+    ],
+    "answer": "18",
+    "prefix": "user:\"For Hpersonmath2, what is 9+9? Reply only the number.\"\nassistant:",
+    "text": "user:\"For Hpersonmath2, what is 9+9? Reply only the number.\"\nassistant:\"18\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-refusal-0",
+    "split": "test",
+    "category": "refusal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "open YouTube"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot access online content."
+      },
+      {
+        "role": "user",
+        "content": "what is 9+9"
+      }
+    ],
+    "answer": "18",
+    "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"what is 9+9\"\nassistant:",
+    "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"what is 9+9\"\nassistant:\"18\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-refusal-1",
+    "split": "test",
+    "category": "refusal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "open YouTube"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot access online content."
+      },
+      {
+        "role": "user",
+        "content": "For Hpersonrefusal1, what is 9+9? Reply only the number."
+      }
+    ],
+    "answer": "18",
+    "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Hpersonrefusal1, what is 9+9? Reply only the number.\"\nassistant:",
+    "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Hpersonrefusal1, what is 9+9? Reply only the number.\"\nassistant:\"18\"\n",
+    "obsolete": ""
+  },
+  {
+    "id": "fresh-test-refusal-2",
+    "split": "test",
+    "category": "refusal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "open YouTube"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot access online content."
+      },
+      {
+        "role": "user",
+        "content": "For Hpersonrefusal2, what is 9+9? Reply only the number."
+      }
+    ],
+    "answer": "18",
+    "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Hpersonrefusal2, what is 9+9? Reply only the number.\"\nassistant:",
+    "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Hpersonrefusal2, what is 9+9? Reply only the number.\"\nassistant:\"18\"\n",
+    "obsolete": ""
+  }
+]

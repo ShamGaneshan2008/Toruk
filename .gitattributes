@@ -46,3 +46,12 @@
 /docs/research/recall-v1-protocol.md -text
 /docs/research/recall-v2-protocol.md -text
 /artifacts/checks/recall-ci-integration-20261104/** -text whitespace=cr-at-eol
+# Preserve this pilot's hash-bound evidence and literal saved Git patch.
+/artifacts/conversation-format-v1-20261105/** -text whitespace=cr-at-eol
+/artifacts/checks/prepush-ci-20261105/** -text whitespace=cr-at-eol
+/artifacts/checks/repository-review-265f881/** -text whitespace=cr-at-eol
+/artifacts/conversation-format-v1-20261105/starting-diff.patch -whitespace
+/artifacts/conversation-format-v1-20261105/commands.md whitespace=cr-at-eol,-blank-at-eof
+/artifacts/conversation-format-v1-20261105/metrics.md whitespace=cr-at-eol,-blank-at-eof
+/scripts/conversation_format_study.py text eol=lf
+/docs/research/conversation-format-v1-protocol.md text eol=lf

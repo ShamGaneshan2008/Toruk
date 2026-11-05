@@ -21,8 +21,11 @@ backbone. See the [design and measured results](docs/research/owned-lm-v1-result
 
 The [conversational readiness audit](docs/research/conversation-readiness-v1-results.md)
 adds a synthetic role-formatted data pipeline and a strict inherited-data exposure
-gate. Conversational training remains blocked under that gate; no trained chat
-pilot or new default chat model is claimed.
+gate. That historical checkpoint remains ineligible for conversational training.
+A subsequent [bounded conversation-framing pilot](docs/research/conversation-format-v1-results.md)
+trains clean random initializations: valid response framing improves from 0/24
+to 20/24, but answer accuracy remains 0/24. Its chat integration gate fails;
+the pretrained chat path remains the working option.
 
 ## Implemented conversational chat flow
 

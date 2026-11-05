@@ -1,0 +1,20 @@
+UP012 [*] Unnecessary UTF-8 `encoding` argument to `encode`
+   --> src\toruk_lm\inference_server.py:174:66
+    |
+172 |                 return
+173 |             supplied = self.headers.get("Authorization", "")
+174 |             if not hmac.compare_digest(supplied.encode("utf-8"), f"Bearer {token}".encode("utf-8")):
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+175 |                 self._json(HTTPStatus.UNAUTHORIZED, {"error": "Unauthorized."})
+176 |                 return
+    |
+help: Remove unnecessary `encoding` argument
+    |
+173 |             supplied = self.headers.get("Authorization", "")
+    -             if not hmac.compare_digest(supplied.encode("utf-8"), f"Bearer {token}".encode("utf-8")):
+174 +             if not hmac.compare_digest(supplied.encode("utf-8"), f"Bearer {token}".encode()):
+175 |                 self._json(HTTPStatus.UNAUTHORIZED, {"error": "Unauthorized."})
+    |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

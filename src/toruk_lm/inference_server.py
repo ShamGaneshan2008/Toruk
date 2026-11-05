@@ -171,7 +171,7 @@ def make_handler(
                 self._json(HTTPStatus.NOT_FOUND, {"error": "Not found."})
                 return
             supplied = self.headers.get("Authorization", "")
-            if not hmac.compare_digest(supplied, f"Bearer {token}"):
+            if not hmac.compare_digest(supplied.encode("utf-8"), f"Bearer {token}".encode()):
                 self._json(HTTPStatus.UNAUTHORIZED, {"error": "Unauthorized."})
                 return
             if backend is None or not getattr(backend, "ready", True):

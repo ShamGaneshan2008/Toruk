@@ -1,0 +1,71 @@
+{
+  "schema": "toruk-conversation-format-v1",
+  "sources": {
+    "docs\\research\\conversation-format-v1-protocol.md": "032fcf17a542b3cf306105ddda8f6531de6ccae13e89693ee2b6ded33ede5104",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\scripts\\conversation_format_study.py": "f3fd4da69329be7e74c41b3df0334a5400b02ddd21e26a2cefd76decded213ff"
+  },
+  "runtime": {
+    "owned_lm.py": "290c88f4d654f78e57184d8137ae5b80d51ce0c6e26d3671bce8cec194e375f6",
+    "owned_data.py": "5f39c8c455928ef3ff1e7b4a2811ad182dfcfc4c7b92c8550f4bccc497b63a44",
+    "owned_training.py": "5c4e51f280fcc496fb709c62f8424448fa3e6b1776b593cde15e98e306c7dd26",
+    "model.py": "df9266dc010064fbd6dde9727247312c1c9a177d609c5ea7fee7100602bfe673",
+    "recurrent.py": "44700d91ada2496b0c63966d09b6ecb2d557510138d6d7849bd84da71bb5d47c",
+    "engine.py": "daff977dd7fa49d54d852b3a28c72a41bc5bf9a0c844dc9f517e5b8b26a6bc61",
+    "tokenizer.py": "e22977465d986dadb601095eeae1aa55f74eedd39897de0a6d52657c863f1434"
+  },
+  "data_audit": {
+    "status": "PASS",
+    "format": "toruk-json-role-lines-v1",
+    "answer_matches": 0,
+    "counts": {
+      "train": 64,
+      "development": 16,
+      "test": 49
+    },
+    "digests": {
+      "train": "8cc9056ec56c72e97f6038ff51effd7bf95a0f1ff47468fa80d2e17a97a6a5e7",
+      "development": "ed7a52fd875e083a3989248fe4df8b4c9877828f861b28d5ac7f7f7040b90c6c",
+      "test": "b3d5f995311729709dfddd4555b39edfaa226bad7c7292d1114b892da7c8d144"
+    }
+  },
+  "starting_commit": "265f88137f41b5a646ec56c232b4bd1b49dadd38",
+  "model": {
+    "context": 32,
+    "width": 32,
+    "heads": 4,
+    "layers": 2,
+    "slots": 4,
+    "max_document_tokens": 384
+  },
+  "seed": 31,
+  "steps": 512,
+  "batch": 2,
+  "learning_rate": 0.003,
+  "budget": 32,
+  "data": {
+    "candidate": "8cc9056ec56c72e97f6038ff51effd7bf95a0f1ff47468fa80d2e17a97a6a5e7",
+    "control": "f67467796a8fa1e219dc070a1c3811fb8bb50856f264e8cc33fde3d9895ca567",
+    "development": "ed7a52fd875e083a3989248fe4df8b4c9877828f861b28d5ac7f7f7040b90c6c",
+    "primary": "151be705d7f7da7b610052c2305cc1a765aa3d51046300508fe7a45be6257c7a",
+    "regression": "e2c080ce076391e9df4393bd0787ce4653ddd27a422dfcaaeaa0a1e3ba63ffe0"
+  },
+  "old_checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-memory_on\\checkpoint.pt",
+  "old_sha256": "493572c06e0323ae319f17eed3e56e546c4ebe6068b6af1b02ee785f26fd3e6c",
+  "provenance": {
+    "source_manifest": "artifacts\\conversation-readiness-v1-20261104\\registered\\data\\manifest.json",
+    "sha256": "c4c2098a442cca1175c61ec848997e3a34d5bf46686ba7f42d829b5c05f7b036",
+    "original": {
+      "kind": "original task-generated synthetic examples",
+      "permission": "User explicitly requested creation of small conversation examples",
+      "third_party_corpus": false,
+      "private_transcript_downloads": false,
+      "diagnostic": "Repository probe_refusal_carryover.py prior_refusal scenario; test only"
+    },
+    "new_training_data": false,
+    "license": "Original repository synthetic data; no third-party license added. Repository specifies no project license.",
+    "control_removed_ids": [
+      "train-preservation-4"
+    ],
+    "lineage": "Both new fits random initialization; no inherited weights or optimizer."
+  }
+}

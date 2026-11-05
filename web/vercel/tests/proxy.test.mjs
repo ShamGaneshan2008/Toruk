@@ -12,6 +12,72 @@ const request = (messages, budget = 16) => new Request('http://localhost/api/cha
 const user = [{role: 'user', content: 'hello'}];
 const metrics = {input_tokens: 20, selected_context_tokens: 16, output_tokens: 3, total_tokens: 19, response_ms: 4.5, backend: 'Toruk', model: 'toruk-ordinary-v1:test', backbone: 'Toruk ordinary byte LM', mode: 'BASELINE', memory_used: false, selected_message_ids: ['m0']};
 
+test('long conversations fail visibly instead of silently dropping the earliest turns', async () => {
+  let history = [];
+  for (let i = 0; i < 10; i++) history = completedMessages(pendingMessages(history, `question ${i}`), `answer ${i}`);
+  const pending = pendingMessages(history, 'new question');
+  assert.equal(pending.length, 21);
+  assert.equal(pending[0].content, 'question 0');
+  assert.equal(history.length, 20);
+  const response = await chatResponse(request(pending), {
+    env, fetchImpl: async () => { throw new Error('oversized history reached backend'); },
+  });
+  assert.equal(response.status, 400);
+  assert.match((await response.json()).error, /20 messages/);
+});
+
+test('empty backend replies cannot poison the next browser history', async () => {
+  for (const answer of ['', ' \n\t ']) {
+    const response = await chatResponse(request(user), {
+      env, fetchImpl: async () => Response.json({answer, metrics}), logger: {info(){},error(){}},
+    });
+    assert.equal(response.status, 503);
+    assert.equal((await response.json()).answer, undefined);
+  }
+});
+
+test('backend request errors do not expose private exception details', async () => {
+  const response = await chatResponse(request(user), {
+    env, fetchImpl: async () => Response.json({error: 'private-token C:/private/path'}, {status: 400}),
+  });
+  assert.equal(response.status, 400);
+  assert.doesNotMatch(JSON.stringify(await response.json()), /private-token|private\/path/);
+});
+
+test('chunked request bodies are cancelled when they cross the byte limit', async () => {
+  let pulls = 0;
+  let cancelled = false;
+  const stream = new ReadableStream({
+    pull(controller) {
+      pulls++;
+      controller.enqueue(new Uint8Array(8192));
+      if (pulls === 5) controller.close();
+    },
+    cancel() { cancelled = true; },
+  });
+  const response = await chatResponse(new Request('http://localhost/api/chat', {
+    method: 'POST', body: stream, duplex: 'half',
+  }), {env});
+  assert.equal(response.status, 413);
+  assert.equal(cancelled, true);
+  assert.ok(pulls < 5);
+});
+
+test('impossible token counts, timings and source IDs are rejected', async () => {
+  for (const invalid of [
+    {input_tokens: -1}, {selected_context_tokens: -1}, {output_tokens: -1},
+    {output_tokens: 17, total_tokens: 33}, {total_tokens: 999}, {response_ms: -1},
+    {selected_message_ids: ['m1']}, {selected_message_ids: ['m0', 'm0']},
+    {memory_used: true},
+  ]) {
+    const response = await chatResponse(request(user), {
+      env, fetchImpl: async () => Response.json({answer: 'abc', metrics: {...metrics, ...invalid}}),
+      logger: {info(){},error(){}},
+    });
+    assert.equal(response.status, 503, JSON.stringify(invalid));
+  }
+});
+
 test('unready model has an actionable reason and never forwards backend exception text', async () => {
   for (const code of ['CHECKPOINT_MISSING', 'BACKBONE_MISSING', 'CHAT_DEPENDENCIES_MISSING', 'WORKER_STOPPED', 'unknown-private-code']) {
     const backend = {ready: false, backend: 'Toruk', error_code: code, error: 'private-token C:/private/path raw-exception'};

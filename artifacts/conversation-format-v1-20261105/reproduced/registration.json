@@ -1,0 +1,60 @@
+{
+  "schema": "toruk-conversation-readiness-registration-v1",
+  "config": {
+    "schema": "toruk-conversation-readiness-v1",
+    "seed": 7301,
+    "train_per_category": 8,
+    "development_per_category": 2,
+    "test_per_category": 3,
+    "cpu_threads": 1,
+    "device": "cpu",
+    "max_new_tokens": 16,
+    "max_prompt_bytes": 2048,
+    "max_document_targets": 384,
+    "max_evaluation_seconds": 180,
+    "max_run_disk_bytes": 67108864,
+    "owned_max_rss_bytes": 536870912,
+    "external_max_rss_bytes": 4294967296,
+    "conversational_training_enabled": false,
+    "training_targets_cap": 0,
+    "training_seconds_cap": 0,
+    "future_pilot_proposal": {
+      "steps": 128,
+      "batch_documents": 2,
+      "training_targets_cap": 98304,
+      "wall_seconds_cap": 60,
+      "disk_bytes_cap": 16777216,
+      "rss_bytes_cap": 536870912,
+      "condition": "Requires a new starting checkpoint trained on the audited clean corpus and an explicit weights-only warm-start contract; not executed by this readiness workflow."
+    },
+    "leakage_policy": "Reject complete held-out assistant answers as case-insensitive standalone text in any inherited or new training document; record exact matching rows. Never rewrite a checkpoint's dataset identity.",
+    "product_gate": {
+      "minimum_exact_fraction": 0.8,
+      "minimum_category_fraction": 0.6,
+      "maximum_unsupported_unknown": 0,
+      "maximum_refusal_carryover_errors": 0,
+      "maximum_invalid_outputs": 0,
+      "minimum_termination_fraction": 0.95,
+      "requires_clean_lineage_and_pilot": true
+    }
+  },
+  "checkpoint": "artifacts\\owned-lm-v1-20261104\\primary\\models\\31-memory_on\\checkpoint.pt",
+  "checkpoint_sha256": "493572c06e0323ae319f17eed3e56e546c4ebe6068b6af1b02ee785f26fd3e6c",
+  "checkpoint_dataset": "1b4904b9675af60549e27ad91f03fdaa05c88201d0e9281107863903938cf54d",
+  "parameters": 56064,
+  "training_targets_inherited": 78190,
+  "format": "toruk-json-role-lines-v1",
+  "data_manifest_sha256": "c4c2098a442cca1175c61ec848997e3a34d5bf46686ba7f42d829b5c05f7b036",
+  "refusal_source": "artifacts\\current-state-audit-20261103\\refusal-replay.json",
+  "refusal_source_sha256": "80c2743bd609d08c1915dc232677c4ff84c478d422425d18883e9c1dba7655de",
+  "source": {
+    "src/toruk_lm/conversation_data.py": "4d851968bf82af8307130629333cfa4e81568916d42f91b5dfbbbf4890901b74",
+    "scripts/conversation_readiness.py": "ff6ca97d85d96f0933c31f9bd353bdc39490aded6c821773a5b5259d70a58102",
+    "configs\\conversation-readiness-v1.json": "99fb887efeb37b81fcbb1e7e432235d1886e2de38f161fb8966203be71572901"
+  },
+  "readiness": "BLOCKED",
+  "blocker": "training blocked: inherited checkpoint saw reserved answer text; clean data alone cannot clean its weights",
+  "new_training_targets": 0,
+  "pilot": "NOT_RUN",
+  "product_integration": "BLOCKED"
+}

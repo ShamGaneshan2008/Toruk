@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -15,10 +16,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def sources():
     paths = [ROOT / name for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore")]
-    for directory in ("src", "tests", "scripts", ".github", "configs"):
-        paths.extend((ROOT / directory).rglob("*.py"))
-        paths.extend((ROOT / directory).rglob("*.yml"))
-        paths.extend((ROOT / directory).rglob("*.json"))
+    suffixes = {".py", ".yml", ".yaml", ".json", ".js", ".mjs", ".html", ".css"}
+    generated = {"__pycache__", "node_modules", ".vercel", "build", "dist"}
+    for directory in ("src", "tests", "scripts", ".github", "configs", "web"):
+        for base, directories, names in os.walk(ROOT / directory):
+            directories[:] = sorted(name for name in directories if name not in generated)
+            paths.extend(Path(base) / name for name in names if Path(name).suffix in suffixes)
     return sorted(p for p in paths if p.is_file() and "__pycache__" not in p.parts)
 
 

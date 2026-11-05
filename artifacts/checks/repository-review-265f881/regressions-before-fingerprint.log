@@ -1,0 +1,32 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____ test_check_fingerprint_covers_web_sources_and_ignores_generated_trees ____
+
+tmp_path = WindowsPath('C:/Users/susee/AppData/Local/Temp/pytest-of-susee/pytest-344/test_check_fingerprint_covers_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001EE49D4CE60>
+
+    def test_check_fingerprint_covers_web_sources_and_ignores_generated_trees(tmp_path, monkeypatch):
+        monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[1] / "scripts"))
+        import check
+    
+        monkeypatch.setattr(check, "ROOT", tmp_path)
+        for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore"):
+            (tmp_path / name).write_text("", encoding="utf-8")
+        for name in ("web/vercel/public/index.html", "web/vercel/public/chat_state.js",
+                     "web/vercel/scripts/dev.mjs", "web/vercel/package.json"):
+            path = tmp_path / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("initial", encoding="utf-8")
+        original = check.source_identity()
+        changed = tmp_path / "web/vercel/public/chat_state.js"
+>       assert changed.relative_to(tmp_path).as_posix() in original["source_files"]
+E       AssertionError: assert 'web/vercel/public/chat_state.js' in {'.gitignore': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'main.py': 'e3b0c44298fc1c149afbf4c...7ae41e4649b934ca495991b7852b855', 'pyproject.toml': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'}
+E        +  where 'web/vercel/public/chat_state.js' = as_posix()
+E        +    where as_posix = WindowsPath('web/vercel/public/chat_state.js').as_posix
+E        +      where WindowsPath('web/vercel/public/chat_state.js') = relative_to(WindowsPath('C:/Users/susee/AppData/Local/Temp/pytest-of-susee/pytest-344/test_check_fingerprint_covers_0'))
+E        +        where relative_to = WindowsPath('C:/Users/susee/AppData/Local/Temp/pytest-of-susee/pytest-344/test_check_fingerprint_covers_0/web/vercel/public/chat_state.js').relative_to
+
+tests\test_check_records.py:23: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_check_records.py::test_check_fingerprint_covers_web_sources_and_ignores_generated_trees
+1 failed, 5 deselected in 0.16s

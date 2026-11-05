@@ -1,0 +1,272 @@
+{
+  "schema": "toruk-owned-evaluation-v1",
+  "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\conversation-format-v1-20261105\\verification\\owned-lm-smoke\\models\\23-memory_on\\checkpoint.pt",
+  "checkpoint_sha256": "b09b3088654ca13693ad11b7c986b54a70d73db533675e222dc40f46f8e9332a",
+  "variant": "memory_on",
+  "seed": 23,
+  "ablation": "full",
+  "rolling_diagnostic": false,
+  "dataset": "e04592a4422ab5a4b134e9ab0bd3d161c9a7df971a5f4b2661f8ecc1b3f1ac5f",
+  "nll": 5.699587650622352,
+  "byte_perplexity": 298.7441885852924,
+  "questions": 6,
+  "correct": 0,
+  "unsupported": 1,
+  "wrong_nonempty": 6,
+  "categories": {
+    "correction": {
+      "n": 1,
+      "correct": 0
+    },
+    "distant": {
+      "n": 1,
+      "correct": 0
+    },
+    "exact": {
+      "n": 1,
+      "correct": 0
+    },
+    "local": {
+      "n": 1,
+      "correct": 0
+    },
+    "preservation": {
+      "n": 1,
+      "correct": 0
+    },
+    "unknown": {
+      "n": 1,
+      "correct": 0
+    }
+  },
+  "seconds": 0.10580269999991287,
+  "cpu_seconds": 0.09375,
+  "memory": {
+    "rss": 293580800,
+    "process_lifetime_peak_rss": 294346752
+  },
+  "rows": [
+    {
+      "id": "dev-distant-0",
+      "category": "distant",
+      "expected": "blue",
+      "obsolete": "",
+      "evidence": "Dee's tag is blue.",
+      "prefix_sha256": "8f7ca028ef7811b32a60ada536fe41edac71e9f0c4ad4007c63855183fda0f3a",
+      "generation": {
+        "answer": "\u000e\ufffd\ufffd`\ufffd\ufffd\ufffd ",
+        "generated_ids": [
+          17,
+          182,
+          131,
+          99,
+          228,
+          250,
+          218,
+          35
+        ],
+        "input_tokens": 137,
+        "forward_positions": 245,
+        "commits": 4,
+        "allocated_state_bytes": 128,
+        "budget_exhausted": true
+      },
+      "correct": false,
+      "unsupported": false,
+      "wrong_nonempty": true,
+      "stale": false,
+      "empty": false,
+      "invalid_utf8": true,
+      "loss_sum": 814.4826049804688,
+      "targets": 142,
+      "nll_forward_positions": 142,
+      "nll_seconds": 0.006002000000080443,
+      "generation_seconds": 0.012715899999875546
+    },
+    {
+      "id": "dev-correction-0",
+      "category": "correction",
+      "expected": "blue",
+      "obsolete": "red",
+      "evidence": "Bo's tag is red.",
+      "prefix_sha256": "b00ac5f879789e8cb2daf82862e9c074b25e57ba871b4de4d33b4edc1d2f7b72",
+      "generation": {
+        "answer": "n8\ufffd,+\ufffd\ufffd\ufffd",
+        "generated_ids": [
+          113,
+          59,
+          165,
+          47,
+          46,
+          254,
+          161,
+          228
+        ],
+        "input_tokens": 162,
+        "forward_positions": 214,
+        "commits": 5,
+        "allocated_state_bytes": 128,
+        "budget_exhausted": true
+      },
+      "correct": false,
+      "unsupported": false,
+      "wrong_nonempty": true,
+      "stale": false,
+      "empty": false,
+      "invalid_utf8": true,
+      "loss_sum": 956.0745239257812,
+      "targets": 167,
+      "nll_forward_positions": 167,
+      "nll_seconds": 0.005697500000223954,
+      "generation_seconds": 0.013999699999658333
+    },
+    {
+      "id": "dev-preservation-0",
+      "category": "preservation",
+      "expected": "gold",
+      "obsolete": "",
+      "evidence": "Ada's tag is gold.",
+      "prefix_sha256": "6e9bac788fb65c4eb7f63273f51a604d4b8926f96548c305aa2f79bb5ae7306e",
+      "generation": {
+        "answer": "\u0018qH]v\ufffd\u001d\ufffd",
+        "generated_ids": [
+          27,
+          116,
+          75,
+          96,
+          121,
+          136,
+          32,
+          181
+        ],
+        "input_tokens": 164,
+        "forward_positions": 232,
+        "commits": 5,
+        "allocated_state_bytes": 128,
+        "budget_exhausted": true
+      },
+      "correct": false,
+      "unsupported": false,
+      "wrong_nonempty": true,
+      "stale": false,
+      "empty": false,
+      "invalid_utf8": true,
+      "loss_sum": 962.4303588867188,
+      "targets": 169,
+      "nll_forward_positions": 169,
+      "nll_seconds": 0.005662200000188022,
+      "generation_seconds": 0.012909699999909208
+    },
+    {
+      "id": "dev-exact-0",
+      "category": "exact",
+      "expected": "pQ_02",
+      "obsolete": "",
+      "evidence": "Ada's tag is pQ_02.",
+      "prefix_sha256": "ff15c1c464350e04997f661aed415e2223efea3359a776d59df0c3a6d9440b41",
+      "generation": {
+        "answer": "\u000e/\ufffd\u0018RU\ufffdA",
+        "generated_ids": [
+          17,
+          50,
+          233,
+          27,
+          85,
+          88,
+          204,
+          68
+        ],
+        "input_tokens": 153,
+        "forward_positions": 357,
+        "commits": 5,
+        "allocated_state_bytes": 128,
+        "budget_exhausted": true
+      },
+      "correct": false,
+      "unsupported": false,
+      "wrong_nonempty": true,
+      "stale": false,
+      "empty": false,
+      "invalid_utf8": true,
+      "loss_sum": 906.110595703125,
+      "targets": 159,
+      "nll_forward_positions": 159,
+      "nll_seconds": 0.004649799999697279,
+      "generation_seconds": 0.01278409999986252
+    },
+    {
+      "id": "dev-local-0",
+      "category": "local",
+      "expected": "red",
+      "obsolete": "",
+      "evidence": "Cy's tag is red.",
+      "prefix_sha256": "7a7b7b6d3e08e624c96787707304d5efa3c0ddc76e5463df3924dccb7df1aa22",
+      "generation": {
+        "answer": "\ufffd\ufffd\u000e/\ufffd\u0018RU",
+        "generated_ids": [
+          229,
+          232,
+          17,
+          50,
+          233,
+          27,
+          85,
+          88
+        ],
+        "input_tokens": 119,
+        "forward_positions": 339,
+        "commits": 3,
+        "allocated_state_bytes": 128,
+        "budget_exhausted": true
+      },
+      "correct": false,
+      "unsupported": false,
+      "wrong_nonempty": true,
+      "stale": false,
+      "empty": false,
+      "invalid_utf8": true,
+      "loss_sum": 695.4649658203125,
+      "targets": 123,
+      "nll_forward_positions": 123,
+      "nll_seconds": 0.003710399999818037,
+      "generation_seconds": 0.011555200000202603
+    },
+    {
+      "id": "dev-unknown-0",
+      "category": "unknown",
+      "expected": "?",
+      "obsolete": "",
+      "evidence": "Dee visited the park.",
+      "prefix_sha256": "7fc27d520f135185dd4382d56ad706dc6c4f7a911efa47d9fbb0cca7e77a1b6d",
+      "generation": {
+        "answer": "~\ufffd\ufffd\ufffd\ufffdA\ufffd\ufffd",
+        "generated_ids": [
+          129,
+          153,
+          139,
+          199,
+          204,
+          68,
+          175,
+          251
+        ],
+        "input_tokens": 123,
+        "forward_positions": 279,
+        "commits": 4,
+        "allocated_state_bytes": 128,
+        "budget_exhausted": true
+      },
+      "correct": false,
+      "unsupported": true,
+      "wrong_nonempty": true,
+      "stale": false,
+      "empty": false,
+      "invalid_utf8": true,
+      "loss_sum": 709.572021484375,
+      "targets": 125,
+      "nll_forward_positions": 125,
+      "nll_seconds": 0.003733200000169745,
+      "generation_seconds": 0.011611299999913172
+    }
+  ]
+}

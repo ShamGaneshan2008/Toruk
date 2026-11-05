@@ -1,0 +1,322 @@
+﻿diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index f021864..255fffa 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -19,6 +19,10 @@ jobs:
+       - uses: actions/setup-python@v5
+         with:
+           python-version: '3.12'
++      # Pytest includes the page-handler -> Node proxy -> Python HTTP fixture contract.
++      - uses: actions/setup-node@v4
++        with:
++          node-version: '22'
+       - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+       # Static checks cover the optional chat backend too; no model download is needed.
+       - run: python -m pip install -e '.[dev,chat]'
+diff --git a/.gitignore b/.gitignore
+index a1e4bae..a535240 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -12,6 +12,7 @@ dist/
+ /artifacts/recall-v*/package/
+ /artifacts/checks/recall-ci-integration-20261104/package/
+ /artifacts/checks/ci-integration-*/package/
++/artifacts/checks/repository-review-*/verification/package/
+ /artifacts/rank-budget-*/verification/package/
+ /artifacts/independent-replication-*/verification/package/
+ /artifacts/owned-lm-*/verification/package/
+diff --git a/scripts/check.py b/scripts/check.py
+index 8cfe3af..02b2b15 100644
+--- a/scripts/check.py
++++ b/scripts/check.py
+@@ -3,6 +3,7 @@
+ import argparse
+ import hashlib
+ import json
++import os
+ import re
+ import subprocess
+ import sys
+@@ -15,10 +16,12 @@ ROOT = Path(__file__).resolve().parents[1]
+ 
+ def sources():
+     paths = [ROOT / name for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore")]
+-    for directory in ("src", "tests", "scripts", ".github", "configs"):
+-        paths.extend((ROOT / directory).rglob("*.py"))
+-        paths.extend((ROOT / directory).rglob("*.yml"))
+-        paths.extend((ROOT / directory).rglob("*.json"))
++    suffixes = {".py", ".yml", ".yaml", ".json", ".js", ".mjs", ".html", ".css"}
++    generated = {"__pycache__", "node_modules", ".vercel", "build", "dist"}
++    for directory in ("src", "tests", "scripts", ".github", "configs", "web"):
++        for base, directories, names in os.walk(ROOT / directory):
++            directories[:] = sorted(name for name in directories if name not in generated)
++            paths.extend(Path(base) / name for name in names if Path(name).suffix in suffixes)
+     return sorted(p for p in paths if p.is_file() and "__pycache__" not in p.parts)
+ 
+ 
+diff --git a/src/toruk_lm/inference_server.py b/src/toruk_lm/inference_server.py
+index b0120ca..af8cf64 100644
+--- a/src/toruk_lm/inference_server.py
++++ b/src/toruk_lm/inference_server.py
+@@ -171,7 +171,7 @@ def make_handler(
+                 self._json(HTTPStatus.NOT_FOUND, {"error": "Not found."})
+                 return
+             supplied = self.headers.get("Authorization", "")
+-            if not hmac.compare_digest(supplied, f"Bearer {token}"):
++            if not hmac.compare_digest(supplied.encode("utf-8"), f"Bearer {token}".encode("utf-8")):
+                 self._json(HTTPStatus.UNAUTHORIZED, {"error": "Unauthorized."})
+                 return
+             if backend is None or not getattr(backend, "ready", True):
+diff --git a/tests/test_check_records.py b/tests/test_check_records.py
+index 40a056b..6b93616 100644
+--- a/tests/test_check_records.py
++++ b/tests/test_check_records.py
+@@ -6,6 +6,35 @@ from pathlib import Path
+ import pytest
+ 
+ 
++def test_check_fingerprint_covers_web_sources_and_ignores_generated_trees(tmp_path, monkeypatch):
++    monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[1] / "scripts"))
++    import check
++
++    monkeypatch.setattr(check, "ROOT", tmp_path)
++    for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore"):
++        (tmp_path / name).write_text("", encoding="utf-8")
++    for name in (
++        "web/vercel/public/index.html",
++        "web/vercel/public/chat_state.js",
++        "web/vercel/scripts/dev.mjs",
++        "web/vercel/package.json",
++    ):
++        path = tmp_path / name
++        path.parent.mkdir(parents=True, exist_ok=True)
++        path.write_text("initial", encoding="utf-8")
++    original = check.source_identity()
++    changed = tmp_path / "web/vercel/public/chat_state.js"
++    assert changed.relative_to(tmp_path).as_posix() in original["source_files"]
++    changed.write_text("changed", encoding="utf-8")
++    updated = check.source_identity()
++    assert updated["source_sha256"] != original["source_sha256"]
++    for directory in ("web/vercel/node_modules", "web/vercel/.vercel", "web/vercel/dist"):
++        path = tmp_path / directory / "generated.js"
++        path.parent.mkdir(parents=True, exist_ok=True)
++        path.write_text("not repository source", encoding="utf-8")
++    assert check.source_identity() == updated
++
++
+ def test_check_preserves_existing_evidence(tmp_path):
+     script = Path(__file__).resolve().parents[1] / "scripts/check.py"
+     command = [
+diff --git a/tests/test_inference_server.py b/tests/test_inference_server.py
+index 047b364..1c0c600 100644
+--- a/tests/test_inference_server.py
++++ b/tests/test_inference_server.py
+@@ -81,6 +81,20 @@ def test_stateless_inference_and_telemetry(server):
+     assert all(len(messages) == 1 for messages, _ in backend.calls)
+ 
+ 
++def test_non_ascii_authorization_is_rejected_without_dropping_connection(server):
++    backend, base = server
++    with pytest.raises(HTTPError) as failure:
++        call(
++            base,
++            "/api/infer",
++            {"messages": [{"role": "user", "content": "hi"}]},
++            token="s\u00ebcret",
++        )
++    assert failure.value.code == 401
++    assert json.load(failure.value) == {"error": "Unauthorized."}
++    assert backend.calls == []
++
++
+ def stalled_worker(pipe):
+     pipe.send("ready")
+     pipe.recv()
+diff --git a/web/vercel/lib/proxy.js b/web/vercel/lib/proxy.js
+index b633f19..3469235 100644
+--- a/web/vercel/lib/proxy.js
++++ b/web/vercel/lib/proxy.js
+@@ -5,6 +5,42 @@ const MAX_BODY_BYTES = 16384;
+ const MAX_NEW_TOKENS = 64;
+ const TIMEOUT_MS = 60000;
+ 
++class BodyTooLarge extends Error {}
++
++async function readLimitedBody(request) {
++  if (!request.body) return '';
++  const reader = request.body.getReader();
++  const chunks = [];
++  let bytes = 0;
++  try {
++    while (true) {
++      const {done, value} = await reader.read();
++      if (done) break;
++      bytes += value.byteLength;
++      if (bytes > MAX_BODY_BYTES) {
++        void reader.cancel().catch(() => {});
++        throw new BodyTooLarge();
++      }
++      chunks.push(Buffer.from(value));
++    }
++    return new TextDecoder('utf-8', {fatal: true}).decode(Buffer.concat(chunks, bytes));
++  } finally {
++    reader.releaseLock();
++  }
++}
++
++function validMetrics(m, payload) {
++  const counts = ['input_tokens', 'selected_context_tokens', 'output_tokens', 'total_tokens'];
++  if (!m || counts.some(key => !Number.isSafeInteger(m[key]) || m[key] < 0)) return false;
++  if (!Number.isFinite(m.response_ms) || m.response_ms < 0 || m.output_tokens > payload.max_new_tokens) return false;
++  if (m.total_tokens !== m.selected_context_tokens + m.output_tokens) return false;
++  if (m.backend !== 'Toruk' || typeof m.model !== 'string' || !m.model.trim() || typeof m.backbone !== 'string' || !m.backbone.trim()) return false;
++  if (m.mode !== payload.mode || typeof m.memory_used !== 'boolean' || (m.mode === 'BASELINE' && m.memory_used)) return false;
++  const ids = m.selected_message_ids;
++  return Array.isArray(ids) && ids.length > 0 && new Set(ids).size === ids.length
++    && ids.every(id => typeof id === 'string' && /^m(?:[0-9]|1[0-9])$/.test(id) && Number(id.slice(1)) < payload.messages.length);
++}
++
+ // Only these fixed messages may describe a model-load failure in the browser.
+ const READINESS_ERRORS = {
+   CHECKPOINT_MISSING: 'The selected demo model is missing. Start Toruk with the installed chat backbone; see the local chat guide.',
+@@ -90,10 +126,14 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
+   if (request.method !== 'POST') return json({error: 'POST required.'}, 405);
+   const length = Number(request.headers.get('content-length') || 0);
+   if (length > MAX_BODY_BYTES) return json({error: 'Request body is too large.'}, 413);
++  let raw;
++  try {
++    raw = await readLimitedBody(request);
++  } catch (error) {
++    return json({error: error instanceof BodyTooLarge ? 'Request body is too large.' : 'Could not read a valid UTF-8 request body.'}, error instanceof BodyTooLarge ? 413 : 400);
++  }
+   let payload;
+   try {
+-    const raw = await request.text();
+-    if (Buffer.byteLength(raw, 'utf8') > MAX_BODY_BYTES) return json({error: 'Request body is too large.'}, 413);
+     payload = validate(JSON.parse(raw));
+   } catch (error) {
+     return json({error: error instanceof SyntaxError ? 'Invalid JSON.' : error.message}, 400);
+@@ -106,8 +146,7 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
+       method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload),
+     }, fetchImpl);
+     if (response.status === 400) {
+-      const bad = await response.json();
+-      return json({error: bad.error || 'Invalid generation request.'}, 400);
++      return json({error: 'The inference backend rejected this request. Check the context mode and generation settings.'}, 400);
+     }
+     if (response.status === 503) {
+       const unavailable = await response.json();
+@@ -116,7 +155,7 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
+     if (!response.ok) throw new Error('backend response failed');
+     const data = await response.json();
+     const m = data.metrics;
+-    if (typeof data.answer !== 'string' || !m || m.backend !== 'Toruk' || !Number.isInteger(m.input_tokens) || !Number.isInteger(m.selected_context_tokens) || !Number.isInteger(m.output_tokens) || !Number.isInteger(m.total_tokens) || typeof m.response_ms !== 'number' || typeof m.model !== 'string' || typeof m.backbone !== 'string' || m.mode !== payload.mode || typeof m.memory_used !== 'boolean' || !Array.isArray(m.selected_message_ids) || m.selected_message_ids.some(id => !/^m(?:[0-9]|1[0-9])$/.test(id))) throw new Error('invalid backend response');
++    if (typeof data.answer !== 'string' || !data.answer.trim() || !validMetrics(m, payload)) throw new Error('invalid backend response');
+     const metrics = {...m, proxy_ms: Math.round((performance.now() - started) * 1000) / 1000};
+     logger.info(JSON.stringify({event: 'toruk_chat', mode: payload.mode, input_tokens: m.input_tokens, selected_context_tokens: m.selected_context_tokens, output_tokens: m.output_tokens, response_ms: m.response_ms, proxy_ms: metrics.proxy_ms}));
+     return json({answer: data.answer, metrics});
+diff --git a/web/vercel/public/chat_state.js b/web/vercel/public/chat_state.js
+index 391aaa3..e2a1a65 100644
+--- a/web/vercel/public/chat_state.js
++++ b/web/vercel/public/chat_state.js
+@@ -1,5 +1,5 @@
+ export function pendingMessages(messages, content) {
+-  return [...messages, {role: 'user', content}].slice(-19);
++  return [...messages, {role: 'user', content}];
+ }
+ 
+ export function completedMessages(pending, answer) {
+diff --git a/web/vercel/tests/proxy.test.mjs b/web/vercel/tests/proxy.test.mjs
+index df8dd82..ed18ea0 100644
+--- a/web/vercel/tests/proxy.test.mjs
++++ b/web/vercel/tests/proxy.test.mjs
+@@ -12,6 +12,72 @@ const request = (messages, budget = 16) => new Request('http://localhost/api/cha
+ const user = [{role: 'user', content: 'hello'}];
+ const metrics = {input_tokens: 20, selected_context_tokens: 16, output_tokens: 3, total_tokens: 19, response_ms: 4.5, backend: 'Toruk', model: 'toruk-ordinary-v1:test', backbone: 'Toruk ordinary byte LM', mode: 'BASELINE', memory_used: false, selected_message_ids: ['m0']};
+ 
++test('long conversations fail visibly instead of silently dropping the earliest turns', async () => {
++  let history = [];
++  for (let i = 0; i < 10; i++) history = completedMessages(pendingMessages(history, `question ${i}`), `answer ${i}`);
++  const pending = pendingMessages(history, 'new question');
++  assert.equal(pending.length, 21);
++  assert.equal(pending[0].content, 'question 0');
++  assert.equal(history.length, 20);
++  const response = await chatResponse(request(pending), {
++    env, fetchImpl: async () => { throw new Error('oversized history reached backend'); },
++  });
++  assert.equal(response.status, 400);
++  assert.match((await response.json()).error, /20 messages/);
++});
++
++test('empty backend replies cannot poison the next browser history', async () => {
++  for (const answer of ['', ' \n\t ']) {
++    const response = await chatResponse(request(user), {
++      env, fetchImpl: async () => Response.json({answer, metrics}), logger: {info(){},error(){}},
++    });
++    assert.equal(response.status, 503);
++    assert.equal((await response.json()).answer, undefined);
++  }
++});
++
++test('backend request errors do not expose private exception details', async () => {
++  const response = await chatResponse(request(user), {
++    env, fetchImpl: async () => Response.json({error: 'private-token C:/private/path'}, {status: 400}),
++  });
++  assert.equal(response.status, 400);
++  assert.doesNotMatch(JSON.stringify(await response.json()), /private-token|private\/path/);
++});
++
++test('chunked request bodies are cancelled when they cross the byte limit', async () => {
++  let pulls = 0;
++  let cancelled = false;
++  const stream = new ReadableStream({
++    pull(controller) {
++      pulls++;
++      controller.enqueue(new Uint8Array(8192));
++      if (pulls === 5) controller.close();
++    },
++    cancel() { cancelled = true; },
++  });
++  const response = await chatResponse(new Request('http://localhost/api/chat', {
++    method: 'POST', body: stream, duplex: 'half',
++  }), {env});
++  assert.equal(response.status, 413);
++  assert.equal(cancelled, true);
++  assert.ok(pulls < 5);
++});
++
++test('impossible token counts, timings and source IDs are rejected', async () => {
++  for (const invalid of [
++    {input_tokens: -1}, {selected_context_tokens: -1}, {output_tokens: -1},
++    {output_tokens: 17, total_tokens: 33}, {total_tokens: 999}, {response_ms: -1},
++    {selected_message_ids: ['m1']}, {selected_message_ids: ['m0', 'm0']},
++    {memory_used: true},
++  ]) {
++    const response = await chatResponse(request(user), {
++      env, fetchImpl: async () => Response.json({answer: 'abc', metrics: {...metrics, ...invalid}}),
++      logger: {info(){},error(){}},
++    });
++    assert.equal(response.status, 503, JSON.stringify(invalid));
++  }
++});
++
+ test('unready model has an actionable reason and never forwards backend exception text', async () => {
+   for (const code of ['CHECKPOINT_MISSING', 'BACKBONE_MISSING', 'CHAT_DEPENDENCIES_MISSING', 'WORKER_STOPPED', 'unknown-private-code']) {
+     const backend = {ready: false, backend: 'Toruk', error_code: code, error: 'private-token C:/private/path raw-exception'};
+diff --git a/web/vercel/tests/ui.test.mjs b/web/vercel/tests/ui.test.mjs
+index 3c9b5a4..550addc 100644
+--- a/web/vercel/tests/ui.test.mjs
++++ b/web/vercel/tests/ui.test.mjs
+@@ -99,7 +99,11 @@ test('live page handlers send a normal question and follow-up through the real p
+       const body = await response.clone().json();
+       turns.push({request: JSON.parse(options.body), http_status: response.status, response: body});
+       assert.equal(response.status, 200);
+-      assert.match(body.metrics.backbone, /Qwen2\.5-0\.5B-Instruct/);
++      if (process.env.TORUK_TEST_BACKBONE) {
++        assert.equal(body.metrics.backbone, process.env.TORUK_TEST_BACKBONE);
++      } else {
++        assert.match(body.metrics.backbone, /Qwen2\.5-0\.5B-Instruct/);
++      }
+     }
+     return response;
+   }, await page.text());

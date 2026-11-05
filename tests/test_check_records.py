@@ -6,6 +6,35 @@ from pathlib import Path
 import pytest
 
 
+def test_check_fingerprint_covers_web_sources_and_ignores_generated_trees(tmp_path, monkeypatch):
+    monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[1] / "scripts"))
+    import check
+
+    monkeypatch.setattr(check, "ROOT", tmp_path)
+    for name in ("pyproject.toml", "MANIFEST.in", "main.py", ".gitignore"):
+        (tmp_path / name).write_text("", encoding="utf-8")
+    for name in (
+        "web/vercel/public/index.html",
+        "web/vercel/public/chat_state.js",
+        "web/vercel/scripts/dev.mjs",
+        "web/vercel/package.json",
+    ):
+        path = tmp_path / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("initial", encoding="utf-8")
+    original = check.source_identity()
+    changed = tmp_path / "web/vercel/public/chat_state.js"
+    assert changed.relative_to(tmp_path).as_posix() in original["source_files"]
+    changed.write_text("changed", encoding="utf-8")
+    updated = check.source_identity()
+    assert updated["source_sha256"] != original["source_sha256"]
+    for directory in ("web/vercel/node_modules", "web/vercel/.vercel", "web/vercel/dist"):
+        path = tmp_path / directory / "generated.js"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("not repository source", encoding="utf-8")
+    assert check.source_identity() == updated
+
+
 def test_check_preserves_existing_evidence(tmp_path):
     script = Path(__file__).resolve().parents[1] / "scripts/check.py"
     command = [
