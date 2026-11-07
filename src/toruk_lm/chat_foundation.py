@@ -254,13 +254,19 @@ class PretrainedChatBackend:
         if mode == "TORUK" and self.selector is None:
             raise ChatError("TORUK mode requires an explicitly configured context selector.")
         started = time.perf_counter()
+        tokenizer_started = time.perf_counter()
         input_tokens = int(self._tokens(messages).shape[-1])
+        history_tokenization_ms = (time.perf_counter() - tokenizer_started) * 1000
+        selector_started = time.perf_counter()
         if mode == "TORUK":
             assert self.selector is not None
             indices, memory_used = self.selector.select(messages)
         else:
             indices, memory_used = list(range(len(messages))), False
+        selector_ms = (time.perf_counter() - selector_started) * 1000 if mode == "TORUK" else 0
+        fit_started = time.perf_counter()
         prompt, chosen = self._fit(messages, indices)
+        prompt_fit_ms = (time.perf_counter() - fit_started) * 1000
         options: dict[str, Any] = {
             "input_ids": prompt,
             "max_new_tokens": max_new_tokens,
@@ -293,5 +299,13 @@ class PretrainedChatBackend:
                 "selector_id": getattr(self, "selector_id", None) if mode == "TORUK" else None,
                 "selected_messages": len(chosen),
                 "selected_message_ids": [f"m{index}" for index in chosen],
+                "history_tokenization_ms": round(history_tokenization_ms, 3),
+                "prompt_fit_ms": round(prompt_fit_ms, 3),
+                "selector_ms": round(selector_ms, 3),
+                "history_bytes_read": sum(len(m["content"].encode("utf-8")) for m in messages),
+                "selector_history_bytes": sum(len(m["content"].encode("utf-8")) for m in messages)
+                if mode == "TORUK"
+                else 0,
+                "persistent_state_bytes": 0,
             },
         }

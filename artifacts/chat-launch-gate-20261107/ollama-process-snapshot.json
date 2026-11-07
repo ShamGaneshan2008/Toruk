@@ -1,0 +1,45 @@
+{
+  "processes": [
+    {
+      "name": "wslservice.exe",
+      "peak_wset": 29474816,
+      "pid": 4720,
+      "ppid": 1208,
+      "private": 6352896,
+      "rss": 28053504
+    },
+    {
+      "name": "llama-server.exe",
+      "peak_wset": 2944102400,
+      "pid": 8392,
+      "ppid": 21964,
+      "private": 3033255936,
+      "rss": 2937217024
+    },
+    {
+      "name": "ollama.exe",
+      "peak_wset": 23736320,
+      "pid": 18796,
+      "ppid": 7980,
+      "private": 55308288,
+      "rss": 21553152
+    },
+    {
+      "name": "ollama.exe",
+      "peak_wset": 53628928,
+      "pid": 21964,
+      "ppid": 22000,
+      "private": 62742528,
+      "rss": 38617088
+    },
+    {
+      "name": "ollama app.exe",
+      "peak_wset": 4313808896,
+      "pid": 22000,
+      "ppid": 4344,
+      "private": 65802240,
+      "rss": 100425728
+    }
+  ],
+  "scope": "Post-request snapshot, not an isolated run peak. Name sampling may omit runners inside WSL or services; use Ollama allocation snapshot separately."
+}

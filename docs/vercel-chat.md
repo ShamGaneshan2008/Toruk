@@ -1,14 +1,20 @@
 # Toruk Vercel chatbot MVP — local build, not deployed
 
-For the current host decision, missing-model blockers, deployable backend changes,
-and exact account steps, read the [2026-10-27 public inference gate](public-inference-gate.md).
+For the current host decision and measurements, read the
+[7 November launch gate](research/chat-launch-gate-20261107.md) and
+[local PowerShell guide](local-chat.md).
 The measurements below are retained historical evidence.
 
-This is a static Vercel page and Node proxy in `web/vercel`, plus a separately hosted Python/Torch inference service. The page uses **Toruk only** and gives an unavailable error when inference is not configured. The supported `toruk-ordinary-v1` checkpoint was trained on a tiny repeating `abc ` corpus; it is able to generate text but is **not a useful free-form chat model**. The M6 recurrent checkpoint is `toruk-controlled-v1`, which the ordinary generator rejects. The controlled smoke scored 0/12 exact answers.
+This is a static page and Node proxy in `web/vercel`, plus a separate Python/Torch
+inference service. The current local chat uses the explicitly displayed pretrained
+Qwen backbone. Both context modes use that same external model; TORUK adds optional
+turn selection. The supported `toruk-ordinary-v1` checkpoint remains an explicitly
+labeled smoke fixture, not a useful free-form chatbot. Missing inference returns
+an unavailable error. The older controlled smoke scored 0/12 exact answers.
 
 An optional [chat foundation](chat-foundation.md) now loads a pinned, explicitly labeled pretrained SmolLM2-135M-Instruct backbone from local files and can use the M6 recurrent architecture as a separate experimental turn selector. This is a new inference mode; the ordinary checkpoint and its earlier smoke measurements below remain distinct.
 
-## Current release decision (2026-10-26)
+## Historical release decision (2026-10-26)
 
 The fixed [20-case paired evaluation](research/chat-release-v2-results.md) answered **6/20** correctly in both BASELINE and TORUK modes. TORUK selected **1,546** prompt tokens versus **1,818** for BASELINE, a **14.96%** reduction below the preregistered **35%** target. Correction handling was **1/2** in both modes; unknown-answer handling was **0/2**. The pretrained backbone, rather than Toruk's selector, supplies the observed language capability. This is a working local prototype, not a qualified public answer service or a verified memory-efficiency result. The page displays these limitations.
 

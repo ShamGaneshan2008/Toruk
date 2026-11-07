@@ -1,3 +1,4 @@
+import concurrent.futures
 import json
 import multiprocessing as mp
 import threading
@@ -79,6 +80,39 @@ def test_stateless_inference_and_telemetry(server):
         assert not result["metrics"]["memory_used"]
     assert len(backend.calls) == 2
     assert all(len(messages) == 1 for messages, _ in backend.calls)
+
+
+def test_concurrent_request_has_a_safe_retryable_busy_code():
+    entered, release = threading.Event(), threading.Event()
+
+    class BlockingBackend(FakeBackend):
+        def reply_with_metrics(self, *args, **kwargs):
+            entered.set()
+            assert release.wait(timeout=5)
+            return super().reply_with_metrics(*args, **kwargs)
+
+    http = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(BlockingBackend(), None, "secret"))
+    thread = threading.Thread(target=http.serve_forever, daemon=True)
+    thread.start()
+    base = f"http://127.0.0.1:{http.server_port}"
+    payload = {"messages": [{"role": "user", "content": "hello"}]}
+    try:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+            pending = pool.submit(call, base, "/api/infer", payload)
+            try:
+                assert entered.wait(timeout=3)
+                with pytest.raises(HTTPError) as failure:
+                    call(base, "/api/infer", payload)
+                assert failure.value.code == 503
+                assert json.load(failure.value)["error_code"] == "INFERENCE_BUSY"
+            finally:
+                release.set()
+            assert pending.result(timeout=5)["answer"] == "abc"
+    finally:
+        release.set()
+        http.shutdown()
+        http.server_close()
+        thread.join(timeout=5)
 
 
 def test_non_ascii_authorization_is_rejected_without_dropping_connection(server):

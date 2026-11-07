@@ -3,8 +3,10 @@
 Qwen/Qwen2.5-0.5B-Instruct is a third-party, Apache-2.0 instruct backbone,
 not a Toruk-trained model ([official model card](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)).
 Toruk supplies the server, limits, telemetry, and optional experimental context selection.
-The fresh [audit](research/next-chat-20261031.md) includes actual answers and failures.
-Chat remains experimental; the efficiency claim is unsupported.
+The [7 November launch gate](research/chat-launch-gate-20261107.md) includes fresh
+proxy/server/model replies, failures, hosting measurements and the deployment decision.
+Local use is an explicitly experimental pretrained-model demonstration. All tested
+modes failed the frozen answer-quality gate; public deployment remains blocked.
 For the frozen research comparisons, actual-component ablations and exploratory
 draft, see the [independent replication package](research/independent-replication-v1-results.md).
 An optional, explicitly named heuristic selector can now be enabled for the
@@ -17,6 +19,9 @@ Toruk ordinary smoke fixture. Instruct chat requires `--backbone-dir` as below.
 
 Before downloading: the Qwen model is Apache-2.0, about 1 GB on disk, and needs
 about 2 GB for float32 parameters plus Python/Torch runtime and generation overhead.
+The fresh Windows profile reached about 2.68 GB summed resident memory and 4.66 GB
+private committed memory during startup/generation. Allow at least 6 GB available
+memory as an estimate, preferably 8 GB headroom; this is not a measured Linux minimum.
 No GPU is required; CPU inference uses two Torch threads. Close memory-heavy apps
 if necessary. If the verified model files already exist locally, no download is
 needed. Check the current installation first:
@@ -65,6 +70,7 @@ Set-Location 'C:\Users\susee\VS_CODE_PROJECT\Toruk'
 $env:TORUK_BACKEND_TOKEN = 'local-development-only-token'
 $env:TORUK_BACKEND_URL = 'http://127.0.0.1:8766'
 $env:PORT = '3000'
+$env:VERCEL_ENV = 'development'
 node .\web\vercel\scripts\dev.mjs
 ```
 
@@ -73,7 +79,7 @@ Reload once after a code update. If the page was opened before the model was rea
 click **Retry connection** after backend startup. A successful readiness check clears
 the old error and enables both the message box and Send. If servers already occupy
 these ports, stop those Toruk instances before launching replacements.
-Choose 64 output tokens when testing the documented probes; the UI defaults to 32.
+The UI defaults to 64 output tokens, matching the launch-gate budget.
 Stop both servers with Ctrl+C in their respective terminals. The literal token
 above is for loopback development. Backend credentials stay in server environments;
 the browser sends requests only to the web proxy.
@@ -83,6 +89,8 @@ Terminal 3, test the same route the browser calls:
 ```powershell
 Invoke-RestMethod 'http://127.0.0.1:3000/api/status'
 Invoke-RestMethod 'http://127.0.0.1:8766/api/status'
+Invoke-RestMethod 'http://127.0.0.1:8766/healthz'
+Start-Process 'http://127.0.0.1:3000'
 $payload = @{
   messages = @(@{ role = 'user'; content = 'What is 2 + 3?' })
   mode = 'BASELINE'
@@ -145,7 +153,9 @@ stop token, backend latency, and proxy latency. It does not measure all internal
 model compute or establish end-to-end token savings.
 
 The evaluated M6 selector at `artifacts/m6-validation-001/recurrent/checkpoint.pt`
-is absent here. TORUK requests fail visibly; no replacement was trained or substituted.
+is absent here. Explicitly selecting that checkpoint fails visibly; no replacement
+was trained or substituted. TORUK can separately use the available trained JSON v2
+selector or a named heuristic. Those selectors also failed the launch quality gate.
 Restore the original evaluated weights before testing that path or making a matched
 same-backbone efficiency comparison. Synthetic smoke checkpoints are incompatible
 with the historical selector's evidence and cannot be silently substituted.
@@ -155,6 +165,25 @@ uses `--ollama-model` with its full `--ollama-digest`. Both local backbone paths
 accept an explicit trained JSON `--selector-checkpoint`; the heuristic
 `--context-selector` option requires `--backbone-dir`. Choose one selector option.
 These integrations do not establish an accuracy or efficiency advantage.
+
+For an explicit local context comparison, append **one** of these options to the
+backend command, keeping the same Qwen directory. Then choose TORUK on the page:
+
+Use `--selector-checkpoint .\artifacts\chat-selector-v2-20261101\selector.json`
+for the separately trained ranker, or `--context-selector lexical-v2` for the
+deterministic heuristic. Append these options to the backend command;
+they are not separate PowerShell commands. BASELINE remains available
+with either selector loaded. The Toruk-owned conversational checkpoint is research
+CLI-only and failed 0/25 fresh regression answers; it is not a chat default or a
+supported `--checkpoint` format for this inference server.
+
+If requests say **busy**, wait for the current generation and retry; there is no
+queue. If generation times out, restart Terminal 1, then click Retry connection.
+For a malformed/overlong conversation, shorten the latest input or use New chat.
+Stopping Terminal 1 makes the proxy return an explicit 503 without a generated
+answer. Stop both terminal processes with Ctrl+C, then confirm the two URLs stop
+responding. The automated gate uses free loopback ports and cleans up only its own
+processes; it does not stop any Toruk servers you already have running.
 
 Frozen selector artifacts have byte-sensitive hashes. Keep the repository's
 `.gitattributes` rules: the v2 `selector.json` and `data/manifest.json` require

@@ -1,6 +1,7 @@
-"""Local equivalents of the CPU CI job, each with retained evidence."""
+"""Local equivalents of the Python and web CI jobs, each with retained evidence."""
 
 import argparse
+import shutil
 import subprocess
 import sys
 from datetime import UTC, datetime
@@ -19,7 +20,11 @@ def main():
     )
     options = parser.parse_args()
     pipeline = options.output_dir.resolve() / "pipeline"
+    # Resolve npm.cmd explicitly on Windows; npm is not a Python module.
+    npm = shutil.which("npm.cmd" if sys.platform == "win32" else "npm") or "npm"
     commands = {
+        "web-check": [npm, "--prefix", "web/vercel", "run", "check"],
+        "web-tests": [npm, "--prefix", "web/vercel", "test"],
         "install-local": ["-m", "pip", "install", "--no-deps", "--no-build-isolation", "-e", "."],
         "package": ["-m", "pip", "check"],
         "import": ["-c", "import toruk_lm; print(toruk_lm.__version__)"],
@@ -118,7 +123,8 @@ def main():
     }
     failures = []
     for label, args in commands.items():
-        command = args if args[0] == "git" else [sys.executable, *args]
+        external = label in {"web-check", "web-tests", "diff-check", "staged-diff-check"}
+        command = args if external else [sys.executable, *args]
         timeout = 420 if label == "tests" else 300 if label.startswith("types") else 120
         if args[0] == "git":
             command = ["git", "-c", f"safe.directory={ROOT.as_posix()}", *args[1:]]

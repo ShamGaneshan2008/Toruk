@@ -1,0 +1,134 @@
+{
+  "scope": "local Windows only; exact requested model; not a host test",
+  "status": {
+    "ready": true,
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_sha256": null,
+    "selector_id": null,
+    "selector_kind": null,
+    "backbone_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "backbone_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "backbone_digest": null,
+    "backend": "Toruk",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+    "context_tokens": 512,
+    "memory_supported": false,
+    "modes": [
+      "BASELINE"
+    ],
+    "error_code": null,
+    "error": null
+  },
+  "startup_seconds": 13.52452029999995,
+  "startup_plus_first_response_seconds": 16.076022400000056,
+  "generations": [
+    {
+      "wall_seconds": 2.551502100000107,
+      "metrics": {
+        "input_tokens": 90,
+        "selected_context_tokens": 90,
+        "output_tokens": 10,
+        "total_tokens": 100,
+        "response_ms": 2549.132,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "selector_sha256": null,
+        "selector_kind": null,
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ],
+        "history_tokenization_ms": 18.735,
+        "prompt_fit_ms": 0.812,
+        "selector_ms": 0,
+        "history_bytes_read": 5,
+        "selector_history_bytes": 0,
+        "persistent_state_bytes": 0
+      },
+      "raw_answer": "Hello! How can I assist you today?"
+    },
+    {
+      "wall_seconds": 2.3099992000002203,
+      "metrics": {
+        "input_tokens": 90,
+        "selected_context_tokens": 90,
+        "output_tokens": 10,
+        "total_tokens": 100,
+        "response_ms": 2276.665,
+        "backend": "Toruk",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+        "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+        "selector_sha256": null,
+        "selector_kind": null,
+        "mode": "BASELINE",
+        "memory_used": false,
+        "selector_id": null,
+        "selected_messages": 1,
+        "selected_message_ids": [
+          "m0"
+        ],
+        "history_tokenization_ms": 0.877,
+        "prompt_fit_ms": 0.54,
+        "selector_ms": 0,
+        "history_bytes_read": 5,
+        "selector_history_bytes": 0,
+        "persistent_state_bytes": 0
+      },
+      "raw_answer": "Hello! How can I assist you today?"
+    }
+  ],
+  "four_concurrent_http_statuses": [
+    503,
+    503,
+    200,
+    503
+  ],
+  "peak_process_tree": {
+    "rss_sum_bytes": 2629824512,
+    "private_sum_bytes": 4614537216
+  },
+  "dependencies": {
+    "torch": {
+      "version": "2.14.1+cpu",
+      "installed_bytes": 531556961
+    },
+    "transformers": {
+      "version": "5.20.2",
+      "installed_bytes": 107440502
+    },
+    "safetensors": {
+      "version": "0.8.0",
+      "installed_bytes": 911391
+    },
+    "numpy": {
+      "version": "2.5.4",
+      "installed_bytes": 54161255
+    },
+    "sympy": {
+      "version": "1.14.0",
+      "installed_bytes": 69598071
+    },
+    "networkx": {
+      "version": "3.6.1",
+      "installed_bytes": 15641933
+    }
+  },
+  "inference_tree_lifecycle_cpu_seconds": 29.8125,
+  "lifecycle_wall_seconds": 24.61137910000025,
+  "backbone_files": {
+    "directory_bytes": 999605252,
+    "weights_bytes": 988097824,
+    "manifest": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "model_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+    }
+  }
+}

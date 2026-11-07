@@ -94,11 +94,18 @@ python -m toruk_lm diagnose
 
 The CLI supports fixture generation, ordinary and recurrent model training, evaluation, text generation, and bounded research studies. The package also installs the `toruk` command. See [milestone status](docs/milestones.md) and the [experiment registry](docs/experiments.md) for measured limitations and reproduction instructions.
 
-For local checks, install `python -m pip install -e ".[dev]"` and run `python scripts/verify.py`.
+For local checks, install Node.js 22 or later and `python -m pip install -e ".[dev,chat]"`,
+then run `python scripts/verify.py`. This runs both the web and Python CI checks;
+missing Node/npm or a failed web check makes verification fail.
 
 ### Experimental local chat page
 
 For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md).
+The [7 November launch readiness gate](docs/research/chat-launch-gate-20261107.md)
+passed the tested local transport/reliability checks but failed answer quality in
+every tested mode. Qwen remains an explicitly experimental local demonstration;
+public deployment is blocked. The page identifies its external model and keeps
+Toruk-owned research checkpoints distinct.
 For the explicitly labeled heuristic TORUK comparison and frozen evaluation commands,
 see [context selection](docs/context-selection.md).
 It runs pinned **Qwen/Qwen2.5-0.5B-Instruct** through the existing web proxy, with

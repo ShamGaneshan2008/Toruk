@@ -43,6 +43,9 @@ def source_identity():
 
 
 def main():
+    # Windows redirected consoles may use cp1252, while Node emits UTF-8 symbols.
+    # Keep exact UTF-8 evidence and escape only characters the console cannot print.
+    sys.stdout.reconfigure(errors="backslashreplace")
     parser = argparse.ArgumentParser()
     parser.add_argument("label")
     parser.add_argument("--timeout", type=int, default=120)

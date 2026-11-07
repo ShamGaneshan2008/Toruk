@@ -43,7 +43,7 @@
       <button id="clear" type="button">New chat</button>
     </header>
     <main id="main">
-      <div id="notice" class="notice">Experimental chat. The displayed pretrained backbone supplies language ability. Toruk's optional context selection is experimental and may omit relevant facts. No Toruk answer-quality or token-efficiency advantage is verified. Answers can be wrong; verify important information. History clears on refresh.</div>
+      <div id="notice" class="notice">Experimental local chat using the model identified above. Qwen, SmolLM and Ollama are external pretrained backbones; Toruk smoke fixtures are labeled separately. Both context modes use the same generator; TORUK adds turn selection, not the owned conversational research LM. Older facts may be dropped and answers may be wrong. No Toruk quality or efficiency advantage is verified. History clears on refresh.</div>
       <div id="error" class="error" role="alert" aria-live="assertive"></div>
       <button id="retry" type="button">Retry connection</button>
       <div id="transcript" class="transcript" aria-live="polite"></div>
@@ -56,7 +56,7 @@
         </div>
         <div class="options">
           <label for="length">Maximum output</label>
-          <select id="length"><option value="16">16 tokens</option><option value="32" selected>32 tokens</option><option value="64">64 tokens</option></select>
+          <select id="length"><option value="16">16 tokens</option><option value="32">32 tokens</option><option value="64" selected>64 tokens</option></select>
           <label for="mode">Context</label>
           <select id="mode"><option value="BASELINE">BASELINE: recent turns</option><option value="TORUK" disabled>TORUK: selected turns</option></select>
           <span id="memory-status">Context selection: disabled</span>
@@ -101,7 +101,7 @@
         box.className = `message ${item.role}`;
         const role = document.createElement('div');
         role.className = 'role';
-        role.textContent = item.role === 'user' ? 'You' : 'Toruk';
+        role.textContent = item.role === 'user' ? 'You' : 'Assistant';
         const body = document.createElement('div');
         body.textContent = item.content || '(No text generated.)';
         box.append(role, body);
@@ -112,7 +112,7 @@
     function setSending(value) {
       sending = value;
       setChatAvailability({message, send, retry}, ready, value);
-      loading.textContent = value ? 'Toruk is generating…' : '';
+      loading.textContent = value ? 'The displayed model is generating…' : '';
     }
     function updateMemoryStatus() {
       memoryStatus.textContent = mode.value === 'TORUK' ? 'Context selection: enabled (experimental)' : 'Context selection: disabled';
@@ -135,7 +135,8 @@
         const response = await fetch('/api/status');
         const data = await response.json();
         ready = response.ok && data.ready === true;
-        model.textContent = `Backend: ${data.backend} · Backbone: ${data.backbone || data.model} · Model: ${data.model} · Selector: ${data.selector_id || data.selector_kind || 'none'} ${data.selector_sha256 || ''}`;
+        const origin = !ready ? 'Unavailable' : String(data.model).startsWith('toruk-ordinary-v1:') ? 'Toruk-trained smoke fixture (not chat-trained)' : 'External pretrained backbone';
+        model.textContent = `Backend: ${data.backend} · Origin: ${origin} · Backbone: ${data.backbone || data.model} · Model: ${data.model} · Selector: ${data.selector_id || data.selector_kind || 'none'} ${data.selector_sha256 || ''}`;
         mode.querySelector('option[value="TORUK"]').disabled = !data.memory_supported;
         if (!data.memory_supported) mode.value = 'BASELINE';
         updateMemoryStatus();

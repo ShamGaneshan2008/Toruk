@@ -57,7 +57,11 @@ def main() -> None:
     started = time.perf_counter()
     with (args.output_dir / "backend.log").open("w", encoding="utf-8") as log:
         process = subprocess.Popen(
-            command, env=dict(os.environ, TORUK_BACKEND_TOKEN=token), stdout=log, stderr=log
+            command,
+            env=dict(os.environ, TORUK_BACKEND_TOKEN=token),
+            stdout=log,
+            stderr=log,
+            creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
         )
 
         def sample() -> None:
@@ -97,7 +101,11 @@ def main() -> None:
                 code, result = call("/api/infer", payload)
                 assert code == 200 and result["metrics"]["model"] == status["model"]
                 generations.append(
-                    {"wall_seconds": time.perf_counter() - before, "metrics": result["metrics"]}
+                    {
+                        "wall_seconds": time.perf_counter() - before,
+                        "metrics": result["metrics"],
+                        "raw_answer": result["answer"],
+                    }
                 )
             barrier = threading.Barrier(4)
 
@@ -129,6 +137,23 @@ def main() -> None:
                 "peak_process_tree": peak,
                 "dependencies": dependencies,
             }
+            processes = [
+                psutil.Process(process.pid),
+                *psutil.Process(process.pid).children(recursive=True),
+            ]
+            cpu = [p.cpu_times() for p in processes]
+            result["inference_tree_lifecycle_cpu_seconds"] = sum(t.user + t.system for t in cpu)
+            result["lifecycle_wall_seconds"] = time.perf_counter() - started
+            if args.backbone_dir:
+                result["backbone_files"] = {
+                    "directory_bytes": sum(
+                        p.stat().st_size for p in args.backbone_dir.rglob("*") if p.is_file()
+                    ),
+                    "weights_bytes": (args.backbone_dir / "model.safetensors").stat().st_size,
+                    "manifest": json.loads(
+                        (args.backbone_dir / "toruk-backbone.json").read_text(encoding="utf-8")
+                    ),
+                }
             if args.checkpoint:
                 result["checkpoint"] = {
                     "path": str(args.checkpoint),

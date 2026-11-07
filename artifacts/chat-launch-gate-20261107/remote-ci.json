@@ -1,0 +1,208 @@
+{
+  "checked_date": "2026-11-07",
+  "starting_commit": "a450a0d6c4f293fb9b500968c35a5c051787d0a6",
+  "runs": [
+    {
+      "id": 42067702086,
+      "sha": "a450a0d6c4f293fb9b500968c35a5c051787d0a6",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/42067702086"
+    },
+    {
+      "id": 41875567941,
+      "sha": "265f88137f41b5a646ec56c232b4bd1b49dadd38",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41875567941"
+    },
+    {
+      "id": 41872392347,
+      "sha": "e58564dc1a4f75ad7b9b8e425b35fc20c3a9d751",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41872392347"
+    },
+    {
+      "id": 41864289376,
+      "sha": "337cba2c667419c7a3e0a244cecd040b375d7927",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41864289376"
+    },
+    {
+      "id": 41855804145,
+      "sha": "3fcf787470d64d445d621cdd5f76bd491c53b476",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/ShamGaneshan2008/Toruk/actions/runs/41855804145"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "check",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install torch --index-url https://download.pytorch.org/whl/cpu",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -e '.[dev,chat]'",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip check",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -c \"import toruk_lm; print(toruk_lm.__version__)\"",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm --help",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm diagnose",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/check_frozen_sources.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m ruff format --check src tests scripts",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m mypy",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m mypy --platform linux",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pytest -q",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/independent_replication.py validate-cases --run artifacts/ci-independent-cases",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/conversation_readiness.py validate --output artifacts/ci-conversation-data",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output artifacts/ci-owned-lm",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm.owned_lm generate --checkpoint artifacts/ci-owned-lm/models/23-memory_on/checkpoint.pt --prompt \"Experimental CPU smoke\" --max-new-tokens 4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m build --no-isolation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "web",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm --prefix web/vercel run check",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm --prefix web/vercel test",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "working_tree_remote_status": "NOT_RUN: uncommitted local gate changes"
+}

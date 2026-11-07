@@ -1,0 +1,56 @@
+{
+  "backbones": {
+    "qwen": {
+      "directory_bytes": 999605252,
+      "manifest": {
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "model_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+      },
+      "weight_bytes": 988097824
+    },
+    "smollm": {
+      "directory_bytes": 271183732,
+      "manifest": {
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "model_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+        "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac"
+      },
+      "weight_bytes": 269060552
+    }
+  },
+  "dependencies": {
+    "networkx": {
+      "installed_windows_bytes": 15641933,
+      "version": "3.6.1"
+    },
+    "numpy": {
+      "installed_windows_bytes": 54161255,
+      "version": "2.5.4"
+    },
+    "psutil": {
+      "installed_windows_bytes": 834593,
+      "version": "7.2.2"
+    },
+    "safetensors": {
+      "installed_windows_bytes": 911391,
+      "version": "0.8.0"
+    },
+    "sympy": {
+      "installed_windows_bytes": 69598071,
+      "version": "1.14.0"
+    },
+    "torch": {
+      "installed_windows_bytes": 531556961,
+      "version": "2.14.1+cpu"
+    },
+    "transformers": {
+      "installed_windows_bytes": 107440502,
+      "version": "5.20.2"
+    }
+  },
+  "frontend_runtime_bytes": 23511,
+  "inference_source_uncompressed_bytes": 122486,
+  "inference_source_zip_bytes": 39863,
+  "scope": "Source-only zip excludes model weights, dependency wheels, secrets and research data. Dependency sizes are this Windows installation, not a Linux deployment bundle."
+}

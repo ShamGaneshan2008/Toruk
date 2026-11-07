@@ -1,0 +1,38 @@
+{
+  "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+  "driver_sha256": "98c545a84950b4fddbd13e703fabe3457d260e2380364672d6b993f57eae123d",
+  "gate": {
+    "external_output_tokens": 64,
+    "frozen_cases": "artifacts/conversation-format-v1-20261105/data/regression.json",
+    "generated_scenarios": "configs/chat-qualification-v1.json",
+    "owned_output_tokens": 32,
+    "public_gate": "All quality and reliability gates plus a tested Linux host, authentication/abuse budget, license/publication decision and hosting account/budget qualification. Local success alone does not qualify a public service.",
+    "quality_gate": {
+      "maximum_exact_string_failures": 0,
+      "maximum_refusal_math_failures": 0,
+      "maximum_repeated_trigrams": 0,
+      "maximum_unsupported_unknown": 0,
+      "minimum_each_category_fraction": 0.6,
+      "minimum_http_success_fraction": 1.0,
+      "minimum_overall_fraction": 0.8
+    },
+    "reliability_gate": {
+      "maximum_request_seconds": 45,
+      "maximum_startup_seconds": 120,
+      "reject_malformed_and_over_budget": true,
+      "require_backend_outage_503": true,
+      "require_identity_parity": true,
+      "require_secret_redaction": true,
+      "single_generation_slot": true
+    },
+    "schema": "toruk-chat-launch-gate-v1",
+    "scope": "Previously published development/regression cases, not a new held-out research result. Generated scenarios include real prior generated assistant replies; no answers are substituted. Repeat the full refusal history with three generated math follow-ups. The owned model has a separate byte/role transport and cannot be treated as a matched pretrained comparison.",
+    "scoring": "Frozen literal expectations: exact/instruction require exact text; factual/correction/recall require the literal answer and absence of obsolete value; numeric math/refusal require the expected standalone number without an online-access refusal. Unknown and natural-chat probes use the predeclared phrase rules. Phrase scores are proxies and raw responses must be reviewed.",
+    "temperature": 0,
+    "top_p": 1
+  },
+  "model": "llama3.2:latest",
+  "parent_registration_sha256": "8b5a0fb7d2b6190f35072bb7e04acc25e6b92e2be824b7eadd8a40148c539d2f",
+  "scope": "Existing local Ollama service; no downloads or training.",
+  "selector": false
+}

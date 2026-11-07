@@ -1,0 +1,425 @@
+{
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\package"
+      ],
+      "label": "launch-build",
+      "returncode": 0,
+      "seconds": 11.298559299999852,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/conversation_readiness.py",
+        "validate",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\conversation-data"
+      ],
+      "label": "launch-conversation-data",
+      "returncode": 0,
+      "seconds": 2.57783500000005,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "label": "launch-diagnose",
+      "returncode": 0,
+      "seconds": 3.4966810000000805,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--check"
+      ],
+      "label": "launch-diff-check",
+      "returncode": 0,
+      "seconds": 0.08309910000025411,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "label": "launch-format",
+      "returncode": 0,
+      "seconds": 0.1512628999998924,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/check_frozen_sources.py"
+      ],
+      "label": "launch-frozen-sources",
+      "returncode": 0,
+      "seconds": 0.1174298999999337,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "label": "launch-help",
+      "returncode": 0,
+      "seconds": 3.4313500999996904,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import toruk_lm; print(toruk_lm.__version__)"
+      ],
+      "label": "launch-import",
+      "returncode": 0,
+      "seconds": 0.07007840000005672,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "validate-cases",
+        "--run",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\independent-cases"
+      ],
+      "label": "launch-independent-cases",
+      "returncode": 0,
+      "seconds": 2.5192071999999825,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "label": "launch-install-local",
+      "returncode": 0,
+      "seconds": 6.498066699999981,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "label": "launch-lint",
+      "returncode": 0,
+      "seconds": 0.25418260000014925,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.owned_lm",
+        "generate",
+        "--checkpoint",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\owned-lm-smoke\\models\\23-memory_on\\checkpoint.pt",
+        "--prompt",
+        "Experimental CPU smoke",
+        "--max-new-tokens",
+        "4"
+      ],
+      "label": "launch-owned-lm-generate",
+      "returncode": 0,
+      "seconds": 4.577595799999926,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/study_owned_lm.py",
+        "--config",
+        "configs/owned-lm-smoke-v1.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\owned-lm-smoke"
+      ],
+      "label": "launch-owned-lm-smoke",
+      "returncode": 0,
+      "seconds": 6.006520300000375,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "label": "launch-package",
+      "returncode": 0,
+      "seconds": 1.5742678999999953,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/foundation.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\pipeline"
+      ],
+      "label": "launch-reproduce",
+      "returncode": 0,
+      "seconds": 5.009988299999804,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate-config",
+        "--config",
+        "configs/reproduce-smoke-v1.json"
+      ],
+      "label": "launch-research-config",
+      "returncode": 0,
+      "seconds": 2.4916825000000244,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/reproduce-smoke-v1.json",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\research-smoke"
+      ],
+      "label": "launch-research-smoke",
+      "returncode": 0,
+      "seconds": 5.382895500000359,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=C:/Users/susee/VS_CODE_PROJECT/Toruk",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "label": "launch-staged-diff-check",
+      "returncode": 0,
+      "seconds": 0.03623889999971652,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "summarize",
+        "--run",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\pipeline",
+        "--output",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\tables"
+      ],
+      "label": "launch-summarize",
+      "returncode": 0,
+      "seconds": 4.287387899999885,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "label": "launch-tests",
+      "returncode": 0,
+      "seconds": 198.80885460000036,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "label": "launch-types-linux",
+      "returncode": 0,
+      "seconds": 83.0579517000001,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "label": "launch-types",
+      "returncode": 0,
+      "seconds": 121.76241559999971,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate",
+        "--manifest",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\pipeline\\data\\manifest.json",
+        "--config",
+        "configs/foundation.json",
+        "--checkpoint",
+        "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.readiness\\chat-launch-verification-20261107\\pipeline\\train\\checkpoint.pt"
+      ],
+      "label": "launch-validate",
+      "returncode": 0,
+      "seconds": 2.5422530999999253,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        ".readiness/chat-launch-final-package-20261107"
+      ],
+      "label": "final-build",
+      "returncode": 0,
+      "seconds": 9.961999999999989,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "label": "final-format",
+      "returncode": 0,
+      "seconds": 0.10103179999987333,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "label": "final-lint",
+      "returncode": 0,
+      "seconds": 0.11859689999982947,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "label": "final-node",
+      "returncode": 0,
+      "seconds": 1.0106768999999076,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/measure_inference_host.py",
+        "--backbone-dir",
+        "artifacts/qwen-chat-001/backbone",
+        "--output-dir",
+        "artifacts/chat-launch-gate-20261107/host-profile"
+      ],
+      "label": "qwen-host",
+      "returncode": 0,
+      "seconds": 24.88413219999984,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        ".\\.venv\\Scripts\\python.exe",
+        "scripts/smoke_chat_readiness.py",
+        "--output-dir",
+        "artifacts/chat-launch-gate-20261107/unavailable-startup"
+      ],
+      "label": "unavailable-startup",
+      "returncode": 0,
+      "seconds": 10.08601009999984,
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "label": "final-diff",
+      "returncode": 0,
+      "seconds": 0.0863547999997536,
+      "status": "PASS"
+    }
+  ],
+  "current_tree_remote_ci": "NOT_RUN: no commit/push",
+  "full_verify_returncode": 0,
+  "linux_container": "NOT_RUN: Docker daemon unavailable",
+  "live_handler_fixture_after_final_wording": "PASS",
+  "live_qwen_handler_test": "PASS",
+  "node_tests_final": {
+    "passed": 20,
+    "skipped_optional_live": 1
+  },
+  "postman_cli": "Unavailable; existing repository tests and real HTTP qualification reused.",
+  "python_tests": 234,
+  "visual_browser": "NOT_RUN: no browser connected"
+}

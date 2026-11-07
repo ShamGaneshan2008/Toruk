@@ -71,6 +71,7 @@ test('page disables chat with a reason, recovers on Retry, and sends generated h
   assert.equal(ui.get('error').textContent, '');
   await ui.send('My name is Mira.');
   await ui.send('What is my name?');
+  assert.equal(ui.get('transcript').children[1].children[0].textContent, 'Assistant');
   assert.deepEqual(requests[1].messages, [
     {role: 'user', content: 'My name is Mira.'},
     {role: 'assistant', content: 'Your name is Mira.'},
@@ -83,6 +84,17 @@ test('page disables chat with a reason, recovers on Retry, and sends generated h
   assert.equal(ui.get('message').disabled, true);
   assert.equal(ui.get('send').disabled, true);
   assert.doesNotMatch(ui.get('error').textContent, /private-fetch-detail/);
+});
+
+test('page distinguishes a Toruk-trained smoke fixture from external pretrained weights', async () => {
+  for (const [model, expected] of [
+    ['toruk-ordinary-v1:123456789abc', /Toruk-trained smoke fixture/],
+    ['Qwen/Qwen2.5-0.5B-Instruct@revision', /External pretrained backbone/],
+  ]) {
+    const ui = await pageHarness(async () => Response.json({ready: true, backend: 'Toruk', model, memory_supported: false}));
+    await ui.retry();
+    assert.match(ui.get('model').textContent, expected);
+  }
 });
 
 test('live page handlers send a normal question and follow-up through the real proxy', {

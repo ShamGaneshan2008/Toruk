@@ -1,0 +1,2972 @@
+{
+  "concurrent": [
+    {
+      "body": {
+        "answer": "Photosynthesis is a vital process that occurs in plants, algae, and some bacteria, converting light energy from the sun into chemical energy stored in glucose. This process is essential for life on Earth, as it provides the primary energy source for nearly all ecosystems. During photosynthesis, plants absorb carbon dioxide from the air and water from",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 41,
+          "history_tokenization_ms": 0.705,
+          "input_tokens": 36,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.405,
+          "proxy_ms": 3688.452,
+          "response_ms": 3682.836,
+          "selected_context_tokens": 36,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 100
+        }
+      },
+      "code": 200,
+      "seconds": 3.6911412999997992
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.009741700000176934
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.007839700000204175
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.00913700000000972
+    }
+  ],
+  "direct_status": {
+    "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "backbone_digest": null,
+    "backbone_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "backbone_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+    "backend": "Toruk",
+    "chat_quality": "unqualified",
+    "context_tokens": 512,
+    "efficiency_claim": "unsupported",
+    "error": null,
+    "error_code": null,
+    "experimental": true,
+    "memory_supported": false,
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+    "modes": [
+      "BASELINE"
+    ],
+    "ready": true,
+    "selector_id": null,
+    "selector_kind": null,
+    "selector_sha256": null
+  },
+  "peak_process_tree": {
+    "private_sum_bytes": 1975562240,
+    "rss_sum_bytes": 1163366400
+  },
+  "reliability": {
+    "bad_json_400": true,
+    "bounded_latency": true,
+    "bounded_startup": true,
+    "health_aliases": true,
+    "identity": true,
+    "message_bytes_400": true,
+    "outage_503": true,
+    "secret_redaction": true,
+    "selector_mode_400": true,
+    "single_generation_slot": true,
+    "tokens_400": true,
+    "unauthorized_401": true
+  },
+  "reliability_gate": "PASS",
+  "rows": [
+    {
+      "category": "instruction",
+      "content": "I'm ready to assist you with your Evalue instruction. Please provide the value of the variable, and I'll help you understand the implications of the value.",
+      "http_status": 200,
+      "id": "test-instruction-0",
+      "inference_tree_cpu_seconds": 3.6875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction0.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm ready to assist you with your Evalue instruction. Please provide the value of the variable, and I'll help you understand the implications of the value.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 8.331,
+          "input_tokens": 38,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 33,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.41,
+          "proxy_ms": 1719.527,
+          "response_ms": 1714.794,
+          "selected_context_tokens": 38,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 71
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.7361969000003228
+    },
+    {
+      "category": "instruction",
+      "content": "I'm ready to assist you with your Evalue instruction. Please provide the value of the variable, and I'll help you understand the implications of the value.",
+      "http_status": 200,
+      "id": "test-instruction-1",
+      "inference_tree_cpu_seconds": 3.484375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction1.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm ready to assist you with your Evalue instruction. Please provide the value of the variable, and I'll help you understand the implications of the value.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 0.462,
+          "input_tokens": 38,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 33,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.245,
+          "proxy_ms": 1733.138,
+          "response_ms": 1729.092,
+          "selected_context_tokens": 38,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 71
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.762981000000309
+    },
+    {
+      "category": "instruction",
+      "content": "I'm ready to assist you with your Evalue instruction. Please provide the value of the variable, and I'll help you understand the implications of the value.",
+      "http_status": 200,
+      "id": "test-instruction-2",
+      "inference_tree_cpu_seconds": 3.546875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction2.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm ready to assist you with your Evalue instruction. Please provide the value of the variable, and I'll help you understand the implications of the value.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 0.479,
+          "input_tokens": 38,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 33,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.252,
+          "proxy_ms": 1769.684,
+          "response_ms": 1766.316,
+          "selected_context_tokens": 38,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 71
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.7849332000000686
+    },
+    {
+      "category": "factual",
+      "content": "The label for Epersonfactual0 is Evaluefactual0.",
+      "http_status": 200,
+      "id": "test-factual-0",
+      "inference_tree_cpu_seconds": 1.8125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual0 is Evaluefactual0. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The label for Epersonfactual0 is Evaluefactual0.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 0.926,
+          "input_tokens": 56,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 16,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.327,
+          "proxy_ms": 928.564,
+          "response_ms": 925.347,
+          "selected_context_tokens": 56,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 72
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.9419549999997798
+    },
+    {
+      "category": "factual",
+      "content": "The label for Epersonfactual1 is Evaluefactual1.",
+      "http_status": 200,
+      "id": "test-factual-1",
+      "inference_tree_cpu_seconds": 1.890625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual1 is Evaluefactual1. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The label for Epersonfactual1 is Evaluefactual1.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 0.495,
+          "input_tokens": 56,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 16,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.268,
+          "proxy_ms": 940.432,
+          "response_ms": 937.389,
+          "selected_context_tokens": 56,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 72
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.9557205000000977
+    },
+    {
+      "category": "factual",
+      "content": "The label for Epersonfactual2 is Evaluefactual2.",
+      "http_status": 200,
+      "id": "test-factual-2",
+      "inference_tree_cpu_seconds": 1.84375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual2 is Evaluefactual2. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The label for Epersonfactual2 is Evaluefactual2.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 0.583,
+          "input_tokens": 56,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 16,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.356,
+          "proxy_ms": 919.202,
+          "response_ms": 916.265,
+          "selected_context_tokens": 56,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 72
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.9327711999999337
+    },
+    {
+      "category": "uncertainty",
+      "content": "I'm sorry for any confusion, but as a chatbot designed to assist with language processing, I don't have the capability to interpret or understand any kind of label or classification. I'm here to provide assistance with text-based queries, and I don't have the ability to provide information about specific labels or classifications.",
+      "http_status": 200,
+      "id": "test-uncertainty-0",
+      "inference_tree_cpu_seconds": 6.859375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot designed to assist with language processing, I don't have the capability to interpret or understand any kind of label or classification. I'm here to provide assistance with text-based queries, and I don't have the ability to provide information about specific labels or classifications.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 75,
+          "history_tokenization_ms": 0.72,
+          "input_tokens": 49,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.408,
+          "proxy_ms": 3481.834,
+          "response_ms": 3478.237,
+          "selected_context_tokens": 49,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 113
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 2,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 3.4942433999999594
+    },
+    {
+      "category": "uncertainty",
+      "content": "Epersonuncertainty1's unseen label is \"Unknown\".",
+      "http_status": 200,
+      "id": "test-uncertainty-1",
+      "inference_tree_cpu_seconds": 1.65625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersonuncertainty1's unseen label is \"Unknown\".",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 75,
+          "history_tokenization_ms": 0.611,
+          "input_tokens": 49,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 14,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.252,
+          "proxy_ms": 820.345,
+          "response_ms": 817.236,
+          "selected_context_tokens": 49,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 63
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 0.8331895000001168
+    },
+    {
+      "category": "uncertainty",
+      "content": "Epersonuncertainty2's unseen label is \"Unknown\".",
+      "http_status": 200,
+      "id": "test-uncertainty-2",
+      "inference_tree_cpu_seconds": 1.65625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersonuncertainty2's unseen label is \"Unknown\".",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 75,
+          "history_tokenization_ms": 0.51,
+          "input_tokens": 49,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 14,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.269,
+          "proxy_ms": 823.786,
+          "response_ms": 820.955,
+          "selected_context_tokens": 49,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 63
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 0.8367130999999972
+    },
+    {
+      "category": "correction",
+      "content": "Recorded.",
+      "http_status": 200,
+      "id": "test-correction-0",
+      "inference_tree_cpu_seconds": 0.90625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection0's label is Eoldcorrection0.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection0.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Recorded.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 173,
+          "history_tokenization_ms": 0.741,
+          "input_tokens": 101,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 4,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.59,
+          "proxy_ms": 446.058,
+          "response_ms": 442.328,
+          "selected_context_tokens": 101,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 105
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.4699098999999478
+    },
+    {
+      "category": "correction",
+      "content": "Recorded.",
+      "http_status": 200,
+      "id": "test-correction-1",
+      "inference_tree_cpu_seconds": 0.875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection1's label is Eoldcorrection1.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection1.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Recorded.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 173,
+          "history_tokenization_ms": 0.705,
+          "input_tokens": 101,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 4,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.405,
+          "proxy_ms": 428.092,
+          "response_ms": 425.115,
+          "selected_context_tokens": 101,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 105
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.4409464999998818
+    },
+    {
+      "category": "correction",
+      "content": "Recorded.",
+      "http_status": 200,
+      "id": "test-correction-2",
+      "inference_tree_cpu_seconds": 0.890625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection2's label is Eoldcorrection2.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection2.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Recorded.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 173,
+          "history_tokenization_ms": 0.717,
+          "input_tokens": 101,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 4,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.476,
+          "proxy_ms": 435.612,
+          "response_ms": 432.701,
+          "selected_context_tokens": 101,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 105
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.44680639999978666
+    },
+    {
+      "category": "distant",
+      "content": "Epersondistant0's label is Evaluedistant0.",
+      "http_status": 200,
+      "id": "test-distant-0",
+      "inference_tree_cpu_seconds": 1.828125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant0's label is Evaluedistant0.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersondistant0's label is Evaluedistant0.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 208,
+          "history_tokenization_ms": 0.782,
+          "input_tokens": 108,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 14,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.43,
+          "proxy_ms": 910.019,
+          "response_ms": 906.751,
+          "selected_context_tokens": 108,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 122
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.9348287000002529
+    },
+    {
+      "category": "distant",
+      "content": "Epersondistant1's label is Evaluedistant1.",
+      "http_status": 200,
+      "id": "test-distant-1",
+      "inference_tree_cpu_seconds": 1.90625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant1's label is Evaluedistant1.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersondistant1's label is Evaluedistant1.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 208,
+          "history_tokenization_ms": 0.96,
+          "input_tokens": 108,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 14,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.601,
+          "proxy_ms": 967.758,
+          "response_ms": 964.327,
+          "selected_context_tokens": 108,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 122
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.9809204000002865
+    },
+    {
+      "category": "distant",
+      "content": "Epersondistant2's label is Evaluedistant2.",
+      "http_status": 200,
+      "id": "test-distant-2",
+      "inference_tree_cpu_seconds": 1.859375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant2's label is Evaluedistant2.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersondistant2's label is Evaluedistant2.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 208,
+          "history_tokenization_ms": 0.607,
+          "input_tokens": 108,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 14,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.573,
+          "proxy_ms": 934.955,
+          "response_ms": 931.754,
+          "selected_context_tokens": 108,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 122
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.9475365000002967
+    },
+    {
+      "category": "exact",
+      "content": "Epersonexact0's label is E/Q-0_x!.",
+      "http_status": 200,
+      "id": "test-exact-0",
+      "inference_tree_cpu_seconds": 2.234375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact0's label is E/Q-0_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersonexact0's label is E/Q-0_x!.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 101,
+          "history_tokenization_ms": 0.556,
+          "input_tokens": 80,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 19,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.415,
+          "proxy_ms": 1116.885,
+          "response_ms": 1112.814,
+          "selected_context_tokens": 80,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 99
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.130079300000034
+    },
+    {
+      "category": "exact",
+      "content": "Epersonexact1's label is E/Q-1_x!.",
+      "http_status": 200,
+      "id": "test-exact-1",
+      "inference_tree_cpu_seconds": 2.234375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact1's label is E/Q-1_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersonexact1's label is E/Q-1_x!.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 101,
+          "history_tokenization_ms": 0.653,
+          "input_tokens": 80,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 19,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.452,
+          "proxy_ms": 1100.885,
+          "response_ms": 1098.046,
+          "selected_context_tokens": 80,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 99
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.1142427000004318
+    },
+    {
+      "category": "exact",
+      "content": "Epersonexact2's label is E/Q-2_x!.",
+      "http_status": 200,
+      "id": "test-exact-2",
+      "inference_tree_cpu_seconds": 2.171875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact2's label is E/Q-2_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Epersonexact2's label is E/Q-2_x!.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 101,
+          "history_tokenization_ms": 0.55,
+          "input_tokens": 80,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 19,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.268,
+          "proxy_ms": 1081.158,
+          "response_ms": 1078.407,
+          "selected_context_tokens": 80,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 99
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.0949851999998828
+    },
+    {
+      "category": "math",
+      "content": "5 + 5 = 10",
+      "http_status": 200,
+      "id": "test-math-0",
+      "inference_tree_cpu_seconds": 1.171875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath0, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 53,
+          "history_tokenization_ms": 0.773,
+          "input_tokens": 49,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 9,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.597,
+          "proxy_ms": 578.503,
+          "response_ms": 575.238,
+          "selected_context_tokens": 49,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 58
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.600579199999629
+    },
+    {
+      "category": "math",
+      "content": "5 + 5 = 10",
+      "http_status": 200,
+      "id": "test-math-1",
+      "inference_tree_cpu_seconds": 1.203125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath1, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 53,
+          "history_tokenization_ms": 0.459,
+          "input_tokens": 49,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 9,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.196,
+          "proxy_ms": 589.643,
+          "response_ms": 586.753,
+          "selected_context_tokens": 49,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 58
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.6030748999996831
+    },
+    {
+      "category": "math",
+      "content": "5 + 5 = 10",
+      "http_status": 200,
+      "id": "test-math-2",
+      "inference_tree_cpu_seconds": 1.171875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath2, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 53,
+          "history_tokenization_ms": 0.568,
+          "input_tokens": 49,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 9,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.315,
+          "proxy_ms": 619.651,
+          "response_ms": 616.805,
+          "selected_context_tokens": 49,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 58
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.6376264999998966
+    },
+    {
+      "category": "refusal",
+      "content": "5 + 5 = 10",
+      "http_status": 200,
+      "id": "test-refusal-0",
+      "inference_tree_cpu_seconds": 1.1875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 54,
+          "history_tokenization_ms": 0.627,
+          "input_tokens": 55,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 9,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.362,
+          "proxy_ms": 596.842,
+          "response_ms": 593.79,
+          "selected_context_tokens": 55,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 64
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.6110895000001619
+    },
+    {
+      "category": "refusal",
+      "content": "5 + 5 = 10",
+      "http_status": 200,
+      "id": "test-refusal-1",
+      "inference_tree_cpu_seconds": 1.234375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "For Epersonrefusal1, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 99,
+          "history_tokenization_ms": 0.652,
+          "input_tokens": 69,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 9,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.446,
+          "proxy_ms": 609.229,
+          "response_ms": 606.38,
+          "selected_context_tokens": 69,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 78
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.6222439000002851
+    },
+    {
+      "category": "refusal",
+      "content": "5 + 5 = 10",
+      "http_status": 200,
+      "id": "test-refusal-2",
+      "inference_tree_cpu_seconds": 1.234375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "For Epersonrefusal2, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "5 + 5 = 10",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 99,
+          "history_tokenization_ms": 0.629,
+          "input_tokens": 69,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 9,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.371,
+          "proxy_ms": 607.641,
+          "response_ms": 604.728,
+          "selected_context_tokens": 69,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 78
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.6313496000002488
+    },
+    {
+      "category": "refusal",
+      "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+      "http_status": 200,
+      "id": "test-observed-full-refusal",
+      "inference_tree_cpu_seconds": 3.78125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 537,
+          "history_tokenization_ms": 1.23,
+          "input_tokens": 216,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 28,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.845,
+          "proxy_ms": 1907.097,
+          "response_ms": 1904.073,
+          "selected_context_tokens": 216,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ],
+          "selected_messages": 11,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 244
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.9315989000001537
+    },
+    {
+      "category": "basic",
+      "content": "Hello! I'm here to help you with any questions or problems you might have. Whether you're looking for help with math, science, or anything else, I'm here to assist you. What's on your mind?",
+      "http_status": 200,
+      "id": "natural-hello",
+      "inference_tree_cpu_seconds": 4.921875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Hello!",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Hello! I'm here to help you with any questions or problems you might have. Whether you're looking for help with math, science, or anything else, I'm here to assist you. What's on your mind?",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 6,
+          "history_tokenization_ms": 0.417,
+          "input_tokens": 32,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 46,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.257,
+          "proxy_ms": 2484.844,
+          "response_ms": 2482.123,
+          "selected_context_tokens": 32,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 78
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 1,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.509496500000296
+    },
+    {
+      "category": "generated-arithmetic",
+      "content": "2 + 3 is a simple arithmetic operation that can be performed using basic arithmetic operations. In mathematics, addition is a fundamental operation that combines two numbers to produce a single number.\n\nIn this case, we have two numbers, 2 and 3, and we want to add them together. The basic arithmetic",
+      "http_status": 200,
+      "id": "generated-arithmetic-0",
+      "inference_tree_cpu_seconds": 6.46875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is 2 + 3?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "2 + 3 is a simple arithmetic operation that can be performed using basic arithmetic operations. In mathematics, addition is a fundamental operation that combines two numbers to produce a single number.\n\nIn this case, we have two numbers, 2 and 3, and we want to add them together. The basic arithmetic",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 14,
+          "history_tokenization_ms": 0.461,
+          "input_tokens": 38,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.231,
+          "proxy_ms": 3222.318,
+          "response_ms": 3219.226,
+          "selected_context_tokens": 38,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 102
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 3.2655455999997685
+    },
+    {
+      "category": "generated-capital",
+      "content": "The capital of France is Paris.",
+      "http_status": 200,
+      "id": "generated-capital-0",
+      "inference_tree_cpu_seconds": 1.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is the capital of France?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The capital of France is Paris.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 0.65,
+          "input_tokens": 37,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 8,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.456,
+          "proxy_ms": 562.665,
+          "response_ms": 556.939,
+          "selected_context_tokens": 37,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 45
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.5839009999999689
+    },
+    {
+      "category": "generated-conflict",
+      "content": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide a specific answer or answer a question. My purpose is to assist you in finding the most suitable information for your needs. I'm designed to provide information and answer questions in a clear and concise manner. If you have",
+      "http_status": 200,
+      "id": "generated-conflict-0",
+      "inference_tree_cpu_seconds": 6.140625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide a specific answer or answer a question. My purpose is to assist you in finding the most suitable information for your needs. I'm designed to provide information and answer questions in a clear and concise manner. If you have",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 151,
+          "history_tokenization_ms": 0.572,
+          "input_tokens": 62,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.423,
+          "proxy_ms": 3106.981,
+          "response_ms": 3104.065,
+          "selected_context_tokens": 62,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 126
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": true
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 3.1220680999999786
+    },
+    {
+      "category": "generated-correction",
+      "content": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light blues to deep blues, and even some vibrant shades like navy or charcoal. Blue is also a great choice for adding a touch of sophistication to any outfit",
+      "http_status": 200,
+      "id": "generated-correction-0",
+      "inference_tree_cpu_seconds": 6.640625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My favorite color is blue.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light blues to deep blues, and even some vibrant shades like navy or charcoal. Blue is also a great choice for adding a touch of sophistication to any outfit",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 26,
+          "history_tokenization_ms": 0.54,
+          "input_tokens": 36,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.323,
+          "proxy_ms": 3388.86,
+          "response_ms": 3385.711,
+          "selected_context_tokens": 36,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 100
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 3.4046352999998817
+    },
+    {
+      "category": "generated-correction",
+      "content": "I'm glad you like the color green. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light greens to dark greens, and even some vibrant shades like navy or charcoal. Green is also a great choice for adding a touch of sophistication to any outfit",
+      "http_status": 200,
+      "id": "generated-correction-1",
+      "inference_tree_cpu_seconds": 6.8125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My favorite color is blue.",
+            "role": "user"
+          },
+          {
+            "content": "I'm glad you like the color blue. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light blues to deep blues, and even some vibrant shades like navy or charcoal. Blue is also a great choice for adding a touch of sophistication to any outfit",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: my favorite color is green. What is my favorite color now?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm glad you like the color green. It's a versatile and timeless choice that can be found in many different forms. You can choose from various shades, from light greens to dark greens, and even some vibrant shades like navy or charcoal. Green is also a great choice for adding a touch of sophistication to any outfit",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 408,
+          "history_tokenization_ms": 0.985,
+          "input_tokens": 127,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.591,
+          "proxy_ms": 3423.362,
+          "response_ms": 3419.098,
+          "selected_context_tokens": 127,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 191
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 3.4563293999999587
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+      "http_status": 200,
+      "id": "generated-earlier_fact-0",
+      "inference_tree_cpu_seconds": 6.265625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 68,
+          "history_tokenization_ms": 0.511,
+          "input_tokens": 48,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 63,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.257,
+          "proxy_ms": 3151.609,
+          "response_ms": 3148.977,
+          "selected_context_tokens": 48,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 111
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 3.1651763999998366
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "The capital of Japan is Tokyo.",
+      "http_status": 200,
+      "id": "generated-earlier_fact-1",
+      "inference_tree_cpu_seconds": 1.203125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is the capital of Japan?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The capital of Japan is Tokyo.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 417,
+          "history_tokenization_ms": 0.961,
+          "input_tokens": 128,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 8,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.366,
+          "proxy_ms": 619.997,
+          "response_ms": 616.366,
+          "selected_context_tokens": 128,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 136
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 0.6310880000000907
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+      "http_status": 200,
+      "id": "generated-earlier_fact-2",
+      "inference_tree_cpu_seconds": 6.84375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is the capital of Japan?",
+            "role": "user"
+          },
+          {
+            "content": "The capital of Japan is Tokyo.",
+            "role": "assistant"
+          },
+          {
+            "content": "What bicycle lock code did I give you earlier?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot designed to assist with bicycle lock codes, I don't have the capability to access or retrieve information about bicycle locks codes. I recommend checking the official website of the manufacturer or the manufacturer's website for the most accurate and up-to-date information.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 493,
+          "history_tokenization_ms": 0.948,
+          "input_tokens": 156,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 63,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.673,
+          "proxy_ms": 3431.024,
+          "response_ms": 3427.723,
+          "selected_context_tokens": 156,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 219
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 3.4630176000000574
+    },
+    {
+      "category": "generated-explanation",
+      "content": "Plants use sunlight for photosynthesis, converting light energy into chemical energy stored in glucose and other organic compounds.",
+      "http_status": 200,
+      "id": "generated-explanation-0",
+      "inference_tree_cpu_seconds": 2.34375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "In one sentence, what do plants use sunlight for?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Plants use sunlight for photosynthesis, converting light energy into chemical energy stored in glucose and other organic compounds.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 49,
+          "history_tokenization_ms": 0.56,
+          "input_tokens": 41,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 21,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.303,
+          "proxy_ms": 1184.26,
+          "response_ms": 1181.482,
+          "selected_context_tokens": 41,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 62
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 1.1982827000001635
+    },
+    {
+      "category": "generated-follow_up",
+      "content": "I'm Mira, a friendly AI chatbot designed to assist users in various aspects of life. I'm here to help you with your queries, whether it's about a specific topic, a task, or a problem you're facing. I'm ready to help, and I'm here to assist you. What's on",
+      "http_status": 200,
+      "id": "generated-follow_up-0",
+      "inference_tree_cpu_seconds": 6.3125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My name is Mira.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm Mira, a friendly AI chatbot designed to assist users in various aspects of life. I'm here to help you with your queries, whether it's about a specific topic, a task, or a problem you're facing. I'm ready to help, and I'm here to assist you. What's on",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 16,
+          "history_tokenization_ms": 0.647,
+          "input_tokens": 35,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.347,
+          "proxy_ms": 3162.399,
+          "response_ms": 3159.004,
+          "selected_context_tokens": 35,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 99
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 3.187352500000088
+    },
+    {
+      "category": "generated-follow_up",
+      "content": "My name is Mira, and I'm a helpful AI chatbot designed to assist users in various aspects of life. I'm ready to help, and I'm here to assist you. What's your name?",
+      "http_status": 200,
+      "id": "generated-follow_up-1",
+      "inference_tree_cpu_seconds": 4.953125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My name is Mira.",
+            "role": "user"
+          },
+          {
+            "content": "I'm Mira, a friendly AI chatbot designed to assist users in various aspects of life. I'm here to help you with your queries, whether it's about a specific topic, a task, or a problem you're facing. I'm ready to help, and I'm here to assist you. What's on",
+            "role": "assistant"
+          },
+          {
+            "content": "What is my name?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "My name is Mira, and I'm a helpful AI chatbot designed to assist users in various aspects of life. I'm ready to help, and I'm here to assist you. What's your name?",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 286,
+          "history_tokenization_ms": 0.865,
+          "input_tokens": 115,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 43,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.549,
+          "proxy_ms": 2482.633,
+          "response_ms": 2479.768,
+          "selected_context_tokens": 115,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 158
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 2.496041200000036
+    },
+    {
+      "category": "generated-unknown",
+      "content": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide specific names or information about teachers. I'm here to assist you with your questions and provide guidance. If you're unsure, please let me know and I'll do my best to assist you.",
+      "http_status": 200,
+      "id": "generated-unknown-0",
+      "inference_tree_cpu_seconds": 6.703125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is the name of my childhood teacher? I have not told you. If you don't know, say so.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide specific names or information about teachers. I'm here to assist you with your questions and provide guidance. If you're unsure, please let me know and I'll do my best to assist you.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 0.511,
+          "input_tokens": 54,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 61,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.272,
+          "proxy_ms": 3353.099,
+          "response_ms": 3350.321,
+          "selected_context_tokens": 54,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 115
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 3.3646945999998934
+    },
+    {
+      "category": "repetition",
+      "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+      "http_status": 200,
+      "id": "refusal-repeat-0",
+      "inference_tree_cpu_seconds": 4.046875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 537,
+          "history_tokenization_ms": 0.85,
+          "input_tokens": 216,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 28,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.621,
+          "proxy_ms": 2120.472,
+          "response_ms": 2117.733,
+          "selected_context_tokens": 216,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ],
+          "selected_messages": 11,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 244
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.1357868000000053
+    },
+    {
+      "category": "repetition",
+      "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+      "http_status": 200,
+      "id": "refusal-repeat-1",
+      "inference_tree_cpu_seconds": 4.375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 665,
+          "history_tokenization_ms": 1.247,
+          "input_tokens": 260,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 28,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 1.024,
+          "proxy_ms": 2176.725,
+          "response_ms": 2173.924,
+          "selected_context_tokens": 260,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10",
+            "m11",
+            "m12"
+          ],
+          "selected_messages": 13,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 288
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.1913955999998507
+    },
+    {
+      "category": "repetition",
+      "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+      "http_status": 200,
+      "id": "refusal-repeat-2",
+      "inference_tree_cpu_seconds": 4.796875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+        "metrics": {
+          "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 793,
+          "history_tokenization_ms": 1.488,
+          "input_tokens": 304,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+          "output_tokens": 28,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.987,
+          "proxy_ms": 2425.95,
+          "response_ms": 2421.04,
+          "selected_context_tokens": 304,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10",
+            "m11",
+            "m12",
+            "m13",
+            "m14"
+          ],
+          "selected_messages": 15,
+          "selector_history_bytes": 0,
+          "selector_id": null,
+          "selector_kind": null,
+          "selector_ms": 0,
+          "selector_sha256": null,
+          "total_tokens": 332
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.438876199999868
+    }
+  ],
+  "scope": "Local Windows process tree; no Linux/cloud capacity guarantee.",
+  "startup_seconds": 10.416457300000275,
+  "status": {
+    "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "backbone_digest": null,
+    "backbone_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "backbone_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+    "backend": "Toruk",
+    "chat_quality": "unqualified",
+    "context_tokens": 512,
+    "efficiency_claim": "unsupported",
+    "error": null,
+    "error_code": null,
+    "experimental": true,
+    "memory_supported": false,
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+    "modes": [
+      "BASELINE"
+    ],
+    "ready": true,
+    "selector_id": null,
+    "selector_kind": null,
+    "selector_sha256": null
+  },
+  "summary": {
+    "all_request_metric_totals": {
+      "history_bytes_read": 7024,
+      "history_tokenization_ms": 36.538999999999994,
+      "input_tokens": 3541,
+      "output_tokens": 1149,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 17.808999999999997,
+      "proxy_ms": 66363.73800000001,
+      "response_ms": 66229.14099999999,
+      "selected_context_tokens": 3541,
+      "selected_messages": 133,
+      "selector_history_bytes": 0,
+      "selector_ms": 0,
+      "total_tokens": 4690
+    },
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 3
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 0
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 3
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 1
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 3
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 3
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 0
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 1
+      }
+    },
+    "correct": 18,
+    "distinct_replies": 25,
+    "exact_string_failures": 3,
+    "http_ok": 37,
+    "most_common_reply_count": 6,
+    "quality_gate": "FAIL",
+    "refusal_math_failures": 4,
+    "repeated_trigrams": 3,
+    "request_count": 41,
+    "summed_metrics": {
+      "history_bytes_read": 6497,
+      "history_tokenization_ms": 33.879999999999995,
+      "input_tokens": 3294,
+      "output_tokens": 950,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 16.516,
+      "proxy_ms": 56040.87300000001,
+      "response_ms": 55919.082999999984,
+      "selected_context_tokens": 3294,
+      "selected_messages": 127,
+      "selector_history_bytes": 0,
+      "selector_ms": 0,
+      "total_tokens": 4244
+    },
+    "unsupported_proxy": 3
+  }
+}

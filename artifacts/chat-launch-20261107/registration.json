@@ -1,0 +1,73 @@
+{
+  "files": {
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\scripts\\qualify_chat_launch.py": "98ac0c634bd3493251731053be60830e213a286108eca15042fae2e6ef467f57",
+    "artifacts\\chat-launch-20261107\\suite.json": "427b70622043489cbc30bf94135fecad973f74cac7284284424a9d4f0d49988b",
+    "artifacts\\chat-selector-v2-20261101\\selector.json": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+    "artifacts\\conversation-format-v1-20261105\\data\\regression.json": "2c8b3438bef2fb6aa429920a9be1878b4649ce1cc8747d2dd3b526cc3e9a2200",
+    "artifacts\\conversation-format-v1-20261105\\models\\candidate\\checkpoint.pt": "af3eecde26139c11e1dd7c40f89a3bd5510cbbabad762b6a049106c91ae22e66",
+    "configs\\chat-launch-gate-v1.json": "fba354b11b99c55e62150ad8c9d713f9c34ae76f3e4fef34934f24a17f9ab6a3",
+    "configs\\chat-qualification-v1.json": "ee92ce4a331b0104e1e89a192bda4f246aebca2f2b4035659926dc9bc52fbfcd",
+    "src\\toruk_lm\\chat_foundation.py": "bc20eca24854f82697c160a4737d0e86cceaf0ecf9311f7e860bffb2ea05cb7f",
+    "src\\toruk_lm\\inference_server.py": "e28af56216fd4a6513cc0ceb36030d1bd52ca6aa1f639590b6122d0db8a5a70a",
+    "src\\toruk_lm\\inference_worker.py": "e460a5b349ef289bd2aa1be350d0c19eee76a4d67a63fb0be4cc1c69465cf1aa",
+    "src\\toruk_lm\\owned_lm.py": "290c88f4d654f78e57184d8137ae5b80d51ce0c6e26d3671bce8cec194e375f6"
+  },
+  "gate": {
+    "external_output_tokens": 64,
+    "frozen_cases": "artifacts/conversation-format-v1-20261105/data/regression.json",
+    "generated_scenarios": "configs/chat-qualification-v1.json",
+    "owned_output_tokens": 32,
+    "public_gate": "All quality and reliability gates plus a tested Linux host, authentication/abuse budget, license/publication decision and hosting account/budget qualification. Local success alone does not qualify a public service.",
+    "quality_gate": {
+      "maximum_exact_string_failures": 0,
+      "maximum_refusal_math_failures": 0,
+      "maximum_repeated_trigrams": 0,
+      "maximum_unsupported_unknown": 0,
+      "minimum_each_category_fraction": 0.6,
+      "minimum_http_success_fraction": 1.0,
+      "minimum_overall_fraction": 0.8
+    },
+    "reliability_gate": {
+      "maximum_request_seconds": 45,
+      "maximum_startup_seconds": 120,
+      "reject_malformed_and_over_budget": true,
+      "require_backend_outage_503": true,
+      "require_identity_parity": true,
+      "require_secret_redaction": true,
+      "single_generation_slot": true
+    },
+    "schema": "toruk-chat-launch-gate-v1",
+    "scope": "Previously published development/regression cases, not a new held-out research result. Generated scenarios include real prior generated assistant replies; no answers are substituted. Repeat the full refusal history with three generated math follow-ups. The owned model has a separate byte/role transport and cannot be treated as a matched pretrained comparison.",
+    "scoring": "Frozen literal expectations: exact/instruction require exact text; factual/correction/recall require the literal answer and absence of obsolete value; numeric math/refusal require the expected standalone number without an online-access refusal. Unknown and natural-chat probes use the predeclared phrase rules. Phrase scores are proxies and raw responses must be reviewed.",
+    "temperature": 0,
+    "top_p": 1
+  },
+  "modes": {
+    "ordinary-smoke": {
+      "checkpoint": "artifacts/foundation-001/train/checkpoint.pt",
+      "mode": "BASELINE"
+    },
+    "qwen-lexical-v2": {
+      "backbone": "artifacts/qwen-chat-001/backbone",
+      "heuristic": "lexical-v2",
+      "mode": "TORUK"
+    },
+    "qwen-recent": {
+      "backbone": "artifacts/qwen-chat-001/backbone",
+      "mode": "BASELINE"
+    },
+    "qwen-trained-v2": {
+      "backbone": "artifacts/qwen-chat-001/backbone",
+      "mode": "TORUK",
+      "selector": "artifacts\\chat-selector-v2-20261101\\selector.json"
+    },
+    "smollm-recent": {
+      "backbone": "artifacts/chat-foundation-001/backbone",
+      "mode": "BASELINE"
+    }
+  },
+  "note": "Historical published probes; no new training. Gates frozen before new model calls.",
+  "schema": "toruk-chat-launch-registration-v1",
+  "starting_commit": "a450a0d6c4f293fb9b500968c35a5c051787d0a6",
+  "starting_tree_before_task": "clean (observed before gate changes)"
+}

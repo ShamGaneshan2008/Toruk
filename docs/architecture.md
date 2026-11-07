@@ -1,5 +1,14 @@
 # Current implementation
 
+The [7 November chatbot launch gate](research/chat-launch-gate-20261107.md) traces
+the current browser → Node proxy → Python server → killable model-worker path.
+BASELINE and TORUK identify the same configured pretrained backbone; TORUK only
+changes turn selection. The owned conversational model remains research CLI-only.
+The proxy preserves worker deadline HTTP 504 and safe retryable `INFERENCE_BUSY`
+503 responses. Status forwards full backbone revision/hash plus selector identity.
+Fresh telemetry includes history tokenization, prompt fitting, selector time and
+bytes scanned; external selectors retain no persistent learned session state.
+
 The additive [owned next-token LM v1](research/owned-lm-v1-design.md) reuses the
 existing recurrent decoder for complete-document next-token training and explicit
 state reset. Its checkpoint type is `toruk-owned-next-token-v1`; experimental CLI

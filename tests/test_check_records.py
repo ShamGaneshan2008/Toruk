@@ -1,9 +1,35 @@
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 import pytest
+
+
+def test_unicode_output_does_not_fail_a_check_on_a_legacy_console(tmp_path):
+    script = Path(__file__).resolve().parents[1] / "scripts/check.py"
+    completed = subprocess.run(
+        [
+            sys.executable,
+            str(script),
+            "--output-dir",
+            str(tmp_path),
+            "unicode",
+            "--",
+            sys.executable,
+            "-c",
+            "import sys; sys.stdout.buffer.write(chr(0x2714).encode('utf-8'))",
+        ],
+        env={**os.environ, "PYTHONIOENCODING": "ascii"},
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    assert completed.returncode == 0, completed.stderr
+    assert "\\u2714" in completed.stdout
+    assert (tmp_path / "unicode.log").read_text(encoding="utf-8") == "\u2714"
+    assert json.loads((tmp_path / "unicode.json").read_text())["status"] == "PASS"
 
 
 def test_check_fingerprint_covers_web_sources_and_ignores_generated_trees(tmp_path, monkeypatch):
@@ -129,3 +155,26 @@ def test_verify_detects_staged_whitespace(tmp_path, monkeypatch, trailing_whites
     monkeypatch.setattr(verify.subprocess, "run", run_check)
     monkeypatch.setattr(sys, "argv", ["verify.py", "--output-dir", str(tmp_path / "checks")])
     assert verify.main() == int(trailing_whitespace)
+
+
+@pytest.mark.parametrize("failed_check", [None, "web-check", "web-tests"])
+def test_verify_runs_web_checks_and_propagates_failures(tmp_path, monkeypatch, failed_check):
+    monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[1] / "scripts"))
+    import verify
+
+    commands = {}
+
+    def run_check(command, **kwargs):
+        separator = command.index("--")
+        label = command[separator - 1]
+        commands[label] = command[separator + 1 :]
+        return subprocess.CompletedProcess(command, int(label == failed_check))
+
+    npm = str(tmp_path / "npm.cmd")
+    monkeypatch.setattr(verify.shutil, "which", lambda name: npm)
+    monkeypatch.setattr(verify.subprocess, "run", run_check)
+    monkeypatch.setattr(sys, "argv", ["verify.py", "--output-dir", str(tmp_path / "checks")])
+    assert verify.main() == int(failed_check is not None)
+    assert commands["web-check"] == [npm, "--prefix", "web/vercel", "run", "check"]
+    assert commands["web-tests"] == [npm, "--prefix", "web/vercel", "test"]
+    assert "tests" in commands, "A web failure must still retain Python verification evidence"

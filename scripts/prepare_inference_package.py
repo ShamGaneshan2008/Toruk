@@ -12,6 +12,8 @@ MODULES = (
     "__init__",
     "chat_runtime",
     "chat_foundation",
+    "chat_selector",
+    "ollama_chat",
     "context_selection",
     "inference_server",
     "inference_worker",

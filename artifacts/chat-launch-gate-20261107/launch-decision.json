@@ -1,0 +1,846 @@
+{
+  "local_offer": "Loopback-only experimental external-model chat; Qwen CPU setup remains the documented default. No owned conversational model release.",
+  "modes": {
+    "ollama-recent": {
+      "backbone": "ollama/llama3.2:latest",
+      "cases": 37,
+      "category_counts": {
+        "basic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "correction": {
+          "cases": 3,
+          "correct": 3
+        },
+        "distant": {
+          "cases": 3,
+          "correct": 3
+        },
+        "exact": {
+          "cases": 3,
+          "correct": 3
+        },
+        "factual": {
+          "cases": 3,
+          "correct": 0
+        },
+        "generated-arithmetic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-capital": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-conflict": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-correction": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-earlier_fact": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-explanation": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-follow_up": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-unknown": {
+          "cases": 1,
+          "correct": 1
+        },
+        "instruction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "math": {
+          "cases": 3,
+          "correct": 3
+        },
+        "refusal": {
+          "cases": 4,
+          "correct": 4
+        },
+        "repetition": {
+          "cases": 3,
+          "correct": 3
+        },
+        "uncertainty": {
+          "cases": 3,
+          "correct": 0
+        }
+      },
+      "common25_correct": 16,
+      "correct": 28,
+      "cpu_seconds_main_requests": null,
+      "main_request_count": 41,
+      "max_request_seconds": 7.713277699999708,
+      "memory": {
+        "all_ollama_process_rss_bytes": 162385920,
+        "inference_client_rss_bytes": 424484864
+      },
+      "metrics_all_main_requests": {
+        "input_tokens": 3062,
+        "output_tokens": 701,
+        "proxy_ms": 92199.47200000001,
+        "response_ms": 91601.31700000001,
+        "selected_context_tokens": 3062,
+        "selected_messages": 133,
+        "selector_ms": 0,
+        "selector_scan_bytes": 0,
+        "total_prompt_eval_tokens": 9186,
+        "total_tokens": 3763
+      },
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "ollama_snapshot": {
+        "models": [
+          {
+            "context_length": 4096,
+            "details": {
+              "families": [
+                "llama"
+              ],
+              "family": "llama",
+              "format": "gguf",
+              "parameter_size": "3.2B",
+              "parent_model": "",
+              "quantization_level": "Q4_K_M"
+            },
+            "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+            "expires_at": "2026-11-07T15:10:44.7850451+05:30",
+            "model": "llama3.2:latest",
+            "name": "llama3.2:latest",
+            "runner": "llamacpp",
+            "size": 2567826307,
+            "size_vram": 0
+          }
+        ]
+      },
+      "p95_seconds": 5.860483900000418,
+      "posthoc_semantic_correct": 31,
+      "quality_gate": "FAIL",
+      "refusal_rubric_failures": 0,
+      "reliability": "identity/outage tested; full matrix not repeated on Ollama",
+      "repeated_trigrams": 4,
+      "selector_id": null,
+      "selector_sha256": null,
+      "startup_seconds": 11.665006299999732,
+      "unsupported_rubric_proxy": 3
+    },
+    "ollama-trained-v2": {
+      "backbone": "ollama/llama3.2:latest",
+      "cases": 37,
+      "category_counts": {
+        "basic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "correction": {
+          "cases": 3,
+          "correct": 3
+        },
+        "distant": {
+          "cases": 3,
+          "correct": 3
+        },
+        "exact": {
+          "cases": 3,
+          "correct": 3
+        },
+        "factual": {
+          "cases": 3,
+          "correct": 0
+        },
+        "generated-arithmetic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-capital": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-conflict": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-correction": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-earlier_fact": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-explanation": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-follow_up": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-unknown": {
+          "cases": 1,
+          "correct": 1
+        },
+        "instruction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "math": {
+          "cases": 3,
+          "correct": 3
+        },
+        "refusal": {
+          "cases": 4,
+          "correct": 4
+        },
+        "repetition": {
+          "cases": 3,
+          "correct": 3
+        },
+        "uncertainty": {
+          "cases": 3,
+          "correct": 0
+        }
+      },
+      "common25_correct": 16,
+      "correct": 28,
+      "cpu_seconds_main_requests": null,
+      "main_request_count": 41,
+      "max_request_seconds": 8.092477099999996,
+      "memory": {
+        "all_ollama_process_rss_bytes": 162234368,
+        "inference_client_rss_bytes": 423759872
+      },
+      "metrics_all_main_requests": {
+        "input_tokens": 3060,
+        "output_tokens": 694,
+        "proxy_ms": 97473.35699999999,
+        "response_ms": 96826.667,
+        "selected_context_tokens": 2311,
+        "selected_messages": 88,
+        "selector_ms": 1.5129999999999997,
+        "selector_scan_bytes": 6044,
+        "total_prompt_eval_tokens": 7682,
+        "total_tokens": 3005
+      },
+      "model": "ollama/llama3.2:latest@a80c4f17acd5",
+      "ollama_snapshot": {
+        "models": [
+          {
+            "context_length": 4096,
+            "details": {
+              "families": [
+                "llama"
+              ],
+              "family": "llama",
+              "format": "gguf",
+              "parameter_size": "3.2B",
+              "parent_model": "",
+              "quantization_level": "Q4_K_M"
+            },
+            "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+            "expires_at": "2026-11-07T15:12:24.7644575+05:30",
+            "model": "llama3.2:latest",
+            "name": "llama3.2:latest",
+            "runner": "llamacpp",
+            "size": 2567826307,
+            "size_vram": 0
+          }
+        ]
+      },
+      "p95_seconds": 7.68682809999973,
+      "posthoc_semantic_correct": 31,
+      "quality_gate": "FAIL",
+      "refusal_rubric_failures": 0,
+      "reliability": "identity/outage tested; full matrix not repeated on Ollama",
+      "repeated_trigrams": 5,
+      "selector_id": null,
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "startup_seconds": 4.346871100000044,
+      "unsupported_rubric_proxy": 3
+    },
+    "ordinary-smoke": {
+      "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+      "cases": 37,
+      "category_counts": {
+        "basic": {
+          "cases": 1,
+          "correct": 0
+        },
+        "correction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "distant": {
+          "cases": 3,
+          "correct": 0
+        },
+        "exact": {
+          "cases": 3,
+          "correct": 0
+        },
+        "factual": {
+          "cases": 3,
+          "correct": 0
+        },
+        "generated-arithmetic": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-capital": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-conflict": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-correction": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-earlier_fact": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-explanation": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-follow_up": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-unknown": {
+          "cases": 1,
+          "correct": 0
+        },
+        "instruction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "math": {
+          "cases": 3,
+          "correct": 0
+        },
+        "refusal": {
+          "cases": 4,
+          "correct": 0
+        },
+        "repetition": {
+          "cases": 3,
+          "correct": 0
+        },
+        "uncertainty": {
+          "cases": 3,
+          "correct": 0
+        }
+      },
+      "common25_correct": 0,
+      "correct": 0,
+      "cpu_seconds_main_requests": null,
+      "main_request_count": 41,
+      "max_request_seconds": 0.13647409999975935,
+      "memory": {
+        "private_sum_bytes": 1235906560,
+        "rss_sum_bytes": 509059072
+      },
+      "metrics_all_main_requests": {
+        "input_tokens": 7213,
+        "output_tokens": 2624,
+        "proxy_ms": 3606.425,
+        "response_ms": 3461.5009999999997,
+        "selected_context_tokens": 2405,
+        "total_tokens": 5029
+      },
+      "model": "toruk-ordinary-v1:0285d3fb6adc",
+      "ollama_snapshot": null,
+      "p95_seconds": 0.13005130000010467,
+      "posthoc_semantic_correct": null,
+      "quality_gate": "FAIL",
+      "refusal_rubric_failures": 7,
+      "reliability": "PASS",
+      "repeated_trigrams": 113,
+      "selector_id": null,
+      "selector_sha256": null,
+      "startup_seconds": 6.796402699999817,
+      "unsupported_rubric_proxy": 5
+    },
+    "qwen-lexical-v2": {
+      "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+      "cases": 37,
+      "category_counts": {
+        "basic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "correction": {
+          "cases": 3,
+          "correct": 1
+        },
+        "distant": {
+          "cases": 3,
+          "correct": 3
+        },
+        "exact": {
+          "cases": 3,
+          "correct": 3
+        },
+        "factual": {
+          "cases": 3,
+          "correct": 3
+        },
+        "generated-arithmetic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-capital": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-conflict": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-correction": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-earlier_fact": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-explanation": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-follow_up": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-unknown": {
+          "cases": 1,
+          "correct": 1
+        },
+        "instruction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "math": {
+          "cases": 3,
+          "correct": 3
+        },
+        "refusal": {
+          "cases": 4,
+          "correct": 3
+        },
+        "repetition": {
+          "cases": 3,
+          "correct": 3
+        },
+        "uncertainty": {
+          "cases": 3,
+          "correct": 0
+        }
+      },
+      "common25_correct": 16,
+      "correct": 27,
+      "cpu_seconds_main_requests": 181.203125,
+      "main_request_count": 41,
+      "max_request_seconds": 9.286436299999878,
+      "memory": {
+        "private_sum_bytes": 4660998144,
+        "rss_sum_bytes": 2662109184
+      },
+      "metrics_all_main_requests": {
+        "history_bytes_read": 5718,
+        "history_tokenization_ms": 58.224,
+        "input_tokens": 5617,
+        "output_tokens": 382,
+        "persistent_state_bytes": 0,
+        "prompt_fit_ms": 23.335,
+        "proxy_ms": 92169.61499999999,
+        "response_ms": 92031.40000000001,
+        "selected_context_tokens": 4978,
+        "selected_messages": 96,
+        "selector_history_bytes": 5718,
+        "selector_ms": 1.691,
+        "total_tokens": 5360
+      },
+      "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "ollama_snapshot": null,
+      "p95_seconds": 3.275977799999964,
+      "posthoc_semantic_correct": 32,
+      "quality_gate": "FAIL",
+      "refusal_rubric_failures": 1,
+      "reliability": "PASS",
+      "repeated_trigrams": 0,
+      "selector_id": "lexical-v2",
+      "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+      "startup_seconds": 13.416046899999856,
+      "unsupported_rubric_proxy": 4
+    },
+    "qwen-recent": {
+      "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+      "cases": 37,
+      "category_counts": {
+        "basic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "correction": {
+          "cases": 3,
+          "correct": 1
+        },
+        "distant": {
+          "cases": 3,
+          "correct": 1
+        },
+        "exact": {
+          "cases": 3,
+          "correct": 3
+        },
+        "factual": {
+          "cases": 3,
+          "correct": 3
+        },
+        "generated-arithmetic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-capital": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-conflict": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-correction": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-earlier_fact": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-explanation": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-follow_up": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-unknown": {
+          "cases": 1,
+          "correct": 1
+        },
+        "instruction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "math": {
+          "cases": 3,
+          "correct": 3
+        },
+        "refusal": {
+          "cases": 4,
+          "correct": 3
+        },
+        "repetition": {
+          "cases": 3,
+          "correct": 3
+        },
+        "uncertainty": {
+          "cases": 3,
+          "correct": 0
+        }
+      },
+      "common25_correct": 14,
+      "correct": 25,
+      "cpu_seconds_main_requests": 192.3125,
+      "main_request_count": 41,
+      "max_request_seconds": 9.010557000000063,
+      "memory": {
+        "private_sum_bytes": 4636938240,
+        "rss_sum_bytes": 2682904576
+      },
+      "metrics_all_main_requests": {
+        "history_bytes_read": 5688,
+        "history_tokenization_ms": 57.085,
+        "input_tokens": 5614,
+        "output_tokens": 379,
+        "persistent_state_bytes": 0,
+        "prompt_fit_ms": 26.381,
+        "proxy_ms": 96839.12000000001,
+        "response_ms": 96706.36100000002,
+        "selected_context_tokens": 5614,
+        "selected_messages": 133,
+        "selector_history_bytes": 0,
+        "selector_ms": 0,
+        "total_tokens": 5993
+      },
+      "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "ollama_snapshot": null,
+      "p95_seconds": 4.423598200000015,
+      "posthoc_semantic_correct": 30,
+      "quality_gate": "FAIL",
+      "refusal_rubric_failures": 1,
+      "reliability": "PASS",
+      "repeated_trigrams": 0,
+      "selector_id": null,
+      "selector_sha256": null,
+      "startup_seconds": 10.740934800000105,
+      "unsupported_rubric_proxy": 4
+    },
+    "qwen-trained-v2": {
+      "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+      "cases": 37,
+      "category_counts": {
+        "basic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "correction": {
+          "cases": 3,
+          "correct": 1
+        },
+        "distant": {
+          "cases": 3,
+          "correct": 3
+        },
+        "exact": {
+          "cases": 3,
+          "correct": 3
+        },
+        "factual": {
+          "cases": 3,
+          "correct": 3
+        },
+        "generated-arithmetic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-capital": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-conflict": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-correction": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-earlier_fact": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-explanation": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-follow_up": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-unknown": {
+          "cases": 1,
+          "correct": 1
+        },
+        "instruction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "math": {
+          "cases": 3,
+          "correct": 3
+        },
+        "refusal": {
+          "cases": 4,
+          "correct": 2
+        },
+        "repetition": {
+          "cases": 3,
+          "correct": 2
+        },
+        "uncertainty": {
+          "cases": 3,
+          "correct": 0
+        }
+      },
+      "common25_correct": 15,
+      "correct": 25,
+      "cpu_seconds_main_requests": 181.46875,
+      "main_request_count": 41,
+      "max_request_seconds": 9.988384199999928,
+      "memory": {
+        "private_sum_bytes": 4627832832,
+        "rss_sum_bytes": 2663260160
+      },
+      "metrics_all_main_requests": {
+        "history_bytes_read": 5694,
+        "history_tokenization_ms": 58.958,
+        "input_tokens": 5600,
+        "output_tokens": 359,
+        "persistent_state_bytes": 0,
+        "prompt_fit_ms": 24.9,
+        "proxy_ms": 91426.63200000001,
+        "response_ms": 91277.67800000001,
+        "selected_context_tokens": 4894,
+        "selected_messages": 88,
+        "selector_history_bytes": 5694,
+        "selector_ms": 1.1500000000000001,
+        "total_tokens": 5253
+      },
+      "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+      "ollama_snapshot": null,
+      "p95_seconds": 2.935348800000156,
+      "posthoc_semantic_correct": 32,
+      "quality_gate": "FAIL",
+      "refusal_rubric_failures": 3,
+      "reliability": "PASS",
+      "repeated_trigrams": 0,
+      "selector_id": "toruk-chat-selector-v2",
+      "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+      "startup_seconds": 12.606912199999897,
+      "unsupported_rubric_proxy": 4
+    },
+    "smollm-recent": {
+      "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "cases": 37,
+      "category_counts": {
+        "basic": {
+          "cases": 1,
+          "correct": 1
+        },
+        "correction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "distant": {
+          "cases": 3,
+          "correct": 3
+        },
+        "exact": {
+          "cases": 3,
+          "correct": 0
+        },
+        "factual": {
+          "cases": 3,
+          "correct": 3
+        },
+        "generated-arithmetic": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-capital": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-conflict": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-correction": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-earlier_fact": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-explanation": {
+          "cases": 1,
+          "correct": 1
+        },
+        "generated-follow_up": {
+          "cases": 1,
+          "correct": 0
+        },
+        "generated-unknown": {
+          "cases": 1,
+          "correct": 1
+        },
+        "instruction": {
+          "cases": 3,
+          "correct": 0
+        },
+        "math": {
+          "cases": 3,
+          "correct": 3
+        },
+        "refusal": {
+          "cases": 4,
+          "correct": 3
+        },
+        "repetition": {
+          "cases": 3,
+          "correct": 0
+        },
+        "uncertainty": {
+          "cases": 3,
+          "correct": 1
+        }
+      },
+      "common25_correct": 13,
+      "correct": 18,
+      "cpu_seconds_main_requests": null,
+      "main_request_count": 41,
+      "max_request_seconds": 3.4942433999999594,
+      "memory": {
+        "private_sum_bytes": 1975562240,
+        "rss_sum_bytes": 1163366400
+      },
+      "metrics_all_main_requests": {
+        "history_bytes_read": 7024,
+        "history_tokenization_ms": 36.538999999999994,
+        "input_tokens": 3541,
+        "output_tokens": 1149,
+        "persistent_state_bytes": 0,
+        "prompt_fit_ms": 17.808999999999997,
+        "proxy_ms": 66363.73800000001,
+        "response_ms": 66229.14099999999,
+        "selected_context_tokens": 3541,
+        "selected_messages": 133,
+        "selector_history_bytes": 0,
+        "selector_ms": 0,
+        "total_tokens": 4690
+      },
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+      "ollama_snapshot": null,
+      "p95_seconds": 3.4563293999999587,
+      "posthoc_semantic_correct": null,
+      "quality_gate": "FAIL",
+      "refusal_rubric_failures": 4,
+      "reliability": "PASS",
+      "repeated_trigrams": 3,
+      "selector_id": null,
+      "selector_sha256": null,
+      "startup_seconds": 10.416457300000275,
+      "unsupported_rubric_proxy": 3
+    }
+  },
+  "next_action": "Run one development-only literal-value/correction fidelity diagnostic, keeping these launch cases and gates frozen.",
+  "owned_cli": {
+    "cases": 25,
+    "checkpoint_bytes": 737998,
+    "correct": 0,
+    "model": "toruk-owned-next-token-v1@af3eecde26139c11e1dd7c40f89a3bd5510cbbabad762b6a049106c91ae22e66",
+    "quality_gate": "FAIL",
+    "transport": "Separate research CLI, not a served web option"
+  },
+  "public_deployment": "BLOCKED"
+}

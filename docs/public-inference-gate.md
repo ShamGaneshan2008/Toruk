@@ -1,5 +1,11 @@
 # Public inference and Vercel gate — 2026-10-27
 
+**Current decision (7 November 2026): public deployment remains BLOCKED.** See the
+[fresh launch gate](research/chat-launch-gate-20261107.md) for current model
+availability, raw replies, measured Qwen resources, official hosting terms and
+verification. The material below is the retained 27 October assessment; its
+missing-backbone inventory and ordinary-model-only measurements are historical.
+
 Public chatbot launch is **BLOCKED**. No deployment, upload, commit or push was authorized
 or performed. There is no tested public URL. This document supersedes earlier deployment
 readiness statements in `vercel-chat.md`; historical evaluation reports remain unchanged.

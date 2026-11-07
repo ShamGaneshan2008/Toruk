@@ -1,0 +1,2937 @@
+{
+  "concurrent": [
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.009137600000030943
+    },
+    {
+      "body": {
+        "answer": "Photosynthesis is the process by which plants convert light energy into chemical energy stored in glucose molecules. It occurs primarily in chloroplasts within plant cells. The leaves of most plants contain chlorophyll, which captures sunlight for photosynthesis. Oxygen is released as a byproduct, while carbon dioxide is absorbed. This cycle is",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 41,
+          "history_tokenization_ms": 0.764,
+          "input_tokens": 97,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 64,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.354,
+          "proxy_ms": 8984.77,
+          "response_ms": 8979.419,
+          "selected_context_tokens": 97,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 41,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.019,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 161
+        }
+      },
+      "code": 200,
+      "seconds": 8.987838600000032
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.008182200000192097
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.007915000000139116
+    }
+  ],
+  "direct_status": {
+    "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+    "backbone_digest": null,
+    "backbone_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "backbone_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "backend": "Toruk",
+    "chat_quality": "unqualified",
+    "context_tokens": 512,
+    "efficiency_claim": "unsupported",
+    "error": null,
+    "error_code": null,
+    "experimental": true,
+    "memory_supported": true,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "modes": [
+      "BASELINE",
+      "TORUK"
+    ],
+    "ready": true,
+    "selector_id": "lexical-v2",
+    "selector_kind": null,
+    "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741"
+  },
+  "peak_process_tree": {
+    "private_sum_bytes": 4660998144,
+    "rss_sum_bytes": 2662109184
+  },
+  "reliability": {
+    "bad_json_400": true,
+    "bounded_latency": true,
+    "bounded_startup": true,
+    "health_aliases": true,
+    "identity": true,
+    "message_bytes_400": true,
+    "outage_503": true,
+    "secret_redaction": true,
+    "selector_mode_400": true,
+    "single_generation_slot": true,
+    "tokens_400": true,
+    "unauthorized_401": true
+  },
+  "reliability_gate": "PASS",
+  "rows": [
+    {
+      "category": "instruction",
+      "content": "Evaluating instruction 0",
+      "http_status": 200,
+      "id": "test-instruction-0",
+      "inference_tree_cpu_seconds": 4.0625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction0.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluating instruction 0",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 17.233,
+          "input_tokens": 96,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 7,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.591,
+          "proxy_ms": 1985.828,
+          "response_ms": 1979.818,
+          "selected_context_tokens": 96,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 30,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.131,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 103
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.0020606999996744
+    },
+    {
+      "category": "instruction",
+      "content": "Evaluating instruction 1.",
+      "http_status": 200,
+      "id": "test-instruction-1",
+      "inference_tree_cpu_seconds": 4.0,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction1.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluating instruction 1.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 0.857,
+          "input_tokens": 96,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 8,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.597,
+          "proxy_ms": 1996.149,
+          "response_ms": 1992.319,
+          "selected_context_tokens": 96,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 30,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.034,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 104
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.0187495000000126
+    },
+    {
+      "category": "instruction",
+      "content": "Evaluating instruction 2.",
+      "http_status": 200,
+      "id": "test-instruction-2",
+      "inference_tree_cpu_seconds": 3.6875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction2.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluating instruction 2.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 0.884,
+          "input_tokens": 96,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 8,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.401,
+          "proxy_ms": 1840.481,
+          "response_ms": 1837.086,
+          "selected_context_tokens": 96,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 30,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.019,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 104
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.8558938999999555
+    },
+    {
+      "category": "factual",
+      "content": "Evaluefactual0",
+      "http_status": 200,
+      "id": "test-factual-0",
+      "inference_tree_cpu_seconds": 3.421875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual0 is Evaluefactual0. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluefactual0",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 1.009,
+          "input_tokens": 114,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 6,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.465,
+          "proxy_ms": 1739.523,
+          "response_ms": 1736.431,
+          "selected_context_tokens": 114,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 89,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.023,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 120
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.751490499999818
+    },
+    {
+      "category": "factual",
+      "content": "Evaluefactual1",
+      "http_status": 200,
+      "id": "test-factual-1",
+      "inference_tree_cpu_seconds": 3.3125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual1 is Evaluefactual1. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluefactual1",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 0.664,
+          "input_tokens": 114,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 6,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.355,
+          "proxy_ms": 1666.704,
+          "response_ms": 1662.955,
+          "selected_context_tokens": 114,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 89,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.024,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 120
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.678917199999887
+    },
+    {
+      "category": "factual",
+      "content": "Evaluefactual2",
+      "http_status": 200,
+      "id": "test-factual-2",
+      "inference_tree_cpu_seconds": 3.5625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual2 is Evaluefactual2. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluefactual2",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 0.828,
+          "input_tokens": 114,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 6,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.603,
+          "proxy_ms": 1773.19,
+          "response_ms": 1769.836,
+          "selected_context_tokens": 114,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 89,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.029,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 120
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.8062396999998782
+    },
+    {
+      "category": "uncertainty",
+      "content": "Unknown",
+      "http_status": 200,
+      "id": "test-uncertainty-0",
+      "inference_tree_cpu_seconds": 2.125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Unknown",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 75,
+          "history_tokenization_ms": 1.013,
+          "input_tokens": 107,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 2,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.446,
+          "proxy_ms": 1048.189,
+          "response_ms": 1044.973,
+          "selected_context_tokens": 107,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 75,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.021,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 109
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 1.067685099999835
+    },
+    {
+      "category": "uncertainty",
+      "content": "Unknown",
+      "http_status": 200,
+      "id": "test-uncertainty-1",
+      "inference_tree_cpu_seconds": 2.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Unknown",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 75,
+          "history_tokenization_ms": 0.688,
+          "input_tokens": 107,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 2,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.359,
+          "proxy_ms": 1037.682,
+          "response_ms": 1034.576,
+          "selected_context_tokens": 107,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 75,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.021,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 109
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 1.0498426999997719
+    },
+    {
+      "category": "uncertainty",
+      "content": "Unknown",
+      "http_status": 200,
+      "id": "test-uncertainty-2",
+      "inference_tree_cpu_seconds": 2.296875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Unknown",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 75,
+          "history_tokenization_ms": 0.706,
+          "input_tokens": 107,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 2,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.358,
+          "proxy_ms": 1141.343,
+          "response_ms": 1138.243,
+          "selected_context_tokens": 107,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 75,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.021,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 109
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 1.1541536999998243
+    },
+    {
+      "category": "correction",
+      "content": "Eoldcorrection0",
+      "http_status": 200,
+      "id": "test-correction-0",
+      "inference_tree_cpu_seconds": 3.71875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection0's label is Eoldcorrection0.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection0.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Eoldcorrection0",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 173,
+          "history_tokenization_ms": 1.348,
+          "input_tokens": 156,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 6,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.719,
+          "proxy_ms": 1858.793,
+          "response_ms": 1855.548,
+          "selected_context_tokens": 148,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 4,
+          "selector_history_bytes": 173,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.271,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 154
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.8725282999998853
+    },
+    {
+      "category": "correction",
+      "content": "Eoldcorrection1",
+      "http_status": 200,
+      "id": "test-correction-1",
+      "inference_tree_cpu_seconds": 3.609375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection1's label is Eoldcorrection1.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection1.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Eoldcorrection1",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 173,
+          "history_tokenization_ms": 1.021,
+          "input_tokens": 156,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 6,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.605,
+          "proxy_ms": 1815.638,
+          "response_ms": 1812.493,
+          "selected_context_tokens": 148,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 4,
+          "selector_history_bytes": 173,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.045,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 154
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.829363100000137
+    },
+    {
+      "category": "correction",
+      "content": "Evaluecorrection2",
+      "http_status": 200,
+      "id": "test-correction-2",
+      "inference_tree_cpu_seconds": 3.828125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection2's label is Eoldcorrection2.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection2.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluecorrection2",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 173,
+          "history_tokenization_ms": 0.776,
+          "input_tokens": 156,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 6,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.495,
+          "proxy_ms": 1940.135,
+          "response_ms": 1936.816,
+          "selected_context_tokens": 148,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 4,
+          "selector_history_bytes": 173,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.036,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 154
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.9517383000002155
+    },
+    {
+      "category": "distant",
+      "content": "Evaluedistant0",
+      "http_status": 200,
+      "id": "test-distant-0",
+      "inference_tree_cpu_seconds": 3.9375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant0's label is Evaluedistant0.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluedistant0",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 208,
+          "history_tokenization_ms": 1.271,
+          "input_tokens": 164,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 5,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.679,
+          "proxy_ms": 2071.872,
+          "response_ms": 2068.862,
+          "selected_context_tokens": 156,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 4,
+          "selector_history_bytes": 208,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.045,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 161
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.0868117999998503
+    },
+    {
+      "category": "distant",
+      "content": "Evaluedistant1",
+      "http_status": 200,
+      "id": "test-distant-1",
+      "inference_tree_cpu_seconds": 3.8125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant1's label is Evaluedistant1.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluedistant1",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 208,
+          "history_tokenization_ms": 1.239,
+          "input_tokens": 164,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 5,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.965,
+          "proxy_ms": 1915.259,
+          "response_ms": 1911.971,
+          "selected_context_tokens": 156,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 4,
+          "selector_history_bytes": 208,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.063,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 161
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.938077599999815
+    },
+    {
+      "category": "distant",
+      "content": "Evaluedistant2",
+      "http_status": 200,
+      "id": "test-distant-2",
+      "inference_tree_cpu_seconds": 3.75,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant2's label is Evaluedistant2.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Evaluedistant2",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 208,
+          "history_tokenization_ms": 1.287,
+          "input_tokens": 164,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 5,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.842,
+          "proxy_ms": 2090.613,
+          "response_ms": 2086.78,
+          "selected_context_tokens": 156,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 4,
+          "selector_history_bytes": 208,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.068,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 161
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.14224699999977
+    },
+    {
+      "category": "exact",
+      "content": "E/Q-0_x!",
+      "http_status": 200,
+      "id": "test-exact-0",
+      "inference_tree_cpu_seconds": 3.9375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact0's label is E/Q-0_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "E/Q-0_x!",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 101,
+          "history_tokenization_ms": 1.287,
+          "input_tokens": 130,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 7,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.731,
+          "proxy_ms": 1987.086,
+          "response_ms": 1983.641,
+          "selected_context_tokens": 130,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 101,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.029,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 137
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.001410400000168
+    },
+    {
+      "category": "exact",
+      "content": "E/Q-1_x!",
+      "http_status": 200,
+      "id": "test-exact-1",
+      "inference_tree_cpu_seconds": 3.796875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact1's label is E/Q-1_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "E/Q-1_x!",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 101,
+          "history_tokenization_ms": 0.713,
+          "input_tokens": 130,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 7,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.374,
+          "proxy_ms": 1889.872,
+          "response_ms": 1887.027,
+          "selected_context_tokens": 130,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 101,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.019,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 137
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.90495460000011
+    },
+    {
+      "category": "exact",
+      "content": "E/Q-2_x!",
+      "http_status": 200,
+      "id": "test-exact-2",
+      "inference_tree_cpu_seconds": 3.90625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact2's label is E/Q-2_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "E/Q-2_x!",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 101,
+          "history_tokenization_ms": 0.783,
+          "input_tokens": 130,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 7,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.372,
+          "proxy_ms": 1968.046,
+          "response_ms": 1965.266,
+          "selected_context_tokens": 130,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 101,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.023,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 137
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.9856230000000323
+    },
+    {
+      "category": "math",
+      "content": "10",
+      "http_status": 200,
+      "id": "test-math-0",
+      "inference_tree_cpu_seconds": 2.59375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath0, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 53,
+          "history_tokenization_ms": 0.773,
+          "input_tokens": 107,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 3,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.335,
+          "proxy_ms": 1298.277,
+          "response_ms": 1294.712,
+          "selected_context_tokens": 107,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 53,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.021,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 110
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.3106063000000177
+    },
+    {
+      "category": "math",
+      "content": "10",
+      "http_status": 200,
+      "id": "test-math-1",
+      "inference_tree_cpu_seconds": 2.375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath1, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 53,
+          "history_tokenization_ms": 0.926,
+          "input_tokens": 107,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 3,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.587,
+          "proxy_ms": 1230.151,
+          "response_ms": 1225.582,
+          "selected_context_tokens": 107,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 53,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.028,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 110
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.2461209000002782
+    },
+    {
+      "category": "math",
+      "content": "10",
+      "http_status": 200,
+      "id": "test-math-2",
+      "inference_tree_cpu_seconds": 2.375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath2, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 53,
+          "history_tokenization_ms": 0.698,
+          "input_tokens": 107,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 3,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.321,
+          "proxy_ms": 1207.624,
+          "response_ms": 1204.099,
+          "selected_context_tokens": 107,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 53,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.019,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 110
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.2195560000000114
+    },
+    {
+      "category": "refusal",
+      "content": "The sum of five plus five is ten.",
+      "http_status": 200,
+      "id": "test-refusal-0",
+      "inference_tree_cpu_seconds": 4.3125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The sum of five plus five is ten.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 54,
+          "history_tokenization_ms": 1.292,
+          "input_tokens": 113,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 10,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.423,
+          "proxy_ms": 2163.419,
+          "response_ms": 2160.551,
+          "selected_context_tokens": 113,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 54,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.029,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 123
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.177900099999988
+    },
+    {
+      "category": "refusal",
+      "content": "10",
+      "http_status": 200,
+      "id": "test-refusal-1",
+      "inference_tree_cpu_seconds": 2.6875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "For Epersonrefusal1, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 99,
+          "history_tokenization_ms": 1.151,
+          "input_tokens": 126,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 3,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.821,
+          "proxy_ms": 1346.811,
+          "response_ms": 1343.67,
+          "selected_context_tokens": 126,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 99,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.035,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 129
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.3703277999998136
+    },
+    {
+      "category": "refusal",
+      "content": "10",
+      "http_status": 200,
+      "id": "test-refusal-2",
+      "inference_tree_cpu_seconds": 2.6875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "For Epersonrefusal2, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "10",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 99,
+          "history_tokenization_ms": 0.719,
+          "input_tokens": 126,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 3,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.468,
+          "proxy_ms": 1336.96,
+          "response_ms": 1334.059,
+          "selected_context_tokens": 126,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 99,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.022,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 129
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": true,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 1.3502855000001546
+    },
+    {
+      "category": "refusal",
+      "content": "The result of adding 5 and 5 is 10.",
+      "http_status": 200,
+      "id": "test-observed-full-refusal",
+      "inference_tree_cpu_seconds": 6.3125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The result of adding 5 and 5 is 10.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 537,
+          "history_tokenization_ms": 1.753,
+          "input_tokens": 269,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 15,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.575,
+          "proxy_ms": 3159.087,
+          "response_ms": 3156.259,
+          "selected_context_tokens": 154,
+          "selected_message_ids": [
+            "m4",
+            "m6",
+            "m8",
+            "m9",
+            "m10"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 537,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.04,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 169
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 3.1863075000001118
+    },
+    {
+      "category": "basic",
+      "content": "Hello! How can I assist you today?",
+      "http_status": 200,
+      "id": "natural-hello",
+      "inference_tree_cpu_seconds": 4.03125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Hello!",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Hello! How can I assist you today?",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 6,
+          "history_tokenization_ms": 0.743,
+          "input_tokens": 91,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 10,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.484,
+          "proxy_ms": 2045.078,
+          "response_ms": 2042.164,
+          "selected_context_tokens": 91,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 6,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.022,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 101
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.058885299999929
+    },
+    {
+      "category": "generated-arithmetic",
+      "content": "The answer to 2 + 3 is 5.",
+      "http_status": 200,
+      "id": "generated-arithmetic-0",
+      "inference_tree_cpu_seconds": 5.21875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is 2 + 3?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The answer to 2 + 3 is 5.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 14,
+          "history_tokenization_ms": 0.808,
+          "input_tokens": 97,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 13,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.491,
+          "proxy_ms": 2611.112,
+          "response_ms": 2608.033,
+          "selected_context_tokens": 97,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 14,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.023,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 110
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 2.6269183000003977
+    },
+    {
+      "category": "generated-capital",
+      "content": "The capital of France is Paris.",
+      "http_status": 200,
+      "id": "generated-capital-0",
+      "inference_tree_cpu_seconds": 3.6875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is the capital of France?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The capital of France is Paris.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 30,
+          "history_tokenization_ms": 1.034,
+          "input_tokens": 96,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 8,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.44,
+          "proxy_ms": 1841.95,
+          "response_ms": 1838.209,
+          "selected_context_tokens": 96,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 30,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.022,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 104
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 1.854515900000024
+    },
+    {
+      "category": "generated-conflict",
+      "content": "Without knowing which notes were spoken or who made them, it's impossible to determine which season is your favorite.",
+      "http_status": 200,
+      "id": "generated-conflict-0",
+      "inference_tree_cpu_seconds": 8.3125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Without knowing which notes were spoken or who made them, it's impossible to determine which season is your favorite.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 151,
+          "history_tokenization_ms": 0.765,
+          "input_tokens": 121,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 23,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.453,
+          "proxy_ms": 4354.365,
+          "response_ms": 4351.413,
+          "selected_context_tokens": 121,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 151,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.028,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 144
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": true
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 4.366600400000152
+    },
+    {
+      "category": "generated-correction",
+      "content": "Blue is my favorite color!",
+      "http_status": 200,
+      "id": "generated-correction-0",
+      "inference_tree_cpu_seconds": 4.828125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My favorite color is blue.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Blue is my favorite color!",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 26,
+          "history_tokenization_ms": 0.949,
+          "input_tokens": 95,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 7,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.717,
+          "proxy_ms": 2730.294,
+          "response_ms": 2726.708,
+          "selected_context_tokens": 95,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 26,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.028,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 102
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 2.7577385999998114
+    },
+    {
+      "category": "generated-correction",
+      "content": "Green is my favorite color now!",
+      "http_status": 200,
+      "id": "generated-correction-1",
+      "inference_tree_cpu_seconds": 4.4375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My favorite color is blue.",
+            "role": "user"
+          },
+          {
+            "content": "Blue is my favorite color!",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: my favorite color is green. What is my favorite color now?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Green is my favorite color now!",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 122,
+          "history_tokenization_ms": 1.104,
+          "input_tokens": 126,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 8,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.844,
+          "proxy_ms": 2238.482,
+          "response_ms": 2234.195,
+          "selected_context_tokens": 126,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 122,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.03,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 134
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 2.2549596000003476
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "The user's bicycle lock code is CEDAR-27.",
+      "http_status": 200,
+      "id": "generated-earlier_fact-0",
+      "inference_tree_cpu_seconds": 6.046875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The user's bicycle lock code is CEDAR-27.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 68,
+          "history_tokenization_ms": 0.777,
+          "input_tokens": 107,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 15,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.419,
+          "proxy_ms": 3076.552,
+          "response_ms": 3073.114,
+          "selected_context_tokens": 107,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 68,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.023,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 122
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 3.089547499999753
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "The capital of Japan is Tokyo.",
+      "http_status": 200,
+      "id": "generated-earlier_fact-1",
+      "inference_tree_cpu_seconds": 4.296875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          },
+          {
+            "content": "The user's bicycle lock code is CEDAR-27.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is the capital of Japan?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The capital of Japan is Tokyo.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 138,
+          "history_tokenization_ms": 1.364,
+          "input_tokens": 138,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 8,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.574,
+          "proxy_ms": 2224.45,
+          "response_ms": 2221.026,
+          "selected_context_tokens": 138,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 138,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.022,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 146
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 2.2400422000000617
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "I gave you the code \"CEDAR-27\".",
+      "http_status": 200,
+      "id": "generated-earlier_fact-2",
+      "inference_tree_cpu_seconds": 5.328125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          },
+          {
+            "content": "The user's bicycle lock code is CEDAR-27.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is the capital of Japan?",
+            "role": "user"
+          },
+          {
+            "content": "The capital of Japan is Tokyo.",
+            "role": "assistant"
+          },
+          {
+            "content": "What bicycle lock code did I give you earlier?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I gave you the code \"CEDAR-27\".",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 214,
+          "history_tokenization_ms": 0.876,
+          "input_tokens": 165,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 13,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.429,
+          "proxy_ms": 2732.383,
+          "response_ms": 2729.297,
+          "selected_context_tokens": 146,
+          "selected_message_ids": [
+            "m0",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "selected_messages": 4,
+          "selector_history_bytes": 214,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.037,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 159
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 2.7465594999998757
+    },
+    {
+      "category": "generated-explanation",
+      "content": "Plants use sunlight to produce food through photosynthesis.",
+      "http_status": 200,
+      "id": "generated-explanation-0",
+      "inference_tree_cpu_seconds": 4.796875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "In one sentence, what do plants use sunlight for?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Plants use sunlight to produce food through photosynthesis.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 49,
+          "history_tokenization_ms": 0.704,
+          "input_tokens": 100,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 12,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.509,
+          "proxy_ms": 2392.309,
+          "response_ms": 2389.226,
+          "selected_context_tokens": 100,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 49,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.021,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 112
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 2.407778000000235
+    },
+    {
+      "category": "generated-follow_up",
+      "content": "Mira is a person with your given name.",
+      "http_status": 200,
+      "id": "generated-follow_up-0",
+      "inference_tree_cpu_seconds": 4.421875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My name is Mira.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Mira is a person with your given name.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 16,
+          "history_tokenization_ms": 1.726,
+          "input_tokens": 95,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 11,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.941,
+          "proxy_ms": 2224.01,
+          "response_ms": 2220.993,
+          "selected_context_tokens": 95,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 16,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.035,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 106
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 2.2373397000001205
+    },
+    {
+      "category": "generated-follow_up",
+      "content": "Your name is Mira.",
+      "http_status": 200,
+      "id": "generated-follow_up-1",
+      "inference_tree_cpu_seconds": 3.828125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My name is Mira.",
+            "role": "user"
+          },
+          {
+            "content": "Mira is a person with your given name.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is my name?",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "Your name is Mira.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 70,
+          "history_tokenization_ms": 1.431,
+          "input_tokens": 120,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 7,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.561,
+          "proxy_ms": 1940.791,
+          "response_ms": 1938.028,
+          "selected_context_tokens": 120,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "selected_messages": 3,
+          "selector_history_bytes": 70,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.022,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 127
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 1.953750300000138
+    },
+    {
+      "category": "generated-unknown",
+      "content": "I'm sorry, but I don't have enough context or information to provide an accurate answer to your question. You haven't told me anything about who your childhood teacher was or if they're still with you. Without more details, I can't determine their name or confirm whether they've left your life.",
+      "http_status": 200,
+      "id": "generated-unknown-0",
+      "inference_tree_cpu_seconds": 18.203125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is the name of my childhood teacher? I have not told you. If you don't know, say so.",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "I'm sorry, but I don't have enough context or information to provide an accurate answer to your question. You haven't told me anything about who your childhood teacher was or if they're still with you. Without more details, I can't determine their name or confirm whether they've left your life.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 89,
+          "history_tokenization_ms": 0.906,
+          "input_tokens": 113,
+          "memory_used": false,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 62,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.799,
+          "proxy_ms": 9273.784,
+          "response_ms": 9270.739,
+          "selected_context_tokens": 113,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "selected_messages": 1,
+          "selector_history_bytes": 89,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.096,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 175
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 9.286436299999878
+    },
+    {
+      "category": "repetition",
+      "content": "The result of adding 5 and 5 is 10.",
+      "http_status": 200,
+      "id": "refusal-repeat-0",
+      "inference_tree_cpu_seconds": 6.296875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The result of adding 5 and 5 is 10.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 537,
+          "history_tokenization_ms": 1.418,
+          "input_tokens": 269,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 15,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.782,
+          "proxy_ms": 3252.508,
+          "response_ms": 3248.109,
+          "selected_context_tokens": 154,
+          "selected_message_ids": [
+            "m4",
+            "m6",
+            "m8",
+            "m9",
+            "m10"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 537,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.051,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 169
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 3.275977799999964
+    },
+    {
+      "category": "repetition",
+      "content": "The result of adding 5 and 5 is 10.",
+      "http_status": 200,
+      "id": "refusal-repeat-1",
+      "inference_tree_cpu_seconds": 5.796875,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "The result of adding 5 and 5 is 10.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The result of adding 5 and 5 is 10.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 583,
+          "history_tokenization_ms": 1.583,
+          "input_tokens": 299,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 15,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.965,
+          "proxy_ms": 2924.963,
+          "response_ms": 2921.784,
+          "selected_context_tokens": 141,
+          "selected_message_ids": [
+            "m6",
+            "m8",
+            "m10",
+            "m11",
+            "m12"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 583,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.067,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 156
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.93792620000022
+    },
+    {
+      "category": "repetition",
+      "content": "The answer to 5 + 5 is 10.",
+      "http_status": 200,
+      "id": "refusal-repeat-2",
+      "inference_tree_cpu_seconds": 5.484375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "The result of adding 5 and 5 is 10.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "The result of adding 5 and 5 is 10.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "TORUK",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "The answer to 5 + 5 is 10.",
+        "metrics": {
+          "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+          "backend": "Toruk",
+          "history_bytes_read": 629,
+          "history_tokenization_ms": 1.117,
+          "input_tokens": 329,
+          "memory_used": true,
+          "mode": "TORUK",
+          "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+          "output_tokens": 14,
+          "persistent_state_bytes": 0,
+          "prompt_fit_ms": 0.44,
+          "proxy_ms": 2797.852,
+          "response_ms": 2794.789,
+          "selected_context_tokens": 145,
+          "selected_message_ids": [
+            "m8",
+            "m10",
+            "m12",
+            "m13",
+            "m14"
+          ],
+          "selected_messages": 5,
+          "selector_history_bytes": 629,
+          "selector_id": "lexical-v2",
+          "selector_kind": null,
+          "selector_ms": 0.048,
+          "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+          "total_tokens": 159
+        }
+      },
+      "score": {
+        "quality": true,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 2.810332799999742
+    }
+  ],
+  "scope": "Local Windows process tree; no Linux/cloud capacity guarantee.",
+  "startup_seconds": 13.416046899999856,
+  "status": {
+    "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+    "backbone_digest": null,
+    "backbone_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "backbone_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "backend": "Toruk",
+    "chat_quality": "unqualified",
+    "context_tokens": 512,
+    "efficiency_claim": "unsupported",
+    "error": null,
+    "error_code": null,
+    "experimental": true,
+    "memory_supported": true,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "modes": [
+      "BASELINE",
+      "TORUK"
+    ],
+    "ready": true,
+    "selector_id": "lexical-v2",
+    "selector_kind": null,
+    "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741"
+  },
+  "summary": {
+    "all_request_metric_totals": {
+      "history_bytes_read": 5718,
+      "history_tokenization_ms": 58.224,
+      "input_tokens": 5617,
+      "output_tokens": 382,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 23.335,
+      "proxy_ms": 92169.61499999999,
+      "response_ms": 92031.40000000001,
+      "selected_context_tokens": 4978,
+      "selected_messages": 96,
+      "selector_history_bytes": 5718,
+      "selector_ms": 1.691,
+      "total_tokens": 5360
+    },
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 1
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 3
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 3
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 3
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 1
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 3
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 3
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 3
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 0
+      }
+    },
+    "correct": 27,
+    "distinct_replies": 29,
+    "exact_string_failures": 0,
+    "http_ok": 37,
+    "most_common_reply_count": 5,
+    "quality_gate": "FAIL",
+    "refusal_math_failures": 1,
+    "repeated_trigrams": 0,
+    "request_count": 41,
+    "summed_metrics": {
+      "history_bytes_read": 5470,
+      "history_tokenization_ms": 53.408,
+      "input_tokens": 5182,
+      "output_tokens": 341,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 20.683999999999997,
+      "proxy_ms": 81914.30900000001,
+      "response_ms": 81789.55900000001,
+      "selected_context_tokens": 4543,
+      "selected_messages": 90,
+      "selector_history_bytes": 5470,
+      "selector_ms": 1.5830000000000002,
+      "total_tokens": 4884
+    },
+    "unsupported_proxy": 4
+  }
+}

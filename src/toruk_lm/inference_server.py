@@ -181,7 +181,10 @@ def make_handler(
                 )
                 return
             if not gate.acquire(blocking=False):
-                self._json(HTTPStatus.SERVICE_UNAVAILABLE, {"error": "Inference is busy; retry."})
+                self._json(
+                    HTTPStatus.SERVICE_UNAVAILABLE,
+                    {"error_code": "INFERENCE_BUSY", "error": "Inference is busy; retry."},
+                )
                 return
             try:
                 length = int(self.headers.get("Content-Length", "0"))

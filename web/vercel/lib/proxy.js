@@ -116,7 +116,7 @@ export async function statusResponse({env = process.env, fetchImpl = fetch} = {}
     if (!response.ok) throw new Error('backend status error');
     const data = await response.json();
     if (data.backend !== 'Toruk' || typeof data.ready !== 'boolean') throw new Error('invalid backend status');
-    return json({ready: data.ready, backend: 'Toruk', experimental: true, chat_quality: 'unqualified', efficiency_claim: 'unsupported', selector_id: data.selector_id ?? null, selector_kind: data.selector_kind ?? null, backbone_digest: data.backbone_digest ?? null, selector_sha256: data.selector_sha256 ?? null, model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], ...(data.ready ? {error: null, error_code: null} : readinessError(data.error_code))});
+    return json({ready: data.ready, backend: 'Toruk', experimental: true, chat_quality: 'unqualified', efficiency_claim: 'unsupported', selector_id: data.selector_id ?? null, selector_kind: data.selector_kind ?? null, backbone_digest: data.backbone_digest ?? null, backbone_revision: data.backbone_revision ?? null, backbone_sha256: data.backbone_sha256 ?? null, selector_sha256: data.selector_sha256 ?? null, model: data.model || 'Unavailable', backbone: data.backbone || data.model || 'Unavailable', context_tokens: data.context_tokens ?? null, memory_supported: data.memory_supported === true, modes: Array.isArray(data.modes) ? data.modes : ['BASELINE'], ...(data.ready ? {error: null, error_code: null} : readinessError(data.error_code))});
   } catch {
     return json({ready: false, backend: 'Toruk', model: 'Unavailable', error_code: 'BACKEND_UNAVAILABLE', error: 'Toruk inference is unavailable. Start or restart the backend, then retry the connection.'});
   }
@@ -146,10 +146,12 @@ export async function chatResponse(request, {env = process.env, fetchImpl = fetc
       method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload),
     }, fetchImpl);
     if (response.status === 400) {
-      return json({error: 'The inference backend rejected this request. Check the context mode and generation settings.'}, 400);
+      return json({error: 'The inference backend rejected this request. Check the context mode and generation settings, or shorten the message and start a new chat.'}, 400);
     }
+    if (response.status === 504) return json({error: 'Generation timed out. Restart the backend, then retry the connection.'}, 504);
     if (response.status === 503) {
       const unavailable = await response.json();
+      if (unavailable.error_code === 'INFERENCE_BUSY') return json({error_code: 'INFERENCE_BUSY', error: 'Inference is busy. Wait for the current reply, then retry.'}, 503);
       if (unavailable.error_code) return json(readinessError(unavailable.error_code), 503);
     }
     if (!response.ok) throw new Error('backend response failed');

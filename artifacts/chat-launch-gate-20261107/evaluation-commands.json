@@ -1,0 +1,80 @@
+{
+  "all_final_driver_exit_codes": 0,
+  "commands": [
+    [
+      "python",
+      "scripts/qualify_chat_launch.py",
+      "register",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107"
+    ],
+    [
+      "python",
+      "scripts/qualify_chat_launch.py",
+      "owned",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107"
+    ],
+    [
+      "python",
+      "scripts/qualify_chat_launch.py",
+      "evaluate",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107",
+      "--mode",
+      "qwen-recent"
+    ],
+    [
+      "python",
+      "scripts/qualify_chat_launch.py",
+      "evaluate",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107",
+      "--mode",
+      "qwen-trained-v2"
+    ],
+    [
+      "python",
+      "scripts/qualify_chat_launch.py",
+      "evaluate",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107",
+      "--mode",
+      "qwen-lexical-v2"
+    ],
+    [
+      "python",
+      "scripts/qualify_chat_launch.py",
+      "evaluate",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107",
+      "--mode",
+      "smollm-recent"
+    ],
+    [
+      "python",
+      "scripts/qualify_chat_launch.py",
+      "evaluate",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107",
+      "--mode",
+      "ordinary-smoke"
+    ],
+    [
+      "python",
+      "scripts/qualify_ollama_launch.py",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107"
+    ],
+    [
+      "python",
+      "scripts/qualify_ollama_launch.py",
+      "--run",
+      "artifacts\\chat-launch-gate-20261107",
+      "--selector"
+    ]
+  ],
+  "preflight": "artifacts/chat-launch-20261107 retains stopped preflight source/logs; not counted as qualification.",
+  "python": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\.venv\\Scripts\\python.exe",
+  "quality_gate_status": "All FAIL; driver completion is not gate success."
+}

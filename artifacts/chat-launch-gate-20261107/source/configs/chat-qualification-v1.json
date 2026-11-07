@@ -1,0 +1,14 @@
+{
+  "kind": "toruk-chat-qualification-v1",
+  "description": "Development qualification, not held-out research evidence. Score only the final turn; earlier assistant turns are real generated answers. Frozen before running Qwen. No quality assertion in the integration smoke.",
+  "scenarios": {
+    "arithmetic": {"prompts": ["What is 2 + 3?"], "accepted": ["5", "five"], "forbidden": []},
+    "capital": {"prompts": ["What is the capital of France?"], "accepted": ["Paris"], "forbidden": ["London", "Berlin"]},
+    "explanation": {"prompts": ["In one sentence, what do plants use sunlight for?"], "accepted": ["photosynthesis", "make food", "produce food", "energy"], "forbidden": []},
+    "follow_up": {"prompts": ["My name is Mira.", "What is my name?"], "accepted": ["Mira"], "forbidden": ["my name is", "I'm Mira", "I am Mira"]},
+    "correction": {"prompts": ["My favorite color is blue.", "Correction: my favorite color is green. What is my favorite color now?"], "accepted": ["green"], "forbidden": ["blue"]},
+    "earlier_fact": {"prompts": ["My bicycle lock code is CEDAR-27. Remember it for this conversation.", "What is the capital of Japan?", "What bicycle lock code did I give you earlier?"], "accepted": ["CEDAR-27"], "forbidden": []},
+    "unknown": {"prompts": ["What is the name of my childhood teacher? I have not told you. If you don't know, say so."], "accepted": ["don't know", "do not know", "not provided", "haven't provided", "haven't told", "do not have", "don't have"], "forbidden": [], "unsupported_case": true},
+    "conflict": {"prompts": ["One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?"], "accepted": ["don't know", "do not know", "cannot determine", "can't determine", "unclear", "conflicting", "not enough information", "can't say"], "forbidden": [], "unsupported_case": true}
+  }
+}

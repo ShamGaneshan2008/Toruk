@@ -55,3 +55,7 @@
 /artifacts/conversation-format-v1-20261105/metrics.md whitespace=cr-at-eol,-blank-at-eof
 /scripts/conversation_format_study.py text eol=lf
 /docs/research/conversation-format-v1-protocol.md text eol=lf
+# Preserve raw launch-gate inputs, replies, as-run sources and measurements.
+/artifacts/chat-launch-gate-20261107/** -text whitespace=cr-at-eol
+/artifacts/chat-launch-20261107/** -text whitespace=cr-at-eol
+/configs/chat-launch-gate-v1.json text eol=lf

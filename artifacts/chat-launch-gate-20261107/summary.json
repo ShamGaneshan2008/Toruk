@@ -1,0 +1,535 @@
+{
+  "ordinary-smoke": {
+    "all_request_metrics": {
+      "input_tokens": 7213,
+      "output_tokens": 2624,
+      "proxy_ms": 3606.425,
+      "response_ms": 3461.5009999999997,
+      "selected_context_tokens": 2405,
+      "total_tokens": 5029
+    },
+    "all_requests": 41,
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 0
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 0
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 0
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 0
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 0
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 0
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 0
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 0
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 0
+      }
+    },
+    "common25_correct": 0,
+    "cpu_seconds_sum_main_requests": 3.453125,
+    "frozen_correct": 0,
+    "gate": "FAIL",
+    "max_request_seconds": 0.13647409999975935,
+    "model": "toruk-ordinary-v1:0285d3fb6adc",
+    "peak": {
+      "private_sum_bytes": 1235906560,
+      "rss_sum_bytes": 509059072
+    },
+    "posthoc_semantic_correct": null,
+    "reliability": "PASS",
+    "selector_id": null,
+    "selector_sha256": null,
+    "startup_seconds": 6.796402699999817
+  },
+  "qwen-lexical-v2": {
+    "all_request_metrics": {
+      "history_bytes_read": 5718,
+      "history_tokenization_ms": 58.224,
+      "input_tokens": 5617,
+      "output_tokens": 382,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 23.335,
+      "proxy_ms": 92169.61499999999,
+      "response_ms": 92031.40000000001,
+      "selected_context_tokens": 4978,
+      "selected_messages": 96,
+      "selector_history_bytes": 5718,
+      "selector_ms": 1.691,
+      "total_tokens": 5360
+    },
+    "all_requests": 41,
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 1
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 3
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 3
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 3
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 1
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 3
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 3
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 3
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 0
+      }
+    },
+    "common25_correct": 16,
+    "cpu_seconds_sum_main_requests": 181.203125,
+    "frozen_correct": 27,
+    "gate": "FAIL",
+    "max_request_seconds": 9.286436299999878,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "peak": {
+      "private_sum_bytes": 4660998144,
+      "rss_sum_bytes": 2662109184
+    },
+    "posthoc_semantic_correct": 32,
+    "reliability": "PASS",
+    "selector_id": "lexical-v2",
+    "selector_sha256": "f46f9f96c9c9ca47ba659e9cce6fcaff86371e84b6f444342c1a214f33958741",
+    "startup_seconds": 13.416046899999856
+  },
+  "qwen-recent": {
+    "all_request_metrics": {
+      "history_bytes_read": 5688,
+      "history_tokenization_ms": 57.085,
+      "input_tokens": 5614,
+      "output_tokens": 379,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 26.381,
+      "proxy_ms": 96839.12000000001,
+      "response_ms": 96706.36100000002,
+      "selected_context_tokens": 5614,
+      "selected_messages": 133,
+      "selector_history_bytes": 0,
+      "selector_ms": 0,
+      "total_tokens": 5993
+    },
+    "all_requests": 41,
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 1
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 1
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 3
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 3
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 1
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 3
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 3
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 3
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 0
+      }
+    },
+    "common25_correct": 14,
+    "cpu_seconds_sum_main_requests": 192.3125,
+    "frozen_correct": 25,
+    "gate": "FAIL",
+    "max_request_seconds": 9.010557000000063,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "peak": {
+      "private_sum_bytes": 4636938240,
+      "rss_sum_bytes": 2682904576
+    },
+    "posthoc_semantic_correct": 30,
+    "reliability": "PASS",
+    "selector_id": null,
+    "selector_sha256": null,
+    "startup_seconds": 10.740934800000105
+  },
+  "qwen-trained-v2": {
+    "all_request_metrics": {
+      "history_bytes_read": 5694,
+      "history_tokenization_ms": 58.958,
+      "input_tokens": 5600,
+      "output_tokens": 359,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 24.9,
+      "proxy_ms": 91426.63200000001,
+      "response_ms": 91277.67800000001,
+      "selected_context_tokens": 4894,
+      "selected_messages": 88,
+      "selector_history_bytes": 5694,
+      "selector_ms": 1.1500000000000001,
+      "total_tokens": 5253
+    },
+    "all_requests": 41,
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 1
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 3
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 3
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 3
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 1
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 3
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 2
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 2
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 0
+      }
+    },
+    "common25_correct": 15,
+    "cpu_seconds_sum_main_requests": 181.46875,
+    "frozen_correct": 25,
+    "gate": "FAIL",
+    "max_request_seconds": 9.988384199999928,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf",
+    "peak": {
+      "private_sum_bytes": 4627832832,
+      "rss_sum_bytes": 2663260160
+    },
+    "posthoc_semantic_correct": 32,
+    "reliability": "PASS",
+    "selector_id": "toruk-chat-selector-v2",
+    "selector_sha256": "abd9d2d1c20edb3ad5cf3282f8a26fca49fb44d508d4ba2ada5ebc9c666b7548",
+    "startup_seconds": 12.606912199999897
+  },
+  "smollm-recent": {
+    "all_request_metrics": {
+      "history_bytes_read": 7024,
+      "history_tokenization_ms": 36.538999999999994,
+      "input_tokens": 3541,
+      "output_tokens": 1149,
+      "persistent_state_bytes": 0,
+      "prompt_fit_ms": 17.808999999999997,
+      "proxy_ms": 66363.73800000001,
+      "response_ms": 66229.14099999999,
+      "selected_context_tokens": 3541,
+      "selected_messages": 133,
+      "selector_history_bytes": 0,
+      "selector_ms": 0,
+      "total_tokens": 4690
+    },
+    "all_requests": 41,
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 1
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 3
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 0
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 3
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 1
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 1
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 3
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 3
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 0
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 1
+      }
+    },
+    "common25_correct": 13,
+    "cpu_seconds_sum_main_requests": 132.25,
+    "frozen_correct": 18,
+    "gate": "FAIL",
+    "max_request_seconds": 3.4942433999999594,
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+    "peak": {
+      "private_sum_bytes": 1975562240,
+      "rss_sum_bytes": 1163366400
+    },
+    "posthoc_semantic_correct": null,
+    "reliability": "PASS",
+    "selector_id": null,
+    "selector_sha256": null,
+    "startup_seconds": 10.416457300000275
+  }
+}

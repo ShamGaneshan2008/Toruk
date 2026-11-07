@@ -1,0 +1,30 @@
+{
+  "schema": "toruk-chat-launch-gate-v1",
+  "frozen_cases": "artifacts/conversation-format-v1-20261105/data/regression.json",
+  "generated_scenarios": "configs/chat-qualification-v1.json",
+  "external_output_tokens": 64,
+  "owned_output_tokens": 32,
+  "temperature": 0,
+  "top_p": 1,
+  "quality_gate": {
+    "minimum_overall_fraction": 0.8,
+    "minimum_each_category_fraction": 0.6,
+    "maximum_unsupported_unknown": 0,
+    "maximum_refusal_math_failures": 0,
+    "maximum_exact_string_failures": 0,
+    "maximum_repeated_trigrams": 0,
+    "minimum_http_success_fraction": 1.0
+  },
+  "reliability_gate": {
+    "maximum_startup_seconds": 120,
+    "maximum_request_seconds": 45,
+    "single_generation_slot": true,
+    "reject_malformed_and_over_budget": true,
+    "require_identity_parity": true,
+    "require_backend_outage_503": true,
+    "require_secret_redaction": true
+  },
+  "scoring": "Frozen literal expectations: exact/instruction require exact text; factual/correction/recall require the literal answer and absence of obsolete value; numeric math/refusal require the expected standalone number without an online-access refusal. Unknown and natural-chat probes use the predeclared phrase rules. Phrase scores are proxies and raw responses must be reviewed.",
+  "scope": "Previously published development/regression cases, not a new held-out research result. Generated scenarios include real prior generated assistant replies; no answers are substituted. Repeat the full refusal history with three generated math follow-ups. The owned model has a separate byte/role transport and cannot be treated as a matched pretrained comparison.",
+  "public_gate": "All quality and reliability gates plus a tested Linux host, authentication/abuse budget, license/publication decision and hosting account/budget qualification. Local success alone does not qualify a public service."
+}

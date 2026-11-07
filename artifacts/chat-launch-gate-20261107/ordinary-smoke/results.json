@@ -1,0 +1,2538 @@
+{
+  "concurrent": [
+    {
+      "body": {
+        "answer": "the mnininieninien Then The The The The The Thenis the thenie th",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 55,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 85.238,
+          "response_ms": 79.967,
+          "selected_context_tokens": 55,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 119
+        }
+      },
+      "code": 200,
+      "seconds": 0.09486229999993157
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.019513499999902706
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.019560700000056386
+    },
+    {
+      "body": {
+        "error": "Inference is busy. Wait for the current reply, then retry.",
+        "error_code": "INFERENCE_BUSY"
+      },
+      "code": 503,
+      "seconds": 0.01983460000019477
+    }
+  ],
+  "direct_status": {
+    "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+    "backbone_digest": null,
+    "backbone_revision": null,
+    "backbone_sha256": null,
+    "backend": "Toruk",
+    "chat_quality": "unqualified",
+    "context_tokens": 64,
+    "efficiency_claim": "unsupported",
+    "error": null,
+    "error_code": null,
+    "experimental": true,
+    "memory_supported": false,
+    "model": "toruk-ordinary-v1:0285d3fb6adc",
+    "modes": [
+      "BASELINE"
+    ],
+    "ready": true,
+    "selector_id": null,
+    "selector_kind": null,
+    "selector_sha256": null
+  },
+  "peak_process_tree": {
+    "private_sum_bytes": 1235906560,
+    "rss_sum_bytes": 509059072
+  },
+  "reliability": {
+    "bad_json_400": true,
+    "bounded_latency": true,
+    "bounded_startup": true,
+    "health_aliases": true,
+    "identity": true,
+    "message_bytes_400": true,
+    "outage_503": true,
+    "secret_redaction": true,
+    "selector_mode_400": true,
+    "single_generation_slot": true,
+    "tokens_400": true,
+    "unauthorized_401": true
+  },
+  "reliability_gate": "PASS",
+  "rows": [
+    {
+      "category": "instruction",
+      "content": "ether 0000000000000000000000enie T The The T T Thenienienienieni",
+      "http_status": 200,
+      "id": "test-instruction-0",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction0.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "ether 0000000000000000000000enie T The The T T Thenienienienieni",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 44,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 91.005,
+          "response_ms": 86.039,
+          "selected_context_tokens": 44,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 108
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.11021469999968758
+    },
+    {
+      "category": "instruction",
+      "content": "e 000000000000000000000000000e T T Thenie T T Thenienienienienie",
+      "http_status": 200,
+      "id": "test-instruction-1",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction1.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e 000000000000000000000000000e T T Thenie T T Thenienienienienie",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 44,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 80.025,
+          "response_ms": 76.533,
+          "selected_context_tokens": 44,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 108
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.09455269999989468
+    },
+    {
+      "category": "instruction",
+      "content": "ether 0000000000000000000000enie The The The The T Thenienienien",
+      "http_status": 200,
+      "id": "test-instruction-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Reply only Evalueinstruction2.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "ether 0000000000000000000000enie The The The The T Thenienienien",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 44,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 85.101,
+          "response_ms": 78.684,
+          "selected_context_tokens": 44,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 108
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.11640709999983301
+    },
+    {
+      "category": "factual",
+      "content": "e Thenie The Thenienien The The The The The The the The The The ",
+      "http_status": 200,
+      "id": "test-factual-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual0 is Evaluefactual0. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e Thenie The Thenienien The The The The The The the The The The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 103,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 80.199,
+          "response_ms": 77.048,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 7,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.09511670000028971
+    },
+    {
+      "category": "factual",
+      "content": "e Thenie The Thenienien The The The The The The the The The The ",
+      "http_status": 200,
+      "id": "test-factual-1",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual1 is Evaluefactual1. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e Thenie The Thenienien The The The The The The the The The The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 103,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 78.748,
+          "response_ms": 75.49,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 7,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.09335120000014285
+    },
+    {
+      "category": "factual",
+      "content": "e Thenie The Thenienien The The The The The The the The The The ",
+      "http_status": 200,
+      "id": "test-factual-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "The label for Epersonfactual2 is Evaluefactual2. What is its label? Reply only the label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e Thenie The Thenienien The The The The The The the The The The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 103,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 77.892,
+          "response_ms": 74.92,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 7,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.08978179999985514
+    },
+    {
+      "category": "uncertainty",
+      "content": "enien Thenieninienin Thenin The The The The The The The the The ",
+      "http_status": 200,
+      "id": "test-uncertainty-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enien Thenieninienin Thenin The The The The The The The the The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 89,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 80.183,
+          "response_ms": 77.19,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 6,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 0.09383939999997892
+    },
+    {
+      "category": "uncertainty",
+      "content": "enien Thenieninienin Thenin The The The The The The The the The ",
+      "http_status": 200,
+      "id": "test-uncertainty-1",
+      "inference_tree_cpu_seconds": 0.0625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enien Thenieninienin Thenin The The The The The The The the The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 89,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 80.045,
+          "response_ms": 76.994,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 6,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 0.09250860000020111
+    },
+    {
+      "category": "uncertainty",
+      "content": "enien Thenieninienin Thenin The The The The The The The the The ",
+      "http_status": 200,
+      "id": "test-uncertainty-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enien Thenieninienin Thenin The The The The The The The the The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 89,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 80.001,
+          "response_ms": 76.44,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 6,
+        "strict_exact": false,
+        "unsupported_proxy": true
+      },
+      "wall_seconds": 0.10301719999961279
+    },
+    {
+      "category": "correction",
+      "content": "enie The Thenienieninie The The The The The The Then The the The",
+      "http_status": 200,
+      "id": "test-correction-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection0's label is Eoldcorrection0.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection0.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie The Thenienieninie The The The The The The Then The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 217,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 78.019,
+          "response_ms": 73.737,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.08982749999995576
+    },
+    {
+      "category": "correction",
+      "content": "enie The Thenienie The The The The Thenien T The The the the The",
+      "http_status": 200,
+      "id": "test-correction-1",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection1's label is Eoldcorrection1.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection1.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie The Thenienie The The The The Thenien T The The the the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 217,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 75.669,
+          "response_ms": 72.513,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.08943130000034216
+    },
+    {
+      "category": "correction",
+      "content": "enie The Thenienieninie The The The The The The Then The the The",
+      "http_status": 200,
+      "id": "test-correction-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersoncorrection2's label is Eoldcorrection2.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: the label is now Evaluecorrection2.",
+            "role": "user"
+          },
+          {
+            "content": "Updated.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersoncorrection2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie The Thenienieninie The The The The The The Then The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 217,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 88.794,
+          "response_ms": 84.478,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.10179820000030304
+    },
+    {
+      "category": "distant",
+      "content": "enie The Thenienieninie The The The The The The Then The the The",
+      "http_status": 200,
+      "id": "test-distant-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant0's label is Evaluedistant0.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie The Thenienieninie The The The The The The Then The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 252,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 80.741,
+          "response_ms": 76.737,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.09741159999975935
+    },
+    {
+      "category": "distant",
+      "content": "enie The Thenienininie The The The Thenien T The The the the The",
+      "http_status": 200,
+      "id": "test-distant-1",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant1's label is Evaluedistant1.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie The Thenienininie The The The Thenien T The The the the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 252,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 76.814,
+          "response_ms": 73.526,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 3,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.08972290000019711
+    },
+    {
+      "category": "distant",
+      "content": "enie The Thenienieninie The The The The The The Then The the The",
+      "http_status": 200,
+      "id": "test-distant-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersondistant2's label is Evaluedistant2.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+            "role": "user"
+          },
+          {
+            "content": "Noted.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersondistant2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie The Thenienieninie The The The The The The Then The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 252,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 77.409,
+          "response_ms": 74.529,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.09075880000000325
+    },
+    {
+      "category": "exact",
+      "content": "e Thenie Thenienininie The The The Theninin The then The the The",
+      "http_status": 200,
+      "id": "test-exact-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact0's label is E/Q-0_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact0's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e Thenie Thenienininie The The The Theninin The then The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 130,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 81.612,
+          "response_ms": 77.302,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.10737869999957184
+    },
+    {
+      "category": "exact",
+      "content": "e Thenie Thenienininie The The The Theninin The then The the The",
+      "http_status": 200,
+      "id": "test-exact-1",
+      "inference_tree_cpu_seconds": 0.0625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact1's label is E/Q-1_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact1's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e Thenie Thenienininie The The The Theninin The then The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 130,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 76.712,
+          "response_ms": 73.222,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.09072730000025331
+    },
+    {
+      "category": "exact",
+      "content": "e Thenie Thenienininie The The The Theninin The then The the The",
+      "http_status": 200,
+      "id": "test-exact-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Epersonexact2's label is E/Q-2_x!.",
+            "role": "user"
+          },
+          {
+            "content": "Recorded.",
+            "role": "assistant"
+          },
+          {
+            "content": "What is Epersonexact2's label? Reply only the exact label.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e Thenie Thenienininie The The The Theninin The then The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 130,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 78.852,
+          "response_ms": 75.907,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.10318670000015118
+    },
+    {
+      "category": "math",
+      "content": "enienie The Thenieninenininin The Thenen The The The The the The",
+      "http_status": 200,
+      "id": "test-math-0",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath0, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enienie The Thenieninenininin The Thenen The The The The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 67,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 91.008,
+          "response_ms": 88.069,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 3,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.10450029999992694
+    },
+    {
+      "category": "math",
+      "content": "enienie The Thenieninenininin The Thenen The The The The the The",
+      "http_status": 200,
+      "id": "test-math-1",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath1, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enienie The Thenieninenininin The Thenen The The The The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 67,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 98.211,
+          "response_ms": 95.187,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 3,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.11263460000009218
+    },
+    {
+      "category": "math",
+      "content": "enienie The Thenieninenininin The Thenen The The The The the The",
+      "http_status": 200,
+      "id": "test-math-2",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "For Epersonmath2, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enienie The Thenieninenininin The Thenen The The The The the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 67,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 94.565,
+          "response_ms": 91.321,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 3,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.11771139999973457
+    },
+    {
+      "category": "refusal",
+      "content": "enienie The The The The The The The The Theninin Thenie the the ",
+      "http_status": 200,
+      "id": "test-refusal-0",
+      "inference_tree_cpu_seconds": 0.109375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enienie The The The The The The The The Theninin Thenie the the ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 83,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 107.356,
+          "response_ms": 104.316,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 5,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.1359322000002976
+    },
+    {
+      "category": "refusal",
+      "content": "eninie Thenie Theninieninie The The The Then The The Thenie the ",
+      "http_status": 200,
+      "id": "test-refusal-1",
+      "inference_tree_cpu_seconds": 0.109375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "For Epersonrefusal1, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "eninie Thenie Theninieninie The The The Then The The Thenie the ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 128,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 107.485,
+          "response_ms": 103.453,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.13647409999975935
+    },
+    {
+      "category": "refusal",
+      "content": "eninie Thenien Thenienin Thenininen Then The The The The The The",
+      "http_status": 200,
+      "id": "test-refusal-2",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "open YouTube",
+            "role": "user"
+          },
+          {
+            "content": "I cannot access online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "For Epersonrefusal2, what is 5+5? Reply only the number.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "eninie Thenien Thenienin Thenininen Then The The The The The The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 128,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 93.987,
+          "response_ms": 88.799,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 3,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.10842270000011922
+    },
+    {
+      "category": "refusal",
+      "content": "enie Thenininie The The The The The The The Thenie the thenie th",
+      "http_status": 200,
+      "id": "test-observed-full-refusal",
+      "inference_tree_cpu_seconds": 0.0625,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie Thenininie The The The The The The The Thenie the thenie th",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 626,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 92.685,
+          "response_ms": 89.475,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.10602560000006633
+    },
+    {
+      "category": "basic",
+      "content": "00000000000000000000000. e or enar the mninienienenienienie The ",
+      "http_status": 200,
+      "id": "natural-hello",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "Hello!",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "00000000000000000000000. e or enar the mninienienenienienie The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 20,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 86.855,
+          "response_ms": 84.227,
+          "selected_context_tokens": 20,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 84
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.11696430000029068
+    },
+    {
+      "category": "generated-arithmetic",
+      "content": "ernienienear the 00000000000000000000enienie The The T T The T T",
+      "http_status": 200,
+      "id": "generated-arithmetic-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is 2 + 3?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "ernienienear the 00000000000000000000enienie The The T T The T T",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 28,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 89.717,
+          "response_ms": 86.988,
+          "selected_context_tokens": 28,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 92
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.11650719999988723
+    },
+    {
+      "category": "generated-capital",
+      "content": "e 000000000000000000e T The The The T T T Thenienienienie nie ni",
+      "http_status": 200,
+      "id": "generated-capital-0",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is the capital of France?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e 000000000000000000e T The The The T T T Thenienienienie nie ni",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 44,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 97.2,
+          "response_ms": 93.3,
+          "selected_context_tokens": 44,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 108
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.11193039999989196
+    },
+    {
+      "category": "generated-conflict",
+      "content": "enienie The Thenin Then The The The The The Thenis the thenie th",
+      "http_status": 200,
+      "id": "generated-conflict-0",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enienie The Thenin Then The The The The The Thenis the thenie th",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 165,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 93.526,
+          "response_ms": 90.214,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 2,
+        "strict_exact": null,
+        "unsupported_proxy": true
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.12221670000008089
+    },
+    {
+      "category": "generated-correction",
+      "content": "the oriernenal the 0000000000000000000e The Thenie The T T The T",
+      "http_status": 200,
+      "id": "generated-correction-0",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My favorite color is blue.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "the oriernenal the 0000000000000000000e The Thenie The T T The T",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 40,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 101.852,
+          "response_ms": 98.581,
+          "selected_context_tokens": 40,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 104
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 0.13005130000010467
+    },
+    {
+      "category": "generated-correction",
+      "content": "e The Theninineninienie The The The The The Thenis the the the t",
+      "http_status": 200,
+      "id": "generated-correction-1",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My favorite color is blue.",
+            "role": "user"
+          },
+          {
+            "content": "the oriernenal the 0000000000000000000e The Thenie The T T The T",
+            "role": "assistant"
+          },
+          {
+            "content": "Correction: my favorite color is green. What is my favorite color now?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e The Theninineninienie The The The The The Thenis the the the t",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 189,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 98.726,
+          "response_ms": 95.997,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 3,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.1214151000003767
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "e Thenie The Thenie The The The The The The Thenie The The the e",
+      "http_status": 200,
+      "id": "generated-earlier_fact-0",
+      "inference_tree_cpu_seconds": 0.109375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e Thenie The Thenie The The The The The The Thenie The The the e",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 82,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 100.692,
+          "response_ms": 97.726,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 6,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 0.1293467000000419
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "enie Thenie The The the Thenie The Theninin Theninie The The The",
+      "http_status": 200,
+      "id": "generated-earlier_fact-1",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          },
+          {
+            "content": "e Thenie The Thenie The The The The The The Thenie The The the e",
+            "role": "assistant"
+          },
+          {
+            "content": "What is the capital of Japan?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie Thenie The The the Thenie The Theninin Theninie The The The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 190,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 93.954,
+          "response_ms": 90.37,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 0.11057860000028086
+    },
+    {
+      "category": "generated-earlier_fact",
+      "content": "e The Thenie The Thenien The The Theninin Then The the The The t",
+      "http_status": 200,
+      "id": "generated-earlier_fact-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+            "role": "user"
+          },
+          {
+            "content": "e Thenie The Thenie The The The The The The Thenie The The the e",
+            "role": "assistant"
+          },
+          {
+            "content": "What is the capital of Japan?",
+            "role": "user"
+          },
+          {
+            "content": "enie Thenie The The the Thenie The Theninin Theninie The The The",
+            "role": "assistant"
+          },
+          {
+            "content": "What bicycle lock code did I give you earlier?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e The Thenie The Thenien The The Theninin Then The the The The t",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 315,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 95.908,
+          "response_ms": 92.106,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 1,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.12474509999992733
+    },
+    {
+      "category": "generated-explanation",
+      "content": "enienieninie Thenin The Thenie The Thenin Then The The Then The ",
+      "http_status": 200,
+      "id": "generated-explanation-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "In one sentence, what do plants use sunlight for?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enienieninie Thenin The Thenie The Thenin Then The The Then The ",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 63,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 84.276,
+          "response_ms": 81.528,
+          "selected_context_tokens": 63,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 127
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.10088739999991958
+    },
+    {
+      "category": "generated-follow_up",
+      "content": ". 000000000000000000000000000000000000000000enenienenie The Then",
+      "http_status": 200,
+      "id": "generated-follow_up-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My name is Mira.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": ". 000000000000000000000000000000000000000000enenienenie The Then",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 30,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 83.527,
+          "response_ms": 79.509,
+          "selected_context_tokens": 30,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 94
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 0,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": false,
+      "wall_seconds": 0.1069231999999829
+    },
+    {
+      "category": "generated-follow_up",
+      "content": "e The The The The The The The The Thenienie The The The en The t",
+      "http_status": 200,
+      "id": "generated-follow_up-1",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "My name is Mira.",
+            "role": "user"
+          },
+          {
+            "content": ". 000000000000000000000000000000000000000000enenienenie The Then",
+            "role": "assistant"
+          },
+          {
+            "content": "What is my name?",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e The The The The The The The The Thenienie The The The en The t",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 125,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 80.422,
+          "response_ms": 77.214,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 6,
+        "strict_exact": null,
+        "unsupported_proxy": false
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.09527029999981096
+    },
+    {
+      "category": "generated-unknown",
+      "content": "enienenienienenienin Thenin The The The The The then The The The",
+      "http_status": 200,
+      "id": "generated-unknown-0",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "What is the name of my childhood teacher? I have not told you. If you don't know, say so.",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enienenienienenienin Thenin The The The The The then The The The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 103,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 84.009,
+          "response_ms": 81.081,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 3,
+        "strict_exact": null,
+        "unsupported_proxy": true
+      },
+      "scored_final_turn": true,
+      "wall_seconds": 0.11274630000025354
+    },
+    {
+      "category": "repetition",
+      "content": "enie Thenininie The The The The The The The Thenie the thenie th",
+      "http_status": 200,
+      "id": "refusal-repeat-0",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie Thenininie The The The The The The The Thenie the thenie th",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 626,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 102.327,
+          "response_ms": 98.298,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.1173993999996128
+    },
+    {
+      "category": "repetition",
+      "content": "enie Thenie Thenie The The The The Thenie thenininin the the The",
+      "http_status": 200,
+      "id": "refusal-repeat-1",
+      "inference_tree_cpu_seconds": 0.09375,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "enie Thenininie The The The The The The The Thenie the thenie th",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "enie Thenie Thenie The The The The Thenie thenininin the the The",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 716,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 95.555,
+          "response_ms": 90.569,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10",
+            "m11",
+            "m12"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 2,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.11817369999971561
+    },
+    {
+      "category": "repetition",
+      "content": "e The The The Thenie The The Thenin The The Thenie the the the e",
+      "http_status": 200,
+      "id": "refusal-repeat-2",
+      "inference_tree_cpu_seconds": 0.078125,
+      "request": {
+        "max_new_tokens": 64,
+        "messages": [
+          {
+            "content": "hello",
+            "role": "user"
+          },
+          {
+            "content": "Hello! How can I help you today?",
+            "role": "assistant"
+          },
+          {
+            "content": "what are you?",
+            "role": "user"
+          },
+          {
+            "content": "I'm a chatbot designed to assist users with various topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "i am JinSakai",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+            "role": "assistant"
+          },
+          {
+            "content": "open youtube",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5",
+            "role": "user"
+          },
+          {
+            "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "enie Thenininie The The The The The The The Thenie the thenie th",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          },
+          {
+            "content": "enie Thenie Thenie The The The The Thenie thenininin the the The",
+            "role": "assistant"
+          },
+          {
+            "content": "what is 5+5",
+            "role": "user"
+          }
+        ],
+        "mode": "BASELINE",
+        "temperature": 0,
+        "top_p": 1
+      },
+      "response": {
+        "answer": "e The The The Thenie The The Thenin The The Thenie the the the e",
+        "metrics": {
+          "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+          "backend": "Toruk",
+          "input_tokens": 806,
+          "memory_used": false,
+          "mode": "BASELINE",
+          "model": "toruk-ordinary-v1:0285d3fb6adc",
+          "output_tokens": 64,
+          "proxy_ms": 84.761,
+          "response_ms": 81.884,
+          "selected_context_tokens": 64,
+          "selected_message_ids": [
+            "m0",
+            "m1",
+            "m2",
+            "m3",
+            "m4",
+            "m5",
+            "m6",
+            "m7",
+            "m8",
+            "m9",
+            "m10",
+            "m11",
+            "m12",
+            "m13",
+            "m14"
+          ],
+          "total_tokens": 128
+        }
+      },
+      "score": {
+        "quality": false,
+        "repeated_trigrams": 4,
+        "strict_exact": false,
+        "unsupported_proxy": false
+      },
+      "wall_seconds": 0.0993148999996265
+    }
+  ],
+  "scope": "Local Windows process tree; no Linux/cloud capacity guarantee.",
+  "startup_seconds": 6.796402699999817,
+  "status": {
+    "backbone": "Toruk ordinary byte LM (smoke fixture; not chat-trained)",
+    "backbone_digest": null,
+    "backbone_revision": null,
+    "backbone_sha256": null,
+    "backend": "Toruk",
+    "chat_quality": "unqualified",
+    "context_tokens": 64,
+    "efficiency_claim": "unsupported",
+    "error": null,
+    "error_code": null,
+    "experimental": true,
+    "memory_supported": false,
+    "model": "toruk-ordinary-v1:0285d3fb6adc",
+    "modes": [
+      "BASELINE"
+    ],
+    "ready": true,
+    "selector_id": null,
+    "selector_kind": null,
+    "selector_sha256": null
+  },
+  "summary": {
+    "all_request_metric_totals": {
+      "input_tokens": 7213,
+      "output_tokens": 2624,
+      "proxy_ms": 3606.425,
+      "response_ms": 3461.5009999999997,
+      "selected_context_tokens": 2405,
+      "total_tokens": 5029
+    },
+    "cases": 37,
+    "categories": {
+      "basic": {
+        "cases": 1,
+        "correct": 0
+      },
+      "correction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "distant": {
+        "cases": 3,
+        "correct": 0
+      },
+      "exact": {
+        "cases": 3,
+        "correct": 0
+      },
+      "factual": {
+        "cases": 3,
+        "correct": 0
+      },
+      "generated-arithmetic": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-capital": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-conflict": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-correction": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-earlier_fact": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-explanation": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-follow_up": {
+        "cases": 1,
+        "correct": 0
+      },
+      "generated-unknown": {
+        "cases": 1,
+        "correct": 0
+      },
+      "instruction": {
+        "cases": 3,
+        "correct": 0
+      },
+      "math": {
+        "cases": 3,
+        "correct": 0
+      },
+      "refusal": {
+        "cases": 4,
+        "correct": 0
+      },
+      "repetition": {
+        "cases": 3,
+        "correct": 0
+      },
+      "uncertainty": {
+        "cases": 3,
+        "correct": 0
+      }
+    },
+    "correct": 0,
+    "distinct_replies": 25,
+    "exact_string_failures": 3,
+    "http_ok": 37,
+    "most_common_reply_count": 4,
+    "quality_gate": "FAIL",
+    "refusal_math_failures": 7,
+    "repeated_trigrams": 113,
+    "request_count": 41,
+    "summed_metrics": {
+      "input_tokens": 6871,
+      "output_tokens": 2368,
+      "proxy_ms": 3226.3999999999996,
+      "response_ms": 3095.314999999999,
+      "selected_context_tokens": 2207,
+      "total_tokens": 4575
+    },
+    "unsupported_proxy": 5
+  }
+}

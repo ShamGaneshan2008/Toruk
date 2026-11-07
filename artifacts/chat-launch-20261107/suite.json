@@ -1,0 +1,732 @@
+{
+  "cases": [
+    {
+      "answer": "Evalueinstruction0",
+      "category": "instruction",
+      "id": "test-instruction-0",
+      "messages": [
+        {
+          "content": "Reply only Evalueinstruction0.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Reply only Evalueinstruction0.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Reply only Evalueinstruction0.\"\nassistant:\"Evalueinstruction0\"\n"
+    },
+    {
+      "answer": "Evalueinstruction1",
+      "category": "instruction",
+      "id": "test-instruction-1",
+      "messages": [
+        {
+          "content": "Reply only Evalueinstruction1.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Reply only Evalueinstruction1.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Reply only Evalueinstruction1.\"\nassistant:\"Evalueinstruction1\"\n"
+    },
+    {
+      "answer": "Evalueinstruction2",
+      "category": "instruction",
+      "id": "test-instruction-2",
+      "messages": [
+        {
+          "content": "Reply only Evalueinstruction2.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Reply only Evalueinstruction2.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Reply only Evalueinstruction2.\"\nassistant:\"Evalueinstruction2\"\n"
+    },
+    {
+      "answer": "Evaluefactual0",
+      "category": "factual",
+      "id": "test-factual-0",
+      "messages": [
+        {
+          "content": "The label for Epersonfactual0 is Evaluefactual0. What is its label? Reply only the label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"The label for Epersonfactual0 is Evaluefactual0. What is its label? Reply only the label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"The label for Epersonfactual0 is Evaluefactual0. What is its label? Reply only the label.\"\nassistant:\"Evaluefactual0\"\n"
+    },
+    {
+      "answer": "Evaluefactual1",
+      "category": "factual",
+      "id": "test-factual-1",
+      "messages": [
+        {
+          "content": "The label for Epersonfactual1 is Evaluefactual1. What is its label? Reply only the label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"The label for Epersonfactual1 is Evaluefactual1. What is its label? Reply only the label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"The label for Epersonfactual1 is Evaluefactual1. What is its label? Reply only the label.\"\nassistant:\"Evaluefactual1\"\n"
+    },
+    {
+      "answer": "Evaluefactual2",
+      "category": "factual",
+      "id": "test-factual-2",
+      "messages": [
+        {
+          "content": "The label for Epersonfactual2 is Evaluefactual2. What is its label? Reply only the label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"The label for Epersonfactual2 is Evaluefactual2. What is its label? Reply only the label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"The label for Epersonfactual2 is Evaluefactual2. What is its label? Reply only the label.\"\nassistant:\"Evaluefactual2\"\n"
+    },
+    {
+      "answer": "Unknown.",
+      "category": "uncertainty",
+      "id": "test-uncertainty-0",
+      "messages": [
+        {
+          "content": "What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.\"\nassistant:\"Unknown.\"\n"
+    },
+    {
+      "answer": "Unknown.",
+      "category": "uncertainty",
+      "id": "test-uncertainty-1",
+      "messages": [
+        {
+          "content": "What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.\"\nassistant:\"Unknown.\"\n"
+    },
+    {
+      "answer": "Unknown.",
+      "category": "uncertainty",
+      "id": "test-uncertainty-2",
+      "messages": [
+        {
+          "content": "What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.\"\nassistant:\"Unknown.\"\n"
+    },
+    {
+      "answer": "Evaluecorrection0",
+      "category": "correction",
+      "id": "test-correction-0",
+      "messages": [
+        {
+          "content": "Epersoncorrection0's label is Eoldcorrection0.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "Correction: the label is now Evaluecorrection0.",
+          "role": "user"
+        },
+        {
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersoncorrection0's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "Eoldcorrection0",
+      "prefix": "user:\"Epersoncorrection0's label is Eoldcorrection0.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Evaluecorrection0.\"\nassistant:\"Updated.\"\nuser:\"What is Epersoncorrection0's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersoncorrection0's label is Eoldcorrection0.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Evaluecorrection0.\"\nassistant:\"Updated.\"\nuser:\"What is Epersoncorrection0's label? Reply only the exact label.\"\nassistant:\"Evaluecorrection0\"\n"
+    },
+    {
+      "answer": "Evaluecorrection1",
+      "category": "correction",
+      "id": "test-correction-1",
+      "messages": [
+        {
+          "content": "Epersoncorrection1's label is Eoldcorrection1.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "Correction: the label is now Evaluecorrection1.",
+          "role": "user"
+        },
+        {
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersoncorrection1's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "Eoldcorrection1",
+      "prefix": "user:\"Epersoncorrection1's label is Eoldcorrection1.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Evaluecorrection1.\"\nassistant:\"Updated.\"\nuser:\"What is Epersoncorrection1's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersoncorrection1's label is Eoldcorrection1.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Evaluecorrection1.\"\nassistant:\"Updated.\"\nuser:\"What is Epersoncorrection1's label? Reply only the exact label.\"\nassistant:\"Evaluecorrection1\"\n"
+    },
+    {
+      "answer": "Evaluecorrection2",
+      "category": "correction",
+      "id": "test-correction-2",
+      "messages": [
+        {
+          "content": "Epersoncorrection2's label is Eoldcorrection2.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "Correction: the label is now Evaluecorrection2.",
+          "role": "user"
+        },
+        {
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersoncorrection2's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "Eoldcorrection2",
+      "prefix": "user:\"Epersoncorrection2's label is Eoldcorrection2.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Evaluecorrection2.\"\nassistant:\"Updated.\"\nuser:\"What is Epersoncorrection2's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersoncorrection2's label is Eoldcorrection2.\"\nassistant:\"Recorded.\"\nuser:\"Correction: the label is now Evaluecorrection2.\"\nassistant:\"Updated.\"\nuser:\"What is Epersoncorrection2's label? Reply only the exact label.\"\nassistant:\"Evaluecorrection2\"\n"
+    },
+    {
+      "answer": "Evaluedistant0",
+      "category": "distant",
+      "id": "test-distant-0",
+      "messages": [
+        {
+          "content": "Epersondistant0's label is Evaluedistant0.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+          "role": "user"
+        },
+        {
+          "content": "Noted.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersondistant0's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Epersondistant0's label is Evaluedistant0.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Epersondistant0's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersondistant0's label is Evaluedistant0.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Epersondistant0's label? Reply only the exact label.\"\nassistant:\"Evaluedistant0\"\n"
+    },
+    {
+      "answer": "Evaluedistant1",
+      "category": "distant",
+      "id": "test-distant-1",
+      "messages": [
+        {
+          "content": "Epersondistant1's label is Evaluedistant1.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+          "role": "user"
+        },
+        {
+          "content": "Noted.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersondistant1's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Epersondistant1's label is Evaluedistant1.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Epersondistant1's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersondistant1's label is Evaluedistant1.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Epersondistant1's label? Reply only the exact label.\"\nassistant:\"Evaluedistant1\"\n"
+    },
+    {
+      "answer": "Evaluedistant2",
+      "category": "distant",
+      "id": "test-distant-2",
+      "messages": [
+        {
+          "content": "Epersondistant2's label is Evaluedistant2.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+          "role": "user"
+        },
+        {
+          "content": "Noted.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersondistant2's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Epersondistant2's label is Evaluedistant2.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Epersondistant2's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersondistant2's label is Evaluedistant2.\"\nassistant:\"Recorded.\"\nuser:\"Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain \"\nassistant:\"Noted.\"\nuser:\"What is Epersondistant2's label? Reply only the exact label.\"\nassistant:\"Evaluedistant2\"\n"
+    },
+    {
+      "answer": "E/Q-0_x!",
+      "category": "exact",
+      "id": "test-exact-0",
+      "messages": [
+        {
+          "content": "Epersonexact0's label is E/Q-0_x!.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersonexact0's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Epersonexact0's label is E/Q-0_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Epersonexact0's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersonexact0's label is E/Q-0_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Epersonexact0's label? Reply only the exact label.\"\nassistant:\"E/Q-0_x!\"\n"
+    },
+    {
+      "answer": "E/Q-1_x!",
+      "category": "exact",
+      "id": "test-exact-1",
+      "messages": [
+        {
+          "content": "Epersonexact1's label is E/Q-1_x!.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersonexact1's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Epersonexact1's label is E/Q-1_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Epersonexact1's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersonexact1's label is E/Q-1_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Epersonexact1's label? Reply only the exact label.\"\nassistant:\"E/Q-1_x!\"\n"
+    },
+    {
+      "answer": "E/Q-2_x!",
+      "category": "exact",
+      "id": "test-exact-2",
+      "messages": [
+        {
+          "content": "Epersonexact2's label is E/Q-2_x!.",
+          "role": "user"
+        },
+        {
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "content": "What is Epersonexact2's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"Epersonexact2's label is E/Q-2_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Epersonexact2's label? Reply only the exact label.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"Epersonexact2's label is E/Q-2_x!.\"\nassistant:\"Recorded.\"\nuser:\"What is Epersonexact2's label? Reply only the exact label.\"\nassistant:\"E/Q-2_x!\"\n"
+    },
+    {
+      "answer": "10",
+      "category": "math",
+      "id": "test-math-0",
+      "messages": [
+        {
+          "content": "For Epersonmath0, what is 5+5? Reply only the number.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"For Epersonmath0, what is 5+5? Reply only the number.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"For Epersonmath0, what is 5+5? Reply only the number.\"\nassistant:\"10\"\n"
+    },
+    {
+      "answer": "10",
+      "category": "math",
+      "id": "test-math-1",
+      "messages": [
+        {
+          "content": "For Epersonmath1, what is 5+5? Reply only the number.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"For Epersonmath1, what is 5+5? Reply only the number.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"For Epersonmath1, what is 5+5? Reply only the number.\"\nassistant:\"10\"\n"
+    },
+    {
+      "answer": "10",
+      "category": "math",
+      "id": "test-math-2",
+      "messages": [
+        {
+          "content": "For Epersonmath2, what is 5+5? Reply only the number.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"For Epersonmath2, what is 5+5? Reply only the number.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"For Epersonmath2, what is 5+5? Reply only the number.\"\nassistant:\"10\"\n"
+    },
+    {
+      "answer": "10",
+      "category": "refusal",
+      "id": "test-refusal-0",
+      "messages": [
+        {
+          "content": "open YouTube",
+          "role": "user"
+        },
+        {
+          "content": "I cannot access online content.",
+          "role": "assistant"
+        },
+        {
+          "content": "what is 5+5",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"what is 5+5\"\nassistant:",
+      "split": "test",
+      "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"what is 5+5\"\nassistant:\"10\"\n"
+    },
+    {
+      "answer": "10",
+      "category": "refusal",
+      "id": "test-refusal-1",
+      "messages": [
+        {
+          "content": "open YouTube",
+          "role": "user"
+        },
+        {
+          "content": "I cannot access online content.",
+          "role": "assistant"
+        },
+        {
+          "content": "For Epersonrefusal1, what is 5+5? Reply only the number.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Epersonrefusal1, what is 5+5? Reply only the number.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Epersonrefusal1, what is 5+5? Reply only the number.\"\nassistant:\"10\"\n"
+    },
+    {
+      "answer": "10",
+      "category": "refusal",
+      "id": "test-refusal-2",
+      "messages": [
+        {
+          "content": "open YouTube",
+          "role": "user"
+        },
+        {
+          "content": "I cannot access online content.",
+          "role": "assistant"
+        },
+        {
+          "content": "For Epersonrefusal2, what is 5+5? Reply only the number.",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Epersonrefusal2, what is 5+5? Reply only the number.\"\nassistant:",
+      "split": "test",
+      "text": "user:\"open YouTube\"\nassistant:\"I cannot access online content.\"\nuser:\"For Epersonrefusal2, what is 5+5? Reply only the number.\"\nassistant:\"10\"\n"
+    },
+    {
+      "answer": "10",
+      "category": "refusal",
+      "id": "test-observed-full-refusal",
+      "messages": [
+        {
+          "content": "hello",
+          "role": "user"
+        },
+        {
+          "content": "Hello! How can I help you today?",
+          "role": "assistant"
+        },
+        {
+          "content": "what are you?",
+          "role": "user"
+        },
+        {
+          "content": "I'm a chatbot designed to assist users with various topics.",
+          "role": "assistant"
+        },
+        {
+          "content": "i am JinSakai",
+          "role": "user"
+        },
+        {
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+          "role": "assistant"
+        },
+        {
+          "content": "open youtube",
+          "role": "user"
+        },
+        {
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+          "role": "assistant"
+        },
+        {
+          "content": "what is 5",
+          "role": "user"
+        },
+        {
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+          "role": "assistant"
+        },
+        {
+          "content": "what is 5+5",
+          "role": "user"
+        }
+      ],
+      "obsolete": "",
+      "prefix": "user:\"hello\"\nassistant:\"Hello! How can I help you today?\"\nuser:\"what are you?\"\nassistant:\"I'm a chatbot designed to assist users with various topics.\"\nuser:\"i am JinSakai\"\nassistant:\"I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.\"\nuser:\"open youtube\"\nassistant:\"I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.\"\nuser:\"what is 5\"\nassistant:\"I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.\"\nuser:\"what is 5+5\"\nassistant:",
+      "split": "test",
+      "text": "user:\"hello\"\nassistant:\"Hello! How can I help you today?\"\nuser:\"what are you?\"\nassistant:\"I'm a chatbot designed to assist users with various topics.\"\nuser:\"i am JinSakai\"\nassistant:\"I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.\"\nuser:\"open youtube\"\nassistant:\"I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.\"\nuser:\"what is 5\"\nassistant:\"I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.\"\nuser:\"what is 5+5\"\nassistant:\"10\"\n"
+    },
+    {
+      "accepted": [
+        "hello",
+        "hi",
+        "hey"
+      ],
+      "answer": "",
+      "category": "basic",
+      "id": "natural-hello",
+      "messages": [
+        {
+          "content": "Hello!",
+          "role": "user"
+        }
+      ]
+    }
+  ],
+  "repetition_history": [
+    {
+      "content": "hello",
+      "role": "user"
+    },
+    {
+      "content": "Hello! How can I help you today?",
+      "role": "assistant"
+    },
+    {
+      "content": "what are you?",
+      "role": "user"
+    },
+    {
+      "content": "I'm a chatbot designed to assist users with various topics.",
+      "role": "assistant"
+    },
+    {
+      "content": "i am JinSakai",
+      "role": "user"
+    },
+    {
+      "content": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to assist with specific queries or provide information about specific topics.",
+      "role": "assistant"
+    },
+    {
+      "content": "open youtube",
+      "role": "user"
+    },
+    {
+      "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+      "role": "assistant"
+    },
+    {
+      "content": "what is 5",
+      "role": "user"
+    },
+    {
+      "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+      "role": "assistant"
+    }
+  ],
+  "repetition_prompts": [
+    "what is 5+5",
+    "what is 5+5",
+    "what is 5+5"
+  ],
+  "scenarios": {
+    "arithmetic": {
+      "accepted": [
+        "5",
+        "five"
+      ],
+      "forbidden": [],
+      "prompts": [
+        "What is 2 + 3?"
+      ]
+    },
+    "capital": {
+      "accepted": [
+        "Paris"
+      ],
+      "forbidden": [
+        "London",
+        "Berlin"
+      ],
+      "prompts": [
+        "What is the capital of France?"
+      ]
+    },
+    "conflict": {
+      "accepted": [
+        "don't know",
+        "do not know",
+        "cannot determine",
+        "can't determine",
+        "unclear",
+        "conflicting",
+        "not enough information",
+        "can't say"
+      ],
+      "forbidden": [],
+      "prompts": [
+        "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?"
+      ],
+      "unsupported_case": true
+    },
+    "correction": {
+      "accepted": [
+        "green"
+      ],
+      "forbidden": [
+        "blue"
+      ],
+      "prompts": [
+        "My favorite color is blue.",
+        "Correction: my favorite color is green. What is my favorite color now?"
+      ]
+    },
+    "earlier_fact": {
+      "accepted": [
+        "CEDAR-27"
+      ],
+      "forbidden": [],
+      "prompts": [
+        "My bicycle lock code is CEDAR-27. Remember it for this conversation.",
+        "What is the capital of Japan?",
+        "What bicycle lock code did I give you earlier?"
+      ]
+    },
+    "explanation": {
+      "accepted": [
+        "photosynthesis",
+        "make food",
+        "produce food",
+        "energy"
+      ],
+      "forbidden": [],
+      "prompts": [
+        "In one sentence, what do plants use sunlight for?"
+      ]
+    },
+    "follow_up": {
+      "accepted": [
+        "Mira"
+      ],
+      "forbidden": [
+        "my name is",
+        "I'm Mira",
+        "I am Mira"
+      ],
+      "prompts": [
+        "My name is Mira.",
+        "What is my name?"
+      ]
+    },
+    "unknown": {
+      "accepted": [
+        "don't know",
+        "do not know",
+        "not provided",
+        "haven't provided",
+        "haven't told",
+        "do not have",
+        "don't have"
+      ],
+      "forbidden": [],
+      "prompts": [
+        "What is the name of my childhood teacher? I have not told you. If you don't know, say so."
+      ],
+      "unsupported_case": true
+    }
+  }
+}

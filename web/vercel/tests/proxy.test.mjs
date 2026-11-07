@@ -12,6 +12,22 @@ const request = (messages, budget = 16) => new Request('http://localhost/api/cha
 const user = [{role: 'user', content: 'hello'}];
 const metrics = {input_tokens: 20, selected_context_tokens: 16, output_tokens: 3, total_tokens: 19, response_ms: 4.5, backend: 'Toruk', model: 'toruk-ordinary-v1:test', backbone: 'Toruk ordinary byte LM', mode: 'BASELINE', memory_used: false, selected_message_ids: ['m0']};
 
+test('HTTP backend deadlines and busy responses retain actionable safe semantics', async () => {
+  const logger = {info(){}, error(){}};
+  const deadline = await chatResponse(request(user), {
+    env, logger, fetchImpl: async () => Response.json({error: 'private-deadline-detail'}, {status: 504}),
+  });
+  assert.equal(deadline.status, 504);
+  assert.match((await deadline.json()).error, /restart.*backend/i);
+  const busy = await chatResponse(request(user), {
+    env, logger, fetchImpl: async () => Response.json({error_code: 'INFERENCE_BUSY', error: 'private-busy-detail'}, {status: 503}),
+  });
+  assert.equal(busy.status, 503);
+  const body = await busy.json();
+  assert.match(body.error, /busy.*retry/i);
+  assert.doesNotMatch(body.error, /private-/);
+});
+
 test('long conversations fail visibly instead of silently dropping the earliest turns', async () => {
   let history = [];
   for (let i = 0; i < 10; i++) history = completedMessages(pendingMessages(history, `question ${i}`), `answer ${i}`);
