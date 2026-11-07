@@ -165,6 +165,36 @@ The experiment is outside routine CI; unit tests cover intervention equivalence,
 gap/length matching, unchanged weights and phase guards. No broad accuracy or
 full-system efficiency claim follows from this failed fixed-format probe.
 
+## Adversarial counterfactual-twin review
+
+The [registered challenge](research/adversarial-twins-v1-protocol.md) freezes all
+models and tests two equal-length source values in otherwise identical prompts.
+It reports exact generated answers separately from offline value likelihood.
+The primary both-arms-correct gate failed at both fitted seeds; no mechanism was
+changed after development or heldout evaluation. This full challenge is outside CI.
+
+After the environment and optional parent reconstruction described above, use
+fresh names in PowerShell and check each native exit code with `Need-Zero`:
+
+```powershell
+$py = (Resolve-Path '.readiness/Device Env/Scripts/python.exe').Path
+$parent = '.readiness/Parent Primary'
+$review = '.readiness/Adversarial Twins'
+$checks = '.readiness/Adversarial Checks'
+& $py scripts/check.py --output-dir $checks freeze -- $py scripts/adversarial_twins.py freeze --package $review --parent $parent; Need-Zero
+& $py scripts/check.py --timeout 255 --output-dir $checks dev -- $py scripts/adversarial_twins.py run --package $review --phase dev; Need-Zero
+& $py scripts/check.py --timeout 255 --output-dir $checks heldout -- $py scripts/adversarial_twins.py run --package $review --phase heldout; Need-Zero
+& $py scripts/adversarial_twins.py audit --package $review --phase heldout; Need-Zero
+```
+
+Registration seals protocol, code, datasets and parent checkpoints after the
+original reproduction validator passes. Each phase has a 240-second cap and
+cannot be restarted after it begins. A zero exit code means execution/integrity,
+not scientific success. Inspect `heldout/results.json` and the prespecified
+`quality_passed` / `joint_passed` fields. Raw replies, both candidate likelihoods,
+generation/scoring work and fresh worker/monitoring costs are retained. Process-tree
+RSS is sampled every 20 ms, not a guaranteed physical-memory high-water mark.
+
 ## Historical foundation handoff
 
 There are two different targets: **a clean-checkout execution smoke** that needs

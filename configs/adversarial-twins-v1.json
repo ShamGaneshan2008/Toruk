@@ -1,0 +1,21 @@
+{
+  "schema": "toruk-adversarial-twins-v1",
+  "seeds": [31, 47],
+  "methods": ["memory_on", "query_read_off", "ordinary", "ordinary_matched"],
+  "dev": {"seed": 11801, "worlds_per_kind": 2, "unknown_worlds": 2},
+  "heldout": {"seed": 13801, "worlds_per_kind": 10, "unknown_worlds": 4},
+  "max_new_tokens": 16,
+  "phase_seconds": 240,
+  "sample_interval_seconds": 0.02,
+  "primary_method": "memory_on",
+  "primary_metric": "Both counterfactual colour-twin answers exactly correct at distant placement; compare to parameter-matched ordinary separately at each fitted seed",
+  "min_pair_accuracy": 0.50,
+  "min_pair_gain": 0.10,
+  "max_local_accuracy_drop": 0.05,
+  "max_extra_unknown_assertions": 0,
+  "cost_max_cpu_ratio": 0.95,
+  "cost_max_wall_ratio": 0.95,
+  "cost_max_sampled_tree_rss_ratio": 1.0,
+  "preference_margin": 0.000001,
+  "scope": "One new heldout counterfactual-input challenge. Frozen models and decoder; complete-line native-format prompts. Conditional likelihood is secondary offline scoring, never a generated-answer fallback. Full evaluation cost includes imports, scoring, logging and monitoring."
+}

@@ -116,6 +116,13 @@ All controls also failed this fixed-format diagnostic; it does not establish a
 distance effect or general inability to copy. The [reproduction path](docs/reproducibility.md#copy-gap-query-read-gate-experiment)
 keeps this research intervention separate from chat defaults.
 
+An [adversarial counterfactual-twin challenge](docs/research/adversarial-twins-v1-protocol.md)
+kept all models frozen. Memory-on scored 20/176 individual answers versus the
+matched control's 15/176, but both scored 0/10 distant colour pairs at each fitted
+seed when both swapped facts had to be answered correctly. Memory-on also used
+more recorded CPU and wall time. The central memory/efficiency claim remains
+unsupported; single-answer counts alone do not establish evidence-dependent recall.
+
 ### Experimental local chat page
 
 For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md).
