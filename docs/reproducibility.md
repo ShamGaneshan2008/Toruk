@@ -99,6 +99,72 @@ whose path contains spaces. Neither job trains the primary 256-step study.
 Local runs do not establish that these uncommitted workflow edits passed hosted CI.
 The separate internal execution record is `docs/internal/two-device-reproduction.md`.
 
+## Research claim closure audit
+
+The optional `scripts/research_claim_closure.py` binds the published primary
+study, regenerates its evidence using the existing driver, validates raw outputs,
+and reports its negative joint-claim verdict. It adds paired question-block
+bootstrap intervals and descriptive length bins as explicitly posthoc analyses.
+It does not create independent test data or change the original scoring gate.
+
+After environment setup above, use fresh output names:
+
+```powershell
+$py = (Resolve-Path '.readiness/Device Env/Scripts/python.exe').Path
+$package = '.readiness/Claim Closure'
+& $py scripts/research_claim_closure.py freeze --package $package; Need-Zero
+& $py scripts/check.py --timeout 630 --output-dir "$package/checks" reproduce -- $py scripts/study_owned_lm.py --config configs/owned-lm-primary-v1.json --output "$package/primary"; Need-Zero
+& $py scripts/check.py --output-dir "$package/checks" analyze -- $py scripts/research_claim_closure.py analyze --package $package --run "$package/primary"; Need-Zero
+```
+
+`registration.json` binds inputs before regeneration. `analysis/results.json`
+contains gates, checkpoint identities, costs, coverage gaps and uncertainty;
+`analysis/per-case.jsonl` and `.csv` retain every regenerated answer and work
+counter. A positive-looking subgroup cannot override the original failed gate.
+No hosted CI job runs this full primary regeneration; routine tests cover the
+audit's pairing and integrity checks. The broader source/metric limitations
+and two-device qualification limits above still apply.
+
+## Copy-gap query-read-gate experiment
+
+The [frozen protocol](research/copy-gap-v1-protocol.md) defines a single inference
+intervention, unchanged frozen weights and matched evidence gaps. Its registered
+quality gate failed: local exact copying was 0/12 per fitted seed with and without
+the gate. All ordinary controls also failed. No heldout-driven second mechanism
+was attempted. The experiment adds no model training or external backbone.
+
+With the environment above installed, use fresh names in PowerShell. If the
+original parent weights are missing, the first command reconstructs them with
+the unchanged, separately bounded primary study. Existing validated parents can
+be supplied directly to `freeze` instead; no undocumented checkpoint is needed.
+
+```powershell
+$py = (Resolve-Path '.readiness/Device Env/Scripts/python.exe').Path
+$checks = '.readiness/Copy Gap Checks'
+$parent = '.readiness/Parent Primary'
+$probe = '.readiness/Copy Gap'
+# Optional prerequisite reconstruction; omit only when using a validated parent.
+& $py scripts/check.py --timeout 630 --output-dir $checks parent -- $py scripts/study_owned_lm.py --config configs/owned-lm-primary-v1.json --output $parent; Need-Zero
+& $py scripts/check.py --output-dir $checks freeze -- $py scripts/copy_gap_probe.py freeze --package $probe --parent $parent; Need-Zero
+& $py scripts/check.py --timeout 195 --output-dir $checks dev -- $py scripts/copy_gap_probe.py run --package $probe --phase dev; Need-Zero
+& $py scripts/check.py --timeout 195 --output-dir $checks heldout -- $py scripts/copy_gap_probe.py run --package $probe --phase heldout; Need-Zero
+& $py scripts/copy_gap_probe.py audit --package $probe --phase heldout; Need-Zero
+```
+
+`freeze` verifies the parent against the versioned reproduction contract and seals
+new config/source/checkpoint/dataset hashes before inference. `dev` and `heldout`
+have independent 180-second caps, including eight fresh method/seed processes per
+phase. A started phase cannot be retried. Keep partial failures rather than
+overwriting them. Development quality cannot change thresholds or mechanism.
+The final test is a single pass; `audit` only rechecks saved evidence.
+
+Each phase saves eight raw JSONL files, process/resource logs, commands,
+`results.json` and `complete.json`. An exit code of zero means successful execution
+and integrity checks; inspect `results.json.passed` for the scientific decision.
+The experiment is outside routine CI; unit tests cover intervention equivalence,
+gap/length matching, unchanged weights and phase guards. No broad accuracy or
+full-system efficiency claim follows from this failed fixed-format probe.
+
 ## Historical foundation handoff
 
 There are two different targets: **a clean-checkout execution smoke** that needs

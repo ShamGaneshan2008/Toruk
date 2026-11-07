@@ -1,0 +1,16 @@
+{
+  "schema": "toruk-claim-closure-v1",
+  "study_config": "configs/owned-lm-primary-v1.json",
+  "reference": "artifacts/owned-lm-v1-20261104/primary",
+  "reproduction_contract": "configs/owned-reproduction-v1.json",
+  "scope": "Posthoc closure of an already published synthetic IID study; not new blind validation",
+  "bootstrap_seed": 741,
+  "bootstrap_resamples": 10000,
+  "bootstrap_unit": "48 matched question IDs, carrying both training seeds together",
+  "prefix_token_upper_bounds": [128, 160, 192, 256, 384],
+  "length_analysis": "Exploratory descriptive bins of existing cases, not a controlled length sweep",
+  "primary_quality_gate": "All numerical conditions in owned-lm-v1-design.md must pass at both seeds",
+  "closure_gate": "A positive joint claim also requires a positive paired quality interval and full-system cost evidence against the parameter-matched control; shorter prompts or state tensor bounds alone are insufficient",
+  "untested_categories": ["gist recall", "vague references"],
+  "new_inference_conditions": "None: exactly one regeneration of the frozen primary study"
+}

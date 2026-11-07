@@ -103,6 +103,19 @@ It regenerates Toruk-owned model checkpoints and synthetic data from versioned c
 then validates raw answers against the recorded negative result. Fast CPU smoke
 checks are separate from the full bounded study; no local checkpoint is required.
 
+The research claim closure reproduced all 768 owned-LM answers from that study.
+Memory-on scores 17/96 versus the parameter-matched control's 15/96, but has
+worse byte loss and higher measured training and generation time; its paired
+accuracy interval includes zero. A joint long-context quality and total-efficiency
+advantage is **not supported**. See the [closure reproduction commands](docs/reproducibility.md#research-claim-closure-audit).
+
+The [copy-gap follow-up](docs/research/copy-gap-v1-protocol.md) tested one
+inference-only query/answer memory-read gate with frozen checkpoints. Local exact
+copying remained 0/12 at each fitted seed, and the registered gate failed.
+All controls also failed this fixed-format diagnostic; it does not establish a
+distance effect or general inability to copy. The [reproduction path](docs/reproducibility.md#copy-gap-query-read-gate-experiment)
+keeps this research intervention separate from chat defaults.
+
 ### Experimental local chat page
 
 For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md).

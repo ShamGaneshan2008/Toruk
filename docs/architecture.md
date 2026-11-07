@@ -42,6 +42,20 @@ resume, evaluation and generation; `owned_data.py` supplies versioned IID synthe
 documents. The unchanged `recurrent.py` core is reused, not a new memory algorithm.
 No pretrained backbone, selector or symbolic evidence parser participates here.
 
+The claim-closure replay preserves all 768 owned-study answers and its failed
+numerical criterion. The 512-byte recurrent tensor is an architectural state
+bound, not a bound on process memory or an efficiency result. Read/update
+ablations affect loss, but the matched ordinary control has lower NLL and lower
+measured generation cost. Gist/reference capability and a controlled length
+capacity curve have not been established for this owned model.
+
+`copy_diagnostic.py` adds a research-only two-phase wrapper around the unchanged
+owned checkpoint/session. Its one query-read gate disables memory reads in the
+query-containing segment and answer decoding, while retaining history processing
+and writer operations. Paired history-state hashes and reader-call counters
+verify the intervention. The [registered probe](research/copy-gap-v1-protocol.md)
+failed its exact-copy quality gate; this wrapper is not wired into chat or training.
+
 `conversation_data.py` is an offline data-readiness prerequisite, not a trained
 chat adapter. Its versioned JSON role-line format escapes newlines inside content,
 uses explicit alternating turns and an `assistant:` generation prefix. Each

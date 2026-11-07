@@ -1,0 +1,24 @@
+{
+  "schema": "toruk-copy-gap-probe-v1",
+  "parent_config": "configs/owned-lm-primary-v1.json",
+  "parent_reference": "artifacts/owned-lm-v1-20261104/primary",
+  "seeds": [31, 47],
+  "methods": ["memory_on", "query_read_off", "ordinary", "ordinary_matched"],
+  "gaps": [0, 32, 64, 128, 256],
+  "prefix_bytes": 351,
+  "max_new_tokens": 16,
+  "dev": {"seed": 8151, "worlds_per_kind": 4},
+  "heldout": {"seed": 9151, "worlds_per_kind": 12},
+  "phase_seconds": 180,
+  "hypothesis": "Memory read interference in the query-containing segment and answer decoding contributes to basic copying failure; disabling only those reads improves local exact copying without sacrificing distant recall or abstention.",
+  "primary": "local gap=0 exact-string accuracy, query_read_off minus unchanged memory_on, at EACH fitted seed",
+  "criteria": {
+    "local_exact_min_gain": 0.10,
+    "local_exact_min_accuracy": 0.50,
+    "distant_known_max_accuracy_drop": 0.05,
+    "local_value_max_accuracy_drop": 0.05,
+    "unknown_max_extra_false_assertions": 0,
+    "max_forward_position_ratio": 1.05
+  },
+  "scope": "One inference-only mechanism change; fixed weights, no fitting, no new blind population claim. Dev checks execution only. Heldout runs once even if dev quality is poor. Input history, total length and decode budgets are matched."
+}
