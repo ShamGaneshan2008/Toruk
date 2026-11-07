@@ -1,0 +1,43 @@
+{
+  "schema": "toruk-owned-reproduction-v1",
+  "configs": {
+    "primary": "98cefd6164a9d2f58c9234a31bc12046ca9cead3f9eb455a8167c5fa3b9905d6",
+    "smoke": "40697d516f0c545d92e775b36f4b8434c2d28984b345d66ce94fe3248a7ad138"
+  },
+  "runtime": {
+    "owned_lm.py": "290c88f4d654f78e57184d8137ae5b80d51ce0c6e26d3671bce8cec194e375f6",
+    "owned_data.py": "5f39c8c455928ef3ff1e7b4a2811ad182dfcfc4c7b92c8550f4bccc497b63a44",
+    "owned_training.py": "5c4e51f280fcc496fb709c62f8424448fa3e6b1776b593cde15e98e306c7dd26",
+    "model.py": "df9266dc010064fbd6dde9727247312c1c9a177d609c5ea7fee7100602bfe673",
+    "recurrent.py": "44700d91ada2496b0c63966d09b6ecb2d557510138d6d7849bd84da71bb5d47c",
+    "engine.py": "daff977dd7fa49d54d852b3a28c72a41bc5bf9a0c844dc9f517e5b8b26a6bc61",
+    "tokenizer.py": "e22977465d986dadb601095eeae1aa55f74eedd39897de0a6d52657c863f1434"
+  },
+  "sources": {
+    "scripts/study_owned_lm.py": "0f428861d9708873d1ae8fd1dc6b1aaf31c6fb1645149179a79117e01815f4d3",
+    "docs/research/owned-lm-v1-design.md": "06e9f282ef9ef5d552741fd7cc670b93972f54c57f12b746c82eb4f50633f4e0"
+  },
+  "tolerances": {
+    "rel_tol": 1e-05,
+    "abs_tol": 1e-05
+  },
+  "reference_files": {
+    "heldout/31-memory_off-full.json": "4591caeedddf78f26b8b5c04ba7729bb40cf6dfcf364f60b486f0a7b0084114c",
+    "heldout/31-memory_on-full.json": "797a7797c26405ff93e2176ecddce5115294842e61c69844c0d913b116525635",
+    "heldout/31-memory_on-no_read.json": "c098dfeb1d67982ffb79f31269d7c71e23cc80d3738c1731b9650d0b43bf75cb",
+    "heldout/31-memory_on-no_update.json": "1ef738946262dc9206cac5e24409da10653f49243fef141ff7277083b39e56a5",
+    "heldout/31-ordinary-full.json": "6e92ebf0912b4a7912297c264c2b241f8b53af253d9c4bf9fd5d64b3c219d269",
+    "heldout/31-ordinary-rolling.json": "fe0a931cd98ac22e3f07771a2d70dab69f642a9bf38be136b138673ef9b07e39",
+    "heldout/31-ordinary_matched-full.json": "8f9d8a311846877b16900eb536d2644f54e10803ed9763abff9c148bf53ba7f9",
+    "heldout/31-ordinary_matched-rolling.json": "37a3f52e3f5b810804ace24b260734e19104b6f1e3baa7a97cf13ea56319b932",
+    "heldout/47-memory_off-full.json": "995dce4034408b095efc58bdb1868ed03049df00d4d8b74e9d7c42d38ab464f2",
+    "heldout/47-memory_on-full.json": "1ddc40aeb05da2ec65cb7e374afddb32e03b1092d057baf413756380de053e5d",
+    "heldout/47-memory_on-no_read.json": "5cd193d344b81900e41663d537d924da05ce909a932abd4f82b9a4c88646bbb1",
+    "heldout/47-memory_on-no_update.json": "7f8b73dcc88a9c621b6109932cef326cbfa487903203756010bd487bd666888b",
+    "heldout/47-ordinary-full.json": "f18a42b38473e781abf9517bab22e38f2b96ae8e1541c163253fd27694d37b4e",
+    "heldout/47-ordinary-rolling.json": "9462728eb0a3abb6202f1b5736dbb4b0718c43b6f9b49ae63532b28f5306d909",
+    "heldout/47-ordinary_matched-full.json": "54e7616b41e55d873c4bada317fd662d6a7c2dd9a543582bbee8085e2d2db326",
+    "heldout/47-ordinary_matched-rolling.json": "a0705064afe2a005f654da1e6c391c7524b888e6ff056669238b3b3a189ec2cc"
+  },
+  "policy": "Raw IDs, answers, scores, data, model architecture, protocol and deterministic work must match exactly. Only NLL and per-document loss allow numerical tolerance; time and RSS are observations. Tolerance is an engineering acceptance bound, not validated across both user devices."
+}

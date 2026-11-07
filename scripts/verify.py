@@ -49,6 +49,13 @@ def main():
             "--output",
             str(options.output_dir.resolve() / "owned-lm-smoke"),
         ],
+        "owned-lm-validate": [
+            "scripts/validate_owned_reproduction.py",
+            "--config",
+            "configs/owned-lm-smoke-v1.json",
+            "--run",
+            str(options.output_dir.resolve() / "owned-lm-smoke"),
+        ],
         "conversation-data": [
             "scripts/conversation_readiness.py",
             "validate",

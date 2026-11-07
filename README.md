@@ -98,6 +98,11 @@ For local checks, install Node.js 22 or later and `python -m pip install -e ".[d
 then run `python scripts/verify.py`. This runs both the web and Python CI checks;
 missing Node/npm or a failed web check makes verification fail.
 
+For a completed research target, use the [two-device PowerShell reproduction path](docs/reproducibility.md#selected-completed-experiment-owned-next-token-lm-v1).
+It regenerates Toruk-owned model checkpoints and synthetic data from versioned configs,
+then validates raw answers against the recorded negative result. Fast CPU smoke
+checks are separate from the full bounded study; no local checkpoint is required.
+
 ### Experimental local chat page
 
 For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md).

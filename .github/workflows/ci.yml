@@ -44,6 +44,7 @@ jobs:
       - run: python scripts/conversation_readiness.py validate --output artifacts/ci-conversation-data
       # Bounded from-scratch next-token train/resume/eval/ablation; no chat weights.
       - run: python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output artifacts/ci-owned-lm
+      - run: python scripts/validate_owned_reproduction.py --config configs/owned-lm-smoke-v1.json --run artifacts/ci-owned-lm
       - run: python -m toruk_lm.owned_lm generate --checkpoint artifacts/ci-owned-lm/models/23-memory_on/checkpoint.pt --prompt "Experimental CPU smoke" --max-new-tokens 4
       - run: python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke
       - run: python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt
@@ -51,3 +52,22 @@ jobs:
       - run: python -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json
       - run: python -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke
       - run: python -m build --no-isolation
+  windows-reproduction:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: checkout with spaces
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: checkout with spaces
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install .
+      # Fresh data/weights, small CPU model only; full 256-step research stays opt-in.
+      - run: python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output 'artifacts/owned smoke'
+      - run: python scripts/validate_owned_reproduction.py --config configs/owned-lm-smoke-v1.json --run 'artifacts/owned smoke'

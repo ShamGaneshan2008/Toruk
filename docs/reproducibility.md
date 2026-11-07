@@ -1,5 +1,106 @@
 # Reproducibility handoff
 
+## Selected completed experiment: owned next-token LM v1
+
+The current two-device target is the [completed owned-LM study](research/owned-lm-v1-results.md),
+not the historical M6 replay described later. Its claim is negative: on 48 synthetic
+IID held-out questions at seeds 31 and 47, memory-on scored 17/96 versus ordinary
+14/96 and parameter-matched ordinary 15/96. The predeclared accuracy/efficiency
+criterion failed. Regeneration does not create a new independent test set.
+
+Use `configs/owned-lm-primary-v1.json`: 192/24/48 train/dev/held-out documents,
+generator seeds 3201/4201/5201, eight fits of 256 steps, float32, one CPU thread,
+32 local positions and four memory slots. No external backbone, downloaded
+checkpoint, private transcript, CUDA device, or machine-specific directory is
+required. The run creates all eight `toruk-owned-next-token-v1` checkpoints below
+its own output directory. The 512-byte recurrent state is not total process RAM.
+It also runs a two-step training profile and a separate partial/resumed fit.
+
+Prerequisites: Git, 64-bit Python 3.12, Node.js 22+ for the broader verification,
+network access for installing dependencies, and local disk for CPU PyTorch and
+generated artifacts. The recorded runtime is Python 3.12.14 / Torch 2.14.1+cpu;
+the Torch pin is in `configs/owned-reproduction-requirements-v1.txt`. Other Python,
+Torch, OS and CPU combinations are unqualified until they pass the validator.
+The original primary run took 80.26 s; the config enforces a 600-second study
+budget. A slower device may exhaust that budget and must report failure. Do not
+increase the registered budget silently. Allow several GB for environment setup;
+this is planning headroom, not a measured minimum. No GPU or paid job is needed.
+
+From the repository root in **each device's fresh checkout**, use these PowerShell
+commands. The environment and output paths deliberately contain spaces. Choose
+fresh names on a repeat; preserve previous evidence. `Need-Zero` checks native
+exit codes because PowerShell does not automatically stop on them.
+
+```powershell
+$ErrorActionPreference = 'Stop'
+function Need-Zero { if ($LASTEXITCODE -ne 0) { throw "Command failed: $LASTEXITCODE" } }
+git branch --show-current; Need-Zero
+git rev-parse HEAD; Need-Zero
+git status --short; Need-Zero
+python -m venv '.readiness/Device Env'; Need-Zero
+$python = (Resolve-Path '.readiness/Device Env/Scripts/python.exe').Path
+& $python -m pip install 'setuptools==78.1.0'; Need-Zero
+& $python -m pip install -r configs/owned-reproduction-requirements-v1.txt --index-url https://download.pytorch.org/whl/cpu; Need-Zero
+& $python -m pip install --no-build-isolation -e '.[dev,chat]'; Need-Zero
+& $python -m pip check; Need-Zero
+& $python -m toruk_lm diagnose; Need-Zero
+& $python -m pip freeze | Out-File -Encoding utf8 '.readiness/device-environment.txt'
+
+# Fast execution/validation check: not a research-quality result.
+& $python scripts/check.py --timeout 90 --output-dir '.readiness/Device Checks' smoke -- $python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output '.readiness/Owned Smoke'; Need-Zero
+& $python scripts/check.py --output-dir '.readiness/Device Checks' smoke-validate -- $python scripts/validate_owned_reproduction.py --config configs/owned-lm-smoke-v1.json --run '.readiness/Owned Smoke'; Need-Zero
+
+# Full registered research run: bounded, opt-in, and separate from routine CI.
+& $python scripts/check.py --timeout 630 --output-dir '.readiness/Device Checks' primary -- $python scripts/study_owned_lm.py --config configs/owned-lm-primary-v1.json --output '.readiness/Owned Primary'; Need-Zero
+& $python scripts/check.py --output-dir '.readiness/Device Checks' primary-validate -- $python scripts/validate_owned_reproduction.py --config configs/owned-lm-primary-v1.json --run '.readiness/Owned Primary' --reference artifacts/owned-lm-v1-20261104/primary; Need-Zero
+& $python scripts/report_owned_lm.py --run '.readiness/Owned Primary'; Need-Zero
+Get-Content '.readiness/Owned Primary/table.md'
+
+# Full engineering verification includes Python, Node and HTTP integration.
+& $python scripts/verify.py --output-dir '.readiness/Device Verification'; Need-Zero
+git diff --check; Need-Zero
+```
+
+Expected primary outputs: `registration.json`, `data/{manifest,train,dev,heldout}.json`,
+eight `models/<seed>-<variant>/checkpoint.pt` plus training metadata,
+`freeze.json`, sixteen `heldout/*.json` files with 768 raw answers, `summary.json`,
+and the report's `table.md`, `aggregates.json`, `failed-cases.json`.
+`summary.criterion.passed` must remain false for reproduction of the recorded
+negative result; successful execution does not imply scientific success.
+
+The validator uses `configs/owned-reproduction-v1.json`. It checks canonical
+dataset hashes against regeneration, normalized-LF source identities, the exact
+study config, local checkpoint SHA256 and training lineage, protocol/model/mode,
+token decoding, scoring, summary consistency and the original numerical criterion.
+For the primary run it also checks the sealed tracked raw reference files. The
+reference needs **no historical checkpoint**. New checkpoint serialization bytes
+need not equal historical bytes; each new evaluation must bind its own weights.
+Raw generated IDs, answers, category scores and deterministic work must match
+exactly. NLL and per-document loss permit `abs_tol=1e-5, rel_tol=1e-5`; same-run
+rescoring uses `abs_tol=1e-12`. These are conservative engineering bounds,
+not a measured cross-device numerical guarantee. A token change fails even if
+aggregate accuracy ties. Time, CPU time and RSS are reported without equality
+gates. Never widen tolerances or edit reference answers to force a pass.
+LF/CRLF text conversion is accepted for config/driver bindings; other byte changes
+are rejected. Canonical JSON hashing keeps the recorded reference portable.
+
+All three datasets are generated by `owned_data.py` from authored synthetic
+templates, with canonical JSON hashes recorded in registration. The full split
+hashes are listed in the completed-study report. No third-party text corpus or
+pretrained model license enters this experiment. This repository has no LICENSE
+file; no permission for external redistribution is established by this guide.
+Torch and its dependencies retain their own installed distribution notices.
+Generated `.pt` files under `artifacts/` and everything in `.readiness/` are ignored;
+review `git status` before sharing anything. No original weights need distribution.
+
+Routine Linux CI runs the small owned study and the new validator alongside
+existing Python/Node checks. A Windows job runs the same smoke from a checkout
+whose path contains spaces. Neither job trains the primary 256-step study.
+Local runs do not establish that these uncommitted workflow edits passed hosted CI.
+The separate internal execution record is `docs/internal/two-device-reproduction.md`.
+
+## Historical foundation handoff
+
 There are two different targets: **a clean-checkout execution smoke** that needs
 no owner artifacts, and **historical research replay** that needs original weights
 and matching archived source. Passing the smoke does not establish useful memory,
