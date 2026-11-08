@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "BASELINE": {
+      "n": 20,
+      "quality": 6,
+      "factual_correct": 4,
+      "correction_correct": 1,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1818,
+      "selected_tokens": 1818,
+      "output_tokens": 254,
+      "total_tokens": 2072,
+      "latency_ms": 15259.708,
+      "memory_used_cases": 0
+    },
+    "TORUK": {
+      "n": 20,
+      "quality": 6,
+      "factual_correct": 4,
+      "correction_correct": 1,
+      "unsupported_answers": 3,
+      "failures": 0,
+      "input_tokens": 1818,
+      "selected_tokens": 1546,
+      "output_tokens": 278,
+      "total_tokens": 1824,
+      "latency_ms": 15552.248,
+      "memory_used_cases": 13
+    }
+  },
+  "selector_prerequisite": {
+    "path": "artifacts\\m6-validation-001\\recurrent\\checkpoint.pt",
+    "expected_sha256": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+    "present": false,
+    "identity_matches": false
+  }
+}

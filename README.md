@@ -162,6 +162,12 @@ For a static Vercel Hobby chat page with a separate protected Toruk inference ho
 
 The optional [conversational foundation](docs/chat-foundation.md) adds an explicitly labeled pretrained instruct backbone and an experimental Toruk recurrent context selector. Its fixed local evaluation found no verified chat-memory or token-efficiency benefit.
 
+The [8 November core-advantage audit](docs/research/core-advantage-20261108.md)
+reproduces all 20 historical SmolLM BASELINE answers and rescores the saved
+6/20-per-mode result. Fresh historical TORUK inference remains blocked by its
+missing M6 selector checkpoint. The 14.96% selected-prompt saving is not a
+measurement of complete-system computational savings; no improvement is claimed.
+
 The same local page can also use a digest-pinned Ollama Llama 3.2 3B backbone on a 4 GiB GPU. See the [Windows startup commands](docs/chat-foundation.md#local-ollama-backbone-on-a-small-gpu) and [separate exploratory comparison](docs/research/local-backbone-llama32-20261101.md). The pretrained model supplies its language ability; Toruk's selectors only choose prompt turns.
 
 A separately trained [Toruk chat selector v1](docs/research/chat-selector-v1-results.md) now ranks earlier turns using supervised evidence labels. It improves a narrow synthetic held-out comparison against recent-turn context, but fails an existing vault-code paraphrase. It does not train the conversational backbone or establish general semantic memory.

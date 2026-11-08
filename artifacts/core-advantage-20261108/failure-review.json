@@ -1,0 +1,1746 @@
+{
+  "scope": "Offline interpretive review; labels do not establish internal model causality.",
+  "historical_failure_counts_per_mode": {
+    "BASELINE": {
+      "evidence present but generator failed": 12,
+      "stale fact used": 1,
+      "unsupported question answered as fact": 1
+    },
+    "TORUK": {
+      "evidence present but generator failed": 12,
+      "stale fact used": 1,
+      "unsupported question answered as fact": 1
+    }
+  },
+  "historical_wrong_rows": [
+    {
+      "id": "instruction_digit",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Digit is correct but extra prose violates exact-output instruction.",
+      "answer": "The digit seven is 7.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Return only the digit seven, with no explanation."
+        }
+      ]
+    },
+    {
+      "id": "instruction_digit",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Digit is correct but extra prose violates exact-output instruction.",
+      "answer": "The digit seven is 7.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Return only the digit seven, with no explanation."
+        }
+      ]
+    },
+    {
+      "id": "reference_nickname",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Name-bearing m0 retained; refusal does not establish a coreference error.",
+      "answer": "I'm sorry for any confusion, but as a painting assistant, I don't have the ability to name you.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Please call me Nila in this conversation."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "All right."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am learning to paint landscapes."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "That sounds interesting."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What name did I ask you to call me?"
+        }
+      ]
+    },
+    {
+      "id": "reference_nickname",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Name-bearing m0 retained; refusal does not establish a coreference error.",
+      "answer": "I'm sorry for any confusion, but as a painting assistant, I don't have the ability to name you.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Please call me Nila in this conversation."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "All right."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am learning to paint landscapes."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "That sounds interesting."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What name did I ask you to call me?"
+        }
+      ]
+    },
+    {
+      "id": "reference_codename",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "ORBIT-bearing m0 retained; copies assistant acknowledgement instead.",
+      "answer": "I noted the codename.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The codename for my bicycle is ORBIT."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted the codename."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "It has a silver bell."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "A silver bell is useful."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What codename did I give it?"
+        }
+      ]
+    },
+    {
+      "id": "reference_codename",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "ORBIT-bearing m0 retained; copies assistant acknowledgement instead.",
+      "answer": "I noted the codename.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The codename for my bicycle is ORBIT."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted the codename."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "It has a silver bell."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "A silver bell is useful."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What codename did I give it?"
+        }
+      ]
+    },
+    {
+      "id": "user_fact_drink",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Mint-tea evidence retained; cold-drink preference is unsupported.",
+      "answer": "I noted that you prefer a cold drink.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My preferred drink is mint tea."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted your drink."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I also like hiking on weekends."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I noted that too."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What drink do I prefer?"
+        }
+      ]
+    },
+    {
+      "id": "user_fact_drink",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Mint-tea evidence retained; cold-drink preference is unsupported.",
+      "answer": "I noted that you prefer a cold drink.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My preferred drink is mint tea."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted your drink."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I also like hiking on weekends."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I noted that too."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What drink do I prefer?"
+        }
+      ]
+    },
+    {
+      "id": "user_fact_pet",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Pippa-bearing m0 retained; internet-access refusal is irrelevant.",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have real-time access to the internet. I'm here to assist with your",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My dog's name is Pippa."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted the name."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "She likes to run in the park."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "That sounds fun."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What is my dog's name?"
+        }
+      ]
+    },
+    {
+      "id": "user_fact_pet",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Pippa-bearing m0 retained; internet-access refusal is irrelevant.",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have real-time access to the internet. I'm here to assist with your",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My dog's name is Pippa."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted the name."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "She likes to run in the park."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "That sounds fun."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What is my dog's name?"
+        }
+      ]
+    },
+    {
+      "id": "correction_day",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m2"
+      ],
+      "notes": "Thursday correction m2 retained; acknowledgement is not an answer.",
+      "answer": "I will use the corrected day.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Our meeting is on Tuesday."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted Tuesday."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Correction: the meeting moved to Thursday, not Tuesday."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I will use the corrected day."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Which day is the meeting now?"
+        }
+      ]
+    },
+    {
+      "id": "correction_day",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m2"
+      ],
+      "notes": "Thursday correction m2 retained; acknowledgement is not an answer.",
+      "answer": "I will use the corrected day.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Our meeting is on Tuesday."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted Tuesday."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Correction: the meeting moved to Thursday, not Tuesday."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I will use the corrected day."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Which day is the meeting now?"
+        }
+      ]
+    },
+    {
+      "id": "preserve_city",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Quito-bearing m0 retained; acknowledgement omits the city.",
+      "answer": "I provided the city name.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My travel city is Quito, and my favorite fruit is mango."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted both facts."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Correction: my favorite fruit is papaya."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I updated the fruit."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Which city am I traveling to?"
+        }
+      ]
+    },
+    {
+      "id": "preserve_city",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "Quito-bearing m0 retained; acknowledgement omits the city.",
+      "answer": "I provided the city name.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My travel city is Quito, and my favorite fruit is mango."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted both facts."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Correction: my favorite fruit is papaya."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I updated the fruit."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Which city am I traveling to?"
+        }
+      ]
+    },
+    {
+      "id": "preserve_hobby",
+      "mode": "BASELINE",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0",
+        "m2"
+      ],
+      "notes": "Chess is correct, but appends obsolete Monday despite Friday in m2.",
+      "answer": "My hobby is playing chess. The deadline is Monday.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My hobby is chess. The deadline is Monday."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Both details are noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "The deadline changed to Friday."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I noted the new deadline."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What is my hobby?"
+        }
+      ]
+    },
+    {
+      "id": "preserve_hobby",
+      "mode": "TORUK",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0",
+        "m2"
+      ],
+      "notes": "Chess is correct, but appends obsolete Monday despite Friday in m2.",
+      "answer": "My hobby is playing chess. The deadline is Monday.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My hobby is chess. The deadline is Monday."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Both details are noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "The deadline changed to Friday."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "I noted the new deadline."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "What is my hobby?"
+        }
+      ]
+    },
+    {
+      "id": "long_key",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "CEDAR-19-bearing m0 retained in both modes; acknowledgement omits key.",
+      "answer": "I noted the archive key.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The archive key for this conversation is CEDAR-19."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted the archive key."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I am planning a garden with basil, rosemary, carrots, beans, a small path, and a shaded bench."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "That garden has several parts."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "The workshop schedule has morning sessions, a lunch break, afternoon practice, and a closing discussion."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "The workshop schedule is clear."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "A separate travel plan includes a train, two museums, a walk by the river, and dinner near the station."
+        },
+        {
+          "id": "m7",
+          "role": "assistant",
+          "content": "That is a full travel day."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The recipe list has lentils, onion, ginger, tomatoes, warm bread, and a bowl of fruit."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "I noted the recipe list."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "What was the archive key I gave at the beginning?"
+        }
+      ]
+    },
+    {
+      "id": "long_key",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "CEDAR-19-bearing m0 retained in both modes; acknowledgement omits key.",
+      "answer": "I noted the archive key.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The archive key for this conversation is CEDAR-19."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted the archive key."
+        },
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "The recipe list has lentils, onion, ginger, tomatoes, warm bread, and a bowl of fruit."
+        },
+        {
+          "id": "m9",
+          "role": "assistant",
+          "content": "I noted the recipe list."
+        },
+        {
+          "id": "m10",
+          "role": "user",
+          "content": "What was the archive key I gave at the beginning?"
+        }
+      ]
+    },
+    {
+      "id": "irrelevant_arithmetic",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m6"
+      ],
+      "notes": "Latest turn supplies operands; arithmetic not answered correctly.",
+      "answer": "That's a tricky one.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My notebook is green and my desk is near a window."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "The market has apples, peaches, oranges, and a bakery."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "That sounds like a busy market."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "I might walk through a park after work."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "A walk could be pleasant."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Ignoring those personal notes, what is 3 + 4?"
+        }
+      ]
+    },
+    {
+      "id": "irrelevant_arithmetic",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m6"
+      ],
+      "notes": "Latest turn supplies operands; arithmetic not answered correctly.",
+      "answer": "Three is 3.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My notebook is green and my desk is near a window."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "The market has apples, peaches, oranges, and a bakery."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "I might walk through a park after work."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "A walk could be pleasant."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Ignoring those personal notes, what is 3 + 4?"
+        }
+      ]
+    },
+    {
+      "id": "irrelevant_fact",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m6"
+      ],
+      "notes": "Latest turn asks public knowledge; irrelevant answer/refusal despite intact query.",
+      "answer": "I noted the planet Mars.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My shelves contain novels and maps."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted that."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I prefer walking after lunch."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "Understood."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "The kitchen is being painted this month."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "I noted the renovation."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Unrelated to my history, which planet is closest to the Sun?"
+        }
+      ]
+    },
+    {
+      "id": "irrelevant_fact",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m6"
+      ],
+      "notes": "Latest turn asks public knowledge; irrelevant answer/refusal despite intact query.",
+      "answer": "I'm sorry for the confusion, but as a helpful AI, I don't have real-time capabilities to provide information about planets or celestial bodies. I'm",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "My shelves contain novels and maps."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "I prefer walking after lunch."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "The kitchen is being painted this month."
+        },
+        {
+          "id": "m5",
+          "role": "assistant",
+          "content": "I noted the renovation."
+        },
+        {
+          "id": "m6",
+          "role": "user",
+          "content": "Unrelated to my history, which planet is closest to the Sun?"
+        }
+      ]
+    },
+    {
+      "id": "unknown_pin",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "No PIN asserted; reasonable refusal missed by frozen uncertainty phrase list.",
+      "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or provide sensitive information. I'm designed to provide information",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "I have never told you my bank PIN. What is it? Say you do not know if it is unknown."
+        }
+      ]
+    },
+    {
+      "id": "unknown_pin",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "No PIN asserted; reasonable refusal missed by frozen uncertainty phrase list.",
+      "answer": "I'm sorry for any confusion, but as a chatbot, I don't have the ability to access or provide sensitive information. I'm designed to provide information",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "I have never told you my bank PIN. What is it? Say you do not know if it is unknown."
+        }
+      ]
+    },
+    {
+      "id": "unknown_maiden",
+      "mode": "BASELINE",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "No name asserted; reasonable refusal missed by frozen uncertainty phrase list.",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide information about your mother's maiden name. I'm here",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "What is my mother's maiden name? I have not provided that information."
+        }
+      ]
+    },
+    {
+      "id": "unknown_maiden",
+      "mode": "TORUK",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "required_source_ids": [
+        "m0"
+      ],
+      "notes": "No name asserted; reasonable refusal missed by frozen uncertainty phrase list.",
+      "answer": "I'm sorry for any confusion, but as a helpful AI, I don't have the ability to provide information about your mother's maiden name. I'm here",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "What is my mother's maiden name? I have not provided that information."
+        }
+      ]
+    },
+    {
+      "id": "ambiguous_season",
+      "mode": "BASELINE",
+      "cause": "unsupported question answered as fact",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0",
+        "m2"
+      ],
+      "notes": "Both conflicting notes retained; guesses spring without resolving uncertainty.",
+      "answer": "My favorite season is spring.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "One note says my favorite season is spring."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted that note."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "A second note says my favorite season is autumn. I have not said which note is correct."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "The notes disagree."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Without guessing, what is my favorite season?"
+        }
+      ]
+    },
+    {
+      "id": "ambiguous_season",
+      "mode": "TORUK",
+      "cause": "unsupported question answered as fact",
+      "rubric_false_negative": false,
+      "required_source_ids": [
+        "m0",
+        "m2"
+      ],
+      "notes": "Both conflicting notes retained; guesses spring without resolving uncertainty.",
+      "answer": "My favorite season is spring.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "One note says my favorite season is spring."
+        },
+        {
+          "id": "m1",
+          "role": "assistant",
+          "content": "I noted that note."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "A second note says my favorite season is autumn. I have not said which note is correct."
+        },
+        {
+          "id": "m3",
+          "role": "assistant",
+          "content": "The notes disagree."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Without guessing, what is my favorite season?"
+        }
+      ]
+    }
+  ],
+  "historical_false_assertion_review": {
+    "scope": "Task-related factual assertions, not generic assistant-capability statements.",
+    "each_mode": {
+      "stale_assertion": 1,
+      "unsupported_preference": 1,
+      "unsupported_season_guess": 1
+    },
+    "unknown_refusals_fabricating_private_values": 0,
+    "warning": "Frozen unsupported proxy is 3 per mode; these are different reviewed events."
+  },
+  "latest_wrong_scored_rows": [
+    {
+      "method": "qwen-recent",
+      "id": "test-instruction-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 0",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction0.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-instruction-1",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 1.",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction1.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-instruction-2",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 2.",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction2.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-uncertainty-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-uncertainty-1",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-uncertainty-2",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-correction-0",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "answer": "Eoldcorrection0",
+      "notes": "Obsolete value repeated with correction present.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersoncorrection0's label is Eoldcorrection0.",
+          "role": "user"
+        },
+        {
+          "id": "m1",
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "id": "m2",
+          "content": "Correction: the label is now Evaluecorrection0.",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersoncorrection0's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-correction-1",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "answer": "Eoldcorrection1",
+      "notes": "Obsolete value repeated with correction present.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersoncorrection1's label is Eoldcorrection1.",
+          "role": "user"
+        },
+        {
+          "id": "m1",
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "id": "m2",
+          "content": "Correction: the label is now Evaluecorrection1.",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersoncorrection1's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-distant-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluatedistant0",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersondistant0's label is Evaluedistant0.",
+          "role": "user"
+        },
+        {
+          "id": "m1",
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "id": "m2",
+          "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Noted.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersondistant0's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-distant-2",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluatedistant2",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersondistant2's label is Evaluedistant2.",
+          "role": "user"
+        },
+        {
+          "id": "m1",
+          "content": "Recorded.",
+          "role": "assistant"
+        },
+        {
+          "id": "m2",
+          "content": "Unrelated note: rain rain rain rain rain rain rain rain rain rain rain rain rain rain rain ",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Noted.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersondistant2's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "test-refusal-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "The sum of five plus five is ten.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "open YouTube",
+          "role": "user"
+        },
+        {
+          "id": "m1",
+          "content": "I cannot access online content.",
+          "role": "assistant"
+        },
+        {
+          "id": "m2",
+          "content": "what is 5+5",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-recent",
+      "id": "generated-conflict-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Without knowing which notes were spoken or who made them, it's impossible to determine which season is your favorite.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-instruction-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 0",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction0.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-instruction-1",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 1.",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction1.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-instruction-2",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 2.",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction2.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-uncertainty-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-uncertainty-1",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-uncertainty-2",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-correction-0",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "answer": "Eoldcorrection0",
+      "notes": "Obsolete value repeated with correction present.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersoncorrection0's label is Eoldcorrection0.",
+          "role": "user"
+        },
+        {
+          "id": "m2",
+          "content": "Correction: the label is now Evaluecorrection0.",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersoncorrection0's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-correction-1",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "answer": "Eoldcorrection1",
+      "notes": "Obsolete value repeated with correction present.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersoncorrection1's label is Eoldcorrection1.",
+          "role": "user"
+        },
+        {
+          "id": "m2",
+          "content": "Correction: the label is now Evaluecorrection1.",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersoncorrection1's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-refusal-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "The sum of five plus five is ten.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "open YouTube",
+          "role": "user"
+        },
+        {
+          "id": "m1",
+          "content": "I cannot access online content.",
+          "role": "assistant"
+        },
+        {
+          "id": "m2",
+          "content": "what is 5+5",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "test-observed-full-refusal",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "The sum of five and five is ten.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m8",
+          "content": "what is 5",
+          "role": "user"
+        },
+        {
+          "id": "m9",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+          "role": "assistant"
+        },
+        {
+          "id": "m10",
+          "content": "what is 5+5",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "generated-conflict-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Without knowing which notes were spoken or who made them, it's impossible to determine which season is your favorite.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-trained-v2",
+      "id": "refusal-repeat-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "The sum of five and five is ten.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m8",
+          "content": "what is 5",
+          "role": "user"
+        },
+        {
+          "id": "m9",
+          "content": "I'm sorry for any confusion, but as a chatbot, I don't have the capability to access or interact with online content.",
+          "role": "assistant"
+        },
+        {
+          "id": "m10",
+          "content": "what is 5+5",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-instruction-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 0",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction0.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-instruction-1",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 1.",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction1.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-instruction-2",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": false,
+      "answer": "Evaluating instruction 2.",
+      "notes": "Instruction literal or evidence literal changed by generator.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Reply only Evalueinstruction2.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-uncertainty-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty0's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-uncertainty-1",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty1's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-uncertainty-2",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Unknown",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "What is Epersonuncertainty2's unseen label? If missing, reply only Unknown.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-correction-0",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "answer": "Eoldcorrection0",
+      "notes": "Obsolete value repeated with correction present.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersoncorrection0's label is Eoldcorrection0.",
+          "role": "user"
+        },
+        {
+          "id": "m2",
+          "content": "Correction: the label is now Evaluecorrection0.",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersoncorrection0's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-correction-1",
+      "cause": "stale fact used",
+      "rubric_false_negative": false,
+      "answer": "Eoldcorrection1",
+      "notes": "Obsolete value repeated with correction present.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "Epersoncorrection1's label is Eoldcorrection1.",
+          "role": "user"
+        },
+        {
+          "id": "m2",
+          "content": "Correction: the label is now Evaluecorrection1.",
+          "role": "user"
+        },
+        {
+          "id": "m3",
+          "content": "Updated.",
+          "role": "assistant"
+        },
+        {
+          "id": "m4",
+          "content": "What is Epersoncorrection1's label? Reply only the exact label.",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "test-refusal-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "The sum of five plus five is ten.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "open YouTube",
+          "role": "user"
+        },
+        {
+          "id": "m1",
+          "content": "I cannot access online content.",
+          "role": "assistant"
+        },
+        {
+          "id": "m2",
+          "content": "what is 5+5",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "method": "qwen-lexical-v2",
+      "id": "generated-conflict-0",
+      "cause": "evidence present but generator failed",
+      "rubric_false_negative": true,
+      "answer": "Without knowing which notes were spoken or who made them, it's impossible to determine which season is your favorite.",
+      "notes": "Semantically valid uncertainty/math/conflict reply missed by phrase/number rubric.",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "content": "One note says my favorite season is summer. A second note says winter. I have not said which is correct. Without guessing, which season is my favorite?",
+          "role": "user"
+        }
+      ]
+    }
+  ],
+  "latest_counts": {
+    "qwen-recent": {
+      "evidence present but generator failed": 10,
+      "stale fact used": 2
+    },
+    "qwen-trained-v2": {
+      "evidence present but generator failed": 10,
+      "stale fact used": 2
+    },
+    "qwen-lexical-v2": {
+      "evidence present but generator failed": 8,
+      "stale fact used": 2
+    }
+  },
+  "latest_rubric_false_negatives": {
+    "qwen-recent": 5,
+    "qwen-trained-v2": 7,
+    "qwen-lexical-v2": 5
+  }
+}

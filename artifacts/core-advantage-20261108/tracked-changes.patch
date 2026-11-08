@@ -1,0 +1,84 @@
+diff --git a/.gitattributes b/.gitattributes
+index 2ee13ee..2f6cd66 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -59,3 +59,5 @@
+ /artifacts/chat-launch-gate-20261107/** -text whitespace=cr-at-eol
+ /artifacts/chat-launch-20261107/** -text whitespace=cr-at-eol
+ /configs/chat-launch-gate-v1.json text eol=lf
++# Preserve the new audit's raw evidence; do not rewrite historical fixture bytes.
++/artifacts/core-advantage-20261108/** -text whitespace=cr-at-eol
+diff --git a/.gitignore b/.gitignore
+index 1f7a84a..8f8da05 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -18,6 +18,7 @@ dist/
+ /artifacts/owned-lm-*/verification/package/
+ /artifacts/conversation-readiness-*/verification/package/
+ /artifacts/conversation-format-*/verification*/package/
++/artifacts/core-advantage-*/verification/package/
+ artifacts/**/*.pt
+ /artifacts/chat-foundation-001/backbone/
+ /artifacts/qwen-chat-001/backbone/
+diff --git a/README.md b/README.md
+index 7c5691e..feea06d 100644
+--- a/README.md
++++ b/README.md
+@@ -162,6 +162,12 @@ For a static Vercel Hobby chat page with a separate protected Toruk inference ho
+ 
+ The optional [conversational foundation](docs/chat-foundation.md) adds an explicitly labeled pretrained instruct backbone and an experimental Toruk recurrent context selector. Its fixed local evaluation found no verified chat-memory or token-efficiency benefit.
+ 
++The [8 November core-advantage audit](docs/research/core-advantage-20261108.md)
++reproduces all 20 historical SmolLM BASELINE answers and rescores the saved
++6/20-per-mode result. Fresh historical TORUK inference remains blocked by its
++missing M6 selector checkpoint. The 14.96% selected-prompt saving is not a
++measurement of complete-system computational savings; no improvement is claimed.
++
+ The same local page can also use a digest-pinned Ollama Llama 3.2 3B backbone on a 4 GiB GPU. See the [Windows startup commands](docs/chat-foundation.md#local-ollama-backbone-on-a-small-gpu) and [separate exploratory comparison](docs/research/local-backbone-llama32-20261101.md). The pretrained model supplies its language ability; Toruk's selectors only choose prompt turns.
+ 
+ A separately trained [Toruk chat selector v1](docs/research/chat-selector-v1-results.md) now ranks earlier turns using supervised evidence labels. It improves a narrow synthetic held-out comparison against recent-turn context, but fails an existing vault-code paraphrase. It does not train the conversational backbone or establish general semantic memory.
+diff --git a/docs/architecture.md b/docs/architecture.md
+index 6419164..b32b574 100644
+--- a/docs/architecture.md
++++ b/docs/architecture.md
+@@ -1,5 +1,15 @@
+ # Current implementation
+ 
++The [8 November prerequisite audit](research/core-advantage-20261108.md) adds
++offline evidence validation and optional historical BASELINE replay in
++`scripts/audit_chat_advantage.py`. It reconstructs selected sources from recorded
++IDs, verifies scores and token arithmetic, and verifies the newer three-system
++archive including intermediate rollout costs. Only role/content is passed to
++fresh generation. A CRLF-to-LF fixture reconstruction is accepted only when its
++bytes match the original frozen SHA-256; checkout and reconstructed identities
++are both reported. This changes no selector, prompt, backbone, scorer or chat
++default. Missing original M6 weights still block fresh historical TORUK replay.
++
+ The [7 November chatbot launch gate](research/chat-launch-gate-20261107.md) traces
+ the current browser â†’ Node proxy â†’ Python server â†’ killable model-worker path.
+ BASELINE and TORUK identify the same configured pretrained backbone; TORUK only
+diff --git a/docs/experiments.md b/docs/experiments.md
+index cc8897c..7a96038 100644
+--- a/docs/experiments.md
++++ b/docs/experiments.md
+@@ -1,5 +1,20 @@
+ # Experiment registry
+ 
++## 2026-11-08 core-advantage prerequisite audit
++
++Starting clean `main` at `1d723b1ddf974e12014fdfe0ae4c6a99e68619b6`.
++The [report](research/core-advantage-20261108.md) distinguishes fresh inference
++from saved-output analysis. All 20 historical SmolLM BASELINE answers reproduce
++exactly, scoring 6/20. Forty saved BASELINE/TORUK rows rescore to 6/20 each and
++14.96% fewer TORUK prompt tokens; all reconstructed selected prompt counts match
++the tokenizer. The original M6 selector is absent and none of 221 artifact
++checkpoints matches its expected hash. Newer Qwen recent/trained/lexical results
++rescore unchanged at 25/25/27 of 37, including all 41 requests' costs per mode.
++The historical refusal diagnostic also reproduces. One checkout-line-ending
++prerequisite is recovered with hash verification. No mechanism improvement,
++new held-out experiment or full-system efficiency claim is made. Raw evidence,
++failure review and command records: `artifacts/core-advantage-20261108/`.
++
+ ## 2026-11-04 conversational training readiness
+ 
+ Starting clean HEAD `337cba2c667419c7a3e0a244cecd040b375d7927`. All 16 prior

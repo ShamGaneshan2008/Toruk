@@ -1,5 +1,15 @@
 # Current implementation
 
+The [8 November prerequisite audit](research/core-advantage-20261108.md) adds
+offline evidence validation and optional historical BASELINE replay in
+`scripts/audit_chat_advantage.py`. It reconstructs selected sources from recorded
+IDs, verifies scores and token arithmetic, and verifies the newer three-system
+archive including intermediate rollout costs. Only role/content is passed to
+fresh generation. A CRLF-to-LF fixture reconstruction is accepted only when its
+bytes match the original frozen SHA-256; checkout and reconstructed identities
+are both reported. This changes no selector, prompt, backbone, scorer or chat
+default. Missing original M6 weights still block fresh historical TORUK replay.
+
 The [7 November chatbot launch gate](research/chat-launch-gate-20261107.md) traces
 the current browser → Node proxy → Python server → killable model-worker path.
 BASELINE and TORUK identify the same configured pretrained backbone; TORUK only

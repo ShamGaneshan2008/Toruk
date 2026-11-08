@@ -1,5 +1,20 @@
 # Experiment registry
 
+## 2026-11-08 core-advantage prerequisite audit
+
+Starting clean `main` at `1d723b1ddf974e12014fdfe0ae4c6a99e68619b6`.
+The [report](research/core-advantage-20261108.md) distinguishes fresh inference
+from saved-output analysis. All 20 historical SmolLM BASELINE answers reproduce
+exactly, scoring 6/20. Forty saved BASELINE/TORUK rows rescore to 6/20 each and
+14.96% fewer TORUK prompt tokens; all reconstructed selected prompt counts match
+the tokenizer. The original M6 selector is absent and none of 221 artifact
+checkpoints matches its expected hash. Newer Qwen recent/trained/lexical results
+rescore unchanged at 25/25/27 of 37, including all 41 requests' costs per mode.
+The historical refusal diagnostic also reproduces. One checkout-line-ending
+prerequisite is recovered with hash verification. No mechanism improvement,
+new held-out experiment or full-system efficiency claim is made. Raw evidence,
+failure review and command records: `artifacts/core-advantage-20261108/`.
+
 ## 2026-11-04 conversational training readiness
 
 Starting clean HEAD `337cba2c667419c7a3e0a244cecd040b375d7927`. All 16 prior

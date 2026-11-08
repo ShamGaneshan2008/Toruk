@@ -1,0 +1,15 @@
+{
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "logical_cpus": 12,
+  "physical_cpus": 6,
+  "physical_ram_bytes": 25116758016,
+  "inference_device": "CPU float32, two torch threads; existing local weights, no training",
+  "fresh_inference_cap": {
+    "historical_baseline_calls": 20,
+    "max_output_tokens_each": 32,
+    "wrapper_timeout_seconds": 180,
+    "refusal_wrapper_timeout_seconds": 120
+  },
+  "intervention": "NOT_RUN; historical selector missing; no new dev/heldout split opened",
+  "check_budget": "scripts/verify.py per-check timeouts: tests 420s, each type check 300s, others 120s. Tiny versioned smoke training only."
+}
