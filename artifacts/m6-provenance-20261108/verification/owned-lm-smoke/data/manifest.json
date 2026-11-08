@@ -1,0 +1,23 @@
+{
+  "schema": "toruk-owned-documents-v1",
+  "splits": {
+    "train": {
+      "seed": 3201,
+      "count": 12,
+      "sha256": "4b0965ea1c98ee367dc7053543c0ccb922f523dc0c6cbc6bc5119153f1b10f20",
+      "training_targets": 1870
+    },
+    "dev": {
+      "seed": 4201,
+      "count": 6,
+      "sha256": "e04592a4422ab5a4b134e9ab0bd3d161c9a7df971a5f4b2661f8ecc1b3f1ac5f",
+      "training_targets": 885
+    },
+    "heldout": {
+      "seed": 5201,
+      "count": 6,
+      "sha256": "c4cde2e26d0173af6d9916da847e68ef87505eace7112a9b8a17ed4e73f42f97",
+      "training_targets": 921
+    }
+  }
+}

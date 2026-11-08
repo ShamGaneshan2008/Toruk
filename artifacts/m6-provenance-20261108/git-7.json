@@ -1,0 +1,12 @@
+{
+  "command": [
+    "git",
+    "config",
+    "--local",
+    "--get-regexp",
+    "^(remote\\..*\\.(url|fetch)|extensions\\.|lfs\\.)"
+  ],
+  "returncode": 0,
+  "stdout": "remote.origin.url http://github.com/ShamGaneshan2008/Toruk\nremote.origin.fetch +refs/heads/*:refs/remotes/origin/*\n",
+  "stderr": ""
+}

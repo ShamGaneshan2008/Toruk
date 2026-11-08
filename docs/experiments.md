@@ -1,5 +1,18 @@
 # Experiment registry
 
+## 2026-11-08 frozen M6 selector provenance
+
+The [provenance investigation](research/m6-selector-provenance-20261108.md)
+verifies the original binary-file hashing procedure against the sealed source
+archive and four independent recorded bindings. It finds no original among 547
+local checkpoint-like files, local archives, all 4,571 primary Git blob objects
+plus one unique nested-repository blob, remote releases or the artifact listings
+of all 29 available workflow runs. M6 fresh reproduction remains **BLOCKED**;
+archived outputs remain archived evidence. A new fail-closed candidate verifier
+checks exact identity before deserialization. A successor experiment is planned,
+not run; no replacement was trained or labeled original. Evidence is retained in
+`artifacts/m6-provenance-20261108/`; the previous core-advantage evidence is preserved.
+
 ## 2026-11-08 core-advantage prerequisite audit
 
 Starting clean `main` at `1d723b1ddf974e12014fdfe0ae4c6a99e68619b6`.

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "rg",
+    "-n",
+    "--no-ignore",
+    "--hidden",
+    "-g",
+    "!.git/**",
+    "-g",
+    "!**/site-packages/**",
+    "-g",
+    "!**/node_modules/**",
+    "-g",
+    "!artifacts/m6-provenance-20261108/**",
+    "controlled-pilot.*m6-validation-001|m6-validation-001.*controlled-pilot|m6.*(upload-artifact|download-artifact)|hf_hub_download|lfs.github.com",
+    "docs",
+    "scripts",
+    "src",
+    ".github",
+    "artifacts/m6-handoff",
+    "artifacts/checks"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": ""
+}

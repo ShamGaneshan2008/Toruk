@@ -1,0 +1,43 @@
+{
+  "checkpoint": "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\m6-validation-001\\recurrent\\checkpoint.pt",
+  "contract": {
+    "expected_sha256": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+    "hash_material": "raw bytes of the complete checkpoint.pt file; no normalization",
+    "bindings": {
+      "training_metrics": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+      "run_manifest": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+      "handoff_manifest": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d",
+      "chat_release": "479c5ee26ff907783018fcaf9004d2b072610793f019648735d7405bc2ec156d"
+    },
+    "source_archive_sha256": "def3d8be4f380f92bf2ae7e2a3ef4b8675f4576f08fd859258da3a2f9f53710d",
+    "config": {
+      "answer_weight": 1.0,
+      "batch_worlds": 1,
+      "lm_weight": 0.1,
+      "lr": 0.003,
+      "max_segments": 32,
+      "model": {
+        "context": 64,
+        "heads": 4,
+        "layers": 2,
+        "vocab_size": 259,
+        "width": 32
+      },
+      "objective": "qa",
+      "seed": 23,
+      "slots": 4,
+      "unroll": "whole bounded document; no live-graph steps",
+      "variant": "recurrent"
+    },
+    "data": {
+      "train": "eca6f82580ff192c74140c4da9f9729fb1e5c851dc4377096e7a26b516f6aa05",
+      "validation": "a255bb245e457cbf6c3bff617c85d9876f5fe467bcad421c1a5bc6ecf26956e6"
+    },
+    "package_sha256": "d59cb1e1ebc32f0affe9e87b2e5365b7212b8ae641c545a326d7c80493d1cd95",
+    "parameters": 57088,
+    "steps": 12
+  },
+  "candidate_status": "MISSING",
+  "m6_reproduction": "BLOCKED",
+  "warning": "Candidate verification is not fresh M6 inference reproduction."
+}

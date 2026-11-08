@@ -1,0 +1,41 @@
+{
+  "schema": "toruk-conversation-data-manifest-v1",
+  "format": "toruk-json-role-lines-v1",
+  "audit": {
+    "status": "PASS",
+    "format": "toruk-json-role-lines-v1",
+    "answer_matches": 0,
+    "counts": {
+      "train": 64,
+      "development": 16,
+      "test": 24
+    },
+    "digests": {
+      "train": "8cc9056ec56c72e97f6038ff51effd7bf95a0f1ff47468fa80d2e17a97a6a5e7",
+      "development": "ed7a52fd875e083a3989248fe4df8b4c9877828f861b28d5ac7f7f7040b90c6c",
+      "test": "12023ea8ddfbf69ec8380b345c1d376b65ba25014b71133fc3d3dc30f0f60e30"
+    }
+  },
+  "source": {
+    "kind": "original task-generated synthetic examples",
+    "permission": "User explicitly requested creation of small conversation examples",
+    "third_party_corpus": false,
+    "private_transcript_downloads": false,
+    "diagnostic": "Repository probe_refusal_carryover.py prior_refusal scenario; test only"
+  },
+  "filtering": "Nonempty alternating roles; exact canonical message deduplication; split IDs; standalone held-out answer exclusion",
+  "inherited_training_digest": "ef97416abf7796979c7c4bde3f335c1e608f788f7fac9633954ab7ce2d2aab18",
+  "inherited_matches": [
+    {
+      "training_id": "fixture",
+      "answers": [
+        "10"
+      ]
+    }
+  ],
+  "clean_pretraining_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "clean_pretraining_documents": 0,
+  "clean_pretraining_targets": 0,
+  "starting_checkpoint_eligible": false,
+  "interpretation": "Literal overlap is not proof of semantic leakage. This strict user-requested gate makes no exception for incidental note IDs. Filtering does not remove exposure from inherited weights."
+}

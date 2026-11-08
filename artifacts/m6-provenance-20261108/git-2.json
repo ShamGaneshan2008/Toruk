@@ -1,0 +1,15 @@
+{
+  "command": [
+    "git",
+    "log",
+    "--all",
+    "--format=%H %s",
+    "--",
+    ":(glob)**/*.pt",
+    ":(glob)**/*.pth",
+    ":(glob)**/*.ckpt"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

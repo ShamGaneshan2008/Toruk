@@ -1,0 +1,134 @@
+[
+  {
+    "id": "train-distant-0",
+    "split": "train",
+    "category": "distant",
+    "history": "Cy's tag is gold.\nNote 842: rain.\nNote 745: rain.\nNote 306: rain.\nNote 997: sun.\nNote 25: sun.\nNote 956: wind.\n",
+    "prefix": "If unknown answer ?.\nCy's tag is gold.\nNote 842: rain.\nNote 745: rain.\nNote 306: rain.\nNote 997: sun.\nNote 25: sun.\nNote 956: wind.\nAnswer Cy's tag? ",
+    "answer": "gold",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nCy's tag is gold.\nNote 842: rain.\nNote 745: rain.\nNote 306: rain.\nNote 997: sun.\nNote 25: sun.\nNote 956: wind.\nAnswer Cy's tag? gold\n",
+    "evidence": "Cy's tag is gold."
+  },
+  {
+    "id": "train-distant-1",
+    "split": "train",
+    "category": "distant",
+    "history": "Dee's tag is lime.\nNote 779: wind.\nNote 287: wind.\nNote 96: sun.\nNote 657: sun.\nNote 753: wind.\nNote 591: rain.\n",
+    "prefix": "If unknown answer ?.\nDee's tag is lime.\nNote 779: wind.\nNote 287: wind.\nNote 96: sun.\nNote 657: sun.\nNote 753: wind.\nNote 591: rain.\nAnswer Dee's tag? ",
+    "answer": "lime",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nDee's tag is lime.\nNote 779: wind.\nNote 287: wind.\nNote 96: sun.\nNote 657: sun.\nNote 753: wind.\nNote 591: rain.\nAnswer Dee's tag? lime\n",
+    "evidence": "Dee's tag is lime."
+  },
+  {
+    "id": "train-correction-0",
+    "split": "train",
+    "category": "correction",
+    "history": "Ada's tag is lime.\nCorrection: Ada's tag is blue, replacing lime.\nNote 719: sun.\nNote 664: rain.\nNote 128: sun.\nNote 97: wind.\nNote 452: wind.\n",
+    "prefix": "If unknown answer ?.\nAda's tag is lime.\nCorrection: Ada's tag is blue, replacing lime.\nNote 719: sun.\nNote 664: rain.\nNote 128: sun.\nNote 97: wind.\nNote 452: wind.\nAnswer Ada's tag? ",
+    "answer": "blue",
+    "obsolete": "lime",
+    "text": "If unknown answer ?.\nAda's tag is lime.\nCorrection: Ada's tag is blue, replacing lime.\nNote 719: sun.\nNote 664: rain.\nNote 128: sun.\nNote 97: wind.\nNote 452: wind.\nAnswer Ada's tag? blue\n",
+    "evidence": "Ada's tag is lime."
+  },
+  {
+    "id": "train-correction-1",
+    "split": "train",
+    "category": "correction",
+    "history": "Ada's tag is red.\nCorrection: Ada's tag is gold, replacing red.\nNote 696: sun.\nNote 128: wind.\nNote 351: rain.\nNote 696: sun.\n",
+    "prefix": "If unknown answer ?.\nAda's tag is red.\nCorrection: Ada's tag is gold, replacing red.\nNote 696: sun.\nNote 128: wind.\nNote 351: rain.\nNote 696: sun.\nAnswer Ada's tag? ",
+    "answer": "gold",
+    "obsolete": "red",
+    "text": "If unknown answer ?.\nAda's tag is red.\nCorrection: Ada's tag is gold, replacing red.\nNote 696: sun.\nNote 128: wind.\nNote 351: rain.\nNote 696: sun.\nAnswer Ada's tag? gold\n",
+    "evidence": "Ada's tag is red."
+  },
+  {
+    "id": "train-preservation-0",
+    "split": "train",
+    "category": "preservation",
+    "history": "Bo's tag is gold.\nOther person's tag is red.\nNote 410: wind.\nNote 291: rain.\nNote 139: sun.\nNote 102: rain.\nNote 58: rain.\n",
+    "prefix": "If unknown answer ?.\nBo's tag is gold.\nOther person's tag is red.\nNote 410: wind.\nNote 291: rain.\nNote 139: sun.\nNote 102: rain.\nNote 58: rain.\nAnswer Bo's tag? ",
+    "answer": "gold",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nBo's tag is gold.\nOther person's tag is red.\nNote 410: wind.\nNote 291: rain.\nNote 139: sun.\nNote 102: rain.\nNote 58: rain.\nAnswer Bo's tag? gold\n",
+    "evidence": "Bo's tag is gold."
+  },
+  {
+    "id": "train-preservation-1",
+    "split": "train",
+    "category": "preservation",
+    "history": "Ada's tag is blue.\nOther person's tag is gold.\nNote 599: rain.\nNote 753: rain.\nNote 794: wind.\nNote 607: sun.\nNote 19: rain.\n",
+    "prefix": "If unknown answer ?.\nAda's tag is blue.\nOther person's tag is gold.\nNote 599: rain.\nNote 753: rain.\nNote 794: wind.\nNote 607: sun.\nNote 19: rain.\nAnswer Ada's tag? ",
+    "answer": "blue",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nAda's tag is blue.\nOther person's tag is gold.\nNote 599: rain.\nNote 753: rain.\nNote 794: wind.\nNote 607: sun.\nNote 19: rain.\nAnswer Ada's tag? blue\n",
+    "evidence": "Ada's tag is blue."
+  },
+  {
+    "id": "train-exact-0",
+    "split": "train",
+    "category": "exact",
+    "history": "Cy's tag is z+3=Q.\nNote 316: rain.\nNote 430: rain.\nNote 813: sun.\nNote 181: rain.\nNote 537: rain.\nNote 965: sun.\n",
+    "prefix": "If unknown answer ?.\nCy's tag is z+3=Q.\nNote 316: rain.\nNote 430: rain.\nNote 813: sun.\nNote 181: rain.\nNote 537: rain.\nNote 965: sun.\nAnswer Cy's tag? ",
+    "answer": "z+3=Q",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nCy's tag is z+3=Q.\nNote 316: rain.\nNote 430: rain.\nNote 813: sun.\nNote 181: rain.\nNote 537: rain.\nNote 965: sun.\nAnswer Cy's tag? z+3=Q\n",
+    "evidence": "Cy's tag is z+3=Q."
+  },
+  {
+    "id": "train-exact-1",
+    "split": "train",
+    "category": "exact",
+    "history": "Dee's tag is pQ_02.\nNote 940: rain.\nNote 77: rain.\nNote 773: sun.\nNote 238: rain.\nNote 402: sun.\nNote 930: sun.\n",
+    "prefix": "If unknown answer ?.\nDee's tag is pQ_02.\nNote 940: rain.\nNote 77: rain.\nNote 773: sun.\nNote 238: rain.\nNote 402: sun.\nNote 930: sun.\nAnswer Dee's tag? ",
+    "answer": "pQ_02",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nDee's tag is pQ_02.\nNote 940: rain.\nNote 77: rain.\nNote 773: sun.\nNote 238: rain.\nNote 402: sun.\nNote 930: sun.\nAnswer Dee's tag? pQ_02\n",
+    "evidence": "Dee's tag is pQ_02."
+  },
+  {
+    "id": "train-local-0",
+    "split": "train",
+    "category": "local",
+    "history": "Note 413: wind.\nNote 143: wind.\nNote 196: wind.\nNote 553: rain.\nNote 224: wind.\nNote 209: wind.\nBo's tag is red.\n",
+    "prefix": "If unknown answer ?.\nNote 413: wind.\nNote 143: wind.\nNote 196: wind.\nNote 553: rain.\nNote 224: wind.\nNote 209: wind.\nBo's tag is red.\nAnswer Bo's tag? ",
+    "answer": "red",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nNote 413: wind.\nNote 143: wind.\nNote 196: wind.\nNote 553: rain.\nNote 224: wind.\nNote 209: wind.\nBo's tag is red.\nAnswer Bo's tag? red\n",
+    "evidence": "Bo's tag is red."
+  },
+  {
+    "id": "train-local-1",
+    "split": "train",
+    "category": "local",
+    "history": "Note 415: wind.\nNote 557: rain.\nNote 86: wind.\nNote 712: sun.\nBo's tag is blue.\n",
+    "prefix": "If unknown answer ?.\nNote 415: wind.\nNote 557: rain.\nNote 86: wind.\nNote 712: sun.\nBo's tag is blue.\nAnswer Bo's tag? ",
+    "answer": "blue",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nNote 415: wind.\nNote 557: rain.\nNote 86: wind.\nNote 712: sun.\nBo's tag is blue.\nAnswer Bo's tag? blue\n",
+    "evidence": "Bo's tag is blue."
+  },
+  {
+    "id": "train-unknown-0",
+    "split": "train",
+    "category": "unknown",
+    "history": "Dee visited the park.\nNote 497: sun.\nNote 891: sun.\nNote 928: sun.\nNote 42: rain.\n",
+    "prefix": "If unknown answer ?.\nDee visited the park.\nNote 497: sun.\nNote 891: sun.\nNote 928: sun.\nNote 42: rain.\nAnswer Dee's tag? ",
+    "answer": "?",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nDee visited the park.\nNote 497: sun.\nNote 891: sun.\nNote 928: sun.\nNote 42: rain.\nAnswer Dee's tag? ?\n",
+    "evidence": "Dee visited the park."
+  },
+  {
+    "id": "train-unknown-1",
+    "split": "train",
+    "category": "unknown",
+    "history": "Dee visited the park.\nNote 674: sun.\nNote 156: wind.\nNote 472: sun.\nNote 393: rain.\nNote 898: rain.\n",
+    "prefix": "If unknown answer ?.\nDee visited the park.\nNote 674: sun.\nNote 156: wind.\nNote 472: sun.\nNote 393: rain.\nNote 898: rain.\nAnswer Dee's tag? ",
+    "answer": "?",
+    "obsolete": "",
+    "text": "If unknown answer ?.\nDee visited the park.\nNote 674: sun.\nNote 156: wind.\nNote 472: sun.\nNote 393: rain.\nNote 898: rain.\nAnswer Dee's tag? ?\n",
+    "evidence": "Dee visited the park."
+  }
+]

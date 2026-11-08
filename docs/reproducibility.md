@@ -387,6 +387,25 @@ primary run is a new single-seed run, not recovery of original weights or an
 independent-seed confirmation. M7 studies require the historical prerequisites;
 their replay is not covered by smoke success.
 
+The [8 November M6 provenance investigation](research/m6-selector-provenance-20261108.md)
+confirms that the frozen selector identity hashes the complete binary checkpoint,
+not the source package or a normalized representation. Local/archived files, all
+Git blobs including unreachable objects, LFS and available hosted artifact
+references contain no matching original. A recovered candidate can be checked
+without substituting its identity:
+
+```sh
+python scripts/verify_frozen_m6.py --checkpoint /path/to/recovered/checkpoint.pt --output artifacts/recovered-m6-candidate.json
+```
+
+Exit 2 means missing or different bytes; exit 0 verifies the original candidate's
+hash, format and recorded model metadata, not fresh inference reproduction.
+Only hash-matching candidates reach the safe checkpoint loader. The original
+M6 source archive is separately verified; strict replay still requires its
+inference/scoring kernels and all model/predictor files consumed by that replay.
+See the investigation for a conditional two-device restore procedure and a
+separately versioned successor plan. No original expected hash was changed.
+
 The synthetic data manifests define document/world splits and checksums. Only
 train/validation data are loaded for model fitting/scoring by research commands.
 Unit tests separately inspect test records and oracle labels, including cases
