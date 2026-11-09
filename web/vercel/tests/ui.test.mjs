@@ -70,6 +70,7 @@ test('page disables chat with a reason, recovers on Retry, and sends generated h
   await ui.retry();
   assert.equal(ui.get('error').textContent, '');
   await ui.send('My name is Mira.');
+  assert.equal(ui.get('transcript').children[1].children[0].textContent, 'Assistant');
   await ui.send('What is my name?');
   assert.deepEqual(requests[1].messages, [
     {role: 'user', content: 'My name is Mira.'},

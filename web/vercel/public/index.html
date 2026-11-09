@@ -101,7 +101,7 @@
         box.className = `message ${item.role}`;
         const role = document.createElement('div');
         role.className = 'role';
-        role.textContent = item.role === 'user' ? 'You' : 'Toruk';
+        role.textContent = item.role === 'user' ? 'You' : 'Assistant';
         const body = document.createElement('div');
         body.textContent = item.content || '(No text generated.)';
         box.append(role, body);
@@ -112,7 +112,7 @@
     function setSending(value) {
       sending = value;
       setChatAvailability({message, send, retry}, ready, value);
-      loading.textContent = value ? 'Toruk is generating…' : '';
+      loading.textContent = value ? 'Generating with the displayed model…' : '';
     }
     function updateMemoryStatus() {
       memoryStatus.textContent = mode.value === 'TORUK' ? 'Context selection: enabled (experimental)' : 'Context selection: disabled';

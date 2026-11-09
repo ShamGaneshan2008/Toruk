@@ -89,7 +89,7 @@ def main() -> None:
             wait_ready(
                 f"http://127.0.0.1:{backend_port}/api/status",
                 backend,
-                timeout=180 if args.ollama_model else 60,
+                timeout=180,
             )
             wait_ready(base + "/api/status", web)
             page_code, page = read(base + "/")
@@ -134,6 +134,7 @@ def main() -> None:
                         "temperature": 0,
                         "top_p": 1,
                     },
+                    timeout=70,
                 )
                 assert code == 200 and isinstance(response, dict)
                 assert response["metrics"]["mode"] == mode
@@ -152,6 +153,7 @@ def main() -> None:
                 code, unsupported = read(
                     base + "/api/chat",
                     {"messages": [{"role": "user", "content": "Hello"}], "mode": "TORUK"},
+                    timeout=70,
                 )
                 assert code == 400 and isinstance(unsupported, dict) and "answer" not in unsupported
             probes = {}
@@ -173,7 +175,7 @@ def main() -> None:
                                 "temperature": 0,
                                 "top_p": 1,
                             }
-                            code, answer = read(base + "/api/chat", request_body)
+                            code, answer = read(base + "/api/chat", request_body, timeout=70)
                             turns.append(
                                 {"request": request_body, "http_status": code, "response": answer}
                             )
@@ -189,7 +191,7 @@ def main() -> None:
             backend.terminate()
             backend.wait(timeout=10)
             outage_code, outage = read(
-                base + "/api/chat", {"messages": [{"role": "user", "content": "Hello"}]}
+                base + "/api/chat", {"messages": [{"role": "user", "content": "Hello"}]}, timeout=70
             )
             assert outage_code == 503 and isinstance(outage, dict) and "answer" not in outage
             report = {

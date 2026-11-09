@@ -98,13 +98,15 @@ For local checks, install `python -m pip install -e ".[dev]"` and run `python sc
 
 ### Experimental local chat page
 
-For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md).
+For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md)
+and the [current launch-readiness audit](docs/research/launch-readiness-20261106.md).
 For the explicitly labeled heuristic TORUK comparison and frozen evaluation commands,
 see [context selection](docs/context-selection.md).
-It runs pinned **Qwen/Qwen2.5-0.5B-Instruct** through the existing web proxy, with
-bounded input/output and per-request token/latency measurements. Qwen supplies the
-language ability; it is not Toruk-trained. The historical M6 checkpoint is missing
-in this checkout; BASELINE works without a selector and makes no efficiency claim.
+The chat path uses an identified pretrained instruct backbone through the web proxy,
+with bounded input/output and per-request token/latency measurements. That backbone
+supplies language ability; it is not Toruk-trained. The pinned Qwen weights are absent
+in this checkout, while verified SmolLM2 and M6 selector files are present. BASELINE
+remains the default and makes no efficiency claim.
 See the [fresh audit and real responses](docs/research/next-chat-20261031.md).
 
 #### Ordinary-model smoke fixture only

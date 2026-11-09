@@ -23,7 +23,7 @@ def free_port() -> int:
         return int(sock.getsockname()[1])
 
 
-def read(url: str, body: dict | None = None) -> tuple[int, dict | str]:
+def read(url: str, body: dict | None = None, timeout: int = 15) -> tuple[int, dict | str]:
     data = json.dumps(body).encode() if body is not None else None
     request = urllib.request.Request(
         url,
@@ -31,7 +31,7 @@ def read(url: str, body: dict | None = None) -> tuple[int, dict | str]:
         {"Content-Type": "application/json"} if data is not None else {},
     )
     try:
-        with urllib.request.urlopen(request, timeout=15) as response:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
             raw = response.read().decode()
             return response.status, json.loads(
                 raw
