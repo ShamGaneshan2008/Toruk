@@ -46,7 +46,7 @@ class LexicalAdmissionSelector:
             summary, memory = self.ranker._summary(message["content"], memory)
             if index in keep:
                 continue
-            overlap = set()
+            overlap: set[str] = set()
             if message["role"] == "user":
                 overlap = query_terms & terms(message["content"])
                 term_calls += 1
@@ -55,11 +55,21 @@ class LexicalAdmissionSelector:
             similarity = float(F.cosine_similarity(summary, query, dim=0).item())
             if admitted:
                 ranked.append((similarity, index))
-            candidates.append({"index": index, "role": message["role"],
-                               "overlap": sorted(overlap), "admitted": admitted,
-                               "cosine": similarity})
+            candidates.append(
+                {
+                    "index": index,
+                    "role": message["role"],
+                    "overlap": sorted(overlap),
+                    "admitted": admitted,
+                    "cosine": similarity,
+                }
+            )
         keep.update(index for _, index in sorted(ranked, reverse=True)[:2])
-        self.last_trace = {"query_terms": sorted(query_terms), "candidates": candidates,
-                           "admitted": [index for _, index in ranked],
-                           "gate_term_calls": term_calls, "gate_scan_bytes": scanned_bytes}
+        self.last_trace = {
+            "query_terms": sorted(query_terms),
+            "candidates": candidates,
+            "admitted": [index for _, index in ranked],
+            "gate_term_calls": term_calls,
+            "gate_scan_bytes": scanned_bytes,
+        }
         return sorted(keep), bool(ranked)
