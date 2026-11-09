@@ -62,3 +62,26 @@
 # Preserve the new audit's raw evidence; do not rewrite historical fixture bytes.
 /artifacts/core-advantage-20261108/** -text whitespace=cr-at-eol
 /artifacts/m6-provenance-20261108/** -text whitespace=cr-at-eol
+
+/artifacts/m6-successor-v1/** -text whitespace=cr-at-eol
+/scripts/m6_successor.py text eol=lf
+/configs/m6-successor-v1.json text eol=lf
+
+/configs/m6-successor-v1-execution.json text eol=lf
+/tests/test_m6_successor.py text eol=lf
+/docs/research/m6-successor-v1-protocol.md text eol=lf
+/pyproject.toml text eol=lf
+
+/artifacts/backbone-qualification-v1/** -text whitespace=cr-at-eol
+/scripts/qualify_answer_backbone.py text eol=lf
+/tests/test_backbone_qualification.py text eol=lf
+/configs/backbone-qualification-v1.json text eol=lf
+/docs/research/backbone-qualification-v1-protocol.md text eol=lf
+/docs/research/backbone-qualification-v1-results.md text eol=lf
+
+/artifacts/qwen-long-history-v1/** -text whitespace=cr-at-eol
+/scripts/qwen_long_history.py text eol=lf
+/tests/test_qwen_long_history.py text eol=lf
+/configs/qwen-long-history-v1.json text eol=lf
+/docs/research/qwen-long-history-v1-protocol.md text eol=lf
+/docs/research/qwen-long-history-v1-results.md text eol=lf

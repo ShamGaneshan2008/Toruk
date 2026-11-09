@@ -1,5 +1,13 @@
 # Current implementation
 
+The research-only [m6-successor-v1 runner](research/m6-successor-v1-results.md)
+uses a newly trained controlled recurrent checkpoint as a turn selector for the
+same pinned external backbone. It seals source/data/runtime identities, separates
+development and held-out generation, measures actual selector/backbone forwards
+and tokenization, and monitors Windows worker process trees. It adds no chat
+default, persistent semantic memory or restored historical M6 checkpoint. The
+registered joint quality/cost criterion fails against lexical retrieval.
+
 The [8 November prerequisite audit](research/core-advantage-20261108.md) adds
 offline evidence validation and optional historical BASELINE replay in
 `scripts/audit_chat_advantage.py`. It reconstructs selected sources from recorded
@@ -232,3 +240,28 @@ tokenizer, data, decoding, and total compute budget fixed when isolating the
 memory mechanism. Require independent seeds, unseen long-range tasks, reliable
 correction and unknown-answer scores, and end-to-end latency/memory measurements
 with confidence intervals before attributing any gain to Toruk training.
+
+
+## Separate plain-context backbone qualification
+
+The research-only `scripts/qualify_answer_backbone.py` seals fresh data, native
+tokenizer input IDs, explicit common instructions and decoding settings for two
+external pretrained generators. It disables selection and production system
+instructions, verifies full evidence, uses fresh monitored workers, and charges
+startup/identity checks alongside request CPU. It changes no production backend
+or selector defaults. Qwen passes only the small fixed overall/known quality
+floors; exact-copy/preservation failures persist. See the
+[qualification result](research/backbone-qualification-v1-results.md) and frozen
+protocol before using the identity in a separately registered selector comparison.
+
+
+## Frozen-Qwen long-history research adapter
+
+`scripts/qwen_long_history.py` renders selected original conversation turns into
+the qualified common Reference/Question/Answer envelope. Full evidence uses the
+pinned model context limit; recent, unchanged lexical-v1 and unchanged successor
+TORUK use identical 512-token whole-turn fitting. It records actual lexical term,
+selector byte/state-update and backbone BPE work separately, with fresh monitored
+workers. It changes no production selector/backend/defaults. The
+[registered attempt](research/qwen-long-history-v1-results.md) is blocked before
+held-out because host sleep exhausted elapsed caps; no selector verdict follows.

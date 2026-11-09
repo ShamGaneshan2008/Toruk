@@ -1,0 +1,60 @@
+{
+  "schema": "backbone-qualification-v1",
+  "development_seed": 81711,
+  "heldout_seed": 81731,
+  "generation_seed": 81751,
+  "max_prompt_tokens": 512,
+  "max_new_tokens": 64,
+  "memory_bytes": 6442450944,
+  "disk_bytes": 3221225472,
+  "phase_seconds": 300,
+  "total_seconds": 900,
+  "request_seconds": 30,
+  "device": "CPU float32, two Torch threads, sequential workers",
+  "generation_policy": {
+    "do_sample": false,
+    "temperature_request": 0,
+    "top_p": 1,
+    "repetition_penalty": 1.0,
+    "num_beams": 1,
+    "use_cache": true,
+    "max_new_tokens": 64
+  },
+  "data": {
+    "provenance": "New owned synthetic reference records and authored question templates",
+    "development_cases": 12,
+    "heldout_cases": 30,
+    "known_heldout_cases": 25,
+    "unknown_heldout_cases": 5,
+    "complete_evidence": true,
+    "same_input_messages_for_both_candidates": true,
+    "new_split_and_successor_overlap_checks": "IDs, known expected values and normalized question templates"
+  },
+  "gates": {
+    "heldout_overall_correct_at_least": 18,
+    "heldout_known_correct_at_least": 15,
+    "zero_execution_errors": true,
+    "within_all_caps": true,
+    "development": "technical fit and deterministic replay, no tuning",
+    "per_candidate_heldout_runs": 1
+  },
+  "selection_rule": "Lowest measured held-out CPU among fixed-gate qualifiers; no new candidate or budget increase after results",
+  "candidates": {
+    "smollm": {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "model_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+      "directory": "artifacts/m6-successor-v1/backbone",
+      "license": "Apache-2.0",
+      "license_source": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/blob/12fd25f77366fa6b3b4b768ec3050bf629380bac/README.md"
+    },
+    "qwen": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "model_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+      "directory": "artifacts/backbone-qualification-v1/backbones/qwen",
+      "license": "Apache-2.0",
+      "license_source": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/7ae557604adf67be50417f59c2c2f167def9a775/LICENSE"
+    }
+  }
+}

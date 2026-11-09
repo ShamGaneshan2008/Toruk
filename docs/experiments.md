@@ -1,5 +1,19 @@
 # Experiment registry
 
+## 2026-11-08 m6-successor-v1
+
+The [completed successor experiment](research/m6-successor-v1-results.md) starts
+from D:\Toruk at `25d4ec09e01397b43b9b16ad08faeca7cdb22eb0`, preserving `.idea`.
+A fresh 12-step recurrent selector and pinned SmolLM backbone answer the same
+24 held-out histories: recent 0, lexical 7, TORUK 5. TORUK loses two corrections
+and costs 24.88% more CPU/37.52% more wall time than lexical. All quality gates
+fail. One pre-held-out Windows process-tree accounting amendment preserves and
+charges all preceding attempts; the primary checkpoint reproduces byte-for-byte.
+No held-out rerun or question/model/scoring adjustment occurs. Exact weights and
+provenance are retained in a verified local selector ZIP. Historical M6 stays
+NOT REPRODUCIBLE. All 26 local verification stages/280 Python tests pass; hosted
+CI covers the starting commit only. No commit, push, deployment or publication.
+
 ## 2026-11-08 frozen M6 selector provenance
 
 The [provenance investigation](research/m6-selector-provenance-20261108.md)
@@ -322,3 +336,26 @@ owned-model pilot after exact historical replay. Random-initialized conversation
 training improves response framing, but remains 0/24 on unseen-value answers.
 The integration gate fails. Evidence and exact command records are under
 `artifacts/conversation-format-v1-20261105/`; the pretrained chat default is unchanged.
+
+
+## backbone-qualification-v1 (8 November 2026)
+
+[Protocol](research/backbone-qualification-v1-protocol.md),
+[results](research/backbone-qualification-v1-results.md), evidence in
+`artifacts/backbone-qualification-v1/`. Fresh 12-development/30-held-out
+plain-context questions, no training or selector. SmolLM 15/30 fails; Qwen
+18/30 and 15/25 known meets both 60% floors within 6 GiB/3 GiB/900 seconds.
+Qwen exact-copy 0/5 and preservation 1/5 limit the conclusion. The old 24-case
+successor answers were inspected offline only; scores and artifacts stay frozen.
+No selector advantage follows from this separate backbone milestone.
+
+
+## qwen-long-history-v1 (8 November 2026): BLOCKED
+
+[Protocol](research/qwen-long-history-v1-protocol.md) and
+[report](research/qwen-long-history-v1-results.md). Frozen qualified Qwen and
+existing successor selector; seven fresh development/28 untouched held-out cases,
+full/recent/lexical/TORUK arms. A monitoring-only technical amendment retained
+byte-identical inputs and gates. Host idle sleep then exhausted development wall
+limits; freeze rejected, all held-out arms NOT RUN. Partial development outputs
+and power-event provenance are retained. No efficiency or selector-quality claim.
