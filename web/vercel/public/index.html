@@ -112,7 +112,7 @@
     function setSending(value) {
       sending = value;
       setChatAvailability({message, send, retry}, ready, value);
-      loading.textContent = value ? 'The displayed model is generating…' : '';
+      loading.textContent = value ? 'Generating with the displayed model…' : '';
     }
     function updateMemoryStatus() {
       memoryStatus.textContent = mode.value === 'TORUK' ? 'Context selection: enabled (experimental)' : 'Context selection: disabled';

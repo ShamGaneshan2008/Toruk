@@ -255,7 +255,7 @@ def main() -> None:
         backend = None
         logging.error("CHAT DISABLED [%s]: %s", error, STARTUP_ERRORS[error])
         logging.error(
-            "For instruct chat use --backbone-dir artifacts/qwen-chat-001/backbone; "
+            "For instruct chat use --backbone-dir with a verified local backbone; "
             "see docs/local-chat.md. No fallback model was loaded."
         )
     server = BoundedHTTPServer((args.host, args.port), make_handler(backend, error, token))

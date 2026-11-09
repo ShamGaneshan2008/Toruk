@@ -1,5 +1,47 @@
 # Local instruct chat on Windows PowerShell
 
+## Laptop checkout audit (6 November 2026)
+
+The audit recorded absent pinned Qwen weights and these local files:
+`artifacts/chat-foundation-001/backbone` (pretrained
+`HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366`) and the original M6 selector at
+`artifacts/m6-validation-001/recurrent/checkpoint.pt`; their weight hashes match
+their recorded manifests. Use the two-terminal commands below with
+`--backbone-dir .\artifacts\chat-foundation-001\backbone`. Add
+`--selector-checkpoint .\artifacts\m6-validation-001\recurrent\checkpoint.pt`
+only to inspect the experimental TORUK mode. BASELINE remains selected by default.
+The [launch-readiness audit](research/launch-readiness-20261106.md) records the
+failed quality gate. At audit time, the sandbox could not execute Python because
+its `.venv` pointed to an inaccessible Python 3.14 installation. If that access
+failure persists, use an accessible Python 3.11+ environment before starting the backend.
+
+After installing `.[chat,dev]` in that environment, start the current local pair
+in separate PowerShell terminals from the repository root:
+
+```powershell
+# Terminal 1: backend
+Set-Location 'C:\Users\susee\VScode Project\Toruk'
+$env:TORUK_BACKEND_TOKEN = 'local-development-only-token'
+.\.venv\Scripts\python.exe -m toruk_lm.inference_server --backbone-dir .\artifacts\chat-foundation-001\backbone --host 127.0.0.1 --port 8766
+```
+
+```powershell
+# Terminal 2: local Vercel-style page and proxy
+Set-Location 'C:\Users\susee\VScode Project\Toruk'
+$env:TORUK_BACKEND_TOKEN = 'local-development-only-token'
+$env:TORUK_BACKEND_URL = 'http://127.0.0.1:8766'
+$env:PORT = '3000'
+$env:VERCEL_ENV = 'development'
+node .\web\vercel\scripts\dev.mjs
+```
+
+In another terminal, check `Invoke-RestMethod 'http://127.0.0.1:3000/api/status'`:
+`ready` must be true and `model` must identify SmolLM2 before opening
+`http://127.0.0.1:3000`. Stop both processes with Ctrl+C in their own terminals.
+If `ready` is false, follow the returned setup error and restart the backend;
+the page's **Retry connection** button refreshes status. These are inspected
+commands for this checkout, not a successful live smoke in this sandbox.
+
 Qwen/Qwen2.5-0.5B-Instruct is a third-party, Apache-2.0 instruct backbone,
 not a Toruk-trained model ([official model card](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)).
 Toruk supplies the server, limits, telemetry, and optional experimental context selection.
@@ -11,7 +53,7 @@ For the frozen research comparisons, actual-component ablations and exploratory
 draft, see the [independent replication package](research/independent-replication-v1-results.md).
 An optional, explicitly named heuristic selector can now be enabled for the
 [same-backbone context comparison](context-selection.md). It is separate from the
-missing evaluated M6 checkpoint and does not restore that learned-memory result.
+evaluated M6 checkpoint and does not restore that learned-memory result.
 
 For the disabled-chat diagnosis and actual request evidence, see the
 [readiness repair](research/readiness-fix-20261031.md). `--checkpoint` selects a
@@ -27,7 +69,7 @@ if necessary. If the verified model files already exist locally, no download is
 needed. Check the current installation first:
 
 ```powershell
-Set-Location 'C:\Users\susee\VS_CODE_PROJECT\Toruk'
+Set-Location 'C:\Users\susee\VScode Project\Toruk'
 Test-Path .\artifacts\qwen-chat-001\backbone\toruk-backbone.json
 Test-Path .\artifacts\qwen-chat-001\backbone\model.safetensors
 .\.venv\Scripts\python.exe -c "import torch, transformers, safetensors; print(torch.__version__, transformers.__version__, safetensors.__version__)"
@@ -37,7 +79,7 @@ Run from the repository root. Python 3.11+ and Node 22+ are required.
 For a new environment (omit creation if `.venv` already exists):
 
 ```powershell
-Set-Location 'C:\Users\susee\VS_CODE_PROJECT\Toruk'
+Set-Location 'C:\Users\susee\VScode Project\Toruk'
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 .\.venv\Scripts\python.exe -m pip install -e '.[chat,dev]'
@@ -55,7 +97,7 @@ existing download can be reused without running the downloader again.
 Terminal 1, backend:
 
 ```powershell
-Set-Location 'C:\Users\susee\VS_CODE_PROJECT\Toruk'
+Set-Location 'C:\Users\susee\VScode Project\Toruk'
 $env:TORUK_BACKEND_TOKEN = 'local-development-only-token'
 .\.venv\Scripts\python.exe -m toruk_lm.inference_server --backbone-dir .\artifacts\qwen-chat-001\backbone --host 127.0.0.1 --port 8766
 ```
@@ -66,7 +108,7 @@ means the model did not load: follow the indicated setup action and restart the
 backend. No model fallback occurs. Terminal 2, website:
 
 ```powershell
-Set-Location 'C:\Users\susee\VS_CODE_PROJECT\Toruk'
+Set-Location 'C:\Users\susee\VScode Project\Toruk'
 $env:TORUK_BACKEND_TOKEN = 'local-development-only-token'
 $env:TORUK_BACKEND_URL = 'http://127.0.0.1:8766'
 $env:PORT = '3000'
@@ -153,11 +195,13 @@ stop token, backend latency, and proxy latency. It does not measure all internal
 model compute or establish end-to-end token savings.
 
 The evaluated M6 selector at `artifacts/m6-validation-001/recurrent/checkpoint.pt`
-is absent here. Explicitly selecting that checkpoint fails visibly; no replacement
-was trained or substituted. TORUK can separately use the available trained JSON v2
-selector or a named heuristic. Those selectors also failed the launch quality gate.
-Restore the original evaluated weights before testing that path or making a matched
-same-backbone efficiency comparison. Synthetic smoke checkpoints are incompatible
+was recorded as present with a matching SHA-256 in the 6 November laptop audit.
+The 7 November launch gate and 8 November core audit used a checkout where it
+was absent; their results and reproduction limitations remain unchanged.
+Explicitly selecting a missing checkpoint fails visibly. TORUK can separately use
+the trained JSON v2 selector or a named heuristic; those selectors also failed
+the launch quality gate. The archived paired M6 chat comparison fails its quality
+gate too. Synthetic smoke checkpoints are incompatible
 with the historical selector's evidence and cannot be silently substituted.
 
 The separate [Ollama local-backbone path](research/local-backbone-llama32-20261101.md)

@@ -1,8 +1,10 @@
 """Contracts for the fresh frozen-Qwen four-arm study, without model inference."""
 
 import copy
+import hashlib
 import json
 import sys
+import zipfile
 from pathlib import Path
 
 import pytest
@@ -191,7 +193,14 @@ def test_frozen_qwen_and_successor_identity_and_decoding():
     qualified = json.loads((ROOT / cfg["backbone_freeze"]).read_bytes())
     assert qualified["generation_policy"] == cfg["generation_policy"]
     assert qualified["system_instructions"] == SYSTEM
-    assert sha(ROOT / cfg["selector_checkpoint"]) == cfg["selector_sha256"]
+    checkpoint = ROOT / cfg["selector_checkpoint"]
+    if checkpoint.is_file():
+        selector_bytes = checkpoint.read_bytes()
+    else:
+        # The portable evidence package retains these exact bytes in the bundle.
+        with zipfile.ZipFile(ROOT / "artifacts/m6-successor-v1/selector-bundle.zip") as archive:
+            selector_bytes = archive.read("checkpoint.pt")
+    assert hashlib.sha256(selector_bytes).hexdigest() == cfg["selector_sha256"]
     assert (
         qualified["model_sha256"]
         == "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"

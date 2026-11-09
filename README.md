@@ -125,7 +125,8 @@ unsupported; single-answer counts alone do not establish evidence-dependent reca
 
 ### Experimental local chat page
 
-For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md).
+For the current instruct-capable local chatbot, use the [PowerShell chat guide](docs/local-chat.md)
+and the [6 November laptop audit](docs/research/launch-readiness-20261106.md).
 The [7 November launch readiness gate](docs/research/chat-launch-gate-20261107.md)
 passed the tested local transport/reliability checks but failed answer quality in
 every tested mode. Qwen remains an explicitly experimental local demonstration;
@@ -133,10 +134,11 @@ public deployment is blocked. The page identifies its external model and keeps
 Toruk-owned research checkpoints distinct.
 For the explicitly labeled heuristic TORUK comparison and frozen evaluation commands,
 see [context selection](docs/context-selection.md).
-It runs pinned **Qwen/Qwen2.5-0.5B-Instruct** through the existing web proxy, with
-bounded input/output and per-request token/latency measurements. Qwen supplies the
-language ability; it is not Toruk-trained. The historical M6 checkpoint is missing
-in this checkout; BASELINE works without a selector and makes no efficiency claim.
+The chat path uses an identified pretrained instruct backbone through the web proxy,
+with bounded input/output and per-request token/latency measurements. That backbone
+supplies language ability; it is not Toruk-trained. The 6 November laptop audit
+records absent Qwen weights and verified local SmolLM2 and M6 selector files. BASELINE
+remains the default and makes no efficiency claim.
 See the [fresh audit and real responses](docs/research/next-chat-20261031.md).
 
 #### Ordinary-model smoke fixture only
