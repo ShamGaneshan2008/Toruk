@@ -1,0 +1,32 @@
+{
+  "schema": "qwen-long-history-v3-development-only",
+  "source_checkout": "D:/Toruk",
+  "runtime_python": "D:/Toruk/.venv/Scripts/python.exe",
+  "v2_run": "artifacts/qwen-long-history-v2/attempt-003",
+  "v2_proposed_freeze_sha256": "84f23a07cd78935536b4586885bfb9d20bc78ae7d964a6a2d1ffffc8ccc4fec7",
+  "arms": ["before", "lexical", "after"],
+  "order": ["before", "lexical", "after"],
+  "gate": "Only earlier user turns sharing at least one lexical-v1 non-stopword query term may compete in the unchanged recurrent cosine top-two. Always retain latest three, stream all summaries/state updates in source order, and use the unchanged 512-token whole-turn fit.",
+  "checkpoint_policy": "Reuse exact successor weights, no new training; bind a separate v3 implementation identity and checkpoint provenance manifest.",
+  "rehearsal_stage_wall_seconds": 180,
+  "rehearsal_stage_cpu_seconds": 360,
+  "rehearsal_total_wall_seconds": 540,
+  "rehearsal_total_cpu_seconds": 1080,
+  "request_wall_seconds": 30,
+  "memory_bytes": 6442450944,
+  "disk_bytes": 3221225472,
+  "sample_seconds": 0.05,
+  "heartbeat_seconds": 1,
+  "max_monitor_gap_seconds": 5,
+  "max_suspended_gap_seconds": 2,
+  "monitor_read_attempts": 5,
+  "monitor_read_delay_seconds": 0.01,
+  "generation_retries": 0,
+  "heldout_authorized": false,
+  "development_policy": "Only the exact seven v2 development questions plus first-case deterministic replay. No new questions or held-out contents loaded. Never tune again after v3 answers.",
+  "success_criteria": {
+    "technical": "All three fresh workers finish 7 questions plus replay, match original v2 prompts/answers in before and lexical controls, and pass resource/identity/preservation checks.",
+    "development_diagnostic": "After retains all 6 known required-evidence sets, improves over before's 1/7, has no additional wrong cases versus fresh lexical, and copies the literal and preserves the flower correctly. Report failures of each condition; no research/generalization PASS follows even if all pass."
+  },
+  "cost_policy": "Record every raw prompt/source/token/answer/score/error, proposed and fitted indices, gate trace, CPU/wall selection/generation/request/cold stage, process-tree memory and all failures. Report sums with and without charged replays. Selection tracing is applied to all three arms. No new training; inherited profile/training is disclosed separately without claiming training RAM or amortized efficiency. Shared audit/registration/testing costs remain separately identified."
+}
