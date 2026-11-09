@@ -1,0 +1,79 @@
+{
+  "schema": "m6-successor-v1",
+  "world_seed": 8031,
+  "training_seed": 8041,
+  "development_seed": 8051,
+  "heldout_seed": 8061,
+  "model": {
+    "width": 32,
+    "layers": 2,
+    "heads": 4,
+    "context": 64,
+    "slots": 4,
+    "steps": 12,
+    "optimizer": "AdamW",
+    "learning_rate": 0.003,
+    "objective": "controlled QA + 0.1 history LM"
+  },
+  "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "backbone_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "backbone_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+  "training_seconds": 110,
+  "evaluation_seconds_per_method": 180,
+  "total_seconds": 900,
+  "memory_bytes": 3221225472,
+  "disk_bytes": 3221225472,
+  "max_new_tokens": 32,
+  "max_prompt_tokens": 512,
+  "temperature": 0,
+  "top_p": 1,
+  "device": "CPU float32",
+  "training_threads": 1,
+  "inference_threads": 2,
+  "method_order": [
+    "lexical",
+    "toruk",
+    "recent"
+  ],
+  "baselines": [
+    "recent turns fitted whole-turn to 512 native tokens",
+    "lexical-v1 word overlap: top-two older user turns + latest three turns"
+  ],
+  "data": {
+    "provenance": "Repository-owned synthetic worlds; new authored conversation templates",
+    "training_worlds_per_split": 4,
+    "development_cases": 6,
+    "heldout_cases": 24,
+    "categories": [
+      "distant",
+      "correction",
+      "preservation",
+      "exact",
+      "reference",
+      "missing"
+    ],
+    "gap_pairs": 18,
+    "unknown_and_weather_scaffolding_shared": true,
+    "task_templates_values_ids_disjoint": true
+  },
+  "criteria": {
+    "quality_floor": 0.6,
+    "noninferiority_pp": 5,
+    "no_extra_unsupported_or_stale_proxy": true,
+    "cpu_and_wall_reduction_fraction": 0.1,
+    "comparison": "must pass against BOTH baselines; all new selector profile/training charged to TORUK"
+  },
+  "checkpoints": {
+    "format": "toruk-controlled-v1",
+    "successor_sidecar": "train-worker.json",
+    "historical_m6": "NOT REPRODUCIBLE; never replaced"
+  },
+  "rules": [
+    "No change after registration; freeze after development; heldout once, no favorable retries",
+    "No labels passed to generation; raw selected sources and token IDs retained",
+    "Each method in fresh worker, cold startup and sampled peak memory accounted",
+    "Do not add selector-byte and backbone-native positions as equivalent tokens",
+    "Unknown/obsolete detection is a proxy, not exhaustive semantic assertion review"
+  ],
+  "smoke_replay_first_case": true
+}

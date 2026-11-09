@@ -230,6 +230,13 @@ includes zero. Its efficiency/quality gate fails. Actual-component ablations,
 raw answers, full-history accounting, a primary-source comparison matrix and an
 exploratory draft are retained. This does not establish a general advantage.
 
+The new [m6-successor-v1 experiment](docs/research/m6-successor-v1-results.md)
+trains a fresh small selector separately from missing historical M6. Its frozen
+24-case comparison scores 0/24 for recent context, 7/24 for lexical retrieval
+and 5/24 for TORUK. All quality gates fail, and TORUK costs more than lexical
+retrieval. Raw answers, scorer limitations and full charged costs are retained;
+no useful accuracy/efficiency advantage is established.
+
 ## Evaluation principles
 
 Language quality and factual answers require different measurements. Toruk aims to report ordinary-text loss separately from answers generated without seeing reference answers. Controlled evaluations cover recall, corrections, unchanged facts and unknown answers; reliable learning and capacity boundaries remain research goals.
@@ -250,3 +257,17 @@ Toruk is under active research. This page describes its goals and public develop
 ## Attribution and license
 
 Toruk builds on established causal language modeling and memory research. Ordinary recurrent memory and gating are not claimed as new inventions here. The current implementation uses [PyTorch](https://pytorch.org/). No project license has been specified. There is no published paper; the local replication package contains an exploratory draft, not a submitted or verified positive result.
+
+
+The separate [answer-backbone qualification](docs/research/backbone-qualification-v1-results.md)
+meets its fixed 60% plain-context floor with external Qwen2.5-0.5B-Instruct
+(18/30 overall, 15/25 known facts) within a new 6 GiB local worker budget.
+Exact copying is 0/5 and preservation 1/5; broader chat quality remains
+unestablished. This is a generator qualification, with no Toruk selector or
+selector-efficiency claim. Historical M6 remains NOT REPRODUCIBLE.
+
+
+The [frozen-Qwen long-history comparison](docs/research/qwen-long-history-v1-results.md)
+is BLOCKED before held-out evaluation: Windows idle sleep exhausted the registered
+development wall budget. Partial development answers are retained, with no
+selector advantage or complete cost comparison established.

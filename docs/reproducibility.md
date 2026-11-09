@@ -413,3 +413,35 @@ identical to the registered deterministic split. No final-test model score or
 wholly unseen-test claim is made. The project currently has no
 LICENSE file; no new code/data redistribution permission is granted here. Obtain
 an owner-approved license and artifact transfer before an external release.
+
+
+## New M6 successor v1
+
+The [successor result and exact PowerShell commands](research/m6-successor-v1-results.md)
+recreate a fresh selector and matched long-history comparison in a new output
+directory. The new checkpoint is separately identified and bundled with raw-byte
+provenance; it is never a replacement for missing historical M6. Its joint
+quality/cost gate fails. Use the documented source/dependency identities and
+fresh output paths; existing evidence and held-out started markers are immutable.
+
+
+## Answer backbone qualification v1
+
+The [new qualification report](research/backbone-qualification-v1-results.md)
+links exact Windows commands in `artifacts/backbone-qualification-v1/commands.md`.
+Use a fresh output directory, the sealed source/config and verified pinned
+SmolLM/Qwen files. Register before inference, run development once, freeze, then
+run the fresh held-out set once. Raw role/content inputs are identical across
+candidates; model-native token IDs and generation identities are retained.
+The historical successor 24 questions are offline overlap/audit input only.
+Do not rerun them, modify their scores or use a replacement for historical M6.
+
+
+## Frozen Qwen long-history attempt
+
+See [blocked report](research/qwen-long-history-v1-results.md) and exact PowerShell
+commands in `artifacts/qwen-long-history-v1/commands.md`. The existing fixed budget
+is exhausted; no held-out inference ran. Preserve invalid preflight and sleep/wake
+evidence. A future attempt needs a separately registered bounded budget and an
+awake host (temporary process-scoped sleep prevention, restored afterward).
+Do not retrofit timing subtraction, retry the held-out set or alter frozen scoring.
