@@ -1,0 +1,169 @@
+{
+  "experiment": "m6-successor-v1",
+  "historical_m6": "NOT REPRODUCIBLE",
+  "checkpoint_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+  "results": {
+    "recent": {
+      "cases": 24,
+      "correct": 0,
+      "unsupported_proxy": 4,
+      "stale_proxy": 0,
+      "prompt_tokens": 11914,
+      "output_tokens": 493,
+      "request_wall_seconds": 53.353206099998715,
+      "request_cpu_seconds": 106.78125,
+      "work": {
+        "history_token_positions": 19818,
+        "fit_token_positions": 148500,
+        "backbone_forward_positions": 12383,
+        "selector_byte_positions": 0,
+        "selector_byte_positions_calls": 0
+      },
+      "evidence_retained": 4,
+      "categories": {
+        "correction": {
+          "n": 4,
+          "correct": 0
+        },
+        "distant": {
+          "n": 4,
+          "correct": 0
+        },
+        "exact": {
+          "n": 4,
+          "correct": 0
+        },
+        "missing": {
+          "n": 4,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 4,
+          "correct": 0
+        },
+        "reference": {
+          "n": 4,
+          "correct": 0
+        }
+      },
+      "total_cpu_seconds": 212.109375,
+      "total_wall_seconds": 106.1926704000009,
+      "heldout_peak_rss_bytes": 970653696,
+      "heldout_peak_private_bytes": 1416380416
+    },
+    "lexical": {
+      "cases": 24,
+      "correct": 7,
+      "unsupported_proxy": 4,
+      "stale_proxy": 0,
+      "prompt_tokens": 3538,
+      "output_tokens": 360,
+      "request_wall_seconds": 26.906682199999977,
+      "request_cpu_seconds": 54.109375,
+      "work": {
+        "history_token_positions": 19818,
+        "fit_token_positions": 3538,
+        "backbone_forward_positions": 3874,
+        "selector_byte_positions": 0,
+        "selector_byte_positions_calls": 0
+      },
+      "evidence_retained": 24,
+      "categories": {
+        "correction": {
+          "n": 4,
+          "correct": 4
+        },
+        "distant": {
+          "n": 4,
+          "correct": 3
+        },
+        "exact": {
+          "n": 4,
+          "correct": 0
+        },
+        "missing": {
+          "n": 4,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 4,
+          "correct": 0
+        },
+        "reference": {
+          "n": 4,
+          "correct": 0
+        }
+      },
+      "total_cpu_seconds": 121.890625,
+      "total_wall_seconds": 65.00988100000018,
+      "heldout_peak_rss_bytes": 944893952,
+      "heldout_peak_private_bytes": 1423818752
+    },
+    "toruk": {
+      "cases": 24,
+      "correct": 5,
+      "unsupported_proxy": 4,
+      "stale_proxy": 2,
+      "prompt_tokens": 3539,
+      "output_tokens": 408,
+      "request_wall_seconds": 32.26740610000206,
+      "request_cpu_seconds": 64.9375,
+      "work": {
+        "history_token_positions": 19818,
+        "fit_token_positions": 3539,
+        "backbone_forward_positions": 3923,
+        "selector_byte_positions": 75520,
+        "selector_byte_positions_calls": 1828
+      },
+      "evidence_retained": 19,
+      "categories": {
+        "correction": {
+          "n": 4,
+          "correct": 2
+        },
+        "distant": {
+          "n": 4,
+          "correct": 3
+        },
+        "exact": {
+          "n": 4,
+          "correct": 0
+        },
+        "missing": {
+          "n": 4,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 4,
+          "correct": 0
+        },
+        "reference": {
+          "n": 4,
+          "correct": 0
+        }
+      },
+      "total_cpu_seconds": 152.21875,
+      "total_wall_seconds": 89.40280940000048,
+      "heldout_peak_rss_bytes": 945090560,
+      "heldout_peak_private_bytes": 1419870208
+    }
+  },
+  "gates": {
+    "recent": {
+      "quality_floor": false,
+      "noninferiority": true,
+      "unsupported": false,
+      "cpu_saving": true,
+      "wall_saving": true
+    },
+    "lexical": {
+      "quality_floor": false,
+      "noninferiority": false,
+      "unsupported": false,
+      "cpu_saving": false,
+      "wall_saving": false
+    }
+  },
+  "pass": false,
+  "cost_scope": "Each method's cold setup + development/smoke + heldout; Toruk also pays all new profile/training. CPU includes controller. Shared environment installation/backbone-copy/data-registration excluded and recorded separately. Forward positions use different selector-byte/backbone-native units; not FLOPs/energy."
+}

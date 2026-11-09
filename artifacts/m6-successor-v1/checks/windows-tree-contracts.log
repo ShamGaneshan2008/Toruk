@@ -1,0 +1,19 @@
+..E...                                                                   [100%]
+=================================== ERRORS ====================================
+________ ERROR at setup of test_registration_identity_and_no_overwrite ________
+
+self = WindowsPath('D:/Toruk/.readiness/m6-successor-tree-contracts')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\Toruk\\.readiness\\m6-successor-tree-contracts'
+
+C:\Users\susee\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_m6_successor.py::test_registration_identity_and_no_overwrite
+5 passed, 1 error in 0.13s

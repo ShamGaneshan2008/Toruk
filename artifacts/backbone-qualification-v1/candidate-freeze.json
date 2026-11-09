@@ -1,0 +1,29 @@
+{
+  "registration_sha256": "39d7ecd167451314e840867735c695709764d14d7be7e54700b76dcd25e2481d",
+  "models": {
+    "smollm": {
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "model_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+      "directory": "artifacts/m6-successor-v1/backbone",
+      "license": "Apache-2.0",
+      "license_source": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/blob/12fd25f77366fa6b3b4b768ec3050bf629380bac/README.md"
+    },
+    "qwen": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "model_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+      "directory": "artifacts/backbone-qualification-v1/backbones/qwen",
+      "license": "Apache-2.0",
+      "license_source": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/7ae557604adf67be50417f59c2c2f167def9a775/LICENSE"
+    }
+  },
+  "eligible": [
+    "smollm",
+    "qwen"
+  ],
+  "development_outputs": {
+    "smollm": "6d4c84a7bfce9d7b70ab916b346bbf589657dea552eb0072369cd7661c6833b8",
+    "qwen": "d5dce6f78fe56319c8b6d7f4db95484de40196a8d16c3569f1172c0e14d0f762"
+  }
+}

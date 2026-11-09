@@ -1,0 +1,22 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\qwen_long_history.py",
+    "worker",
+    "--run",
+    "D:\\Toruk\\artifacts\\qwen-long-history-v1\\execution-v2",
+    "--split",
+    "development",
+    "--arm",
+    "toruk"
+  ],
+  "returncode": 1,
+  "failure": "elapsed cap",
+  "wall_seconds": 1255.8010113,
+  "cpu_seconds": 25.0625,
+  "controller_cpu_seconds": 3.734375,
+  "peak_rss_bytes": 2392236032,
+  "peak_private_bytes": 4055871488,
+  "peak_disk_bytes": 1002517177,
+  "cpu_scope": "controller integrity checks + sampled launcher + final worker lifetime CPU"
+}

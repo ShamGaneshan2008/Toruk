@@ -1,0 +1,10 @@
+{
+  "status": "INVALID DEVELOPMENT PREFLIGHT",
+  "failure": "Windows PermissionError during atomic progress-file read; controller lost monitoring/cost result",
+  "heldout_generation": false,
+  "development_answers_inspected_for_tuning": false,
+  "mechanism_or_data_change": false,
+  "original_worker_completed": true,
+  "original_outputs_preserved_in_parent": true,
+  "resolution": "Bounded progress-read retries and guaranteed child cleanup; fresh execution registration before heldout"
+}

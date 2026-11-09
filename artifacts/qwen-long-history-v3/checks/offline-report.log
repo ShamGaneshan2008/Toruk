@@ -1,0 +1,192 @@
+{
+  "correct": {
+    "before": 1,
+    "lexical": 7,
+    "after": 5
+  },
+  "criteria": {
+    "technical_complete_and_controls_reproduced": true,
+    "after_retains_all_known_evidence": true,
+    "after_improves_over_before": true,
+    "no_case_lost_against_lexical": false,
+    "exact_copy": true,
+    "preservation": true
+  },
+  "cases": [
+    {
+      "kind": "distant",
+      "expected": "copper quay",
+      "before": {
+        "answer": "delivery ledger LHD-4F9D48AA0B8B",
+        "prompt_tokens": 150,
+        "selector_cpu_seconds": 0.59375,
+        "selector_wall_seconds": 0.16147930000079214,
+        "failure": "generator failed with required evidence present"
+      },
+      "lexical": {
+        "answer": "Delivery ledger LHD-4F9D48AA0B8B assigned the meeting point copper quay.",
+        "prompt_tokens": 173,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0009730000001582084,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "delivery ledger LHD-4F9D48AA0B8B",
+        "prompt_tokens": 145,
+        "selector_cpu_seconds": 0.6875,
+        "selector_wall_seconds": 0.1394245999999839,
+        "failure": "generator failed with required evidence present"
+      }
+    },
+    {
+      "kind": "correction",
+      "expected": "linen cabinet",
+      "before": {
+        "answer": "archive",
+        "prompt_tokens": 146,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.10486549999950512,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "LHD-BC47D0CEDA8C is stored in the linen cabinet.",
+        "prompt_tokens": 173,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0013340000004973263,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "LHD-BC47D0CEDA8C is stored in the linen cabinet.",
+        "prompt_tokens": 173,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.11566820000007283,
+        "failure": "correct"
+      }
+    },
+    {
+      "kind": "distractor",
+      "expected": "mulberry",
+      "before": {
+        "answer": "UNKNOWN",
+        "prompt_tokens": 132,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.1087299000009807,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "mulberry",
+        "prompt_tokens": 188,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0009279000005335547,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "mulberry",
+        "prompt_tokens": 188,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.10509259999889764,
+        "failure": "correct"
+      }
+    },
+    {
+      "kind": "literal",
+      "expected": "DEV/PUTYAOKYO:  R-4!",
+      "before": {
+        "answer": "Log noted",
+        "prompt_tokens": 129,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.10765720000017609,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "DEV/PUTYAOKYO:  R-4!",
+        "prompt_tokens": 180,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.000733500000933418,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "DEV/PUTYAOKYO:  R-4!",
+        "prompt_tokens": 152,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.10755990000143356,
+        "failure": "correct"
+      }
+    },
+    {
+      "kind": "preservation",
+      "expected": "hyacinth",
+      "before": {
+        "answer": "UNKNOWN",
+        "prompt_tokens": 172,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.09849390000090352,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "flower hyacinth",
+        "prompt_tokens": 183,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0006886999999551335,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "flower hyacinth",
+        "prompt_tokens": 183,
+        "selector_cpu_seconds": 0.203125,
+        "selector_wall_seconds": 0.10904579999987618,
+        "failure": "correct"
+      }
+    },
+    {
+      "kind": "reference",
+      "expected": "velvet depot",
+      "before": {
+        "answer": "crate LHD-C0BA0B7AB5DF",
+        "prompt_tokens": 160,
+        "selector_cpu_seconds": 0.296875,
+        "selector_wall_seconds": 0.16456380000090576,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "velvet depot",
+        "prompt_tokens": 154,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0008827000001474516,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "velvet depot",
+        "prompt_tokens": 126,
+        "selector_cpu_seconds": 0.234375,
+        "selector_wall_seconds": 0.11873979999836592,
+        "failure": "correct"
+      }
+    },
+    {
+      "kind": "missing",
+      "expected": "UNKNOWN",
+      "before": {
+        "answer": "UNKNOWN",
+        "prompt_tokens": 157,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.09314650000123947,
+        "failure": "correct"
+      },
+      "lexical": {
+        "answer": "UNKNOWN",
+        "prompt_tokens": 180,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0006405000003724126,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "PLAIN",
+        "prompt_tokens": 152,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.10904670000127226,
+        "failure": "unsupported or unresolved question answered without valid abstention"
+      }
+    }
+  ]
+}

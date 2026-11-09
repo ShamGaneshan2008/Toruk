@@ -1,0 +1,12 @@
+{
+  "scope": "Engineering preparation before any v2 model inference",
+  "initial_unwrapped_check_seconds": [1.9516346, 0.5304617, 2.9757846],
+  "initial_findings": [
+    "New controller initially had Ruff long-line errors; formatting and literal splitting fixed them before registration.",
+    "A test used a formatting-sensitive source substring and failed after formatting; replaced with a behavioral CLI rejection check before registration.",
+    "The last static pass found one remaining long literal; split before registration."
+  ],
+  "candidate_inference_during_preparation": false,
+  "v1_untouched": true,
+  "accounting_limit": "These are observed combined tool-command wall durations, not complete editing CPU or an experiment cost. Recorded subsequent check wrappers provide individual timings. General engineering costs remain separate from model arm comparisons."
+}

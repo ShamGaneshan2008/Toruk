@@ -1,0 +1,382 @@
+[
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-binding-0",
+    "split": "heldout",
+    "kind": "binding",
+    "tag": "QUALH-C21FD625BB",
+    "auxiliary": "AUXH-3B6C72AE69",
+    "expected": "maroon",
+    "alternatives": [
+      "indigo"
+    ],
+    "question": "Which paint is assigned to item QUALH-C21FD625BB?",
+    "prompt": "Reference:\nA register assigns maroon paint to item QUALH-C21FD625BB. A separate item AUXH-3B6C72AE69 has indigo paint.\n\nQuestion:\nWhich paint is assigned to item QUALH-C21FD625BB?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-binding-1",
+    "split": "heldout",
+    "kind": "binding",
+    "tag": "QUALH-9CD49A56CB",
+    "auxiliary": "AUXH-3574283AF2",
+    "expected": "indigo",
+    "alternatives": [
+      "bronze"
+    ],
+    "question": "Which paint is assigned to item QUALH-9CD49A56CB?",
+    "prompt": "Reference:\nA register assigns indigo paint to item QUALH-9CD49A56CB. A separate item AUXH-3574283AF2 has bronze paint.\n\nQuestion:\nWhich paint is assigned to item QUALH-9CD49A56CB?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-binding-2",
+    "split": "heldout",
+    "kind": "binding",
+    "tag": "QUALH-17C5A91D23",
+    "auxiliary": "AUXH-C7ACB0428F",
+    "expected": "bronze",
+    "alternatives": [
+      "magenta"
+    ],
+    "question": "Which paint is assigned to item QUALH-17C5A91D23?",
+    "prompt": "Reference:\nA register assigns bronze paint to item QUALH-17C5A91D23. A separate item AUXH-C7ACB0428F has magenta paint.\n\nQuestion:\nWhich paint is assigned to item QUALH-17C5A91D23?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-binding-3",
+    "split": "heldout",
+    "kind": "binding",
+    "tag": "QUALH-47009901DB",
+    "auxiliary": "AUXH-0415A06208",
+    "expected": "magenta",
+    "alternatives": [
+      "turquoise"
+    ],
+    "question": "Which paint is assigned to item QUALH-47009901DB?",
+    "prompt": "Reference:\nA register assigns magenta paint to item QUALH-47009901DB. A separate item AUXH-0415A06208 has turquoise paint.\n\nQuestion:\nWhich paint is assigned to item QUALH-47009901DB?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-binding-4",
+    "split": "heldout",
+    "kind": "binding",
+    "tag": "QUALH-FF9DDF5E71",
+    "auxiliary": "AUXH-F5B9AB39F7",
+    "expected": "turquoise",
+    "alternatives": [
+      "maroon"
+    ],
+    "question": "Which paint is assigned to item QUALH-FF9DDF5E71?",
+    "prompt": "Reference:\nA register assigns turquoise paint to item QUALH-FF9DDF5E71. A separate item AUXH-F5B9AB39F7 has maroon paint.\n\nQuestion:\nWhich paint is assigned to item QUALH-FF9DDF5E71?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-correction-0",
+    "split": "heldout",
+    "kind": "correction",
+    "tag": "QUALH-0B3C6DFC36",
+    "auxiliary": "AUXH-AEE823712A",
+    "expected": "Monday",
+    "alternatives": [
+      "Wednesday"
+    ],
+    "question": "Which weekday is now official for roster QUALH-0B3C6DFC36?",
+    "prompt": "Reference:\nRoster QUALH-0B3C6DFC36 originally scheduled service for Wednesday. A revision notice replaces that weekday with Monday.\n\nQuestion:\nWhich weekday is now official for roster QUALH-0B3C6DFC36?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-correction-1",
+    "split": "heldout",
+    "kind": "correction",
+    "tag": "QUALH-244CD56574",
+    "auxiliary": "AUXH-2599D860EE",
+    "expected": "Wednesday",
+    "alternatives": [
+      "Thursday"
+    ],
+    "question": "Which weekday is now official for roster QUALH-244CD56574?",
+    "prompt": "Reference:\nRoster QUALH-244CD56574 originally scheduled service for Thursday. A revision notice replaces that weekday with Wednesday.\n\nQuestion:\nWhich weekday is now official for roster QUALH-244CD56574?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-correction-2",
+    "split": "heldout",
+    "kind": "correction",
+    "tag": "QUALH-0D93AE5D81",
+    "auxiliary": "AUXH-2326318D3C",
+    "expected": "Thursday",
+    "alternatives": [
+      "Friday"
+    ],
+    "question": "Which weekday is now official for roster QUALH-0D93AE5D81?",
+    "prompt": "Reference:\nRoster QUALH-0D93AE5D81 originally scheduled service for Friday. A revision notice replaces that weekday with Thursday.\n\nQuestion:\nWhich weekday is now official for roster QUALH-0D93AE5D81?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-correction-3",
+    "split": "heldout",
+    "kind": "correction",
+    "tag": "QUALH-256D9CA64C",
+    "auxiliary": "AUXH-4A6B32606B",
+    "expected": "Friday",
+    "alternatives": [
+      "Sunday"
+    ],
+    "question": "Which weekday is now official for roster QUALH-256D9CA64C?",
+    "prompt": "Reference:\nRoster QUALH-256D9CA64C originally scheduled service for Sunday. A revision notice replaces that weekday with Friday.\n\nQuestion:\nWhich weekday is now official for roster QUALH-256D9CA64C?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-correction-4",
+    "split": "heldout",
+    "kind": "correction",
+    "tag": "QUALH-77CB5A76D6",
+    "auxiliary": "AUXH-DE45F3EF6C",
+    "expected": "Sunday",
+    "alternatives": [
+      "Monday"
+    ],
+    "question": "Which weekday is now official for roster QUALH-77CB5A76D6?",
+    "prompt": "Reference:\nRoster QUALH-77CB5A76D6 originally scheduled service for Monday. A revision notice replaces that weekday with Sunday.\n\nQuestion:\nWhich weekday is now official for roster QUALH-77CB5A76D6?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-preservation-0",
+    "split": "heldout",
+    "kind": "preservation",
+    "tag": "QUALH-BFD6356696",
+    "auxiliary": "AUXH-94D518DADF",
+    "expected": "fig",
+    "alternatives": [],
+    "question": "What flavor is retained in catalog QUALH-BFD6356696?",
+    "prompt": "Reference:\nCatalog QUALH-BFD6356696 records flavor fig and file class SOFT. Only the file class is revised to HARD; the flavor does not change.\n\nQuestion:\nWhat flavor is retained in catalog QUALH-BFD6356696?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-preservation-1",
+    "split": "heldout",
+    "kind": "preservation",
+    "tag": "QUALH-D0D17CC9E0",
+    "auxiliary": "AUXH-C1709ABEB4",
+    "expected": "guava",
+    "alternatives": [],
+    "question": "What flavor is retained in catalog QUALH-D0D17CC9E0?",
+    "prompt": "Reference:\nCatalog QUALH-D0D17CC9E0 records flavor guava and file class SOFT. Only the file class is revised to HARD; the flavor does not change.\n\nQuestion:\nWhat flavor is retained in catalog QUALH-D0D17CC9E0?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-preservation-2",
+    "split": "heldout",
+    "kind": "preservation",
+    "tag": "QUALH-C4071BFC46",
+    "auxiliary": "AUXH-F63E92E185",
+    "expected": "plum",
+    "alternatives": [],
+    "question": "What flavor is retained in catalog QUALH-C4071BFC46?",
+    "prompt": "Reference:\nCatalog QUALH-C4071BFC46 records flavor plum and file class SOFT. Only the file class is revised to HARD; the flavor does not change.\n\nQuestion:\nWhat flavor is retained in catalog QUALH-C4071BFC46?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-preservation-3",
+    "split": "heldout",
+    "kind": "preservation",
+    "tag": "QUALH-6D542D73E7",
+    "auxiliary": "AUXH-26DFF3475F",
+    "expected": "tangerine",
+    "alternatives": [],
+    "question": "What flavor is retained in catalog QUALH-6D542D73E7?",
+    "prompt": "Reference:\nCatalog QUALH-6D542D73E7 records flavor tangerine and file class SOFT. Only the file class is revised to HARD; the flavor does not change.\n\nQuestion:\nWhat flavor is retained in catalog QUALH-6D542D73E7?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-preservation-4",
+    "split": "heldout",
+    "kind": "preservation",
+    "tag": "QUALH-9CCE0823A6",
+    "auxiliary": "AUXH-AD07EDD047",
+    "expected": "coconut",
+    "alternatives": [],
+    "question": "What flavor is retained in catalog QUALH-9CCE0823A6?",
+    "prompt": "Reference:\nCatalog QUALH-9CCE0823A6 records flavor coconut and file class SOFT. Only the file class is revised to HARD; the flavor does not change.\n\nQuestion:\nWhat flavor is retained in catalog QUALH-9CCE0823A6?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-literal-0",
+    "split": "heldout",
+    "kind": "literal",
+    "tag": "QUALH-449FA210BA",
+    "auxiliary": "AUXH-B401FAEF87",
+    "expected": "QH[AHISIXC]  | 8z",
+    "alternatives": [],
+    "question": "Reproduce only the engraving text attached to QUALH-449FA210BA, exactly.",
+    "prompt": "Reference:\nAn engraving attached to QUALH-449FA210BA is \"QH[AHISIXC]  | 8z\".\n\nQuestion:\nReproduce only the engraving text attached to QUALH-449FA210BA, exactly.\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-literal-1",
+    "split": "heldout",
+    "kind": "literal",
+    "tag": "QUALH-B6A061CEFF",
+    "auxiliary": "AUXH-3B0CE55287",
+    "expected": "QH[JLCLNZN]  | 8z",
+    "alternatives": [],
+    "question": "Reproduce only the engraving text attached to QUALH-B6A061CEFF, exactly.",
+    "prompt": "Reference:\nAn engraving attached to QUALH-B6A061CEFF is \"QH[JLCLNZN]  | 8z\".\n\nQuestion:\nReproduce only the engraving text attached to QUALH-B6A061CEFF, exactly.\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-literal-2",
+    "split": "heldout",
+    "kind": "literal",
+    "tag": "QUALH-0CC2CEB43C",
+    "auxiliary": "AUXH-29FC46C34C",
+    "expected": "QH[GALKXQY]  | 8z",
+    "alternatives": [],
+    "question": "Reproduce only the engraving text attached to QUALH-0CC2CEB43C, exactly.",
+    "prompt": "Reference:\nAn engraving attached to QUALH-0CC2CEB43C is \"QH[GALKXQY]  | 8z\".\n\nQuestion:\nReproduce only the engraving text attached to QUALH-0CC2CEB43C, exactly.\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-literal-3",
+    "split": "heldout",
+    "kind": "literal",
+    "tag": "QUALH-C3D34C55CD",
+    "auxiliary": "AUXH-75BF23C715",
+    "expected": "QH[NFTLPGA]  | 8z",
+    "alternatives": [],
+    "question": "Reproduce only the engraving text attached to QUALH-C3D34C55CD, exactly.",
+    "prompt": "Reference:\nAn engraving attached to QUALH-C3D34C55CD is \"QH[NFTLPGA]  | 8z\".\n\nQuestion:\nReproduce only the engraving text attached to QUALH-C3D34C55CD, exactly.\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-literal-4",
+    "split": "heldout",
+    "kind": "literal",
+    "tag": "QUALH-DA669F465F",
+    "auxiliary": "AUXH-EF2FB67B88",
+    "expected": "QH[VVVYXZN]  | 8z",
+    "alternatives": [],
+    "question": "Reproduce only the engraving text attached to QUALH-DA669F465F, exactly.",
+    "prompt": "Reference:\nAn engraving attached to QUALH-DA669F465F is \"QH[VVVYXZN]  | 8z\".\n\nQuestion:\nReproduce only the engraving text attached to QUALH-DA669F465F, exactly.\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-reference-0",
+    "split": "heldout",
+    "kind": "reference",
+    "tag": "QUALH-61649003DC",
+    "auxiliary": "AUXH-40A6FC2179",
+    "expected": "Nora",
+    "alternatives": [],
+    "question": "Who is the custodian of the package on the bench?",
+    "prompt": "Reference:\nA technician places package QUALH-61649003DC on a bench. The note about that package names Nora as its custodian.\n\nQuestion:\nWho is the custodian of the package on the bench?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-reference-1",
+    "split": "heldout",
+    "kind": "reference",
+    "tag": "QUALH-A708EE5B1A",
+    "auxiliary": "AUXH-1BFC3F3CDD",
+    "expected": "Emil",
+    "alternatives": [],
+    "question": "Who is the custodian of the package on the bench?",
+    "prompt": "Reference:\nA technician places package QUALH-A708EE5B1A on a bench. The note about that package names Emil as its custodian.\n\nQuestion:\nWho is the custodian of the package on the bench?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-reference-2",
+    "split": "heldout",
+    "kind": "reference",
+    "tag": "QUALH-981DA50CB9",
+    "auxiliary": "AUXH-15BE09E4DD",
+    "expected": "Soren",
+    "alternatives": [],
+    "question": "Who is the custodian of the package on the bench?",
+    "prompt": "Reference:\nA technician places package QUALH-981DA50CB9 on a bench. The note about that package names Soren as its custodian.\n\nQuestion:\nWho is the custodian of the package on the bench?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-reference-3",
+    "split": "heldout",
+    "kind": "reference",
+    "tag": "QUALH-9872FE3517",
+    "auxiliary": "AUXH-24C84C5545",
+    "expected": "Ada",
+    "alternatives": [],
+    "question": "Who is the custodian of the package on the bench?",
+    "prompt": "Reference:\nA technician places package QUALH-9872FE3517 on a bench. The note about that package names Ada as its custodian.\n\nQuestion:\nWho is the custodian of the package on the bench?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-reference-4",
+    "split": "heldout",
+    "kind": "reference",
+    "tag": "QUALH-FAB0FED08C",
+    "auxiliary": "AUXH-CD1AA79B10",
+    "expected": "Milan",
+    "alternatives": [],
+    "question": "Who is the custodian of the package on the bench?",
+    "prompt": "Reference:\nA technician places package QUALH-FAB0FED08C on a bench. The note about that package names Milan as its custodian.\n\nQuestion:\nWho is the custodian of the package on the bench?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-missing-0",
+    "split": "heldout",
+    "kind": "missing",
+    "tag": "QUALH-009B76777D",
+    "auxiliary": "AUXH-348B490A41",
+    "expected": "UNKNOWN",
+    "alternatives": [],
+    "question": "Which access phrase does sheet QUALH-009B76777D specify?",
+    "prompt": "Reference:\nSheet QUALH-009B76777D specifies a crate label SOFT and includes no entry for its access phrase.\n\nQuestion:\nWhich access phrase does sheet QUALH-009B76777D specify?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-missing-1",
+    "split": "heldout",
+    "kind": "missing",
+    "tag": "QUALH-8BE7442B50",
+    "auxiliary": "AUXH-ECA4EB43CF",
+    "expected": "UNKNOWN",
+    "alternatives": [],
+    "question": "Which access phrase does sheet QUALH-8BE7442B50 specify?",
+    "prompt": "Reference:\nSheet QUALH-8BE7442B50 specifies a crate label SOFT and includes no entry for its access phrase.\n\nQuestion:\nWhich access phrase does sheet QUALH-8BE7442B50 specify?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-missing-2",
+    "split": "heldout",
+    "kind": "missing",
+    "tag": "QUALH-A90A1CF076",
+    "auxiliary": "AUXH-283AC1B58C",
+    "expected": "UNKNOWN",
+    "alternatives": [],
+    "question": "Which access phrase does sheet QUALH-A90A1CF076 specify?",
+    "prompt": "Reference:\nSheet QUALH-A90A1CF076 specifies a crate label SOFT and includes no entry for its access phrase.\n\nQuestion:\nWhich access phrase does sheet QUALH-A90A1CF076 specify?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-missing-3",
+    "split": "heldout",
+    "kind": "missing",
+    "tag": "QUALH-17FB4CE728",
+    "auxiliary": "AUXH-CEFA4BA31E",
+    "expected": "UNKNOWN",
+    "alternatives": [],
+    "question": "Which access phrase does sheet QUALH-17FB4CE728 specify?",
+    "prompt": "Reference:\nSheet QUALH-17FB4CE728 specifies a crate label SOFT and includes no entry for its access phrase.\n\nQuestion:\nWhich access phrase does sheet QUALH-17FB4CE728 specify?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-heldout-missing-4",
+    "split": "heldout",
+    "kind": "missing",
+    "tag": "QUALH-1A7F7D5BD1",
+    "auxiliary": "AUXH-377C2699AD",
+    "expected": "UNKNOWN",
+    "alternatives": [],
+    "question": "Which access phrase does sheet QUALH-1A7F7D5BD1 specify?",
+    "prompt": "Reference:\nSheet QUALH-1A7F7D5BD1 specifies a crate label SOFT and includes no entry for its access phrase.\n\nQuestion:\nWhich access phrase does sheet QUALH-1A7F7D5BD1 specify?\n\nAnswer:"
+  }
+]

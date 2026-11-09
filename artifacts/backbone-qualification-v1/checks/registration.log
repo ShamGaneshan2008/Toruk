@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Toruk\scripts\qualify_answer_backbone.py", line 763, in <module>
+    main()
+  File "D:\Toruk\scripts\qualify_answer_backbone.py", line 735, in main
+    register(run, args.config.resolve())
+  File "D:\Toruk\scripts\qualify_answer_backbone.py", line 298, in register
+    raise ValueError("tokenizer must return a flat integer token sequence")
+ValueError: tokenizer must return a flat integer token sequence

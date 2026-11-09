@@ -1,0 +1,31 @@
+{
+  "branch": "main",
+  "commit": "25d4ec09e01397b43b9b16ad08faeca7cdb22eb0",
+  "status_sb": "## main...origin/main\n M .gitattributes\n M .gitignore\n M README.md\n M docs/architecture.md\n M docs/experiments.md\n M docs/reproducibility.md\n M pyproject.toml\n?? .idea/Toruk.iml\n?? .idea/inspectionProfiles/\n?? .idea/misc.xml\n?? .idea/modules.xml\n?? .idea/vcs.xml\n?? artifacts/m6-successor-v1/\n?? configs/m6-successor-v1-execution.json\n?? configs/m6-successor-v1.json\n?? docs/research/m6-successor-v1-protocol.md\n?? docs/research/m6-successor-v1-results.md\n?? scripts/m6_successor.py\n?? tests/test_m6_successor.py\n",
+  "idea_files_verified_unchanged": 8,
+  "original_expected_hash_unchanged": true,
+  "historical_M6": "NOT REPRODUCIBLE",
+  "new_checkpoint_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+  "new_experiment_verdict": "FAIL",
+  "heldout_requests": 72,
+  "heldout_retries": 0,
+  "registered_execution_bindings_verified": true,
+  "production_src_diff": "",
+  "disk_bytes_experiment": 281138026,
+  "notes": "Initial launcher-only memory attempt retained as invalid preflight; a documented technical correction preceded all held-out inference. All preflight CPU/wall charges retained.",
+  "staged_diff_empty": true,
+  "historical_hash_bindings_checked": [
+    "training_metrics",
+    "run_manifest",
+    "handoff_manifest",
+    "chat_release"
+  ],
+  "semantic_diff_files": [
+    ".gitattributes",
+    ".gitignore",
+    "README.md",
+    "docs/architecture.md",
+    "docs/experiments.md",
+    "docs/reproducibility.md"
+  ]
+}

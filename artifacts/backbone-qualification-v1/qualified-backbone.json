@@ -1,0 +1,35 @@
+{
+  "schema": "backbone-qualification-v1",
+  "candidate": "qwen",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "model_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+  "directory": "artifacts/backbone-qualification-v1/backbones/qwen",
+  "license": "Apache-2.0",
+  "license_source": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/7ae557604adf67be50417f59c2c2f167def9a775/LICENSE",
+  "system_instructions": "Use only the supplied reference to answer its question, including explicit corrections. Return just the requested value without explanation. If the requested information is missing, reply UNKNOWN. When asked to copy a quotation, preserve its text exactly.",
+  "registration_sha256": "39d7ecd167451314e840867735c695709764d14d7be7e54700b76dcd25e2481d",
+  "generation_policy": {
+    "do_sample": false,
+    "temperature_request": 0,
+    "top_p": 1,
+    "repetition_penalty": 1.0,
+    "num_beams": 1,
+    "use_cache": true,
+    "max_new_tokens": 64
+  },
+  "budget": {
+    "memory_bytes": 6442450944,
+    "disk_bytes": 3221225472,
+    "phase_seconds": 300,
+    "total_seconds": 900,
+    "request_seconds": 30
+  },
+  "scores": {
+    "cases": 30,
+    "correct": 18,
+    "known_cases": 25,
+    "known_correct": 15
+  },
+  "status": "Qualified on this new fixed plain-context set; no Toruk-selector contribution"
+}

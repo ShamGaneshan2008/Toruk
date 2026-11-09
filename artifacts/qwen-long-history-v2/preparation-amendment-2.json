@@ -1,0 +1,12 @@
+{
+  "before_any_v2_model_inference": true,
+  "retained_attempt": "attempt-002",
+  "failure": "Controller clock preflight failed before the rehearsal-started marker, power request or worker launch: precise unbiased-time API is exported by KernelBase.dll on this host.",
+  "retained_log": "checks/rehearsal.log",
+  "measured_wrapper_wall_seconds": 0.13317490000008547,
+  "preflight_cpu_seconds": null,
+  "change": "Use the verified KernelBase.dll export and add a real Windows clock contract. No scientific input, scoring, resource or retry policy change.",
+  "next_output": "attempt-003",
+  "model_worker_launches_so_far": 0,
+  "accounting": "Retain this failed controller preflight as shared setup work; unknown CPU is disclosed. No model or held-out retry took place."
+}

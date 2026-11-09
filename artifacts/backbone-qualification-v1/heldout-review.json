@@ -1,0 +1,490 @@
+{
+  "scope": "Offline saved-answer interpretation only; primary scores and gate unchanged; no model rerun",
+  "rows": [
+    {
+      "id": "bq1-heldout-binding-0",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "A register assigns maroon paint to item QUALH-C21FD625BB.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-binding-1",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "A register assigns indigo paint to item QUALH-9CD49A56CB.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-binding-2",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "A register assigns bronze paint to item QUALH-17C5A91D23. A separate item AUXH-C7ACB0428F has magenta paint.",
+      "review": "conservative scorer rejects competing value in truthful copied source; no factual binding error",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-binding-3",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "A register assigns turquoise paint to item QUALH-47009901DB.",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-binding-4",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "A register assigns turquoise paint to item QUALH-FF9DDF5E71.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-0",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The official weekday for roster QUALH-0B3C6DFC36 is Monday.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-1",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The official weekday for roster QUALH-244CD56574 is Wednesday.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-2",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The official weekday for roster QUALH-0D93AE5D81 is Thursday.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-3",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The official weekday for roster QUALH-256D9CA64C is Friday.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-4",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "Sunday",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-preservation-0",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The flavor in catalog QUALH-BFD6356696 is HARD.",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-preservation-1",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "Catalog QUALH-D0D17CC9E0 records flavor guava and file class SOFT.",
+      "review": "requested flavor correct, but extra file-class assertion stale",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-preservation-2",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The flavor retained in catalog QUALH-C4071BFC46 is HARD.",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-preservation-3",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The flavor in catalog QUALH-6D542D73E7 is HARD.",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-preservation-4",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "Catalog QUALH-9CCE0823A6 records flavor coconut and file class SOFT.",
+      "review": "requested flavor correct, but extra file-class assertion stale",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-literal-0",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "An engraving attached to QUALH-449FA210BA is \"QH[AHISIXC]  | 8z\".",
+      "review": "exact text copied inside explanatory sentence; whole-answer contract fails",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-1",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "An engraving attached to QUALH-B6A061CEFF is \"QH[JLCLNZN]  | 8z\".",
+      "review": "exact text copied inside explanatory sentence; whole-answer contract fails",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-2",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "An engraving attached to QUALH-0CC2CEB43C is \"QH[GALKXQY]  | 8z\".",
+      "review": "exact text copied inside explanatory sentence; whole-answer contract fails",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-3",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "An engraving attached to QUALH-C3D34C55CD is \"QH[NFTLPGA]  | 8z\".",
+      "review": "exact text copied inside explanatory sentence; whole-answer contract fails",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-4",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "An engraving attached to QUALH-DA669F465F is \"QH[VVVYXZN]  | 8z\".",
+      "review": "exact text copied inside explanatory sentence; whole-answer contract fails",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-0",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The custodian of the package on the bench is Nora.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-1",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The custodian of the package on the bench is Emil.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-2",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The custodian of the package on the bench is Soren.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-3",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The technician places package QUALH-9872FE3517 on a bench. The note about that package names Ada as its custodian.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-4",
+      "candidate": "smollm",
+      "primary_correct": true,
+      "answer": "The technician places the package QUALH-FAB0FED08C on a bench. The note about the package names Milan as its custodian.",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-missing-0",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The access phrase for sheet QUALH-009B76777D is \"SOFT\".",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-missing-1",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The access phrase for sheet QUALH-8BE7442B50 is \"SOFT\".",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-missing-2",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The access phrase for sheet QUALH-A90A1CF076 is \"SOFT\".",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-missing-3",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The access phrase for sheet QUALH-17FB4CE728 is \"SOFT\".",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-missing-4",
+      "candidate": "smollm",
+      "primary_correct": false,
+      "answer": "The access phrase for sheet QUALH-1A7F7D5BD1 is \"SOFT\".",
+      "review": "wrong field or competing value asserted",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-binding-0",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "maroon",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-binding-1",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "indigo paint",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-binding-2",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "bronze paint",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-binding-3",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "magenta",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-binding-4",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "turquoise",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-0",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "UNKNOWN",
+      "review": "unnecessary abstention with complete evidence",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-1",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Wednesday",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-2",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Thursday",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-3",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Friday",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-correction-4",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Sunday",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-preservation-0",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "SOFT",
+      "review": "wrong field asserted as requested value",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-preservation-1",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "SOFT",
+      "review": "wrong field asserted as requested value",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-preservation-2",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "SOFT",
+      "review": "wrong field asserted as requested value",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-preservation-3",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "tangerine",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-preservation-4",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "SOFT",
+      "review": "wrong field asserted as requested value",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-literal-0",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "QH[AHISIXC] 8z",
+      "review": "lost pipe and exact spacing",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-1",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "QH[JLCLNZN] 8z",
+      "review": "lost pipe and exact spacing",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-2",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "QH[GALKXQY] 8z",
+      "review": "lost pipe and exact spacing",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-3",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "QH[NFTLPGA] 8z",
+      "review": "lost pipe and exact spacing",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-literal-4",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "QH[VVVYXZN] 8z",
+      "review": "lost pipe and exact spacing",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-0",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Nora",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-1",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Emil",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-2",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Soren",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-3",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Ada",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-reference-4",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "Milan",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-missing-0",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "UNKNOWN",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-missing-1",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "UNKNOWN",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    },
+    {
+      "id": "bq1-heldout-missing-2",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "SOFT",
+      "review": "wrong field asserted as requested value",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-missing-3",
+      "candidate": "qwen",
+      "primary_correct": false,
+      "answer": "SOFT",
+      "review": "wrong field asserted as requested value",
+      "reviewed_false_assertion": true
+    },
+    {
+      "id": "bq1-heldout-missing-4",
+      "candidate": "qwen",
+      "primary_correct": true,
+      "answer": "UNKNOWN",
+      "review": "correct requested fact",
+      "reviewed_false_assertion": false
+    }
+  ],
+  "false_assertion_rows": {
+    "smollm": 11,
+    "qwen": 6
+  },
+  "limitations": "Automated wrong-listed-value and unsupported-response fields are proxies, not exhaustive false-assertion counts."
+}

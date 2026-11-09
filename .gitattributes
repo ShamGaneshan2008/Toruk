@@ -85,3 +85,16 @@
 /configs/qwen-long-history-v1.json text eol=lf
 /docs/research/qwen-long-history-v1-protocol.md text eol=lf
 /docs/research/qwen-long-history-v1-results.md text eol=lf
+
+# Portable evidence retains as-run bytes, including JSON and source snapshots.
+/artifacts/qwen-long-history-v2/** -text whitespace=cr-at-eol
+/artifacts/qwen-long-history-v3/** -text whitespace=cr-at-eol
+/artifacts/research-evidence-portable-v1/** -text whitespace=cr-at-eol
+/scripts/verify_portable_research_evidence.py text eol=lf
+/tests/test_portable_research_evidence.py text eol=lf
+/.gitattributes text eol=lf
+# Preserve as-run EOFs and upstream model-card whitespace; hashes remain authoritative.
+/artifacts/backbone-qualification-v1/initial-files/pyproject.toml -whitespace
+/artifacts/qwen-long-history-v1/initial-files/pyproject.toml -whitespace
+/artifacts/research-evidence-portable-v1/tokenizers/qwen/README.md -whitespace
+/artifacts/research-evidence-portable-v1/tokenizers/smollm/README.md -whitespace

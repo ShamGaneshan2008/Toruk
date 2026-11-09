@@ -1,0 +1,12 @@
+{
+  "before_any_v2_model_inference": true,
+  "failed_attempt": "attempt-001",
+  "failure": "Read-only preservation inventory encountered PermissionError on an existing D-drive verification wheel. No model worker or rehearsal registration was created.",
+  "retained_log": "checks/prepare.log",
+  "measured_wrapper_wall_seconds": 6.392667800000709,
+  "preparation_cpu_seconds": null,
+  "change": "Inventory now retains unreadable paths and initial size/mtime without claiming verified content; all readable files still receive SHA-256 checks. No model, selector, question, scorer, cap, retry or interruption policy change.",
+  "next_output": "attempt-002",
+  "not_a_model_retry": true,
+  "accounting": "Failed preparation is retained as shared engineering/setup work; unknown CPU prevents an exact all-inclusive preparation CPU total. No time is erased or added to v1."
+}

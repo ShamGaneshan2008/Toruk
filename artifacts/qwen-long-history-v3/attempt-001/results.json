@@ -1,0 +1,1521 @@
+{
+  "status": "DEVELOPMENT ONLY; no research/generalization verdict",
+  "arms": {
+    "before": {
+      "correct": 1,
+      "cases": 7,
+      "known_evidence_retained": 1,
+      "known_cases": 6,
+      "replay_equal": true,
+      "exact_copy": false,
+      "preservation": false,
+      "seven_case_costs": {
+        "prompt_tokens": 1046,
+        "output_tokens": 41,
+        "selector_cpu_seconds": 1.890625,
+        "selector_wall_seconds": 0.8389361000045028,
+        "generation_cpu_seconds": 26.75,
+        "generation_wall_seconds": 13.55422390000058,
+        "request_cpu_seconds": 28.859375,
+        "request_wall_seconds": 14.4494100000029
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1196,
+        "output_tokens": 58,
+        "selector_cpu_seconds": 2.109375,
+        "selector_wall_seconds": 0.9417607000050339,
+        "generation_cpu_seconds": 33.75,
+        "generation_wall_seconds": 17.088234300001204,
+        "request_cpu_seconds": 36.078125,
+        "request_wall_seconds": 18.090261900004407
+      },
+      "stage_cpu_seconds": 57.90625,
+      "stage_wall_seconds": 29.59917712211609,
+      "sampled_private_peak_bytes": 4071579648,
+      "os_private_peak_bytes": 4081287168,
+      "worker": {
+        "pid": 30600,
+        "lifecycle_cpu_seconds": 50.0,
+        "setup_seconds": 7.5166427999993175,
+        "worker_seconds": 25.62998559999869,
+        "memory": {
+          "rss": 2429734912,
+          "vms": 4057608192,
+          "num_page_faults": 1652055,
+          "peak_wset": 2441674752,
+          "wset": 2429734912,
+          "peak_paged_pool": 2865896,
+          "paged_pool": 940112,
+          "peak_nonpaged_pool": 60000,
+          "nonpaged_pool": 58336,
+          "pagefile": 4057608192,
+          "peak_pagefile": 4079161344,
+          "private": 4057608192
+        },
+        "generation_config": {
+          "max_length": null,
+          "max_new_tokens": 64,
+          "min_length": null,
+          "min_new_tokens": null,
+          "early_stopping": null,
+          "max_time": null,
+          "stop_strings": null,
+          "do_sample": false,
+          "num_beams": 1,
+          "use_mtp": null,
+          "use_cache": true,
+          "cache_implementation": null,
+          "cache_config": null,
+          "max_cache_len": null,
+          "temperature": 1.0,
+          "top_k": null,
+          "top_p": 1.0,
+          "min_p": null,
+          "top_h": null,
+          "typical_p": null,
+          "epsilon_cutoff": null,
+          "eta_cutoff": null,
+          "repetition_penalty": 1.0,
+          "encoder_repetition_penalty": null,
+          "length_penalty": null,
+          "no_repeat_ngram_size": null,
+          "bad_words_ids": null,
+          "renormalize_logits": null,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": null,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "sequence_bias": null,
+          "token_healing": null,
+          "guidance_scale": null,
+          "watermarking_config": null,
+          "num_return_sequences": null,
+          "output_attentions": null,
+          "output_hidden_states": null,
+          "output_scores": null,
+          "output_logits": null,
+          "return_dict_in_generate": null,
+          "pad_token_id": 151643,
+          "bos_token_id": null,
+          "eos_token_id": 151645,
+          "encoder_no_repeat_ngram_size": null,
+          "decoder_start_token_id": null,
+          "is_assistant": null,
+          "num_assistant_tokens": null,
+          "num_assistant_tokens_schedule": null,
+          "assistant_confidence_threshold": null,
+          "prompt_lookup_num_tokens": null,
+          "max_matching_ngram_size": null,
+          "assistant_early_exit": null,
+          "assistant_lookbehind": null,
+          "target_lookbehind": null,
+          "assistant_ensemble_weight": null,
+          "speculation_type": null,
+          "compile_config": null,
+          "disable_compile": null,
+          "continuous_batching_config": null,
+          "low_memory": null,
+          "penalty_alpha": null,
+          "dola_layers": null,
+          "diversity_penalty": null,
+          "num_beam_groups": null,
+          "constraints": null,
+          "force_words_ids": null,
+          "prefill_chunk_size": null,
+          "_from_model_config": null,
+          "transformers_version": "5.22.2"
+        },
+        "torch_threads": 2,
+        "selector_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+        "requests": 8
+      },
+      "failure": null,
+      "gate_term_calls_including_replay": null,
+      "gate_scan_bytes_including_replay": null
+    },
+    "lexical": {
+      "correct": 7,
+      "cases": 7,
+      "known_evidence_retained": 6,
+      "known_cases": 6,
+      "replay_equal": true,
+      "exact_copy": true,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1231,
+        "output_tokens": 72,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.006180300002597505,
+        "generation_cpu_seconds": 47.484375,
+        "generation_wall_seconds": 23.896850600001926,
+        "request_cpu_seconds": 47.65625,
+        "request_wall_seconds": 23.957312299999103
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1404,
+        "output_tokens": 97,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0067469000023265835,
+        "generation_cpu_seconds": 56.375,
+        "generation_wall_seconds": 28.35891790000278,
+        "request_cpu_seconds": 56.546875,
+        "request_wall_seconds": 28.42440389999865
+      },
+      "stage_cpu_seconds": 82.03125,
+      "stage_wall_seconds": 39.95499801635742,
+      "sampled_private_peak_bytes": 4063207424,
+      "os_private_peak_bytes": 4078923776,
+      "worker": {
+        "pid": 30456,
+        "lifecycle_cpu_seconds": 71.03125,
+        "setup_seconds": 7.547169900000881,
+        "worker_seconds": 35.9961557000006,
+        "memory": {
+          "rss": 2425483264,
+          "vms": 4051206144,
+          "num_page_faults": 1871951,
+          "peak_wset": 2435788800,
+          "wset": 2425483264,
+          "peak_paged_pool": 2865896,
+          "paged_pool": 940112,
+          "peak_nonpaged_pool": 59728,
+          "nonpaged_pool": 58336,
+          "pagefile": 4051206144,
+          "peak_pagefile": 4076810240,
+          "private": 4051206144
+        },
+        "generation_config": {
+          "max_length": null,
+          "max_new_tokens": 64,
+          "min_length": null,
+          "min_new_tokens": null,
+          "early_stopping": null,
+          "max_time": null,
+          "stop_strings": null,
+          "do_sample": false,
+          "num_beams": 1,
+          "use_mtp": null,
+          "use_cache": true,
+          "cache_implementation": null,
+          "cache_config": null,
+          "max_cache_len": null,
+          "temperature": 1.0,
+          "top_k": null,
+          "top_p": 1.0,
+          "min_p": null,
+          "top_h": null,
+          "typical_p": null,
+          "epsilon_cutoff": null,
+          "eta_cutoff": null,
+          "repetition_penalty": 1.0,
+          "encoder_repetition_penalty": null,
+          "length_penalty": null,
+          "no_repeat_ngram_size": null,
+          "bad_words_ids": null,
+          "renormalize_logits": null,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": null,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "sequence_bias": null,
+          "token_healing": null,
+          "guidance_scale": null,
+          "watermarking_config": null,
+          "num_return_sequences": null,
+          "output_attentions": null,
+          "output_hidden_states": null,
+          "output_scores": null,
+          "output_logits": null,
+          "return_dict_in_generate": null,
+          "pad_token_id": 151643,
+          "bos_token_id": null,
+          "eos_token_id": 151645,
+          "encoder_no_repeat_ngram_size": null,
+          "decoder_start_token_id": null,
+          "is_assistant": null,
+          "num_assistant_tokens": null,
+          "num_assistant_tokens_schedule": null,
+          "assistant_confidence_threshold": null,
+          "prompt_lookup_num_tokens": null,
+          "max_matching_ngram_size": null,
+          "assistant_early_exit": null,
+          "assistant_lookbehind": null,
+          "target_lookbehind": null,
+          "assistant_ensemble_weight": null,
+          "speculation_type": null,
+          "compile_config": null,
+          "disable_compile": null,
+          "continuous_batching_config": null,
+          "low_memory": null,
+          "penalty_alpha": null,
+          "dola_layers": null,
+          "diversity_penalty": null,
+          "num_beam_groups": null,
+          "constraints": null,
+          "force_words_ids": null,
+          "prefill_chunk_size": null,
+          "_from_model_config": null,
+          "transformers_version": "5.22.2"
+        },
+        "torch_threads": 2,
+        "selector_sha256": "13c92ceda4d3e27d0afe981c6bd0c87c773855ebe6240a961a30018530c84450",
+        "requests": 8
+      },
+      "failure": null,
+      "gate_term_calls_including_replay": null,
+      "gate_scan_bytes_including_replay": null
+    },
+    "after": {
+      "correct": 5,
+      "cases": 7,
+      "known_evidence_retained": 6,
+      "known_cases": 6,
+      "replay_equal": true,
+      "exact_copy": true,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1119,
+        "output_tokens": 65,
+        "selector_cpu_seconds": 1.96875,
+        "selector_wall_seconds": 0.8045775999999023,
+        "generation_cpu_seconds": 34.0625,
+        "generation_wall_seconds": 17.573332799998752,
+        "request_cpu_seconds": 36.234375,
+        "request_wall_seconds": 18.433938399999533
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1264,
+        "output_tokens": 82,
+        "selector_cpu_seconds": 2.1875,
+        "selector_wall_seconds": 0.916823800000202,
+        "generation_cpu_seconds": 40.578125,
+        "generation_wall_seconds": 20.967228100000284,
+        "request_cpu_seconds": 42.96875,
+        "request_wall_seconds": 21.945032199999332
+      },
+      "stage_cpu_seconds": 65.703125,
+      "stage_wall_seconds": 32.87618541717529,
+      "sampled_private_peak_bytes": 4070633472,
+      "os_private_peak_bytes": 4078673920,
+      "worker": {
+        "pid": 30452,
+        "lifecycle_cpu_seconds": 56.5625,
+        "setup_seconds": 7.198599100000138,
+        "worker_seconds": 29.178968000000168,
+        "memory": {
+          "rss": 2428239872,
+          "vms": 4056563712,
+          "num_page_faults": 1687880,
+          "peak_wset": 2441191424,
+          "wset": 2428239872,
+          "peak_paged_pool": 2865896,
+          "paged_pool": 940112,
+          "peak_nonpaged_pool": 60000,
+          "nonpaged_pool": 58336,
+          "pagefile": 4056563712,
+          "peak_pagefile": 4076560384,
+          "private": 4056563712
+        },
+        "generation_config": {
+          "max_length": null,
+          "max_new_tokens": 64,
+          "min_length": null,
+          "min_new_tokens": null,
+          "early_stopping": null,
+          "max_time": null,
+          "stop_strings": null,
+          "do_sample": false,
+          "num_beams": 1,
+          "use_mtp": null,
+          "use_cache": true,
+          "cache_implementation": null,
+          "cache_config": null,
+          "max_cache_len": null,
+          "temperature": 1.0,
+          "top_k": null,
+          "top_p": 1.0,
+          "min_p": null,
+          "top_h": null,
+          "typical_p": null,
+          "epsilon_cutoff": null,
+          "eta_cutoff": null,
+          "repetition_penalty": 1.0,
+          "encoder_repetition_penalty": null,
+          "length_penalty": null,
+          "no_repeat_ngram_size": null,
+          "bad_words_ids": null,
+          "renormalize_logits": null,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": null,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "sequence_bias": null,
+          "token_healing": null,
+          "guidance_scale": null,
+          "watermarking_config": null,
+          "num_return_sequences": null,
+          "output_attentions": null,
+          "output_hidden_states": null,
+          "output_scores": null,
+          "output_logits": null,
+          "return_dict_in_generate": null,
+          "pad_token_id": 151643,
+          "bos_token_id": null,
+          "eos_token_id": 151645,
+          "encoder_no_repeat_ngram_size": null,
+          "decoder_start_token_id": null,
+          "is_assistant": null,
+          "num_assistant_tokens": null,
+          "num_assistant_tokens_schedule": null,
+          "assistant_confidence_threshold": null,
+          "prompt_lookup_num_tokens": null,
+          "max_matching_ngram_size": null,
+          "assistant_early_exit": null,
+          "assistant_lookbehind": null,
+          "target_lookbehind": null,
+          "assistant_ensemble_weight": null,
+          "speculation_type": null,
+          "compile_config": null,
+          "disable_compile": null,
+          "continuous_batching_config": null,
+          "low_memory": null,
+          "penalty_alpha": null,
+          "dola_layers": null,
+          "diversity_penalty": null,
+          "num_beam_groups": null,
+          "constraints": null,
+          "force_words_ids": null,
+          "prefill_chunk_size": null,
+          "_from_model_config": null,
+          "transformers_version": "5.22.2"
+        },
+        "torch_threads": 2,
+        "selector_sha256": "8aca709df839b45dfa772f08b905882cef87ea6da5f08d04c96f770e178e4f93",
+        "requests": 8
+      },
+      "failure": null,
+      "gate_term_calls_including_replay": 172,
+      "gate_scan_bytes_including_replay": 19776
+    }
+  },
+  "criteria": {
+    "technical_complete_and_controls_reproduced": true,
+    "after_retains_all_known_evidence": true,
+    "after_improves_over_before": true,
+    "no_case_lost_against_lexical": false,
+    "exact_copy": true,
+    "preservation": true
+  },
+  "comparison": [
+    {
+      "id": "lh1-development-distant-0",
+      "kind": "distant",
+      "expected": "copper quay",
+      "question": "Which meeting point was assigned in delivery ledger LHD-4F9D48AA0B8B?",
+      "required": [
+        0
+      ],
+      "before": {
+        "answer": "delivery ledger LHD-4F9D48AA0B8B",
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          1,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Delivery ledger LHD-4F9D48AA0B8B assigns the meeting point copper quay."
+          },
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which meeting point was assigned in delivery ledger LHD-4F9D48AA0B8B?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 150,
+        "selector_cpu_seconds": 0.59375,
+        "selector_wall_seconds": 0.16147930000079214,
+        "failure": "generator failed with required evidence present"
+      },
+      "lexical": {
+        "answer": "Delivery ledger LHD-4F9D48AA0B8B assigned the meeting point copper quay.",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Delivery ledger LHD-4F9D48AA0B8B assigns the meeting point copper quay."
+          },
+          {
+            "id": "m38",
+            "role": "user",
+            "content": "Archive log 18: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which meeting point was assigned in delivery ledger LHD-4F9D48AA0B8B?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 173,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0009730000001582084,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "delivery ledger LHD-4F9D48AA0B8B",
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Delivery ledger LHD-4F9D48AA0B8B assigns the meeting point copper quay."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which meeting point was assigned in delivery ledger LHD-4F9D48AA0B8B?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 145,
+        "selector_cpu_seconds": 0.6875,
+        "selector_wall_seconds": 0.1394245999999839,
+        "failure": "generator failed with required evidence present"
+      }
+    },
+    {
+      "id": "lh1-development-correction-0",
+      "kind": "correction",
+      "expected": "linen cabinet",
+      "question": "After the update, where is the material for LHD-BC47D0CEDA8C stored?",
+      "required": [
+        8
+      ],
+      "before": {
+        "answer": "archive",
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          1,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The storage location for LHD-BC47D0CEDA8C is discarded chest."
+          },
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "After the update, where is the material for LHD-BC47D0CEDA8C stored?"
+          }
+        ],
+        "required_evidence_retained": false,
+        "prompt_tokens": 146,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.10486549999950512,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "LHD-BC47D0CEDA8C is stored in the linen cabinet.",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          8,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The storage location for LHD-BC47D0CEDA8C is discarded chest."
+          },
+          {
+            "id": "m8",
+            "role": "user",
+            "content": "Update for LHD-BC47D0CEDA8C: replace the old storage location with linen cabinet; the earlier entry is obsolete."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "After the update, where is the material for LHD-BC47D0CEDA8C stored?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 173,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0013340000004973263,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "LHD-BC47D0CEDA8C is stored in the linen cabinet.",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          8,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The storage location for LHD-BC47D0CEDA8C is discarded chest."
+          },
+          {
+            "id": "m8",
+            "role": "user",
+            "content": "Update for LHD-BC47D0CEDA8C: replace the old storage location with linen cabinet; the earlier entry is obsolete."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "After the update, where is the material for LHD-BC47D0CEDA8C stored?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 173,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.11566820000007283,
+        "failure": "correct"
+      }
+    },
+    {
+      "id": "lh1-development-distractor-0",
+      "kind": "distractor",
+      "expected": "mulberry",
+      "question": "What approved jam ingredient belongs to order LHD-0B27D1C0E888?",
+      "required": [
+        0
+      ],
+      "before": {
+        "answer": "UNKNOWN",
+        "score": {
+          "correct": false,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          1,
+          3,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "The ingredient record is noted."
+          },
+          {
+            "id": "m3",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "What approved jam ingredient belongs to order LHD-0B27D1C0E888?"
+          }
+        ],
+        "required_evidence_retained": false,
+        "prompt_tokens": 132,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.1087299000009807,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "mulberry",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          2,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The approved jam ingredient for order LHD-0B27D1C0E888 is mulberry."
+          },
+          {
+            "id": "m2",
+            "role": "user",
+            "content": "A different order AUXD-6C2D54A72DAC uses damson; it is not order LHD-0B27D1C0E888."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "What approved jam ingredient belongs to order LHD-0B27D1C0E888?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 188,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0009279000005335547,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "mulberry",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          2,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The approved jam ingredient for order LHD-0B27D1C0E888 is mulberry."
+          },
+          {
+            "id": "m2",
+            "role": "user",
+            "content": "A different order AUXD-6C2D54A72DAC uses damson; it is not order LHD-0B27D1C0E888."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "What approved jam ingredient belongs to order LHD-0B27D1C0E888?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 188,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.10509259999889764,
+        "failure": "correct"
+      }
+    },
+    {
+      "id": "lh1-development-literal-0",
+      "kind": "literal",
+      "expected": "DEV/PUTYAOKYO:  R-4!",
+      "question": "Copy only the quoted plate for LHD-EBC6A8AD0D79, with exact spaces.",
+      "required": [
+        0
+      ],
+      "before": {
+        "answer": "Log noted",
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          1,
+          3,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m3",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Copy only the quoted plate for LHD-EBC6A8AD0D79, with exact spaces."
+          }
+        ],
+        "required_evidence_retained": false,
+        "prompt_tokens": 129,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.10765720000017609,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "DEV/PUTYAOKYO:  R-4!",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The quoted plate for LHD-EBC6A8AD0D79 reads \"DEV/PUTYAOKYO:  R-4!\"."
+          },
+          {
+            "id": "m38",
+            "role": "user",
+            "content": "Archive log 18: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Copy only the quoted plate for LHD-EBC6A8AD0D79, with exact spaces."
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 180,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.000733500000933418,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "DEV/PUTYAOKYO:  R-4!",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The quoted plate for LHD-EBC6A8AD0D79 reads \"DEV/PUTYAOKYO:  R-4!\"."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Copy only the quoted plate for LHD-EBC6A8AD0D79, with exact spaces."
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 152,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.10755990000143356,
+        "failure": "correct"
+      }
+    },
+    {
+      "id": "lh1-development-preservation-0",
+      "kind": "preservation",
+      "expected": "hyacinth",
+      "question": "Which flower remains in garden record LHD-370844F31736?",
+      "required": [
+        0
+      ],
+      "before": {
+        "answer": "UNKNOWN",
+        "score": {
+          "correct": false,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          2,
+          14,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m2",
+            "role": "user",
+            "content": "Archive log 0: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m14",
+            "role": "user",
+            "content": "Archive log 5: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "Which flower remains in garden record LHD-370844F31736?"
+          }
+        ],
+        "required_evidence_retained": false,
+        "prompt_tokens": 172,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.09849390000090352,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "flower hyacinth",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          10,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Garden record LHD-370844F31736 names flower hyacinth and folder shade beige."
+          },
+          {
+            "id": "m10",
+            "role": "user",
+            "content": "Update for garden record LHD-370844F31736: change only the folder shade to amber; keep its flower entry unchanged."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "Which flower remains in garden record LHD-370844F31736?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 183,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0006886999999551335,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "flower hyacinth",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          10,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Garden record LHD-370844F31736 names flower hyacinth and folder shade beige."
+          },
+          {
+            "id": "m10",
+            "role": "user",
+            "content": "Update for garden record LHD-370844F31736: change only the folder shade to amber; keep its flower entry unchanged."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "Which flower remains in garden record LHD-370844F31736?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 183,
+        "selector_cpu_seconds": 0.203125,
+        "selector_wall_seconds": 0.10904579999987618,
+        "failure": "correct"
+      }
+    },
+    {
+      "id": "lh1-development-reference-0",
+      "kind": "reference",
+      "expected": "velvet depot",
+      "question": "Where is that same crate routed?",
+      "required": [
+        1,
+        43
+      ],
+      "before": {
+        "answer": "crate LHD-C0BA0B7AB5DF",
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          3,
+          5,
+          43,
+          44,
+          45
+        ],
+        "selected_sources": [
+          {
+            "id": "m3",
+            "role": "user",
+            "content": "Archive log 0: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m5",
+            "role": "user",
+            "content": "Archive log 1: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "user",
+            "content": "I am looking at crate LHD-C0BA0B7AB5DF. My next question concerns that same crate."
+          },
+          {
+            "id": "m44",
+            "role": "assistant",
+            "content": "I will use the referenced record."
+          },
+          {
+            "id": "m45",
+            "role": "user",
+            "content": "Where is that same crate routed?"
+          }
+        ],
+        "required_evidence_retained": false,
+        "prompt_tokens": 160,
+        "selector_cpu_seconds": 0.296875,
+        "selector_wall_seconds": 0.16456380000090576,
+        "failure": "required evidence omitted"
+      },
+      "lexical": {
+        "answer": "velvet depot",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          1,
+          41,
+          43,
+          44,
+          45
+        ],
+        "selected_sources": [
+          {
+            "id": "m1",
+            "role": "user",
+            "content": "Crate LHD-C0BA0B7AB5DF is routed to velvet depot."
+          },
+          {
+            "id": "m41",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "user",
+            "content": "I am looking at crate LHD-C0BA0B7AB5DF. My next question concerns that same crate."
+          },
+          {
+            "id": "m44",
+            "role": "assistant",
+            "content": "I will use the referenced record."
+          },
+          {
+            "id": "m45",
+            "role": "user",
+            "content": "Where is that same crate routed?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 154,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0008827000001474516,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "velvet depot",
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          1,
+          43,
+          44,
+          45
+        ],
+        "selected_sources": [
+          {
+            "id": "m1",
+            "role": "user",
+            "content": "Crate LHD-C0BA0B7AB5DF is routed to velvet depot."
+          },
+          {
+            "id": "m43",
+            "role": "user",
+            "content": "I am looking at crate LHD-C0BA0B7AB5DF. My next question concerns that same crate."
+          },
+          {
+            "id": "m44",
+            "role": "assistant",
+            "content": "I will use the referenced record."
+          },
+          {
+            "id": "m45",
+            "role": "user",
+            "content": "Where is that same crate routed?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 126,
+        "selector_cpu_seconds": 0.234375,
+        "selector_wall_seconds": 0.11873979999836592,
+        "failure": "correct"
+      }
+    },
+    {
+      "id": "lh1-development-missing-0",
+      "kind": "missing",
+      "expected": "UNKNOWN",
+      "question": "Which override password is given for inventory LHD-672B0E99F45C?",
+      "required": [],
+      "before": {
+        "answer": "UNKNOWN",
+        "score": {
+          "correct": true,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          1,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Inventory LHD-672B0E99F45C specifies a weight of 23 kilograms and a seal marked PLAIN."
+          },
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which override password is given for inventory LHD-672B0E99F45C?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 157,
+        "selector_cpu_seconds": 0.1875,
+        "selector_wall_seconds": 0.09314650000123947,
+        "failure": "correct"
+      },
+      "lexical": {
+        "answer": "UNKNOWN",
+        "score": {
+          "correct": true,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Inventory LHD-672B0E99F45C specifies a weight of 23 kilograms and a seal marked PLAIN."
+          },
+          {
+            "id": "m38",
+            "role": "user",
+            "content": "Archive log 18: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which override password is given for inventory LHD-672B0E99F45C?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 180,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0006405000003724126,
+        "failure": "correct"
+      },
+      "after": {
+        "answer": "PLAIN",
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": true,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "selected_indices": [
+          0,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Inventory LHD-672B0E99F45C specifies a weight of 23 kilograms and a seal marked PLAIN."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which override password is given for inventory LHD-672B0E99F45C?"
+          }
+        ],
+        "required_evidence_retained": true,
+        "prompt_tokens": 152,
+        "selector_cpu_seconds": 0.21875,
+        "selector_wall_seconds": 0.10904670000127226,
+        "failure": "unsupported or unresolved question answered without valid abstention"
+      }
+    }
+  ],
+  "heldout_completed": 0,
+  "heldout_answers_opened": false,
+  "new_training": false,
+  "preserved_readable_files": 6782,
+  "metadata_only_preservation_files": 6,
+  "registration_sha256": "58a540c8aa14be5f6acc42a0dc584d02b400c374b90ae20702fb4631e90f2463",
+  "selector_identity": {
+    "format": "toruk-lexical-admission-v3",
+    "new_training": false,
+    "weights_path": "D:\\Toruk\\artifacts\\m6-successor-v1\\execution\\train\\checkpoint.pt",
+    "weights_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+    "gate_source_sha256": "e8f2196ef56169b7f7e0a212ca38646595db2da481bdd1f7e81e3028666114ef",
+    "runtime_identity_sha256": "8aca709df839b45dfa772f08b905882cef87ea6da5f08d04c96f770e178e4f93"
+  },
+  "audit_wall_seconds": 6.155242299999372,
+  "audit_cpu_seconds": 5.578125
+}

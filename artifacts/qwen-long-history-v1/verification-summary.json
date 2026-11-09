@@ -1,0 +1,343 @@
+{
+  "script_exit_code": 0,
+  "stages": {
+    "long-history-build": {
+      "status": "PASS",
+      "seconds": 4.774536900000385,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\package"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-build.log"
+    },
+    "long-history-conversation-data": {
+      "status": "PASS",
+      "seconds": 2.1569913000003,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/conversation_readiness.py",
+        "validate",
+        "--output",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\conversation-data"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-conversation-data.log"
+    },
+    "long-history-diagnose": {
+      "status": "PASS",
+      "seconds": 2.062454999999318,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-diagnose.log"
+    },
+    "long-history-diff-check": {
+      "status": "PASS",
+      "seconds": 0.052895999999236665,
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=D:/Toruk",
+        "diff",
+        "--check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-diff-check.log"
+    },
+    "long-history-format": {
+      "status": "PASS",
+      "seconds": 0.0898747999999614,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-format.log"
+    },
+    "long-history-frozen-sources": {
+      "status": "PASS",
+      "seconds": 0.06819240000004356,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/check_frozen_sources.py"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-frozen-sources.log"
+    },
+    "long-history-help": {
+      "status": "PASS",
+      "seconds": 2.054810499999803,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-help.log"
+    },
+    "long-history-import": {
+      "status": "PASS",
+      "seconds": 0.03858010000112699,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import toruk_lm; print(toruk_lm.__version__)"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-import.log"
+    },
+    "long-history-independent-cases": {
+      "status": "PASS",
+      "seconds": 2.235089000001608,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "validate-cases",
+        "--run",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\independent-cases"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-independent-cases.log"
+    },
+    "long-history-install-local": {
+      "status": "PASS",
+      "seconds": 6.362653899999714,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-install-local.log"
+    },
+    "long-history-lint": {
+      "status": "PASS",
+      "seconds": 0.09986079999907815,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-lint.log"
+    },
+    "long-history-owned-lm-generate": {
+      "status": "PASS",
+      "seconds": 3.7269923999992898,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.owned_lm",
+        "generate",
+        "--checkpoint",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\owned-lm-smoke\\models\\23-memory_on\\checkpoint.pt",
+        "--prompt",
+        "Experimental CPU smoke",
+        "--max-new-tokens",
+        "4"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-owned-lm-generate.log"
+    },
+    "long-history-owned-lm-smoke": {
+      "status": "PASS",
+      "seconds": 5.220478600000206,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/study_owned_lm.py",
+        "--config",
+        "configs/owned-lm-smoke-v1.json",
+        "--output",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\owned-lm-smoke"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-owned-lm-smoke.log"
+    },
+    "long-history-owned-lm-validate": {
+      "status": "PASS",
+      "seconds": 3.9224260999999387,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/validate_owned_reproduction.py",
+        "--config",
+        "configs/owned-lm-smoke-v1.json",
+        "--run",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\owned-lm-smoke"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-owned-lm-validate.log"
+    },
+    "long-history-package": {
+      "status": "PASS",
+      "seconds": 0.576420400000643,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-package.log"
+    },
+    "long-history-reproduce": {
+      "status": "PASS",
+      "seconds": 4.06118399999832,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/foundation.json",
+        "--output",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\pipeline"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-reproduce.log"
+    },
+    "long-history-research-config": {
+      "status": "PASS",
+      "seconds": 2.079935799998566,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate-config",
+        "--config",
+        "configs/reproduce-smoke-v1.json"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-research-config.log"
+    },
+    "long-history-research-smoke": {
+      "status": "PASS",
+      "seconds": 4.832000200000039,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/reproduce-smoke-v1.json",
+        "--output",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\research-smoke"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-research-smoke.log"
+    },
+    "long-history-staged-diff-check": {
+      "status": "PASS",
+      "seconds": 0.02868780000062543,
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=D:/Toruk",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-staged-diff-check.log"
+    },
+    "long-history-summarize": {
+      "status": "PASS",
+      "seconds": 3.8097608000007313,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "summarize",
+        "--run",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\pipeline",
+        "--output",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\tables"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-summarize.log"
+    },
+    "long-history-tests": {
+      "status": "PASS",
+      "seconds": 142.99977749999925,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-tests.log"
+    },
+    "long-history-types-linux": {
+      "status": "PASS",
+      "seconds": 46.71603249999862,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-types-linux.log"
+    },
+    "long-history-types": {
+      "status": "PASS",
+      "seconds": 1.4288300999996864,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-types.log"
+    },
+    "long-history-validate": {
+      "status": "PASS",
+      "seconds": 2.2275417000000743,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate",
+        "--manifest",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\pipeline\\data\\manifest.json",
+        "--config",
+        "configs/foundation.json",
+        "--checkpoint",
+        "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\pipeline\\train\\checkpoint.pt"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-validate.log"
+    },
+    "long-history-web-check": {
+      "status": "PASS",
+      "seconds": 0.5624981000000844,
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "run",
+        "check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-web-check.log"
+    },
+    "long-history-web-tests": {
+      "status": "PASS",
+      "seconds": 0.552698400000736,
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "log": "D:\\Toruk\\artifacts\\qwen-long-history-v1\\verification\\long-history-web-tests.log"
+    }
+  },
+  "stage_count": 26,
+  "python_tests": "301 passed in 141.43 seconds",
+  "node_tests": "20 passed, one standalone opt-in live test skipped; real HTTP contract exercised by Python",
+  "http_fixture_retries": 0,
+  "runner_types": "explicit 36-file Mypy passed before final registration",
+  "power_guard": "temporary process-scoped system-required request during verification only, restored in finally",
+  "model_quality_inference_after_budget_stop": false,
+  "hosted_ci": "starting commit only, run 42465162288 success"
+}

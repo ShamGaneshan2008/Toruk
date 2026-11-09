@@ -1,0 +1,73 @@
+# Preserve byte-for-byte hashes in frozen chat-selector experiments on Windows.
+*.log -text -diff
+/artifacts/chat-selector-v1-20261101/** text eol=lf
+/artifacts/chat-selector-v2-20261101/** text eol=lf
+/docs/research/chat-selector-v1-protocol.md text eol=lf
+/docs/research/chat-selector-v2-protocol.md text eol=lf
+/scripts/build_chat_selector_data.py text eol=lf
+/scripts/build_chat_selector_data_v2.py text eol=lf
+/scripts/train_chat_selector.py text eol=lf
+/scripts/train_chat_selector_v2.py text eol=lf
+/scripts/evaluate_trained_chat_selector.py text eol=lf
+/scripts/evaluate_chat_selector_v2.py text eol=lf
+# These two frozen hashes were recorded from CRLF bytes.
+/artifacts/chat-selector-v2-20261101/selector.json text eol=crlf
+/artifacts/chat-selector-v2-20261101/data/manifest.json text eol=crlf
+# Preserve this study's raw artifact identities; normalize its new source/protocol.
+/artifacts/integrated-memory-v1-20261102/** -text whitespace=cr-at-eol
+/src/toruk_lm/integrated_memory.py text eol=lf
+/src/toruk_lm/integrated_study.py text eol=lf
+/docs/research/integrated-memory-v1-protocol.md text eol=lf
+# Keep raw research evidence stable through Windows checkout and publication.
+/artifacts/qualification-v1-20261103/** -text whitespace=cr-at-eol
+/artifacts/routing-v2-20261103/** -text whitespace=cr-at-eol
+/artifacts/checks/ci-integration-20261103140657/** -text whitespace=cr-at-eol
+/artifacts/checks/run-20261102T152817486391Z/** -text whitespace=cr-at-eol
+/docs/research/qualification-v1-protocol.md text eol=lf
+/docs/research/routing-v2-protocol.md text eol=lf
+# Literal Git graph padding and archived source EOFs are hash-bound evidence.
+/artifacts/qualification-v1-20261103/branch-graph.txt -whitespace
+/artifacts/qualification-v1-20261103/source/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+/artifacts/routing-v2-20261103/source/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+/artifacts/current-state-audit-20261103/** -text whitespace=cr-at-eol
+/artifacts/value-fidelity-dev-v1-20261103/** -text whitespace=cr-at-eol
+/docs/research/value-fidelity-dev-v1-protocol.md text eol=lf
+/artifacts/value-fidelity-dev-v1-20261103/source/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+# Recall studies bind these exact source and evidence bytes across checkouts.
+/artifacts/recall-v1-20261104/** -text whitespace=cr-at-eol
+/artifacts/recall-v2-20261104/** -text whitespace=cr-at-eol
+/scripts/recall_study.py -text
+/scripts/recall_after.py -text
+/scripts/recall_v2.py -text
+/scripts/report_recall.py -text
+/src/toruk_lm/source_spans.py -text
+/tests/test_source_spans.py -text
+/tests/test_recall_protocol.py -text
+/docs/research/recall-v1-protocol.md -text
+/docs/research/recall-v2-protocol.md -text
+/artifacts/checks/recall-ci-integration-20261104/** -text whitespace=cr-at-eol
+# Preserve this pilot's hash-bound evidence and literal saved Git patch.
+/artifacts/conversation-format-v1-20261105/** -text whitespace=cr-at-eol
+/artifacts/checks/prepush-ci-20261105/** -text whitespace=cr-at-eol
+/artifacts/checks/repository-review-265f881/** -text whitespace=cr-at-eol
+/artifacts/conversation-format-v1-20261105/starting-diff.patch -whitespace
+/artifacts/conversation-format-v1-20261105/commands.md whitespace=cr-at-eol,-blank-at-eof
+/artifacts/conversation-format-v1-20261105/metrics.md whitespace=cr-at-eol,-blank-at-eof
+/scripts/conversation_format_study.py text eol=lf
+/docs/research/conversation-format-v1-protocol.md text eol=lf
+# Preserve raw launch-gate inputs, replies, as-run sources and measurements.
+/artifacts/chat-launch-gate-20261107/** -text whitespace=cr-at-eol
+/artifacts/chat-launch-20261107/** -text whitespace=cr-at-eol
+/configs/chat-launch-gate-v1.json text eol=lf
+# Preserve the new audit's raw evidence; do not rewrite historical fixture bytes.
+/artifacts/core-advantage-20261108/** -text whitespace=cr-at-eol
+/artifacts/m6-provenance-20261108/** -text whitespace=cr-at-eol
+
+/artifacts/m6-successor-v1/** -text whitespace=cr-at-eol
+/scripts/m6_successor.py text eol=lf
+/configs/m6-successor-v1.json text eol=lf
+
+/configs/m6-successor-v1-execution.json text eol=lf
+/tests/test_m6_successor.py text eol=lf
+/docs/research/m6-successor-v1-protocol.md text eol=lf
+/pyproject.toml text eol=lf

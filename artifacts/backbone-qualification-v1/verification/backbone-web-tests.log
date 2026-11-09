@@ -1,0 +1,33 @@
+
+> test
+> node --test tests/*.test.mjs
+
+✔ HTTP backend deadlines and busy responses retain actionable safe semantics (25.3865ms)
+✔ long conversations fail visibly instead of silently dropping the earliest turns (0.7361ms)
+✔ empty backend replies cannot poison the next browser history (1.4711ms)
+✔ backend request errors do not expose private exception details (0.6562ms)
+✔ chunked request bodies are cancelled when they cross the byte limit (1.1356ms)
+✔ impossible token counts, timings and source IDs are rejected (4.2517ms)
+✔ unready model has an actionable reason and never forwards backend exception text (2.7836ms)
+✔ unconfigured and unavailable inference return errors, never answers (0.622ms)
+✔ normal Toruk proxy validates metrics and keeps token off the browser response (0.5739ms)
+✔ empty and long messages, invalid budget, and malformed backend are rejected (1.5636ms)
+✔ status and client history clear remain independent of backend sessions (1.1484ms)
+✔ status retains the full backbone and trained selector identities (0.3509ms)
+✔ follow-up request forwards the browser history in order (0.5555ms)
+✔ full reported history reaches inference without dropped or rewritten turns (1.3486ms)
+✔ TORUK metrics are accepted only for a matching TORUK request (0.435ms)
+✔ production and preview reject a plaintext backend URL (0.3833ms)
+✔ backend timeout is a bounded visible error (0.3427ms)
+✔ static Vercel project declares bounded API functions and visible mode labels (7.841ms)
+✔ page disables chat with a reason, recovers on Retry, and sends generated history (35.4392ms)
+✔ page distinguishes a Toruk-trained smoke fixture from external pretrained weights (3.9256ms)
+﹣ live page handlers send a normal question and follow-up through the real proxy (0.2306ms) # SKIP
+ℹ tests 21
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 125.732

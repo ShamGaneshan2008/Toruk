@@ -1,0 +1,413 @@
+{
+  "schema": "qwen-long-history-v1-blocked",
+  "registration_sha256": "489b9a6ee3756f07fc709c2bd2dea91bc761265269ad4853ae27c67e38724a86",
+  "status": "BLOCKED",
+  "registered_pass": false,
+  "quality_or_selector_verdict": "NOT TESTED on heldout",
+  "blocker": "Host idle sleep during TORUK development exhausted fixed elapsed limits; prerequisite freeze rejected; no heldout inference",
+  "heldout_evaluations_per_arm": {
+    "full": 0,
+    "recent": 0,
+    "lexical": 0,
+    "toruk": 0
+  },
+  "development": {
+    "full": {
+      "cases": 7,
+      "correct": 5,
+      "known_cases": 6,
+      "known_correct": 4,
+      "abstentions": 1,
+      "unknown_correct": 1,
+      "unsupported_proxy": 0,
+      "stale_proxy": 0,
+      "known_evidence_retained": 6,
+      "categories": {
+        "distant": {
+          "n": 1,
+          "correct": 1
+        },
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distractor": {
+          "n": 1,
+          "correct": 1
+        },
+        "literal": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 1
+        },
+        "reference": {
+          "n": 1,
+          "correct": 1
+        },
+        "missing": {
+          "n": 1,
+          "correct": 1
+        }
+      },
+      "failures": {
+        "correct": 5,
+        "generator failed with required evidence present": 2
+      },
+      "prompt_tokens": 6307,
+      "output_tokens": 41,
+      "total_tokens": 6348,
+      "request_cpu_seconds": 94.015625,
+      "request_wall_seconds": 46.79015389999768,
+      "selector_cpu_seconds": 0.0,
+      "selector_wall_seconds": 0.0003434999962337315,
+      "fit_cpu_seconds": 0.0,
+      "fit_wall_seconds": 0.00015890000213403255,
+      "generation_cpu_seconds": 93.859375,
+      "generation_wall_seconds": 46.73218639999868,
+      "history_bytes": 22572,
+      "selector_history_bytes": 0,
+      "work": {
+        "backbone_positions": 6340,
+        "backbone_positions_calls": 41,
+        "fit_bpe_tokenization_positions": 0,
+        "history_bpe_tokenization_positions": 6307,
+        "memory_updates": 0
+      },
+      "cost": {
+        "command": [
+          "D:\\Toruk\\.venv\\Scripts\\python.exe",
+          "D:\\Toruk\\scripts\\qwen_long_history.py",
+          "worker",
+          "--run",
+          "D:\\Toruk\\artifacts\\qwen-long-history-v1\\execution-v2",
+          "--split",
+          "development",
+          "--arm",
+          "full"
+        ],
+        "returncode": 0,
+        "failure": null,
+        "wall_seconds": 56.47363799999948,
+        "cpu_seconds": 119.65625,
+        "controller_cpu_seconds": 12.109375,
+        "peak_rss_bytes": 2512838656,
+        "peak_private_bytes": 4113375232,
+        "peak_disk_bytes": 1002477475,
+        "cpu_scope": "controller integrity checks + sampled launcher + final worker lifetime CPU"
+      },
+      "heldout_cases_completed": 0,
+      "heldout_accuracy": null
+    },
+    "recent": {
+      "cases": 0,
+      "correct": 0,
+      "known_cases": 0,
+      "known_correct": 0,
+      "abstentions": 0,
+      "unknown_correct": 0,
+      "unsupported_proxy": 0,
+      "stale_proxy": 0,
+      "known_evidence_retained": 0,
+      "categories": {
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distractor": {
+          "n": 1,
+          "correct": 0
+        },
+        "literal": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "reference": {
+          "n": 1,
+          "correct": 0
+        },
+        "missing": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "failures": {},
+      "prompt_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "request_cpu_seconds": 0,
+      "request_wall_seconds": 0,
+      "selector_cpu_seconds": 0,
+      "selector_wall_seconds": 0,
+      "fit_cpu_seconds": 0,
+      "fit_wall_seconds": 0,
+      "generation_cpu_seconds": 0,
+      "generation_wall_seconds": 0,
+      "history_bytes": 0,
+      "selector_history_bytes": 0,
+      "work": {},
+      "cost": {
+        "command": [
+          "D:\\Toruk\\.venv\\Scripts\\python.exe",
+          "D:\\Toruk\\scripts\\qwen_long_history.py",
+          "worker",
+          "--run",
+          "D:\\Toruk\\artifacts\\qwen-long-history-v1\\execution-v2",
+          "--split",
+          "development",
+          "--arm",
+          "recent"
+        ],
+        "returncode": 1,
+        "failure": "elapsed cap",
+        "wall_seconds": 1.4128313999990496,
+        "cpu_seconds": 0.890625,
+        "controller_cpu_seconds": 0.890625,
+        "peak_rss_bytes": 1896448,
+        "peak_private_bytes": 503808,
+        "peak_disk_bytes": 1002517844,
+        "cpu_scope": "controller integrity checks + sampled launcher + final worker lifetime CPU"
+      },
+      "heldout_cases_completed": 0,
+      "heldout_accuracy": null
+    },
+    "lexical": {
+      "cases": 7,
+      "correct": 7,
+      "known_cases": 6,
+      "known_correct": 6,
+      "abstentions": 1,
+      "unknown_correct": 1,
+      "unsupported_proxy": 0,
+      "stale_proxy": 0,
+      "known_evidence_retained": 6,
+      "categories": {
+        "distant": {
+          "n": 1,
+          "correct": 1
+        },
+        "correction": {
+          "n": 1,
+          "correct": 1
+        },
+        "distractor": {
+          "n": 1,
+          "correct": 1
+        },
+        "literal": {
+          "n": 1,
+          "correct": 1
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 1
+        },
+        "reference": {
+          "n": 1,
+          "correct": 1
+        },
+        "missing": {
+          "n": 1,
+          "correct": 1
+        }
+      },
+      "failures": {
+        "correct": 7
+      },
+      "prompt_tokens": 1404,
+      "output_tokens": 97,
+      "total_tokens": 1501,
+      "request_cpu_seconds": 44.078125,
+      "request_wall_seconds": 21.804019799999878,
+      "selector_cpu_seconds": 0.0,
+      "selector_wall_seconds": 0.0019618000005721115,
+      "fit_cpu_seconds": 0.0,
+      "fit_wall_seconds": 0.006672699997579912,
+      "generation_cpu_seconds": 43.84375,
+      "generation_wall_seconds": 21.725938399995357,
+      "history_bytes": 22572,
+      "selector_history_bytes": 22572,
+      "work": {
+        "backbone_positions": 1493,
+        "backbone_positions_calls": 97,
+        "fit_bpe_tokenization_positions": 1404,
+        "history_bpe_tokenization_positions": 6307,
+        "lexical_term_bytes": 19776,
+        "lexical_term_calls": 172,
+        "memory_updates": 0
+      },
+      "cost": {
+        "command": [
+          "D:\\Toruk\\.venv\\Scripts\\python.exe",
+          "D:\\Toruk\\scripts\\qwen_long_history.py",
+          "worker",
+          "--run",
+          "D:\\Toruk\\artifacts\\qwen-long-history-v1\\execution-v2",
+          "--split",
+          "development",
+          "--arm",
+          "lexical"
+        ],
+        "returncode": 0,
+        "failure": null,
+        "wall_seconds": 31.17851089999931,
+        "cpu_seconds": 63.515625,
+        "controller_cpu_seconds": 6.875,
+        "peak_rss_bytes": 2449129472,
+        "peak_private_bytes": 4065869824,
+        "peak_disk_bytes": 1002512179,
+        "cpu_scope": "controller integrity checks + sampled launcher + final worker lifetime CPU"
+      },
+      "heldout_cases_completed": 0,
+      "heldout_accuracy": null
+    },
+    "toruk": {
+      "cases": 1,
+      "correct": 0,
+      "known_cases": 1,
+      "known_correct": 0,
+      "abstentions": 0,
+      "unknown_correct": 0,
+      "unsupported_proxy": 0,
+      "stale_proxy": 0,
+      "known_evidence_retained": 1,
+      "categories": {
+        "distant": {
+          "n": 1,
+          "correct": 0
+        },
+        "correction": {
+          "n": 1,
+          "correct": 0
+        },
+        "distractor": {
+          "n": 1,
+          "correct": 0
+        },
+        "literal": {
+          "n": 1,
+          "correct": 0
+        },
+        "preservation": {
+          "n": 1,
+          "correct": 0
+        },
+        "reference": {
+          "n": 1,
+          "correct": 0
+        },
+        "missing": {
+          "n": 1,
+          "correct": 0
+        }
+      },
+      "failures": {
+        "generator failed with required evidence present": 1
+      },
+      "prompt_tokens": 150,
+      "output_tokens": 17,
+      "total_tokens": 167,
+      "request_cpu_seconds": 7.046875,
+      "request_wall_seconds": 3.296668699998918,
+      "selector_cpu_seconds": 0.859375,
+      "selector_wall_seconds": 0.21592369999962102,
+      "fit_cpu_seconds": 0.0,
+      "fit_wall_seconds": 0.0009487999996053986,
+      "generation_cpu_seconds": 6.109375,
+      "generation_wall_seconds": 3.0603818999989016,
+      "history_bytes": 2763,
+      "selector_history_bytes": 2763,
+      "work": {
+        "backbone_positions": 166,
+        "backbone_positions_calls": 17,
+        "fit_bpe_tokenization_positions": 150,
+        "history_bpe_tokenization_positions": 767,
+        "memory_updates": 65,
+        "selector_byte_positions": 2806,
+        "selector_byte_positions_calls": 65
+      },
+      "cost": {
+        "command": [
+          "D:\\Toruk\\.venv\\Scripts\\python.exe",
+          "D:\\Toruk\\scripts\\qwen_long_history.py",
+          "worker",
+          "--run",
+          "D:\\Toruk\\artifacts\\qwen-long-history-v1\\execution-v2",
+          "--split",
+          "development",
+          "--arm",
+          "toruk"
+        ],
+        "returncode": 1,
+        "failure": "elapsed cap",
+        "wall_seconds": 1255.8010113,
+        "cpu_seconds": 25.0625,
+        "controller_cpu_seconds": 3.734375,
+        "peak_rss_bytes": 2392236032,
+        "peak_private_bytes": 4055871488,
+        "peak_disk_bytes": 1002517177,
+        "cpu_scope": "controller integrity checks + sampled launcher + final worker lifetime CPU"
+      },
+      "heldout_cases_completed": 0,
+      "heldout_accuracy": null
+    }
+  },
+  "cost_ledger": {
+    "invalid_preflight_worker_cpu_seconds": 102.75,
+    "invalid_preflight_worker_wall_seconds": 52.80661970000074,
+    "invalid_preflight_controller_wall_seconds": 20.49984929999846,
+    "invalid_preflight_controller_cpu_seconds": null,
+    "invalid_preflight_wall_upper_seconds": 73.3064689999992,
+    "original_training": {
+      "new_training_seconds": 0,
+      "original_profile_and_training": [
+        {
+          "source": "artifacts/m6-successor-v1/profile",
+          "cpu_seconds": 2.921875,
+          "wall_seconds": 4.168801199999962,
+          "note": "Original training/profile, not rerun. Early parent RAM sampling invalid."
+        },
+        {
+          "source": "artifacts/m6-successor-v1/train",
+          "cpu_seconds": 3.859375,
+          "wall_seconds": 4.703226900000118,
+          "note": "Original training/profile, not rerun. Early parent RAM sampling invalid."
+        },
+        {
+          "source": "artifacts/m6-successor-v1/execution/profile",
+          "cpu_seconds": 3.453125,
+          "wall_seconds": 4.040830400000004,
+          "note": "Original training/profile, not rerun. Early parent RAM sampling invalid."
+        },
+        {
+          "source": "artifacts/m6-successor-v1/execution/train",
+          "cpu_seconds": 4.34375,
+          "wall_seconds": 4.760461100000157,
+          "note": "Original training/profile, not rerun. Early parent RAM sampling invalid."
+        }
+      ],
+      "cpu_seconds": 14.578125,
+      "wall_seconds": 17.67331960000024
+    },
+    "interpretation": "TORUK wall includes confirmed host sleep. CPU and wall totals are partial development only, not comparable complete workloads; no timing subtraction or efficiency claim.",
+    "recorded_development_cpu_seconds": 209.125,
+    "recorded_development_wall_seconds": 1344.8659915999979
+  },
+  "heldout_accuracy_per_arm": {
+    "full": null,
+    "recent": null,
+    "lexical": null,
+    "toruk": null
+  },
+  "power_evidence": "windows-power-events.json"
+}

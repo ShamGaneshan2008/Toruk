@@ -1,0 +1,5506 @@
+{
+  "status": "PASS: 72/72 scores, exact question parity, source provenance, token IDs and actual cached-forward accounting verified",
+  "frozen_primary_verdict": false,
+  "cause_counts": {
+    "recent": {
+      "relevant evidence omitted": 20,
+      "generator failed with task context present": 1,
+      "rubric false negative": 3
+    },
+    "lexical": {
+      "correct": 7,
+      "generator failed with task context present": 17
+    },
+    "toruk": {
+      "correct": 5,
+      "generator failed with task context present": 11,
+      "relevant evidence omitted": 5,
+      "rubric false negative": 3
+    }
+  },
+  "costs": {
+    "recent": {
+      "all_generated_requests": 38,
+      "all_inference_work": {
+        "history_token_positions": 31360,
+        "fit_token_positions": 234610,
+        "backbone_forward_positions": 19647,
+        "selector_byte_positions": 0,
+        "selector_byte_positions_calls": 0
+      },
+      "heldout_known_evidence_retained": 0,
+      "heldout_known_evidence_cases": 20,
+      "wrong_task_values_reviewed": 8,
+      "unknown_rubric_false_negatives": 3,
+      "peak_os_worker_private_bytes": 1417838592,
+      "published_costs": {
+        "cases": 24,
+        "correct": 0,
+        "unsupported_proxy": 4,
+        "stale_proxy": 0,
+        "prompt_tokens": 11914,
+        "output_tokens": 493,
+        "request_wall_seconds": 53.353206099998715,
+        "request_cpu_seconds": 106.78125,
+        "work": {
+          "history_token_positions": 19818,
+          "fit_token_positions": 148500,
+          "backbone_forward_positions": 12383,
+          "selector_byte_positions": 0,
+          "selector_byte_positions_calls": 0
+        },
+        "evidence_retained": 4,
+        "categories": {
+          "correction": {
+            "n": 4,
+            "correct": 0
+          },
+          "distant": {
+            "n": 4,
+            "correct": 0
+          },
+          "exact": {
+            "n": 4,
+            "correct": 0
+          },
+          "missing": {
+            "n": 4,
+            "correct": 0
+          },
+          "preservation": {
+            "n": 4,
+            "correct": 0
+          },
+          "reference": {
+            "n": 4,
+            "correct": 0
+          }
+        },
+        "total_cpu_seconds": 212.109375,
+        "total_wall_seconds": 106.1926704000009,
+        "heldout_peak_rss_bytes": 970653696,
+        "heldout_peak_private_bytes": 1416380416
+      }
+    },
+    "lexical": {
+      "all_generated_requests": 38,
+      "all_inference_work": {
+        "history_token_positions": 31360,
+        "fit_token_positions": 5610,
+        "backbone_forward_positions": 6190,
+        "selector_byte_positions": 0,
+        "selector_byte_positions_calls": 0
+      },
+      "heldout_known_evidence_retained": 20,
+      "heldout_known_evidence_cases": 20,
+      "wrong_task_values_reviewed": 1,
+      "unknown_rubric_false_negatives": 0,
+      "peak_os_worker_private_bytes": 1421737984,
+      "published_costs": {
+        "cases": 24,
+        "correct": 7,
+        "unsupported_proxy": 4,
+        "stale_proxy": 0,
+        "prompt_tokens": 3538,
+        "output_tokens": 360,
+        "request_wall_seconds": 26.906682199999977,
+        "request_cpu_seconds": 54.109375,
+        "work": {
+          "history_token_positions": 19818,
+          "fit_token_positions": 3538,
+          "backbone_forward_positions": 3874,
+          "selector_byte_positions": 0,
+          "selector_byte_positions_calls": 0
+        },
+        "evidence_retained": 24,
+        "categories": {
+          "correction": {
+            "n": 4,
+            "correct": 4
+          },
+          "distant": {
+            "n": 4,
+            "correct": 3
+          },
+          "exact": {
+            "n": 4,
+            "correct": 0
+          },
+          "missing": {
+            "n": 4,
+            "correct": 0
+          },
+          "preservation": {
+            "n": 4,
+            "correct": 0
+          },
+          "reference": {
+            "n": 4,
+            "correct": 0
+          }
+        },
+        "total_cpu_seconds": 121.890625,
+        "total_wall_seconds": 65.00988100000018,
+        "heldout_peak_rss_bytes": 944893952,
+        "heldout_peak_private_bytes": 1423818752
+      }
+    },
+    "toruk": {
+      "all_generated_requests": 38,
+      "all_inference_work": {
+        "history_token_positions": 31360,
+        "fit_token_positions": 5607,
+        "backbone_forward_positions": 6235,
+        "selector_byte_positions": 119286,
+        "selector_byte_positions_calls": 2888
+      },
+      "heldout_known_evidence_retained": 15,
+      "heldout_known_evidence_cases": 20,
+      "wrong_task_values_reviewed": 3,
+      "unknown_rubric_false_negatives": 3,
+      "peak_os_worker_private_bytes": 1417682944,
+      "published_costs": {
+        "cases": 24,
+        "correct": 5,
+        "unsupported_proxy": 4,
+        "stale_proxy": 2,
+        "prompt_tokens": 3539,
+        "output_tokens": 408,
+        "request_wall_seconds": 32.26740610000206,
+        "request_cpu_seconds": 64.9375,
+        "work": {
+          "history_token_positions": 19818,
+          "fit_token_positions": 3539,
+          "backbone_forward_positions": 3923,
+          "selector_byte_positions": 75520,
+          "selector_byte_positions_calls": 1828
+        },
+        "evidence_retained": 19,
+        "categories": {
+          "correction": {
+            "n": 4,
+            "correct": 2
+          },
+          "distant": {
+            "n": 4,
+            "correct": 3
+          },
+          "exact": {
+            "n": 4,
+            "correct": 0
+          },
+          "missing": {
+            "n": 4,
+            "correct": 0
+          },
+          "preservation": {
+            "n": 4,
+            "correct": 0
+          },
+          "reference": {
+            "n": 4,
+            "correct": 0
+          }
+        },
+        "total_cpu_seconds": 152.21875,
+        "total_wall_seconds": 89.40280940000048,
+        "heldout_peak_rss_bytes": 945090560,
+        "heldout_peak_private_bytes": 1419870208
+      }
+    }
+  },
+  "training_attempts": [
+    {
+      "path": "D:\\Toruk\\artifacts\\m6-successor-v1\\profile",
+      "steps": 2,
+      "byte_model_input_positions": 1163,
+      "valid_targets": 969,
+      "cpu_seconds": 2.765625,
+      "checkpoint_sha256": "ba5bc50c02957b6ae1cf65ddb508f67f59beaec9a6ef7ca617cf15885658c71f"
+    },
+    {
+      "path": "D:\\Toruk\\artifacts\\m6-successor-v1\\train",
+      "steps": 12,
+      "byte_model_input_positions": 7134,
+      "valid_targets": 5970,
+      "cpu_seconds": 3.640625,
+      "checkpoint_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49"
+    },
+    {
+      "path": "D:\\Toruk\\artifacts\\m6-successor-v1\\execution\\profile",
+      "steps": 2,
+      "byte_model_input_positions": 1163,
+      "valid_targets": 969,
+      "cpu_seconds": 2.8125,
+      "checkpoint_sha256": "ba5bc50c02957b6ae1cf65ddb508f67f59beaec9a6ef7ca617cf15885658c71f"
+    },
+    {
+      "path": "D:\\Toruk\\artifacts\\m6-successor-v1\\execution\\train",
+      "steps": 12,
+      "byte_model_input_positions": 7134,
+      "valid_targets": 5970,
+      "cpu_seconds": 3.609375,
+      "checkpoint_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49"
+    }
+  ],
+  "manual_review_scope": "Task factual values and the explicit missing-information replies. Generic assistant capability statements and exhaustive semantic assertions are not audited. Review does not replace frozen scoring.",
+  "cost_scope_limit": "History, selection, model generation, setup, all profile/train/smoke work and sampled controller CPU are charged. Environment installation, common file copy/data registration and integrity-wrapper bookkeeping before job timers are excluded; no FLOP/energy or production-web-system claim.",
+  "rows": [
+    {
+      "id": "heldout-distant-0",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town that belongs to HBB30FBD468 is the town of Ashwood, Ohio.",
+      "expected": "Lusaka",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record HBB30FBD468?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-1",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H4D4075C356 is the town of Ashwood, Ohio.",
+      "expected": "Riga",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record H4D4075C356?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-2",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The record HE038276573 is from the city of San Francisco, California.",
+      "expected": "Riga",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record HE038276573?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-3",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H9C1324B91E is:\n\nBarcelona",
+      "expected": "Busan",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record H9C1324B91E?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-0",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": true,
+      "rubric_false_negative": false,
+      "answer": "The record HF5463F4C89 is from the United States.",
+      "expected": "Riga",
+      "obsolete": "Busan",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record HF5463F4C89?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-1",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H77D51A9545 is:\n\nBarcelona",
+      "expected": "Lusaka",
+      "obsolete": "Bremen",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H77D51A9545?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-2",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belongs to H0E4A55B809.",
+      "expected": "Bremen",
+      "obsolete": "Riga",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H0E4A55B809?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-3",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town that belongs to record H13E6DE1F0A is:\n\nBristol, United Kingdom",
+      "expected": "Bremen",
+      "obsolete": "Sofia",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H13E6DE1F0A?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-0",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town that belongs to record HB634DFE65C is:\n\nBristol, United Kingdom",
+      "expected": "Sofia",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record HB634DFE65C?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-1",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belongs to H160C7E8600.",
+      "expected": "Busan",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H160C7E8600?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-2",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belongs to H8C6B51158D.",
+      "expected": "Graz",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H8C6B51158D?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-3",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H699775F5D0 is:\n\nBarcelona",
+      "expected": "Sofia",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H699775F5D0?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-0",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H46FD86FA25:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H46FD86FA25, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-1",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H84FA0D374D:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H84FA0D374D, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-2",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H68494EE2AA:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H68494EE2AA, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-3",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "HAD4EC61FE6:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for HAD4EC61FE6, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-0",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as a weather-related AI, I don't have the ability to provide specific itineraries or recommendations. I'm here",
+      "expected": "H54968A2232-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-1",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as a weather-related AI, I don't have the ability to provide specific itineraries or recommendations. I'm here",
+      "expected": "HBDA8793DFD-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-2",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as a weather-related AI, I don't have the ability to provide specific itineraries or recommendations. I'm here",
+      "expected": "H40D928B061-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-3",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as a weather-related AI, I don't have the ability to provide specific itineraries or recommendations. I'm here",
+      "expected": "HAC161BF369-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-0",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Locker key received.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record HD050AEA844? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-1",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "rubric false negative",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": true,
+      "answer": "The locker key for record H5C8DC22FD7 is not known.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H5C8DC22FD7? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-2",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "rubric false negative",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": true,
+      "answer": "The locker key for record H3F64B4C4BD is not available.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H3F64B4C4BD? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-3",
+      "method": "recent",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "rubric false negative",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": true,
+      "answer": "The locker key for record H16EB7CCBF0 is not known.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m16",
+          "role": "user",
+          "content": "Weather entry 7: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m17",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m18",
+          "role": "user",
+          "content": "Weather entry 8: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m19",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m20",
+          "role": "user",
+          "content": "Weather entry 9: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m21",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m22",
+          "role": "user",
+          "content": "Weather entry 10: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m23",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m25",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 12: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m27",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m28",
+          "role": "user",
+          "content": "Weather entry 13: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m29",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m30",
+          "role": "user",
+          "content": "Weather entry 14: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m31",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m33",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m35",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H16EB7CCBF0? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-0",
+      "method": "lexical",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record HBB30FBD468 is Lusaka.",
+      "expected": "Lusaka",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HBB30FBD468: Lusaka."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record HBB30FBD468?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-1",
+      "method": "lexical",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H4D4075C356 is Riga.",
+      "expected": "Riga",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H4D4075C356: Riga."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record H4D4075C356?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-2",
+      "method": "lexical",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record HE038276573 is Riga.",
+      "expected": "Riga",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HE038276573: Riga."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record HE038276573?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-3",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H9C1324B91E is Hanoi, Vietnam.",
+      "expected": "Busan",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H9C1324B91E: Busan."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record H9C1324B91E?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-0",
+      "method": "lexical",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Destination town for record HF5463F4C89 is Riga.",
+      "expected": "Riga",
+      "obsolete": "Busan",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HF5463F4C89: Busan."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update: the destination town for record HF5463F4C89 has changed to Riga."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record HF5463F4C89?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-1",
+      "method": "lexical",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Destination town for record H77D51A9545 is Lusaka.",
+      "expected": "Lusaka",
+      "obsolete": "Bremen",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H77D51A9545: Bremen."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update: the destination town for record H77D51A9545 has changed to Lusaka."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H77D51A9545?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-2",
+      "method": "lexical",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town for record H0E4A55B809 is Bremen.",
+      "expected": "Bremen",
+      "obsolete": "Riga",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H0E4A55B809: Riga."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update: the destination town for record H0E4A55B809 has changed to Bremen."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H0E4A55B809?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-3",
+      "method": "lexical",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Destination town for record H13E6DE1F0A is Bremen.",
+      "expected": "Bremen",
+      "obsolete": "Sofia",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H13E6DE1F0A: Sofia."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update: the destination town for record H13E6DE1F0A has changed to Bremen."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H13E6DE1F0A?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-0",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Sofia",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HB634DFE65C: Sofia."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record HB634DFE65C to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record HB634DFE65C?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-1",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Busan",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H160C7E8600: Busan."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record H160C7E8600 to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H160C7E8600?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-2",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Graz",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H8C6B51158D: Graz."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record H8C6B51158D to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H8C6B51158D?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-3",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Sofia",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H699775F5D0: Sofia."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record H699775F5D0 to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H699775F5D0?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-0",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H46FD86FA25:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Store H46FD86FA25:  A/7! verbatim as marker H46FD86FA25."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H46FD86FA25, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-1",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H84FA0D374D:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Store H84FA0D374D:  A/7! verbatim as marker H84FA0D374D."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H84FA0D374D, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-2",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H68494EE2AA:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Store H68494EE2AA:  A/7! verbatim as marker H68494EE2AA."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H68494EE2AA, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-3",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "HAD4EC61FE6:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Store HAD4EC61FE6:  A/7! verbatim as marker HAD4EC61FE6."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for HAD4EC61FE6, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-0",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist you with",
+      "expected": "H54968A2232-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary H54968A2232 was H54968A2232-KITE."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-1",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist with weather",
+      "expected": "HBDA8793DFD-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary HBDA8793DFD was HBDA8793DFD-KITE."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-2",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist you with",
+      "expected": "H40D928B061-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary H40D928B061 was H40D928B061-KITE."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-3",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist with planning",
+      "expected": "HAC161BF369-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary HAC161BF369 was HAC161BF369-KITE."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-0",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HD050AEA844: Bremen."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record HD050AEA844? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-1",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H5C8DC22FD7: Busan."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H5C8DC22FD7? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-2",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H3F64B4C4BD: Sofia."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H3F64B4C4BD? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-3",
+      "method": "lexical",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H16EB7CCBF0: Riga."
+        },
+        {
+          "id": "m34",
+          "role": "user",
+          "content": "Weather entry 16: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H16EB7CCBF0? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-0",
+      "method": "toruk",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record HBB30FBD468 is Lusaka.",
+      "expected": "Lusaka",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HBB30FBD468: Lusaka."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record HBB30FBD468?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-1",
+      "method": "toruk",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H4D4075C356 is Riga.",
+      "expected": "Riga",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H4D4075C356: Riga."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record H4D4075C356?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-2",
+      "method": "toruk",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record HE038276573 is Riga.",
+      "expected": "Riga",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HE038276573: Riga."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record HE038276573?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-distant-3",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H9C1324B91E is Hanoi, Vietnam.",
+      "expected": "Busan",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H9C1324B91E: Busan."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which destination town belongs to record H9C1324B91E?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-0",
+      "method": "toruk",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Destination town for record HF5463F4C89 is Riga.",
+      "expected": "Riga",
+      "obsolete": "Busan",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HF5463F4C89: Busan."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update: the destination town for record HF5463F4C89 has changed to Riga."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record HF5463F4C89?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-1",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": true
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H77D51A9545 is Bremen.",
+      "expected": "Lusaka",
+      "obsolete": "Bremen",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H77D51A9545: Bremen."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H77D51A9545?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-2",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": true
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": true,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "The destination town belonging to record H0E4A55B809 is Riga.",
+      "expected": "Bremen",
+      "obsolete": "Riga",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H0E4A55B809: Riga."
+        },
+        {
+          "id": "m26",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H0E4A55B809?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-correction-3",
+      "method": "toruk",
+      "primary_score": {
+        "correct": true,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "correct",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Destination town for record H13E6DE1F0A is Bremen.",
+      "expected": "Bremen",
+      "obsolete": "Sofia",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H13E6DE1F0A: Sofia."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update: the destination town for record H13E6DE1F0A has changed to Bremen."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H13E6DE1F0A?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-0",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Sofia",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HB634DFE65C: Sofia."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record HB634DFE65C to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record HB634DFE65C?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-1",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Busan",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H160C7E8600: Busan."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record H160C7E8600 to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H160C7E8600?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-2",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Graz",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H8C6B51158D: Graz."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record H8C6B51158D to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H8C6B51158D?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-preservation-3",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "Sofia",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record H699775F5D0: Sofia."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Update only the meal for record H699775F5D0 to pasta."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m39",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m40",
+          "role": "user",
+          "content": "Which destination town belongs to record H699775F5D0?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-0",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H46FD86FA25:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Store H46FD86FA25:  A/7! verbatim as marker H46FD86FA25."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H46FD86FA25, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-1",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H84FA0D374D:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Weather entry 1: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H84FA0D374D, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-2",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "H68494EE2AA:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Weather entry 1: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for H68494EE2AA, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-exact-3",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "relevant evidence omitted",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "HAD4EC61FE6:  A/7!",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m4",
+          "role": "user",
+          "content": "Weather entry 1: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Return only the stored marker for HAD4EC61FE6, retaining punctuation and spaces."
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-0",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist you with",
+      "expected": "H54968A2232-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary H54968A2232 was H54968A2232-KITE."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-1",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist with weather",
+      "expected": "HBDA8793DFD-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary HBDA8793DFD was HBDA8793DFD-KITE."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-2",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist you with",
+      "expected": "H40D928B061-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary H40D928B061 was H40D928B061-KITE."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-reference-3",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": false,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide a list of names. I'm here to assist with planning",
+      "expected": "HAC161BF369-KITE",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The name I gave itinerary HAC161BF369 was HAC161BF369-KITE."
+        },
+        {
+          "id": "m32",
+          "role": "user",
+          "content": "Weather entry 15: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "Which name did I give that itinerary?"
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-0",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "generator failed with task context present",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": false,
+      "answer": "Weather entry received.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Destination town assigned to record HD050AEA844: Bremen."
+        },
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record HD050AEA844? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-1",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "rubric false negative",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": true,
+      "answer": "The locker key for record H5C8DC22FD7 is not available.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H5C8DC22FD7? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-2",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "rubric false negative",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": true,
+      "answer": "The locker key for record H3F64B4C4BD is not available.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H3F64B4C4BD? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    },
+    {
+      "id": "heldout-missing-3",
+      "method": "toruk",
+      "primary_score": {
+        "correct": false,
+        "unsupported_abstention_proxy": true,
+        "stale_assertion_proxy": false
+      },
+      "cause": "rubric false negative",
+      "wrong_task_value_asserted": false,
+      "unsupported_origin_assertion": false,
+      "rubric_false_negative": true,
+      "answer": "The locker key for record H16EB7CCBF0 is not available.",
+      "expected": "unknown",
+      "obsolete": "",
+      "selected_sources": [
+        {
+          "id": "m2",
+          "role": "user",
+          "content": "Weather entry 0: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m24",
+          "role": "user",
+          "content": "Weather entry 11: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m36",
+          "role": "user",
+          "content": "Weather entry 17: drifting clouds crossed the quiet valley before a mild afternoon breeze, while the instruments logged pressure and humidity."
+        },
+        {
+          "id": "m37",
+          "role": "assistant",
+          "content": "Weather entry received."
+        },
+        {
+          "id": "m38",
+          "role": "user",
+          "content": "What is the locker key for record H16EB7CCBF0? It was never supplied. Say unknown if unavailable."
+        }
+      ]
+    }
+  ]
+}

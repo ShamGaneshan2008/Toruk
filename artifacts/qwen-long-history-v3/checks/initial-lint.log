@@ -1,0 +1,63 @@
+F401 [*] `os` imported but unused
+  --> scripts\qwen_long_history_v3.py:9:8
+   |
+ 7 | import importlib.util
+ 8 | import json
+ 9 | import os
+   |        ^^
+10 | import subprocess
+11 | import sys
+   |
+help: Remove unused import: `os`
+  |
+8 | import json
+  - import os
+9 | import subprocess
+  |
+
+E501 Line too long (111 > 100)
+   --> scripts\qwen_long_history_v3.py:171:101
+    |
+169 |             else "missing required evidence; irrelevant replacement turns"
+170 |             if not old["required_evidence_retained"]
+171 |             else "Qwen generation with required evidence retained; prompt-composition sensitivity not isolated"
+    |                                                                                                     ^^^^^^^^^^^
+172 |         )
+173 |         item["ordering_error_observed"] = False
+    |
+
+E501 Line too long (116 > 100)
+   --> scripts\qwen_long_history_v3.py:188:101
+    |
+186 |             "case_ids": [c["id"] for c in cases],
+187 |             "source_sha256": sha(dev_path),
+188 |             "intentional_reuse": "Exact seven v2 development cases, already observed; adaptive development fitting",
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+189 |             "new_cases": 0,
+190 |             "new_training_cases": 0,
+    |
+
+E501 Line too long (103 > 100)
+   --> scripts\qwen_long_history_v3.py:192:101
+    |
+190 |             "new_training_cases": 0,
+191 |             "heldout_file_parsed": False,
+192 |             "boundary": "Only dev.json and dev-only prompt IDs copied; model worker rejects other IDs",
+    |                                                                                                     ^^^
+193 |         },
+194 |     )
+    |
+
+E501 Line too long (107 > 100)
+   --> scripts\qwen_long_history_v3.py:291:101
+    |
+289 |             "wall_seconds": time.perf_counter() - start_wall,
+290 |             "controller_cpu_seconds": time.process_time() - start_cpu,
+291 |             "scope": "Shared offline diagnosis, preservation and registration; before candidate inference",
+    |                                                                                                     ^^^^^^^
+292 |         },
+293 |     )
+    |
+
+Found 5 errors.
+[*] 1 fixable with `--fix`.

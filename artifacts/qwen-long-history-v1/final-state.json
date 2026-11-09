@@ -1,0 +1,44 @@
+{
+  "branch": "main",
+  "commit": "25d4ec09e01397b43b9b16ad08faeca7cdb22eb0",
+  "status_sb": "## main...origin/main\n M .gitattributes\n M .gitignore\n M README.md\n M docs/architecture.md\n M docs/experiments.md\n M docs/reproducibility.md\n M pyproject.toml\n?? .idea/Toruk.iml\n?? .idea/inspectionProfiles/\n?? .idea/misc.xml\n?? .idea/modules.xml\n?? .idea/vcs.xml\n?? artifacts/backbone-qualification-v1/\n?? artifacts/m6-successor-v1/\n?? artifacts/qwen-long-history-v1/\n?? configs/backbone-qualification-v1.json\n?? configs/m6-successor-v1-execution.json\n?? configs/m6-successor-v1.json\n?? configs/qwen-long-history-v1.json\n?? docs/research/backbone-qualification-v1-protocol.md\n?? docs/research/backbone-qualification-v1-results.md\n?? docs/research/m6-successor-v1-protocol.md\n?? docs/research/m6-successor-v1-results.md\n?? docs/research/qwen-long-history-v1-protocol.md\n?? docs/research/qwen-long-history-v1-results.md\n?? scripts/m6_successor.py\n?? scripts/qualify_answer_backbone.py\n?? scripts/qwen_long_history.py\n?? tests/test_backbone_qualification.py\n?? tests/test_m6_successor.py\n?? tests/test_qwen_long_history.py\n",
+  "staged_diff": "",
+  "preservation_status": "PASS",
+  "prior_files_checked": 593,
+  "shared_files_original_bytes_preserved": [
+    ".gitattributes",
+    ".gitignore",
+    "README.md",
+    "docs/architecture.md",
+    "docs/experiments.md",
+    "docs/reproducibility.md",
+    "pyproject.toml"
+  ],
+  "pyproject_bytes_unchanged": true,
+  "invalid_preflight_source_copies_match_original_registration": true,
+  "valid_execution_source_bindings": "PASS",
+  "heldout_attempts_per_arm": {
+    "full": 0,
+    "recent": 0,
+    "lexical": 0,
+    "toruk": 0
+  },
+  "scientific_status": "BLOCKED",
+  "verification_status": "26/26 PASS; 301 Python tests; no HTTP retry",
+  "study_input_disk_bytes": 1006830097,
+  "one_blocker": "Awake host and explicit fresh bounded registered attempt; current elapsed budget exhausted",
+  "files_added_or_changed_this_task": [
+    "scripts/qwen_long_history.py",
+    "tests/test_qwen_long_history.py",
+    "configs/qwen-long-history-v1.json",
+    "docs/research/qwen-long-history-v1-protocol.md",
+    "docs/research/qwen-long-history-v1-results.md",
+    "artifacts/qwen-long-history-v1/",
+    ".gitattributes",
+    ".gitignore",
+    "README.md",
+    "docs/architecture.md",
+    "docs/experiments.md",
+    "docs/reproducibility.md"
+  ]
+}

@@ -1,0 +1,916 @@
+{
+  "cases": [
+    {
+      "id": "lh1-development-distant-0",
+      "kind": "distant",
+      "question": "Which meeting point was assigned in delivery ledger LHD-4F9D48AA0B8B?",
+      "expected": "copper quay",
+      "required_indices": [
+        0
+      ],
+      "required_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Delivery ledger LHD-4F9D48AA0B8B assigns the meeting point copper quay."
+        }
+      ],
+      "toruk": {
+        "answer": "delivery ledger LHD-4F9D48AA0B8B",
+        "selected_indices": [
+          0,
+          1,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Delivery ledger LHD-4F9D48AA0B8B assigns the meeting point copper quay."
+          },
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which meeting point was assigned in delivery ledger LHD-4F9D48AA0B8B?"
+          }
+        ],
+        "prompt_tokens": 150,
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          1,
+          40,
+          41,
+          42
+        ]
+      },
+      "lexical": {
+        "answer": "Delivery ledger LHD-4F9D48AA0B8B assigned the meeting point copper quay.",
+        "selected_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Delivery ledger LHD-4F9D48AA0B8B assigns the meeting point copper quay."
+          },
+          {
+            "id": "m38",
+            "role": "user",
+            "content": "Archive log 18: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which meeting point was assigned in delivery ledger LHD-4F9D48AA0B8B?"
+          }
+        ],
+        "prompt_tokens": 173,
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ]
+      },
+      "diagnosis": "Qwen generation with required evidence retained; prompt-composition sensitivity not isolated",
+      "ordering_error_observed": false,
+      "rendering_error_observed": false,
+      "fit_evicted_proposed_sources": false,
+      "missing_required_indices": []
+    },
+    {
+      "id": "lh1-development-correction-0",
+      "kind": "correction",
+      "question": "After the update, where is the material for LHD-BC47D0CEDA8C stored?",
+      "expected": "linen cabinet",
+      "required_indices": [
+        8
+      ],
+      "required_sources": [
+        {
+          "id": "m8",
+          "role": "user",
+          "content": "Update for LHD-BC47D0CEDA8C: replace the old storage location with linen cabinet; the earlier entry is obsolete."
+        }
+      ],
+      "toruk": {
+        "answer": "archive",
+        "selected_indices": [
+          0,
+          1,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The storage location for LHD-BC47D0CEDA8C is discarded chest."
+          },
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "After the update, where is the material for LHD-BC47D0CEDA8C stored?"
+          }
+        ],
+        "prompt_tokens": 146,
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": false,
+        "proposed_indices": [
+          0,
+          1,
+          42,
+          43,
+          44
+        ]
+      },
+      "lexical": {
+        "answer": "LHD-BC47D0CEDA8C is stored in the linen cabinet.",
+        "selected_indices": [
+          0,
+          8,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The storage location for LHD-BC47D0CEDA8C is discarded chest."
+          },
+          {
+            "id": "m8",
+            "role": "user",
+            "content": "Update for LHD-BC47D0CEDA8C: replace the old storage location with linen cabinet; the earlier entry is obsolete."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "After the update, where is the material for LHD-BC47D0CEDA8C stored?"
+          }
+        ],
+        "prompt_tokens": 173,
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          8,
+          42,
+          43,
+          44
+        ]
+      },
+      "diagnosis": "missing required evidence; irrelevant replacement turns",
+      "ordering_error_observed": false,
+      "rendering_error_observed": false,
+      "fit_evicted_proposed_sources": false,
+      "missing_required_indices": [
+        8
+      ]
+    },
+    {
+      "id": "lh1-development-distractor-0",
+      "kind": "distractor",
+      "question": "What approved jam ingredient belongs to order LHD-0B27D1C0E888?",
+      "expected": "mulberry",
+      "required_indices": [
+        0
+      ],
+      "required_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The approved jam ingredient for order LHD-0B27D1C0E888 is mulberry."
+        }
+      ],
+      "toruk": {
+        "answer": "UNKNOWN",
+        "selected_indices": [
+          1,
+          3,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "The ingredient record is noted."
+          },
+          {
+            "id": "m3",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "What approved jam ingredient belongs to order LHD-0B27D1C0E888?"
+          }
+        ],
+        "prompt_tokens": 132,
+        "score": {
+          "correct": false,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": false,
+        "proposed_indices": [
+          1,
+          3,
+          42,
+          43,
+          44
+        ]
+      },
+      "lexical": {
+        "answer": "mulberry",
+        "selected_indices": [
+          0,
+          2,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The approved jam ingredient for order LHD-0B27D1C0E888 is mulberry."
+          },
+          {
+            "id": "m2",
+            "role": "user",
+            "content": "A different order AUXD-6C2D54A72DAC uses damson; it is not order LHD-0B27D1C0E888."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "What approved jam ingredient belongs to order LHD-0B27D1C0E888?"
+          }
+        ],
+        "prompt_tokens": 188,
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          2,
+          42,
+          43,
+          44
+        ]
+      },
+      "diagnosis": "missing required evidence; irrelevant replacement turns",
+      "ordering_error_observed": false,
+      "rendering_error_observed": false,
+      "fit_evicted_proposed_sources": false,
+      "missing_required_indices": [
+        0
+      ]
+    },
+    {
+      "id": "lh1-development-literal-0",
+      "kind": "literal",
+      "question": "Copy only the quoted plate for LHD-EBC6A8AD0D79, with exact spaces.",
+      "expected": "DEV/PUTYAOKYO:  R-4!",
+      "required_indices": [
+        0
+      ],
+      "required_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "The quoted plate for LHD-EBC6A8AD0D79 reads \"DEV/PUTYAOKYO:  R-4!\"."
+        }
+      ],
+      "toruk": {
+        "answer": "Log noted",
+        "selected_indices": [
+          1,
+          3,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m3",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Copy only the quoted plate for LHD-EBC6A8AD0D79, with exact spaces."
+          }
+        ],
+        "prompt_tokens": 129,
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": false,
+        "proposed_indices": [
+          1,
+          3,
+          40,
+          41,
+          42
+        ]
+      },
+      "lexical": {
+        "answer": "DEV/PUTYAOKYO:  R-4!",
+        "selected_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "The quoted plate for LHD-EBC6A8AD0D79 reads \"DEV/PUTYAOKYO:  R-4!\"."
+          },
+          {
+            "id": "m38",
+            "role": "user",
+            "content": "Archive log 18: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Copy only the quoted plate for LHD-EBC6A8AD0D79, with exact spaces."
+          }
+        ],
+        "prompt_tokens": 180,
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ]
+      },
+      "diagnosis": "missing required evidence; irrelevant replacement turns",
+      "ordering_error_observed": false,
+      "rendering_error_observed": false,
+      "fit_evicted_proposed_sources": false,
+      "missing_required_indices": [
+        0
+      ]
+    },
+    {
+      "id": "lh1-development-preservation-0",
+      "kind": "preservation",
+      "question": "Which flower remains in garden record LHD-370844F31736?",
+      "expected": "hyacinth",
+      "required_indices": [
+        0
+      ],
+      "required_sources": [
+        {
+          "id": "m0",
+          "role": "user",
+          "content": "Garden record LHD-370844F31736 names flower hyacinth and folder shade beige."
+        }
+      ],
+      "toruk": {
+        "answer": "UNKNOWN",
+        "selected_indices": [
+          2,
+          14,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m2",
+            "role": "user",
+            "content": "Archive log 0: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m14",
+            "role": "user",
+            "content": "Archive log 5: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "Which flower remains in garden record LHD-370844F31736?"
+          }
+        ],
+        "prompt_tokens": 172,
+        "score": {
+          "correct": false,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": false,
+        "proposed_indices": [
+          2,
+          14,
+          42,
+          43,
+          44
+        ]
+      },
+      "lexical": {
+        "answer": "flower hyacinth",
+        "selected_indices": [
+          0,
+          10,
+          42,
+          43,
+          44
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Garden record LHD-370844F31736 names flower hyacinth and folder shade beige."
+          },
+          {
+            "id": "m10",
+            "role": "user",
+            "content": "Update for garden record LHD-370844F31736: change only the folder shade to amber; keep its flower entry unchanged."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m44",
+            "role": "user",
+            "content": "Which flower remains in garden record LHD-370844F31736?"
+          }
+        ],
+        "prompt_tokens": 183,
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          10,
+          42,
+          43,
+          44
+        ]
+      },
+      "diagnosis": "missing required evidence; irrelevant replacement turns",
+      "ordering_error_observed": false,
+      "rendering_error_observed": false,
+      "fit_evicted_proposed_sources": false,
+      "missing_required_indices": [
+        0
+      ]
+    },
+    {
+      "id": "lh1-development-reference-0",
+      "kind": "reference",
+      "question": "Where is that same crate routed?",
+      "expected": "velvet depot",
+      "required_indices": [
+        1,
+        43
+      ],
+      "required_sources": [
+        {
+          "id": "m1",
+          "role": "user",
+          "content": "Crate LHD-C0BA0B7AB5DF is routed to velvet depot."
+        },
+        {
+          "id": "m43",
+          "role": "user",
+          "content": "I am looking at crate LHD-C0BA0B7AB5DF. My next question concerns that same crate."
+        }
+      ],
+      "toruk": {
+        "answer": "crate LHD-C0BA0B7AB5DF",
+        "selected_indices": [
+          3,
+          5,
+          43,
+          44,
+          45
+        ],
+        "selected_sources": [
+          {
+            "id": "m3",
+            "role": "user",
+            "content": "Archive log 0: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m5",
+            "role": "user",
+            "content": "Archive log 1: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "user",
+            "content": "I am looking at crate LHD-C0BA0B7AB5DF. My next question concerns that same crate."
+          },
+          {
+            "id": "m44",
+            "role": "assistant",
+            "content": "I will use the referenced record."
+          },
+          {
+            "id": "m45",
+            "role": "user",
+            "content": "Where is that same crate routed?"
+          }
+        ],
+        "prompt_tokens": 160,
+        "score": {
+          "correct": false,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": false,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": false,
+        "proposed_indices": [
+          3,
+          5,
+          43,
+          44,
+          45
+        ]
+      },
+      "lexical": {
+        "answer": "velvet depot",
+        "selected_indices": [
+          1,
+          41,
+          43,
+          44,
+          45
+        ],
+        "selected_sources": [
+          {
+            "id": "m1",
+            "role": "user",
+            "content": "Crate LHD-C0BA0B7AB5DF is routed to velvet depot."
+          },
+          {
+            "id": "m41",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m43",
+            "role": "user",
+            "content": "I am looking at crate LHD-C0BA0B7AB5DF. My next question concerns that same crate."
+          },
+          {
+            "id": "m44",
+            "role": "assistant",
+            "content": "I will use the referenced record."
+          },
+          {
+            "id": "m45",
+            "role": "user",
+            "content": "Where is that same crate routed?"
+          }
+        ],
+        "prompt_tokens": 154,
+        "score": {
+          "correct": true,
+          "abstention": false,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          1,
+          41,
+          43,
+          44,
+          45
+        ]
+      },
+      "diagnosis": "missing required evidence; irrelevant replacement turns",
+      "ordering_error_observed": false,
+      "rendering_error_observed": false,
+      "fit_evicted_proposed_sources": false,
+      "missing_required_indices": [
+        1
+      ]
+    },
+    {
+      "id": "lh1-development-missing-0",
+      "kind": "missing",
+      "question": "Which override password is given for inventory LHD-672B0E99F45C?",
+      "expected": "UNKNOWN",
+      "required_indices": [],
+      "required_sources": [],
+      "toruk": {
+        "answer": "UNKNOWN",
+        "selected_indices": [
+          0,
+          1,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Inventory LHD-672B0E99F45C specifies a weight of 23 kilograms and a seal marked PLAIN."
+          },
+          {
+            "id": "m1",
+            "role": "assistant",
+            "content": "Record noted."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which override password is given for inventory LHD-672B0E99F45C?"
+          }
+        ],
+        "prompt_tokens": 157,
+        "score": {
+          "correct": true,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          1,
+          40,
+          41,
+          42
+        ]
+      },
+      "lexical": {
+        "answer": "UNKNOWN",
+        "selected_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ],
+        "selected_sources": [
+          {
+            "id": "m0",
+            "role": "user",
+            "content": "Inventory LHD-672B0E99F45C specifies a weight of 23 kilograms and a seal marked PLAIN."
+          },
+          {
+            "id": "m38",
+            "role": "user",
+            "content": "Archive log 18: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m40",
+            "role": "user",
+            "content": "Archive log 19: the clerk counted empty folders beside a quiet window, then checked the unused shelf and closed the book."
+          },
+          {
+            "id": "m41",
+            "role": "assistant",
+            "content": "Log noted."
+          },
+          {
+            "id": "m42",
+            "role": "user",
+            "content": "Which override password is given for inventory LHD-672B0E99F45C?"
+          }
+        ],
+        "prompt_tokens": 180,
+        "score": {
+          "correct": true,
+          "abstention": true,
+          "wrong_listed_value": false,
+          "unsupported_response_proxy": false,
+          "exact_match": true,
+          "stale_assertion_proxy": false
+        },
+        "required_evidence_retained": true,
+        "proposed_indices": [
+          0,
+          38,
+          40,
+          41,
+          42
+        ]
+      },
+      "diagnosis": "correct abstention",
+      "ordering_error_observed": false,
+      "rendering_error_observed": false,
+      "fit_evicted_proposed_sources": false,
+      "missing_required_indices": []
+    }
+  ],
+  "scope": "Development only; no causal overclaim from evidence presence alone"
+}

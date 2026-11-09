@@ -1,0 +1,154 @@
+[
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-binding-0",
+    "split": "development",
+    "kind": "binding",
+    "tag": "QUALD-9DDF16EF3A",
+    "auxiliary": "AUXD-512F190F4C",
+    "expected": "ochre",
+    "alternatives": [
+      "teal"
+    ],
+    "question": "What color does badge QUALD-9DDF16EF3A have?",
+    "prompt": "Reference:\nBadge QUALD-9DDF16EF3A has color ochre. Badge AUXD-512F190F4C has color teal.\n\nQuestion:\nWhat color does badge QUALD-9DDF16EF3A have?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-binding-1",
+    "split": "development",
+    "kind": "binding",
+    "tag": "QUALD-612A4C6EE2",
+    "auxiliary": "AUXD-C3CA653D55",
+    "expected": "teal",
+    "alternatives": [
+      "ochre"
+    ],
+    "question": "What color does badge QUALD-612A4C6EE2 have?",
+    "prompt": "Reference:\nBadge QUALD-612A4C6EE2 has color teal. Badge AUXD-C3CA653D55 has color ochre.\n\nQuestion:\nWhat color does badge QUALD-612A4C6EE2 have?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-correction-0",
+    "split": "development",
+    "kind": "correction",
+    "tag": "QUALD-EEAF6CA868",
+    "auxiliary": "AUXD-1D302CAFC2",
+    "expected": "Tuesday",
+    "alternatives": [
+      "Saturday"
+    ],
+    "question": "On what day is the inspection for QUALD-EEAF6CA868 after the amendment?",
+    "prompt": "Reference:\nThe first form for QUALD-EEAF6CA868 lists Saturday. An amended form changes its inspection day to Tuesday; the first form is obsolete.\n\nQuestion:\nOn what day is the inspection for QUALD-EEAF6CA868 after the amendment?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-correction-1",
+    "split": "development",
+    "kind": "correction",
+    "tag": "QUALD-06946D895C",
+    "auxiliary": "AUXD-A568AD9585",
+    "expected": "Saturday",
+    "alternatives": [
+      "Tuesday"
+    ],
+    "question": "On what day is the inspection for QUALD-06946D895C after the amendment?",
+    "prompt": "Reference:\nThe first form for QUALD-06946D895C lists Tuesday. An amended form changes its inspection day to Saturday; the first form is obsolete.\n\nQuestion:\nOn what day is the inspection for QUALD-06946D895C after the amendment?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-preservation-0",
+    "split": "development",
+    "kind": "preservation",
+    "tag": "QUALD-B14B02CEBB",
+    "auxiliary": "AUXD-329A3F3E7B",
+    "expected": "apricot",
+    "alternatives": [],
+    "question": "What fruit is still listed in handbook QUALD-B14B02CEBB?",
+    "prompt": "Reference:\nHandbook QUALD-B14B02CEBB lists fruit apricot and cover silver. Only its cover changes to copper; the fruit entry stays valid.\n\nQuestion:\nWhat fruit is still listed in handbook QUALD-B14B02CEBB?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-preservation-1",
+    "split": "development",
+    "kind": "preservation",
+    "tag": "QUALD-B3486E9317",
+    "auxiliary": "AUXD-C2E9FEAA6D",
+    "expected": "nectarine",
+    "alternatives": [],
+    "question": "What fruit is still listed in handbook QUALD-B3486E9317?",
+    "prompt": "Reference:\nHandbook QUALD-B3486E9317 lists fruit nectarine and cover silver. Only its cover changes to copper; the fruit entry stays valid.\n\nQuestion:\nWhat fruit is still listed in handbook QUALD-B3486E9317?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-literal-0",
+    "split": "development",
+    "kind": "literal",
+    "tag": "QUALD-EC0DDC4F50",
+    "auxiliary": "AUXD-F72D3ECD9B",
+    "expected": "QD_YVKCHWB:5  +",
+    "alternatives": [],
+    "question": "Copy the quoted sign for QUALD-EC0DDC4F50 with its spacing.",
+    "prompt": "Reference:\nThe quoted sign for QUALD-EC0DDC4F50 reads \"QD_YVKCHWB:5  +\".\n\nQuestion:\nCopy the quoted sign for QUALD-EC0DDC4F50 with its spacing.\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-literal-1",
+    "split": "development",
+    "kind": "literal",
+    "tag": "QUALD-0382368E66",
+    "auxiliary": "AUXD-FEB31F3664",
+    "expected": "QD_LPDLDFY:5  +",
+    "alternatives": [],
+    "question": "Copy the quoted sign for QUALD-0382368E66 with its spacing.",
+    "prompt": "Reference:\nThe quoted sign for QUALD-0382368E66 reads \"QD_LPDLDFY:5  +\".\n\nQuestion:\nCopy the quoted sign for QUALD-0382368E66 with its spacing.\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-reference-0",
+    "split": "development",
+    "kind": "reference",
+    "tag": "QUALD-69828E62EF",
+    "auxiliary": "AUXD-0AC1011BBF",
+    "expected": "Beatrice",
+    "alternatives": [],
+    "question": "Who owns the parcel being monitored?",
+    "prompt": "Reference:\nA clerk monitors parcel QUALD-69828E62EF. That same parcel belongs to Beatrice.\n\nQuestion:\nWho owns the parcel being monitored?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-reference-1",
+    "split": "development",
+    "kind": "reference",
+    "tag": "QUALD-7F6DA74464",
+    "auxiliary": "AUXD-0A4020B666",
+    "expected": "Jasper",
+    "alternatives": [],
+    "question": "Who owns the parcel being monitored?",
+    "prompt": "Reference:\nA clerk monitors parcel QUALD-7F6DA74464. That same parcel belongs to Jasper.\n\nQuestion:\nWho owns the parcel being monitored?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-missing-0",
+    "split": "development",
+    "kind": "missing",
+    "tag": "QUALD-F868561F19",
+    "auxiliary": "AUXD-E02E3BB298",
+    "expected": "UNKNOWN",
+    "alternatives": [],
+    "question": "What serial number is specified in register QUALD-F868561F19?",
+    "prompt": "Reference:\nRegister QUALD-F868561F19 lists only a container mass of 14 grams. No serial number is recorded.\n\nQuestion:\nWhat serial number is specified in register QUALD-F868561F19?\n\nAnswer:"
+  },
+  {
+    "schema": "backbone-qualification-v1",
+    "id": "bq1-development-missing-1",
+    "split": "development",
+    "kind": "missing",
+    "tag": "QUALD-527DE6B09F",
+    "auxiliary": "AUXD-72F2A2B811",
+    "expected": "UNKNOWN",
+    "alternatives": [],
+    "question": "What serial number is specified in register QUALD-527DE6B09F?",
+    "prompt": "Reference:\nRegister QUALD-527DE6B09F lists only a container mass of 14 grams. No serial number is recorded.\n\nQuestion:\nWhat serial number is specified in register QUALD-527DE6B09F?\n\nAnswer:"
+  }
+]

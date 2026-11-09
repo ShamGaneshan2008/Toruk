@@ -1,0 +1,44 @@
+B010 [*] Do not call `setattr` with a constant attribute value. It is not any safer than normal property access.
+   --> scripts\qwen_long_history_v3.py:365:5
+    |
+363 |         )
+364 |
+365 |     setattr(chat_foundation, "TorukContextSelector", toruk_factory)
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+366 |     setattr(
+367 |         context_selection,
+    |
+help: Replace `setattr` with assignment
+    |
+364 |
+    -     setattr(chat_foundation, "TorukContextSelector", toruk_factory)
+365 +     chat_foundation.TorukContextSelector = toruk_factory
+366 |     setattr(
+    |
+
+B010 [*] Do not call `setattr` with a constant attribute value. It is not any safer than normal property access.
+   --> scripts\qwen_long_history_v3.py:366:5
+    |
+365 |       setattr(chat_foundation, "TorukContextSelector", toruk_factory)
+366 | /     setattr(
+367 | |         context_selection,
+368 | |         "LexicalContextSelector",
+369 | |         lambda kind: TracedSelector(original_lexical(kind)),
+370 | |     )
+    | |_____^
+371 |       legacy.worker(args.run, "development", args.arm)
+    |
+help: Replace `setattr` with assignment
+    |
+365 |     setattr(chat_foundation, "TorukContextSelector", toruk_factory)
+    -     setattr(
+    -         context_selection,
+    -         "LexicalContextSelector",
+    -         lambda kind: TracedSelector(original_lexical(kind)),
+    -     )
+366 +     context_selection.LexicalContextSelector = lambda kind: TracedSelector(original_lexical(kind))
+367 |     legacy.worker(args.run, "development", args.arm)
+    |
+
+Found 2 errors.
+[*] 2 fixable with `--fix`.

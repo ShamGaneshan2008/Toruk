@@ -1,0 +1,105 @@
+{
+  "schema": "qwen-long-history-v1",
+  "development_seed": 82811,
+  "heldout_seed": 82831,
+  "generation_seed": 81751,
+  "backbone_freeze": "artifacts/backbone-qualification-v1/qualified-backbone.json",
+  "backbone_directory": "artifacts/backbone-qualification-v1/backbones/qwen",
+  "selector_checkpoint": "artifacts/m6-successor-v1/execution/train/checkpoint.pt",
+  "selector_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+  "arms": [
+    "full",
+    "recent",
+    "lexical",
+    "toruk"
+  ],
+  "development_order": [
+    "full",
+    "lexical",
+    "toruk",
+    "recent"
+  ],
+  "heldout_order": [
+    "toruk",
+    "recent",
+    "full",
+    "lexical"
+  ],
+  "development_per_kind": 1,
+  "heldout_per_kind": 4,
+  "gap_pairs": 20,
+  "bounded_prompt_tokens": 512,
+  "max_new_tokens": 64,
+  "context_policy": "Full transcript plus 64 output positions must fit min(model max_position_embeddings, tokenizer model_max_length); registration fails otherwise, no exclusion or truncation.",
+  "memory_bytes": 6442450944,
+  "disk_bytes": 3221225472,
+  "phase_seconds": 300,
+  "request_seconds": 30,
+  "total_seconds": 1200,
+  "device": "CPU float32, two Torch threads, sequential fresh workers",
+  "generation_policy": {
+    "do_sample": false,
+    "temperature_request": 0,
+    "top_p": 1,
+    "repetition_penalty": 1.0,
+    "num_beams": 1,
+    "use_cache": true,
+    "max_new_tokens": 64
+  },
+  "mechanisms": {
+    "full": "all original turns rendered verbatim",
+    "recent": "whole-turn chronological eviction to 512 native prompt tokens",
+    "lexical": "unchanged lexical-v1 then same whole-turn fit",
+    "toruk": "unchanged recurrent/cosine selector with m6-successor-v1 checkpoint then same whole-turn fit"
+  },
+  "primary_metric": "case-balanced frozen answer accuracy; 28 cases, four per category",
+  "criteria": {
+    "oracle_min_accuracy": 0.6,
+    "toruk_min_accuracy": 0.6,
+    "oracle_min_known_accuracy": 0.6,
+    "toruk_min_known_accuracy": 0.6,
+    "max_accuracy_regression_pp": 5,
+    "max_category_regression_cases": 1,
+    "no_extra_stale_or_unsupported_proxy": true,
+    "cpu_and_wall_reduction_fraction": 0.1,
+    "efficiency_against": [
+      "recent",
+      "lexical"
+    ],
+    "quality_against": [
+      "full",
+      "recent",
+      "lexical"
+    ],
+    "require_all_cases_and_caps": true
+  },
+  "cost_policy": {
+    "measured_workload": 28,
+    "primary": "development including replay + heldout cold workers; TORUK also pays original profile/training CPU and wall once, amortized over 28 heldout queries",
+    "new_training": false,
+    "historical_training_runs": [
+      "artifacts/m6-successor-v1/profile",
+      "artifacts/m6-successor-v1/train",
+      "artifacts/m6-successor-v1/execution/profile",
+      "artifacts/m6-successor-v1/execution/train"
+    ],
+    "sensitivity_queries": [
+      28,
+      1000
+    ],
+    "units": "CPU seconds, wall seconds and separate BPE/selector-byte work counters; no token-equivalence or FLOPs claim"
+  },
+  "rules": [
+    "No model inference before registration",
+    "New synthetic records; no heldout answers examined before freeze",
+    "No mechanism or scoring change after registration; development is technical validation only",
+    "Development first-case replay charged but not scored twice",
+    "Heldout once per arm, failed attempts retained, no favorable retry",
+    "Identical explicit qualified system instruction, Reference/Question/Answer envelope, native chat template, questions and 64-token answer cap across arms",
+    "No hidden labels or required-evidence metadata passed to model or selectors",
+    "Historical M6 remains NOT REPRODUCIBLE; successor and backbone evidence unchanged"
+  ],
+  "technical_amendment": 1,
+  "invalid_preflight": "artifacts/qwen-long-history-v1; preserved, no heldout inference",
+  "invalid_preflight_wall_upper_seconds": 73.3064689999992
+}

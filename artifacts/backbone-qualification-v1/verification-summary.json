@@ -1,0 +1,348 @@
+{
+  "script_exit_code": 1,
+  "initial_stages": {
+    "backbone-build": {
+      "status": "PASS",
+      "seconds": 4.2696140999996715,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\package"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-build.log"
+    },
+    "backbone-conversation-data": {
+      "status": "PASS",
+      "seconds": 2.0919149999999718,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/conversation_readiness.py",
+        "validate",
+        "--output",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\conversation-data"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-conversation-data.log"
+    },
+    "backbone-diagnose": {
+      "status": "PASS",
+      "seconds": 2.119173000000046,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-diagnose.log"
+    },
+    "backbone-diff-check": {
+      "status": "PASS",
+      "seconds": 0.055095300000175484,
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=D:/Toruk",
+        "diff",
+        "--check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-diff-check.log"
+    },
+    "backbone-format": {
+      "status": "PASS",
+      "seconds": 0.08417949999966368,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-format.log"
+    },
+    "backbone-frozen-sources": {
+      "status": "PASS",
+      "seconds": 0.06657309999991412,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/check_frozen_sources.py"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-frozen-sources.log"
+    },
+    "backbone-help": {
+      "status": "PASS",
+      "seconds": 2.0286120000000665,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-help.log"
+    },
+    "backbone-import": {
+      "status": "PASS",
+      "seconds": 0.03809909999927186,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import toruk_lm; print(toruk_lm.__version__)"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-import.log"
+    },
+    "backbone-independent-cases": {
+      "status": "PASS",
+      "seconds": 2.0604095000007874,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/independent_replication.py",
+        "validate-cases",
+        "--run",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\independent-cases"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-independent-cases.log"
+    },
+    "backbone-install-local": {
+      "status": "PASS",
+      "seconds": 4.620983300000262,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-install-local.log"
+    },
+    "backbone-lint": {
+      "status": "PASS",
+      "seconds": 0.09750819999953819,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-lint.log"
+    },
+    "backbone-owned-lm-generate": {
+      "status": "PASS",
+      "seconds": 3.6801522000005207,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm.owned_lm",
+        "generate",
+        "--checkpoint",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\owned-lm-smoke\\models\\23-memory_on\\checkpoint.pt",
+        "--prompt",
+        "Experimental CPU smoke",
+        "--max-new-tokens",
+        "4"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-owned-lm-generate.log"
+    },
+    "backbone-owned-lm-smoke": {
+      "status": "PASS",
+      "seconds": 5.229976399999941,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/study_owned_lm.py",
+        "--config",
+        "configs/owned-lm-smoke-v1.json",
+        "--output",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\owned-lm-smoke"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-owned-lm-smoke.log"
+    },
+    "backbone-owned-lm-validate": {
+      "status": "PASS",
+      "seconds": 3.7128999000005933,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/validate_owned_reproduction.py",
+        "--config",
+        "configs/owned-lm-smoke-v1.json",
+        "--run",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\owned-lm-smoke"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-owned-lm-validate.log"
+    },
+    "backbone-package": {
+      "status": "PASS",
+      "seconds": 0.5777707999995982,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-package.log"
+    },
+    "backbone-reproduce": {
+      "status": "PASS",
+      "seconds": 3.9272737999999663,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/foundation.json",
+        "--output",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\pipeline"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-reproduce.log"
+    },
+    "backbone-research-config": {
+      "status": "PASS",
+      "seconds": 2.137591099999554,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate-config",
+        "--config",
+        "configs/reproduce-smoke-v1.json"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-research-config.log"
+    },
+    "backbone-research-smoke": {
+      "status": "PASS",
+      "seconds": 4.620317700000669,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "reproduce",
+        "--config",
+        "configs/reproduce-smoke-v1.json",
+        "--output",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\research-smoke"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-research-smoke.log"
+    },
+    "backbone-staged-diff-check": {
+      "status": "PASS",
+      "seconds": 0.028261700000257406,
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=D:/Toruk",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-staged-diff-check.log"
+    },
+    "backbone-summarize": {
+      "status": "PASS",
+      "seconds": 3.6925916999998663,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "summarize",
+        "--run",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\pipeline",
+        "--output",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\tables"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-summarize.log"
+    },
+    "backbone-tests": {
+      "status": "FAIL",
+      "seconds": 145.27339980000033,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-tests.log"
+    },
+    "backbone-types-linux": {
+      "status": "PASS",
+      "seconds": 46.43128350000006,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-types-linux.log"
+    },
+    "backbone-types": {
+      "status": "PASS",
+      "seconds": 1.4469037999997454,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-types.log"
+    },
+    "backbone-validate": {
+      "status": "PASS",
+      "seconds": 2.059866599999623,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "toruk_lm",
+        "validate",
+        "--manifest",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\pipeline\\data\\manifest.json",
+        "--config",
+        "configs/foundation.json",
+        "--checkpoint",
+        "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\pipeline\\train\\checkpoint.pt"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-validate.log"
+    },
+    "backbone-web-check": {
+      "status": "PASS",
+      "seconds": 0.5182593999998062,
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "run",
+        "check"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-web-check.log"
+    },
+    "backbone-web-tests": {
+      "status": "PASS",
+      "seconds": 0.5535579000006692,
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "log": "D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\backbone-web-tests.log"
+    }
+  },
+  "initial_pass_count": 25,
+  "initial_fail_count": 1,
+  "isolated_http_confirmation": "PASS",
+  "full_suite_confirmation": {
+    "status": "PASS",
+    "passed": 289,
+    "seconds": 137.13103049999972,
+    "source_unchanged_since_initial_suite": true,
+    "evidence": "checks/full-tests-confirmation.json",
+    "note": "Initial scripts/verify.py remains exit 1; remaining 25 stages passed. No blanket all-green claim for initial invocation."
+  },
+  "hosted_scope": "starting commit only",
+  "sealed_runner_mypy": "PASS"
+}

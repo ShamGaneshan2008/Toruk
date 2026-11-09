@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 641, in <module>
+    main()
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 637, in main
+    {"prepare": prepare, "rehearse": rehearse, "freeze-proposal": freeze_proposal}[args.action](run)
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 157, in prepare
+    inventory = preserve_inventory(source)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 142, in preserve_inventory
+    return {str(p): sha(p) for p in sorted(paths)}
+                    ^^^^^^
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 32, in sha
+    with path.open("rb") as stream:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\susee\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\Toruk\\artifacts\\backbone-qualification-v1\\verification\\package\\toruk_lm-0.1.0-py3-none-any.whl'

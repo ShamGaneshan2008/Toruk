@@ -1,0 +1,75 @@
+{
+  "result": {
+    "variant": "recurrent",
+    "steps_this_invocation": 2,
+    "total_steps": 2,
+    "model_input_token_evaluations": 1163,
+    "valid_targets": 969,
+    "training_seconds": 0.13261000000011336,
+    "tokens_per_second": 8770.07767135967,
+    "parameters": 57088,
+    "memory_state_bytes": 512,
+    "seed": 8042,
+    "losses": [
+      {
+        "step": 1,
+        "world_id": "train-8031-0003",
+        "loss": 6.182770729064941,
+        "writer_gradient_norm": 0.12522836029529572,
+        "gradient_norm": 1.3817435503005981
+      },
+      {
+        "step": 2,
+        "world_id": "train-8031-0000",
+        "loss": 5.897952556610107,
+        "writer_gradient_norm": 0.1313762366771698,
+        "gradient_norm": 1.4288736581802368
+      }
+    ],
+    "config": {
+      "model": {
+        "context": 64,
+        "width": 32,
+        "heads": 4,
+        "layers": 2,
+        "vocab_size": 259
+      },
+      "variant": "recurrent",
+      "seed": 8042,
+      "slots": 4,
+      "max_segments": 32,
+      "lm_weight": 0.1,
+      "answer_weight": 1.0,
+      "lr": 0.003,
+      "batch_worlds": 1,
+      "unroll": "whole bounded document; no live-graph steps",
+      "objective": "qa"
+    },
+    "data": {
+      "train": "152b170c09e9d7a99f9f8908793bbd68f0ece5ebc94b09926cd8c7e556f41be7",
+      "validation": "946e07c5401bc1f3b524ca4000d8eb947aaac97c2887a448e52760ae1010a768"
+    },
+    "peak_memory_bytes": null,
+    "checkpoint_sha256": "ba5bc50c02957b6ae1cf65ddb508f67f59beaec9a6ef7ca617cf15885658c71f",
+    "package_sha256": "5b9c2fd76864ef1637dce0d30658ef34ca610a8d67eeb6937e1b40365135b52e"
+  },
+  "checkpoint_sha256": "ba5bc50c02957b6ae1cf65ddb508f67f59beaec9a6ef7ca617cf15885658c71f",
+  "experiment": "m6-successor-v1",
+  "initialization": "new random parameters",
+  "self_memory": {
+    "rss": 307675136,
+    "vms": 654266368,
+    "num_page_faults": 80844,
+    "peak_wset": 310878208,
+    "wset": 307675136,
+    "peak_paged_pool": 914488,
+    "paged_pool": 914184,
+    "peak_nonpaged_pool": 42752,
+    "nonpaged_pool": 42560,
+    "pagefile": 654266368,
+    "peak_pagefile": 679997440,
+    "private": 654266368
+  },
+  "lifecycle_cpu_seconds": 2.8125,
+  "worker_seconds": 3.254090700000006
+}

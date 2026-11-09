@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 666, in <module>
+    main()
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 662, in main
+    {"prepare": prepare, "rehearse": rehearse, "freeze-proposal": freeze_proposal}[args.action](run)
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 550, in rehearse
+    lifecycle_start, lifecycle_cpu = clocks(), cpu()
+                                     ^^^^^^^^
+  File "C:\Users\susee\VS_CODE_PROJECT\Toruk\scripts\qwen_long_history_v2.py", line 55, in clocks
+    ctypes.windll.kernel32.QueryUnbiasedInterruptTimePrecise(ctypes.byref(unbiased))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\ctypes\__init__.py", line 392, in __getattr__
+    func = self.__getitem__(name)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\ctypes\__init__.py", line 397, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: function 'QueryUnbiasedInterruptTimePrecise' not found

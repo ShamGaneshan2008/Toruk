@@ -1,0 +1,39 @@
+F........                                                                [100%]
+================================== FAILURES ===================================
+__________ test_new_data_deterministic_and_separated_from_successor ___________
+
+    def test_new_data_deterministic_and_separated_from_successor():
+        dev = make_cases("development", 81711, 2)
+        held = make_cases("heldout", 81731, 5)
+        assert held == make_cases("heldout", 81731, 5)
+        assert len(dev) == 12 and len(held) == 30
+        legacy = json.loads((ROOT / "artifacts/m6-successor-v1/execution/heldout.json").read_bytes())
+>       assert leakage(dev, held, legacy)["status"] == "PASS"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_backbone_qualification.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+dev = [{'schema': 'backbone-qualification-v1', 'id': 'development-binding-0', 'split': 'development', 'kind': 'binding', ......kbone-qualification-v1', 'id': 'development-preservation-1', 'split': 'development', 'kind': 'preservation', ...}, ...]
+held = [{'schema': 'backbone-qualification-v1', 'id': 'heldout-binding-0', 'split': 'heldout', 'kind': 'binding', ...}, {'sch...chema': 'backbone-qualification-v1', 'id': 'heldout-correction-0', 'split': 'heldout', 'kind': 'correction', ...}, ...]
+legacy = [{'id': 'heldout-distant-0', 'split': 'heldout', 'kind': 'distant', 'value': 'Lusaka', ...}, {'id': 'heldout-distant-1...': 'Riga', ...}, {'id': 'heldout-correction-1', 'split': 'heldout', 'kind': 'correction', 'value': 'Lusaka', ...}, ...]
+
+    def leakage(
+        dev: list[dict[str, Any]], held: list[dict[str, Any]], legacy: list[dict[str, Any]]
+    ) -> dict[str, Any]:
+        sets = [dev, held, legacy]
+        ids = [{c["id"] for c in rows} for rows in sets]
+        values = [
+            {normalized(c.get("expected", c.get("value", ""))) for c in rows if c["kind"] != "missing"}
+            for rows in sets
+        ]
+        shapes = [{question_shape(c) for c in rows} for rows in sets]
+        for i, j in ((0, 1), (0, 2), (1, 2)):
+            if ids[i] & ids[j] or values[i] & values[j] or shapes[i] & shapes[j]:
+>               raise ValueError("cross-split or successor overlap")
+E               ValueError: cross-split or successor overlap
+
+scripts\qualify_answer_backbone.py:203: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_backbone_qualification.py::test_new_data_deterministic_and_separated_from_successor
+1 failed, 8 passed in 0.14s

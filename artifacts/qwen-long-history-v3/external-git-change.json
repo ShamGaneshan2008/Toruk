@@ -1,0 +1,7 @@
+{
+  "initial_head_observed": "25d4ec09e01397b43b9b16ad08faeca7cdb22eb0",
+  "later_head_observed": "3e99626765dc6c4c9f5e6e84c4d02c169405b955",
+  "later_commit_subject": "Add Qwen long-history protocols and relevance gate",
+  "observation": "HEAD advanced externally while the assistant was formatting and checking new v3 files. Some v2/v3 paths became tracked. No assistant commit, reset, checkout, stash, push or deployment command was issued.",
+  "policy": "Preserve external work, record registration-time HEAD, and verify every old evidence hash before candidate inference. Do not normalize frozen bytes to match Git."
+}

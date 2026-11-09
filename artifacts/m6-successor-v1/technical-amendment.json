@@ -1,0 +1,15 @@
+{
+  "experiment": "m6-successor-v1",
+  "amendment": 1,
+  "timing": "before all held-out inference",
+  "reason": "Windows venv redirector caused launcher-only memory sampling; original memory peak measurements are invalid.",
+  "changes": [
+    "Monitor worker process tree and kill descendants on cap violation",
+    "Record worker OS process-lifetime memory peaks",
+    "Charge every completed preflight training and development attempt to matching method totals",
+    "Repeat execution in a fresh namespace; questions, seeds, model settings, scoring and gates unchanged"
+  ],
+  "preflight_weights_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+  "heldout_runs_before_amendment": 0,
+  "preflight_registration_sha256": "9759a2b64a4f9dffbb263a83c63ba045fed8fd44f7fa5d826f78114797158ef3"
+}

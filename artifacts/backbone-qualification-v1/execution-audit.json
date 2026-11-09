@@ -1,0 +1,350 @@
+{
+  "status": "PASS",
+  "registration_sha256": "39d7ecd167451314e840867735c695709764d14d7be7e54700b76dcd25e2481d",
+  "candidate_input_parity": true,
+  "all_full_evidence": true,
+  "single_heldout_pass_each": true,
+  "all_source_bindings_verified": true,
+  "no_selector_or_memory": true,
+  "total_evaluation_wall_seconds": 154.4842464000003,
+  "total_evaluation_cpu_seconds": 316.359375,
+  "study_and_input_disk_bytes_before_general_verification": 1272007582,
+  "candidates": {
+    "smollm": {
+      "development": {
+        "aggregate": {
+          "cases": 12,
+          "correct": 3,
+          "known_cases": 10,
+          "known_correct": 3,
+          "abstentions": 0,
+          "unknown_correct": 0,
+          "wrong_listed_values": 3,
+          "unsupported_response_proxy": 2,
+          "online_wall_seconds": 18.29505180000251,
+          "online_cpu_seconds": 36.921875,
+          "prompt_tokens": 1624,
+          "output_tokens": 326,
+          "categories": {
+            "binding": {
+              "n": 2,
+              "correct": 0
+            },
+            "correction": {
+              "n": 2,
+              "correct": 0
+            },
+            "preservation": {
+              "n": 2,
+              "correct": 1
+            },
+            "literal": {
+              "n": 2,
+              "correct": 0
+            },
+            "reference": {
+              "n": 2,
+              "correct": 2
+            },
+            "missing": {
+              "n": 2,
+              "correct": 0
+            }
+          }
+        },
+        "cost": {
+          "command": [
+            "D:\\Toruk\\.venv\\Scripts\\python.exe",
+            "D:\\Toruk\\scripts\\qualify_answer_backbone.py",
+            "worker",
+            "--run",
+            "D:\\Toruk\\artifacts\\backbone-qualification-v1",
+            "--split",
+            "development",
+            "--candidate",
+            "smollm"
+          ],
+          "returncode": 0,
+          "failure": null,
+          "wall_seconds": 26.33264229999986,
+          "cpu_seconds": 50.875,
+          "controller_cpu_seconds": 6.03125,
+          "peak_rss_bytes": 941207552,
+          "peak_private_bytes": 1419284480,
+          "cpu_scope": "worker/launcher sampled CPU, worker final lifetime CPU, controller including verification"
+        },
+        "worker_setup_seconds": 6.292559200000142,
+        "worker_os_memory": {
+          "rss": 928911360,
+          "vms": 1417228288,
+          "num_page_faults": 411921,
+          "peak_wset": 928911360,
+          "wset": 928911360,
+          "peak_paged_pool": 1458632,
+          "paged_pool": 937216,
+          "peak_nonpaged_pool": 53648,
+          "nonpaged_pool": 53440,
+          "pagefile": 1417228288,
+          "peak_pagefile": 1419231232,
+          "private": 1417228288
+        },
+        "mean_request_seconds": 1.4185854333334948,
+        "median_request_seconds": 1.4818139000003612,
+        "max_request_seconds": 1.9314481000001251,
+        "max_request_cpu_seconds": 3.796875,
+        "cost_sha256": "44c5e6887eab978df81fcebe9cd4fac6ed89292ac2d125d42e3a95ed76b346ba"
+      },
+      "heldout": {
+        "aggregate": {
+          "cases": 30,
+          "correct": 15,
+          "known_cases": 25,
+          "known_correct": 15,
+          "abstentions": 0,
+          "unknown_correct": 0,
+          "wrong_listed_values": 2,
+          "unsupported_response_proxy": 5,
+          "online_wall_seconds": 41.30593050000061,
+          "online_cpu_seconds": 83.109375,
+          "prompt_tokens": 3810,
+          "output_tokens": 752,
+          "categories": {
+            "binding": {
+              "n": 5,
+              "correct": 3
+            },
+            "correction": {
+              "n": 5,
+              "correct": 5
+            },
+            "preservation": {
+              "n": 5,
+              "correct": 2
+            },
+            "literal": {
+              "n": 5,
+              "correct": 0
+            },
+            "reference": {
+              "n": 5,
+              "correct": 5
+            },
+            "missing": {
+              "n": 5,
+              "correct": 0
+            }
+          }
+        },
+        "cost": {
+          "command": [
+            "D:\\Toruk\\.venv\\Scripts\\python.exe",
+            "D:\\Toruk\\scripts\\qualify_answer_backbone.py",
+            "worker",
+            "--run",
+            "D:\\Toruk\\artifacts\\backbone-qualification-v1",
+            "--split",
+            "heldout",
+            "--candidate",
+            "smollm"
+          ],
+          "returncode": 0,
+          "failure": null,
+          "wall_seconds": 49.380396600000495,
+          "cpu_seconds": 102.53125,
+          "controller_cpu_seconds": 11.484375,
+          "peak_rss_bytes": 939454464,
+          "peak_private_bytes": 1417363456,
+          "cpu_scope": "worker/launcher sampled CPU, worker final lifetime CPU, controller including verification"
+        },
+        "worker_setup_seconds": 6.253027300000213,
+        "worker_os_memory": {
+          "rss": 927170560,
+          "vms": 1415294976,
+          "num_page_faults": 411914,
+          "peak_wset": 927170560,
+          "wset": 927170560,
+          "peak_paged_pool": 1458632,
+          "paged_pool": 937216,
+          "peak_nonpaged_pool": 53376,
+          "nonpaged_pool": 53168,
+          "pagefile": 1415294976,
+          "peak_pagefile": 1419878400,
+          "private": 1415294976
+        },
+        "mean_request_seconds": 1.3768643500000204,
+        "median_request_seconds": 1.3210358999999698,
+        "max_request_seconds": 2.2099201000000903,
+        "max_request_cpu_seconds": 4.4375,
+        "cost_sha256": "f993b5580df4938db5e98f64d8ed4de4fd9a1e193c9dc94fb4f0fe578f6474be"
+      }
+    },
+    "qwen": {
+      "development": {
+        "aggregate": {
+          "cases": 12,
+          "correct": 11,
+          "known_cases": 10,
+          "known_correct": 9,
+          "abstentions": 3,
+          "unknown_correct": 2,
+          "wrong_listed_values": 0,
+          "unsupported_response_proxy": 0,
+          "online_wall_seconds": 16.79186909999771,
+          "online_cpu_seconds": 33.890625,
+          "prompt_tokens": 1459,
+          "output_tokens": 56,
+          "categories": {
+            "binding": {
+              "n": 2,
+              "correct": 2
+            },
+            "correction": {
+              "n": 2,
+              "correct": 1
+            },
+            "preservation": {
+              "n": 2,
+              "correct": 2
+            },
+            "literal": {
+              "n": 2,
+              "correct": 2
+            },
+            "reference": {
+              "n": 2,
+              "correct": 2
+            },
+            "missing": {
+              "n": 2,
+              "correct": 2
+            }
+          }
+        },
+        "cost": {
+          "command": [
+            "D:\\Toruk\\.venv\\Scripts\\python.exe",
+            "D:\\Toruk\\scripts\\qualify_answer_backbone.py",
+            "worker",
+            "--run",
+            "D:\\Toruk\\artifacts\\backbone-qualification-v1",
+            "--split",
+            "development",
+            "--candidate",
+            "qwen"
+          ],
+          "returncode": 0,
+          "failure": null,
+          "wall_seconds": 26.753896199999872,
+          "cpu_seconds": 53.734375,
+          "controller_cpu_seconds": 6.21875,
+          "peak_rss_bytes": 2444820480,
+          "peak_private_bytes": 4098437120,
+          "cpu_scope": "worker/launcher sampled CPU, worker final lifetime CPU, controller including verification"
+        },
+        "worker_setup_seconds": 8.069889600000351,
+        "worker_os_memory": {
+          "rss": 2423562240,
+          "vms": 4083503104,
+          "num_page_faults": 1442823,
+          "peak_wset": 2432516096,
+          "wset": 2423562240,
+          "peak_paged_pool": 2863000,
+          "paged_pool": 936992,
+          "peak_nonpaged_pool": 58272,
+          "nonpaged_pool": 58064,
+          "pagefile": 4083503104,
+          "peak_pagefile": 4112158720,
+          "private": 4083503104
+        },
+        "mean_request_seconds": 1.2929106166664799,
+        "median_request_seconds": 1.1728378500001782,
+        "max_request_seconds": 1.9813694999993459,
+        "max_request_cpu_seconds": 3.9375,
+        "cost_sha256": "1bae16d45c02e4d4c4ab7921f12ccfdc559c7a4580ff88a30057a3ac76706b83"
+      },
+      "heldout": {
+        "aggregate": {
+          "cases": 30,
+          "correct": 18,
+          "known_cases": 25,
+          "known_correct": 15,
+          "abstentions": 4,
+          "unknown_correct": 3,
+          "wrong_listed_values": 0,
+          "unsupported_response_proxy": 2,
+          "online_wall_seconds": 42.19800100000066,
+          "online_cpu_seconds": 84.59375,
+          "prompt_tokens": 3427,
+          "output_tokens": 128,
+          "categories": {
+            "binding": {
+              "n": 5,
+              "correct": 5
+            },
+            "correction": {
+              "n": 5,
+              "correct": 4
+            },
+            "preservation": {
+              "n": 5,
+              "correct": 1
+            },
+            "literal": {
+              "n": 5,
+              "correct": 0
+            },
+            "reference": {
+              "n": 5,
+              "correct": 5
+            },
+            "missing": {
+              "n": 5,
+              "correct": 3
+            }
+          }
+        },
+        "cost": {
+          "command": [
+            "D:\\Toruk\\.venv\\Scripts\\python.exe",
+            "D:\\Toruk\\scripts\\qualify_answer_backbone.py",
+            "worker",
+            "--run",
+            "D:\\Toruk\\artifacts\\backbone-qualification-v1",
+            "--split",
+            "heldout",
+            "--candidate",
+            "qwen"
+          ],
+          "returncode": 0,
+          "failure": null,
+          "wall_seconds": 52.017311300000074,
+          "cpu_seconds": 109.21875,
+          "controller_cpu_seconds": 11.6875,
+          "peak_rss_bytes": 2440347648,
+          "peak_private_bytes": 4063334400,
+          "cpu_scope": "worker/launcher sampled CPU, worker final lifetime CPU, controller including verification"
+        },
+        "worker_setup_seconds": 7.874263300000166,
+        "worker_os_memory": {
+          "rss": 2418929664,
+          "vms": 4043722752,
+          "num_page_faults": 2089134,
+          "peak_wset": 2428071936,
+          "wset": 2418929664,
+          "peak_paged_pool": 2863000,
+          "paged_pool": 936768,
+          "peak_nonpaged_pool": 58120,
+          "nonpaged_pool": 57928,
+          "pagefile": 4043722752,
+          "peak_pagefile": 4072312832,
+          "private": 4043722752
+        },
+        "mean_request_seconds": 1.4066000333333553,
+        "median_request_seconds": 1.2751320499996837,
+        "max_request_seconds": 2.4205313000002207,
+        "max_request_cpu_seconds": 4.84375,
+        "cost_sha256": "38c153e4b07e1818e985c86b5e3402fb4861e4413efba343f606fcd34e67b485"
+      }
+    }
+  }
+}

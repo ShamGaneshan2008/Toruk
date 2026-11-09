@@ -1,0 +1,12 @@
+E501 Line too long (101 > 100)
+   --> scripts\qwen_long_history_v3.py:305:101
+    |
+303 |             "controller_cpu_seconds": time.process_time() - start_cpu,
+304 |             "scope": (
+305 |                 "Shared offline diagnosis, preservation and registration; before candidate inference"
+    |                                                                                                     ^
+306 |             ),
+307 |         },
+    |
+
+Found 1 error.

@@ -1,0 +1,111 @@
+{
+  "page": "PASS",
+  "mode": "BASELINE and TORUK",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+  "status": {
+    "ready": true,
+    "backend": "Toruk",
+    "experimental": true,
+    "chat_quality": "unqualified",
+    "efficiency_claim": "unsupported",
+    "selector_id": "toruk-m6-controlled-qa",
+    "selector_kind": "toruk-m6-controlled-qa",
+    "backbone_digest": null,
+    "backbone_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "backbone_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+    "selector_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+    "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "context_tokens": 512,
+    "memory_supported": true,
+    "modes": [
+      "BASELINE",
+      "TORUK"
+    ],
+    "error": null,
+    "error_code": null
+  },
+  "quality_claim": "Development probes; HTTP success does not establish quality.",
+  "probe_protocol_sha256": "60f26e6c3fcf0f961fee0039f9d78a97369f30e08909575ef12debeb7ad29548",
+  "probe_settings": {
+    "max_new_tokens": 32,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "baseline": {
+    "answer": "The vault code is LIME42.",
+    "metrics": {
+      "input_tokens": 297,
+      "selected_context_tokens": 297,
+      "output_tokens": 10,
+      "total_tokens": 307,
+      "response_ms": 1242.477,
+      "backend": "Toruk",
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+      "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "selector_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+      "selector_kind": "toruk-m6-controlled-qa",
+      "mode": "BASELINE",
+      "memory_used": false,
+      "selector_id": null,
+      "selected_messages": 13,
+      "selected_message_ids": [
+        "m0",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "history_tokenization_ms": 8.542,
+      "prompt_fit_ms": 0.736,
+      "selector_ms": 0,
+      "history_bytes_read": 903,
+      "selector_history_bytes": 0,
+      "persistent_state_bytes": 0,
+      "proxy_ms": 1249.135
+    }
+  },
+  "toruk": {
+    "answer": "The vault code is \"HGVH\".",
+    "metrics": {
+      "input_tokens": 297,
+      "selected_context_tokens": 108,
+      "output_tokens": 11,
+      "total_tokens": 119,
+      "response_ms": 966.835,
+      "backend": "Toruk",
+      "model": "HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366",
+      "backbone": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "selector_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+      "selector_kind": "toruk-m6-controlled-qa",
+      "mode": "TORUK",
+      "memory_used": true,
+      "selector_id": "toruk-m6-controlled-qa",
+      "selected_messages": 5,
+      "selected_message_ids": [
+        "m1",
+        "m3",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "history_tokenization_ms": 1.571,
+      "prompt_fit_ms": 0.795,
+      "selector_ms": 46.949,
+      "history_bytes_read": 903,
+      "selector_history_bytes": 903,
+      "persistent_state_bytes": 0,
+      "proxy_ms": 970.814
+    }
+  },
+  "probes": {},
+  "outage_status": 503
+}
