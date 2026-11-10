@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "v4 portable evidence and offline development-only audit replay",
+  "evidence_files": 80,
+  "frozen_baseline_hashes": 472,
+  "consumed_input_hashes": 19,
+  "historical_receipts_verified": 35,
+  "historical_verification_stages": 26,
+  "source_hash_bindings_verified": 667,
+  "source_substitutions": [
+    {
+      "path": "scripts/audit_qwen_development_v4.py",
+      "sha256": "9a68c36b36e55450234de5235443721741ff1f0d39d08d5f5ad98b68e5ac085f",
+      "from": "checkout newline variant; exact hash matched"
+    },
+    {
+      "path": "tests/test_qwen_development_v4.py",
+      "sha256": "bf341ec452bcefef6d9b6fead1547238f50fb2471226c39da1520ed2c5e62c36",
+      "from": "artifacts/qwen-long-history-dev-v4/snapshots/bf341ec452bcefef6d9b6fead1547238f50fb2471226c39da1520ed2c5e62c36/test_qwen_development_v4.py"
+    },
+    {
+      "path": "docs/research/qwen-long-history-dev-v4-results.md",
+      "sha256": "935486d16a4d4ccf4dfb88c53f6e5e416d84e497b4fe448ef9faa6095372f6bc",
+      "from": "artifacts/qwen-long-history-dev-v4/snapshots/935486d16a4d4ccf4dfb88c53f6e5e416d84e497b4fe448ef9faa6095372f6bc/qwen-long-history-dev-v4-results.md"
+    },
+    {
+      "path": "scripts/audit_qwen_development_v4.py",
+      "sha256": "e9422fa2431de74a787a8128cd2a58af1e89f962a038532c3f3c3ce69d03d49a",
+      "from": "artifacts/qwen-long-history-dev-v4/snapshots/e9422fa2431de74a787a8128cd2a58af1e89f962a038532c3f3c3ce69d03d49a/audit_qwen_development_v4.py"
+    },
+    {
+      "path": "scripts/audit_qwen_development_v4.py",
+      "sha256": "c1b689ba5944b3b6ac4b383472f36ef5cf9968b71611c2e9f7d93166324499ce",
+      "from": "artifacts/qwen-long-history-dev-v4/snapshots/c1b689ba5944b3b6ac4b383472f36ef5cf9968b71611c2e9f7d93166324499ce/audit_qwen_development_v4.py"
+    }
+  ],
+  "audit_reproduced_except_new_cpu_wall_timing": true,
+  "omitted_generated_files": 92,
+  "omitted_builds_needed_for_audit": false,
+  "original_build_binary_identity": "NOT VERIFIED against original build; no original binary hashes were recorded",
+  "new_generations": 0,
+  "heldout_records_parsed_or_scored": 0,
+  "input": "exported Git index; no untracked generated files"
+}

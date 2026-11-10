@@ -286,6 +286,10 @@ untracked script, tests and report using `git diff --no-index --check`.
 
 Machine-readable final check and preservation results are in
 [verification-summary.json](../../artifacts/qwen-long-history-dev-v4/verification-summary.json).
-Generated development evidence and verification receipts remain local and
-untracked. The integration test uses the tracked portable manifest, so it does
-not require those local receipts in a fresh checkout.
+The subsequent [portable evidence set](../../artifacts/qwen-long-history-dev-v4/README.md)
+retains the audit records and original check receipts. Generated fixture and
+build outputs remain local and are explicitly omitted from the portable set;
+neither wheel nor source distribution is required for development audit replay.
+The original source-hash records are preserved with exact matching historical
+snapshots, rather than relabeled as the later review commit's source versions.
+The integration test continues to use the tracked portable-v1 manifest.

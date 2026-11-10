@@ -1,0 +1,818 @@
+{
+  "schema": "qwen-dev-v4-portable-evidence-v1",
+  "audit_code_commit": "bd46549158139ef9ef93f10b9387aaf0c595b0b8",
+  "files": {
+    "artifacts/qwen-long-history-dev-v4/.gitattributes": "32966c8f89acc0110f6a39bf66f2c0cfe327afcaf642ca8546e36bdad19f1e18",
+    "artifacts/qwen-long-history-dev-v4/audit.json": "01faeced3be1b83d955cc90da9c074cdbb1dafdbd14f633028940334d782fafd",
+    "artifacts/qwen-long-history-dev-v4/baseline.json": "e1084349a3f68013a92baf6510af602bfbc5163faf9c5946f018fdbcdc17e918",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types-final.json": "687a13185f4b474c1ab8acd831c8cc0f8d30deae16b9a44b6df56d96de0e44c7",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types-final.log": "706935f02fed95e8e0241ec13fa86be727783ee491ba3e8e4470ceaeed6232d8",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types.json": "59d18cccb30d180de9a5d9556ef94691d8d591d8bcb85857e49d1b14fe1f69b0",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types.log": "00a2035814985c6eced8d0a16f85fe13375714ad4c0195386268d56341e1dc5c",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit.json": "1a8395d4bbd5425721ca71e2aae6d18f36c10ecd4114c49b2a87b209e3e68a30",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit.log": "a7347a3c6ae2ccd357d28bbda9ea5622b50edc8644c9f350130ffb0a6e14d72c",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-format.json": "c1d92d11d3d8f5ea979bdce700e8be32be2f1457c004381cec382044c47203ab",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-format.log": "97d85b4b6c185a05396e2d09a3c304ff0f7cc77f8b7b7bb7989ec6cd875b3898",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-lint.json": "cb1e1dabda4f75b392dff76cb889c964a885d927dbc93c73d79d5c0e9facab9d",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-lint.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-after-types.json": "3a9731db367867c2e7151df508e17981f725213986d6088a32e2f80a5f7dcd47",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-after-types.log": "e6e64a074917a0f37f4806c53af3f6e71abcd0f89bbea8ff2d30ed2bb6ac057b",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-final.json": "f5fddfe94814974f09d6e104319f77a831edf42a081596a90b2439f3a18568d6",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-final.log": "6c6f21b33ac30f0fbf779554bc871f1051f6ceecf3bec5df8f47cb68ccf55848",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-preflight.json": "63f21d85571706b05bf18b45dc3b4332c6d04f1f8685b87e6f5e489babdb0a99",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-preflight.log": "c86682dfc0f6418c6fc2b9841d0a95601e9ebc8708f2927b0a6aa41f51244341",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-node.json": "174b1491c54be3dab664ee77ef9ad79b1da11310c6b1e65705eeff6ed22ba83c",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-node.log": "7c84c6c7a3a4c5ef44790442b6cf79f6dc23fd09a479bedeb26a2b9f3483377c",
+    "artifacts/qwen-long-history-dev-v4/README.md": "991f6f7b0943c585059103c9a4bd64d0c94902adf9e3f356f4cbcd37ee9b420c",
+    "artifacts/qwen-long-history-dev-v4/snapshots/935486d16a4d4ccf4dfb88c53f6e5e416d84e497b4fe448ef9faa6095372f6bc/qwen-long-history-dev-v4-results.md": "935486d16a4d4ccf4dfb88c53f6e5e416d84e497b4fe448ef9faa6095372f6bc",
+    "artifacts/qwen-long-history-dev-v4/snapshots/bf341ec452bcefef6d9b6fead1547238f50fb2471226c39da1520ed2c5e62c36/test_qwen_development_v4.py": "bf341ec452bcefef6d9b6fead1547238f50fb2471226c39da1520ed2c5e62c36",
+    "artifacts/qwen-long-history-dev-v4/snapshots/c1b689ba5944b3b6ac4b383472f36ef5cf9968b71611c2e9f7d93166324499ce/audit_qwen_development_v4.py": "c1b689ba5944b3b6ac4b383472f36ef5cf9968b71611c2e9f7d93166324499ce",
+    "artifacts/qwen-long-history-dev-v4/snapshots/e9422fa2431de74a787a8128cd2a58af1e89f962a038532c3f3c3ce69d03d49a/audit_qwen_development_v4.py": "e9422fa2431de74a787a8128cd2a58af1e89f962a038532c3f3c3ce69d03d49a",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-build.json": "fd8f23e3833c3e48319d1abd63b82ca330bc1e4846d12f2abeaa868dbb313bc0",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-build.log": "c47660fb60e0ee5dbafe42a6bdcbd904190ed7d4b74d6e686aa08533b1383298",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-conversation-data.json": "cd6f07591aa47588189bfee380e1a8e53e258aaeb04f38ca423ca12f5b8d6f53",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-conversation-data.log": "637a539e2685581377f51c400d134a4160f8a26c78023d5b64694914fffe146a",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diagnose.json": "92ded944f2377245d0484ff765c53912e681e32f801c047e712ad4dcb7a11905",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diagnose.log": "3470d33cbfafd8baeae6171c27d084154c265d664ed752d8e55671af1cc3cb3f",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diff-check.json": "849253cd61d9910f65c817efd18b316c143a2118ad910be26d1e7bc12b390179",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diff-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-format.json": "9eb5a24089fffcd7885a255332381637bdfe210cb7445c152edb5121b0c9315d",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-format.log": "847939c99f124f68aece2b124460c07a8b9cbe85fbd2ca20e5e0bb92ed459875",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-frozen-sources.json": "fc1e994b95edb6968c6f8e7fb028bafc0e3c725464f7edc78a88a71253ce6027",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-frozen-sources.log": "6997253b542064247b6452a5a5953170cde690552fabc944479be6a0bf4d8047",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-help.json": "9a4a0ba6eda88e623105f0cad9b63c793e8b4a14543ef0da3e26a811d131468b",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-help.log": "d979491857a1b29df00bdc2377042766cc753e7ac8967753a58c0a8f98ee0c07",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-import.json": "f4f68273a03201bcda889dbf64796e68a038685153927ce60050fb6263b3e29d",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-import.log": "3d097c315a1c543040f548da4c7051265e94c77211a2411ced1d4621344270de",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-independent-cases.json": "3702a7b11f34be60a406b4fda4e774ab2b2101500f1713999ad58889f9970bab",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-independent-cases.log": "41f20f58d2c3f931a16fb9f2ae999d00538cf0bc231e64b991835738ef79c282",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-install-local.json": "08598bbf3efd3356d7880893a427d187df7f556ccbc2a8dfdd2177b8e1ada716",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-install-local.log": "6cdd30a2db6ac433b5dde32103db8da9654d94d4ff5b9348e7f8058033d864b1",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-lint.json": "dcdc84a7862f398192ed0e586315e127d4a52cfe57cc142377ae550ad5e63894",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-lint.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-generate.json": "c56b685e6526d57f204d3f755191831ae9cd49a02243f1baeb2bb9e3883d32ac",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-generate.log": "90ce288f67e0b15f941fbb0e60991e4e9caefb30da4f851b04fc70bef853e107",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-smoke.json": "4c22da764959c7d0c43cef09f5e097d1cfaf2e34b962850c5371810ce63ce4b4",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-smoke.log": "465c6a118432c775ffc9e8cd27ee3bbb3c2ff8c5e387a0e315769aa42247477b",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-validate.json": "2313514729fcd27022742aa8a1c315c112e298eb1e6a1fe30bc838af8a0a92c1",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-validate.log": "2fb284cfb4a546e863dfb9a41d85439440228c90714866e0bc826ae3163614b3",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-package.json": "85688037b2174b4a81b21ebddf4897e35035be7652f5ff5bcc69fab7fb6191cb",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-package.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-reproduce.json": "4108c1ada3c31b8518f03c5ddf979d699f0a23fdb63c524cb72116e4fd793e10",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-reproduce.log": "0a9b2babf9b051f64dba9905f4a6e05c3ce2dc019a6dd306731e03ad3e08242c",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-config.json": "7cb0ac78d3971a7b294b372ae1d96ec36b711e747e8a0e040e8b821378099f1d",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-config.log": "210f7da183696250e36d53acbc85dd65be6789e67a5febd6bb496c9092723721",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-smoke.json": "c6440b73e293df8df942a2ebcbf89e3acfb6da0b54cc3973b3d19c168f8a7f63",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-smoke.log": "a5d0fd9b3c470c6fef45e8445223091afd6595bb16b675a3a82b2ea48d1ebae1",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-staged-diff-check.json": "aa5c6a3329fbf08d86c623f1d625bd8eb3ae07dde6c441482122b4ae13b74c05",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-staged-diff-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-summarize.json": "bf58a4f663ccc1ff1ce316e1598dff273f65e9c755bd2efee27d793f1685f9b7",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-summarize.log": "0a9b2babf9b051f64dba9905f4a6e05c3ce2dc019a6dd306731e03ad3e08242c",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-tests.json": "5be535085f49b3c3dd895628649c16faf6d36071728c69bc51b2bcc5e17e5d00",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-tests.log": "4c87291756cb3b2014315ea1aaba103a795b5ad8c7fd872602c5737726d88f25",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types-linux.json": "1362c987747d1e0dea6572c43aa0945fb477be85c226667e8036ed1e0e443186",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types-linux.log": "dabfe9cda912714cdc654091ac8afe8d42fa03311ac477b1adc45f41fe1610c6",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types.json": "def611e4519c238bda2d29a08245f09ddab138a008678ff05535037e1fbf920c",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types.log": "dabfe9cda912714cdc654091ac8afe8d42fa03311ac477b1adc45f41fe1610c6",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-validate.json": "ac728c40ed3451946feb2612859556676cc477e5ac859dd528185df41014155f",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-validate.log": "d58592fda00d7fe25a16247a8e7aaf3b224a122b651968db438bd553fb66a2d3",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-check.json": "f36912d8f8f52953f943df30ab48a83b9a09a7caa5fedc346bd157b28d153c47",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-check.log": "b7da7d9426430dfac3043253a593446ff65174ee11f0961189ddc799b27bff04",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-tests.json": "5546a153d32baf8cc16c379355b4335536104dc765f7e0041e575381d6e3bb69",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-tests.log": "f6a48c7d514ba910ddcd7bddc548f89cb8ccae5c98161d973ef8c7b9afb76166",
+    "artifacts/qwen-long-history-dev-v4/verification-summary.json": "39c1c54a277ea8cd4ed571d3f21523f334836022e70c99a488e13ef487ae6ce6",
+    "artifacts/qwen-long-history-dev-v4/verify.py": "f67943713f9420f2c61fbff68e8500365725eb654ef4c7512d5766cc0619ab79"
+  },
+  "receipts": [
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types-final.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-format.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-lint.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-after-types.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-final.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-preflight.json",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-node.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-build.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-conversation-data.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diagnose.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diff-check.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-format.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-frozen-sources.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-help.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-import.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-independent-cases.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-install-local.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-lint.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-generate.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-smoke.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-validate.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-package.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-reproduce.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-config.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-smoke.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-staged-diff-check.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-summarize.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-tests.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types-linux.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-validate.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-check.json",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-tests.json"
+  ],
+  "receipt_logs": {
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types-final.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types-final.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit-types.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-audit.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-format.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-format.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-lint.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-final-lint.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-after-types.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-after-types.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-final.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-final.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-preflight.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-focused-preflight.log",
+    "artifacts/qwen-long-history-dev-v4/checks/dev-v4-node.json": "artifacts/qwen-long-history-dev-v4/checks/dev-v4-node.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-build.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-build.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-conversation-data.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-conversation-data.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diagnose.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diagnose.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diff-check.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-diff-check.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-format.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-format.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-frozen-sources.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-frozen-sources.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-help.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-help.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-import.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-import.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-independent-cases.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-independent-cases.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-install-local.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-install-local.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-lint.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-lint.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-generate.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-generate.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-smoke.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-smoke.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-validate.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-owned-lm-validate.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-package.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-package.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-reproduce.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-reproduce.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-config.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-config.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-smoke.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-research-smoke.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-staged-diff-check.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-staged-diff-check.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-summarize.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-summarize.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-tests.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-tests.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types-linux.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types-linux.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-types.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-validate.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-validate.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-check.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-check.log",
+    "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-tests.json": "artifacts/qwen-long-history-dev-v4/verification/dev-v4-web-tests.log"
+  },
+  "runtime_dependencies": {
+    "scripts/audit_qwen_development_v4.py": "9a68c36b36e55450234de5235443721741ff1f0d39d08d5f5ad98b68e5ac085f",
+    "scripts/verify_portable_research_evidence.py": "249344dde307beba5586c04e780396a36640061179da0f9436ed252ab14ca368",
+    "src/toruk_lm/context_selection.py": "a469cbc75c42a9d0f82ba0a45d08f3e7d330e70548571fac9ed4c5f7a0bd4aea",
+    "src/toruk_lm/__init__.py": "1d6a99ed3b245abce15c74f047898d561e9429fdc1c0b8fd9cf0f174f628f2b3"
+  },
+  "omitted_generated_files": {
+    "artifacts/qwen-long-history-dev-v4/verification/conversation-data/clean-pretraining-train.json": {
+      "bytes_observed_at_packaging": 4,
+      "sha256_observed_at_packaging": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/conversation-data/development.json": {
+      "bytes_observed_at_packaging": 12870,
+      "sha256_observed_at_packaging": "a11bf42346574a68c260d391751445d0037572cdbf71c02c80a5ccdc0118307d",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/conversation-data/manifest.json": {
+      "bytes_observed_at_packaging": 1697,
+      "sha256_observed_at_packaging": "b34d6f6df6f82d8e81187ec19ab691aabaacafc9ddb7c1335aa8f22e0006b01c",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/conversation-data/test.json": {
+      "bytes_observed_at_packaging": 18719,
+      "sha256_observed_at_packaging": "cf5c945a7302d83f5390ddd39c19229abe3a66120b7cf79c36c417300b14ae44",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/conversation-data/train.json": {
+      "bytes_observed_at_packaging": 50700,
+      "sha256_observed_at_packaging": "82632aa39dd6e6b3de268862ed43f289203f25d6ef965c4971b78af648fcd1ce",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/independent-cases/cases.json": {
+      "bytes_observed_at_packaging": 154442,
+      "sha256_observed_at_packaging": "cfbf5573358521103954c61738c905ac870b7542ef5c0976b6a2aea6bd8a795c",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/independent-cases/validation.json": {
+      "bytes_observed_at_packaging": 309,
+      "sha256_observed_at_packaging": "891617049082c92a2221476c27e94ef80c9d72a61e0c3d954ea727489d497c1b",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/data/dev.json": {
+      "bytes_observed_at_packaging": 3846,
+      "sha256_observed_at_packaging": "3873c35da621a82df1808fe4aa814bdbccba47aa844dccec50797ca71d31babe",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/data/heldout.json": {
+      "bytes_observed_at_packaging": 4010,
+      "sha256_observed_at_packaging": "6de93ff3709e466b6fcc2c4e4b1b3313ae2b32c1ebac2b856cb28b0307ef316e",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/data/manifest.json": {
+      "bytes_observed_at_packaging": 608,
+      "sha256_observed_at_packaging": "90fc881fea2f2ed627bdb7ccba24c44676dc0e799eb4c5cfaf77bb301182e6cb",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/data/train.json": {
+      "bytes_observed_at_packaging": 8055,
+      "sha256_observed_at_packaging": "13d3c620fbc6505a1d3cb3ae0a9d790051d54844e20a8f55eff266ca1de86ff6",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/dev/23-memory_off.json": {
+      "bytes_observed_at_packaging": 7364,
+      "sha256_observed_at_packaging": "2664f78ef5e177d1a03b67b589b18b28447ec7e7cdc9f53626336da59babc841",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/dev/23-memory_on.json": {
+      "bytes_observed_at_packaging": 7368,
+      "sha256_observed_at_packaging": "76df88d312b341b1701d4edbabac66da680541a5ad6189cf2eb1cac3da9fe483",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/dev/23-ordinary.json": {
+      "bytes_observed_at_packaging": 7347,
+      "sha256_observed_at_packaging": "8682ac5ab228c3538d99838bf4427cd318470a2f90b3fa78e31396c944e73287",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/dev/23-ordinary_matched.json": {
+      "bytes_observed_at_packaging": 7364,
+      "sha256_observed_at_packaging": "d30ce6c120f5ae8d6680178a29396cd20688bc9b5997f725fb1d03228934826e",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/freeze.json": {
+      "bytes_observed_at_packaging": 1198,
+      "sha256_observed_at_packaging": "d72d86d91a7e8f64163b8e9db70792b54b4c32d9ecdb657bc031711b10ec4ac1",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-memory_off-full.json": {
+      "bytes_observed_at_packaging": 7334,
+      "sha256_observed_at_packaging": "2125954ddf2a97fc3f76d3a60bbdd761ad3ccc1d96de266d1f18a35342d7b8a8",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-memory_on-full.json": {
+      "bytes_observed_at_packaging": 7380,
+      "sha256_observed_at_packaging": "e62903629b9809a9c42a0646e66581cd4b15c03fc47e4d5dc7f0fdce87544997",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-memory_on-no_read.json": {
+      "bytes_observed_at_packaging": 7333,
+      "sha256_observed_at_packaging": "ab832d9e732af418e961f3dabd89917bba74b23df620209bbd810031312dd8d3",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-memory_on-no_update.json": {
+      "bytes_observed_at_packaging": 7371,
+      "sha256_observed_at_packaging": "863bd890c851d9a1e0379b504e14dc9b56508a69f2913f5ba99961463d6c7d31",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-ordinary-full.json": {
+      "bytes_observed_at_packaging": 7320,
+      "sha256_observed_at_packaging": "e671d03506a4f6bb57febc841c52174e01a3e3d514912145926e51aea436b18b",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-ordinary-rolling.json": {
+      "bytes_observed_at_packaging": 7399,
+      "sha256_observed_at_packaging": "d2bb4bd9a58114b3b757763397c012372845df2981a93518caff9be271b0e043",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-ordinary_matched-full.json": {
+      "bytes_observed_at_packaging": 7390,
+      "sha256_observed_at_packaging": "563d664c95681427c0a97e601857d5b8ce64547dd8522a7e1d2491ae11e4ae44",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/heldout/23-ordinary_matched-rolling.json": {
+      "bytes_observed_at_packaging": 7440,
+      "sha256_observed_at_packaging": "cc9b76ffece73fc1b03f6b2b1f52e2ac347dfc5600f2c9a6d1dec6c36b6b9d90",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-memory_off/checkpoint.json": {
+      "bytes_observed_at_packaging": 686,
+      "sha256_observed_at_packaging": "ec88393d82de530de318ce03d06833104bee1ca638616b60d0a4511f22d6e958",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-memory_off/checkpoint.pt": {
+      "bytes_observed_at_packaging": 189109,
+      "sha256_observed_at_packaging": "c40fe8fcb39c96dff2f7cc16efc76494c50b324ce14a2f1d6009f5bc05b97f23",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-memory_on/checkpoint.json": {
+      "bytes_observed_at_packaging": 685,
+      "sha256_observed_at_packaging": "b1228a27817506c5557a7b42d7c06e3755f7480bacde6cff167fa97c5c411bd5",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-memory_on/checkpoint.pt": {
+      "bytes_observed_at_packaging": 216710,
+      "sha256_observed_at_packaging": "b09b3088654ca13693ad11b7c986b54a70d73db533675e222dc40f46f8e9332a",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-ordinary/checkpoint.json": {
+      "bytes_observed_at_packaging": 684,
+      "sha256_observed_at_packaging": "259d6f7ed8d6bc966d8c437d54f0ed93920e39d90708f29dd424f8ccf11d9e08",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-ordinary/checkpoint.pt": {
+      "bytes_observed_at_packaging": 175925,
+      "sha256_observed_at_packaging": "b391d7865d5b6b947f9d90a4a1e0ee3196d07358df230830342e7bbbbad4a3fd",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-ordinary_matched/checkpoint.json": {
+      "bytes_observed_at_packaging": 694,
+      "sha256_observed_at_packaging": "7196fa670218964c242a7f5080de15dd641f69bb9b96d6217fba23f4b0baae20",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/models/23-ordinary_matched/checkpoint.pt": {
+      "bytes_observed_at_packaging": 198581,
+      "sha256_observed_at_packaging": "86511d15cc48fde30d5ae795d5bb4f93e8f2bef48a2690c194fefb68a0eb306f",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/profile/checkpoint.json": {
+      "bytes_observed_at_packaging": 685,
+      "sha256_observed_at_packaging": "c6565c49e6e9c217e5e9e4be8f6bb009056e6db12a97a035435f563796034b9c",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/profile/checkpoint.pt": {
+      "bytes_observed_at_packaging": 216710,
+      "sha256_observed_at_packaging": "b09b3088654ca13693ad11b7c986b54a70d73db533675e222dc40f46f8e9332a",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/registration.json": {
+      "bytes_observed_at_packaging": 2564,
+      "sha256_observed_at_packaging": "fe60e4555ead4536420bb1da13ea4aab7644c60e1b8968741eebd469975f18df",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/resume/partial.json": {
+      "bytes_observed_at_packaging": 539,
+      "sha256_observed_at_packaging": "0357cc20ef134734bd998fa8732da746688b8732ff3cb37ee9d79f6411d244f7",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/resume/partial.pt": {
+      "bytes_observed_at_packaging": 215765,
+      "sha256_observed_at_packaging": "4d7d921dc2a4e9ff91a5ea49dad419856dacf6081378eb79a04e9b0c6c2d39c3",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/resume/resumed.json": {
+      "bytes_observed_at_packaging": 539,
+      "sha256_observed_at_packaging": "b418fed8d2fd6936e0845d0371d6f4cdd083734f7e5f3bbf7b4e7dc998efba22",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/resume/resumed.pt": {
+      "bytes_observed_at_packaging": 215765,
+      "sha256_observed_at_packaging": "910079e728eaf1cc51d0a9e6ba7d21054f9457e5ff8d478a989e6a1878bf0020",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/owned-lm-smoke/summary.json": {
+      "bytes_observed_at_packaging": 15090,
+      "sha256_observed_at_packaging": "1e4cac02988787ebf5dceedab2e388170464a1c005d3e953b09202db8eb82dcb",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/package/toruk_lm-0.1.0-py3-none-any.whl": {
+      "bytes_observed_at_packaging": 108656,
+      "sha256_observed_at_packaging": "77b491d8de43cb237262c55dd2923c5f271e2972b5bf640256b2117f8c4344dd",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/package/toruk_lm-0.1.0.tar.gz": {
+      "bytes_observed_at_packaging": 471471,
+      "sha256_observed_at_packaging": "cae7a1dbec719a606a0fe3d5be4b74ad24d44f0786a635e33f24f072be24b711",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/config.json": {
+      "bytes_observed_at_packaging": 230,
+      "sha256_observed_at_packaging": "91d99ebeff78c7781d585ab7a0f187cde59d6748fcf89d34789893baa569804b",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/data/manifest.json": {
+      "bytes_observed_at_packaging": 924,
+      "sha256_observed_at_packaging": "e273c4edb571d9811588205377eca60e73ff38fd30cf155021230ae49f3c9592",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/data/test.jsonl": {
+      "bytes_observed_at_packaging": 195,
+      "sha256_observed_at_packaging": "5ca25658f3719e359271e105be477c29f0c7dd270e7fd07e4382c76ee3628dd6",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/data/train.jsonl": {
+      "bytes_observed_at_packaging": 1536,
+      "sha256_observed_at_packaging": "3ccd3c409cec351fc85266c127170dad66e2c383e17c35f811285ff1fa05f3fa",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/data/validation.jsonl": {
+      "bytes_observed_at_packaging": 193,
+      "sha256_observed_at_packaging": "ced09d63618de0f1defa6a3bc4e774a3c1720a3674a59dd34f4e0bd03bc94ba0",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/eval/metrics.json": {
+      "bytes_observed_at_packaging": 813,
+      "sha256_observed_at_packaging": "784849c4d1a34a407518abecb48f74e0680b7ad3e11f0715bb617bd0095fcb91",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/eval/predictions.json": {
+      "bytes_observed_at_packaging": 543,
+      "sha256_observed_at_packaging": "2295bb7c1e0564bc3139871edf51e4a913c4394ac52b701acb64dad03105ea99",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/generation.json": {
+      "bytes_observed_at_packaging": 173,
+      "sha256_observed_at_packaging": "3fc245a329ceb8be8f1e85bb6b2ba40e4edd5d0e728f8c33877cdc8a92175625",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/manifest.json": {
+      "bytes_observed_at_packaging": 4832,
+      "sha256_observed_at_packaging": "765c462b46034ab58c836dec2a7ef8ad411abb476c505179833236c9d2a8a820",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/summary/metrics.json": {
+      "bytes_observed_at_packaging": 945,
+      "sha256_observed_at_packaging": "3ea58f20a02c63a7292b8c42c633e90a9910769e255079e2fb190b42d9e2089f",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/summary/table.csv": {
+      "bytes_observed_at_packaging": 837,
+      "sha256_observed_at_packaging": "1185585191e73f3d94ef69d8bb87b10eec14566d8c851670627247ab1b46a82e",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/summary/table.md": {
+      "bytes_observed_at_packaging": 970,
+      "sha256_observed_at_packaging": "9770ed67ffaf1ebfca19a1996a53b5447b9ad67de5c07b7aaf9a626fa9b01f42",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/train/checkpoint.pt": {
+      "bytes_observed_at_packaging": 573431,
+      "sha256_observed_at_packaging": "df99da343fd8d3c9d72c972b0f9f606facdc5f49b6f882df5c640e59682fc81d",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/train/config.json": {
+      "bytes_observed_at_packaging": 230,
+      "sha256_observed_at_packaging": "91d99ebeff78c7781d585ab7a0f187cde59d6748fcf89d34789893baa569804b",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/pipeline/train/metrics.json": {
+      "bytes_observed_at_packaging": 1667,
+      "sha256_observed_at_packaging": "fbe3f70e85314a7d73e675fffc8438318c25d673ea4bc8ed0cfbc8b0bf2ec937",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/config.json": {
+      "bytes_observed_at_packaging": 171,
+      "sha256_observed_at_packaging": "f5063f6bcf328f5dc48f6450987114b335022d693e1b63e6c113133886147942",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/data/manifest.json": {
+      "bytes_observed_at_packaging": 1298,
+      "sha256_observed_at_packaging": "e9ebf03d11742979de43f638a5f32369f2312546ceaf6841b10807a267c8693d",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/data/test.jsonl": {
+      "bytes_observed_at_packaging": 5957,
+      "sha256_observed_at_packaging": "eadfa7047d924bc4b5fecd80b8c0d4bc7700040cf258ab01dd9f7260baca7dd3",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/data/train.jsonl": {
+      "bytes_observed_at_packaging": 4903,
+      "sha256_observed_at_packaging": "2b250ebae0b16a704a850211fa25641da30f601ac3ab24978bc65ac541099f31",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/data/train_lm.jsonl": {
+      "bytes_observed_at_packaging": 6511,
+      "sha256_observed_at_packaging": "0518ca1719358d710c8ff9c4ed5b4f14e8cfd5a1c75ebe23c9014b33800d8cb1",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/data/validation.jsonl": {
+      "bytes_observed_at_packaging": 5776,
+      "sha256_observed_at_packaging": "209620063e8ebcf98da541a403a35f245c9fdca0cbe74866e001b27366e0214a",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/data/validation_lm.jsonl": {
+      "bytes_observed_at_packaging": 8981,
+      "sha256_observed_at_packaging": "49b2b9acb8257db085e693e1a037a77a5d47ab2c99a208d420012f8b5c307ea5",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/manifest.json": {
+      "bytes_observed_at_packaging": 3161,
+      "sha256_observed_at_packaging": "af59275473912548bd12af1cf7b5c625d100aeea145c20a4e33b444d048c54c3",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-eval/metrics.json": {
+      "bytes_observed_at_packaging": 2019,
+      "sha256_observed_at_packaging": "fb13de3ae56ac7283874538e3c68d6cce1c8f0657f6d5ac475ef66784d92ce17",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-eval/predictions.json": {
+      "bytes_observed_at_packaging": 5454,
+      "sha256_observed_at_packaging": "723d51a339eb4acfeb0d5136be1a288631d8bf45f3c6b7334f561de487605173",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-full/checkpoint.pt": {
+      "bytes_observed_at_packaging": 95894,
+      "sha256_observed_at_packaging": "4fd4c169f97d3e7a292019cebad5244a821f955193d1a5ea1039c664f52ed88b",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-full/config.json": {
+      "bytes_observed_at_packaging": 365,
+      "sha256_observed_at_packaging": "665834e028c288936bbe1aee231ba93eb7f9b525403aa4da02186f6da85d3ae6",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-full/metrics.json": {
+      "bytes_observed_at_packaging": 1501,
+      "sha256_observed_at_packaging": "6963914d3edf80e922fd7583adc57bf7bd78c4ea8219e528fec4efb83c1c84dd",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-part/checkpoint.pt": {
+      "bytes_observed_at_packaging": 95894,
+      "sha256_observed_at_packaging": "b97f6f756f370573d6f54a51fa6cebf2db34fa84c1293c163d1a186905c17158",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-part/config.json": {
+      "bytes_observed_at_packaging": 365,
+      "sha256_observed_at_packaging": "665834e028c288936bbe1aee231ba93eb7f9b525403aa4da02186f6da85d3ae6",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-part/metrics.json": {
+      "bytes_observed_at_packaging": 1318,
+      "sha256_observed_at_packaging": "abe8fdf2c57112794e326262ddd3c9f05229f63d13922d0d058ca1f92a4266de",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-resume/checkpoint.pt": {
+      "bytes_observed_at_packaging": 95894,
+      "sha256_observed_at_packaging": "d76321f3abd67b9327ab36441cb34617b3b157f23bc056ddc4b6bde16bd7a45b",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-resume/config.json": {
+      "bytes_observed_at_packaging": 365,
+      "sha256_observed_at_packaging": "665834e028c288936bbe1aee231ba93eb7f9b525403aa4da02186f6da85d3ae6",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/ordinary-resume/metrics.json": {
+      "bytes_observed_at_packaging": 1318,
+      "sha256_observed_at_packaging": "76da36f9c0cde0933607330a2d369ef168458ce0ad5b7d07d2dc47c49aa80ef4",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-eval/metrics.json": {
+      "bytes_observed_at_packaging": 2018,
+      "sha256_observed_at_packaging": "8757a8ca04f1108fa6fe265328126344c1ea866ade48a050f9629a5f3df4aa98",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-eval/predictions.json": {
+      "bytes_observed_at_packaging": 5521,
+      "sha256_observed_at_packaging": "5dcfbdf5f64e2cb043a5b36e1b1832a34a27d2748120ae6be8904bc8035afd40",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-full/checkpoint.pt": {
+      "bytes_observed_at_packaging": 117111,
+      "sha256_observed_at_packaging": "a8ecd514743d2411972b6e334a68194646c07913b63b094d46c052989e3d5db2",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-full/config.json": {
+      "bytes_observed_at_packaging": 366,
+      "sha256_observed_at_packaging": "6944dba71701c6f72891aeecdd2049ab8e044b15267a0268a21222342669dc8c",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-full/metrics.json": {
+      "bytes_observed_at_packaging": 1533,
+      "sha256_observed_at_packaging": "285c198ea95f6e13c633211e1ebc428aba397b4c958498e196160406da30bc89",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-part/checkpoint.pt": {
+      "bytes_observed_at_packaging": 117111,
+      "sha256_observed_at_packaging": "47ff843fa417fa4905fc16c3c6f652fcde70868beb4002a01d2d6d45832aafce",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-part/config.json": {
+      "bytes_observed_at_packaging": 366,
+      "sha256_observed_at_packaging": "6944dba71701c6f72891aeecdd2049ab8e044b15267a0268a21222342669dc8c",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-part/metrics.json": {
+      "bytes_observed_at_packaging": 1336,
+      "sha256_observed_at_packaging": "2fe157d9ef9ef52698123e28da1dbe28f1dcd87e80b53885e88aaa1f1954c66d",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-resume/checkpoint.pt": {
+      "bytes_observed_at_packaging": 117111,
+      "sha256_observed_at_packaging": "64ea5751173dca2e3d4e09aa95952893dbd9dc282181ecb5a4acfc618c1caee4",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-resume/config.json": {
+      "bytes_observed_at_packaging": 366,
+      "sha256_observed_at_packaging": "6944dba71701c6f72891aeecdd2049ab8e044b15267a0268a21222342669dc8c",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/recurrent-resume/metrics.json": {
+      "bytes_observed_at_packaging": 1336,
+      "sha256_observed_at_packaging": "002a0b06f8912559801aa287e1f028f77bbd7f3fc6744bd9c960a9f72810fc4a",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/stages.json": {
+      "bytes_observed_at_packaging": 1358,
+      "sha256_observed_at_packaging": "ad6f90a067c21d1e869c10d30ede777ba7c881a0fe8a8309302ed3e8b5d92d2f",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/research-smoke/summary.json": {
+      "bytes_observed_at_packaging": 2125,
+      "sha256_observed_at_packaging": "6a89cd4cdd350c90a4d082782a7d891900ccfb2e512ca55a6149826ee16905a6",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/tables/metrics.json": {
+      "bytes_observed_at_packaging": 945,
+      "sha256_observed_at_packaging": "3ea58f20a02c63a7292b8c42c633e90a9910769e255079e2fb190b42d9e2089f",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/tables/table.csv": {
+      "bytes_observed_at_packaging": 837,
+      "sha256_observed_at_packaging": "1185585191e73f3d94ef69d8bb87b10eec14566d8c851670627247ab1b46a82e",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    },
+    "artifacts/qwen-long-history-dev-v4/verification/tables/table.md": {
+      "bytes_observed_at_packaging": 970,
+      "sha256_observed_at_packaging": "9770ed67ffaf1ebfca19a1996a53b5447b9ad67de5c07b7aaf9a626fa9b01f42",
+      "required_for_development_audit": false,
+      "reason": "Generated engineering build or fixture; original receipt/log retained.",
+      "local_state_at_packaging": "present; left untouched; omitted from Git evidence set"
+    }
+  },
+  "new_hash_scope": "Omitted-file hashes are packaging observations only; no original build hashes were recorded.",
+  "excluded_from_payload_hash_map": [
+    "portable-manifest.json (self)",
+    "portable-checks/*.json (new verifier receipts, sealed by Git commit)"
+  ],
+  "heldout_policy": "Baseline files may be hashed/copied as opaque bytes; no held-out records parsed/scored or model generation."
+}

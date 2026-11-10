@@ -1,0 +1,223 @@
+{
+  "head": "b079377b913615046ffa3977382ae0d016dca2be",
+  "uncommitted": true,
+  "full_verify_exit_code": 0,
+  "full_verify_stages": {
+    "dev-v4-build": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.234849000000395
+    },
+    "dev-v4-conversation-data": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.384200100000271
+    },
+    "dev-v4-diagnose": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.1532271000005494
+    },
+    "dev-v4-diff-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.04689239999970596
+    },
+    "dev-v4-format": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.17433489999984886
+    },
+    "dev-v4-frozen-sources": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.06916720000026544
+    },
+    "dev-v4-help": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.119338499999685
+    },
+    "dev-v4-import": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.03824309999981779
+    },
+    "dev-v4-independent-cases": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.1644038000004002
+    },
+    "dev-v4-install-local": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.045490599999539
+    },
+    "dev-v4-lint": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.14688509999996313
+    },
+    "dev-v4-owned-lm-generate": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.09127669999998
+    },
+    "dev-v4-owned-lm-smoke": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.359760800000004
+    },
+    "dev-v4-owned-lm-validate": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.447663699999794
+    },
+    "dev-v4-package": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.6121696999998676
+    },
+    "dev-v4-reproduce": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.094976999999744
+    },
+    "dev-v4-research-config": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.114994000000479
+    },
+    "dev-v4-research-smoke": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.775612099999307
+    },
+    "dev-v4-staged-diff-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.0306815000003553
+    },
+    "dev-v4-summarize": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.833233499999551
+    },
+    "dev-v4-tests": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 158.54593470000054
+    },
+    "dev-v4-types-linux": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 45.8334545000007
+    },
+    "dev-v4-types": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 70.79642779999995
+    },
+    "dev-v4-validate": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.1348034999991796
+    },
+    "dev-v4-web-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.6408497000002171
+    },
+    "dev-v4-web-tests": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.5715819999995801
+    }
+  },
+  "python_tests": 344,
+  "python_test_seconds": 157.11,
+  "focused_tests": 48,
+  "new_audit_tests": 17,
+  "node_passed": 20,
+  "node_skipped": 1,
+  "explicit_audit_types": "PASS; 37 source files",
+  "final_source_lint_format": "PASS",
+  "git_diff_check": "PASS",
+  "new_file_whitespace_checks": {
+    "scripts/audit_qwen_development_v4.py": {
+      "whitespace_errors": false,
+      "returncode": 1,
+      "note": "no-index returns 1 for added content"
+    },
+    "tests/test_qwen_development_v4.py": {
+      "whitespace_errors": false,
+      "returncode": 1,
+      "note": "no-index returns 1 for added content"
+    },
+    "docs/research/qwen-long-history-dev-v4-results.md": {
+      "whitespace_errors": false,
+      "returncode": 1,
+      "note": "no-index returns 1 for added content"
+    }
+  },
+  "preserved_frozen_files": 472,
+  "new_qwen_generations": 0,
+  "qwen_heldout_records_parsed": 0,
+  "original_workspaces": {
+    "C:/Users/susee/VS_CODE_PROJECT/Toruk": {
+      "head": "e3c143ab0095faeb36ecc693c7e1cea09e1f7d24",
+      "status": [
+        "?? artifacts/backbone-qualification-v1/verification/conversation-data/",
+        "?? artifacts/backbone-qualification-v1/verification/independent-cases/",
+        "?? artifacts/backbone-qualification-v1/verification/owned-lm-smoke/",
+        "?? artifacts/backbone-qualification-v1/verification/pipeline/",
+        "?? artifacts/backbone-qualification-v1/verification/research-smoke/",
+        "?? artifacts/backbone-qualification-v1/verification/tables/",
+        "?? artifacts/m6-successor-v1/verification/conversation-data/",
+        "?? artifacts/m6-successor-v1/verification/independent-cases/",
+        "?? artifacts/m6-successor-v1/verification/owned-lm-smoke/",
+        "?? artifacts/m6-successor-v1/verification/pipeline/",
+        "?? artifacts/m6-successor-v1/verification/research-smoke/",
+        "?? artifacts/m6-successor-v1/verification/tables/",
+        "?? artifacts/qwen-long-history-v1/verification/conversation-data/",
+        "?? artifacts/qwen-long-history-v1/verification/independent-cases/",
+        "?? artifacts/qwen-long-history-v1/verification/owned-lm-smoke/",
+        "?? artifacts/qwen-long-history-v1/verification/pipeline/",
+        "?? artifacts/qwen-long-history-v1/verification/research-smoke/",
+        "?? artifacts/qwen-long-history-v1/verification/tables/",
+        "?? artifacts/qwen-long-history-v2/verification/conversation-data/",
+        "?? artifacts/qwen-long-history-v2/verification/independent-cases/",
+        "?? artifacts/qwen-long-history-v2/verification/owned-lm-smoke/",
+        "?? artifacts/qwen-long-history-v2/verification/package/",
+        "?? artifacts/qwen-long-history-v2/verification/pipeline/",
+        "?? artifacts/qwen-long-history-v2/verification/research-smoke/",
+        "?? artifacts/qwen-long-history-v2/verification/tables/",
+        "?? artifacts/qwen-long-history-v3/verification/conversation-data/",
+        "?? artifacts/qwen-long-history-v3/verification/independent-cases/",
+        "?? artifacts/qwen-long-history-v3/verification/owned-lm-smoke/",
+        "?? artifacts/qwen-long-history-v3/verification/package/",
+        "?? artifacts/qwen-long-history-v3/verification/pipeline/",
+        "?? artifacts/qwen-long-history-v3/verification/research-smoke/",
+        "?? artifacts/qwen-long-history-v3/verification/tables/"
+      ]
+    },
+    "D:/Toruk": {
+      "head": "b079377b913615046ffa3977382ae0d016dca2be",
+      "status": []
+    }
+  },
+  "final_new_source_sha256": {
+    "scripts/audit_qwen_development_v4.py": "9a68c36b36e55450234de5235443721741ff1f0d39d08d5f5ad98b68e5ac085f",
+    "tests/test_qwen_development_v4.py": "bf341ec452bcefef6d9b6fead1547238f50fb2471226c39da1520ed2c5e62c36",
+    "docs/research/qwen-long-history-dev-v4-results.md": "935486d16a4d4ccf4dfb88c53f6e5e416d84e497b4fe448ef9faa6095372f6bc"
+  },
+  "retained_preflight_failures": [
+    "checks/dev-v4-focused-preflight.json",
+    "checks/dev-v4-audit-types.json"
+  ],
+  "notes": [
+    "No selector intervention or fresh before/after inference.",
+    "Full verification tiny fixtures are separate from the Qwen study.",
+    "Final annotation-only correction is covered by final focused tests and explicit type/lint/format checks."
+  ]
+}
