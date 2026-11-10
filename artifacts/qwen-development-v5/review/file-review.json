@@ -1,0 +1,3195 @@
+{
+  "scope": "Every prospective v5 payload and every source ZIP member; no inherited held-out records parsed.",
+  "files": [
+    {
+      "path": "artifacts/qwen-development-v5/.gitattributes",
+      "bytes": 29,
+      "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/.gitignore",
+      "bytes": 267,
+      "sha256": "38d8124fcd7a7e828b7b43d0d14fe6012e8cc35915511682feb431864ad702d0",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/README.md",
+      "bytes": 2789,
+      "sha256": "16340f5df15c318ed76a434567b16ff99871b913f19303815e302f4061e58968",
+      "kind": "source_or_document"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/check-lexical/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/check-lexical/rehearsal/full-prompt-ids.json",
+      "bytes": 58197,
+      "sha256": "4543444f3161b570875698c246742842ce84befd068004002be620e5a29e9e61",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/check-lexical/rehearsal/registration.json",
+      "bytes": 10277,
+      "sha256": "66064017cfafb325ad27daca551110fc9dcaab78e1fa12f69b863f8b027a3e8d",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/check-toruk/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/check-toruk/rehearsal/full-prompt-ids.json",
+      "bytes": 58197,
+      "sha256": "4543444f3161b570875698c246742842ce84befd068004002be620e5a29e9e61",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/check-toruk/rehearsal/registration.json",
+      "bytes": 10271,
+      "sha256": "2cef54dc56ae7b04768c14cfc399afe061f8fec7b5e2ebbc96c68d6fe4df2846",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/field-lexical/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/field-lexical/rehearsal/full-prompt-ids.json",
+      "bytes": 57301,
+      "sha256": "02fc5a6ee7c5c1f1b8a4814c2b52ba5c91d76ce4ae292e5e81304b847997c886",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/field-lexical/rehearsal/registration.json",
+      "bytes": 10189,
+      "sha256": "664a1cc2f49f753b1c7466809afd8c3a1e729c5db8475000dbafdf8c5d7d1555",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/field-toruk/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/field-toruk/rehearsal/full-prompt-ids.json",
+      "bytes": 57301,
+      "sha256": "02fc5a6ee7c5c1f1b8a4814c2b52ba5c91d76ce4ae292e5e81304b847997c886",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/field-toruk/rehearsal/registration.json",
+      "bytes": 10183,
+      "sha256": "bc4ab589bc2105e6306a53f90842d22f5dbe29e73cea195e1b94a5669453d2bc",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/original-lexical/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/original-lexical/rehearsal/full-prompt-ids.json",
+      "bytes": 54060,
+      "sha256": "25ce42cfdd2297ef2a4c2b47707d30df1fd305c2097b2009a3e858fb3bdc8a0d",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/original-lexical/rehearsal/registration.json",
+      "bytes": 9918,
+      "sha256": "2aa5fbee967bfac143e244d0df6b4fe4e422bd10dbe5fa6d827d20b81361edbd",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/original-toruk/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/original-toruk/rehearsal/full-prompt-ids.json",
+      "bytes": 54060,
+      "sha256": "25ce42cfdd2297ef2a4c2b47707d30df1fd305c2097b2009a3e858fb3bdc8a0d",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/arms/original-toruk/rehearsal/registration.json",
+      "bytes": 9912,
+      "sha256": "4625ab60bb469c26ed8936d1160b4494122d4509ab9dcbfdb2a8a399375ef98f",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/baseline.json",
+      "bytes": 84006,
+      "sha256": "80d012dfab29dfff1a0b1a0d4d829cb8369607d524fca0de662fa0e5f4442eaa",
+      "kind": "json",
+      "structure": [
+        "head",
+        "sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/preparation-cost.json",
+      "bytes": 102,
+      "sha256": "1cf472a12cc17596e72ae15964fb4103e5ceb1c749a80440fce336951d9ce351",
+      "kind": "json",
+      "structure": [
+        "wall_seconds",
+        "controller_cpu_seconds",
+        "new_generations"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/registration.json",
+      "bytes": 91557,
+      "sha256": "0b6bafe72bda100f909230f305b1e1ce2942800b5ec93a56982de6ddac276540",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "registered_utc",
+        "config",
+        "bindings",
+        "frozen_baseline",
+        "dependencies",
+        "consumed_development_inputs",
+        "new_training",
+        "heldout_authorized",
+        "python"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "bytes": 166066,
+      "sha256": "c473c3c91aa65de20f627fddf97fc9426c13e3a236c50c5f1618886e8de8bffd",
+      "kind": "exact_registered_source_archive"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/starting-state.json",
+      "bytes": 403,
+      "sha256": "07bdbacd12f6284cde0e2f0cadd8dfa65cab377d3599ad7f09082be67f6ad134",
+      "kind": "json",
+      "structure": [
+        "head",
+        "cwd",
+        "git_root",
+        "status",
+        "registered_utc",
+        "heldout_records_parsed"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-001/worker-source/scripts/qwen_long_history.py",
+      "bytes": 114,
+      "sha256": "ec7a246cd849ae62c2f93a5b0216b6b977e8c0be678c16b55208a7d91118d76a",
+      "kind": "source_or_document"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development-lexical-answers.jsonl",
+      "bytes": 36051,
+      "sha256": "72d938c4d26098b9ba764b1802792a0e35e8fc86b4346b5e92b66b304833aa9e",
+      "kind": "jsonl",
+      "rows": 8,
+      "row_keys": [
+        "answer",
+        "arm",
+        "failure",
+        "fit_cpu_seconds",
+        "fit_wall_seconds",
+        "full_evidence_retained",
+        "generated_ids",
+        "generation_cpu_seconds",
+        "generation_wall_seconds",
+        "history_bytes",
+        "id",
+        "is_replay",
+        "kind",
+        "model",
+        "output_tokens",
+        "persistent_state_bytes",
+        "prompt_ids",
+        "prompt_messages",
+        "prompt_tokens",
+        "proposed_indices",
+        "request_cpu_seconds",
+        "request_wall_seconds",
+        "required_evidence_retained",
+        "score",
+        "selected_indices",
+        "selected_sources",
+        "selector_cpu_seconds",
+        "selector_history_bytes",
+        "selector_identity",
+        "selector_state_bytes",
+        "selector_wall_seconds",
+        "total_tokens",
+        "work"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development-lexical-heartbeats.jsonl",
+      "bytes": 10594,
+      "sha256": "71b1de2c201e2df470490c32ac0797dfc3dc5b6338659ce412729954a89ff04b",
+      "kind": "jsonl",
+      "rows": 28,
+      "row_keys": [
+        "active",
+        "clocks",
+        "cpu_seconds",
+        "disk_bytes",
+        "elapsed_seconds",
+        "failure",
+        "monitor_gap_seconds",
+        "private_bytes",
+        "rss_bytes"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development-lexical-progress.json",
+      "bytes": 61,
+      "sha256": "f24f5889d671d2c3db58245a319f5ba3e3e37e0ffae0393d32148e1547e12907",
+      "kind": "json",
+      "structure": [
+        "active",
+        "case"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development-lexical-v2-cost.json",
+      "bytes": 1310,
+      "sha256": "30a907af932f79196cb5a75ff50ab2d34c814d54fda9b2df6be8640d4b950bfd",
+      "kind": "json",
+      "structure": [
+        "arm",
+        "command",
+        "start",
+        "end",
+        "wall_seconds",
+        "cpu_seconds",
+        "controller_cpu_seconds",
+        "cpu_by_process",
+        "peak_rss_bytes",
+        "peak_private_bytes",
+        "peak_os_private_bytes",
+        "last_active_request",
+        "worker_final_telemetry",
+        "cpu_complete",
+        "failure",
+        "returncode",
+        "scope"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development-lexical-v2-started.json",
+      "bytes": 263,
+      "sha256": "3f82bd345566a1eaff00209ec073f69c01b81ebd5963e5a2c231867451226a2e",
+      "kind": "json",
+      "structure": [
+        "clocks",
+        "arm",
+        "heldout",
+        "registration_sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development-lexical-worker.json",
+      "bytes": 2821,
+      "sha256": "7f566c46a2e4e2edae3387964aa3ca4b99140f406a1b8038dd5804cebd80fe68",
+      "kind": "json",
+      "structure": [
+        "pid",
+        "lifecycle_cpu_seconds",
+        "setup_seconds",
+        "worker_seconds",
+        "memory",
+        "generation_config",
+        "torch_threads",
+        "selector_sha256",
+        "requests"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development-lexical.log",
+      "bytes": 697,
+      "sha256": "8319c94de6dfd1fcb33058df2f554ec6ede5439a1ddea8c6ce2b4920f193d0bc",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/full-prompt-ids.json",
+      "bytes": 58197,
+      "sha256": "4543444f3161b570875698c246742842ce84befd068004002be620e5a29e9e61",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/registration.json",
+      "bytes": 10277,
+      "sha256": "b955ee554047543b72f0709300ab7b1821afb5f064029311b3275189fea158f2",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development-toruk-answers.jsonl",
+      "bytes": 33867,
+      "sha256": "ca72ce187d6d70f25c9a89fceb5bae6b3bad6c5a089e5a4ad573da7632f321c1",
+      "kind": "jsonl",
+      "rows": 8,
+      "row_keys": [
+        "answer",
+        "arm",
+        "failure",
+        "fit_cpu_seconds",
+        "fit_wall_seconds",
+        "full_evidence_retained",
+        "generated_ids",
+        "generation_cpu_seconds",
+        "generation_wall_seconds",
+        "history_bytes",
+        "id",
+        "is_replay",
+        "kind",
+        "model",
+        "output_tokens",
+        "persistent_state_bytes",
+        "prompt_ids",
+        "prompt_messages",
+        "prompt_tokens",
+        "proposed_indices",
+        "request_cpu_seconds",
+        "request_wall_seconds",
+        "required_evidence_retained",
+        "score",
+        "selected_indices",
+        "selected_sources",
+        "selector_cpu_seconds",
+        "selector_history_bytes",
+        "selector_identity",
+        "selector_state_bytes",
+        "selector_wall_seconds",
+        "total_tokens",
+        "work"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development-toruk-heartbeats.jsonl",
+      "bytes": 11818,
+      "sha256": "cfc8063f1f7dafbcd52e1d95287efd9205812b90dc72c43edb6994bbcbb39268",
+      "kind": "jsonl",
+      "rows": 31,
+      "row_keys": [
+        "active",
+        "clocks",
+        "cpu_seconds",
+        "disk_bytes",
+        "elapsed_seconds",
+        "failure",
+        "monitor_gap_seconds",
+        "private_bytes",
+        "rss_bytes"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development-toruk-progress.json",
+      "bytes": 61,
+      "sha256": "f24f5889d671d2c3db58245a319f5ba3e3e37e0ffae0393d32148e1547e12907",
+      "kind": "json",
+      "structure": [
+        "active",
+        "case"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development-toruk-v2-cost.json",
+      "bytes": 1320,
+      "sha256": "707303f24e744d9db240027f4952aaf9a10ee1aa6f6c14f5cda51ed172038716",
+      "kind": "json",
+      "structure": [
+        "arm",
+        "command",
+        "start",
+        "end",
+        "wall_seconds",
+        "cpu_seconds",
+        "controller_cpu_seconds",
+        "cpu_by_process",
+        "peak_rss_bytes",
+        "peak_private_bytes",
+        "peak_os_private_bytes",
+        "last_active_request",
+        "worker_final_telemetry",
+        "cpu_complete",
+        "failure",
+        "returncode",
+        "scope"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development-toruk-v2-started.json",
+      "bytes": 262,
+      "sha256": "070af02e54137f461c844f43a8561769509876803be26e01d10ad75f678c7cc6",
+      "kind": "json",
+      "structure": [
+        "clocks",
+        "arm",
+        "heldout",
+        "registration_sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development-toruk-worker.json",
+      "bytes": 2821,
+      "sha256": "d74851cd1a6ec6bc57ccb71f200eb6d5384044046889f4e4a7641140af9d7778",
+      "kind": "json",
+      "structure": [
+        "pid",
+        "lifecycle_cpu_seconds",
+        "setup_seconds",
+        "worker_seconds",
+        "memory",
+        "generation_config",
+        "torch_threads",
+        "selector_sha256",
+        "requests"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development-toruk.log",
+      "bytes": 686,
+      "sha256": "461e7e57e87f66f089879572285bff8c33cb42840dc880fcd56e2e96fd2ffcbb",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/full-prompt-ids.json",
+      "bytes": 58197,
+      "sha256": "4543444f3161b570875698c246742842ce84befd068004002be620e5a29e9e61",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/registration.json",
+      "bytes": 10271,
+      "sha256": "c29f2cc633dfdf0f5192fa31fe5ccd4bddaf8c127da845c5340928ee9683afba",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development-lexical-answers.jsonl",
+      "bytes": 34655,
+      "sha256": "b4ec5e2cdcdfed24fef2ff3c7f72b94cb0e84599c5f8402bc7858fe8720f6733",
+      "kind": "jsonl",
+      "rows": 8,
+      "row_keys": [
+        "answer",
+        "arm",
+        "failure",
+        "fit_cpu_seconds",
+        "fit_wall_seconds",
+        "full_evidence_retained",
+        "generated_ids",
+        "generation_cpu_seconds",
+        "generation_wall_seconds",
+        "history_bytes",
+        "id",
+        "is_replay",
+        "kind",
+        "model",
+        "output_tokens",
+        "persistent_state_bytes",
+        "prompt_ids",
+        "prompt_messages",
+        "prompt_tokens",
+        "proposed_indices",
+        "request_cpu_seconds",
+        "request_wall_seconds",
+        "required_evidence_retained",
+        "score",
+        "selected_indices",
+        "selected_sources",
+        "selector_cpu_seconds",
+        "selector_history_bytes",
+        "selector_identity",
+        "selector_state_bytes",
+        "selector_wall_seconds",
+        "total_tokens",
+        "work"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development-lexical-heartbeats.jsonl",
+      "bytes": 10202,
+      "sha256": "288036f1857132bff1c4c5c9563cb9c7f00a964fb0f3243cb409e0355235202e",
+      "kind": "jsonl",
+      "rows": 27,
+      "row_keys": [
+        "active",
+        "clocks",
+        "cpu_seconds",
+        "disk_bytes",
+        "elapsed_seconds",
+        "failure",
+        "monitor_gap_seconds",
+        "private_bytes",
+        "rss_bytes"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development-lexical-progress.json",
+      "bytes": 61,
+      "sha256": "f24f5889d671d2c3db58245a319f5ba3e3e37e0ffae0393d32148e1547e12907",
+      "kind": "json",
+      "structure": [
+        "active",
+        "case"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development-lexical-v2-cost.json",
+      "bytes": 1332,
+      "sha256": "e1820264783198533fb65203d05ddbb59f574fb898e5d123a4fd7d0b5aebbfb4",
+      "kind": "json",
+      "structure": [
+        "arm",
+        "command",
+        "start",
+        "end",
+        "wall_seconds",
+        "cpu_seconds",
+        "controller_cpu_seconds",
+        "cpu_by_process",
+        "peak_rss_bytes",
+        "peak_private_bytes",
+        "peak_os_private_bytes",
+        "last_active_request",
+        "worker_final_telemetry",
+        "cpu_complete",
+        "failure",
+        "returncode",
+        "scope"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development-lexical-v2-started.json",
+      "bytes": 264,
+      "sha256": "664e99c524a05653733094e49367e62f851a3e3a210821c348d5eddd07ee3038",
+      "kind": "json",
+      "structure": [
+        "clocks",
+        "arm",
+        "heldout",
+        "registration_sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development-lexical-worker.json",
+      "bytes": 2822,
+      "sha256": "5aea1f7cfbfd27aae6055c9493ccc0558016cba24be3d27258e303468ff7866f",
+      "kind": "json",
+      "structure": [
+        "pid",
+        "lifecycle_cpu_seconds",
+        "setup_seconds",
+        "worker_seconds",
+        "memory",
+        "generation_config",
+        "torch_threads",
+        "selector_sha256",
+        "requests"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development-lexical.log",
+      "bytes": 693,
+      "sha256": "34fc06c84e3a4ee13db8e7e9fc1eaea070d896886f7c9c5df783943138f42f09",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/full-prompt-ids.json",
+      "bytes": 57301,
+      "sha256": "02fc5a6ee7c5c1f1b8a4814c2b52ba5c91d76ce4ae292e5e81304b847997c886",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/registration.json",
+      "bytes": 10189,
+      "sha256": "e037915bb27e94766288c5a7f4a1fc33a60012519ed5b669ad62919aeb2762d7",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development-toruk-answers.jsonl",
+      "bytes": 32440,
+      "sha256": "b5a928adf3d1c150f832099a13d5b664ca0b5f6a30538a417e3dd0c9875bfa12",
+      "kind": "jsonl",
+      "rows": 8,
+      "row_keys": [
+        "answer",
+        "arm",
+        "failure",
+        "fit_cpu_seconds",
+        "fit_wall_seconds",
+        "full_evidence_retained",
+        "generated_ids",
+        "generation_cpu_seconds",
+        "generation_wall_seconds",
+        "history_bytes",
+        "id",
+        "is_replay",
+        "kind",
+        "model",
+        "output_tokens",
+        "persistent_state_bytes",
+        "prompt_ids",
+        "prompt_messages",
+        "prompt_tokens",
+        "proposed_indices",
+        "request_cpu_seconds",
+        "request_wall_seconds",
+        "required_evidence_retained",
+        "score",
+        "selected_indices",
+        "selected_sources",
+        "selector_cpu_seconds",
+        "selector_history_bytes",
+        "selector_identity",
+        "selector_state_bytes",
+        "selector_wall_seconds",
+        "total_tokens",
+        "work"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development-toruk-heartbeats.jsonl",
+      "bytes": 10592,
+      "sha256": "79067cf2b586c30dacc9c8367b445aa9751554950ac75ecb68d432925c1a8580",
+      "kind": "jsonl",
+      "rows": 28,
+      "row_keys": [
+        "active",
+        "clocks",
+        "cpu_seconds",
+        "disk_bytes",
+        "elapsed_seconds",
+        "failure",
+        "monitor_gap_seconds",
+        "private_bytes",
+        "rss_bytes"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development-toruk-progress.json",
+      "bytes": 61,
+      "sha256": "f24f5889d671d2c3db58245a319f5ba3e3e37e0ffae0393d32148e1547e12907",
+      "kind": "json",
+      "structure": [
+        "active",
+        "case"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development-toruk-v2-cost.json",
+      "bytes": 1312,
+      "sha256": "b7d855e8790d8bcb4c6f5a6c5a5fd34dea439b98ed0a5054997404349f3b7644",
+      "kind": "json",
+      "structure": [
+        "arm",
+        "command",
+        "start",
+        "end",
+        "wall_seconds",
+        "cpu_seconds",
+        "controller_cpu_seconds",
+        "cpu_by_process",
+        "peak_rss_bytes",
+        "peak_private_bytes",
+        "peak_os_private_bytes",
+        "last_active_request",
+        "worker_final_telemetry",
+        "cpu_complete",
+        "failure",
+        "returncode",
+        "scope"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development-toruk-v2-started.json",
+      "bytes": 262,
+      "sha256": "ab6ea79b5602d685ba00a7d3228cabbfb430f0ba9325e30a57dd93e2fb28757e",
+      "kind": "json",
+      "structure": [
+        "clocks",
+        "arm",
+        "heldout",
+        "registration_sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development-toruk-worker.json",
+      "bytes": 2820,
+      "sha256": "28be121cbc83f39a2fae62d83622bdde4990b1e5f7ff3afd934a63ca623954cf",
+      "kind": "json",
+      "structure": [
+        "pid",
+        "lifecycle_cpu_seconds",
+        "setup_seconds",
+        "worker_seconds",
+        "memory",
+        "generation_config",
+        "torch_threads",
+        "selector_sha256",
+        "requests"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development-toruk.log",
+      "bytes": 697,
+      "sha256": "7ce169b2db3c1670997639e7c3e0120b19e48732eac8c7c2064568242f7bba11",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/full-prompt-ids.json",
+      "bytes": 57301,
+      "sha256": "02fc5a6ee7c5c1f1b8a4814c2b52ba5c91d76ce4ae292e5e81304b847997c886",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/registration.json",
+      "bytes": 10183,
+      "sha256": "17e3c3b0e25ad8d7b5d7a62e4c58192b967a3f81105ebafeac1e2fdb9d61de46",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development-lexical-answers.jsonl",
+      "bytes": 30564,
+      "sha256": "26f2ea99623e33ece5b36039d14aa59f1fdee7639ded48300fbe2c62e85899d9",
+      "kind": "jsonl",
+      "rows": 8,
+      "row_keys": [
+        "answer",
+        "arm",
+        "failure",
+        "fit_cpu_seconds",
+        "fit_wall_seconds",
+        "full_evidence_retained",
+        "generated_ids",
+        "generation_cpu_seconds",
+        "generation_wall_seconds",
+        "history_bytes",
+        "id",
+        "is_replay",
+        "kind",
+        "model",
+        "output_tokens",
+        "persistent_state_bytes",
+        "prompt_ids",
+        "prompt_messages",
+        "prompt_tokens",
+        "proposed_indices",
+        "request_cpu_seconds",
+        "request_wall_seconds",
+        "required_evidence_retained",
+        "score",
+        "selected_indices",
+        "selected_sources",
+        "selector_cpu_seconds",
+        "selector_history_bytes",
+        "selector_identity",
+        "selector_state_bytes",
+        "selector_wall_seconds",
+        "total_tokens",
+        "work"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development-lexical-heartbeats.jsonl",
+      "bytes": 11803,
+      "sha256": "0768339b2a7f72311d48917da35e4192662fc03ee3667dfa906abd7f5e78ff60",
+      "kind": "jsonl",
+      "rows": 31,
+      "row_keys": [
+        "active",
+        "clocks",
+        "cpu_seconds",
+        "disk_bytes",
+        "elapsed_seconds",
+        "failure",
+        "monitor_gap_seconds",
+        "private_bytes",
+        "rss_bytes"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development-lexical-progress.json",
+      "bytes": 61,
+      "sha256": "f24f5889d671d2c3db58245a319f5ba3e3e37e0ffae0393d32148e1547e12907",
+      "kind": "json",
+      "structure": [
+        "active",
+        "case"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development-lexical-v2-cost.json",
+      "bytes": 1324,
+      "sha256": "86dbae144f2d7152b01b3ee96231eee5fb5d3ec2af056991c3b447f9285ebd0d",
+      "kind": "json",
+      "structure": [
+        "arm",
+        "command",
+        "start",
+        "end",
+        "wall_seconds",
+        "cpu_seconds",
+        "controller_cpu_seconds",
+        "cpu_by_process",
+        "peak_rss_bytes",
+        "peak_private_bytes",
+        "peak_os_private_bytes",
+        "last_active_request",
+        "worker_final_telemetry",
+        "cpu_complete",
+        "failure",
+        "returncode",
+        "scope"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development-lexical-v2-started.json",
+      "bytes": 264,
+      "sha256": "fbc2ef23a0e0048655c85550361ac16a7bb47c0783454337da0f9a25139c9989",
+      "kind": "json",
+      "structure": [
+        "clocks",
+        "arm",
+        "heldout",
+        "registration_sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development-lexical-worker.json",
+      "bytes": 2821,
+      "sha256": "3aa9be98d51e38f685559815c56e117e9d2676ed765f61a8dfe13bef73e3a85b",
+      "kind": "json",
+      "structure": [
+        "pid",
+        "lifecycle_cpu_seconds",
+        "setup_seconds",
+        "worker_seconds",
+        "memory",
+        "generation_config",
+        "torch_threads",
+        "selector_sha256",
+        "requests"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development-lexical.log",
+      "bytes": 695,
+      "sha256": "7a4318f452eb5752a25663697a931cf83731a5ca2f13d465a8f0e68c41b05b77",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/full-prompt-ids.json",
+      "bytes": 54060,
+      "sha256": "25ce42cfdd2297ef2a4c2b47707d30df1fd305c2097b2009a3e858fb3bdc8a0d",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/registration.json",
+      "bytes": 9918,
+      "sha256": "0ed8e33f062dd45fb46d5b6348d557401763d4ec85c7bc69e17f3df263360310",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development-toruk-answers.jsonl",
+      "bytes": 28347,
+      "sha256": "6b12355a4559a65d8c6f5ea5dc2093257e80a862088d6b9244e1b57f6f34181b",
+      "kind": "jsonl",
+      "rows": 8,
+      "row_keys": [
+        "answer",
+        "arm",
+        "failure",
+        "fit_cpu_seconds",
+        "fit_wall_seconds",
+        "full_evidence_retained",
+        "generated_ids",
+        "generation_cpu_seconds",
+        "generation_wall_seconds",
+        "history_bytes",
+        "id",
+        "is_replay",
+        "kind",
+        "model",
+        "output_tokens",
+        "persistent_state_bytes",
+        "prompt_ids",
+        "prompt_messages",
+        "prompt_tokens",
+        "proposed_indices",
+        "request_cpu_seconds",
+        "request_wall_seconds",
+        "required_evidence_retained",
+        "score",
+        "selected_indices",
+        "selected_sources",
+        "selector_cpu_seconds",
+        "selector_history_bytes",
+        "selector_identity",
+        "selector_state_bytes",
+        "selector_wall_seconds",
+        "total_tokens",
+        "work"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development-toruk-heartbeats.jsonl",
+      "bytes": 13540,
+      "sha256": "123ca1fdc41f2508cbe469ade478615822fef7dd657239f988ff8a1cebf0f21e",
+      "kind": "jsonl",
+      "rows": 36,
+      "row_keys": [
+        "active",
+        "clocks",
+        "cpu_seconds",
+        "disk_bytes",
+        "elapsed_seconds",
+        "failure",
+        "monitor_gap_seconds",
+        "private_bytes",
+        "rss_bytes"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development-toruk-progress.json",
+      "bytes": 61,
+      "sha256": "f24f5889d671d2c3db58245a319f5ba3e3e37e0ffae0393d32148e1547e12907",
+      "kind": "json",
+      "structure": [
+        "active",
+        "case"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development-toruk-v2-cost.json",
+      "bytes": 1319,
+      "sha256": "6840516dc7259a81d4a9033da040aa424a6a211fc6175e4bd79bec10876bb445",
+      "kind": "json",
+      "structure": [
+        "arm",
+        "command",
+        "start",
+        "end",
+        "wall_seconds",
+        "cpu_seconds",
+        "controller_cpu_seconds",
+        "cpu_by_process",
+        "peak_rss_bytes",
+        "peak_private_bytes",
+        "peak_os_private_bytes",
+        "last_active_request",
+        "worker_final_telemetry",
+        "cpu_complete",
+        "failure",
+        "returncode",
+        "scope"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development-toruk-v2-started.json",
+      "bytes": 262,
+      "sha256": "6230d79aae2b06b2e101021ceb6e39a0051c47ea6125d077f6cf1a9390bb7a55",
+      "kind": "json",
+      "structure": [
+        "clocks",
+        "arm",
+        "heldout",
+        "registration_sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development-toruk-worker.json",
+      "bytes": 2820,
+      "sha256": "b3fa7e8b2b0c8b12c00d86ffb6001b26f9aa2aa7a955b1c3114f9f1e769c9590",
+      "kind": "json",
+      "structure": [
+        "pid",
+        "lifecycle_cpu_seconds",
+        "setup_seconds",
+        "worker_seconds",
+        "memory",
+        "generation_config",
+        "torch_threads",
+        "selector_sha256",
+        "requests"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development-toruk.log",
+      "bytes": 701,
+      "sha256": "ac6b9cef644248b45aad551db93a492872025a5e21f011268d5ad73f09a5d7e6",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/development.json",
+      "bytes": 42472,
+      "sha256": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+      "kind": "json",
+      "structure": {
+        "rows": 7
+      }
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/full-prompt-ids.json",
+      "bytes": 54060,
+      "sha256": "25ce42cfdd2297ef2a4c2b47707d30df1fd305c2097b2009a3e858fb3bdc8a0d",
+      "kind": "json",
+      "structure": [
+        "lh1-development-distant-0",
+        "lh1-development-correction-0",
+        "lh1-development-distractor-0",
+        "lh1-development-literal-0",
+        "lh1-development-preservation-0",
+        "lh1-development-reference-0",
+        "lh1-development-missing-0"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/registration.json",
+      "bytes": 9912,
+      "sha256": "a3dd436da44c0b562f47793e8e68b8f30753b0e380fab1bdbb85388d3a4582bf",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "v5_root",
+        "candidate",
+        "arm",
+        "instruction",
+        "dependencies",
+        "config",
+        "context_limit",
+        "model_files",
+        "bindings",
+        "v2_config",
+        "heldout_authorized"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/baseline.json",
+      "bytes": 84006,
+      "sha256": "80d012dfab29dfff1a0b1a0d4d829cb8369607d524fca0de662fa0e5f4442eaa",
+      "kind": "json",
+      "structure": [
+        "head",
+        "sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/development-cost.json",
+      "bytes": 9566,
+      "sha256": "e3dc0519151f0f85132f40d8a6916cc321fe69ef1ef12f34b8c54b07b0050032",
+      "kind": "json",
+      "structure": [
+        "stages",
+        "totals",
+        "power_acquired",
+        "power_restored",
+        "heldout_completed",
+        "lifecycle_wall_seconds",
+        "controller_lifecycle_cpu_seconds",
+        "complete"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/development-started.json",
+      "bytes": 224,
+      "sha256": "a7d1c6e1e9ebef153329b6d5e7aea36b418d918b6f318d14328137229d712451",
+      "kind": "json",
+      "structure": [
+        "clocks",
+        "registration_sha256"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/preparation-cost.json",
+      "bytes": 102,
+      "sha256": "c31ce826c443905dc44e546edf1fc5a1bffd38df23c37c446e4faea37b7d4e4d",
+      "kind": "json",
+      "structure": [
+        "wall_seconds",
+        "controller_cpu_seconds",
+        "new_generations"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/registration.json",
+      "bytes": 91557,
+      "sha256": "ab79ea08e9c0b44cee4e41c95c6573926ad0b9ae6613b7436b7e175dc982ff90",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "registered_utc",
+        "config",
+        "bindings",
+        "frozen_baseline",
+        "dependencies",
+        "consumed_development_inputs",
+        "new_training",
+        "heldout_authorized",
+        "python"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/results.json",
+      "bytes": 32429,
+      "sha256": "bf6a9c6518d0df44b8f4fc100132133eb7813c53963a9f1f4e30894470bc3a1d",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "technical_validity",
+        "original_controls_match_v3",
+        "conditions",
+        "decisions",
+        "frozen_files_unchanged",
+        "new_training",
+        "production_change",
+        "heldout_records_parsed",
+        "audit_wall_seconds",
+        "audit_controller_cpu_seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "bytes": 166087,
+      "sha256": "89f4291cdf0973785d7e6c0ffd5aeb928cfb07c8c678b5873c8d87979cef990e",
+      "kind": "exact_registered_source_archive"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/starting-state.json",
+      "bytes": 403,
+      "sha256": "0501742db12c15d4dcab9e8e262a9e21d9c2f08aee7ee8eb068d25b8eff0cec4",
+      "kind": "json",
+      "structure": [
+        "head",
+        "cwd",
+        "git_root",
+        "status",
+        "registered_utc",
+        "heldout_records_parsed"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/attempt-002/worker-source/scripts/qwen_long_history.py",
+      "bytes": 114,
+      "sha256": "ec7a246cd849ae62c2f93a5b0216b6b977e8c0be678c16b55208a7d91118d76a",
+      "kind": "source_or_document"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-development.json",
+      "bytes": 22766,
+      "sha256": "6ab89588c9bcae733e6fd34d17864e8a5cb1c3b55ce480b247793fd779cfdf5c",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-development.log",
+      "bytes": 573,
+      "sha256": "ccacda20e9880d5343b4c6c823995116e09c7ab4512ea8342802342f705751ca",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-final-diff.json",
+      "bytes": 22617,
+      "sha256": "cfff8841f25cb0c72d29aca7dbb574f99c61319ddf5c21b2d7943a5f1665e0ce",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-final-diff.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-final-preservation.json",
+      "bytes": 22928,
+      "sha256": "b0a88feecab53fadf1607956dd561ffdd8cc28704b5966596656750a73664c03",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-final-preservation.log",
+      "bytes": 84,
+      "sha256": "b86ff3073ce90350fd1ec45678b1af49d74ace92b1bba3914cc3389197cdfb7a",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-focused-preflight.json",
+      "bytes": 22861,
+      "sha256": "d81a89d412290b73c0996ea9078327eb9d47deb52324a403d816fed914e7f5ac",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-focused-preflight.log",
+      "bytes": 709,
+      "sha256": "1d406f76e775409b0c38cf065b8e76334d7fc5a179154b0148389c1c95004467",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-focused-registered.json",
+      "bytes": 22863,
+      "sha256": "ab5f0dd1086c0349be4ba603a80803ab76593387ba2234b7b0456290d241b38c",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-focused-registered.log",
+      "bytes": 709,
+      "sha256": "71c26ba58af7acc01930d283b77bff61049f8814a4a439cdee7153bd64efbd7c",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-new-file-whitespace-corrected.json",
+      "bytes": 23471,
+      "sha256": "f0f25fc77d880f89ba4d1756f6d730f2535a8af687f99b674623d175d70e3265",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-new-file-whitespace-corrected.log",
+      "bytes": 137,
+      "sha256": "0f066d98dc0467f9129bef7d2cb06a6976792b5c79c7d4ad3284d87d1f2c166a",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-new-file-whitespace.json",
+      "bytes": 23245,
+      "sha256": "c522dcf81c357b6df2d79d383ae8eed1b0624da954c812d6cd7b73541ef83f9d",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-new-file-whitespace.log",
+      "bytes": 139,
+      "sha256": "fe9235b31de87f4f7007fde81f8b91bab99adfb547f1b5d93ad523d1f072897f",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-portable.json",
+      "bytes": 22740,
+      "sha256": "6af2df1fac3e303314f859375a713524d01bcd55dd625f2bd056b985543d9cca",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-portable.log",
+      "bytes": 615,
+      "sha256": "8341f5f54ff4bea1b44f707d4d8e04b5e906ecb7ea4de081e89366a2145b39da",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-register-corrected.json",
+      "bytes": 22745,
+      "sha256": "0c70e475952050f844229738ba5a42043934f42dc12ded1db554000b1a6127d2",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-register-corrected.log",
+      "bytes": 118,
+      "sha256": "177da0298ae95a422d19b2e24da89ac46f6c58a36181f4cb2a845126b8301a53",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-register.json",
+      "bytes": 22735,
+      "sha256": "193002f9ee1e2bfd2b8cebf3293770bd02076280753ad1b01e9cdc8f3fb14e65",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-register.log",
+      "bytes": 118,
+      "sha256": "6c2624c463587ea566c2a5bd1176e124fe86119ed03e0995e633b7561e29285b",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-static-preflight.json",
+      "bytes": 22734,
+      "sha256": "9a13ea5042589c2e231db12de070fb50f7f4d586c793fd220f7675efeb74f14a",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-static-preflight.log",
+      "bytes": 20,
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-summary.json",
+      "bytes": 22736,
+      "sha256": "ccdb7eda8e624435e552971efa4714e81436330a4c0b94541b68b76cb1b62804",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-summary.log",
+      "bytes": 512,
+      "sha256": "542b5b2e31a88532bf06d07daeb9f7b02dd5637e26e7a742d356ea93b0c48ab1",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-types-corrected.json",
+      "bytes": 22696,
+      "sha256": "816a44c5ad92365daf50217dce34cc46e93c69a9bc3efbde7c2b429e8c13056d",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-types-corrected.log",
+      "bytes": 45,
+      "sha256": "706935f02fed95e8e0241ec13fa86be727783ee491ba3e8e4470ceaeed6232d8",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-types-preflight.json",
+      "bytes": 22696,
+      "sha256": "126ec945c2bba64f530420ff8e2a6e369f0cce007e04060abd7b61f3bd7742fc",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/checks/v5-types-preflight.log",
+      "bytes": 1005,
+      "sha256": "6c3b8ef67ece6c8ab0a246accf9dacd227bacb888dd37f42b56aef590beefe8e",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/evidence-manifest.json",
+      "bytes": 28300,
+      "sha256": "13f0a7745ac82d279376f74d5f7e14d711b9e68d0499325a3715d076e7fdc5d7",
+      "kind": "json",
+      "structure": [
+        "scope",
+        "files",
+        "included_files",
+        "included_bytes"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/portable-verification.json",
+      "bytes": 2130,
+      "sha256": "fb7493da9f6a66110119c14db7a4d7ac934e5b7ba1bb44baa2d070880ee29492",
+      "kind": "json",
+      "structure": [
+        "status",
+        "scope",
+        "evidence_files",
+        "frozen_baseline_hashes",
+        "consumed_input_hashes",
+        "historical_receipts_verified",
+        "historical_verification_stages",
+        "source_hash_bindings_verified",
+        "source_substitutions",
+        "audit_reproduced_except_new_cpu_wall_timing",
+        "omitted_generated_files",
+        "omitted_builds_needed_for_audit",
+        "original_build_binary_identity",
+        "new_generations",
+        "heldout_records_parsed_or_scored",
+        "input"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/preflight-notes.md",
+      "bytes": 1604,
+      "sha256": "0cdb8e5ac197ccec9e123cd5c34a222d0a8b5be760d75c34195511a6af44edba",
+      "kind": "source_or_document"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification-summary.json",
+      "bytes": 9936,
+      "sha256": "6bbbe7dcd805e665ce534030856e571b9cde5f1a35f1c0a66e937f7300143740",
+      "kind": "json",
+      "structure": [
+        "created_utc",
+        "git_root",
+        "head",
+        "branch",
+        "git_status",
+        "tracked_diff",
+        "staged_diff",
+        "full_verify_returncode",
+        "full_verify_stages",
+        "full_verify_stage_wall_sum_seconds",
+        "focused_tests",
+        "new_v5_tests",
+        "full_python_tests",
+        "node_passed",
+        "node_opt_in_skipped",
+        "checks",
+        "retained_failures",
+        "original_controls_match_v3",
+        "technical_validity",
+        "decisions",
+        "cold_stage_costs",
+        "frozen_hashes_unchanged",
+        "portable_v4_verification",
+        "superseded_attempt_001_generations",
+        "complete_attempt_002_generations",
+        "scored_answers",
+        "new_training",
+        "production_change",
+        "heldout_records_parsed_or_scored",
+        "final_new_source_sha256",
+        "limitations"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-build.json",
+      "bytes": 22760,
+      "sha256": "fbed674226200abf9d98868e13c97e88cc1850d9311f57973366be7e6879bffc",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-build.log",
+      "bytes": 26678,
+      "sha256": "006f0b8f8ddf526b8f3290fbd023b3cc0c3854910f0d2262267287c43b41bc49",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-conversation-data.json",
+      "bytes": 22792,
+      "sha256": "f64b8c6af623b2cf252d7cbe239a3de951344dfec3ef55e476283b16bf50ed16",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-conversation-data.log",
+      "bytes": 79,
+      "sha256": "637a539e2685581377f51c400d134a4160f8a26c78023d5b64694914fffe146a",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-diagnose.json",
+      "bytes": 22669,
+      "sha256": "3b6a4af66bdf4b3e153405ab36fce155be2887cef9c038cabcfe33e54c776430",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-diagnose.log",
+      "bytes": 286,
+      "sha256": "e86a43694ae9e5f4d936acc28edcc74cf09e68206b5837c788ae3017051188b5",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-diff-check.json",
+      "bytes": 22666,
+      "sha256": "16d36491ab8deb0f12128415f46421cdbaff7af21a0cb80e8b1c7d2af84d3bf1",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-diff-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-format.json",
+      "bytes": 22721,
+      "sha256": "8191de19d32d3529f9a6e8d3095525065fdc8dc69268149b203ad82b15ae4595",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-format.log",
+      "bytes": 29,
+      "sha256": "71892def981a84401e0be29cf176cfe2ad39dd5e7750444a6c2e09328ee0497d",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-frozen-sources.json",
+      "bytes": 22672,
+      "sha256": "b4489b2501a70f84497ce10301b5c3bbfcb232e229f202d3dd524da9a4966fcf",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-frozen-sources.log",
+      "bytes": 44,
+      "sha256": "6997253b542064247b6452a5a5953170cde690552fabc944479be6a0bf4d8047",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-help.json",
+      "bytes": 22663,
+      "sha256": "fd826d0151f09c5906481f2d0bc3461b98e74214efc4df27eb5bcc9963561b8a",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-help.log",
+      "bytes": 2305,
+      "sha256": "d979491857a1b29df00bdc2377042766cc753e7ac8967753a58c0a8f98ee0c07",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-import.json",
+      "bytes": 22688,
+      "sha256": "f7c9dda9f076d6145c7090f7ed72b1688065ededb82a94ab44abe35e4995703b",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-import.log",
+      "bytes": 7,
+      "sha256": "3d097c315a1c543040f548da4c7051265e94c77211a2411ced1d4621344270de",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-independent-cases.json",
+      "bytes": 22796,
+      "sha256": "d9544c2b66959b898ce8ec2a9cf1abe0d4436b4909120f0b208c0fcc5b2f9caf",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-independent-cases.log",
+      "bytes": 53,
+      "sha256": "41f20f58d2c3f931a16fb9f2ae999d00538cf0bc231e64b991835738ef79c282",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-install-local.json",
+      "bytes": 22736,
+      "sha256": "16add7b2c89367cb14f6ee034a47f0753f5ec9e67dab881a1fbde332764b7439",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-install-local.log",
+      "bytes": 1090,
+      "sha256": "acadff451a9c449844a6d7a8e0a00373caf08b378790212d614b8bc4e5266f06",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-lint.json",
+      "bytes": 22668,
+      "sha256": "981cbd4b000e9a7751948e92c19aa3f8e30e1332a58d3a59b0aadfceddfb07b5",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-lint.log",
+      "bytes": 20,
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-owned-lm-generate.json",
+      "bytes": 22908,
+      "sha256": "5add3f6a5268ce5e53c1e0576de6bc4c323835ba1d4617b941362f764e2f33d7",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-owned-lm-generate.log",
+      "bytes": 313,
+      "sha256": "90ce288f67e0b15f941fbb0e60991e4e9caefb30da4f851b04fc70bef853e107",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-owned-lm-smoke.json",
+      "bytes": 22817,
+      "sha256": "6791fd9293b57e4f2d9baaddbc1fa4461b12ff3cf83af037b7715c95556eae7f",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-owned-lm-smoke.log",
+      "bytes": 160,
+      "sha256": "4fb6ff56759947d17613ba827ef05007c38388e278cbb99cc6a6d1d0087c4164",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-owned-lm-validate.json",
+      "bytes": 22830,
+      "sha256": "83afc79c4c03e5173f994324a50d4be28d598b83192cc5711f142fc463495b03",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-owned-lm-validate.log",
+      "bytes": 581,
+      "sha256": "b80801c8704ce6b1a05d30d9b6fff599b7b814687b9c35d160d6b30487080e28",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-package.json",
+      "bytes": 22661,
+      "sha256": "f27d135d6366e412e4714092246d02e3cd475eaa724e2c8750912ecc4bd6539d",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-package.log",
+      "bytes": 31,
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-reproduce.json",
+      "bytes": 22811,
+      "sha256": "e0c58815e3483d6a3cce5a8c13a22cc006b8d76fcc7d7b64e2b081f84c5152b8",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-reproduce.log",
+      "bytes": 945,
+      "sha256": "e7142e19a89dd98e5e2c83b9d71b4bc9e912ad1970f02fde6e1c64c6bc9c7b0d",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-research-config.json",
+      "bytes": 22740,
+      "sha256": "07a09bc3d0af6a53a5723c4e55729dee32124ce3187e137f2c048fbffe50456a",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-research-config.log",
+      "bytes": 228,
+      "sha256": "210f7da183696250e36d53acbc85dd65be6789e67a5febd6bb496c9092723721",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-research-smoke.json",
+      "bytes": 22830,
+      "sha256": "55ba4cbd16c2750c11ab301743586b2a8e93d08221c6f557795a52ec72e02ac1",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-research-smoke.log",
+      "bytes": 2126,
+      "sha256": "72e4a78f3f2d7a8fad47df500e87eacc5655ba913210bc717b0c6bec9c09e01e",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-staged-diff-check.json",
+      "bytes": 22690,
+      "sha256": "6fbe0c3b26993a9d0241e14e393fdf091749d076001c4aa803a11fa346048fdc",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-staged-diff-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-summarize.json",
+      "bytes": 22848,
+      "sha256": "89bb67e4319dd082757ee4c9f736e9e1f549dd0ba9f45b4f82b14b7db14b53f9",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-summarize.log",
+      "bytes": 945,
+      "sha256": "e7142e19a89dd98e5e2c83b9d71b4bc9e912ad1970f02fde6e1c64c6bc9c7b0d",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-tests.json",
+      "bytes": 22659,
+      "sha256": "eb7dc269d2adcd474249ebfc3c603e1b131bd0ab9cee0857a6a2e69961c00285",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-tests.log",
+      "bytes": 1046,
+      "sha256": "46a14b45c2e935dd1aae959dd8198ec72bcd059393132d3b1b89195de49f3c74",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-types-linux.json",
+      "bytes": 22685,
+      "sha256": "d6fd87268e78d797373c09c8bfd748f051410e8606cae98f8f3775ff679a6c60",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-types-linux.log",
+      "bytes": 45,
+      "sha256": "dabfe9cda912714cdc654091ac8afe8d42fa03311ac477b1adc45f41fe1610c6",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-types.json",
+      "bytes": 22646,
+      "sha256": "608e4e0f29c5e72d2d06ba91b548841c03d4a36d1ea4e32db91012be3776298a",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-types.log",
+      "bytes": 45,
+      "sha256": "dabfe9cda912714cdc654091ac8afe8d42fa03311ac477b1adc45f41fe1610c6",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-validate.json",
+      "bytes": 22950,
+      "sha256": "0a6811ee8c4836b9dbcfdc1830da44c04ce1e780ade4c34d4a7dfa39906d5186",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-validate.log",
+      "bytes": 1066,
+      "sha256": "85e0137ff56d9cce693d95c10d65e13c4a67a0f3dffcce7c8590a0d6cdd00fde",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-web-check.json",
+      "bytes": 22685,
+      "sha256": "9ddd96e1a49e6a3c4135c18274ccd00b63528d8f288193c9cd35b5bc6d2cc986",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-web-check.log",
+      "bytes": 132,
+      "sha256": "b7da7d9426430dfac3043253a593446ff65174ee11f0961189ddc799b27bff04",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-web-tests.json",
+      "bytes": 22672,
+      "sha256": "e3346524af164ef71be3e82a1fd029ec8c1b88005cfc8281fba511fee44ebd72",
+      "kind": "json",
+      "structure": [
+        "base_commit",
+        "source_sha256",
+        "source_files",
+        "command",
+        "started_utc",
+        "evidence_path",
+        "status",
+        "returncode",
+        "seconds"
+      ]
+    },
+    {
+      "path": "artifacts/qwen-development-v5/verification/v5-web-tests.log",
+      "bytes": 1966,
+      "sha256": "20ab41df511179fdbef1eea1f363edcb4330a69a9289f959b3b27296ca67931e",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "configs/.gitattributes",
+      "bytes": 37,
+      "sha256": "ebe3019459ae31ad6b0a4746b98e291c6a3ea21aed7650e27605d9ce1253d52f",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "configs/qwen-development-v5.json",
+      "bytes": 2501,
+      "sha256": "3d6715b8c42095fa3b6604a33d7aa7d456c6e3c38cb944ff571581819ae13f8e",
+      "kind": "json",
+      "structure": [
+        "schema",
+        "base_commit",
+        "backbone_directory",
+        "selector_checkpoint",
+        "candidates",
+        "order",
+        "limits",
+        "generation_retries",
+        "heldout_authorized",
+        "production_change"
+      ]
+    },
+    {
+      "path": "docs/research/.gitattributes",
+      "bytes": 37,
+      "sha256": "2c8b7feae91e0f7582101b4808cce3609037ca6db5289c726e5e54c8be74c65c",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "docs/research/qwen-development-v5-protocol.md",
+      "bytes": 5399,
+      "sha256": "833b16a6055b7c226738c1598b47e8586a96861a13496d04c6d3c0b6e466d9f9",
+      "kind": "source_or_document"
+    },
+    {
+      "path": "docs/research/qwen-development-v5-results.md",
+      "bytes": 13291,
+      "sha256": "c8609a86387134d78d52305bb4e16492e5782231735b7edc73d3f4559ed4f226",
+      "kind": "source_or_document"
+    },
+    {
+      "path": "scripts/.gitattributes",
+      "bytes": 114,
+      "sha256": "1fdeee92d8eed4f14000f727884ce6f74f0d27713ca0ea4f35edb5627714477c",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "scripts/qwen_development_v5.py",
+      "bytes": 19092,
+      "sha256": "3dc7a0a5b1fcc1873a533a746daa2008fda1e8683acd08e13491de12b652e902",
+      "kind": "source_or_document"
+    },
+    {
+      "path": "tests/.gitattributes",
+      "bytes": 40,
+      "sha256": "06378129d8f254c1bd018657f1208415cd705067bcc6c603d87bebbfc61c5898",
+      "kind": "log_or_attributes"
+    },
+    {
+      "path": "tests/test_qwen_development_v5.py",
+      "bytes": 6302,
+      "sha256": "be011a66e3e5e3d8b3f0d65da97c5468f575d4fc4a9ac92f1b2db0b625b63e8b",
+      "kind": "source_or_document"
+    }
+  ],
+  "archive_members": [
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/qwen_development_v5.py",
+      "bytes": 19025,
+      "sha256": "bc7543dde1b6a8021f396f72d2bd3b146c4771a9732965fba3f21d85a5491830"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "configs/qwen-development-v5.json",
+      "bytes": 2501,
+      "sha256": "3d6715b8c42095fa3b6604a33d7aa7d456c6e3c38cb944ff571581819ae13f8e"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "docs/research/qwen-development-v5-protocol.md",
+      "bytes": 5399,
+      "sha256": "833b16a6055b7c226738c1598b47e8586a96861a13496d04c6d3c0b6e466d9f9"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "tests/test_qwen_development_v5.py",
+      "bytes": 6302,
+      "sha256": "be011a66e3e5e3d8b3f0d65da97c5468f575d4fc4a9ac92f1b2db0b625b63e8b"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "artifacts/qwen-development-v5/attempt-001/worker-source/scripts/qwen_long_history.py",
+      "bytes": 114,
+      "sha256": "ec7a246cd849ae62c2f93a5b0216b6b977e8c0be678c16b55208a7d91118d76a"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/audit_qwen_development_v4.py",
+      "bytes": 14427,
+      "sha256": "89124da88937a29900bfef818913acbcdc059b421ea975328b2d89611c34d757"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/qualify_answer_backbone.py",
+      "bytes": 30907,
+      "sha256": "8d9da05fa366c621bcddaed2d9b1f0a07852a0dc742187de135f4a7ac5a48feb"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/qwen_long_history.py",
+      "bytes": 42690,
+      "sha256": "67edba244d5fabc37677d314004105443a6709819762f55b03fefb797f996043"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/qwen_long_history_v2.py",
+      "bytes": 26197,
+      "sha256": "ee506173cedb3029046b24142e4fde2bcc984aaaebc2b7aaa168d0bf978fdc0d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/qwen_long_history_v3.py",
+      "bytes": 16576,
+      "sha256": "c4b299b560e6ef24f940745fb81a8698a2727845b343e431b49176906201736d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/report_qwen_long_history_v3.py",
+      "bytes": 10247,
+      "sha256": "6a36efb847b98a4c078c55b4aa334bbb641f7fc501278c61bb8d99802b22e7df"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "scripts/verify_portable_research_evidence.py",
+      "bytes": 26749,
+      "sha256": "249344dde307beba5586c04e780396a36640061179da0f9436ed252ab14ca368"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/__init__.py",
+      "bytes": 91,
+      "sha256": "1d6a99ed3b245abce15c74f047898d561e9429fdc1c0b8fd9cf0f174f628f2b3"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/__main__.py",
+      "bytes": 41,
+      "sha256": "7af6702f5f844f3dad9467632ba68ba87dd7abdd646a78374d8518a3328d39a3"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/chat_foundation.py",
+      "bytes": 14408,
+      "sha256": "bc20eca24854f82697c160a4737d0e86cceaf0ecf9311f7e860bffb2ea05cb7f"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/chat_runtime.py",
+      "bytes": 8758,
+      "sha256": "807a34862e2db89f4dcad42a59e9b017a563c1c09ee06102a956295695e48f4f"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/chat_selector.py",
+      "bytes": 4428,
+      "sha256": "c30cd3ed255d121835aeba2b95a17cbdf45945ea73ab48f885c00bcec4dda45d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/chat_server.py",
+      "bytes": 4261,
+      "sha256": "455720de050a3426c32408adf0f4fecf12c8bec65a19ec7392f68244e1a903c4"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/chat_ui.html",
+      "bytes": 8301,
+      "sha256": "ca720d79f65cc951136a467551b17b11bf4cd71524853fe8cc2e6c3ff2104413"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/cli.py",
+      "bytes": 18193,
+      "sha256": "33a6d2e13dacc3a94c9ca262368bfe023e2e514aabf215e3003b41c560bdab29"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/comparisons.py",
+      "bytes": 13883,
+      "sha256": "e02faa41d7027d13e8a1b6275e3eb11723691c653d8ababb2a70b1bfb69a554c"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/context_selection.py",
+      "bytes": 2460,
+      "sha256": "a469cbc75c42a9d0f82ba0a45d08f3e7d330e70548571fac9ed4c5f7a0bd4aea"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/controlled.py",
+      "bytes": 18587,
+      "sha256": "eec1b16d9cbaad935a085dfce6e177829cc3ac3ab71ebfc3143733352f4bd03c"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/conversation_data.py",
+      "bytes": 12006,
+      "sha256": "0c7f1f330adef7aac354266e4e703890b99e214042046a88b1e1fd741e5f4f7b"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/copy_diagnostic.py",
+      "bytes": 7156,
+      "sha256": "0c2105f673252e0e73ec9c94989105603c05fe90510887e2d57c1ddd42ea3d23"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/data.py",
+      "bytes": 5200,
+      "sha256": "343ff1cfb9c1245bd01f7c6eddd80f066689b03515880a7c246de938611a9232"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/effect_predictor.py",
+      "bytes": 3119,
+      "sha256": "3c121a95a774f54da7904d5464394e62252ee936725b0c69dd77978d3b9dd59e"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/effect_training.py",
+      "bytes": 13179,
+      "sha256": "fa1dab50a9b3d7744d4e0798027d38373330b0f0bc6c53ff1cf96d5c0af5665b"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/engine.py",
+      "bytes": 15184,
+      "sha256": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/generalization.py",
+      "bytes": 28621,
+      "sha256": "c9469cc5cdc8609d53550982b53da97b5598bda3d32a498e3cea56f307b4ec5d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/inference_server.py",
+      "bytes": 12430,
+      "sha256": "89c5db84209f83adc3282e64d0a8dabc090639fbd914cbcc3f6ee1eeda9c109f"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/inference_worker.py",
+      "bytes": 5507,
+      "sha256": "e460a5b349ef289bd2aa1be350d0c19eee76a4d67a63fb0be4cc1c69465cf1aa"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/integrated_memory.py",
+      "bytes": 9674,
+      "sha256": "140ce5f8d95b94cbeaa108dbea79e130c6f8071972aea33c3ce40ca2c3b940f1"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/integrated_study.py",
+      "bytes": 22094,
+      "sha256": "886000718465d3dc03db90aab2baa7d60c3d5d9391d688c7cde7acac087e5500"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/model.py",
+      "bytes": 4536,
+      "sha256": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/ollama_chat.py",
+      "bytes": 7779,
+      "sha256": "d3cb0192f06405494c0a9048caff3df49d31d34433f0e8e2d9756e2aa88586cd"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/owned_data.py",
+      "bytes": 3978,
+      "sha256": "1d0d7daf2415034c1fb2e781e235a827988d7de699c8be0cb99923a27ab1fba1"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/owned_lm.py",
+      "bytes": 10217,
+      "sha256": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/owned_training.py",
+      "bytes": 17401,
+      "sha256": "615a44af36db30a64039b2930ba0aeb6c5eca97cd372f90d70d3a356273d3bac"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/pooled_router.py",
+      "bytes": 3536,
+      "sha256": "5e1e690f469387accfb24a1c604ef135b6c078a3b448a15c16c2a3aa73044221"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/rank_budget.py",
+      "bytes": 1531,
+      "sha256": "d0bee911eff8d6903e950993a2b53d96d78fb5608af4bdc9674896131e1867ea"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/recurrent.py",
+      "bytes": 6624,
+      "sha256": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/relevance_gate.py",
+      "bytes": 3054,
+      "sha256": "c9706e45e13af4ac4ab8cf540ac90c1fbcd4b399ec70855a307c2d8af00120e2"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/reproducibility.py",
+      "bytes": 21937,
+      "sha256": "c78cfdde8a9ab72a6604c03b37839ad74f0f9b7044f1e6fe9f00163fea7c760c"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/reproduction.py",
+      "bytes": 13675,
+      "sha256": "961535ec0a665399e01fec5456a3108e3fe6d4aceee1b9cc7a94aef7fc5c82c1"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/source_spans.py",
+      "bytes": 2719,
+      "sha256": "b83abc28520163a024b3cfbf4e297d14f90148a4c40536a0c4cb10a117277bae"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/tokenizer.py",
+      "bytes": 722,
+      "sha256": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/validation.py",
+      "bytes": 4333,
+      "sha256": "8c564d91fba4fed82faafd7d5a96726694f45c06022d4c1fc47cf925f75afd15"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-001/source.zip",
+      "member": "src/toruk_lm/worlds.py",
+      "bytes": 13335,
+      "sha256": "b8a9f400d8e69a3cb7ac894ee61692bdf4b1ac28dd55acaf0d4a70807c98c8ab"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/qwen_development_v5.py",
+      "bytes": 19092,
+      "sha256": "3dc7a0a5b1fcc1873a533a746daa2008fda1e8683acd08e13491de12b652e902"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "configs/qwen-development-v5.json",
+      "bytes": 2501,
+      "sha256": "3d6715b8c42095fa3b6604a33d7aa7d456c6e3c38cb944ff571581819ae13f8e"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "docs/research/qwen-development-v5-protocol.md",
+      "bytes": 5399,
+      "sha256": "833b16a6055b7c226738c1598b47e8586a96861a13496d04c6d3c0b6e466d9f9"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "tests/test_qwen_development_v5.py",
+      "bytes": 6302,
+      "sha256": "be011a66e3e5e3d8b3f0d65da97c5468f575d4fc4a9ac92f1b2db0b625b63e8b"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "artifacts/qwen-development-v5/attempt-002/worker-source/scripts/qwen_long_history.py",
+      "bytes": 114,
+      "sha256": "ec7a246cd849ae62c2f93a5b0216b6b977e8c0be678c16b55208a7d91118d76a"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/audit_qwen_development_v4.py",
+      "bytes": 14427,
+      "sha256": "89124da88937a29900bfef818913acbcdc059b421ea975328b2d89611c34d757"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/qualify_answer_backbone.py",
+      "bytes": 30907,
+      "sha256": "8d9da05fa366c621bcddaed2d9b1f0a07852a0dc742187de135f4a7ac5a48feb"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/qwen_long_history.py",
+      "bytes": 42690,
+      "sha256": "67edba244d5fabc37677d314004105443a6709819762f55b03fefb797f996043"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/qwen_long_history_v2.py",
+      "bytes": 26197,
+      "sha256": "ee506173cedb3029046b24142e4fde2bcc984aaaebc2b7aaa168d0bf978fdc0d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/qwen_long_history_v3.py",
+      "bytes": 16576,
+      "sha256": "c4b299b560e6ef24f940745fb81a8698a2727845b343e431b49176906201736d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/report_qwen_long_history_v3.py",
+      "bytes": 10247,
+      "sha256": "6a36efb847b98a4c078c55b4aa334bbb641f7fc501278c61bb8d99802b22e7df"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "scripts/verify_portable_research_evidence.py",
+      "bytes": 26749,
+      "sha256": "249344dde307beba5586c04e780396a36640061179da0f9436ed252ab14ca368"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/__init__.py",
+      "bytes": 91,
+      "sha256": "1d6a99ed3b245abce15c74f047898d561e9429fdc1c0b8fd9cf0f174f628f2b3"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/__main__.py",
+      "bytes": 41,
+      "sha256": "7af6702f5f844f3dad9467632ba68ba87dd7abdd646a78374d8518a3328d39a3"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/chat_foundation.py",
+      "bytes": 14408,
+      "sha256": "bc20eca24854f82697c160a4737d0e86cceaf0ecf9311f7e860bffb2ea05cb7f"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/chat_runtime.py",
+      "bytes": 8758,
+      "sha256": "807a34862e2db89f4dcad42a59e9b017a563c1c09ee06102a956295695e48f4f"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/chat_selector.py",
+      "bytes": 4428,
+      "sha256": "c30cd3ed255d121835aeba2b95a17cbdf45945ea73ab48f885c00bcec4dda45d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/chat_server.py",
+      "bytes": 4261,
+      "sha256": "455720de050a3426c32408adf0f4fecf12c8bec65a19ec7392f68244e1a903c4"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/chat_ui.html",
+      "bytes": 8301,
+      "sha256": "ca720d79f65cc951136a467551b17b11bf4cd71524853fe8cc2e6c3ff2104413"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/cli.py",
+      "bytes": 18193,
+      "sha256": "33a6d2e13dacc3a94c9ca262368bfe023e2e514aabf215e3003b41c560bdab29"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/comparisons.py",
+      "bytes": 13883,
+      "sha256": "e02faa41d7027d13e8a1b6275e3eb11723691c653d8ababb2a70b1bfb69a554c"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/context_selection.py",
+      "bytes": 2460,
+      "sha256": "a469cbc75c42a9d0f82ba0a45d08f3e7d330e70548571fac9ed4c5f7a0bd4aea"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/controlled.py",
+      "bytes": 18587,
+      "sha256": "eec1b16d9cbaad935a085dfce6e177829cc3ac3ab71ebfc3143733352f4bd03c"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/conversation_data.py",
+      "bytes": 12006,
+      "sha256": "0c7f1f330adef7aac354266e4e703890b99e214042046a88b1e1fd741e5f4f7b"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/copy_diagnostic.py",
+      "bytes": 7156,
+      "sha256": "0c2105f673252e0e73ec9c94989105603c05fe90510887e2d57c1ddd42ea3d23"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/data.py",
+      "bytes": 5200,
+      "sha256": "343ff1cfb9c1245bd01f7c6eddd80f066689b03515880a7c246de938611a9232"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/effect_predictor.py",
+      "bytes": 3119,
+      "sha256": "3c121a95a774f54da7904d5464394e62252ee936725b0c69dd77978d3b9dd59e"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/effect_training.py",
+      "bytes": 13179,
+      "sha256": "fa1dab50a9b3d7744d4e0798027d38373330b0f0bc6c53ff1cf96d5c0af5665b"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/engine.py",
+      "bytes": 15184,
+      "sha256": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/generalization.py",
+      "bytes": 28621,
+      "sha256": "c9469cc5cdc8609d53550982b53da97b5598bda3d32a498e3cea56f307b4ec5d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/inference_server.py",
+      "bytes": 12430,
+      "sha256": "89c5db84209f83adc3282e64d0a8dabc090639fbd914cbcc3f6ee1eeda9c109f"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/inference_worker.py",
+      "bytes": 5507,
+      "sha256": "e460a5b349ef289bd2aa1be350d0c19eee76a4d67a63fb0be4cc1c69465cf1aa"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/integrated_memory.py",
+      "bytes": 9674,
+      "sha256": "140ce5f8d95b94cbeaa108dbea79e130c6f8071972aea33c3ce40ca2c3b940f1"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/integrated_study.py",
+      "bytes": 22094,
+      "sha256": "886000718465d3dc03db90aab2baa7d60c3d5d9391d688c7cde7acac087e5500"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/model.py",
+      "bytes": 4536,
+      "sha256": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/ollama_chat.py",
+      "bytes": 7779,
+      "sha256": "d3cb0192f06405494c0a9048caff3df49d31d34433f0e8e2d9756e2aa88586cd"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/owned_data.py",
+      "bytes": 3978,
+      "sha256": "1d0d7daf2415034c1fb2e781e235a827988d7de699c8be0cb99923a27ab1fba1"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/owned_lm.py",
+      "bytes": 10217,
+      "sha256": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/owned_training.py",
+      "bytes": 17401,
+      "sha256": "615a44af36db30a64039b2930ba0aeb6c5eca97cd372f90d70d3a356273d3bac"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/pooled_router.py",
+      "bytes": 3536,
+      "sha256": "5e1e690f469387accfb24a1c604ef135b6c078a3b448a15c16c2a3aa73044221"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/rank_budget.py",
+      "bytes": 1531,
+      "sha256": "d0bee911eff8d6903e950993a2b53d96d78fb5608af4bdc9674896131e1867ea"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/recurrent.py",
+      "bytes": 6624,
+      "sha256": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/relevance_gate.py",
+      "bytes": 3054,
+      "sha256": "c9706e45e13af4ac4ab8cf540ac90c1fbcd4b399ec70855a307c2d8af00120e2"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/reproducibility.py",
+      "bytes": 21937,
+      "sha256": "c78cfdde8a9ab72a6604c03b37839ad74f0f9b7044f1e6fe9f00163fea7c760c"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/reproduction.py",
+      "bytes": 13675,
+      "sha256": "961535ec0a665399e01fec5456a3108e3fe6d4aceee1b9cc7a94aef7fc5c82c1"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/source_spans.py",
+      "bytes": 2719,
+      "sha256": "b83abc28520163a024b3cfbf4e297d14f90148a4c40536a0c4cb10a117277bae"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/tokenizer.py",
+      "bytes": 722,
+      "sha256": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/validation.py",
+      "bytes": 4333,
+      "sha256": "8c564d91fba4fed82faafd7d5a96726694f45c06022d4c1fc47cf925f75afd15"
+    },
+    {
+      "archive": "artifacts/qwen-development-v5/attempt-002/source.zip",
+      "member": "src/toruk_lm/worlds.py",
+      "bytes": 13335,
+      "sha256": "b8a9f400d8e69a3cb7ac894ee61692bdf4b1ac28dd55acaf0d4a70807c98c8ab"
+    }
+  ],
+  "personal_path_files": [
+    "artifacts/qwen-development-v5/attempt-001/arms/check-lexical/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-001/arms/check-toruk/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-001/arms/field-lexical/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-001/arms/field-toruk/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-001/arms/original-lexical/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-001/arms/original-toruk/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-001/registration.json",
+    "artifacts/qwen-development-v5/attempt-001/source.zip!configs/qwen-development-v5.json",
+    "artifacts/qwen-development-v5/attempt-001/source.zip!scripts/verify_portable_research_evidence.py",
+    "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/registration.json",
+    "artifacts/qwen-development-v5/attempt-002/registration.json",
+    "artifacts/qwen-development-v5/attempt-002/source.zip!configs/qwen-development-v5.json",
+    "artifacts/qwen-development-v5/attempt-002/source.zip!scripts/verify_portable_research_evidence.py",
+    "artifacts/qwen-development-v5/verification/v5-install-local.log",
+    "configs/qwen-development-v5.json"
+  ],
+  "credential_pattern_findings": [],
+  "patterns_checked": [
+    "private_key",
+    "aws_access_key",
+    "github_token",
+    "openai_token",
+    "slack_token",
+    "credential_url",
+    "literal_credential"
+  ]
+}

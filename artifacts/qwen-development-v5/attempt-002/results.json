@@ -1,0 +1,1013 @@
+{
+  "schema": "qwen-development-v5",
+  "technical_validity": true,
+  "original_controls_match_v3": true,
+  "conditions": {
+    "original-toruk": {
+      "complete": true,
+      "replay_matches": true,
+      "selection_matches_v3": true,
+      "correct": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "accuracy": 0.7142857142857143,
+      "known_retained": 6,
+      "exact_copy": true,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1119,
+        "output_tokens": 65,
+        "selector_cpu_seconds": 2.21875,
+        "selector_wall_seconds": 1.5293749999982538,
+        "fit_cpu_seconds": 0.0,
+        "fit_wall_seconds": 0.006852099995739991,
+        "generation_cpu_seconds": 35.0,
+        "generation_wall_seconds": 17.83923859999777,
+        "request_cpu_seconds": 37.296875,
+        "request_wall_seconds": 19.450232200000755
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1264,
+        "output_tokens": 82,
+        "selector_cpu_seconds": 2.46875,
+        "selector_wall_seconds": 1.6465159999988828,
+        "fit_cpu_seconds": 0.0,
+        "fit_wall_seconds": 0.00773299999491428,
+        "generation_cpu_seconds": 41.734375,
+        "generation_wall_seconds": 21.212614599997323,
+        "request_cpu_seconds": 44.28125,
+        "request_wall_seconds": 22.94583600000078
+      },
+      "answers": [
+        {
+          "id": "lh1-development-distant-0",
+          "kind": "distant",
+          "answer": "delivery ledger LHD-4F9D48AA0B8B",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 145,
+          "output_tokens": 17,
+          "request_wall_seconds": 4.340716900000189
+        },
+        {
+          "id": "lh1-development-correction-0",
+          "kind": "correction",
+          "answer": "LHD-BC47D0CEDA8C is stored in the linen cabinet.",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 173,
+          "output_tokens": 20,
+          "request_wall_seconds": 3.945613500000036
+        },
+        {
+          "id": "lh1-development-distractor-0",
+          "kind": "distractor",
+          "answer": "mulberry",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 188,
+          "output_tokens": 3,
+          "request_wall_seconds": 1.8200102999999217
+        },
+        {
+          "id": "lh1-development-literal-0",
+          "kind": "literal",
+          "answer": "DEV/PUTYAOKYO:  R-4!",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 152,
+          "output_tokens": 13,
+          "request_wall_seconds": 3.396201600000495
+        },
+        {
+          "id": "lh1-development-preservation-0",
+          "kind": "preservation",
+          "answer": "flower hyacinth",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 183,
+          "output_tokens": 5,
+          "request_wall_seconds": 2.2817472999995516
+        },
+        {
+          "id": "lh1-development-reference-0",
+          "kind": "reference",
+          "answer": "velvet depot",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 126,
+          "output_tokens": 4,
+          "request_wall_seconds": 1.8384483999998338
+        },
+        {
+          "id": "lh1-development-missing-0",
+          "kind": "missing",
+          "answer": "PLAIN",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": true,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "unsupported or unresolved question answered without valid abstention",
+          "prompt_tokens": 152,
+          "output_tokens": 3,
+          "request_wall_seconds": 1.8274942000007286
+        }
+      ]
+    },
+    "original-lexical": {
+      "complete": true,
+      "replay_matches": true,
+      "selection_matches_v3": true,
+      "correct": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "accuracy": 1.0,
+      "known_retained": 6,
+      "exact_copy": true,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1231,
+        "output_tokens": 72,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0017058999983419199,
+        "fit_cpu_seconds": 0.078125,
+        "fit_wall_seconds": 0.0052529999975376995,
+        "generation_cpu_seconds": 35.171875,
+        "generation_wall_seconds": 17.535645400001158,
+        "request_cpu_seconds": 35.34375,
+        "request_wall_seconds": 17.58654519999982
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1404,
+        "output_tokens": 97,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0018555999995442107,
+        "fit_cpu_seconds": 0.078125,
+        "fit_wall_seconds": 0.00576339999861375,
+        "generation_cpu_seconds": 42.90625,
+        "generation_wall_seconds": 21.455001600001196,
+        "request_cpu_seconds": 43.109375,
+        "request_wall_seconds": 21.50919740000063
+      },
+      "answers": [
+        {
+          "id": "lh1-development-distant-0",
+          "kind": "distant",
+          "answer": "Delivery ledger LHD-4F9D48AA0B8B assigned the meeting point copper quay.",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 173,
+          "output_tokens": 25,
+          "request_wall_seconds": 4.621766500000376
+        },
+        {
+          "id": "lh1-development-correction-0",
+          "kind": "correction",
+          "answer": "LHD-BC47D0CEDA8C is stored in the linen cabinet.",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 173,
+          "output_tokens": 20,
+          "request_wall_seconds": 3.6366700999988097
+        },
+        {
+          "id": "lh1-development-distractor-0",
+          "kind": "distractor",
+          "answer": "mulberry",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 188,
+          "output_tokens": 3,
+          "request_wall_seconds": 1.6723873999999341
+        },
+        {
+          "id": "lh1-development-literal-0",
+          "kind": "literal",
+          "answer": "DEV/PUTYAOKYO:  R-4!",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 180,
+          "output_tokens": 13,
+          "request_wall_seconds": 2.7867354000009072
+        },
+        {
+          "id": "lh1-development-preservation-0",
+          "kind": "preservation",
+          "answer": "flower hyacinth",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 183,
+          "output_tokens": 5,
+          "request_wall_seconds": 2.087637000000541
+        },
+        {
+          "id": "lh1-development-reference-0",
+          "kind": "reference",
+          "answer": "velvet depot",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 154,
+          "output_tokens": 4,
+          "request_wall_seconds": 1.4486075999993773
+        },
+        {
+          "id": "lh1-development-missing-0",
+          "kind": "missing",
+          "answer": "UNKNOWN",
+          "score": {
+            "correct": true,
+            "abstention": true,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 180,
+          "output_tokens": 2,
+          "request_wall_seconds": 1.332741199999873
+        }
+      ]
+    },
+    "field-lexical": {
+      "complete": true,
+      "replay_matches": true,
+      "selection_matches_v3": true,
+      "correct": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "accuracy": 0.5714285714285714,
+      "known_retained": 6,
+      "exact_copy": false,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1567,
+        "output_tokens": 33,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0016427000064140884,
+        "fit_cpu_seconds": 0.0,
+        "fit_wall_seconds": 0.006101299999500043,
+        "generation_cpu_seconds": 30.671875,
+        "generation_wall_seconds": 15.206264600001305,
+        "request_cpu_seconds": 30.84375,
+        "request_wall_seconds": 15.255419099998107
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1788,
+        "output_tokens": 35,
+        "selector_cpu_seconds": 0.0,
+        "selector_wall_seconds": 0.0019121000059385551,
+        "fit_cpu_seconds": 0.0,
+        "fit_wall_seconds": 0.007155100000090897,
+        "generation_cpu_seconds": 34.296875,
+        "generation_wall_seconds": 17.03428420000273,
+        "request_cpu_seconds": 34.46875,
+        "request_wall_seconds": 17.08939829999872
+      },
+      "answers": [
+        {
+          "id": "lh1-development-distant-0",
+          "kind": "distant",
+          "answer": "delivery",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 221,
+          "output_tokens": 2,
+          "request_wall_seconds": 1.8747251000004326
+        },
+        {
+          "id": "lh1-development-correction-0",
+          "kind": "correction",
+          "answer": "linen cabinet",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 221,
+          "output_tokens": 4,
+          "request_wall_seconds": 2.0870557999987795
+        },
+        {
+          "id": "lh1-development-distractor-0",
+          "kind": "distractor",
+          "answer": "mulberry",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 236,
+          "output_tokens": 3,
+          "request_wall_seconds": 2.122491300000547
+        },
+        {
+          "id": "lh1-development-literal-0",
+          "kind": "literal",
+          "answer": "DEV/PUTYAOKYO: R-4!",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 228,
+          "output_tokens": 12,
+          "request_wall_seconds": 3.1174885999989783
+        },
+        {
+          "id": "lh1-development-preservation-0",
+          "kind": "preservation",
+          "answer": "flower hyacinth",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 231,
+          "output_tokens": 5,
+          "request_wall_seconds": 2.175123999999414
+        },
+        {
+          "id": "lh1-development-reference-0",
+          "kind": "reference",
+          "answer": "velvet depot",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 202,
+          "output_tokens": 4,
+          "request_wall_seconds": 1.8794655000001512
+        },
+        {
+          "id": "lh1-development-missing-0",
+          "kind": "missing",
+          "answer": "PLAIN",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": true,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "unsupported or unresolved question answered without valid abstention",
+          "prompt_tokens": 228,
+          "output_tokens": 3,
+          "request_wall_seconds": 1.9990687999998045
+        }
+      ]
+    },
+    "field-toruk": {
+      "complete": true,
+      "replay_matches": true,
+      "selection_matches_v3": true,
+      "correct": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "accuracy": 0.7142857142857143,
+      "known_retained": 6,
+      "exact_copy": true,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1455,
+        "output_tokens": 34,
+        "selector_cpu_seconds": 2.046875,
+        "selector_wall_seconds": 0.8670872000002419,
+        "fit_cpu_seconds": 0.015625,
+        "fit_wall_seconds": 0.007838999998057261,
+        "generation_cpu_seconds": 29.953125,
+        "generation_wall_seconds": 15.008572199998525,
+        "request_cpu_seconds": 32.109375,
+        "request_wall_seconds": 15.930162000000564
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1648,
+        "output_tokens": 36,
+        "selector_cpu_seconds": 2.265625,
+        "selector_wall_seconds": 0.9778763000012987,
+        "fit_cpu_seconds": 0.015625,
+        "fit_wall_seconds": 0.009008499997435138,
+        "generation_cpu_seconds": 33.125,
+        "generation_wall_seconds": 16.611220899998443,
+        "request_cpu_seconds": 35.53125,
+        "request_wall_seconds": 17.64895989999968
+      },
+      "answers": [
+        {
+          "id": "lh1-development-distant-0",
+          "kind": "distant",
+          "answer": "delivery",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 193,
+          "output_tokens": 2,
+          "request_wall_seconds": 1.6259416000011697
+        },
+        {
+          "id": "lh1-development-correction-0",
+          "kind": "correction",
+          "answer": "linen cabinet",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 221,
+          "output_tokens": 4,
+          "request_wall_seconds": 2.0719461999997293
+        },
+        {
+          "id": "lh1-development-distractor-0",
+          "kind": "distractor",
+          "answer": "mulberry",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 236,
+          "output_tokens": 3,
+          "request_wall_seconds": 2.28283779999947
+        },
+        {
+          "id": "lh1-development-literal-0",
+          "kind": "literal",
+          "answer": "DEV/PUTYAOKYO:  R-4!",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 200,
+          "output_tokens": 13,
+          "request_wall_seconds": 3.2537546000003204
+        },
+        {
+          "id": "lh1-development-preservation-0",
+          "kind": "preservation",
+          "answer": "flower hyacinth",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 231,
+          "output_tokens": 5,
+          "request_wall_seconds": 2.5174819999992906
+        },
+        {
+          "id": "lh1-development-reference-0",
+          "kind": "reference",
+          "answer": "velvet depot",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 174,
+          "output_tokens": 4,
+          "request_wall_seconds": 2.040006600000197
+        },
+        {
+          "id": "lh1-development-missing-0",
+          "kind": "missing",
+          "answer": "PLAIN",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": true,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "unsupported or unresolved question answered without valid abstention",
+          "prompt_tokens": 200,
+          "output_tokens": 3,
+          "request_wall_seconds": 2.138193200000387
+        }
+      ]
+    },
+    "check-toruk": {
+      "complete": true,
+      "replay_matches": true,
+      "selection_matches_v3": true,
+      "correct": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "accuracy": 0.7142857142857143,
+      "known_retained": 6,
+      "exact_copy": false,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1546,
+        "output_tokens": 45,
+        "selector_cpu_seconds": 1.96875,
+        "selector_wall_seconds": 0.7941735999993398,
+        "fit_cpu_seconds": 0.03125,
+        "fit_wall_seconds": 0.0077860000001237495,
+        "generation_cpu_seconds": 34.046875,
+        "generation_wall_seconds": 17.192334699999265,
+        "request_cpu_seconds": 36.21875,
+        "request_wall_seconds": 18.037508699999307
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1752,
+        "output_tokens": 60,
+        "selector_cpu_seconds": 2.1875,
+        "selector_wall_seconds": 0.9034529000000475,
+        "fit_cpu_seconds": 0.03125,
+        "fit_wall_seconds": 0.008982999999716412,
+        "generation_cpu_seconds": 40.34375,
+        "generation_wall_seconds": 20.336472999999387,
+        "request_cpu_seconds": 42.734375,
+        "request_wall_seconds": 21.296473199998218
+      },
+      "answers": [
+        {
+          "id": "lh1-development-distant-0",
+          "kind": "distant",
+          "answer": "LHD-4F9D48AA0B8B",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 206,
+          "output_tokens": 15,
+          "request_wall_seconds": 3.621765099998811
+        },
+        {
+          "id": "lh1-development-correction-0",
+          "kind": "correction",
+          "answer": "linen cabinet",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 234,
+          "output_tokens": 4,
+          "request_wall_seconds": 2.151496100001168
+        },
+        {
+          "id": "lh1-development-distractor-0",
+          "kind": "distractor",
+          "answer": "mulberry",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 249,
+          "output_tokens": 3,
+          "request_wall_seconds": 2.1528342999990855
+        },
+        {
+          "id": "lh1-development-literal-0",
+          "kind": "literal",
+          "answer": "DEV/PUTYAOKYO: R-4!",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 213,
+          "output_tokens": 12,
+          "request_wall_seconds": 3.1575752000007924
+        },
+        {
+          "id": "lh1-development-preservation-0",
+          "kind": "preservation",
+          "answer": "flower hyacinth",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 244,
+          "output_tokens": 5,
+          "request_wall_seconds": 2.668054099998699
+        },
+        {
+          "id": "lh1-development-reference-0",
+          "kind": "reference",
+          "answer": "velvet depot",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 187,
+          "output_tokens": 4,
+          "request_wall_seconds": 2.151430800000526
+        },
+        {
+          "id": "lh1-development-missing-0",
+          "kind": "missing",
+          "answer": "UNKNOWN",
+          "score": {
+            "correct": true,
+            "abstention": true,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 213,
+          "output_tokens": 2,
+          "request_wall_seconds": 2.134353100000226
+        }
+      ]
+    },
+    "check-lexical": {
+      "complete": true,
+      "replay_matches": true,
+      "selection_matches_v3": true,
+      "correct": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "accuracy": 0.7142857142857143,
+      "known_retained": 6,
+      "exact_copy": false,
+      "preservation": true,
+      "seven_case_costs": {
+        "prompt_tokens": 1658,
+        "output_tokens": 45,
+        "selector_cpu_seconds": 0.015625,
+        "selector_wall_seconds": 0.0013595000018540304,
+        "fit_cpu_seconds": 0.015625,
+        "fit_wall_seconds": 0.005300799997712602,
+        "generation_cpu_seconds": 32.453125,
+        "generation_wall_seconds": 15.927209700001185,
+        "request_cpu_seconds": 32.609375,
+        "request_wall_seconds": 15.973574899997402
+      },
+      "including_replay_costs": {
+        "prompt_tokens": 1892,
+        "output_tokens": 60,
+        "selector_cpu_seconds": 0.015625,
+        "selector_wall_seconds": 0.001569900001413771,
+        "fit_cpu_seconds": 0.015625,
+        "fit_wall_seconds": 0.006211299996721209,
+        "generation_cpu_seconds": 38.640625,
+        "generation_wall_seconds": 19.03289350000159,
+        "request_cpu_seconds": 38.796875,
+        "request_wall_seconds": 19.083278099997187
+      },
+      "answers": [
+        {
+          "id": "lh1-development-distant-0",
+          "kind": "distant",
+          "answer": "LHD-4F9D48AA0B8B",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 234,
+          "output_tokens": 15,
+          "request_wall_seconds": 3.2240982000002987
+        },
+        {
+          "id": "lh1-development-correction-0",
+          "kind": "correction",
+          "answer": "linen cabinet",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 234,
+          "output_tokens": 4,
+          "request_wall_seconds": 2.0169147999986308
+        },
+        {
+          "id": "lh1-development-distractor-0",
+          "kind": "distractor",
+          "answer": "mulberry",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 249,
+          "output_tokens": 3,
+          "request_wall_seconds": 2.028882099999464
+        },
+        {
+          "id": "lh1-development-literal-0",
+          "kind": "literal",
+          "answer": "DEV/PUTYAOKYO: R-4!",
+          "score": {
+            "correct": false,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "generator failed with required evidence present",
+          "prompt_tokens": 241,
+          "output_tokens": 12,
+          "request_wall_seconds": 2.983953900000415
+        },
+        {
+          "id": "lh1-development-preservation-0",
+          "kind": "preservation",
+          "answer": "flower hyacinth",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": false,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 244,
+          "output_tokens": 5,
+          "request_wall_seconds": 2.052898899999491
+        },
+        {
+          "id": "lh1-development-reference-0",
+          "kind": "reference",
+          "answer": "velvet depot",
+          "score": {
+            "correct": true,
+            "abstention": false,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 215,
+          "output_tokens": 4,
+          "request_wall_seconds": 1.8984199999995326
+        },
+        {
+          "id": "lh1-development-missing-0",
+          "kind": "missing",
+          "answer": "UNKNOWN",
+          "score": {
+            "correct": true,
+            "abstention": true,
+            "wrong_listed_value": false,
+            "unsupported_response_proxy": false,
+            "exact_match": true,
+            "stale_assertion_proxy": false
+          },
+          "failure": "correct",
+          "prompt_tokens": 241,
+          "output_tokens": 2,
+          "request_wall_seconds": 1.76840699999957
+        }
+      ]
+    }
+  },
+  "decisions": {
+    "field": {
+      "checks": {
+        "technical_validity": true,
+        "toruk_improves": false,
+        "no_new_case_losses": false,
+        "no_loss_versus_matched_lexical": true,
+        "evidence_exact_copy_preservation": false
+      },
+      "development_support": false
+    },
+    "check": {
+      "checks": {
+        "technical_validity": true,
+        "toruk_improves": false,
+        "no_new_case_losses": false,
+        "no_loss_versus_matched_lexical": true,
+        "evidence_exact_copy_preservation": false
+      },
+      "development_support": false
+    }
+  },
+  "frozen_files_unchanged": 596,
+  "new_training": false,
+  "production_change": false,
+  "heldout_records_parsed": 0,
+  "audit_wall_seconds": 4.486495400000422,
+  "audit_controller_cpu_seconds": 3.953125
+}

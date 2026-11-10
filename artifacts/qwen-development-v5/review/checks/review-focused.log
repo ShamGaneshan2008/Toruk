@@ -1,0 +1,27 @@
+........................................................................ [ 80%]
+............F....                                                        [100%]
+================================== FAILURES ===================================
+______________ test_repository_bindings_cannot_escape[/outside] _______________
+
+name = '/outside'
+
+    @pytest.mark.parametrize("name", ["../outside", "C:/Users/outside", "/outside", "a\\b"])
+    def test_repository_bindings_cannot_escape(name):
+>       with pytest.raises(ValueError, match="unsafe"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+artifacts\qwen-development-v5\test_verify.py:15: Failed
+============================== warnings summary ===============================
+.venv\Lib\site-packages\_pytest\cacheprovider.py:487
+  D:\Toruk\.venv\Lib\site-packages\_pytest\cacheprovider.py:487: PytestCacheWarning: could not create cache path D:\Toruk\.pytest_cache\v\cache\nodeids: [WinError 5] Access is denied: 'D:\\Toruk\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/nodeids", sorted(str(n) for n in self.cached_nodeids))
+
+.venv\Lib\site-packages\_pytest\cacheprovider.py:439
+  D:\Toruk\.venv\Lib\site-packages\_pytest\cacheprovider.py:439: PytestCacheWarning: could not create cache path D:\Toruk\.pytest_cache\v\cache\lastfailed: [WinError 5] Access is denied: 'D:\\Toruk\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/lastfailed", current_lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED artifacts/qwen-development-v5/test_verify.py::test_repository_bindings_cannot_escape[/outside]
+1 failed, 88 passed, 2 warnings in 4.06s

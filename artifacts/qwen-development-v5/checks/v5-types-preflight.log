@@ -1,0 +1,6 @@
+scripts\qwen_development_v5.py:249: error: Cannot assign to a type  [misc]
+scripts\qwen_development_v5.py:249: error: Incompatible types in assignment (expression has type "Callable[[Path], LexicalAdmissionSelector]", variable has type "type[TorukContextSelector]")  [assignment]
+scripts\qwen_development_v5.py:249: error: Incompatible return value type (got "LexicalAdmissionSelector", expected "TorukContextSelector")  [return-value]
+scripts\qwen_development_v5.py:250: error: Incompatible types in assignment (expression has type "def envelope(turns: list[dict[str, str]], chosen: list[int]) -> list[dict[Any, Any]]", variable has type "def envelope(turns: list[dict[str, str]], selected: list[int]) -> list[dict[str, str]]")  [assignment]
+scripts\qwen_development_v5.py:251: error: Incompatible types in assignment (expression has type "def verify(path: Path) -> Any", variable has type "def verify(run: Path) -> dict[str, Any]")  [assignment]
+Found 5 errors in 1 file (checked 37 source files)

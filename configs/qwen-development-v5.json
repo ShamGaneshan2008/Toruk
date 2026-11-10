@@ -1,0 +1,30 @@
+{
+  "schema": "qwen-development-v5",
+  "base_commit": "0705a3da4d36d1857dde429ea82ec45007c4430d",
+  "backbone_directory": "C:/Users/susee/VS_CODE_PROJECT/Toruk/artifacts/backbone-qualification-v1/backbones/qwen",
+  "selector_checkpoint": "C:/Users/susee/VS_CODE_PROJECT/Toruk/artifacts/m6-successor-v1/execution/train/checkpoint.pt",
+  "candidates": {
+    "original": "Use only the supplied reference to answer its question, including explicit corrections. Return just the requested value without explanation. If the requested information is missing, reply UNKNOWN. When asked to copy a quotation, preserve its text exactly.",
+    "field": "Answer using only facts explicitly stated in the reference. Identify the entity and the attribute asked for. Return the value of that attribute, not an identifier or a different attribute. Apply explicit corrections only to the attributes they change and preserve other facts. Resolve references using the supplied conversation. If the requested attribute has no stated value, reply exactly UNKNOWN. When asked to copy a quotation, preserve all text, spaces and punctuation exactly. Return only the requested value without explanation.",
+    "check": "Use only the supplied reference to answer its question, including explicit corrections. Return just the requested value without explanation. If the requested information is missing, reply UNKNOWN. When asked to copy a quotation, preserve its text exactly. Before answering, silently check that the reference explicitly connects your answer to the entity and attribute requested, that later corrections have been applied without changing unrelated facts, and that any conversational reference is resolved from the supplied evidence. If this check cannot establish the requested value, reply UNKNOWN. Do not output the check."
+  },
+  "order": ["original-toruk", "original-lexical", "field-lexical", "field-toruk", "check-toruk", "check-lexical"],
+  "limits": {
+    "rehearsal_stage_wall_seconds": 180,
+    "rehearsal_stage_cpu_seconds": 360,
+    "rehearsal_total_wall_seconds": 1080,
+    "rehearsal_total_cpu_seconds": 2160,
+    "request_wall_seconds": 30,
+    "memory_bytes": 6442450944,
+    "disk_bytes": 3221225472,
+    "sample_seconds": 0.05,
+    "heartbeat_seconds": 1,
+    "max_monitor_gap_seconds": 5,
+    "max_suspended_gap_seconds": 2,
+    "monitor_read_attempts": 5,
+    "monitor_read_delay_seconds": 0.01
+  },
+  "generation_retries": 0,
+  "heldout_authorized": false,
+  "production_change": false
+}

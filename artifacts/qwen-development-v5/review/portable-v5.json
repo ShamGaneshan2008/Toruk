@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "payload_hashes": 188,
+  "frozen_hashes": 596,
+  "registered_local_bindings_checked": 60,
+  "external_asset_identities_matched_to_original_registration": 11,
+  "external_asset_bytes_loaded_or_verified": false,
+  "native_prompts_outputs_scores_costs_replays_and_failed_gates_reproduced": true,
+  "conditions": {
+    "original-toruk": 5,
+    "original-lexical": 7,
+    "field-lexical": 4,
+    "field-toruk": 5,
+    "check-toruk": 5,
+    "check-lexical": 5
+  },
+  "decisions": {
+    "field": {
+      "checks": {
+        "technical_validity": true,
+        "toruk_improves": false,
+        "no_new_case_losses": false,
+        "no_loss_versus_matched_lexical": true,
+        "evidence_exact_copy_preservation": false
+      },
+      "development_support": false
+    },
+    "check": {
+      "checks": {
+        "technical_validity": true,
+        "toruk_improves": false,
+        "no_new_case_losses": false,
+        "no_loss_versus_matched_lexical": true,
+        "evidence_exact_copy_preservation": false
+      },
+      "development_support": false
+    }
+  },
+  "new_generations": 0,
+  "heldout_records_parsed_or_scored": 0,
+  "limitation": "Offline result audit; excluded model weights and original host execution are not reproduced.",
+  "input": "working tree"
+}

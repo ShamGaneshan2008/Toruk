@@ -1,0 +1,112 @@
+{
+  "parent_commit": "0705a3da4d36d1857dde429ea82ec45007c4430d",
+  "branch": "main",
+  "created_utc": "2026-11-10T15:12:56.202958+00:00",
+  "preservation_authorized_by_user": true,
+  "publication_state": "Reviewed for local commit; no push authorized",
+  "original_files_preserved": 189,
+  "original_source_zip_members": 98,
+  "relevant_tests_passed": 90,
+  "original_full_suite_tests": 378,
+  "original_full_verify_stages_passed": 26,
+  "original_full_verify_not_rerun_for_documentation_only_preservation": true,
+  "review_checks": {
+    "review-focused": {
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 5.076026099999581
+    },
+    "review-focused-corrected": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.948026500000196
+    },
+    "review-focused-final": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.428513200000452
+    },
+    "review-lint": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.0958998000005522
+    },
+    "review-lint-final": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.09437070000058156
+    },
+    "review-portable-v4": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 6.379688400000305
+    },
+    "review-portable-v4-staged": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 17.554511100002856
+    },
+    "review-portable-v5": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.252430300000924
+    },
+    "review-portable-v5-staged": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 15.260334599999624
+    }
+  },
+  "new_verifier_source_sha256": "b6c63e7bad1367d1a21dec492f5ccfb90c8be742904261bfcf270f977703ba2b",
+  "new_verifier_tests_sha256": "f2b2e4f01614f2ffa550869a1c96c9d9a3abe45371796e2a05c657bd8eebf153",
+  "frozen_files_unchanged": 596,
+  "all_three_conditions_replayed": true,
+  "both_candidate_decision_gates_failed": true,
+  "secret_scan": {
+    "scanned_files": 215,
+    "archive_members": 98,
+    "credential_findings": [],
+    "patterns": [
+      "private_key",
+      "aws_access_key",
+      "github_token",
+      "openai_token",
+      "slack_token",
+      "credential_url",
+      "literal_credential"
+    ],
+    "personal_path_files_or_members": [
+      "artifacts/qwen-development-v5/attempt-001/arms/check-lexical/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-001/arms/check-toruk/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-001/arms/field-lexical/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-001/arms/field-toruk/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-001/arms/original-lexical/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-001/arms/original-toruk/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-001/registration.json",
+      "artifacts/qwen-development-v5/attempt-001/source.zip!configs/qwen-development-v5.json",
+      "artifacts/qwen-development-v5/attempt-001/source.zip!scripts/verify_portable_research_evidence.py",
+      "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-002/arms/check-toruk/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-002/arms/field-lexical/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-002/arms/field-toruk/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-002/arms/original-lexical/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-002/arms/original-toruk/rehearsal/registration.json",
+      "artifacts/qwen-development-v5/attempt-002/registration.json",
+      "artifacts/qwen-development-v5/attempt-002/source.zip!configs/qwen-development-v5.json",
+      "artifacts/qwen-development-v5/attempt-002/source.zip!scripts/verify_portable_research_evidence.py",
+      "artifacts/qwen-development-v5/review/README.md",
+      "artifacts/qwen-development-v5/review/checks/review-focused.log",
+      "artifacts/qwen-development-v5/test_verify.py",
+      "artifacts/qwen-development-v5/verification/v5-install-local.log",
+      "configs/qwen-development-v5.json"
+    ],
+    "personal_paths_retained_as_historical_provenance": true,
+    "not_sent_to_remote": true
+  },
+  "new_generations": 0,
+  "heldout_records_parsed_or_scored": 0,
+  "production_files_staged": 0,
+  "v6_started": false,
+  "push_performed": false,
+  "inventory": "artifacts/qwen-development-v5/review/staged-files.json"
+}

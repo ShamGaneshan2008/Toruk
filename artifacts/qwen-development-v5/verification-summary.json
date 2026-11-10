@@ -1,0 +1,318 @@
+{
+  "created_utc": "2026-11-10T14:59:43.616513+00:00",
+  "git_root": "D:\\Toruk",
+  "head": "0705a3da4d36d1857dde429ea82ec45007c4430d",
+  "branch": "main",
+  "git_status": "## main...origin/main\n?? artifacts/qwen-development-v5/\n?? configs/.gitattributes\n?? configs/qwen-development-v5.json\n?? docs/research/.gitattributes\n?? docs/research/qwen-development-v5-protocol.md\n?? docs/research/qwen-development-v5-results.md\n?? scripts/.gitattributes\n?? scripts/qwen_development_v5.py\n?? tests/.gitattributes\n?? tests/test_qwen_development_v5.py\n",
+  "tracked_diff": "",
+  "staged_diff": "",
+  "full_verify_returncode": 0,
+  "full_verify_stages": {
+    "v5-build": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 10.983652599999914
+    },
+    "v5-conversation-data": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.244609600000331
+    },
+    "v5-diagnose": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.602797700001247
+    },
+    "v5-diff-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.04089390000081039
+    },
+    "v5-format": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.11658999999963271
+    },
+    "v5-frozen-sources": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.08324010000069393
+    },
+    "v5-help": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.800238399999216
+    },
+    "v5-import": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.03991019999921264
+    },
+    "v5-independent-cases": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.168875499999558
+    },
+    "v5-install-local": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.100185200000851
+    },
+    "v5-lint": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.256526400000439
+    },
+    "v5-owned-lm-generate": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.118991800000003
+    },
+    "v5-owned-lm-smoke": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.286525999999867
+    },
+    "v5-owned-lm-validate": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.968854499998997
+    },
+    "v5-package": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.9508431999984168
+    },
+    "v5-reproduce": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.244559099999606
+    },
+    "v5-research-config": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.066975599998841
+    },
+    "v5-research-smoke": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 4.728464499999973
+    },
+    "v5-staged-diff-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.03147199999875738
+    },
+    "v5-summarize": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.788095500000054
+    },
+    "v5-tests": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 149.69633040000008
+    },
+    "v5-types-linux": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 47.836204799999905
+    },
+    "v5-types": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.6451271000005363
+    },
+    "v5-validate": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.1635420999991766
+    },
+    "v5-web-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.8657730000013544
+    },
+    "v5-web-tests": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.5327505000004749
+    }
+  },
+  "full_verify_stage_wall_sum_seconds": 257.36202969999795,
+  "focused_tests": 82,
+  "new_v5_tests": 34,
+  "full_python_tests": 378,
+  "node_passed": 20,
+  "node_opt_in_skipped": 1,
+  "checks": {
+    "v5-development": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 189.5707008999998
+    },
+    "v5-final-diff": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.04295270000147866
+    },
+    "v5-final-preservation": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.9162828999997146
+    },
+    "v5-focused-preflight": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 7.901373200000307
+    },
+    "v5-focused-registered": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.3120013999996445
+    },
+    "v5-new-file-whitespace-corrected": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 6.089845700000296
+    },
+    "v5-new-file-whitespace": {
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 0.20095199999923352
+    },
+    "v5-portable": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 8.201199699999052
+    },
+    "v5-register-corrected": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.511029100000087
+    },
+    "v5-register": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 6.586750099999335
+    },
+    "v5-static-preflight": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.09920669999883103
+    },
+    "v5-summary": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 5.235636600000362
+    },
+    "v5-types-corrected": {
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 3.165838699998858
+    },
+    "v5-types-preflight": {
+      "status": "FAIL",
+      "returncode": 1,
+      "seconds": 93.79297570000017
+    }
+  },
+  "retained_failures": {
+    "v5-new-file-whitespace": "FAIL",
+    "v5-types-preflight": "FAIL"
+  },
+  "original_controls_match_v3": true,
+  "technical_validity": true,
+  "decisions": {
+    "field": {
+      "checks": {
+        "technical_validity": true,
+        "toruk_improves": false,
+        "no_new_case_losses": false,
+        "no_loss_versus_matched_lexical": true,
+        "evidence_exact_copy_preservation": false
+      },
+      "development_support": false
+    },
+    "check": {
+      "checks": {
+        "technical_validity": true,
+        "toruk_improves": false,
+        "no_new_case_losses": false,
+        "no_loss_versus_matched_lexical": true,
+        "evidence_exact_copy_preservation": false
+      },
+      "development_support": false
+    }
+  },
+  "cold_stage_costs": {
+    "wall_seconds": 187.8344948755621,
+    "cpu_seconds": 361.625
+  },
+  "frozen_hashes_unchanged": 596,
+  "portable_v4_verification": {
+    "status": "PASS",
+    "scope": "v4 portable evidence and offline development-only audit replay",
+    "evidence_files": 80,
+    "frozen_baseline_hashes": 472,
+    "consumed_input_hashes": 19,
+    "historical_receipts_verified": 35,
+    "historical_verification_stages": 26,
+    "source_hash_bindings_verified": 667,
+    "source_substitutions": [
+      {
+        "path": "scripts/audit_qwen_development_v4.py",
+        "sha256": "9a68c36b36e55450234de5235443721741ff1f0d39d08d5f5ad98b68e5ac085f",
+        "from": "checkout newline variant; exact hash matched"
+      },
+      {
+        "path": "tests/test_qwen_development_v4.py",
+        "sha256": "bf341ec452bcefef6d9b6fead1547238f50fb2471226c39da1520ed2c5e62c36",
+        "from": "artifacts/qwen-long-history-dev-v4/snapshots/bf341ec452bcefef6d9b6fead1547238f50fb2471226c39da1520ed2c5e62c36/test_qwen_development_v4.py"
+      },
+      {
+        "path": "docs/research/qwen-long-history-dev-v4-results.md",
+        "sha256": "935486d16a4d4ccf4dfb88c53f6e5e416d84e497b4fe448ef9faa6095372f6bc",
+        "from": "artifacts/qwen-long-history-dev-v4/snapshots/935486d16a4d4ccf4dfb88c53f6e5e416d84e497b4fe448ef9faa6095372f6bc/qwen-long-history-dev-v4-results.md"
+      },
+      {
+        "path": "scripts/audit_qwen_development_v4.py",
+        "sha256": "e9422fa2431de74a787a8128cd2a58af1e89f962a038532c3f3c3ce69d03d49a",
+        "from": "artifacts/qwen-long-history-dev-v4/snapshots/e9422fa2431de74a787a8128cd2a58af1e89f962a038532c3f3c3ce69d03d49a/audit_qwen_development_v4.py"
+      },
+      {
+        "path": "scripts/audit_qwen_development_v4.py",
+        "sha256": "c1b689ba5944b3b6ac4b383472f36ef5cf9968b71611c2e9f7d93166324499ce",
+        "from": "artifacts/qwen-long-history-dev-v4/snapshots/c1b689ba5944b3b6ac4b383472f36ef5cf9968b71611c2e9f7d93166324499ce/audit_qwen_development_v4.py"
+      }
+    ],
+    "audit_reproduced_except_new_cpu_wall_timing": true,
+    "omitted_generated_files": 92,
+    "omitted_builds_needed_for_audit": false,
+    "original_build_binary_identity": "NOT VERIFIED against original build; no original binary hashes were recorded",
+    "new_generations": 0,
+    "heldout_records_parsed_or_scored": 0,
+    "input": "working tree"
+  },
+  "superseded_attempt_001_generations": 0,
+  "complete_attempt_002_generations": 48,
+  "scored_answers": 42,
+  "new_training": false,
+  "production_change": false,
+  "heldout_records_parsed_or_scored": 0,
+  "final_new_source_sha256": {
+    "scripts/qwen_development_v5.py": "3dc7a0a5b1fcc1873a533a746daa2008fda1e8683acd08e13491de12b652e902",
+    "tests/test_qwen_development_v5.py": "be011a66e3e5e3d8b3f0d65da97c5468f575d4fc4a9ac92f1b2db0b625b63e8b",
+    "configs/qwen-development-v5.json": "3d6715b8c42095fa3b6604a33d7aa7d456c6e3c38cb944ff571581819ae13f8e",
+    "docs/research/qwen-development-v5-protocol.md": "833b16a6055b7c226738c1598b47e8586a96861a13496d04c6d3c0b6e466d9f9",
+    "docs/research/qwen-development-v5-results.md": "c8609a86387134d78d52305bb4e16492e5782231735b7edc73d3f4559ed4f226"
+  },
+  "limitations": [
+    "Seven adapted development questions; no independent or held-out evaluation.",
+    "Single fixed-order local timing run; different output lengths and cache/load effects.",
+    "Sampled process-tree memory can miss transient peaks.",
+    "Backbone and selector weights are local, external read-only dependencies, excluded from portable review files.",
+    "Generated engineering fixtures and build artifacts remain local and ignored.",
+    "Inherited training peak RAM and monetary/energy/FLOPs costs are unmeasured."
+  ]
+}

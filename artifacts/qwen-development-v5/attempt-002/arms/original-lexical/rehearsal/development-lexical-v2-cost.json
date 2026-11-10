@@ -1,0 +1,47 @@
+{
+  "arm": "lexical",
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\Toruk\\artifacts\\qwen-development-v5\\attempt-002\\worker-source\\scripts\\qwen_long_history.py",
+    "worker",
+    "--run",
+    "D:\\Toruk\\artifacts\\qwen-development-v5\\attempt-002\\arms\\original-lexical\\rehearsal",
+    "--split",
+    "development",
+    "--arm",
+    "lexical"
+  ],
+  "start": {
+    "utc_seconds": 1794322195.4429107,
+    "perf_seconds": 15200.8192378,
+    "awake_seconds": 13234.9544158
+  },
+  "end": {
+    "utc_seconds": 1794322227.533146,
+    "perf_seconds": 15232.9101822,
+    "awake_seconds": 13267.0453631
+  },
+  "wall_seconds": 32.09094439999899,
+  "cpu_seconds": 63.4375,
+  "controller_cpu_seconds": 6.5625,
+  "cpu_by_process": {
+    "7620:1794322196.1116843": 0,
+    "20900:1794322196.1203108": 0.015625,
+    "24648:1794322196.1331716": 56.859375
+  },
+  "peak_rss_bytes": 2450210816,
+  "peak_private_bytes": 4070309888,
+  "peak_os_private_bytes": 4081340416,
+  "last_active_request": {
+    "active": false,
+    "case": "lh1-development-distant-0-replay"
+  },
+  "worker_final_telemetry": true,
+  "cpu_complete": true,
+  "failure": null,
+  "returncode": 0,
+  "scope": "stage controller + worker tree; sampled peaks; final worker CPU when present; no sleep subtraction"
+}

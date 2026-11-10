@@ -1,0 +1,172 @@
+{
+  "schema": "qwen-development-v5",
+  "v5_root": "D:\\Toruk\\artifacts\\qwen-development-v5\\attempt-002",
+  "candidate": "check",
+  "arm": "lexical",
+  "instruction": "Use only the supplied reference to answer its question, including explicit corrections. Return just the requested value without explanation. If the requested information is missing, reply UNKNOWN. When asked to copy a quotation, preserve its text exactly. Before answering, silently check that the reference explicitly connects your answer to the entity and attribute requested, that later corrections have been applied without changing unrelated facts, and that any conversational reference is resolved from the supplied evidence. If this check cannot establish the requested value, reply UNKNOWN. Do not output the check.",
+  "dependencies": {
+    "torch": "2.15.0+cpu",
+    "transformers": "5.22.2",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0",
+    "psutil": "7.2.2"
+  },
+  "config": {
+    "schema": "qwen-long-history-v1",
+    "development_seed": 82811,
+    "heldout_seed": 82831,
+    "generation_seed": 81751,
+    "backbone_freeze": "artifacts/backbone-qualification-v1/qualified-backbone.json",
+    "backbone_directory": "C:/Users/susee/VS_CODE_PROJECT/Toruk/artifacts/backbone-qualification-v1/backbones/qwen",
+    "selector_checkpoint": "C:/Users/susee/VS_CODE_PROJECT/Toruk/artifacts/m6-successor-v1/execution/train/checkpoint.pt",
+    "selector_sha256": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+    "arms": [
+      "full",
+      "recent",
+      "lexical",
+      "toruk"
+    ],
+    "development_order": [
+      "full",
+      "lexical",
+      "toruk",
+      "recent"
+    ],
+    "heldout_order": [
+      "toruk",
+      "recent",
+      "full",
+      "lexical"
+    ],
+    "development_per_kind": 1,
+    "heldout_per_kind": 4,
+    "gap_pairs": 20,
+    "bounded_prompt_tokens": 512,
+    "max_new_tokens": 64,
+    "context_policy": "Full transcript plus 64 output positions must fit min(model max_position_embeddings, tokenizer model_max_length); registration fails otherwise, no exclusion or truncation.",
+    "memory_bytes": 6442450944,
+    "disk_bytes": 3221225472,
+    "phase_seconds": 300,
+    "request_seconds": 30,
+    "total_seconds": 1200,
+    "device": "CPU float32, two Torch threads, sequential fresh workers",
+    "generation_policy": {
+      "do_sample": false,
+      "temperature_request": 0,
+      "top_p": 1,
+      "repetition_penalty": 1.0,
+      "num_beams": 1,
+      "use_cache": true,
+      "max_new_tokens": 64
+    },
+    "mechanisms": {
+      "full": "all original turns rendered verbatim",
+      "recent": "whole-turn chronological eviction to 512 native prompt tokens",
+      "lexical": "unchanged lexical-v1 then same whole-turn fit",
+      "toruk": "unchanged recurrent/cosine selector with m6-successor-v1 checkpoint then same whole-turn fit"
+    },
+    "primary_metric": "case-balanced frozen answer accuracy; 28 cases, four per category",
+    "criteria": {
+      "oracle_min_accuracy": 0.6,
+      "toruk_min_accuracy": 0.6,
+      "oracle_min_known_accuracy": 0.6,
+      "toruk_min_known_accuracy": 0.6,
+      "max_accuracy_regression_pp": 5,
+      "max_category_regression_cases": 1,
+      "no_extra_stale_or_unsupported_proxy": true,
+      "cpu_and_wall_reduction_fraction": 0.1,
+      "efficiency_against": [
+        "recent",
+        "lexical"
+      ],
+      "quality_against": [
+        "full",
+        "recent",
+        "lexical"
+      ],
+      "require_all_cases_and_caps": true
+    },
+    "cost_policy": {
+      "measured_workload": 28,
+      "primary": "development including replay + heldout cold workers; TORUK also pays original profile/training CPU and wall once, amortized over 28 heldout queries",
+      "new_training": false,
+      "historical_training_runs": [
+        "artifacts/m6-successor-v1/profile",
+        "artifacts/m6-successor-v1/train",
+        "artifacts/m6-successor-v1/execution/profile",
+        "artifacts/m6-successor-v1/execution/train"
+      ],
+      "sensitivity_queries": [
+        28,
+        1000
+      ],
+      "units": "CPU seconds, wall seconds and separate BPE/selector-byte work counters; no token-equivalence or FLOPs claim"
+    },
+    "rules": [
+      "No model inference before registration",
+      "New synthetic records; no heldout answers examined before freeze",
+      "No mechanism or scoring change after registration; development is technical validation only",
+      "Development first-case replay charged but not scored twice",
+      "Heldout once per arm, failed attempts retained, no favorable retry",
+      "Identical explicit qualified system instruction, Reference/Question/Answer envelope, native chat template, questions and 64-token answer cap across arms",
+      "No hidden labels or required-evidence metadata passed to model or selectors",
+      "Historical M6 remains NOT REPRODUCIBLE; successor and backbone evidence unchanged"
+    ],
+    "technical_amendment": 1,
+    "invalid_preflight": "artifacts/qwen-long-history-v1; preserved, no heldout inference",
+    "invalid_preflight_wall_upper_seconds": 73.3064689999992
+  },
+  "context_limit": 32768,
+  "model_files": [
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\config.json",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\generation_config.json",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\LICENSE",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\merges.txt",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\model.safetensors",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\README.md",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\tokenizer.json",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\tokenizer_config.json",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\toruk-backbone.json",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\vocab.json",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\m6-successor-v1\\execution\\train\\checkpoint.pt"
+  ],
+  "bindings": {
+    "scripts/qwen_development_v5.py": "3dc7a0a5b1fcc1873a533a746daa2008fda1e8683acd08e13491de12b652e902",
+    "configs/qwen-development-v5.json": "3d6715b8c42095fa3b6604a33d7aa7d456c6e3c38cb944ff571581819ae13f8e",
+    "docs/research/qwen-development-v5-protocol.md": "833b16a6055b7c226738c1598b47e8586a96861a13496d04c6d3c0b6e466d9f9",
+    "tests/test_qwen_development_v5.py": "be011a66e3e5e3d8b3f0d65da97c5468f575d4fc4a9ac92f1b2db0b625b63e8b",
+    "artifacts/qwen-development-v5/attempt-002/worker-source/scripts/qwen_long_history.py": "ec7a246cd849ae62c2f93a5b0216b6b977e8c0be678c16b55208a7d91118d76a",
+    "artifacts/qwen-development-v5/attempt-002/source.zip": "89f4291cdf0973785d7e6c0ffd5aeb928cfb07c8c678b5873c8d87979cef990e",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\model.safetensors": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\README.md": "b19c806a904db6dc878a0462e70b551f6b7ac78dfbb88c2eb966ca2b9109ae15",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\toruk-backbone.json": "18be9c880ab5caad20df8b118734baa5e206a14fec157386adf518dde5b07c4a",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\backbone-qualification-v1\\backbones\\qwen\\vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "C:\\Users\\susee\\VS_CODE_PROJECT\\Toruk\\artifacts\\m6-successor-v1\\execution\\train\\checkpoint.pt": "f38f35b168b3bdaddb7caff8f6ff9bc7cb67694b77095cb52bef5bf63af65f49",
+    "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/development.json": "58d3754cd85a4e2c7bcc0bf10d93014191b20382627daa958c1fce0463a6bfe2",
+    "artifacts/qwen-development-v5/attempt-002/arms/check-lexical/rehearsal/full-prompt-ids.json": "4543444f3161b570875698c246742842ce84befd068004002be620e5a29e9e61"
+  },
+  "v2_config": {
+    "rehearsal_stage_wall_seconds": 180,
+    "rehearsal_stage_cpu_seconds": 360,
+    "rehearsal_total_wall_seconds": 1080,
+    "rehearsal_total_cpu_seconds": 2160,
+    "request_wall_seconds": 30,
+    "memory_bytes": 6442450944,
+    "disk_bytes": 3221225472,
+    "sample_seconds": 0.05,
+    "heartbeat_seconds": 1,
+    "max_monitor_gap_seconds": 5,
+    "max_suspended_gap_seconds": 2,
+    "monitor_read_attempts": 5,
+    "monitor_read_delay_seconds": 0.01,
+    "runtime_python": "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "source_checkout": "D:\\Toruk\\artifacts\\qwen-development-v5\\attempt-002\\worker-source"
+  },
+  "heldout_authorized": false
+}
