@@ -1,0 +1,84 @@
+{
+  "cell": "T-LM",
+  "pass": 2,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\evidence_first_rehearsal.py",
+    "worker",
+    "--run",
+    "D:\\Toruk\\artifacts\\evidence-first-prototype\\rehearsal-001",
+    "--cell",
+    "T-LM",
+    "--pass-number",
+    "2"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall_seconds": 20.130146200000127,
+  "cpu_seconds": 39.3125,
+  "controller_cpu_seconds": 4.53125,
+  "peak_rss_bytes": 2738253824,
+  "peak_private_bytes": 4676964352,
+  "peak_disk_bytes": 1001614252,
+  "max_monitor_gap_seconds": 0.09695919999967373,
+  "requests_recorded": 5,
+  "per_request_resources": {
+    "0": {
+      "peak_rss_bytes": 2685911040,
+      "peak_private_bytes": 4668252160,
+      "peak_disk_bytes": 1001553227,
+      "end_private_bytes": 4041895936,
+      "end_rss_bytes": 2415726592,
+      "private_peak_upper_bound_bytes": 4676964352,
+      "disk_peak_upper_bound_bytes": 1001614252,
+      "sampled_during_request": true
+    },
+    "1": {
+      "peak_rss_bytes": 2686259200,
+      "peak_private_bytes": 4652302336,
+      "peak_disk_bytes": 1001562648,
+      "end_private_bytes": 4042559488,
+      "end_rss_bytes": 2415480832,
+      "private_peak_upper_bound_bytes": 4676964352,
+      "disk_peak_upper_bound_bytes": 1001614252,
+      "sampled_during_request": true
+    },
+    "2": {
+      "peak_rss_bytes": 2691444736,
+      "peak_private_bytes": 4657856512,
+      "peak_disk_bytes": 1001575031,
+      "end_private_bytes": 4051062784,
+      "end_rss_bytes": 2424266752,
+      "private_peak_upper_bound_bytes": 4676964352,
+      "disk_peak_upper_bound_bytes": 1001614252,
+      "sampled_during_request": true
+    },
+    "3": {
+      "peak_rss_bytes": 2738253824,
+      "peak_private_bytes": 4672077824,
+      "peak_disk_bytes": 1001584720,
+      "end_private_bytes": 4018147328,
+      "end_rss_bytes": 2428256256,
+      "private_peak_upper_bound_bytes": 4676964352,
+      "disk_peak_upper_bound_bytes": 1001614252,
+      "sampled_during_request": true
+    },
+    "4": {
+      "peak_rss_bytes": 2692112384,
+      "peak_private_bytes": 4621918208,
+      "peak_disk_bytes": 1001602108,
+      "end_private_bytes": 4012564480,
+      "end_rss_bytes": 2421821440,
+      "private_peak_upper_bound_bytes": 4676964352,
+      "disk_peak_upper_bound_bytes": 1001614252,
+      "sampled_during_request": true
+    }
+  },
+  "active_at_stop": {
+    "active": false,
+    "index": 4,
+    "case": "runtime-asterweft"
+  },
+  "cpu_scope": "controller plus sampled child tree, reconciled with final worker CPU",
+  "disk_scope": "unique runtime assets, frozen sources/inputs and run files; excludes installed runtime"
+}

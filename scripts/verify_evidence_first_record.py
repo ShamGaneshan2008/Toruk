@@ -1,0 +1,639 @@
+"""Prepare/verify a portable, byte-preserving prototype record. No model calls."""
+
+from __future__ import annotations
+
+import argparse
+import importlib.util
+import io
+import json
+import math
+import re
+import subprocess
+import sys
+import tempfile
+import zipfile
+from collections import Counter
+from dataclasses import asdict
+from pathlib import Path
+from typing import Any
+
+from verify_portable_research_evidence import Evidence, digest, file_digest, portable_path
+
+ROOT = Path(__file__).resolve().parents[1]
+PREFIX = "artifacts/evidence-first-prototype"
+SUPPORT = PREFIX + "/portable-record"
+MANIFEST = SUPPORT + "/manifest.json"
+TOKENIZER = "artifacts/research-evidence-portable-v1/tokenizers/qwen"
+RUNS = {"rehearsal-001": (40, 8, 5), "feasibility-v2": (12, 4, 3)}
+SECRET = re.compile(
+    r"\b(?:AKIA[A-Z0-9]{16}|ASIA[A-Z0-9]{16}|gh[pousr]_[A-Za-z0-9]{20,}|"
+    r"github_pat_[A-Za-z0-9_]{30,}|hf_[A-Za-z0-9]{25,}|sk-(?:proj-)?[A-Za-z0-9_-]{25,})\b"
+    r"|-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"
+    r"|(?i:authorization\s*[:=]\s*[\"']?bearer\s+[A-Za-z0-9_.-]{24,})"
+)
+REF_FIELDS = ("bindings", "assets", "protected", "files", "source_files")
+
+
+def source_files() -> list[str]:
+    return [
+        PREFIX + "/.gitattributes",
+        "scripts/.gitattributes",
+        "tests/.gitattributes",
+        "docs/research/.gitattributes",
+        "scripts/verify_evidence_first_record.py",
+        "tests/test_evidence_first_record.py",
+        SUPPORT + "/README.md",
+        *[
+            "scripts/" + n + ".py"
+            for n in (
+                "evidence_first_policy",
+                "evidence_first_rehearsal",
+                "evidence_first_feasibility_v2",
+            )
+        ],
+        *[
+            "tests/test_" + n + ".py"
+            for n in (
+                "evidence_first_policy",
+                "evidence_first_rehearsal",
+                "evidence_first_feasibility_v2",
+            )
+        ],
+        *[
+            "docs/research/" + n + ".md"
+            for n in (
+                "evidence-first-answer-path-decision",
+                "evidence-first-prototype-rehearsal",
+                "evidence-first-feasibility-v2-protocol",
+                "evidence-first-feasibility-v2-results",
+            )
+        ],
+    ]
+
+
+def classification(name: str) -> tuple[bool, str]:
+    parts = name.split("/")
+    if name == PREFIX + "/.gitattributes":
+        return True, "byte-preserving attributes scoped to this new artifact record"
+    if any(p in {"__pycache__", ".cache", ".pytest_cache", ".ruff_cache"} for p in parts):
+        return False, "rebuildable cache/bytecode; no evidentiary role"
+    if name.endswith((".pyc", ".tmp", ".lock")):
+        return False, "temporary file or bytecode"
+    relative = name.removeprefix(PREFIX + "/").split("/")
+    if relative[0] in RUNS:
+        if name.endswith((".json", ".jsonl", ".md", ".log", ".zip")):
+            return True, "original experiment evidence, including failures and frozen sources"
+        return False, "non-evidence generated experiment file"
+    if relative[0].startswith("verification"):
+        if len(relative) == 2 and name.endswith((".json", ".log")):
+            return True, "original verification receipt/log; generated fixtures excluded"
+        return (
+            False,
+            "generated verification build, fixture, checkpoint, prediction or derived table",
+        )
+    if name == SUPPORT + "/README.md":
+        return True, "portable review instructions and limitations"
+    if re.fullmatch(re.escape(SUPPORT) + r"/sources/[0-9a-f]{64}\.txt", name):
+        return True, "exact recorded historical verification source snapshot"
+    if name == MANIFEST:
+        return False, "manifest is the inventory root; its Git blob protects its own bytes"
+    raise ValueError("unclassified artifact: " + name)
+
+
+def secret_scan(name: str, raw: bytes) -> None:
+    if name.endswith(".zip"):
+        with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+            for member in archive.infolist():
+                safe = member.filename.replace("\\", "/")
+                if safe.startswith("/") or ".." in safe.split("/") or member.file_size > 12_000_000:
+                    raise ValueError("unsafe source archive: " + name)
+                if not member.is_dir():
+                    secret_scan(name + "!" + safe, archive.read(member))
+    elif SECRET.search(raw.decode("utf-8", errors="strict")):
+        raise ValueError("potential secret in reviewed bytes: " + name)
+
+
+def references(files: dict[str, bytes]) -> list[tuple[str, str, str, str]]:
+    result = []
+    for name, raw in files.items():
+        if not name.endswith(".json"):
+            continue
+        value = json.loads(raw)
+        if not isinstance(value, dict):
+            continue
+        for field in REF_FIELDS:
+            mapping = value.get(field, {})
+            if isinstance(mapping, dict):
+                for path, expected in mapping.items():
+                    if isinstance(expected, str) and re.fullmatch(r"[0-9a-f]{64}", expected):
+                        result.append((name, field, path, expected))
+    return result
+
+
+def gates(raw: bytes) -> bytes:
+    start = raw.index(b"### Fixed contribution and decision gates")
+    end = raw.index(b"### Bounded prototype boundary", start)
+    return raw[start:end]
+
+
+def prepare(root: Path) -> dict:
+    included = {n: (root / n).read_bytes() for n in source_files()}
+    excluded: dict[str, dict] = {}
+    inspected: dict[str, dict] = {}
+    for path in sorted((root / PREFIX).rglob("*")):
+        if not path.is_file():
+            continue
+        name = path.relative_to(root).as_posix()
+        if name == MANIFEST:
+            continue
+        keep, reason = classification(name)
+        # Excluded fixture bodies are inventoried by hash only, never parsed.
+        info = {"sha256": file_digest(path), "bytes": path.stat().st_size, "reason": reason}
+        inspected[name] = {**info, "included": keep}
+        if keep:
+            included[name] = path.read_bytes()
+        else:
+            excluded[name] = info
+    for name, raw in included.items():
+        secret_scan(name, raw)
+    evidence = Evidence(root, dict(included))
+    # Reuse published tokenizer support; no new model download or weight copy.
+    dependencies = {}
+    for path in (root / TOKENIZER).iterdir():
+        if path.is_file():
+            name = path.relative_to(root).as_posix()
+            dependencies[name] = file_digest(path)
+            evidence.files[name] = path.read_bytes()
+            evidence.by_hash.setdefault(dependencies[name], (name, path.read_bytes()))
+    # Runtime assets may be declared omissions, never fabricated successful checks.
+    runtime = {}
+    for run, name in (
+        ("rehearsal-001", "rehearsal-freeze.json"),
+        ("feasibility-v2", "registration.json"),
+    ):
+        value = json.loads(included[f"{PREFIX}/{run}/{name}"])
+        runtime.update({(portable_path(n), h): n for n, h in value["assets"].items()})
+    resolutions = {}
+    omissions = []
+    historical = []
+    git_attempts = {}
+    for record, field, original, expected in references(dict(included)):
+        rel = portable_path(original)
+        resolved = evidence.resolve(original, expected)
+        if not resolved and (root / rel).is_file() and file_digest(root / rel) == expected:
+            raw = (root / rel).read_bytes()
+            dependencies[rel] = expected
+            evidence.files[rel] = raw
+            evidence.by_hash[expected] = (rel, raw)
+            resolved = (rel, raw)
+        if not resolved and field == "source_files":
+            commit = json.loads(included[record]).get("base_commit", "")
+            if re.fullmatch(r"[0-9a-f]{40}", commit or "") and expected not in git_attempts:
+                candidate = subprocess.run(
+                    ["git", "show", commit + ":" + rel], cwd=root, capture_output=True
+                )
+                git_attempts[expected] = candidate.stdout if candidate.returncode == 0 else b""
+            raw = git_attempts.get(expected, b"")
+            if raw and digest(raw) == expected:
+                snapshot = SUPPORT + "/sources/" + expected + ".txt"
+                path = root / snapshot
+                path.parent.mkdir(parents=True, exist_ok=True)
+                if not path.exists():
+                    path.write_bytes(raw)
+                if path.read_bytes() != raw:
+                    raise ValueError("source snapshot collision")
+                included[snapshot] = raw
+                evidence.files[snapshot] = raw
+                evidence.by_hash[expected] = (snapshot, raw)
+                resolved = (snapshot, raw)
+        item = {"record": record, "field": field, "path": original, "sha256": expected}
+        if resolved:
+            resolutions[expected] = resolved[0]
+        elif (rel, expected) in runtime:
+            omissions.append(
+                {**item, "reason": "external runtime asset; not bundled or reverified"}
+            )
+        elif field == "source_files":
+            historical.append(
+                {
+                    **item,
+                    "reason": (
+                        "historical verification source revision unavailable; receipt retained only"
+                    ),
+                }
+            )
+        else:
+            raise ValueError(
+                "unresolved essential experiment binding: " + record + " -> " + original
+            )
+    decision = "docs/research/evidence-first-answer-path-decision.md"
+    frozen = included[f"{PREFIX}/rehearsal-001/decision-at-freeze.md"]
+    if gates(included[decision]) != gates(frozen):
+        raise ValueError("original decision gates changed")
+    manifest = {
+        "schema": "portable-evidence-first-v1",
+        "commit_only_files": [".gitignore"],
+        "scope": "offline preservation; no inference",
+        "files": {n: digest(b) for n, b in sorted(included.items())},
+        "repository_dependencies": dict(sorted(dependencies.items())),
+        "inspected_artifacts": inspected,
+        "excluded_local_files": excluded,
+        "resolved_source_hashes": resolutions,
+        "omitted_runtime_bindings": omissions,
+        "unavailable_verification_source_bindings": historical,
+        "decision_gates_sha256": digest(gates(included[decision])),
+        "readiness": {
+            "synthesis_ready": False,
+            "earlier_missing_premise_outputs": 4,
+            "forced_64_token_abstentions": 12,
+            "registered_48_case_study": False,
+        },
+    }
+    target = root / MANIFEST
+    # This new packaging manifest may be refreshed before staging; original
+    # experiment files, registrations and seals are never written by this tool.
+    target.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
+    return manifest
+
+
+def read_index(root: Path, names: set[str]) -> dict[str, bytes]:
+    listing = subprocess.check_output(["git", "ls-files", "--stage", "-z"], cwd=root)
+    paths = {}
+    for entry in listing.split(b"\0"):
+        if entry:
+            header, path = entry.split(b"\t", 1)
+            mode, oid, stage = header.split()
+            name = path.decode()
+            if name in names:
+                if stage != b"0" or mode not in {b"100644", b"100755"}:
+                    raise ValueError("non-regular/unmerged staged file: " + name)
+                paths[name] = oid.decode()
+    if names - paths.keys():
+        raise ValueError("missing staged portable file: " + sorted(names - paths.keys())[0])
+    oids = list(dict.fromkeys(paths.values()))
+    raw = subprocess.check_output(
+        ["git", "cat-file", "--batch"], cwd=root, input=("\n".join(oids) + "\n").encode()
+    )
+    cursor = 0
+    blobs = {}
+    for oid in oids:
+        end = raw.index(b"\n", cursor)
+        _, kind, size = raw[cursor:end].split()
+        if kind != b"blob":
+            raise ValueError("non-blob staged object")
+        cursor = end + 1
+        length = int(size)
+        blobs[oid] = raw[cursor : cursor + length]
+        cursor += length + 1
+    return {n: blobs[oid] for n, oid in paths.items()}
+
+
+def policy_module(evidence: Evidence, expected: str) -> Any:
+    resolved = evidence.resolve("scripts/evidence_first_policy.py", expected)
+    if resolved is None:
+        raise ValueError("missing frozen answer policy")
+    # Pure Python policy only: it has no model, network or production imports.
+    name = "_portable_frozen_evidence_first_policy"
+    spec = importlib.util.spec_from_loader(name, loader=None)
+    assert spec is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    exec(compile(resolved[1], resolved[0], "exec"), module.__dict__)
+    return module
+
+
+def close(a: float, b: float) -> bool:
+    return math.isclose(a, b, rel_tol=1e-10, abs_tol=1e-8)
+
+
+def checked_bytes(name: str, raw: bytes, wanted: str, dependency: bool = False) -> bytes:
+    if digest(raw) == wanted:
+        return raw
+    if dependency:
+        # Git may change only line endings of unchanged repository dependencies.
+        # Reconstructed bytes must match the original SHA-256 exactly. Artifacts
+        # and newly published files never use this fallback.
+        lf = raw.replace(b"\r\n", b"\n")
+        for candidate in (lf, lf.replace(b"\n", b"\r\n")):
+            if digest(candidate) == wanted:
+                return candidate
+    raise ValueError("portable file hash mismatch: " + name)
+
+
+def verify_rows(evidence: Evidence, native: bool, root: Path) -> dict:
+    tokenizer = None
+    if native:
+        from transformers import AutoTokenizer
+
+        # Native checks must consume the checked bytes, including when the
+        # index differs from the working tree. No original machine paths.
+        with tempfile.TemporaryDirectory(prefix="evidence-first-tokenizer-") as temporary:
+            directory = Path(temporary)
+            for name, raw in evidence.files.items():
+                if name.startswith(TOKENIZER + "/"):
+                    (directory / Path(name).name).write_bytes(raw)
+            tokenizer = AutoTokenizer.from_pretrained(
+                directory, local_files_only=True, trust_remote_code=False
+            )
+    first_freeze = evidence.read_json(f"{PREFIX}/rehearsal-001/rehearsal-freeze.json")
+    module = policy_module(evidence, first_freeze["bindings"]["scripts/evidence_first_policy.py"])
+    all_rows = []
+    counts = Counter()
+    for run, (expected_count, expected_stages, per_stage) in RUNS.items():
+        prefix = f"{PREFIX}/{run}/"
+        input_name = (
+            "disposable-inputs.json" if run == "rehearsal-001" else "disposable-stress-inputs.json"
+        )
+        cases = {c["id"]: c for c in evidence.read_json(prefix + input_name)}
+        summary = evidence.read_json(prefix + "summary.json")
+        stage_rows = {}
+        costs = []
+        for name, raw in evidence.files.items():
+            if not name.startswith(prefix):
+                continue
+            if name.endswith("-cost.json") and "/pass-" in name:
+                costs.append(json.loads(raw))
+            if not name.endswith("/requests.jsonl"):
+                continue
+            rows = [json.loads(line) for line in raw.splitlines()]
+            if len(rows) != per_stage:
+                raise ValueError("request arithmetic: " + name)
+            first = None
+            for row in rows:
+                if row["failure"] is not None or row["extra_history_lookups"] != 0:
+                    raise ValueError("failed/unexpected lookup: " + name)
+                case = cases[row["case"]]
+                view = module.make_view(
+                    case["messages"], row["selected_indices"], row["fitted_indices"]
+                )
+                if json.loads(json.dumps(asdict(view.manifest))) != row["manifest"]:
+                    raise ValueError("coverage manifest drift: " + name)
+                sources = [
+                    {
+                        "turn": s.interval.turn,
+                        "start": s.interval.start,
+                        "end": s.interval.end,
+                        "content": s.raw.decode(),
+                        "revision": s.revision,
+                        "sha256": s.turn_sha256,
+                    }
+                    for s in view.sources
+                ]
+                if sources != row["fitted_sources"]:
+                    raise ValueError("fitted source bytes drift: " + name)
+                reference = "\n".join(
+                    f"{m['role'].capitalize()}: {m['content']}"
+                    for i, m in enumerate(case["messages"][:-1])
+                    if i in row["fitted_indices"]
+                )
+                question = case["messages"][-1]["content"]
+                expected_user = f"Reference:\n{reference}\n\nQuestion:\n{question}\n\nAnswer:"
+                if row["prompt_messages"][1] != {"role": "user", "content": expected_user}:
+                    raise ValueError("original prompt/source drift")
+                if not 0 <= len(row["generated_ids"]) <= 64 or len(row["prompt_ids"]) > 512:
+                    raise ValueError("native ID budget")
+                if row["executed_output_tokens"] != len(row["generated_ids"]):
+                    raise ValueError("executed output token count")
+                if row["executed_input_tokens"] != (
+                    len(row["prompt_ids"]) if row["lm_calls"] else 0
+                ):
+                    raise ValueError("executed input token count")
+                if tokenizer is not None:
+                    ids = tokenizer.apply_chat_template(
+                        row["prompt_messages"],
+                        tokenize=True,
+                        add_generation_prompt=True,
+                        return_dict=False,
+                    )
+                    if ids != row["prompt_ids"]:
+                        raise ValueError("native prompt IDs drift")
+                    if (
+                        row["lm_calls"]
+                        and tokenizer.decode(row["generated_ids"], skip_special_tokens=True)
+                        != row["raw_generated"]
+                    ):
+                        raise ValueError("native decoded bytes drift")
+                    if row["policy"]:
+                        result = module.answer(
+                            view,
+                            generate=lambda r=row: r["raw_generated"],
+                            token_count=lambda text: len(
+                                tokenizer.encode(text, add_special_tokens=False)
+                            ),
+                        )
+                        if json.loads(json.dumps(asdict(result))) != row["policy"]:
+                            raise ValueError("frozen policy/support/provenance disagreement")
+                if row["policy"]:
+                    if row["policy"]["payload"] != row["payload"]:
+                        raise ValueError("policy payload drift")
+                    if row["policy"]["route"] == "copy":
+                        p = module.Provenance(**row["policy"]["sources"][0])
+                        if module.reslice(view, p).encode() != row["payload"].encode():
+                            raise ValueError("byte-exact copy drift")
+                        counts["byte_exact_copies"] += 1
+                    if row["policy"]["reason"] == "unsupported synthesis output":
+                        if run == "rehearsal-001":
+                            values = tuple(
+                                module.reslice(view, module.Provenance(**p))
+                                for p in row["policy"]["sources"]
+                            )
+                            if (
+                                len(values) != 2
+                                or row["raw_generated"] != values[1]
+                                or values[0] in row["raw_generated"]
+                            ):
+                                raise ValueError("earlier rejection cause changed")
+                        counts[
+                            "earlier_rejections" if run == "rehearsal-001" else "forced_abstentions"
+                        ] += 1
+                elif row["payload"] != row["raw_generated"].strip():
+                    raise ValueError("original LM control output handling drift")
+                if run == "feasibility-v2":
+                    if len(row["generated_ids"]) != 64 or row["backbone_work"] != {
+                        "positions": len(row["prompt_ids"]) + 63,
+                        "calls": 64,
+                    }:
+                        raise ValueError("64-step stress work disagreement")
+                stable = {
+                    k: row[k]
+                    for k in (
+                        "payload",
+                        "policy",
+                        "manifest",
+                        "fitted_sources",
+                        "selected_indices",
+                        "fitted_indices",
+                        "prompt_ids",
+                        "generated_ids",
+                        "lm_calls",
+                    )
+                }
+                if first is None:
+                    first = stable
+                if row["replay"] and stable != first:
+                    raise ValueError("replay drift")
+                all_rows.append(row)
+            stage_rows[(rows[0]["cell"], rows[0]["pass"])] = rows
+        rows = [r for group in stage_rows.values() for r in group]
+        if len(rows) != expected_count or len(costs) != expected_stages:
+            raise ValueError("run arithmetic")
+        for (cell, number), group in stage_rows.items():
+            if number == 2:
+                earlier = stage_rows[(cell, 1)]
+                for left, right in zip(earlier, group, strict=True):
+                    for key in ("payload", "policy", "manifest", "prompt_ids", "generated_ids"):
+                        if left[key] != right[key]:
+                            raise ValueError("cross-pass drift")
+            if run == "rehearsal-001" and cell.endswith("-P"):
+                controls = stage_rows[(cell[0] + "-LM", number)]
+                for left, right in zip(controls, group, strict=True):
+                    for key in ("manifest", "prompt_messages", "prompt_ids", "fitted_sources"):
+                        if left[key] != right[key]:
+                            raise ValueError("paired-control evidence drift")
+        if (
+            sum(r["lm_calls"] for r in rows) != summary["lm_calls"]
+            or summary["failure"] is not None
+        ):
+            raise ValueError("call/failure summary disagreement")
+        for field, row_field in (
+            (
+                "executed_input_tokens" if run == "rehearsal-001" else "input_tokens",
+                "executed_input_tokens",
+            ),
+            (
+                "executed_output_tokens" if run == "rehearsal-001" else "output_tokens",
+                "executed_output_tokens",
+            ),
+        ):
+            if summary[field] != sum(r[row_field] for r in rows):
+                raise ValueError("token summary disagreement")
+        cpu = sum(c["cpu_seconds"] for c in costs) + summary["shared_cpu_seconds"]
+        wall = sum(c["wall_seconds"] for c in costs) + summary["shared_wall_seconds"]
+        if not close(cpu, summary["total_cpu_seconds"]) or not close(
+            wall, summary["total_wall_seconds"]
+        ):
+            raise ValueError("nonoverlapping resource arithmetic")
+    if (counts["earlier_rejections"], counts["forced_abstentions"]) != (4, 12):
+        raise ValueError("synthesis readiness evidence changed")
+    return {
+        "saved_rows": len(all_rows),
+        **counts,
+        "native_prompt_decode_and_policy": native,
+        "new_model_generations": 0,
+        "synthesis_ready": False,
+        "registered_48_case_study": False,
+    }
+
+
+def verify(root: Path, staged: bool = False, native: bool = True) -> dict:
+    manifest_raw = (
+        subprocess.check_output(["git", "show", ":" + MANIFEST], cwd=root)
+        if staged
+        else (root / MANIFEST).read_bytes()
+    )
+    secret_scan(MANIFEST, manifest_raw)
+    manifest = json.loads(manifest_raw)
+    if manifest["readiness"] != {
+        "synthesis_ready": False,
+        "earlier_missing_premise_outputs": 4,
+        "forced_64_token_abstentions": 12,
+        "registered_48_case_study": False,
+    }:
+        raise ValueError("readiness/registration status drift")
+    expected = {**manifest["repository_dependencies"], **manifest["files"]}
+    files = (
+        read_index(root, set(expected))
+        if staged
+        else {n: (root / portable_path(n)).read_bytes() for n in expected}
+    )
+    reconstructed = 0
+    for name, wanted in expected.items():
+        original = files[name]
+        files[name] = checked_bytes(
+            name,
+            original,
+            wanted,
+            dependency=name in manifest["repository_dependencies"]
+            and name not in manifest["files"],
+        )
+        reconstructed += files[name] != original
+        secret_scan(name, files[name])
+    evidence = Evidence(root, files)
+    allowed_assets = set()
+    for run, name in (
+        ("rehearsal-001", "rehearsal-freeze.json"),
+        ("feasibility-v2", "registration.json"),
+    ):
+        record = evidence.read_json(f"{PREFIX}/{run}/{name}")
+        allowed_assets.update((portable_path(n), h) for n, h in record["assets"].items())
+    declared = {}
+    for key in ("omitted_runtime_bindings", "unavailable_verification_source_bindings"):
+        for item in manifest[key]:
+            declared[(item["record"], item["field"], item["path"], item["sha256"])] = key
+    resolved = omitted = historical = 0
+    for ref in references({n: files[n] for n in manifest["files"]}):
+        record, field, path, wanted = ref
+        if evidence.resolve(path, wanted):
+            resolved += 1
+        elif ref in declared:
+            kind = declared[ref]
+            if kind == "unavailable_verification_source_bindings":
+                if field != "source_files":
+                    raise ValueError("essential binding cannot be a historical receipt omission")
+                historical += 1
+            else:
+                if (portable_path(path), wanted) not in allowed_assets:
+                    raise ValueError("only recorded runtime assets may be omitted")
+                omitted += 1
+        else:
+            raise ValueError("unresolved/undeclared portable binding: " + record + " -> " + path)
+    decision = files["docs/research/evidence-first-answer-path-decision.md"]
+    frozen = files[f"{PREFIX}/rehearsal-001/decision-at-freeze.md"]
+    if (
+        gates(decision) != gates(frozen)
+        or digest(gates(decision)) != manifest["decision_gates_sha256"]
+    ):
+        raise ValueError("decision gates drift")
+    result = verify_rows(evidence, native, root)
+    return {
+        "status": "PASS",
+        "input": "Git index" if staged else "working tree",
+        "files": len(manifest["files"]),
+        "bytes": sum(len(files[n]) for n in manifest["files"]),
+        "repository_dependencies": len(manifest["repository_dependencies"]),
+        "repository_dependency_newline_reconstructions": reconstructed,
+        "resolved_hash_references": resolved,
+        "omitted_runtime_references": omitted,
+        "unavailable_historical_verification_source_references": historical,
+        "excluded_local_files": len(manifest["excluded_local_files"]),
+        "manifest_sha256": digest(manifest_raw),
+        "record": result,
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("action", choices=("prepare", "verify"))
+    parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--staged", action="store_true")
+    parser.add_argument("--no-native", action="store_true")
+    args = parser.parse_args()
+    if args.action == "prepare":
+        manifest = prepare(args.root.resolve())
+        print(
+            json.dumps(
+                {
+                    "included": len(manifest["files"]),
+                    "excluded": len(manifest["excluded_local_files"]),
+                    "unavailable_receipt_sources": len(
+                        manifest["unavailable_verification_source_bindings"]
+                    ),
+                }
+            )
+        )
+    else:
+        print(json.dumps(verify(args.root.resolve(), args.staged, not args.no_native), indent=2))
+
+
+if __name__ == "__main__":
+    main()

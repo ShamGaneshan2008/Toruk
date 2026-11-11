@@ -1,0 +1,149 @@
+"""Portable preservation must verify exact staged bytes and honest omissions."""
+
+import io
+import json
+import subprocess
+import sys
+import zipfile
+from pathlib import Path
+
+import pytest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import verify_evidence_first_record as record  # noqa: E402
+
+
+def test_record_keeps_raw_failures_archives_and_receipts():
+    for name in (
+        "rehearsal-001/pass-1/T-P/requests.jsonl",
+        "feasibility-v2/pass-2-T.log",
+        "feasibility-v2/source.zip",
+        "verification-v2/feasibility-v2-tests.json",
+    ):
+        assert record.classification(record.PREFIX + "/" + name)[0]
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        "verification-20261111/package/bundle.whl",
+        "verification-20261111/owned-lm-smoke/data/heldout.json",
+        "verification-20261111/pipeline/train/checkpoint.pt",
+        "feasibility-v2/__pycache__/cache.pyc",
+    ],
+)
+def test_generated_outputs_and_caches_are_excluded_by_path_without_parsing(name):
+    assert not record.classification(record.PREFIX + "/" + name)[0]
+
+
+def test_unknown_artifact_requires_explicit_review():
+    with pytest.raises(ValueError, match="unclassified"):
+        record.classification(record.PREFIX + "/unrelated/note.txt")
+
+
+def test_secret_scan_checks_archive_members_without_exposing_value():
+    stream = io.BytesIO()
+    with zipfile.ZipFile(stream, "w") as archive:
+        archive.writestr("config.txt", "ghp_" + "a" * 36)
+    with pytest.raises(ValueError, match="potential secret.*source.zip!config.txt"):
+        record.secret_scan("source.zip", stream.getvalue())
+
+
+def test_archive_backslash_traversal_is_rejected():
+    stream = io.BytesIO()
+    with zipfile.ZipFile(stream, "w") as archive:
+        archive.writestr("..\\outside", "text")
+    with pytest.raises(ValueError, match="unsafe"):
+        record.secret_scan("source.zip", stream.getvalue())
+
+
+def test_index_reader_uses_staged_bytes_not_worktree(tmp_path):
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    target = tmp_path / "raw.log"
+    (tmp_path / ".gitattributes").write_text("*.log -text\n")
+    target.write_bytes(b"as-run\r\n")
+    subprocess.run(["git", "add", ".gitattributes", "raw.log"], cwd=tmp_path, check=True)
+    target.write_bytes(b"modified\n")
+    assert record.read_index(tmp_path, {"raw.log"}) == {"raw.log": b"as-run\r\n"}
+    with pytest.raises(ValueError, match="missing staged"):
+        record.read_index(tmp_path, {"missing.log"})
+
+
+def minimal_record(tmp_path, *, include_missing=False, omit_missing=False):
+    decision = (
+        b"### Fixed contribution and decision gates\noriginal\n### Bounded prototype boundary\n"
+    )
+    raw = {
+        "docs/research/evidence-first-answer-path-decision.md": decision,
+        record.PREFIX + "/rehearsal-001/decision-at-freeze.md": decision,
+        record.PREFIX + "/rehearsal-001/rehearsal-freeze.json": b'{"assets":{}}',
+        record.PREFIX + "/feasibility-v2/registration.json": b'{"assets":{}}',
+    }
+    if include_missing:
+        raw["registration.json"] = json.dumps({"bindings": {"missing.json": "0" * 64}}).encode()
+    manifest = {
+        "files": {n: record.digest(b) for n, b in raw.items()},
+        "repository_dependencies": {},
+        "omitted_runtime_bindings": [],
+        "unavailable_verification_source_bindings": [],
+        "decision_gates_sha256": record.digest(record.gates(decision)),
+        "excluded_local_files": {},
+        "readiness": {
+            "synthesis_ready": False,
+            "earlier_missing_premise_outputs": 4,
+            "forced_64_token_abstentions": 12,
+            "registered_48_case_study": False,
+        },
+    }
+    if omit_missing:
+        manifest["omitted_runtime_bindings"] = [
+            {
+                "record": "registration.json",
+                "field": "bindings",
+                "path": "missing.json",
+                "sha256": "0" * 64,
+            }
+        ]
+    for name, content in raw.items():
+        target = tmp_path / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(content)
+    (tmp_path / record.SUPPORT).mkdir(parents=True, exist_ok=True)
+    (tmp_path / record.MANIFEST).write_text(json.dumps(manifest))
+    return manifest
+
+
+def test_corruption_is_detected_before_row_replay(tmp_path):
+    minimal_record(tmp_path)
+    path = tmp_path / "docs/research/evidence-first-answer-path-decision.md"
+    path.write_bytes(b"changed")
+    with pytest.raises(ValueError, match="hash mismatch"):
+        record.verify(tmp_path, native=False)
+
+
+@pytest.mark.parametrize("declare_omission", [False, True])
+def test_essential_missing_binding_cannot_be_blessed_as_omitted_asset(tmp_path, declare_omission):
+    minimal_record(tmp_path, include_missing=True, omit_missing=declare_omission)
+    with pytest.raises(ValueError, match="unresolved/undeclared|only recorded runtime assets"):
+        record.verify(tmp_path, native=False)
+
+
+def test_readiness_cannot_be_changed_to_ready(tmp_path):
+    manifest = minimal_record(tmp_path)
+    manifest["readiness"]["synthesis_ready"] = True
+    (tmp_path / record.MANIFEST).write_text(json.dumps(manifest))
+    with pytest.raises(ValueError, match="readiness"):
+        record.verify(tmp_path, native=False)
+
+
+@pytest.mark.parametrize("raw,wanted", [(b"source\n", b"source\r\n"), (b"source\r\n", b"source\n")])
+def test_only_dependencies_may_restore_line_endings_to_an_exact_recorded_hash(raw, wanted):
+    expected = record.digest(wanted)
+    assert record.checked_bytes("dependency.py", raw, expected, dependency=True) == wanted
+    with pytest.raises(ValueError, match="hash mismatch"):
+        record.checked_bytes("raw.json", raw, expected, dependency=False)
+
+
+def test_dependency_reconstruction_cannot_hide_other_content_changes():
+    with pytest.raises(ValueError, match="hash mismatch"):
+        record.checked_bytes("dependency.py", b"changed\n", record.digest(b"original\r\n"), True)

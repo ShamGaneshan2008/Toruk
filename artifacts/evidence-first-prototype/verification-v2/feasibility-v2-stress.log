@@ -1,0 +1,45 @@
+{"cell": "T", "pass": 1, "failure": null, "requests": 3, "wall_seconds": 46.40883639999993, "cpu_seconds": 96.84375}
+{"cell": "L", "pass": 1, "failure": null, "requests": 3, "wall_seconds": 43.8953547000001, "cpu_seconds": 91.625}
+{"cell": "L", "pass": 2, "failure": null, "requests": 3, "wall_seconds": 43.51556579999942, "cpu_seconds": 92.28125}
+{"cell": "T", "pass": 2, "failure": null, "requests": 3, "wall_seconds": 41.17736230000082, "cpu_seconds": 86.515625}
+{
+  "status": "COMPLETE",
+  "failure": null,
+  "scope": "64-step disposable resource diagnostic; no quality comparison",
+  "requests": 12,
+  "lm_calls": 12,
+  "input_tokens": 5760,
+  "output_tokens": 768,
+  "requests_with_unknown_lm_accounting": 0,
+  "requests_with_64_generated_tokens": 12,
+  "max_request_wall_seconds": 12.73414270000012,
+  "max_request_cpu_seconds": 25.1875,
+  "old_proposal_exceedances": [],
+  "cold_wall_seconds": 174.99711920000027,
+  "cold_cpu_seconds": 367.265625,
+  "shared_wall_seconds": 8.116007878671553,
+  "shared_cpu_seconds": 7.03125,
+  "total_wall_seconds": 183.11312707867182,
+  "total_cpu_seconds": 374.296875,
+  "peak_private_bytes": 4119744512,
+  "peak_disk_bytes": 1001300376,
+  "proposed_caps": {
+    "request_wall_seconds": 26,
+    "request_cpu_seconds": 51,
+    "max_nonrequest_wall_seconds": 10.70597379999981,
+    "max_nonrequest_cpu_seconds": 25.296875,
+    "cell_pass_wall_seconds": 1296,
+    "cell_pass_cpu_seconds": 2550,
+    "shared_wall_seconds": 390,
+    "shared_cpu_seconds": 338,
+    "overall_wall_seconds": 10758,
+    "overall_cpu_seconds": 20738,
+    "memory_bytes": 6442450944,
+    "disk_bytes": 3221225472,
+    "status": "proposal only; 48-case study remains unregistered"
+  },
+  "registered_benchmark_cases": 0,
+  "heldout_inputs": 0,
+  "extra_history_lookups": 0,
+  "preserved_rehearsal_001": true
+}

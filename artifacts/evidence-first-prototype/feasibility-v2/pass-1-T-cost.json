@@ -1,0 +1,91 @@
+{
+  "cell": "T",
+  "pass": 1,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\evidence_first_feasibility_v2.py",
+    "worker",
+    "--selector",
+    "T",
+    "--pass-number",
+    "1"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall_seconds": 46.40883639999993,
+  "cpu_seconds": 96.84375,
+  "controller_cpu_seconds": 10.078125,
+  "peak_private_bytes": 4097785856,
+  "peak_rss_bytes": 2507100160,
+  "peak_disk_bytes": 1001122740,
+  "max_monitor_gap_seconds": 0.08439480000015465,
+  "per_request_resources": {
+    "0": {
+      "rss": 2507100160,
+      "private": 4083138560,
+      "disk": 1001067870,
+      "sampled": true,
+      "end_memory": {
+        "rss": 2440925184,
+        "vms": 4035674112,
+        "num_page_faults": 1610683,
+        "peak_wset": 2466197504,
+        "wset": 2440925184,
+        "peak_paged_pool": 2865912,
+        "paged_pool": 940128,
+        "peak_nonpaged_pool": 58336,
+        "nonpaged_pool": 58336,
+        "pagefile": 4035674112,
+        "peak_pagefile": 4079222784,
+        "private": 4035674112
+      },
+      "private_peak_upper_bound": 4097785856,
+      "disk_peak_upper_bound": 1001122740
+    },
+    "1": {
+      "rss": 2501226496,
+      "private": 4074475520,
+      "disk": 1001084347,
+      "sampled": true,
+      "end_memory": {
+        "rss": 2432167936,
+        "vms": 4026855424,
+        "num_page_faults": 1918207,
+        "peak_wset": 2466287616,
+        "wset": 2432167936,
+        "peak_paged_pool": 2865912,
+        "paged_pool": 940128,
+        "peak_nonpaged_pool": 58608,
+        "nonpaged_pool": 58336,
+        "pagefile": 4026855424,
+        "peak_pagefile": 4079222784,
+        "private": 4026855424
+      },
+      "private_peak_upper_bound": 4097785856,
+      "disk_peak_upper_bound": 1001122740
+    },
+    "2": {
+      "rss": 2501173248,
+      "private": 4075233280,
+      "disk": 1001103588,
+      "sampled": true,
+      "end_memory": {
+        "rss": 2431881216,
+        "vms": 4027117568,
+        "num_page_faults": 2231152,
+        "peak_wset": 2466287616,
+        "wset": 2431881216,
+        "peak_paged_pool": 2865912,
+        "paged_pool": 940128,
+        "peak_nonpaged_pool": 58608,
+        "nonpaged_pool": 58336,
+        "pagefile": 4027117568,
+        "peak_pagefile": 4079222784,
+        "private": 4027117568
+      },
+      "private_peak_upper_bound": 4097785856,
+      "disk_peak_upper_bound": 1001122740
+    }
+  },
+  "requests": 3
+}
