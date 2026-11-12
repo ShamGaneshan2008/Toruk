@@ -1,0 +1,322 @@
+[
+  {
+    "id": "sf1-01-orchidlathe",
+    "category": "copy",
+    "binding": [
+      "orchidlathe",
+      "etching"
+    ],
+    "scope": [
+      "m30"
+    ],
+    "payload": "  \u03bb\tetch-406  ",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m30",
+      "start": 26,
+      "end": 41,
+      "value": "  \u03bb\tetch-406  "
+    },
+    "corrections": []
+  },
+  {
+    "id": "sf1-02-basaltprism",
+    "category": "copy",
+    "binding": [
+      "basaltprism",
+      "weft"
+    ],
+    "scope": [
+      "m46"
+    ],
+    "payload": "cafe\u0301  \u0394/8",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m46",
+      "start": 23,
+      "end": 35,
+      "value": "cafe\u0301  \u0394/8"
+    },
+    "corrections": []
+  },
+  {
+    "id": "sf1-03-willowdynamo",
+    "category": "copy",
+    "binding": [
+      "willowdynamo",
+      "stencil"
+    ],
+    "scope": [
+      "m30"
+    ],
+    "payload": "A\tB   C/509",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m30",
+      "start": 27,
+      "end": 38,
+      "value": "A\tB   C/509"
+    },
+    "corrections": []
+  },
+  {
+    "id": "sf1-04-pewterharbor",
+    "category": "binding",
+    "binding": [
+      "pewterharbor",
+      "berth"
+    ],
+    "scope": [
+      "m45",
+      "m46"
+    ],
+    "payload": "south stair 214",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m45",
+      "start": 25,
+      "end": 40,
+      "value": "south stair 214"
+    },
+    "corrections": []
+  },
+  {
+    "id": "sf1-05-linenbeacon",
+    "category": "binding",
+    "binding": [
+      "linenbeacon",
+      "signal"
+    ],
+    "scope": [
+      "m29",
+      "m30"
+    ],
+    "payload": "spiral-342",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m29",
+      "start": 25,
+      "end": 35,
+      "value": "spiral-342"
+    },
+    "corrections": []
+  },
+  {
+    "id": "sf1-06-porcelainrook",
+    "category": "binding",
+    "binding": [
+      "porcelainrook",
+      "stamp"
+    ],
+    "scope": [
+      "m45",
+      "m46"
+    ],
+    "payload": "UNKNOWN",
+    "covered_state": "ambiguous/conflicting",
+    "unparsed_turns": [],
+    "source": null,
+    "corrections": []
+  },
+  {
+    "id": "sf1-07-hazelwinch",
+    "category": "correction",
+    "binding": [
+      "hazelwinch",
+      "tension"
+    ],
+    "scope": [
+      "m29",
+      "m30"
+    ],
+    "payload": "19 kN",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m30",
+      "start": 37,
+      "end": 42,
+      "value": "19 kN"
+    },
+    "corrections": [
+      [
+        {
+          "turn": "m29",
+          "start": 25,
+          "end": 30,
+          "value": "12 kN"
+        },
+        {
+          "turn": "m30",
+          "start": 37,
+          "end": 42,
+          "value": "19 kN"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "sf1-08-marbleshuttle",
+    "category": "correction",
+    "binding": [
+      "marbleshuttle",
+      "socket"
+    ],
+    "scope": [
+      "m45",
+      "m46"
+    ],
+    "payload": "oval-268",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m45",
+      "start": 27,
+      "end": 35,
+      "value": "oval-268"
+    },
+    "corrections": []
+  },
+  {
+    "id": "sf1-09-indigocistern",
+    "category": "correction",
+    "binding": [
+      "indigocistern",
+      "valve"
+    ],
+    "scope": [
+      "m29",
+      "m30"
+    ],
+    "payload": "port-948",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m30",
+      "start": 87,
+      "end": 95,
+      "value": "port-948"
+    },
+    "corrections": [
+      [
+        {
+          "turn": "m29",
+          "start": 26,
+          "end": 34,
+          "value": "port-153"
+        },
+        {
+          "turn": "m30",
+          "start": 38,
+          "end": 46,
+          "value": "port-627"
+        }
+      ],
+      [
+        {
+          "turn": "m30",
+          "start": 38,
+          "end": 46,
+          "value": "port-627"
+        },
+        {
+          "turn": "m30",
+          "start": 87,
+          "end": 95,
+          "value": "port-948"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "sf1-10-copperaviary",
+    "category": "coverage",
+    "binding": [
+      "copperaviary",
+      "password"
+    ],
+    "scope": [
+      "m46"
+    ],
+    "payload": "UNKNOWN",
+    "covered_state": "absent-in-complete-scope",
+    "unparsed_turns": [],
+    "source": null,
+    "corrections": []
+  },
+  {
+    "id": "sf1-11-satinviaduct",
+    "category": "coverage",
+    "binding": [
+      "satinviaduct",
+      "rendezvous"
+    ],
+    "scope": [
+      "m0",
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m5",
+      "m6",
+      "m7",
+      "m8",
+      "m9",
+      "m10",
+      "m11",
+      "m12",
+      "m13",
+      "m14",
+      "m15",
+      "m16",
+      "m17",
+      "m18",
+      "m19",
+      "m20",
+      "m21",
+      "m22",
+      "m23",
+      "m24",
+      "m25",
+      "m26",
+      "m27",
+      "m28",
+      "m29",
+      "m30"
+    ],
+    "payload": "west arch 386",
+    "covered_state": "supported",
+    "unparsed_turns": [],
+    "source": {
+      "turn": "m30",
+      "start": 30,
+      "end": 43,
+      "value": "west arch 386"
+    },
+    "corrections": []
+  },
+  {
+    "id": "sf1-12-cedargyroscope",
+    "category": "coverage",
+    "binding": [
+      "cedargyroscope",
+      "key"
+    ],
+    "scope": [
+      "m45",
+      "m46"
+    ],
+    "payload": "UNKNOWN",
+    "covered_state": "absent-in-complete-scope",
+    "unparsed_turns": [
+      "m45"
+    ],
+    "source": null,
+    "corrections": []
+  }
+]

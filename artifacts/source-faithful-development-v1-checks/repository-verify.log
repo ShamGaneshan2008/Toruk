@@ -1,0 +1,800 @@
+
+> check
+> node --check api/chat.js && node --check api/status.js && node --check lib/proxy.js && node --check scripts/dev.mjs
+
+
+{"status": "PASS", "seconds": 1.280615300000136, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-web-check.log"}
+
+> test
+> node --test tests/*.test.mjs
+
+\u2714 HTTP backend deadlines and busy responses retain actionable safe semantics (24.1371ms)
+\u2714 long conversations fail visibly instead of silently dropping the earliest turns (0.7512ms)
+\u2714 empty backend replies cannot poison the next browser history (1.4957ms)
+\u2714 backend request errors do not expose private exception details (0.6493ms)
+\u2714 chunked request bodies are cancelled when they cross the byte limit (1.0624ms)
+\u2714 impossible token counts, timings and source IDs are rejected (4.1186ms)
+\u2714 unready model has an actionable reason and never forwards backend exception text (2.7195ms)
+\u2714 unconfigured and unavailable inference return errors, never answers (0.9216ms)
+\u2714 normal Toruk proxy validates metrics and keeps token off the browser response (0.831ms)
+\u2714 empty and long messages, invalid budget, and malformed backend are rejected (1.6882ms)
+\u2714 status and client history clear remain independent of backend sessions (0.9465ms)
+\u2714 status retains the full backbone and trained selector identities (0.4312ms)
+\u2714 follow-up request forwards the browser history in order (0.5921ms)
+\u2714 full reported history reaches inference without dropped or rewritten turns (1.5079ms)
+\u2714 TORUK metrics are accepted only for a matching TORUK request (0.4535ms)
+\u2714 production and preview reject a plaintext backend URL (0.4013ms)
+\u2714 backend timeout is a bounded visible error (0.3509ms)
+\u2714 static Vercel project declares bounded API functions and visible mode labels (7.4387ms)
+\u2714 page disables chat with a reason, recovers on Retry, and sends generated history (28.5657ms)
+\u2714 page distinguishes a Toruk-trained smoke fixture from external pretrained weights (5.6021ms)
+\ufe63 live page handlers send a normal question and follow-up through the real proxy (0.2607ms) # SKIP
+\u2139 tests 21
+\u2139 suites 0
+\u2139 pass 20
+\u2139 fail 0
+\u2139 cancelled 0
+\u2139 skipped 1
+\u2139 todo 0
+\u2139 duration_ms 122.9423
+
+{"status": "PASS", "seconds": 0.5565249000001131, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-web-tests.log"}
+Obtaining file:///D:/Toruk
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: toruk-lm
+  Building editable for toruk-lm (pyproject.toml): started
+  Building editable for toruk-lm (pyproject.toml): finished with status 'done'
+  Created wheel for toruk-lm: filename=toruk_lm-0.1.0-0.editable-py3-none-any.whl size=1608 sha256=2352e909aebd263a8666436680156324d09e86a1ba78946b740b73241607d338
+  Stored in directory: C:\Users\susee\AppData\Local\Temp\pip-ephem-wheel-cache-og_5tloo\wheels\8f\a9\84\f389ab2b6a86306c6c945dc5d0e3b40392af34ea37e23f2512
+Successfully built toruk-lm
+Installing collected packages: toruk-lm
+  Attempting uninstall: toruk-lm
+    Found existing installation: toruk-lm 0.1.0
+    Uninstalling toruk-lm-0.1.0:
+      Successfully uninstalled toruk-lm-0.1.0
+Successfully installed toruk-lm-0.1.0
+
+{"status": "PASS", "seconds": 7.2971081000000595, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-install-local.log"}
+No broken requirements found.
+
+{"status": "PASS", "seconds": 0.8031083999999282, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-package.log"}
+0.1.0
+
+{"status": "PASS", "seconds": 0.03828419999990729, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-import.log"}
+usage: toruk [-h]
+             {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+             ...
+
+Toruk-LM research foundation
+
+positional arguments:
+  {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+    diagnose            report actual runtime and CUDA availability
+    validate-config     validate a versioned reproduction config
+    audit-evidence      validate sealed evidence and rescore raw answers
+    compare-replay      require exact generated answers and score parity
+    make-fixture        generate document-separated smoke-test text
+    validate            verify split checksums, config and checkpoint identity
+    reproduce           run a bounded foundation or versioned research config
+    summarize           verify a sealed run and regenerate result tables
+    train               train ordinary LM; CPU; fixed learning rate
+    evaluate            local-context loss and autoregressive continuations
+    generate            greedy local-context inference
+    make-worlds         create frozen controlled worlds and LM exports
+    evaluate-worlds     validation-only generated factual answers
+    train-controlled    bounded ordinary/recurrent world training
+    evaluate-controlled
+                        validation-only world answers
+    effect-labels       offline bounded paired supervision
+    fit-effect          fit effect predictor on training labels only
+    evaluate-effect     offline validation effect diagnostics
+    controlled-pilot    bounded validation prerequisite/comparison pipeline
+    verify-m6           reproduce frozen M6 answers without retraining
+    generalization      bounded exploratory M7 held-out failure study
+    evaluate-heldout    one protocol-bound M7 cell/checkpoint
+
+options:
+  -h, --help            show this help message and exit
+
+{"status": "PASS", "seconds": 2.210076900000331, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-help.log"}
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "logical_cpus": 12,
+  "torch": "2.15.0+cpu",
+  "cuda_available": false,
+  "cuda_devices": [],
+  "training_device": "cpu",
+  "tokenizer": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7"
+}
+
+{"status": "PASS", "seconds": 2.2816037999996297, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-diagnose.log"}
+Verified 3 frozen experiment source files.
+
+{"status": "PASS", "seconds": 0.07192299999996976, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-frozen-sources.log"}
+All checks passed!
+
+{"status": "PASS", "seconds": 0.19130829999994603, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-lint.log"}
+172 files already formatted
+
+{"status": "PASS", "seconds": 0.10636300000032861, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-format.log"}
+Success: no issues found in 36 source files
+
+{"status": "PASS", "seconds": 94.92591319999974, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-types.log"}
+Success: no issues found in 36 source files
+
+{"status": "PASS", "seconds": 48.355501800000184, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-types-linux.log"}
+........................................................................ [ 15%]
+........................................................................ [ 30%]
+........................................................................ [ 45%]
+........................................................................ [ 60%]
+........................................................................ [ 75%]
+........................................................................ [ 90%]
+...............................................                          [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\_pytest\cacheprovider.py:487
+  D:\Toruk\.venv\Lib\site-packages\_pytest\cacheprovider.py:487: PytestCacheWarning: could not create cache path D:\Toruk\.pytest_cache\v\cache\nodeids: [WinError 5] Access is denied: 'D:\\Toruk\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/nodeids", sorted(str(n) for n in self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+479 passed, 1 warning in 145.34s (0:02:25)
+
+{"status": "PASS", "seconds": 146.9238045000002, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-tests.log"}
+Validated 24 independent cases; no model inference.
+
+{"status": "PASS", "seconds": 2.160773699999936, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-independent-cases.log"}
+{"status": "complete", "criterion": false, "seconds": 2.6425991999999496, "output": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\owned-lm-smoke"}
+
+{"status": "PASS", "seconds": 4.954904500000339, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-owned-lm-smoke.log"}
+{
+  "status": "PASS",
+  "mode": "smoke",
+  "conditions": 8,
+  "answers": 48,
+  "reference_compared": false,
+  "research_gate": false,
+  "nll": {
+    "23-memory_off-full": 5.743653801701615,
+    "23-memory_on-full": 5.718839200130632,
+    "23-memory_on-no_read": 5.7430105799572475,
+    "23-memory_on-no_update": 5.73974350919941,
+    "23-ordinary-full": 5.743653801701615,
+    "23-ordinary-rolling": 5.743653801701615,
+    "23-ordinary_matched-full": 5.623082528544042,
+    "23-ordinary_matched-rolling": 5.623082528544042
+  },
+  "seconds": 2.6425991999999496
+}
+
+{"status": "PASS", "seconds": 3.6813907000000654, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-owned-lm-validate.log"}
+PASS: chat formatting/splits checked; inherited-exposure gate blocks training
+
+{"status": "PASS", "seconds": 2.014230900000257, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-conversation-data.log"}
+{"experimental": true, "conversationally_qualified": false, "model": "toruk-owned-next-token-v1", "variant": "memory_on", "answer": "\ufffd\u0006\u001d\ufffd", "generated_ids": [177, 9, 32, 186], "input_tokens": 23, "forward_positions": 125, "commits": 0, "allocated_state_bytes": 128, "budget_exhausted": true}
+
+{"status": "PASS", "seconds": 3.6249370999998973, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-owned-lm-generate.log"}
+{
+  "scope": "ordinary-LM smoke fixture; no factual or memory claim",
+  "parameters": 44096,
+  "steps": 2,
+  "training_targets": 353,
+  "validation_loss_nats_per_byte_or_eos": 5.395493544541396,
+  "validation_targets": 154,
+  "generated_tokens": 8,
+  "saved_generation_seconds": 0.008167199999661534,
+  "saved_mean_generation_ms": 8.167199999661534,
+  "saved_generation_tokens_per_second": 979.527867608426,
+  "saved_training_seconds": 0.02145920000020851,
+  "saved_training_tokens_per_second": 16449.821055611115,
+  "checkpoint_sha256": "da07ff8bc42ea76e3a91952cc1f21de3bf7e639df0beaf77b0ba277da625873c",
+  "run_manifest_sha256": "356e4183fa2a04f55e24c0a6a465f5aebd3d4a9a93f2da79155607ae5d095295",
+  "uncertainty": "NOT_TESTED; one seed and synthetic fixture",
+  "recurrent_state_bytes": 0,
+  "peak_memory_bytes": null,
+  "timing_note": "stored run timings; rescore/generation verify outputs but do not replace timings"
+}
+
+{"status": "PASS", "seconds": 3.946509800000058, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-reproduce.log"}
+{
+  "manifest_sha256": "e273c4edb571d9811588205377eca60e73ff38fd30cf155021230ae49f3c9592",
+  "splits": {
+    "test": {
+      "documents": 1,
+      "ids": [
+        "fixture-17-0005"
+      ],
+      "sha256": "5ca25658f3719e359271e105be477c29f0c7dd270e7fd07e4382c76ee3628dd6"
+    },
+    "train": {
+      "documents": 8,
+      "ids": [
+        "fixture-17-0003",
+        "fixture-17-0004",
+        "fixture-17-0007",
+        "fixture-17-0002",
+        "fixture-17-0000",
+        "fixture-17-0006",
+        "fixture-17-0009",
+        "fixture-17-0001"
+      ],
+      "sha256": "3ccd3c409cec351fc85266c127170dad66e2c383e17c35f811285ff1fa05f3fa"
+    },
+    "validation": {
+      "documents": 1,
+      "ids": [
+        "fixture-17-0008"
+      ],
+      "sha256": "ced09d63618de0f1defa6a3bc4e774a3c1720a3674a59dd34f4e0bd03bc94ba0"
+    }
+  },
+  "config_sha256": "709f216a694a13b16e3ae6d81ba574c65348b48e367e6c4e390361fbde302adb",
+  "checkpoint_sha256": "da07ff8bc42ea76e3a91952cc1f21de3bf7e639df0beaf77b0ba277da625873c",
+  "next_step": 2
+}
+
+{"status": "PASS", "seconds": 2.0253308999999717, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-validate.log"}
+{
+  "scope": "ordinary-LM smoke fixture; no factual or memory claim",
+  "parameters": 44096,
+  "steps": 2,
+  "training_targets": 353,
+  "validation_loss_nats_per_byte_or_eos": 5.395493544541396,
+  "validation_targets": 154,
+  "generated_tokens": 8,
+  "saved_generation_seconds": 0.008167199999661534,
+  "saved_mean_generation_ms": 8.167199999661534,
+  "saved_generation_tokens_per_second": 979.527867608426,
+  "saved_training_seconds": 0.02145920000020851,
+  "saved_training_tokens_per_second": 16449.821055611115,
+  "checkpoint_sha256": "da07ff8bc42ea76e3a91952cc1f21de3bf7e639df0beaf77b0ba277da625873c",
+  "run_manifest_sha256": "356e4183fa2a04f55e24c0a6a465f5aebd3d4a9a93f2da79155607ae5d095295",
+  "uncertainty": "NOT_TESTED; one seed and synthetic fixture",
+  "recurrent_state_bytes": 0,
+  "peak_memory_bytes": null,
+  "timing_note": "stored run timings; rescore/generation verify outputs but do not replace timings"
+}
+
+{"status": "PASS", "seconds": 3.734931299999971, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-summarize.log"}
+{
+  "status": "PASS",
+  "config": {
+    "schema": "toruk-reproduce-v1",
+    "mode": "smoke",
+    "seed": 23,
+    "fixture_seed": 17,
+    "steps": 2,
+    "worlds": 2,
+    "answer_budget": 2,
+    "seconds": 110
+  }
+}
+
+{"status": "PASS", "seconds": 2.1122371999999814, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-research-config.log"}
+{
+  "status": "PASS",
+  "purpose": "execution smoke; no research-quality claim",
+  "results": {
+    "ordinary": {
+      "groups": {
+        "ambiguous": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "corrected": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unchanged_entity": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unknown": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_date": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_number": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        }
+      },
+      "resume": "PASS",
+      "checkpoint_sha256": "d76321f3abd67b9327ab36441cb34617b3b157f23bc056ddc4b6bde16bd7a45b"
+    },
+    "recurrent": {
+      "groups": {
+        "ambiguous": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "corrected": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unchanged_entity": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unknown": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_date": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "unrelated_number": {
+          "examples": 2,
+          "correct": 0,
+          "accuracy": 0.0
+        }
+      },
+      "resume": "PASS",
+      "checkpoint_sha256": "64ea5751173dca2e3d4e09aa95952893dbd9dc282181ecb5a4acfc618c1caee4"
+    }
+  },
+  "elapsed_seconds": 2.5651449000001776,
+  "cumulative_process_peak_bytes": 301281280,
+  "package_sha256": "ad3264a4a03d76b6bd9b7a2d40931261c945809274fb20941c51d4a3ee5ce0f7",
+  "config_sha256": "a6aa262bb3feac7f744aea64f123de5602336cf1823dd7ca75e51618de5fc6f2"
+}
+
+{"status": "PASS", "seconds": 5.157713300000069, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-research-smoke.log"}
+running egg_info
+writing src\toruk_lm.egg-info\PKG-INFO
+writing dependency_links to src\toruk_lm.egg-info\dependency_links.txt
+writing entry points to src\toruk_lm.egg-info\entry_points.txt
+writing requirements to src\toruk_lm.egg-info\requires.txt
+writing top-level names to src\toruk_lm.egg-info\top_level.txt
+reading manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+running sdist
+running egg_info
+writing src\toruk_lm.egg-info\PKG-INFO
+writing dependency_links to src\toruk_lm.egg-info\dependency_links.txt
+writing entry points to src\toruk_lm.egg-info\entry_points.txt
+writing requirements to src\toruk_lm.egg-info\requires.txt
+writing top-level names to src\toruk_lm.egg-info\top_level.txt
+reading manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+running check
+creating toruk_lm-0.1.0
+creating toruk_lm-0.1.0\configs
+creating toruk_lm-0.1.0\docs
+creating toruk_lm-0.1.0\docs\research
+creating toruk_lm-0.1.0\docs\research\independent-replication-v1
+creating toruk_lm-0.1.0\scripts
+creating toruk_lm-0.1.0\src\toruk_lm
+creating toruk_lm-0.1.0\src\toruk_lm.egg-info
+creating toruk_lm-0.1.0\tests
+copying files to toruk_lm-0.1.0...
+copying MANIFEST.in -> toruk_lm-0.1.0
+copying README.md -> toruk_lm-0.1.0
+copying pyproject.toml -> toruk_lm-0.1.0
+copying configs\adversarial-twins-v1.json -> toruk_lm-0.1.0\configs
+copying configs\backbone-qualification-v1.json -> toruk_lm-0.1.0\configs
+copying configs\chat-comparison-v1.json -> toruk_lm-0.1.0\configs
+copying configs\chat-foundation-eval-v1.json -> toruk_lm-0.1.0\configs
+copying configs\chat-launch-gate-v1.json -> toruk_lm-0.1.0\configs
+copying configs\chat-qualification-v1.json -> toruk_lm-0.1.0\configs
+copying configs\chat-release-eval-v2.json -> toruk_lm-0.1.0\configs
+copying configs\claim-closure-v1.json -> toruk_lm-0.1.0\configs
+copying configs\context-eval-dev-v1.json -> toruk_lm-0.1.0\configs
+copying configs\context-eval-final-v1.json -> toruk_lm-0.1.0\configs
+copying configs\conversation-readiness-v1.json -> toruk_lm-0.1.0\configs
+copying configs\copy-gap-probe-v1.json -> toruk_lm-0.1.0\configs
+copying configs\foundation.json -> toruk_lm-0.1.0\configs
+copying configs\frozen-source-sha256.json -> toruk_lm-0.1.0\configs
+copying configs\independent-chat-cards-v1.json -> toruk_lm-0.1.0\configs
+copying configs\m6-successor-v1-execution.json -> toruk_lm-0.1.0\configs
+copying configs\m6-successor-v1.json -> toruk_lm-0.1.0\configs
+copying configs\minimal-lm-demo-v1.json -> toruk_lm-0.1.0\configs
+copying configs\owned-lm-primary-v1.json -> toruk_lm-0.1.0\configs
+copying configs\owned-lm-smoke-v1.json -> toruk_lm-0.1.0\configs
+copying configs\owned-reproduction-requirements-v1.txt -> toruk_lm-0.1.0\configs
+copying configs\owned-reproduction-v1.json -> toruk_lm-0.1.0\configs
+copying configs\qwen-development-v5.json -> toruk_lm-0.1.0\configs
+copying configs\qwen-long-history-v1.json -> toruk_lm-0.1.0\configs
+copying configs\qwen-long-history-v2.json -> toruk_lm-0.1.0\configs
+copying configs\qwen-long-history-v3.json -> toruk_lm-0.1.0\configs
+copying configs\reproduce-primary-v1.json -> toruk_lm-0.1.0\configs
+copying configs\reproduce-smoke-v1.json -> toruk_lm-0.1.0\configs
+copying docs\local-chat.md -> toruk_lm-0.1.0\docs
+copying docs\reproducibility.md -> toruk_lm-0.1.0\docs
+copying docs\research\adversarial-twins-v1-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\chat-launch-gate-20261107.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\conversation-format-v1-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\conversation-format-v1-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\conversation-readiness-v1-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\copy-gap-v1-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\independent-replication-v1-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\independent-replication-v1-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\integrated-memory-v1-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\integrated-memory-v1-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\owned-lm-v1-design.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\owned-lm-v1-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\qualification-v1-paper-outline.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\qualification-v1-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\qualification-v1-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\routing-v2-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\routing-v2-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\value-fidelity-dev-v1-protocol.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\value-fidelity-dev-v1-results.md -> toruk_lm-0.1.0\docs\research
+copying docs\research\independent-replication-v1\README.md -> toruk_lm-0.1.0\docs\research\independent-replication-v1
+copying docs\research\independent-replication-v1\claim-ledger.json -> toruk_lm-0.1.0\docs\research\independent-replication-v1
+copying docs\research\independent-replication-v1\claim-ledger.md -> toruk_lm-0.1.0\docs\research\independent-replication-v1
+copying docs\research\independent-replication-v1\draft.md -> toruk_lm-0.1.0\docs\research\independent-replication-v1
+copying docs\research\independent-replication-v1\positioning.md -> toruk_lm-0.1.0\docs\research\independent-replication-v1
+copying docs\research\independent-replication-v1\references.bib -> toruk_lm-0.1.0\docs\research\independent-replication-v1
+copying docs\research\independent-replication-v1\reproduce.md -> toruk_lm-0.1.0\docs\research\independent-replication-v1
+copying scripts\adversarial_twins.py -> toruk_lm-0.1.0\scripts
+copying scripts\analyze_integrated_memory.py -> toruk_lm-0.1.0\scripts
+copying scripts\audit_chat_advantage.py -> toruk_lm-0.1.0\scripts
+copying scripts\audit_owned_lm.py -> toruk_lm-0.1.0\scripts
+copying scripts\audit_qwen_development_v4.py -> toruk_lm-0.1.0\scripts
+copying scripts\audit_routing_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\audit_value_fidelity_dev.py -> toruk_lm-0.1.0\scripts
+copying scripts\build_chat_selector_data.py -> toruk_lm-0.1.0\scripts
+copying scripts\build_chat_selector_data_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\check.py -> toruk_lm-0.1.0\scripts
+copying scripts\check_frozen_sources.py -> toruk_lm-0.1.0\scripts
+copying scripts\check_wheel.py -> toruk_lm-0.1.0\scripts
+copying scripts\compare_chat_context.py -> toruk_lm-0.1.0\scripts
+copying scripts\compare_recall_runs.py -> toruk_lm-0.1.0\scripts
+copying scripts\conversation_format_study.py -> toruk_lm-0.1.0\scripts
+copying scripts\conversation_readiness.py -> toruk_lm-0.1.0\scripts
+copying scripts\copy_gap_probe.py -> toruk_lm-0.1.0\scripts
+copying scripts\download_chat_backbone.py -> toruk_lm-0.1.0\scripts
+copying scripts\evaluate_chat_foundation.py -> toruk_lm-0.1.0\scripts
+copying scripts\evaluate_chat_release_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\evaluate_chat_selector_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\evaluate_context_selection.py -> toruk_lm-0.1.0\scripts
+copying scripts\evaluate_local_backbone.py -> toruk_lm-0.1.0\scripts
+copying scripts\evaluate_trained_chat_selector.py -> toruk_lm-0.1.0\scripts
+copying scripts\evidence_first_feasibility_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\evidence_first_policy.py -> toruk_lm-0.1.0\scripts
+copying scripts\evidence_first_rehearsal.py -> toruk_lm-0.1.0\scripts
+copying scripts\independent_cases.py -> toruk_lm-0.1.0\scripts
+copying scripts\independent_replication.py -> toruk_lm-0.1.0\scripts
+copying scripts\m6_successor.py -> toruk_lm-0.1.0\scripts
+copying scripts\make_context_eval.py -> toruk_lm-0.1.0\scripts
+copying scripts\measure_inference_host.py -> toruk_lm-0.1.0\scripts
+copying scripts\package_qualification.py -> toruk_lm-0.1.0\scripts
+copying scripts\package_routing_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\prepare_inference_package.py -> toruk_lm-0.1.0\scripts
+copying scripts\probe_local_chat_quality.py -> toruk_lm-0.1.0\scripts
+copying scripts\probe_ollama_backbone.py -> toruk_lm-0.1.0\scripts
+copying scripts\probe_refusal_carryover.py -> toruk_lm-0.1.0\scripts
+copying scripts\qualify_answer_backbone.py -> toruk_lm-0.1.0\scripts
+copying scripts\qualify_chat_launch.py -> toruk_lm-0.1.0\scripts
+copying scripts\qualify_memory.py -> toruk_lm-0.1.0\scripts
+copying scripts\qualify_ollama_launch.py -> toruk_lm-0.1.0\scripts
+copying scripts\qwen_development_v5.py -> toruk_lm-0.1.0\scripts
+copying scripts\qwen_long_history.py -> toruk_lm-0.1.0\scripts
+copying scripts\qwen_long_history_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\qwen_long_history_v3.py -> toruk_lm-0.1.0\scripts
+copying scripts\rank_budget_study.py -> toruk_lm-0.1.0\scripts
+copying scripts\recall_after.py -> toruk_lm-0.1.0\scripts
+copying scripts\recall_study.py -> toruk_lm-0.1.0\scripts
+copying scripts\recall_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\replay_archived_cell.py -> toruk_lm-0.1.0\scripts
+copying scripts\replay_owned_prerequisites.py -> toruk_lm-0.1.0\scripts
+copying scripts\replay_owned_readiness.py -> toruk_lm-0.1.0\scripts
+copying scripts\replay_refusal_diagnostic.py -> toruk_lm-0.1.0\scripts
+copying scripts\replay_routing_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_conversation_format.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_conversation_readiness.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_independent_replication.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_owned_lm.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_qwen_long_history_v3.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_rank_budget.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_recall.py -> toruk_lm-0.1.0\scripts
+copying scripts\report_value_fidelity_dev.py -> toruk_lm-0.1.0\scripts
+copying scripts\research_claim_closure.py -> toruk_lm-0.1.0\scripts
+copying scripts\seal_m8.py -> toruk_lm-0.1.0\scripts
+copying scripts\seal_run.py -> toruk_lm-0.1.0\scripts
+copying scripts\smoke_chat_foundation.py -> toruk_lm-0.1.0\scripts
+copying scripts\smoke_chat_readiness.py -> toruk_lm-0.1.0\scripts
+copying scripts\smoke_qualification_ui.py -> toruk_lm-0.1.0\scripts
+copying scripts\smoke_vercel_local.py -> toruk_lm-0.1.0\scripts
+copying scripts\source_faithful_development_v1.py -> toruk_lm-0.1.0\scripts
+copying scripts\study_owned_lm.py -> toruk_lm-0.1.0\scripts
+copying scripts\study_routing_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\train_chat_selector.py -> toruk_lm-0.1.0\scripts
+copying scripts\train_chat_selector_v2.py -> toruk_lm-0.1.0\scripts
+copying scripts\validate_owned_reproduction.py -> toruk_lm-0.1.0\scripts
+copying scripts\value_fidelity_dev.py -> toruk_lm-0.1.0\scripts
+copying scripts\verify.py -> toruk_lm-0.1.0\scripts
+copying scripts\verify_evidence_first_record.py -> toruk_lm-0.1.0\scripts
+copying scripts\verify_frozen_m6.py -> toruk_lm-0.1.0\scripts
+copying scripts\verify_portable_research_evidence.py -> toruk_lm-0.1.0\scripts
+copying src\toruk_lm\__init__.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\__main__.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\chat_foundation.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\chat_runtime.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\chat_selector.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\chat_server.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\chat_ui.html -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\cli.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\comparisons.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\context_selection.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\controlled.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\conversation_data.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\copy_diagnostic.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\data.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\effect_predictor.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\effect_training.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\engine.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\generalization.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\inference_server.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\inference_worker.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\integrated_memory.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\integrated_study.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\model.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\ollama_chat.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\owned_data.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\owned_lm.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\owned_training.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\pooled_router.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\rank_budget.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\recurrent.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\relevance_gate.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\reproducibility.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\reproduction.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\source_spans.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\tokenizer.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\validation.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm\worlds.py -> toruk_lm-0.1.0\src\toruk_lm
+copying src\toruk_lm.egg-info\PKG-INFO -> toruk_lm-0.1.0\src\toruk_lm.egg-info
+copying src\toruk_lm.egg-info\SOURCES.txt -> toruk_lm-0.1.0\src\toruk_lm.egg-info
+copying src\toruk_lm.egg-info\dependency_links.txt -> toruk_lm-0.1.0\src\toruk_lm.egg-info
+copying src\toruk_lm.egg-info\entry_points.txt -> toruk_lm-0.1.0\src\toruk_lm.egg-info
+copying src\toruk_lm.egg-info\requires.txt -> toruk_lm-0.1.0\src\toruk_lm.egg-info
+copying src\toruk_lm.egg-info\top_level.txt -> toruk_lm-0.1.0\src\toruk_lm.egg-info
+copying tests\test_adversarial_twins.py -> toruk_lm-0.1.0\tests
+copying tests\test_backbone_qualification.py -> toruk_lm-0.1.0\tests
+copying tests\test_chat.py -> toruk_lm-0.1.0\tests
+copying tests\test_chat_advantage_audit.py -> toruk_lm-0.1.0\tests
+copying tests\test_chat_foundation.py -> toruk_lm-0.1.0\tests
+copying tests\test_chat_release_eval.py -> toruk_lm-0.1.0\tests
+copying tests\test_chat_selector.py -> toruk_lm-0.1.0\tests
+copying tests\test_chat_selector_v2.py -> toruk_lm-0.1.0\tests
+copying tests\test_check_records.py -> toruk_lm-0.1.0\tests
+copying tests\test_claim_closure.py -> toruk_lm-0.1.0\tests
+copying tests\test_compare_recall_runs.py -> toruk_lm-0.1.0\tests
+copying tests\test_comparisons.py -> toruk_lm-0.1.0\tests
+copying tests\test_context_selection.py -> toruk_lm-0.1.0\tests
+copying tests\test_controlled_validation.py -> toruk_lm-0.1.0\tests
+copying tests\test_conversation_data.py -> toruk_lm-0.1.0\tests
+copying tests\test_conversation_format_study.py -> toruk_lm-0.1.0\tests
+copying tests\test_copy_diagnostic.py -> toruk_lm-0.1.0\tests
+copying tests\test_effects.py -> toruk_lm-0.1.0\tests
+copying tests\test_evidence_first_feasibility_v2.py -> toruk_lm-0.1.0\tests
+copying tests\test_evidence_first_policy.py -> toruk_lm-0.1.0\tests
+copying tests\test_evidence_first_record.py -> toruk_lm-0.1.0\tests
+copying tests\test_evidence_first_rehearsal.py -> toruk_lm-0.1.0\tests
+copying tests\test_foundation.py -> toruk_lm-0.1.0\tests
+copying tests\test_frozen_m6_provenance.py -> toruk_lm-0.1.0\tests
+copying tests\test_frozen_sources.py -> toruk_lm-0.1.0\tests
+copying tests\test_generalization.py -> toruk_lm-0.1.0\tests
+copying tests\test_independent_replication.py -> toruk_lm-0.1.0\tests
+copying tests\test_inference_package.py -> toruk_lm-0.1.0\tests
+copying tests\test_inference_server.py -> toruk_lm-0.1.0\tests
+copying tests\test_integrated_memory.py -> toruk_lm-0.1.0\tests
+copying tests\test_m6_successor.py -> toruk_lm-0.1.0\tests
+copying tests\test_merged_cli.py -> toruk_lm-0.1.0\tests
+copying tests\test_ollama_chat.py -> toruk_lm-0.1.0\tests
+copying tests\test_owned_lm.py -> toruk_lm-0.1.0\tests
+copying tests\test_owned_reproduction.py -> toruk_lm-0.1.0\tests
+copying tests\test_pooled_router.py -> toruk_lm-0.1.0\tests
+copying tests\test_portable_research_evidence.py -> toruk_lm-0.1.0\tests
+copying tests\test_qualification.py -> toruk_lm-0.1.0\tests
+copying tests\test_qwen_development_v4.py -> toruk_lm-0.1.0\tests
+copying tests\test_qwen_development_v5.py -> toruk_lm-0.1.0\tests
+copying tests\test_qwen_long_history.py -> toruk_lm-0.1.0\tests
+copying tests\test_qwen_long_history_v2.py -> toruk_lm-0.1.0\tests
+copying tests\test_qwen_long_history_v3.py -> toruk_lm-0.1.0\tests
+copying tests\test_rank_budget.py -> toruk_lm-0.1.0\tests
+copying tests\test_recall_protocol.py -> toruk_lm-0.1.0\tests
+copying tests\test_recall_seals.py -> toruk_lm-0.1.0\tests
+copying tests\test_recall_templates.py -> toruk_lm-0.1.0\tests
+copying tests\test_recurrent.py -> toruk_lm-0.1.0\tests
+copying tests\test_reproducibility.py -> toruk_lm-0.1.0\tests
+copying tests\test_reproduction.py -> toruk_lm-0.1.0\tests
+copying tests\test_sealed_replay.py -> toruk_lm-0.1.0\tests
+copying tests\test_source_faithful_development_v1.py -> toruk_lm-0.1.0\tests
+copying tests\test_source_spans.py -> toruk_lm-0.1.0\tests
+copying tests\test_summary_accounting.py -> toruk_lm-0.1.0\tests
+copying tests\test_validation.py -> toruk_lm-0.1.0\tests
+copying tests\test_value_fidelity_dev.py -> toruk_lm-0.1.0\tests
+copying tests\test_web_integration.py -> toruk_lm-0.1.0\tests
+copying tests\test_worlds.py -> toruk_lm-0.1.0\tests
+copying src\toruk_lm.egg-info\SOURCES.txt -> toruk_lm-0.1.0\src\toruk_lm.egg-info
+Writing toruk_lm-0.1.0\setup.cfg
+Creating tar archive
+removing 'toruk_lm-0.1.0' (and everything under it)
+running egg_info
+writing src\toruk_lm.egg-info\PKG-INFO
+writing dependency_links to src\toruk_lm.egg-info\dependency_links.txt
+writing entry points to src\toruk_lm.egg-info\entry_points.txt
+writing requirements to src\toruk_lm.egg-info\requires.txt
+writing top-level names to src\toruk_lm.egg-info\top_level.txt
+reading manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+running bdist_wheel
+running build
+running build_py
+creating build\lib\toruk_lm
+copying src\toruk_lm\chat_foundation.py -> build\lib\toruk_lm
+copying src\toruk_lm\chat_runtime.py -> build\lib\toruk_lm
+copying src\toruk_lm\chat_selector.py -> build\lib\toruk_lm
+copying src\toruk_lm\chat_server.py -> build\lib\toruk_lm
+copying src\toruk_lm\cli.py -> build\lib\toruk_lm
+copying src\toruk_lm\comparisons.py -> build\lib\toruk_lm
+copying src\toruk_lm\context_selection.py -> build\lib\toruk_lm
+copying src\toruk_lm\controlled.py -> build\lib\toruk_lm
+copying src\toruk_lm\conversation_data.py -> build\lib\toruk_lm
+copying src\toruk_lm\copy_diagnostic.py -> build\lib\toruk_lm
+copying src\toruk_lm\data.py -> build\lib\toruk_lm
+copying src\toruk_lm\effect_predictor.py -> build\lib\toruk_lm
+copying src\toruk_lm\effect_training.py -> build\lib\toruk_lm
+copying src\toruk_lm\engine.py -> build\lib\toruk_lm
+copying src\toruk_lm\generalization.py -> build\lib\toruk_lm
+copying src\toruk_lm\inference_server.py -> build\lib\toruk_lm
+copying src\toruk_lm\inference_worker.py -> build\lib\toruk_lm
+copying src\toruk_lm\integrated_memory.py -> build\lib\toruk_lm
+copying src\toruk_lm\integrated_study.py -> build\lib\toruk_lm
+copying src\toruk_lm\model.py -> build\lib\toruk_lm
+copying src\toruk_lm\ollama_chat.py -> build\lib\toruk_lm
+copying src\toruk_lm\owned_data.py -> build\lib\toruk_lm
+copying src\toruk_lm\owned_lm.py -> build\lib\toruk_lm
+copying src\toruk_lm\owned_training.py -> build\lib\toruk_lm
+copying src\toruk_lm\pooled_router.py -> build\lib\toruk_lm
+copying src\toruk_lm\rank_budget.py -> build\lib\toruk_lm
+copying src\toruk_lm\recurrent.py -> build\lib\toruk_lm
+copying src\toruk_lm\relevance_gate.py -> build\lib\toruk_lm
+copying src\toruk_lm\reproducibility.py -> build\lib\toruk_lm
+copying src\toruk_lm\reproduction.py -> build\lib\toruk_lm
+copying src\toruk_lm\source_spans.py -> build\lib\toruk_lm
+copying src\toruk_lm\tokenizer.py -> build\lib\toruk_lm
+copying src\toruk_lm\validation.py -> build\lib\toruk_lm
+copying src\toruk_lm\worlds.py -> build\lib\toruk_lm
+copying src\toruk_lm\__init__.py -> build\lib\toruk_lm
+copying src\toruk_lm\__main__.py -> build\lib\toruk_lm
+running egg_info
+writing src\toruk_lm.egg-info\PKG-INFO
+writing dependency_links to src\toruk_lm.egg-info\dependency_links.txt
+writing entry points to src\toruk_lm.egg-info\entry_points.txt
+writing requirements to src\toruk_lm.egg-info\requires.txt
+writing top-level names to src\toruk_lm.egg-info\top_level.txt
+reading manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\toruk_lm.egg-info\SOURCES.txt'
+copying src\toruk_lm\chat_ui.html -> build\lib\toruk_lm
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\toruk_lm
+copying build\lib\toruk_lm\chat_foundation.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\chat_runtime.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\chat_selector.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\chat_server.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\chat_ui.html -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\cli.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\comparisons.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\context_selection.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\controlled.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\conversation_data.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\copy_diagnostic.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\data.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\effect_predictor.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\effect_training.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\engine.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\generalization.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\inference_server.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\inference_worker.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\integrated_memory.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\integrated_study.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\model.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\ollama_chat.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\owned_data.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\owned_lm.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\owned_training.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\pooled_router.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\rank_budget.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\recurrent.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\relevance_gate.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\reproducibility.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\reproduction.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\source_spans.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\tokenizer.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\validation.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\worlds.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\__init__.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+copying build\lib\toruk_lm\__main__.py -> build\bdist.win-amd64\wheel\.\toruk_lm
+running install_egg_info
+Copying src\toruk_lm.egg-info to build\bdist.win-amd64\wheel\.\toruk_lm-0.1.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\toruk_lm-0.1.0.dist-info\WHEEL
+creating 'D:\Toruk\.readiness\source-faithful-v1-verify\package\.tmp-b1sap1ro\toruk_lm-0.1.0-py3-none-any.whl' and adding 'build\bdist.win-amd64\wheel' to it
+adding 'toruk_lm/__init__.py'
+adding 'toruk_lm/__main__.py'
+adding 'toruk_lm/chat_foundation.py'
+adding 'toruk_lm/chat_runtime.py'
+adding 'toruk_lm/chat_selector.py'
+adding 'toruk_lm/chat_server.py'
+adding 'toruk_lm/chat_ui.html'
+adding 'toruk_lm/cli.py'
+adding 'toruk_lm/comparisons.py'
+adding 'toruk_lm/context_selection.py'
+adding 'toruk_lm/controlled.py'
+adding 'toruk_lm/conversation_data.py'
+adding 'toruk_lm/copy_diagnostic.py'
+adding 'toruk_lm/data.py'
+adding 'toruk_lm/effect_predictor.py'
+adding 'toruk_lm/effect_training.py'
+adding 'toruk_lm/engine.py'
+adding 'toruk_lm/generalization.py'
+adding 'toruk_lm/inference_server.py'
+adding 'toruk_lm/inference_worker.py'
+adding 'toruk_lm/integrated_memory.py'
+adding 'toruk_lm/integrated_study.py'
+adding 'toruk_lm/model.py'
+adding 'toruk_lm/ollama_chat.py'
+adding 'toruk_lm/owned_data.py'
+adding 'toruk_lm/owned_lm.py'
+adding 'toruk_lm/owned_training.py'
+adding 'toruk_lm/pooled_router.py'
+adding 'toruk_lm/rank_budget.py'
+adding 'toruk_lm/recurrent.py'
+adding 'toruk_lm/relevance_gate.py'
+adding 'toruk_lm/reproducibility.py'
+adding 'toruk_lm/reproduction.py'
+adding 'toruk_lm/source_spans.py'
+adding 'toruk_lm/tokenizer.py'
+adding 'toruk_lm/validation.py'
+adding 'toruk_lm/worlds.py'
+adding 'toruk_lm-0.1.0.dist-info/METADATA'
+adding 'toruk_lm-0.1.0.dist-info/WHEEL'
+adding 'toruk_lm-0.1.0.dist-info/entry_points.txt'
+adding 'toruk_lm-0.1.0.dist-info/top_level.txt'
+adding 'toruk_lm-0.1.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built toruk_lm-0.1.0.tar.gz and toruk_lm-0.1.0-py3-none-any.whl
+* Getting build dependencies for sdist...
+no previously-included directories found matching 'docs\internal'
+* Building sdist...
+no previously-included directories found matching 'docs\internal'
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+no previously-included directories found matching 'docs\internal'
+* Building wheel...
+no previously-included directories found matching 'docs\internal'
+
+{"status": "PASS", "seconds": 14.73369810000031, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-build.log"}
+
+{"status": "PASS", "seconds": 0.040085800000269955, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-diff-check.log"}
+
+{"status": "PASS", "seconds": 0.031150799999977608, "evidence_path": "D:\\Toruk\\.readiness\\source-faithful-v1-verify\\source-faithful-v1-staged-diff-check.log"}
+Failed checks: []

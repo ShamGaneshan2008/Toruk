@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "scope": "offline published-report verification; no model generation",
+  "input": "working tree",
+  "files": 816,
+  "bytes": 25696609,
+  "hash_checks": {
+    "verified_recorded_hashes": 1848,
+    "declared_omitted_dependencies": 478
+  },
+  "snapshot_substitutions": 699,
+  "raw_evidence": {
+    "scores": {
+      "successor/recent": [
+        0,
+        24
+      ],
+      "successor/lexical": [
+        7,
+        24
+      ],
+      "successor/toruk": [
+        5,
+        24
+      ],
+      "qualification/smollm": [
+        15,
+        30
+      ],
+      "qualification/qwen": [
+        18,
+        30
+      ],
+      "long-v1/full": [
+        5,
+        7
+      ],
+      "long-v1/lexical": [
+        7,
+        7
+      ],
+      "long-v1/toruk": [
+        0,
+        1
+      ],
+      "long-v2/full": [
+        5,
+        7
+      ],
+      "long-v2/recent": [
+        1,
+        7
+      ],
+      "long-v2/lexical": [
+        7,
+        7
+      ],
+      "long-v2/toruk": [
+        1,
+        7
+      ],
+      "long-v3/before": [
+        1,
+        7
+      ],
+      "long-v3/lexical": [
+        7,
+        7
+      ],
+      "long-v3/after": [
+        5,
+        7
+      ]
+    },
+    "saved_rows_checked": 205,
+    "native_prompt_and_decode": true,
+    "heldout_generation": false
+  },
+  "original_environment_replay": "NOT RUN; external weights and generated fixtures omitted",
+  "historical_build_binary_hashes": "NOT VERIFIED; deliberately excluded, including wheels",
+  "suspension_cpu_memory": "saved observations audited, not newly measured"
+}

@@ -1,0 +1,34 @@
+{"cell": "T-LM", "pass": 1, "failure": null, "requests": 13, "wall_seconds": 30.057215499999984, "cpu_seconds": 58.09375}
+{"cell": "L-LM", "pass": 1, "failure": null, "requests": 13, "wall_seconds": 29.107064699999682, "cpu_seconds": 59.5}
+{"cell": "T-P", "pass": 1, "failure": null, "requests": 13, "wall_seconds": 10.18176829999993, "cpu_seconds": 17.21875}
+{"cell": "L-P", "pass": 1, "failure": null, "requests": 13, "wall_seconds": 9.13384939999969, "cpu_seconds": 14.765625}
+{"cell": "L-P", "pass": 2, "failure": null, "requests": 13, "wall_seconds": 9.381317800000033, "cpu_seconds": 15.921875}
+{"cell": "T-P", "pass": 2, "failure": null, "requests": 13, "wall_seconds": 9.897344299999986, "cpu_seconds": 16.484375}
+{"cell": "L-LM", "pass": 2, "failure": null, "requests": 13, "wall_seconds": 28.087728700000298, "cpu_seconds": 58.40625}
+{"cell": "T-LM", "pass": 2, "failure": null, "requests": 13, "wall_seconds": 28.213727099999687, "cpu_seconds": 58.015625}
+{
+  "status": "COMPLETE",
+  "failure": null,
+  "registration_sha256": "60712c360bc5bf113a4473fccb81b485524f6617b60be4b48b3a05889bbe3cf6",
+  "requests_recorded": 104,
+  "requests_planned": 104,
+  "lm_calls": 52,
+  "input_tokens": 6176,
+  "output_tokens": 244,
+  "failed_requests": [],
+  "unknown_token_counts": 0,
+  "stage_wall_seconds": 154.0600157999993,
+  "stage_cpu_seconds": 298.40625,
+  "shared": {
+    "wall_seconds": 10.853202602961119,
+    "cpu_seconds": 9.875
+  },
+  "total_wall_seconds": 164.9132184029604,
+  "total_cpu_seconds": 308.28125,
+  "max_request_wall_seconds": 2.056058900000153,
+  "max_request_cpu_seconds": 4.0625,
+  "peak_private_bytes": 4126953472,
+  "peak_disk_bytes": 1002484976,
+  "max_monitor_gap_seconds": 0.12107479999986026,
+  "finalization_boundary": "summary/report/seal serialization outside instrumented total; outer command retained"
+}

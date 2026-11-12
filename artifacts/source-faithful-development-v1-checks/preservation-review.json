@@ -1,0 +1,679 @@
+{
+  "schema": "source-faithful-v1-negative-result-preservation",
+  "base_commit": "bf0f7482f21687db9788d2bfc4555cca5b0dd879",
+  "interpretation": "Negative development result; not a validated improvement",
+  "scores": {
+    "T-LM": "8/12",
+    "L-LM": "7/12",
+    "T-P": "11/12",
+    "L-P": "11/12"
+  },
+  "decision": "Both policy gates failed on known-fact regression; selector superiority failed on the policy tie. Other frozen selector requirements also did not pass.",
+  "original_review_inventory_sha256": "f2866010f81bf63575c891938602321132abafba05c65357293b4d3ddfd97cb7",
+  "original_149_files_byte_unchanged": true,
+  "additions": [
+    "artifacts/source-faithful-development-v1/.gitattributes",
+    "artifacts/source-faithful-development-v1-checks/.gitattributes",
+    "artifacts/source-faithful-development-v1-checks/preservation-review.json"
+  ],
+  "files": {
+    "artifacts/source-faithful-development-v1-checks/.gitattributes": {
+      "sha256": "ca03e1506000807305852c015fec3a7131a32db9ecfaa22d7997f471cced8f35",
+      "bytes": 108
+    },
+    "artifacts/source-faithful-development-v1-checks/baseline-portable.json": {
+      "sha256": "c2f8551c4c7c5945efb6281b7d2c12961a6c67f6ad006b03a6274607abb7d274",
+      "bytes": 23843
+    },
+    "artifacts/source-faithful-development-v1-checks/baseline-portable.log": {
+      "sha256": "bca8ab8db7c671428a8ae77ddd915a9efc75da08813b50c84f8f41949944e617",
+      "bytes": 1648
+    },
+    "artifacts/source-faithful-development-v1-checks/baseline-prototype-record.json": {
+      "sha256": "f51177d222490eae7bbf58f7d55e35a11d462f37291f265805d52f351a8168d7",
+      "bytes": 23847
+    },
+    "artifacts/source-faithful-development-v1-checks/baseline-prototype-record.log": {
+      "sha256": "e1bcf86d356bbfca8b7bf6cccd893dbb1251e8bdcba218e26a2db2783c1ed695",
+      "bytes": 724
+    },
+    "artifacts/source-faithful-development-v1-checks/complete-study-footprint.json": {
+      "sha256": "bc26c4dcb3d919eeb8a12914b1c90638d36c6b9905499cef05cb8862cee4b395",
+      "bytes": 266
+    },
+    "artifacts/source-faithful-development-v1-checks/corrected-prefreeze-tests.json": {
+      "sha256": "1789ba091b8852db79437abf5563adac0b50aa05aa3b0a1824b0c93808ff23b0",
+      "bytes": 24083
+    },
+    "artifacts/source-faithful-development-v1-checks/corrected-prefreeze-tests.log": {
+      "sha256": "30272873755fab84f82899d67cce3d8b1cecba07e191e0ce416a7de0101578b1",
+      "bytes": 182
+    },
+    "artifacts/source-faithful-development-v1-checks/execution.json": {
+      "sha256": "afb2bba7760c39a0dda43ed6802275cfdae278b9e21c89c0efed5989a75b5904",
+      "bytes": 23830
+    },
+    "artifacts/source-faithful-development-v1-checks/execution.log": {
+      "sha256": "139588bb5695469f6d63b32c19d636580b2ec45f280a12675c2f1302f8e126c9",
+      "bytes": 1873
+    },
+    "artifacts/source-faithful-development-v1-checks/final-diff-check.json": {
+      "sha256": "1ff4a972014f2656437c57e46f9144259c461494f0ed50ce94748d670ff37308",
+      "bytes": 23782
+    },
+    "artifacts/source-faithful-development-v1-checks/final-diff-check.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "artifacts/source-faithful-development-v1-checks/final-integrity.json": {
+      "sha256": "0244d9b8b26ca2578457640ebf07b0df2ad9d195a1b3e258745534c762837d1a",
+      "bytes": 25437
+    },
+    "artifacts/source-faithful-development-v1-checks/final-integrity.log": {
+      "sha256": "46ae176fb5c7b6c420c1b581fd7d1e3e3e2818a674db1f2611c122caed4b1154",
+      "bytes": 504
+    },
+    "artifacts/source-faithful-development-v1-checks/final-portable.json": {
+      "sha256": "a89b2608f8c187335cee1f7e33a0336b623e681463af519f2c15cd0b478a68c5",
+      "bytes": 23840
+    },
+    "artifacts/source-faithful-development-v1-checks/final-portable.log": {
+      "sha256": "bca8ab8db7c671428a8ae77ddd915a9efc75da08813b50c84f8f41949944e617",
+      "bytes": 1648
+    },
+    "artifacts/source-faithful-development-v1-checks/final-prototype-record.json": {
+      "sha256": "2e2c9521d18abc026e606d4aaf738461c30a25c2459f05d7086e7687f5af7c1a",
+      "bytes": 23842
+    },
+    "artifacts/source-faithful-development-v1-checks/final-prototype-record.log": {
+      "sha256": "e1bcf86d356bbfca8b7bf6cccd893dbb1251e8bdcba218e26a2db2783c1ed695",
+      "bytes": 724
+    },
+    "artifacts/source-faithful-development-v1-checks/freeze-corrected.json": {
+      "sha256": "13b4619ee92be317f3a32a5915f95ba647d3ba7d8afd37f4d07cf88b80cc8556",
+      "bytes": 23840
+    },
+    "artifacts/source-faithful-development-v1-checks/freeze-corrected.log": {
+      "sha256": "682645b8c0e9f5aa199a3a3166dd9b5e1994cb2dc67634c18353fd4bc65ba802",
+      "bytes": 135
+    },
+    "artifacts/source-faithful-development-v1-checks/freeze.json": {
+      "sha256": "06c6ef56bd68b745d1a479a9c23f81678f37213a241dbfada79caffe836b2f47",
+      "bytes": 23829
+    },
+    "artifacts/source-faithful-development-v1-checks/freeze.log": {
+      "sha256": "1cd4eff71b04b31c19cdb8805ac73c5f7e31d8f17363e05e18aed63718fabe0f",
+      "bytes": 1263
+    },
+    "artifacts/source-faithful-development-v1-checks/native-study-audit.json": {
+      "sha256": "dc30d7ae4a191e0e330acb209e8617efa8c9ccf6ef82f969d5b347cabcda46c5",
+      "bytes": 23841
+    },
+    "artifacts/source-faithful-development-v1-checks/native-study-audit.log": {
+      "sha256": "c341b4ab2a1a832305cd11d61991f7a17d20c4da7d36c4b1882d92a78ebccae5",
+      "bytes": 249
+    },
+    "artifacts/source-faithful-development-v1-checks/new-file-whitespace.json": {
+      "sha256": "28a41c934d1c64ce80186c3e55ef6e77b316ee9ffdf54a4979eae11325189a56",
+      "bytes": 24390
+    },
+    "artifacts/source-faithful-development-v1-checks/new-file-whitespace.log": {
+      "sha256": "35b8beaf1064ee249b575e645e0c283dedbd8f09bceb1ee68ca0178c4906819f",
+      "bytes": 61
+    },
+    "artifacts/source-faithful-development-v1-checks/offline-audit.py": {
+      "sha256": "a853b22aa3edaf63396b7871264a2b389722115d34ffbb0ad2ef97d6d460fda6",
+      "bytes": 3595
+    },
+    "artifacts/source-faithful-development-v1-checks/offline-score-policy-audit.json": {
+      "sha256": "42dd605fbbe3fd8d2acd3c83e8510b448f7c3bdc62a2e5c2bae1be5db28c8975",
+      "bytes": 23857
+    },
+    "artifacts/source-faithful-development-v1-checks/offline-score-policy-audit.log": {
+      "sha256": "2bfa0f245fc8a4642c590e18d3a2edd0416c5cc8d9256fe8c466274e1de79275",
+      "bytes": 188
+    },
+    "artifacts/source-faithful-development-v1-checks/prefreeze-final-tests.json": {
+      "sha256": "654bda6cda1c2b05f487a5bd95f2f10f563488a2ef8abeb5e9f50761528aa9f2",
+      "bytes": 24079
+    },
+    "artifacts/source-faithful-development-v1-checks/prefreeze-final-tests.log": {
+      "sha256": "b606347a37694f2b1b8b3ee191983fc3217f0901ff2c09b55f4d29c48596f378",
+      "bytes": 182
+    },
+    "artifacts/source-faithful-development-v1-checks/prefreeze-focused.json": {
+      "sha256": "494eebad03219a944c889e20adcac10dd17d20548a719eadea7937f0eb84af88",
+      "bytes": 24075
+    },
+    "artifacts/source-faithful-development-v1-checks/prefreeze-focused.log": {
+      "sha256": "13be49f3a178fa330a8617949c3f3d7d5b6ad9f506216a75870334d8b92cf57d",
+      "bytes": 182
+    },
+    "artifacts/source-faithful-development-v1-checks/repository-verify.json": {
+      "sha256": "a571bc2478f9f7291dddc6215faf2dc8a2173d4228451d0dc275d4aeefe859ee",
+      "bytes": 23912
+    },
+    "artifacts/source-faithful-development-v1-checks/repository-verify.log": {
+      "sha256": "aed2377197121fcf212601a85454a5ae8a7b24e8d39d4f3bbe403312184c0adb",
+      "bytes": 45211
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-build.json": {
+      "sha256": "25f60a764e01776883c35a5bfa8a69f8a1b2574f3d695307a4756a1793a163b9",
+      "bytes": 23913
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-build.log": {
+      "sha256": "db39239a2c40f9e3eb59b27793cd6cf427fd942e1603107ca85fd01c8c22df6b",
+      "bytes": 27404
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-conversation-data.json": {
+      "sha256": "76fb6ecb864723adb4477b7e9c9ffa799562dddf17aabc85f9bfc7a7021ac1ea",
+      "bytes": 23946
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-conversation-data.log": {
+      "sha256": "637a539e2685581377f51c400d134a4160f8a26c78023d5b64694914fffe146a",
+      "bytes": 79
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-diagnose.json": {
+      "sha256": "0926327da358c527cf688b7788b1c98a2f7b4cc1318970471a51b7a634fda1c1",
+      "bytes": 23831
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-diagnose.log": {
+      "sha256": "e86a43694ae9e5f4d936acc28edcc74cf09e68206b5837c788ae3017051188b5",
+      "bytes": 286
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-diff-check.json": {
+      "sha256": "580b820f161450effdfd8daf397cb961b8865f450dbb8e9f8a026c0b99eb9fdb",
+      "bytes": 23828
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-diff-check.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-format.json": {
+      "sha256": "e39ce043e197739048c072690b5508f4d15ef9df2b6f29cccc5f4a4f0cb2c076",
+      "bytes": 23882
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-format.log": {
+      "sha256": "2f69bb165b0768520742fe9470c5e71b5ddb1b538c5bfc90879193a5c562038e",
+      "bytes": 29
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-frozen-sources.json": {
+      "sha256": "1751984c3fd2b67518d40d4f09de69a31c1c97d7e4abf47c3ae07f865b24cc0a",
+      "bytes": 23833
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-frozen-sources.log": {
+      "sha256": "6997253b542064247b6452a5a5953170cde690552fabc944479be6a0bf4d8047",
+      "bytes": 44
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-help.json": {
+      "sha256": "aff3ce3b4eb8c6bdca62a07d7ba152ea61ada4125874a7579c05a8f909e59e67",
+      "bytes": 23824
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-help.log": {
+      "sha256": "d979491857a1b29df00bdc2377042766cc753e7ac8967753a58c0a8f98ee0c07",
+      "bytes": 2305
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-import.json": {
+      "sha256": "5fd46c8f577c50ca13cd27b5fb6bd042c2027b33812dc020bde2021548ed9ff1",
+      "bytes": 23849
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-import.log": {
+      "sha256": "3d097c315a1c543040f548da4c7051265e94c77211a2411ced1d4621344270de",
+      "bytes": 7
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-independent-cases.json": {
+      "sha256": "2ae616324e62bdfd3d4a092c54be5c31877a2a32a311d42d7a148b2ebb1df743",
+      "bytes": 23950
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-independent-cases.log": {
+      "sha256": "41f20f58d2c3f931a16fb9f2ae999d00538cf0bc231e64b991835738ef79c282",
+      "bytes": 53
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-install-local.json": {
+      "sha256": "1f0f5d227b5c187bafb7dbe14685b6cc6cfa5642f2915e39fdcc2dc40681e3f9",
+      "bytes": 23898
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-install-local.log": {
+      "sha256": "841d1a1ecea778932de2ada703d005cf85e71b822f3605d2f3f90ec0616a2710",
+      "bytes": 1090
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-lint.json": {
+      "sha256": "9891506d6afb9029c8b4178bea88f1edc5154f244e41f09260897fc1a30a5ade",
+      "bytes": 23831
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-lint.log": {
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "bytes": 20
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-owned-lm-generate.json": {
+      "sha256": "f1f537952c40aa5167ad8ff8012f8a10b7cba6219148cffb8e35e19b62de0623",
+      "bytes": 24063
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-owned-lm-generate.log": {
+      "sha256": "90ce288f67e0b15f941fbb0e60991e4e9caefb30da4f851b04fc70bef853e107",
+      "bytes": 313
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-owned-lm-smoke.json": {
+      "sha256": "4a62b8b34122c9db3d55f03319bb4f1cb3509055974cc18e6b07fb75ec182c35",
+      "bytes": 23971
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-owned-lm-smoke.log": {
+      "sha256": "7f23535b86fcb96b739d2ec1a8ff62a3107c1cdfe840212bd88d76423b76196e",
+      "bytes": 153
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-owned-lm-validate.json": {
+      "sha256": "4f293f631baaba31ce54463c4240338296a0f6f8784ffb143c5921d392d7efd0",
+      "bytes": 23985
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-owned-lm-validate.log": {
+      "sha256": "6fb50aead5e20198627071f4010d9d28bf93a1bac9451460668ce28b232ecb14",
+      "bytes": 581
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-package.json": {
+      "sha256": "61d1863ea42cafb85756f936c6117fff77014af87ddacaea1ea2d394d951cd1f",
+      "bytes": 23822
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-package.log": {
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-reproduce.json": {
+      "sha256": "6a24f02458fe7d999696e413ac3fdf613177f2bdaa6b23b6ccff1095467cddf0",
+      "bytes": 23965
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-reproduce.log": {
+      "sha256": "48691376609f627009e318f56f930d862a88ac957e793f390932631fbdbedcf9",
+      "bytes": 943
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-research-config.json": {
+      "sha256": "689d8d412966e71834a66cbe48e3384115fa2865b9f7ab440f90ba89bfbda324",
+      "bytes": 23902
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-research-config.log": {
+      "sha256": "210f7da183696250e36d53acbc85dd65be6789e67a5febd6bb496c9092723721",
+      "bytes": 228
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-research-smoke.json": {
+      "sha256": "32918193c18590d337f7a317d784632cb2796c08b083abc31ae728f13e7c0665",
+      "bytes": 23984
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-research-smoke.log": {
+      "sha256": "2078c25cb18fa10133ac005e448945f237c6e46a2170fe37b421c2d4ce95683a",
+      "bytes": 2126
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-staged-diff-check.json": {
+      "sha256": "76944ff9b0923e1e5ec002205932a10340535e1d13d797df7930e5e6c40e05b3",
+      "bytes": 23852
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-staged-diff-check.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-summarize.json": {
+      "sha256": "f74f3e50b4b58f9587f3a007a7d143fe5264e66b4516dd9b0b0e1e608254e418",
+      "bytes": 23995
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-summarize.log": {
+      "sha256": "48691376609f627009e318f56f930d862a88ac957e793f390932631fbdbedcf9",
+      "bytes": 943
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-tests.json": {
+      "sha256": "cb622d265a804bab2b0d3d1a5e6ae462a01f4bb7681ddadd3505d4f19d071a6e",
+      "bytes": 23819
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-tests.log": {
+      "sha256": "07c95954526f897bd48d9315ed7f9d3d1cc523b3246709d9ef993a975e79b7d2",
+      "bytes": 1127
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-types-linux.json": {
+      "sha256": "d3ff5ed412347f9b94083df11ccf231c776d15cee97ffd13e931188315708322",
+      "bytes": 23846
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-types-linux.log": {
+      "sha256": "dabfe9cda912714cdc654091ac8afe8d42fa03311ac477b1adc45f41fe1610c6",
+      "bytes": 45
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-types.json": {
+      "sha256": "320fe8404562846b9757f7567f2d32e9a013d5a2e50aa47e0fcf9692e899d461",
+      "bytes": 23806
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-types.log": {
+      "sha256": "dabfe9cda912714cdc654091ac8afe8d42fa03311ac477b1adc45f41fe1610c6",
+      "bytes": 45
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-validate.json": {
+      "sha256": "05358b18e6ce52bf05fd032cba1dd409c2e47e9c5023a51a7a08f35c1e4a00e7",
+      "bytes": 24097
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-validate.log": {
+      "sha256": "85e0137ff56d9cce693d95c10d65e13c4a67a0f3dffcce7c8590a0d6cdd00fde",
+      "bytes": 1066
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-web-check.json": {
+      "sha256": "acc1d752f9658dca3179dd53bbb66e9e3f22ab53f2e8b2dd3b8a9b6d0ff65674",
+      "bytes": 23845
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-web-check.log": {
+      "sha256": "b7da7d9426430dfac3043253a593446ff65174ee11f0961189ddc799b27bff04",
+      "bytes": 132
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-web-tests.json": {
+      "sha256": "18199e3c7e6a81b428ef53647055e3e31be125cc1337720ef20dbf32b8777990",
+      "bytes": 23833
+    },
+    "artifacts/source-faithful-development-v1-checks/repository/source-faithful-v1-web-tests.log": {
+      "sha256": "4c73d55af10dbdebb96ca4d4964c3f0d6955598ea34c30215dd93d762fafc068",
+      "bytes": 1966
+    },
+    "artifacts/source-faithful-development-v1-checks/review-inventory.json": {
+      "sha256": "f2866010f81bf63575c891938602321132abafba05c65357293b4d3ddfd97cb7",
+      "bytes": 30589
+    },
+    "artifacts/source-faithful-development-v1/.gitattributes": {
+      "sha256": "c6b2cbd767e67e1f5859b7322f1577247b07d22633201f437a212c8c38fb33d5",
+      "bytes": 107
+    },
+    "artifacts/source-faithful-development-v1/execution-started.json": {
+      "sha256": "2ca0b02c46198b38c0df014f8c638cc20e4b39b4f4a941e5337c99cd5e6c85c5",
+      "bytes": 161
+    },
+    "artifacts/source-faithful-development-v1/inputs.json": {
+      "sha256": "c5217e433b6cc189928d6fc835bf1fa99c1a4a0465e44e02631499192ebe46e8",
+      "bytes": 39550
+    },
+    "artifacts/source-faithful-development-v1/labels-evaluator-only.json": {
+      "sha256": "2911fe6dda3f27d12a93b78f64920da4c253ad43b80adbcc79a3935bc7f8b0da",
+      "bytes": 5672
+    },
+    "artifacts/source-faithful-development-v1/output-sha256.json": {
+      "sha256": "5e5c6b109414bea0bac175ff83903b6971b923b8c03b4483b3362a416f934560",
+      "bytes": 5545
+    },
+    "artifacts/source-faithful-development-v1/pass-1-L-LM-cost.json": {
+      "sha256": "9207eeedfc29d8971ffc6767521c89dc3d3e12794052f306b71a309cd1819910",
+      "bytes": 8784
+    },
+    "artifacts/source-faithful-development-v1/pass-1-L-LM.log": {
+      "sha256": "d94551fe61eac57cca575877ea52b9c85fcaa2284c05d288a2f81c3f2504afbf",
+      "bytes": 667
+    },
+    "artifacts/source-faithful-development-v1/pass-1-L-P-cost.json": {
+      "sha256": "47b46ef2174ac5457f9c7437f307f9f7a81923fbcbb7df380a246141592d416f",
+      "bytes": 7914
+    },
+    "artifacts/source-faithful-development-v1/pass-1-L-P.log": {
+      "sha256": "800e0a03a17129be055e1cd14cfbda010bb2272c4f7bb52bb70c3d24b3b9aa5e",
+      "bytes": 601
+    },
+    "artifacts/source-faithful-development-v1/pass-1-T-LM-cost.json": {
+      "sha256": "2390e2bbbedbbb8ecbbe9caed1cc445cd92137f5b2e1ece2226109e24ac0457e",
+      "bytes": 8782
+    },
+    "artifacts/source-faithful-development-v1/pass-1-T-LM.log": {
+      "sha256": "9293f80f40b00a0b40125e371790f1a83ecd848bc881b0a4efeba042ce6ddb42",
+      "bytes": 599
+    },
+    "artifacts/source-faithful-development-v1/pass-1-T-P-cost.json": {
+      "sha256": "d3484441024eabf6efcc3cbe097a4a2f54b4fd6a7c4bc6c6da63e3afe9e987d3",
+      "bytes": 8705
+    },
+    "artifacts/source-faithful-development-v1/pass-1-T-P.log": {
+      "sha256": "16701ac48d5fb1e4023183d3a5b22d3f08e385150c50a76505a3d15298e95cb2",
+      "bytes": 599
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-LM/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-LM/requests.jsonl": {
+      "sha256": "241b760fa20eac4a97c925e0e378ef4cd974108f36ee78e936824f042ebf58f6",
+      "bytes": 149078
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-LM/setup.json": {
+      "sha256": "354c323c2a86546dc17f2a4bb6f829651f286c13a6e5dbc65870a493ff0aad01",
+      "bytes": 68
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-LM/worker.json": {
+      "sha256": "5fab72a7616e803eb964ef5ed27d4f06a89619e3a186d6f6557a276a7eb8754d",
+      "bytes": 2700
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-P/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-P/requests.jsonl": {
+      "sha256": "fce9e82b142ca4da43e188f11da34f643af79d77449d87956e4e0dae3d1a91d0",
+      "bytes": 158514
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-P/setup.json": {
+      "sha256": "501080fa77c4b22d2dfba5236ab82cdb3f69a574f2a3ef050749e5edec361d52",
+      "bytes": 68
+    },
+    "artifacts/source-faithful-development-v1/pass-1/L-P/worker.json": {
+      "sha256": "e60c718f24ab4667395532ebd0431deb7a4e5cff0611b8e303b70ad63c314e52",
+      "bytes": 2698
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-LM/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-LM/requests.jsonl": {
+      "sha256": "2808d7e0d08aca0372d93b29ba424fa6e216705c7fad15fa23c196688a2d9acb",
+      "bytes": 141960
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-LM/setup.json": {
+      "sha256": "ff6d3c885e691a03d22e3517dac301d677c829c6fbfd78df8ca04e7f4cdf0cf0",
+      "bytes": 68
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-LM/worker.json": {
+      "sha256": "47596669a390a8e2f027464948f8a35e1fd4e11c2fbec7eefec8e0ba51590c5b",
+      "bytes": 2700
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-P/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-P/requests.jsonl": {
+      "sha256": "0990977609e81acfc0550f06838c0cbfb2d04d95e493c9e85f26d7daa04885b4",
+      "bytes": 151580
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-P/setup.json": {
+      "sha256": "0d747789c970c41a1eb94d5a9a46eb909802e9b5ad0f56eee18c34f5cb4a091f",
+      "bytes": 64
+    },
+    "artifacts/source-faithful-development-v1/pass-1/T-P/worker.json": {
+      "sha256": "43fcc2208d7a616fa7b211ad27f01c2139bb3f6e87e13e2954d36abfe1d87b83",
+      "bytes": 2698
+    },
+    "artifacts/source-faithful-development-v1/pass-2-L-LM-cost.json": {
+      "sha256": "78a46c3b18a385bb37a957153d32e33f7cff152435cfa6231a0616e5ae98895c",
+      "bytes": 8789
+    },
+    "artifacts/source-faithful-development-v1/pass-2-L-LM.log": {
+      "sha256": "8a60b8723c7b7d78be2d15497f14921e1822046def9b4ce5cb7a057e3d4149ef",
+      "bytes": 599
+    },
+    "artifacts/source-faithful-development-v1/pass-2-L-P-cost.json": {
+      "sha256": "ca7727f7e9b87fd9ff2d67e4cd50d5e8ff5773a469a52b83288f428d73ce9a30",
+      "bytes": 7996
+    },
+    "artifacts/source-faithful-development-v1/pass-2-L-P.log": {
+      "sha256": "e2d912ba4a44a2cb42bd6e7e9426de93d8c5410d237c657711b44fe1c61f46fa",
+      "bytes": 599
+    },
+    "artifacts/source-faithful-development-v1/pass-2-T-LM-cost.json": {
+      "sha256": "8fa2c90b23316d4db1fce252149c769849e9bf2d88eb238de741efb956fcfdfe",
+      "bytes": 8790
+    },
+    "artifacts/source-faithful-development-v1/pass-2-T-LM.log": {
+      "sha256": "b0d937011e0267565ce6557566ecd666c39b90788498d272b77e9d9595cc92e5",
+      "bytes": 599
+    },
+    "artifacts/source-faithful-development-v1/pass-2-T-P-cost.json": {
+      "sha256": "b95559976d0d665ee95e9abd8ef4cbe7d305d035badc2b915cd2e20bca2a8f12",
+      "bytes": 8785
+    },
+    "artifacts/source-faithful-development-v1/pass-2-T-P.log": {
+      "sha256": "31d340f594125b1685626a322612d40f74b3475f79a3e6068e422e8c6b39c21e",
+      "bytes": 599
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-LM/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-LM/requests.jsonl": {
+      "sha256": "1cba6130b9d2ac2d1de3bd9dd0ee70e305ab19caf13a69b6575c7fdc8ede90cd",
+      "bytes": 149090
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-LM/setup.json": {
+      "sha256": "bc47ef1bb9e886cbed0d80ad83c536a776810f85ec5e935f81d96cbe5f568319",
+      "bytes": 68
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-LM/worker.json": {
+      "sha256": "8a8a3b93dfc4e5ac7b05410ce81c0058b3aab14bc23790d0a04820fdfcb2eeb6",
+      "bytes": 2701
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-P/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-P/requests.jsonl": {
+      "sha256": "c9c31f11b72f7ab6ed51ec7ee99648385ecc3d71afc401bfa0675f442ee3b623",
+      "bytes": 158484
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-P/setup.json": {
+      "sha256": "7bd1037dd164897c3aec7558299083dcb074416473c0181f8a0c2fe439a0d8e7",
+      "bytes": 67
+    },
+    "artifacts/source-faithful-development-v1/pass-2/L-P/worker.json": {
+      "sha256": "2949616f57a71a3de8c43d241e2c65d17f50119b48b983f7aa5edede0e6047c1",
+      "bytes": 2699
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-LM/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-LM/requests.jsonl": {
+      "sha256": "149dd79f305735b163f8c242b8199cdd0c0d4df31d0d9765f53494116c663891",
+      "bytes": 141970
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-LM/setup.json": {
+      "sha256": "96b3ba83a75a44a32987a97da6448113c9d15d1bb657f8332004b7b5ce637d9a",
+      "bytes": 67
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-LM/worker.json": {
+      "sha256": "fe3de8ff1fe1a84bb9778f0e93171e9cf421a7aa862d5ebe5f683de82bd9f910",
+      "bytes": 2700
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-P/progress.json": {
+      "sha256": "11055d6e4ccf41602419564531760ca82e66aeff9fcd7586cd69644c7b18fe90",
+      "bytes": 30
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-P/requests.jsonl": {
+      "sha256": "d9f5140ee3f2d39e4e14a69ab5d26d5a52ee1b9e39a74ff6f426d26bf17eceec",
+      "bytes": 151591
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-P/setup.json": {
+      "sha256": "b753527f3e2cb072ca48c79c731a7c68501b07498e34fc5a80e7d9a6e0c6e006",
+      "bytes": 67
+    },
+    "artifacts/source-faithful-development-v1/pass-2/T-P/worker.json": {
+      "sha256": "6b20f53f871f74fa6808d4682223ba825465264fcabe1350f9b46baee14b7d43",
+      "bytes": 2697
+    },
+    "artifacts/source-faithful-development-v1/protocol-at-freeze.md": {
+      "sha256": "90d513d1364240a06aa0b6a4bca3dfd013d2e1f13644efaf21be7392447a4be0",
+      "bytes": 10351
+    },
+    "artifacts/source-faithful-development-v1/raw-output-seal.json": {
+      "sha256": "02745a8fcb3567f95048d995986f6e20c9f8f8e402fa3e84818dc02f013efacf",
+      "bytes": 5380
+    },
+    "artifacts/source-faithful-development-v1/registration-cost.json": {
+      "sha256": "5eb5f53e90afebf0f51f8aaf37dbbe7679a9bba0170325fe3df497d88d36424b",
+      "bytes": 463
+    },
+    "artifacts/source-faithful-development-v1/registration.json": {
+      "sha256": "60712c360bc5bf113a4473fccb81b485524f6617b60be4b48b3a05889bbe3cf6",
+      "bytes": 51785
+    },
+    "artifacts/source-faithful-development-v1/results.json": {
+      "sha256": "35aa8906f5c23bdaff46525183023ce440fd6ee94e5b58de436b34db32ea9952",
+      "bytes": 27178
+    },
+    "artifacts/source-faithful-development-v1/source.zip": {
+      "sha256": "c3827b3bf4f92c7bb56d049858262844a7df945081991bf2c33c3141b0a4f8c4",
+      "bytes": 177345
+    },
+    "docs/research/source-faithful-development-v1-protocol.md": {
+      "sha256": "90d513d1364240a06aa0b6a4bca3dfd013d2e1f13644efaf21be7392447a4be0",
+      "bytes": 10351
+    },
+    "docs/research/source-faithful-development-v1-results.md": {
+      "sha256": "8f72cc48a1c523c69f7c9f96ab026adec531d6747a9b3d0e8a3d8850272ebca2",
+      "bytes": 15587
+    },
+    "scripts/source_faithful_development_v1.py": {
+      "sha256": "1d34c29c8f791992922363b9ac2567eeefd97370abe414b8633ea2f449cd4ca9",
+      "bytes": 41797
+    },
+    "tests/test_source_faithful_development_v1.py": {
+      "sha256": "7a7489ec2fc6d2f91511365eaf07923e7e1f91141794aecc4b384f41ebe1747e",
+      "bytes": 8359
+    }
+  },
+  "secret_review": "All included files and all 51 archive members scanned; no credential/private-key matches or embedded URL credentials found.",
+  "personal_paths": "Original receipts and asset references retain C:/Users/susee machine paths (also JSON/backslash variants) and D:/Toruk workspace paths. These are provenance, not live credentials. No redaction of frozen bytes.",
+  "size_review": {
+    "original_files": 149,
+    "original_bytes": 2833505,
+    "largest_file": "artifacts/source-faithful-development-v1/source.zip",
+    "largest_bytes": 177345,
+    "archive_members": 51,
+    "oversized_generated_files": false
+  },
+  "verification": {
+    "native": {
+      "status": "PASS",
+      "saved_rows": 104,
+      "direct_copies": 36,
+      "new_generations": 0,
+      "registration_sha256": "60712c360bc5bf113a4473fccb81b485524f6617b60be4b48b3a05889bbe3cf6",
+      "study_status": "COMPLETE",
+      "protected_files": 189
+    },
+    "offline_policy_replays": 52,
+    "score_replays": 96,
+    "external_weights_read": false,
+    "new_generations": 0,
+    "tokenizer": "artifacts/research-evidence-portable-v1/tokenizers/qwen"
+  },
+  "offline_verification_method": "Hash repository bindings/protected files; verify seals and paired sources/prompts; run existing native saved-output verification and offline-audit.py with repository tokenizer substituted only for the external tokenizer path. No external model/selector weights read and no generation.",
+  "local_tokenizer_sha256": {
+    "config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+  },
+  "existing_full_suite_reused": {
+    "python_tests": 479,
+    "web_passed": 20,
+    "web_opt_in_skipped": 1,
+    "repository_checks_passed": 26,
+    "warning": "Inherited pytest cache permissions warning; no failed test",
+    "receipt": "artifacts/source-faithful-development-v1-checks/repository-verify.json"
+  },
+  "exclusions": {
+    "external_model_and_selector_weights": "Identity hashes in registration; not copied",
+    "installed_runtime_OS_tool_caches": "Not study sources or outputs; outside logical disk scope",
+    ".readiness/source-faithful-v1-verify/": "Generated verification fixtures, models, tables, package archives remain local; all 52 top-level receipts/logs copied byte-exact",
+    "build/ and src/toruk_lm.egg-info/": "Generated packaging work and metadata",
+    ".pytest_cache/ .mypy_cache/ .ruff_cache/ __pycache__/ .venv/": "Tool caches and installed environment"
+  },
+  "limits": [
+    "The failed pre-registration command receipt/log is retained; its CPU cost is unknown.",
+    "External weight identities are retained but were not rehashed during preservation.",
+    "Historical uncommitted/no-commit wording describes the original study phase; the later user request explicitly authorizes this preservation commit.",
+    "Artifact Git attributes preserve exact raw bytes. Stage the four new source/test/Markdown files without newline conversion; a Windows byte-strict audit may require restoring only these four files with core.autocrlf=false after preserving local edits. Do not normalize pre-existing dependencies.",
+    "This file is preservation metadata, not registration, a gate revision or a new experiment."
+  ]
+}

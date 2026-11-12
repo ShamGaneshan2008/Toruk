@@ -1,0 +1,888 @@
+{
+  "status": "COMPLETE",
+  "failure": null,
+  "registration_sha256": "60712c360bc5bf113a4473fccb81b485524f6617b60be4b48b3a05889bbe3cf6",
+  "requests_recorded": 104,
+  "requests_planned": 104,
+  "lm_calls": 52,
+  "input_tokens": 6176,
+  "output_tokens": 244,
+  "failed_requests": [],
+  "unknown_token_counts": 0,
+  "stage_wall_seconds": 154.0600157999993,
+  "stage_cpu_seconds": 298.40625,
+  "shared": {
+    "wall_seconds": 10.853202602961119,
+    "cpu_seconds": 9.875
+  },
+  "total_wall_seconds": 164.9132184029604,
+  "total_cpu_seconds": 308.28125,
+  "max_request_wall_seconds": 2.056058900000153,
+  "max_request_cpu_seconds": 4.0625,
+  "peak_private_bytes": 4126953472,
+  "peak_disk_bytes": 1002484976,
+  "max_monitor_gap_seconds": 0.12107479999986026,
+  "finalization_boundary": "summary/report/seal serialization outside instrumented total; outer command retained",
+  "report": {
+    "scores": {
+      "1": {
+        "T-LM": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          }
+        ],
+        "L-LM": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          }
+        ],
+        "T-P": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "ambiguous/conflicting",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "absent-in-complete-scope",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": false,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          }
+        ],
+        "L-P": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "ambiguous/conflicting",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "absent-in-complete-scope",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": false,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          }
+        ]
+      },
+      "2": {
+        "T-LM": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          }
+        ],
+        "L-LM": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": true,
+            "support_correct": null,
+            "provenance_correct": null
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": false,
+            "support_correct": null,
+            "provenance_correct": null
+          }
+        ],
+        "T-P": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "ambiguous/conflicting",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "absent-in-complete-scope",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": false,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          }
+        ],
+        "L-P": [
+          {
+            "case": "sf1-01-orchidlathe",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-02-basaltprism",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-03-willowdynamo",
+            "category": "copy",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-04-pewterharbor",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-05-linenbeacon",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-06-porcelainrook",
+            "category": "binding",
+            "payload_correct": true,
+            "expected_state": "ambiguous/conflicting",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-07-hazelwinch",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-08-marbleshuttle",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-09-indigocistern",
+            "category": "correction",
+            "payload_correct": true,
+            "expected_state": "supported",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-10-copperaviary",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "absent-in-complete-scope",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-11-satinviaduct",
+            "category": "coverage",
+            "payload_correct": false,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          },
+          {
+            "case": "sf1-12-cedargyroscope",
+            "category": "coverage",
+            "payload_correct": true,
+            "expected_state": "coverage-incomplete",
+            "support_correct": true,
+            "provenance_correct": true
+          }
+        ]
+      }
+    },
+    "costs_for_gates": {
+      "1": {
+        "T-LM": {
+          "tokens": 1537,
+          "cpu": 59.328125,
+          "wall": 31.413865825370124
+        },
+        "L-LM": {
+          "tokens": 1673,
+          "cpu": 60.734375,
+          "wall": 30.463715025369822
+        },
+        "T-P": {
+          "tokens": 0,
+          "cpu": 18.453125,
+          "wall": 11.53841862537007
+        },
+        "L-P": {
+          "tokens": 0,
+          "cpu": 16.0,
+          "wall": 10.49049972536983
+        }
+      },
+      "2": {
+        "T-LM": {
+          "tokens": 1537,
+          "cpu": 59.25,
+          "wall": 29.570377425369827
+        },
+        "L-LM": {
+          "tokens": 1673,
+          "cpu": 59.640625,
+          "wall": 29.444379025370438
+        },
+        "T-P": {
+          "tokens": 0,
+          "cpu": 17.71875,
+          "wall": 11.253994625370126
+        },
+        "L-P": {
+          "tokens": 0,
+          "cpu": 17.15625,
+          "wall": 10.737968125370173
+        }
+      }
+    },
+    "policy_gates": {
+      "T-P": false,
+      "L-P": false
+    },
+    "learned_selector_gate": false,
+    "outcome": "reject policy adoption and selector contribution under v1",
+    "checks": {
+      "T-P/pass-1": {
+        "accuracy": true,
+        "categories": true,
+        "own_gain": true,
+        "stronger_control_gain": true,
+        "no_regression": false,
+        "support_provenance": true,
+        "integrity": true,
+        "tokens_saving": true,
+        "cpu_saving": true,
+        "wall_saving": true
+      },
+      "T-P/pass-2": {
+        "accuracy": true,
+        "categories": true,
+        "own_gain": true,
+        "stronger_control_gain": true,
+        "no_regression": false,
+        "support_provenance": true,
+        "integrity": true,
+        "tokens_saving": true,
+        "cpu_saving": true,
+        "wall_saving": true
+      },
+      "L-P/pass-1": {
+        "accuracy": true,
+        "categories": true,
+        "own_gain": true,
+        "stronger_control_gain": true,
+        "no_regression": false,
+        "support_provenance": true,
+        "integrity": true,
+        "tokens_saving": true,
+        "cpu_saving": true,
+        "wall_saving": true
+      },
+      "L-P/pass-2": {
+        "accuracy": true,
+        "categories": true,
+        "own_gain": true,
+        "stronger_control_gain": true,
+        "no_regression": false,
+        "support_provenance": true,
+        "integrity": true,
+        "tokens_saving": true,
+        "cpu_saving": true,
+        "wall_saving": true
+      },
+      "T-P_vs_L-P/pass-1": {
+        "both_policy_gates": false,
+        "gain": false,
+        "no_regression": true,
+        "tokens_saving": false,
+        "cpu_saving": false,
+        "wall_saving": false
+      },
+      "T-P_vs_L-P/pass-2": {
+        "both_policy_gates": false,
+        "gain": false,
+        "no_regression": true,
+        "tokens_saving": false,
+        "cpu_saving": false,
+        "wall_saving": false
+      }
+    }
+  }
+}
