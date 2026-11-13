@@ -98,3 +98,18 @@
 /artifacts/qwen-long-history-v1/initial-files/pyproject.toml -whitespace
 /artifacts/research-evidence-portable-v1/tokenizers/qwen/README.md -whitespace
 /artifacts/research-evidence-portable-v1/tokenizers/smollm/README.md -whitespace
+
+# Preserve the negative segment-delta development record and its as-run source bytes.
+/artifacts/segment-delta-dev-v1/** -text whitespace=cr-at-eol
+/artifacts/segment-delta-dev-v1-verification-001/** -text whitespace=cr-at-eol
+/artifacts/segment-delta-dev-v1-verification-cost-001/** -text whitespace=cr-at-eol
+/artifacts/segment-delta-dev-v1-commit-review-001/** -text whitespace=cr-at-eol
+/artifacts/segment-delta-dev-v1/*-sources/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+/artifacts/segment-delta-dev-v1/rehearse-002.py whitespace=cr-at-eol,-blank-at-eof
+/.gitignore text eol=lf
+/scripts/segment_delta_*.py text eol=lf
+/scripts/verify_segment_delta_dev.py text eol=lf
+/src/toruk_lm/segment_delta*.py text eol=lf
+/tests/test_segment_delta.py text eol=lf
+/docs/research/segment-delta-dev-v1-*.md text eol=lf
+/docs/research/toruk-custom-lm-architecture-decision-v2.md text eol=lf

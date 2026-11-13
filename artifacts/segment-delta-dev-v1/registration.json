@@ -1,0 +1,125 @@
+{
+  "registration": "segment-delta-dev-v1",
+  "client_date": "2026-11-13",
+  "head": "ab6d3a65538b5f33d17efe4f45189906f1394a38",
+  "protocol_sha256": "8769902230090674e24065f4d48ef2c2db26fdcd04e550cf4c8e757d589730a5",
+  "source_files": {
+    "docs/research/segment-delta-dev-v1-protocol.md": "8769902230090674e24065f4d48ef2c2db26fdcd04e550cf4c8e757d589730a5",
+    "docs/research/toruk-custom-lm-architecture-decision-v2.md": "4372c2d78abfd4793f702004fc6af4810174e59b08867c41eef3210e03cfb504",
+    "scripts/segment_delta_data.py": "e4fcf8a8403e304cf21009bac850348496ac7df13c5c80fcce7cc10ca78c61a6",
+    "scripts/segment_delta_watch.py": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c",
+    "src/toruk_lm/model.py": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf",
+    "src/toruk_lm/recurrent.py": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d",
+    "src/toruk_lm/owned_lm.py": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac",
+    "src/toruk_lm/owned_training.py": "615a44af36db30a64039b2930ba0aeb6c5eca97cd372f90d70d3a356273d3bac",
+    "src/toruk_lm/engine.py": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e",
+    "src/toruk_lm/tokenizer.py": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0",
+    "pyproject.toml": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca"
+  },
+  "data": {
+    "data-manifest.json": "8a2b3306849ac9ce3c04eb745bdb27036badde154ebb775a5b45e4134f9bb796",
+    "dev-prose.json": "47807cf9edae3e96077b8086352bd2b4e1b9efb23fa2355768a0e15ad3393fba",
+    "inputs.json": "e499c01db31deb74ca8ccb81aa0e7e0edb92d0228d530e953f465fa1c5ab3fce",
+    "labels-evaluator-only.json": "5bf8856568194c8d0f8ae1f68250a65125c519801bd22a41e164c579d43e09a3",
+    "train.json": "b4cc4a2761a4886a7190d4f824c46a5cc04cfc54d5016edba43cb6255e71f3df"
+  },
+  "tokenizer": {
+    "identity": "toruk-utf8-byte-v1",
+    "fingerprint": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu",
+    "psutil": "7.2.2",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "config": {
+    "context": 24,
+    "width": 16,
+    "heads": 4,
+    "layers": 1,
+    "rank": 8,
+    "ff": 116,
+    "slots": 4,
+    "maximum": 192
+  },
+  "parameters": {
+    "ordinary": 13914,
+    "recurrent": 14288,
+    "delta": 14277
+  },
+  "train": {
+    "steps": 128,
+    "batch": 2,
+    "learning_rate": 0.003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "clip": 1.0,
+    "foreach": false,
+    "fused": false,
+    "seeds": [
+      113,
+      227
+    ]
+  },
+  "fit_order": [
+    [
+      113,
+      "ordinary"
+    ],
+    [
+      113,
+      "recurrent"
+    ],
+    [
+      113,
+      "delta"
+    ],
+    [
+      227,
+      "delta"
+    ],
+    [
+      227,
+      "recurrent"
+    ],
+    [
+      227,
+      "ordinary"
+    ]
+  ],
+  "decode": {
+    "greedy": true,
+    "max_new_tokens": 8,
+    "eos": 2,
+    "suppress": [
+      0,
+      1
+    ]
+  },
+  "caps": {
+    "fit_seconds": 150,
+    "eval_seconds": 20,
+    "score_seconds": 20,
+    "request_seconds": 1.5,
+    "prepare_seconds": 60,
+    "tests_seconds": 60,
+    "seal_seconds": 20,
+    "controller_seconds": 60,
+    "total_seconds": 1500,
+    "private_bytes": 2147483648,
+    "disk_bytes": 134217728,
+    "monitor_gap": 5
+  },
+  "rehearsal_files": {
+    "rehearsal-numeric.json": "4f1d2b0693bf9245267957b0f127ff198eb9bac7451b840876723f6b16c839cf",
+    "rehearsal/worker.json": "c33435ef0fd4f8a05c028bc0116622bc540dd9e68ec1cd3b4a6ff2029b55eb94",
+    "rehearsal-002-numeric.json": "0c24ddeae2dae00d2479e12e8a71106b558a684b1763703365554a3033c06ba7",
+    "rehearsal-002/cost.json": "275b2b14c1f0855b3d5c0b4edf3d303ce34e43c6133f3f308b7748085ff907e4"
+  },
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_TRAINING"
+}

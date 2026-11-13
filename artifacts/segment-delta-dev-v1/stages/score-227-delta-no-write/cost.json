@@ -1,0 +1,32 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\segment_delta_study.py",
+    "worker",
+    "--root",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1",
+    "--directory",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1\\stages\\score-227-delta-no-write",
+    "--stage",
+    "score",
+    "--seed",
+    "227",
+    "--variant",
+    "delta",
+    "--ablation",
+    "no-write"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 4.375429300000178,
+  "cpu": 4.734375,
+  "peak_private": 673947648,
+  "peak_rss": 299315200,
+  "peak_disk": 3610913,
+  "controller_cpu": 1.25,
+  "pid_cpu": {
+    "23532": 0,
+    "13720": 3.484375
+  },
+  "status": "PASS"
+}

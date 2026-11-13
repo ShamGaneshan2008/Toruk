@@ -1,0 +1,20 @@
+usage: segment_delta_study.py [-h] --root ROOT [--directory DIRECTORY]
+                              [--stage STAGE] [--seed SEED]
+                              [--variant VARIANT]
+                              [--ablation {full,no-read,no-write}]
+                              {contracts,seal,run,worker}
+
+Single-use, offline CPU development run; never trains or calls production
+chat.
+
+positional arguments:
+  {contracts,seal,run,worker}
+
+options:
+  -h, --help            show this help message and exit
+  --root ROOT
+  --directory DIRECTORY
+  --stage STAGE
+  --seed SEED
+  --variant VARIANT
+  --ablation {full,no-read,no-write}

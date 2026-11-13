@@ -1,0 +1,32 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\segment_delta_study.py",
+    "worker",
+    "--root",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1",
+    "--directory",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1\\stages\\train-227-ordinary",
+    "--stage",
+    "train",
+    "--seed",
+    "227",
+    "--variant",
+    "ordinary",
+    "--ablation",
+    "full"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 5.829934199999116,
+  "cpu": 6.5625,
+  "peak_private": 677863424,
+  "peak_rss": 305106944,
+  "peak_disk": 3169014,
+  "controller_cpu": 1.5,
+  "pid_cpu": {
+    "2172": 0,
+    "2192": 5.0625
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,32 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\segment_delta_study.py",
+    "worker",
+    "--root",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1",
+    "--directory",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1\\stages\\train-113-recurrent",
+    "--stage",
+    "train",
+    "--seed",
+    "113",
+    "--variant",
+    "recurrent",
+    "--ablation",
+    "full"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 7.570718599999964,
+  "cpu": 8.421875,
+  "peak_private": 675885056,
+  "peak_rss": 306192384,
+  "peak_disk": 2086862,
+  "controller_cpu": 1.59375,
+  "pid_cpu": {
+    "14152": 0,
+    "8276": 6.828125
+  },
+  "status": "PASS"
+}

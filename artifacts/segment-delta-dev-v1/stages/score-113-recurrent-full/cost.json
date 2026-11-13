@@ -1,0 +1,32 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\segment_delta_study.py",
+    "worker",
+    "--root",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1",
+    "--directory",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1\\stages\\score-113-recurrent-full",
+    "--stage",
+    "score",
+    "--seed",
+    "113",
+    "--variant",
+    "recurrent",
+    "--ablation",
+    "full"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 4.075732699999207,
+  "cpu": 4.21875,
+  "peak_private": 673656832,
+  "peak_rss": 299786240,
+  "peak_disk": 3278574,
+  "controller_cpu": 0.953125,
+  "pid_cpu": {
+    "3672": 0.015625,
+    "23496": 3.25
+  },
+  "status": "PASS"
+}

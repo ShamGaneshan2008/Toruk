@@ -63,3 +63,12 @@ credentials.json
 /artifacts/evidence-first-prototype/verification-20261111/pipeline/
 /artifacts/evidence-first-prototype/verification-20261111/research-smoke/
 /artifacts/evidence-first-prototype/verification-20261111/tables/
+
+# Keep segment-delta evidence and six explicitly reviewed research checkpoints;
+# disposable test outputs and package builds are reproducible local files.
+/artifacts/segment-delta-dev-v1/contracts/tmp/
+/artifacts/segment-delta-dev-v1-verification-001/package/
+/artifacts/segment-delta-dev-v1-verification-001/pytest-cache/
+/artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/
+/artifacts/segment-delta-dev-v1-commit-review-001/pytest-cache/
+/artifacts/segment-delta-dev-v1-commit-review-001/pytest-tmp/

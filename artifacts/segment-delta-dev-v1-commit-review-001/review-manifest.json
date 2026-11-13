@@ -1,0 +1,1766 @@
+{
+  "base_commit": "ab6d3a65538b5f33d17efe4f45189906f1394a38",
+  "excluded": {
+    "artifacts/segment-delta-dev-v1-verification-001/package/toruk_lm-0.1.0-py3-none-any.whl": {
+      "bytes": 115572,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "6f35ce8d0d02e5cc5a87f11345d8de57665763dc73fac392a7ef480da06aed65"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/package/toruk_lm-0.1.0.tar.gz": {
+      "bytes": 549760,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "66aa63a4c9940c77ab96e959e8739a633a912ac36024151b8114bca46a441f59"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-cache/.gitignore": {
+      "bytes": 37,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-cache/CACHEDIR.TAG": {
+      "bytes": 191,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-cache/README.md": {
+      "bytes": 302,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-cache/v/cache/nodeids": {
+      "bytes": 3031,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "6f3a746b51c0728c33ae6045ea8192fe30380caeb25238536f07d6f5ece92a36"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a0/bad.pt": {
+      "bytes": 88360,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "7ae281daaf19bae584487ab7a7c8f08a4a0e0f5b73434b9fc373d8a36ac3d144"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a0/ordinary-direct.pt": {
+      "bytes": 90540,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "5826995b24873b570fe23aead3e502dda2cf27afcbb65ca9a78d0ef34752ae28"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a0/ordinary-direct.trace.jsonl": {
+      "bytes": 227,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "59ad641f7824f7cade0cb169a0f192387036f7fd51b0e833b7776bce600a61aa"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a0/ordinary-part.pt": {
+      "bytes": 90390,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c41a6ed5370065c387095f354c700d5a598e156b791c4d0ea16e441a86959e38"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a0/ordinary-part.trace.jsonl": {
+      "bytes": 113,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "947a8f99d0fd7b98a15aa6ed850e11f2438549dc2974dc2e79eb8bb48be860ed"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a0/ordinary-resume.pt": {
+      "bytes": 90540,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c511e252077cfe9ece54adb2586a6b9ee50e835a2e7141df97be4a850d48b9b5"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a0/ordinary-resume.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c8406f777adeb3b126b03f3ce2cc4cbed9e5ac10f68770fb7f1cc9663e0da285"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a1/bad.pt": {
+      "bytes": 107945,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "9754cc55c7d2ef5bf0bdeca7fa13390104343068ae043e53fa51889828c5e9e0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a1/recurrent-direct.pt": {
+      "bytes": 111976,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "32b873ce4437a5c0b85d63cc35f8584ffddbfcbab61eeef6ea3fbf7eaa3e53d5"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a1/recurrent-direct.trace.jsonl": {
+      "bytes": 229,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "450e941dd67229b359dacd63bf49e277542a154c7ba388284feaf6ceaa3fff7f"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a1/recurrent-part.pt": {
+      "bytes": 111730,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "051eaa40003c206080caf2e1ce441e15ab891c358d1b6c20dc11db16bd319ac0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a1/recurrent-part.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "8ec792aea0db69ba02579e8fa13846369a8c8e43a9988f10c49a4c3432b52d95"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a1/recurrent-resume.pt": {
+      "bytes": 111976,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "5845c1c827277264310b1a10ca6263b6b015964908bdbd59b23ecc21b6c1087d"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a1/recurrent-resume.trace.jsonl": {
+      "bytes": 115,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "d7912ee709a713ee9f4ae1b80551ae50a62fb1e22a12e5111b1ef1892cb60bec"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a2/bad.pt": {
+      "bytes": 99097,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "50f274059e7f440f851296d36cd66f79db1f02e8392c35592ad8806b27a418d2"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a2/delta-direct.pt": {
+      "bytes": 101924,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "64a9ddb5ab7f3625d810764bfcf2f7a77fd51906f93f211567b8ed834709a5df"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a2/delta-direct.trace.jsonl": {
+      "bytes": 228,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "6bd81955c54d70ca8a188e359824e0b808955af2e19082a755a4465b8386b29b"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a2/delta-part.pt": {
+      "bytes": 101694,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "19893c20edde1e6df8c4c1ef4c0a37149a04a150c35276fa7d9ab88f09f2f4d5"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a2/delta-part.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "d0967f7882f95cfdb9d03a6f5bc762be70ac448adb990b00825dff81a0981659"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a2/delta-resume.pt": {
+      "bytes": 101924,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "8b460198038f45dd310d7a9f2d914db2b0625f013b0f281ae336875bdc7d3adb"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_checkpoint_resume_exact_a2/delta-resume.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "9b51c17b1be75dd8f1c31e7fecdc7a1bbd4c8008ba080f591b4ab4ebebe5543e"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_controlled_nonfinite_weig0/invalid.pt": {
+      "bytes": 28272,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "127125fe829cea8152faebc91a4317732ce867017e13e359075b3e1018a3f9b8"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_controlled_nonfinite_weig1/invalid.pt": {
+      "bytes": 34252,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "bda53ab2c60b452b142e99b272fa39aef28e487708203a67409261dbc1fa1833"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_controlled_nonfinite_weig2/invalid.pt": {
+      "bytes": 28272,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "0e3d83f944514ce8329964fbe2d2133b22139cfdd8cef251e621de39fd702bf9"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_controlled_nonfinite_weig3/invalid.pt": {
+      "bytes": 34252,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c275ccef07d035663d6a7e93d9a9b5e4495a6fd2e5e7e374b3573a209d266b31"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_controlled_state_shape_er0/invalid.pt": {
+      "bytes": 1581,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "ee4cb2bfea909285599ade52e133d22176fb77ed3743d1b2ea4d51d50ef6ec43"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/again/metrics.json": {
+      "bytes": 2018,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "aade1d108b8a79b3ee6f765c1b6a718f9a999a7265e32eab31579b48deae2b45"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/again/predictions.json": {
+      "bytes": 5519,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "fabe32896af1e0a03b133808f38def8f4e6541192d34f49b4dd13f6e0361e43b"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/bad.pt": {
+      "bytes": 113513,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "f4995161ce4b8f8d97a80631a72a2df450613a4ef37b25225d0f70fd467cf704"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/data/manifest.json": {
+      "bytes": 1298,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "e9ebf03d11742979de43f638a5f32369f2312546ceaf6841b10807a267c8693d"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/data/test.jsonl": {
+      "bytes": 5957,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "eadfa7047d924bc4b5fecd80b8c0d4bc7700040cf258ab01dd9f7260baca7dd3"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/data/train.jsonl": {
+      "bytes": 4903,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "2b250ebae0b16a704a850211fa25641da30f601ac3ab24978bc65ac541099f31"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/data/train_lm.jsonl": {
+      "bytes": 6511,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "0518ca1719358d710c8ff9c4ed5b4f14e8cfd5a1c75ebe23c9014b33800d8cb1"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/data/validation.jsonl": {
+      "bytes": 5776,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "209620063e8ebcf98da541a403a35f245c9fdca0cbe74866e001b27366e0214a"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/data/validation_lm.jsonl": {
+      "bytes": 8981,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "49b2b9acb8257db085e693e1a037a77a5d47ab2c99a208d420012f8b5c307ea5"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/eval/metrics.json": {
+      "bytes": 2018,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "1638b340e9594aebf0f857bfe9768fcdda26d863dd5406889fe51d592fba1b9f"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/eval/predictions.json": {
+      "bytes": 5521,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "aeb8829401ba5463d4ca40f61b8773f6f9f47bb2737e8faeacdf213c22d89337"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/full/checkpoint.pt": {
+      "bytes": 117111,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "283eb905ba60856988f8c7c80dcda7e1d656cf2384bfd248721cd34f3d96a6d9"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/full/config.json": {
+      "bytes": 366,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "6944dba71701c6f72891aeecdd2049ab8e044b15267a0268a21222342669dc8c"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/full/metrics.json": {
+      "bytes": 1535,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "cf9a3bddc851805cd4d8b9e7955c53a97567ef87c675ef835065d02f922d0717"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/part/checkpoint.pt": {
+      "bytes": 117111,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "12349f1cd22a1179cdc582cd47d9c494ab3b24eea58a4659d2ccd3c38a9f2576"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/part/config.json": {
+      "bytes": 366,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "6944dba71701c6f72891aeecdd2049ab8e044b15267a0268a21222342669dc8c"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/part/metrics.json": {
+      "bytes": 1337,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "f959763e428c1daf5d04e668f02b92ab27a2e44c297f5664abdd34a7b16fbef9"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/resume/checkpoint.pt": {
+      "bytes": 117111,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c115e508d089f836a564176b63c585d2adc8ed44514fd27d85ee20a41c52f682"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/resume/config.json": {
+      "bytes": 366,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "6944dba71701c6f72891aeecdd2049ab8e044b15267a0268a21222342669dc8c"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_drained_document_resume_r0/resume/metrics.json": {
+      "bytes": 1336,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "a7aca992f69ce8fd4e90c87a7e6436de65da60cf12c3e9c5e278d8c684f2eba9"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/left/manifest.json": {
+      "bytes": 1205,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "4adb6101bb0dd14ea47a16bf3bd6cec92a36e1f9cd8bd656b55a20fbb37506b0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/left/test.jsonl": {
+      "bytes": 380,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "f6cab506e32a21175a02cbc37356f03a1ca309d0b864e84c90e996432465b7bf"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/left/train.jsonl": {
+      "bytes": 3085,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c8b6a36d965ea5a77146042d0a7ed79448a5d7c3f884d729e2960e59d5e3dc8b"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/left/validation.jsonl": {
+      "bytes": 385,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "99cf8a40db8150631ca5468833ac873af87ae9e6bdbf066e454e9a2bf5d9284e"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/right/manifest.json": {
+      "bytes": 1205,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "4adb6101bb0dd14ea47a16bf3bd6cec92a36e1f9cd8bd656b55a20fbb37506b0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/right/test.jsonl": {
+      "bytes": 380,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "f6cab506e32a21175a02cbc37356f03a1ca309d0b864e84c90e996432465b7bf"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/right/train.jsonl": {
+      "bytes": 3085,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c8b6a36d965ea5a77146042d0a7ed79448a5d7c3f884d729e2960e59d5e3dc8b"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_fixture_determinism_and_d0/right/validation.jsonl": {
+      "bytes": 385,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "99cf8a40db8150631ca5468833ac873af87ae9e6bdbf066e454e9a2bf5d9284e"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_page_proxy_python_http_co0/node-proxy.log": {
+      "bytes": 883,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c2beaa12a35c073e968d82b56da708423a66df76ec328807db2d0bd082473f93"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/data/manifest.json": {
+      "bytes": 924,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "e273c4edb571d9811588205377eca60e73ff38fd30cf155021230ae49f3c9592"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/data/test.jsonl": {
+      "bytes": 195,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "5ca25658f3719e359271e105be477c29f0c7dd270e7fd07e4382c76ee3628dd6"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/data/train.jsonl": {
+      "bytes": 1536,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "3ccd3c409cec351fc85266c127170dad66e2c383e17c35f811285ff1fa05f3fa"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/data/validation.jsonl": {
+      "bytes": 193,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "ced09d63618de0f1defa6a3bc4e774a3c1720a3674a59dd34f4e0bd03bc94ba0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/eval/metrics.json": {
+      "bytes": 812,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "33d6a1562f1aff344ae9bdfcc6438d5e7c56ff88b793026064227c4733419005"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/eval/predictions.json": {
+      "bytes": 469,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "d56caf46bf3859baa8a84525dc93c80dbbbf5ba6b24fe9f6be7ea0e3324d441b"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/run/checkpoint.pt": {
+      "bytes": 172566,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "31b576156741f96a9d88b6ce436f1932d3fd8139e720d6abcbc71933c327c6de"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/run/config.json": {
+      "bytes": 230,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "33daec418ce6350c2c5a175b3616af50f94a076263c21d26c312b41b1e714d19"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_real_cli_pipeline0/run/metrics.json": {
+      "bytes": 1664,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "ee05d82823c98f8978f72b4d955c748eb8e4f36ca9b6338e15fd04822ea0ed85"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/bad.pt": {
+      "bytes": 166952,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "66f1782f3a96a2abd85963c2d4bac8b81d70763feaa333701ca8c739447e6b1f"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/data/manifest.json": {
+      "bytes": 924,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "e273c4edb571d9811588205377eca60e73ff38fd30cf155021230ae49f3c9592"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/data/test.jsonl": {
+      "bytes": 195,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "5ca25658f3719e359271e105be477c29f0c7dd270e7fd07e4382c76ee3628dd6"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/data/train.jsonl": {
+      "bytes": 1567,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "5949258f1b621462a7400d01021795c60a154ca139fe0ed972e27081bb89c998"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/data/validation.jsonl": {
+      "bytes": 193,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "ced09d63618de0f1defa6a3bc4e774a3c1720a3674a59dd34f4e0bd03bc94ba0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/full/checkpoint.pt": {
+      "bytes": 171030,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "3d67fa0c4db1adca7d943655205cba5390ed0b6f53570f1ec8151fc6b08f6d23"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/full/config.json": {
+      "bytes": 229,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "a0766f87c2b7a58b726d67ff27788f6d2c3482b0ab8b0628a6ed253c03706220"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/full/metrics.json": {
+      "bytes": 1883,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "773a6047ef363903d186abe6f85435c6809e554c78065254ea01cdbac9e1c069"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/part/checkpoint.pt": {
+      "bytes": 171030,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "14d8a20a9eb515aa790ed8118c2d06dfa8bde685b5163587f6705ea2f8dac2f3"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/part/config.json": {
+      "bytes": 229,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "a0766f87c2b7a58b726d67ff27788f6d2c3482b0ab8b0628a6ed253c03706220"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/part/metrics.json": {
+      "bytes": 1663,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "ad4782cd5e0bb8cd004eaf2b13f03785a111ba3b028ad2176901467b9f36f6da"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/resumed/checkpoint.pt": {
+      "bytes": 171030,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "3d67fa0c4db1adca7d943655205cba5390ed0b6f53570f1ec8151fc6b08f6d23"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/resumed/config.json": {
+      "bytes": 229,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "a0766f87c2b7a58b726d67ff27788f6d2c3482b0ab8b0628a6ed253c03706220"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_reload_resume_exact_and_m0/resumed/metrics.json": {
+      "bytes": 1785,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "840c16d4c7dc7a0c9070bb130909760c81623095b9185fad4975e0c7f62661db"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_supported_checkpoint_uses0/ordinary.pt": {
+      "bytes": 58949,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c8cf976c1bfb8032ac228582f330b3632518601fc4f7299091351657b2a48543"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_unsupported_and_malformed0/malformed.pt": {
+      "bytes": 16,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "9143fcc5e7747f5d007dec953958fadbd761c5bf675d4daec9e2c394b370c49d"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_unsupported_and_malformed0/recurrent.pt": {
+      "bytes": 1273,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "b0147d85e6db4894b8246e6c9db4dfc1bc6554cd4e75084c5a000dba74e872d4"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/test_unsupported_checkpoint_is0/recurrent.pt": {
+      "bytes": 1273,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "b0147d85e6db4894b8246e6c9db4dfc1bc6554cd4e75084c5a000dba74e872d4"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a0/bad.pt": {
+      "bytes": 88360,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "7ae281daaf19bae584487ab7a7c8f08a4a0e0f5b73434b9fc373d8a36ac3d144"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a0/ordinary-direct.pt": {
+      "bytes": 90540,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "5826995b24873b570fe23aead3e502dda2cf27afcbb65ca9a78d0ef34752ae28"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a0/ordinary-direct.trace.jsonl": {
+      "bytes": 227,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "59ad641f7824f7cade0cb169a0f192387036f7fd51b0e833b7776bce600a61aa"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a0/ordinary-part.pt": {
+      "bytes": 90390,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c41a6ed5370065c387095f354c700d5a598e156b791c4d0ea16e441a86959e38"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a0/ordinary-part.trace.jsonl": {
+      "bytes": 113,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "947a8f99d0fd7b98a15aa6ed850e11f2438549dc2974dc2e79eb8bb48be860ed"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a0/ordinary-resume.pt": {
+      "bytes": 90540,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c511e252077cfe9ece54adb2586a6b9ee50e835a2e7141df97be4a850d48b9b5"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a0/ordinary-resume.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "c8406f777adeb3b126b03f3ce2cc4cbed9e5ac10f68770fb7f1cc9663e0da285"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a1/bad.pt": {
+      "bytes": 107945,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "9754cc55c7d2ef5bf0bdeca7fa13390104343068ae043e53fa51889828c5e9e0"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a1/recurrent-direct.pt": {
+      "bytes": 111976,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "32b873ce4437a5c0b85d63cc35f8584ffddbfcbab61eeef6ea3fbf7eaa3e53d5"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a1/recurrent-direct.trace.jsonl": {
+      "bytes": 229,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "450e941dd67229b359dacd63bf49e277542a154c7ba388284feaf6ceaa3fff7f"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a1/recurrent-part.pt": {
+      "bytes": 111730,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "051eaa40003c206080caf2e1ce441e15ab891c358d1b6c20dc11db16bd319ac0"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a1/recurrent-part.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "8ec792aea0db69ba02579e8fa13846369a8c8e43a9988f10c49a4c3432b52d95"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a1/recurrent-resume.pt": {
+      "bytes": 111976,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "5845c1c827277264310b1a10ca6263b6b015964908bdbd59b23ecc21b6c1087d"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a1/recurrent-resume.trace.jsonl": {
+      "bytes": 115,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "d7912ee709a713ee9f4ae1b80551ae50a62fb1e22a12e5111b1ef1892cb60bec"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a2/bad.pt": {
+      "bytes": 99097,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "50f274059e7f440f851296d36cd66f79db1f02e8392c35592ad8806b27a418d2"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a2/delta-direct.pt": {
+      "bytes": 101924,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "64a9ddb5ab7f3625d810764bfcf2f7a77fd51906f93f211567b8ed834709a5df"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a2/delta-direct.trace.jsonl": {
+      "bytes": 228,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "6bd81955c54d70ca8a188e359824e0b808955af2e19082a755a4465b8386b29b"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a2/delta-part.pt": {
+      "bytes": 101694,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "19893c20edde1e6df8c4c1ef4c0a37149a04a150c35276fa7d9ab88f09f2f4d5"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a2/delta-part.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "d0967f7882f95cfdb9d03a6f5bc762be70ac448adb990b00825dff81a0981659"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a2/delta-resume.pt": {
+      "bytes": 101924,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "8b460198038f45dd310d7a9f2d914db2b0625f013b0f281ae336875bdc7d3adb"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/tmp/test_checkpoint_resume_exact_a2/delta-resume.trace.jsonl": {
+      "bytes": 114,
+      "reason": "disposable test/cache/package output; retained locally",
+      "sha256": "9b51c17b1be75dd8f1c31e7fecdc7a1bbd4c8008ba080f591b4ab4ebebe5543e"
+    },
+    "docs/research/toruk-custom-lm-architecture-decision-v1.md": {
+      "bytes": 35748,
+      "reason": "pre-existing unrelated untracked draft; preserve outside commit",
+      "sha256": "cd57eef6d1fb1b8ab66c71a3c40f0f09cc02a9b3afe3dde6aca3de44e9784d23"
+    }
+  },
+  "generated_bytecode": "ignored; not research evidence",
+  "included": {
+    ".gitattributes": {
+      "bytes": 6592,
+      "sha256": "cfd5c22e4fa1fb7f848074f7884f3e2a493863d91bf97d636b592b5b45692adc"
+    },
+    ".gitignore": {
+      "bytes": 2852,
+      "sha256": "0e47acdcf7956fad829e70cf652b8cf5e56cca1aa625ac66f37335d51a0b9751"
+    },
+    "artifacts/segment-delta-dev-v1-commit-review-001/review.py": {
+      "bytes": 15771,
+      "sha256": "d7b47ca5c3d07c7d8d90ce3f63550d91e7c9263ef95c4ebc135557a6c170ed3b"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/build.json": {
+      "bytes": 24673,
+      "sha256": "315f7f53a085cfbf4852ff5d8b3a999cc2bab6ebd8f86d95ae52502bb2529c8a"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/build.log": {
+      "bytes": 28288,
+      "sha256": "5fbb60c9a65576304cff64378d193e11366300fae7b295c1ec4f76373c316ba0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/coverage.json": {
+      "bytes": 8288,
+      "sha256": "8eb54da0e2135940153ff4a3ce2367afa142559588cf3161c563ec1e76537ff8"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/diagnose.json": {
+      "bytes": 24578,
+      "sha256": "15eb23e2f7c1d01162be1675afdb60d8c1bc58ce35b460e39f3a137d034db781"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/diagnose.log": {
+      "bytes": 286,
+      "sha256": "e86a43694ae9e5f4d936acc28edcc74cf09e68206b5837c788ae3017051188b5"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/diff-check.json": {
+      "bytes": 24577,
+      "sha256": "ae42104cd0d3884b152655a9fa8e026abd688603771561a9be20e562e2cb41e7"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/diff-check.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/format.json": {
+      "bytes": 24631,
+      "sha256": "c8e9c94fd4fd06914269408598840592ea0782d5f2d531eb1a8f99ebb5d3da51"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/format.log": {
+      "bytes": 29,
+      "sha256": "e99bbb9764b1cd59c9870b0f71814a1c2238ef612b5f80821e8af07fc1f5df60"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/frozen-sources.json": {
+      "bytes": 24582,
+      "sha256": "3d572e871e941c8468512a645357b6affcb588648481ec89922f149ba5415b2c"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/frozen-sources.log": {
+      "bytes": 44,
+      "sha256": "6997253b542064247b6452a5a5953170cde690552fabc944479be6a0bf4d8047"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/help.json": {
+      "bytes": 24574,
+      "sha256": "abe9a16264ac94eb635fcd7993ada84bc2efe2050386ffae68612a9672bb6915"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/help.log": {
+      "bytes": 2305,
+      "sha256": "d979491857a1b29df00bdc2377042766cc753e7ac8967753a58c0a8f98ee0c07"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/import.json": {
+      "bytes": 24597,
+      "sha256": "a0635d2425edba79b62d77695236da33e74cdd85332629cdd212087b535bfd64"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/import.log": {
+      "bytes": 7,
+      "sha256": "3d097c315a1c543040f548da4c7051265e94c77211a2411ced1d4621344270de"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/install-local.json": {
+      "bytes": 24646,
+      "sha256": "c0e17242dc9a30f92c5036901b5194716feb308a4467d0fe612a29ae94b5e216"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/install-local.log": {
+      "bytes": 1090,
+      "sha256": "c78c94d9a6ed9d5fef9b5921f3584c83e8c7540af197a961b3128249a11c4e74"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/lint.json": {
+      "bytes": 24580,
+      "sha256": "bc7e89c9d955368ae1cb7bb5a2387f126d5f2a3e09a24e3cf265324794ab08f0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/lint.log": {
+      "bytes": 20,
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/package.json": {
+      "bytes": 24571,
+      "sha256": "afed01154cbf9b0a11e5493a31ab6d4bbf6f6a18398cd1f865a1ae60738aa752"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/package.log": {
+      "bytes": 31,
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/research-cli-help.json": {
+      "bytes": 24586,
+      "sha256": "5bea62d49726651812a95a9530b8944e49a300c2f0806695d930c96f355bc6f8"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/research-cli-help.log": {
+      "bytes": 651,
+      "sha256": "5132206f071faf06dbb4f20ce696e0ab7ddc6d08f4d9623552b9c85816f2110e"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/staged-diff-check.json": {
+      "bytes": 24600,
+      "sha256": "9be91d753c4480ab9da11d816d097a2c3a9e9da86300e9cafac2dc1c7e0e7dc2"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/staged-diff-check.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/tests.json": {
+      "bytes": 24981,
+      "sha256": "86aa6b30b1c5fd9acf9a4e8aa66ff233f303b0bb2d6c5886bb0f3d9feea3b899"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/tests.log": {
+      "bytes": 102,
+      "sha256": "7802eea0c0e7549c463400bf1ef886080b476a76e79c20873a3bb23282582ec5"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/types-linux.json": {
+      "bytes": 24594,
+      "sha256": "428599ae15fc55b7dd0cd5afd43442bd9b2f86ba6881f07588be3b2b35eb82d2"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/types-linux.log": {
+      "bytes": 45,
+      "sha256": "1d0b00ad0473fd5bc2b62278f6fc097727a1561945844ab5bddd02cee1369dc2"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/types.json": {
+      "bytes": 24554,
+      "sha256": "6ebbe7d2370869b2398726043cda42b78dd0655a02209d837ccb81b873e8355a"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/types.log": {
+      "bytes": 45,
+      "sha256": "1d0b00ad0473fd5bc2b62278f6fc097727a1561945844ab5bddd02cee1369dc2"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/web-check.json": {
+      "bytes": 24595,
+      "sha256": "0a06a70b13134aec44851d75e1db505043a22eb85fe66ef862c64f3ba32e87e9"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/web-check.log": {
+      "bytes": 132,
+      "sha256": "b7da7d9426430dfac3043253a593446ff65174ee11f0961189ddc799b27bff04"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/web-tests.json": {
+      "bytes": 24580,
+      "sha256": "3374241934af37e6707e744163669577c29d6d3afe505a1cf8461af993da9f3b"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/web-tests.log": {
+      "bytes": 1964,
+      "sha256": "6d3eacdae4d2318f172063346752cea10d765630dca8086aa3a59b6580bc4cd3"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/wheel-prototype-members.json": {
+      "bytes": 24878,
+      "sha256": "0acf17d5f4f62d512bfe7832fdf01c57ca69ac474b6614f3b8ff13bbfdec446e"
+    },
+    "artifacts/segment-delta-dev-v1-verification-001/wheel-prototype-members.log": {
+      "bytes": 43,
+      "sha256": "af707104138611d121117cfecf8e891b9d130c8d966e370871addbb23f86498f"
+    },
+    "artifacts/segment-delta-dev-v1-verification-cost-001/cost.json": {
+      "bytes": 2732,
+      "sha256": "8d925337e32fc20d8f480709fc6623a8222fe059eb8410d96e1586b0d571dae9"
+    },
+    "artifacts/segment-delta-dev-v1-verification-cost-001/output.log": {
+      "bytes": 37539,
+      "sha256": "34cee2a8b565f9e1bf3de71cb4fc630f48a1cb3ff774aee1e44e6184bb5a46d7"
+    },
+    "artifacts/segment-delta-dev-v1-verification-cost-001/resources.jsonl": {
+      "bytes": 407301,
+      "sha256": "e11862f838eeb19db01cc24b276fd0515f491fd778b3165fb369cdb65aa926ca"
+    },
+    "artifacts/segment-delta-dev-v1-verification-cost-001/worker.json": {
+      "bytes": 500,
+      "sha256": "c4b1c104bf01acf39988a9a39efa36aa5ece34df2b0543054e3a3b7a998fd91d"
+    },
+    "artifacts/segment-delta-dev-v1/artifact-inventory.json": {
+      "bytes": 82163,
+      "sha256": "389fb2dc58ed64617b72cc41b8e704f25212a5d066651bea3e2dca3a1cf8be38"
+    },
+    "artifacts/segment-delta-dev-v1/audit.py": {
+      "bytes": 4518,
+      "sha256": "82e9a89f6e6168566f47d4813e07637b3154d87157c9e4486c6cd3685ba67f01"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/cost.json": {
+      "bytes": 656,
+      "sha256": "52f93908b5a0b235bb8ab4189226af9726af98148ab8ec7a069ae7513051bcc1"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/output.log": {
+      "bytes": 628,
+      "sha256": "0b57a1353d417938a18d61ebc66f8e86e686a4e0dd4febc2319900e750d68542"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/resources.jsonl": {
+      "bytes": 15483,
+      "sha256": "77bedf831cc589a74753f23cae080d3a1a77a79db9c2b122a344e4380141a4fa"
+    },
+    "artifacts/segment-delta-dev-v1/contracts/worker.json": {
+      "bytes": 496,
+      "sha256": "929592b10a7c6e4d92894cf6ea473f61bab73c76c60c5c14408451ce7200edcc"
+    },
+    "artifacts/segment-delta-dev-v1/cost-ledger.json": {
+      "bytes": 1724,
+      "sha256": "15fc0bb8e694003f7288952df9d00d0b12c2e64ae0a1b7ee30e1a32f11455420"
+    },
+    "artifacts/segment-delta-dev-v1/data-manifest.json": {
+      "bytes": 822,
+      "sha256": "8a2b3306849ac9ce3c04eb745bdb27036badde154ebb775a5b45e4134f9bb796"
+    },
+    "artifacts/segment-delta-dev-v1/dev-prose.json": {
+      "bytes": 953,
+      "sha256": "47807cf9edae3e96077b8086352bd2b4e1b9efb23fa2355768a0e15ad3393fba"
+    },
+    "artifacts/segment-delta-dev-v1/final-git-state.json": {
+      "bytes": 1077,
+      "sha256": "8bb16cb979715c30c4c8394fb7a9f93ed969693d505ac615de1a65438ceec74b"
+    },
+    "artifacts/segment-delta-dev-v1/freeze.py": {
+      "bytes": 3224,
+      "sha256": "90e67f37ed1b1f591a34476a5ddaf83f2722a305234017a9b4a77ef9c2cfe016"
+    },
+    "artifacts/segment-delta-dev-v1/handoff.py": {
+      "bytes": 4260,
+      "sha256": "f3af28fbf76b0a467f740c62ff9e5b392d6c293ed352912126fd3a03b50b52bb"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-lock.json": {
+      "bytes": 4029,
+      "sha256": "8711afee882f4e4837e4048a878447c1d1706220ca72faa7ed5270c07e878984"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/docs/research/segment-delta-dev-v1-protocol.md": {
+      "bytes": 10886,
+      "sha256": "8769902230090674e24065f4d48ef2c2db26fdcd04e550cf4c8e757d589730a5"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/docs/research/toruk-custom-lm-architecture-decision-v2.md": {
+      "bytes": 9502,
+      "sha256": "4372c2d78abfd4793f702004fc6af4810174e59b08867c41eef3210e03cfb504"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/pyproject.toml": {
+      "bytes": 1623,
+      "sha256": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/scripts/segment_delta_data.py": {
+      "bytes": 7502,
+      "sha256": "e4fcf8a8403e304cf21009bac850348496ac7df13c5c80fcce7cc10ca78c61a6"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/scripts/segment_delta_study.py": {
+      "bytes": 25288,
+      "sha256": "790571ad5ada4ca14bf1ff0f1932ad7d3d9cee856a3acf1a1aff2a71f5b45463"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/scripts/segment_delta_watch.py": {
+      "bytes": 5973,
+      "sha256": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/engine.py": {
+      "bytes": 15184,
+      "sha256": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/model.py": {
+      "bytes": 4536,
+      "sha256": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/owned_lm.py": {
+      "bytes": 10217,
+      "sha256": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/owned_training.py": {
+      "bytes": 17401,
+      "sha256": "615a44af36db30a64039b2930ba0aeb6c5eca97cd372f90d70d3a356273d3bac"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/recurrent.py": {
+      "bytes": 6624,
+      "sha256": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/segment_delta.py": {
+      "bytes": 12071,
+      "sha256": "8ea7cbe8758b35ef5e6090a911495c1ddd7814590dd2c436a58cdf90ea23e122"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/segment_delta_training.py": {
+      "bytes": 9410,
+      "sha256": "6836b846a94f2b1a712987bb9e1ef5b5094a44d07f9c429c92b33227c295f26a"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/src/toruk_lm/tokenizer.py": {
+      "bytes": 722,
+      "sha256": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0"
+    },
+    "artifacts/segment-delta-dev-v1/implementation-sources/tests/test_segment_delta.py": {
+      "bytes": 8741,
+      "sha256": "80380f0f150082b307f111c9ceceb6a81732aabf784b31a56a45af99bc9ea445"
+    },
+    "artifacts/segment-delta-dev-v1/inputs.json": {
+      "bytes": 3985,
+      "sha256": "e499c01db31deb74ca8ccb81aa0e7e0edb92d0228d530e953f465fa1c5ab3fce"
+    },
+    "artifacts/segment-delta-dev-v1/labels-evaluator-only.json": {
+      "bytes": 3073,
+      "sha256": "5bf8856568194c8d0f8ae1f68250a65125c519801bd22a41e164c579d43e09a3"
+    },
+    "artifacts/segment-delta-dev-v1/poststudy-audit-cost/cost.json": {
+      "bytes": 396,
+      "sha256": "641de96db0fb61a17e98ddc913b32efed7c6a4bdc6a292e1d584f53f4d72576c"
+    },
+    "artifacts/segment-delta-dev-v1/poststudy-audit-cost/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/poststudy-audit-cost/resources.jsonl": {
+      "bytes": 1059,
+      "sha256": "2f9492d76b68fdf8df074187e3a0d213d58b6ccc56139b56b7f9f701ae1cd2e3"
+    },
+    "artifacts/segment-delta-dev-v1/poststudy-audit-cost/worker.json": {
+      "bytes": 500,
+      "sha256": "0347f82c58635cd5e1b2f7cb4a579545f9dd18cfad4c4b313d34abc9196d3d84"
+    },
+    "artifacts/segment-delta-dev-v1/poststudy-audit.json": {
+      "bytes": 4211,
+      "sha256": "3f884f2cbc6c8e8610512b5c862ecead8b5bd6a3b6a70a655ff338ba37a66b39"
+    },
+    "artifacts/segment-delta-dev-v1/poststudy-verify-worker.py": {
+      "bytes": 674,
+      "sha256": "22bc400899038ab7a3f42430ac7469188c505a9deca0ab64523b8f3f4b66cde8"
+    },
+    "artifacts/segment-delta-dev-v1/preflight.json": {
+      "bytes": 695,
+      "sha256": "60d0ea299a3a51aeadb0396090d09707d2eb4ec6e71e3eef73f3ae41f0a757e2"
+    },
+    "artifacts/segment-delta-dev-v1/prepare/cost.json": {
+      "bytes": 419,
+      "sha256": "d43cb1e223aa46e2c93bb5e5a4e79a802ca955424b84687826b3c797135d2f5b"
+    },
+    "artifacts/segment-delta-dev-v1/prepare/output.log": {
+      "bytes": 86,
+      "sha256": "0290fa22bc2939a689a9ed44942614e18ed25bb04645519223c1162aa6bd3245"
+    },
+    "artifacts/segment-delta-dev-v1/prepare/resources.jsonl": {
+      "bytes": 1036,
+      "sha256": "f83323a8874b1c09a7792a8437f87e9da88fad2716178a32f5f6dca3be5fa93a"
+    },
+    "artifacts/segment-delta-dev-v1/prepare/worker.json": {
+      "bytes": 498,
+      "sha256": "8b3f673c129ac3abcb2cbc8f4d62e5686e682a6c3f8edd9cd4b7b711373bd33c"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/docs/research/segment-delta-dev-v1-protocol.md": {
+      "bytes": 10886,
+      "sha256": "8769902230090674e24065f4d48ef2c2db26fdcd04e550cf4c8e757d589730a5"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/docs/research/toruk-custom-lm-architecture-decision-v2.md": {
+      "bytes": 9502,
+      "sha256": "4372c2d78abfd4793f702004fc6af4810174e59b08867c41eef3210e03cfb504"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/pyproject.toml": {
+      "bytes": 1623,
+      "sha256": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/scripts/segment_delta_data.py": {
+      "bytes": 7502,
+      "sha256": "e4fcf8a8403e304cf21009bac850348496ac7df13c5c80fcce7cc10ca78c61a6"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/scripts/segment_delta_watch.py": {
+      "bytes": 5973,
+      "sha256": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/src/toruk_lm/engine.py": {
+      "bytes": 15184,
+      "sha256": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/src/toruk_lm/model.py": {
+      "bytes": 4536,
+      "sha256": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/src/toruk_lm/owned_lm.py": {
+      "bytes": 10217,
+      "sha256": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/src/toruk_lm/owned_training.py": {
+      "bytes": 17401,
+      "sha256": "615a44af36db30a64039b2930ba0aeb6c5eca97cd372f90d70d3a356273d3bac"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/src/toruk_lm/recurrent.py": {
+      "bytes": 6624,
+      "sha256": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d"
+    },
+    "artifacts/segment-delta-dev-v1/protocol-sources/src/toruk_lm/tokenizer.py": {
+      "bytes": 722,
+      "sha256": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0"
+    },
+    "artifacts/segment-delta-dev-v1/registration.json": {
+      "bytes": 3995,
+      "sha256": "bb828757efe6f4073d7d1c74405aa7c73120e11fcfdfff6c09b8a95812e1d2dd"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal-002-numeric.json": {
+      "bytes": 570,
+      "sha256": "0c24ddeae2dae00d2479e12e8a71106b558a684b1763703365554a3033c06ba7"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal-002/cost.json": {
+      "bytes": 399,
+      "sha256": "275b2b14c1f0855b3d5c0b4edf3d303ce34e43c6133f3f308b7748085ff907e4"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal-002/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal-002/resources.jsonl": {
+      "bytes": 10414,
+      "sha256": "3857de95b54bd010281f7bbbd0bc3387b9b1bc144194d64c95ea9fbcbfa16328"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal-002/worker.json": {
+      "bytes": 522,
+      "sha256": "ac173df68ddfe13c3d149ddc7bbf799372fb2c60c80cac905aef4bb63a5fe675"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal-numeric.json": {
+      "bytes": 574,
+      "sha256": "4f1d2b0693bf9245267957b0f127ff198eb9bac7451b840876723f6b16c839cf"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal/resources.jsonl": {
+      "bytes": 21519,
+      "sha256": "953bd07fe46de56c51b5c247ca5f0918ae776208a5814d294f6f29dbdf22e3d0"
+    },
+    "artifacts/segment-delta-dev-v1/rehearsal/worker.json": {
+      "bytes": 522,
+      "sha256": "c33435ef0fd4f8a05c028bc0116622bc540dd9e68ec1cd3b4a6ff2029b55eb94"
+    },
+    "artifacts/segment-delta-dev-v1/rehearse-002.py": {
+      "bytes": 2832,
+      "sha256": "24179b2105a5588f1572f97f8a5ec257aa6ffc214cdf206774bbe9c631206ed2"
+    },
+    "artifacts/segment-delta-dev-v1/rehearse.py": {
+      "bytes": 2819,
+      "sha256": "f99e14f6ce19844bc3ccfdab2d84a643fc47be885060804febc607bd9cd608bf"
+    },
+    "artifacts/segment-delta-dev-v1/run-cost.json": {
+      "bytes": 23809,
+      "sha256": "33257bc6de1a20015df29c384d77ec2e1f9305c8975f5349933032f2fb918de8"
+    },
+    "artifacts/segment-delta-dev-v1/run-start.json": {
+      "bytes": 122,
+      "sha256": "994e0329dc07a0db2fcb864aaedde1db01b968950aa6f96b322697ea6c850561"
+    },
+    "artifacts/segment-delta-dev-v1/seal/cost.json": {
+      "bytes": 594,
+      "sha256": "4578b23e27301d6fbf7440148be36f6f8df454a674ddd07c4bc9f509a9feebe9"
+    },
+    "artifacts/segment-delta-dev-v1/seal/output.log": {
+      "bytes": 88,
+      "sha256": "2d09d883c2fc0fda10ff71e2cb1e25255c64f627995778ac3911d0be1c2215c8"
+    },
+    "artifacts/segment-delta-dev-v1/seal/resources.jsonl": {
+      "bytes": 8667,
+      "sha256": "9702767512ed1c666ffecde49f675e5599530db8c70501fe0bfabd6ac9fc2ee9"
+    },
+    "artifacts/segment-delta-dev-v1/seal/worker.json": {
+      "bytes": 523,
+      "sha256": "ade5a486f1911c7658b7e1c029d3aa89c023aa391071311ad5918e7afece737a"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-full/cost.json": {
+      "bytes": 713,
+      "sha256": "56d9c44bd0045006614983f4a0c423dc94002fde05d176d4e49f1ab49ad7f95c"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-full/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "33b5f99730d41cbfa8188aaa7fecb5e50b9048a2e8fd028ddfc8294cbfea4eed"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-full/predictions.jsonl": {
+      "bytes": 27764,
+      "sha256": "cf201a3768f7c17ab4460b7e9860cd1f1dfb7b548340b4b2e323ec399e005c23"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-full/resources.jsonl": {
+      "bytes": 9062,
+      "sha256": "ecfd12790570d5b72b782ab3377c5c6b98dfc354aee5edbb3a684e8ad7842066"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-full/worker.json": {
+      "bytes": 523,
+      "sha256": "57a766a2b22c98aa0c9540d72daf32cd963215b823e08cfd1eac99cb9ee4a4f4"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-read/cost.json": {
+      "bytes": 719,
+      "sha256": "5f8b467dad5303d555f761314f990d0ee8c72cc59c4913770938346477f26366"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-read/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "a54f2c893c70ce238072f4628e091a7c71158c6610a3cf9ace9babf3678cb69b"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-read/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-read/predictions.jsonl": {
+      "bytes": 27728,
+      "sha256": "584f44cacb550951b304a3472dccd140adf48456cc124059643edf4d00c95a91"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-read/resources.jsonl": {
+      "bytes": 8946,
+      "sha256": "0b9d1d9c64ea67a175fcfcc4d4a5d1b1e0c2142c1dddeca23f62848677a7e1dd"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-read/worker.json": {
+      "bytes": 520,
+      "sha256": "0be6b81ea18ec2388cc025936cdc5a5f30f57cbff84caca15f1b244db18fbe61"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-write/cost.json": {
+      "bytes": 724,
+      "sha256": "4682fd78e0431163bf6f334fdad339623e179dc3840234f5a0b22ef49238a316"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-write/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "1206c462cddb6596ac56b67ebc1ec8a901b200b0965b22a2aa163aae2155a6e3"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-write/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-write/predictions.jsonl": {
+      "bytes": 27678,
+      "sha256": "19e8f39e714c175f59ef020bc0ae65ce9b7b29c96dd3e88e47be9c0c7d9e01b8"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-write/resources.jsonl": {
+      "bytes": 8420,
+      "sha256": "4be3e212a3d3e8ecbc7ec07a5a1e688e78fe9ab2689546961ad055f33601e000"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-delta-no-write/worker.json": {
+      "bytes": 522,
+      "sha256": "ab39142b631a0054cf4291c0235ae5fefd74ea0b948c0479a397b2f71aefa033"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-ordinary-full/cost.json": {
+      "bytes": 720,
+      "sha256": "d2b24ab24f29afb98d9ceeb80cefd2b86dce2c11371ce2a4d784009458d12e59"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-ordinary-full/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "79b7531897134721aec9f16d62bcbb7c0b367f16de6186204cdcad08f4485cbf"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-ordinary-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-ordinary-full/predictions.jsonl": {
+      "bytes": 27568,
+      "sha256": "e81f1c7a43285995a623a798dc554051936975f7a69dca423fb1ed8ed63d45fb"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-ordinary-full/resources.jsonl": {
+      "bytes": 8259,
+      "sha256": "abdbfbe65e1eed61cdb75d31fd29a4068b6794acb0d6cda1fe5b429084945db6"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-ordinary-full/worker.json": {
+      "bytes": 524,
+      "sha256": "aa45e1e91f3e33329ccc37f5690eeb972e81aba965f1defaa5ece1c9ab9620f6"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-recurrent-full/cost.json": {
+      "bytes": 730,
+      "sha256": "30206499274e67edf03482dedab820e6bd9270c60f980035bd519dedc9eb4b88"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-recurrent-full/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "74be06603bcff4de75b0094c10003fc787fae6e1a3da008b6bbbe92c25e38f18"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-recurrent-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-recurrent-full/predictions.jsonl": {
+      "bytes": 27751,
+      "sha256": "043f6bbc2fa913f715296150c1c80b96252a879283a99a8f47450ef31b3c221f"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-recurrent-full/resources.jsonl": {
+      "bytes": 9060,
+      "sha256": "da55f69ba81b0a2ba42abe119432b03d070f223cda90dd3fde7c8e3a902c30a9"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-113-recurrent-full/worker.json": {
+      "bytes": 521,
+      "sha256": "1b70c487eae13ea018fbceaba8bb5e60721edacb4b8eeb0cd00c491723778590"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-full/cost.json": {
+      "bytes": 718,
+      "sha256": "f20f217b411c919e63e7405ae4c29e4d31dd284e3faaa80e183987c65c7e4e74"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-full/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "714b3decc00c2aee97e03af524508720bd80ae6bf881fb439185894fc0684988"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-full/predictions.jsonl": {
+      "bytes": 27752,
+      "sha256": "35137b2bf84415b6938da637b4cfbbfd0213352e6fca4354d3ed3840f69cdc0f"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-full/resources.jsonl": {
+      "bytes": 8778,
+      "sha256": "eaa611fa0a87ab06f5ef158c2a9a1433b29f877ebb010dcc5b35d84bc5579d46"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-full/worker.json": {
+      "bytes": 522,
+      "sha256": "7ac39229566d670c393f540eff075a014b072f2944b758a8c8093258e8ca58af"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-read/cost.json": {
+      "bytes": 726,
+      "sha256": "81036077b4ace14d5c440518c978d562296729c1e25e1c3a5a8cbbc2f0c9c1d7"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-read/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "0edf847d868b3b28c1e38d9640615f3207d64bc96d6a1c1c89fb9028e83fcd76"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-read/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-read/predictions.jsonl": {
+      "bytes": 27726,
+      "sha256": "bdcffc7a40a1a4631c0ca344bc898d111ac518241d475fcd48a09753ef63c889"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-read/resources.jsonl": {
+      "bytes": 9459,
+      "sha256": "2771eb74bc60f448a7e16a88f963251bd996d429c01f2d374f8859334d031800"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-read/worker.json": {
+      "bytes": 522,
+      "sha256": "f01097c671259a3f19399c6cf3d1241e3cae55a772d92358414194908290a238"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-write/cost.json": {
+      "bytes": 723,
+      "sha256": "e60250997c21ab23e43d05516cbe545c4d332c3fc03581c182f3276dbf6cfddb"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-write/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "a1bb8f6f096aecb4fd7411d0aab973b40e5e027be5500cda782ef00f4d2af36c"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-write/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-write/predictions.jsonl": {
+      "bytes": 27688,
+      "sha256": "32b895e92c1ea2d392f460fb8acee37b91541d67a7b5878286965beacb330756"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-write/resources.jsonl": {
+      "bytes": 8639,
+      "sha256": "efec06bbbc6859d9fbf1c52c367706c4c5efc2292713375134e0fe1b3f9fd2e2"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-delta-no-write/worker.json": {
+      "bytes": 524,
+      "sha256": "36aafdc02470c5e865fca8e2899edaa67fb30627ef8f48ecba7f06d9ea67bdb3"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-ordinary-full/cost.json": {
+      "bytes": 716,
+      "sha256": "7f427b77205290333d8a2d5a50e299f630c50711f68b9408c7170c72e6dfb505"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-ordinary-full/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "d41e711c769d145ac2e848d3d6a14f2540c7eaf8fbd6d979e582d82e66a0b993"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-ordinary-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-ordinary-full/predictions.jsonl": {
+      "bytes": 27570,
+      "sha256": "de1cc558a8bd97ffbe20ef8a4765c789c5db7d8877632e45a870e2c51e3d6ec3"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-ordinary-full/resources.jsonl": {
+      "bytes": 8134,
+      "sha256": "c13d935bb66bd432d52584c8596879a531851e4357cdf5dfd8f5929c35ba91b9"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-ordinary-full/worker.json": {
+      "bytes": 523,
+      "sha256": "6be2895398e60a38408c093ea9ec36ff23c9250636a720b126ea805fd5194762"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-recurrent-full/cost.json": {
+      "bytes": 724,
+      "sha256": "8484f2e1a6495b3f47e2b1e5a21cf0c0f44533bfbce0237ba03932d1dc866024"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-recurrent-full/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "8920c9ea377c09801338ebe7769147dd481637e7f1578b7e21460dc6e3c386fd"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-recurrent-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-recurrent-full/predictions.jsonl": {
+      "bytes": 27769,
+      "sha256": "d0a7af74d0cc68f698f0034218cffc447410d648823e316f86961ae211db8a94"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-recurrent-full/resources.jsonl": {
+      "bytes": 8562,
+      "sha256": "c1841f4282a6f544be699bcb56f22051fb7a82e020b2c8c7f406a55eda11bc0b"
+    },
+    "artifacts/segment-delta-dev-v1/stages/generate-227-recurrent-full/worker.json": {
+      "bytes": 522,
+      "sha256": "9fa64fd9ed2456bf3c393f5d10d1865e8ba0f55833d9474eeab6cb1d10466f10"
+    },
+    "artifacts/segment-delta-dev-v1/stages/lexical/cost.json": {
+      "bytes": 699,
+      "sha256": "0613c3a911698ebbbf79669d61d06158e3a8490ba2f3355ae03cf15e15d396c8"
+    },
+    "artifacts/segment-delta-dev-v1/stages/lexical/generation-seal.json": {
+      "bytes": 124,
+      "sha256": "087ed8f7d67a51d678f7e0fae7e4b8fd84cbb88a4e332d657f247537b1727686"
+    },
+    "artifacts/segment-delta-dev-v1/stages/lexical/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/lexical/predictions.jsonl": {
+      "bytes": 21939,
+      "sha256": "920b65f6dff918024bcdfc06c93f0311190cfd71faf5353614eb4c54060d55be"
+    },
+    "artifacts/segment-delta-dev-v1/stages/lexical/resources.jsonl": {
+      "bytes": 4556,
+      "sha256": "3a3efdc33da7e96961c60d8f774946d7e42a3f933bb4ecc5ffc1e7a06f42ec99"
+    },
+    "artifacts/segment-delta-dev-v1/stages/lexical/worker.json": {
+      "bytes": 507,
+      "sha256": "8a3a4b1f20071e8d299dc5407adcb92b968bf40f1e7fb3c2ed75a5d468de9485"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-full/cost.json": {
+      "bytes": 706,
+      "sha256": "4b69d3fbc813e5dae5e340f752a57d83a3c8621411d2d9a418a8f3418f507e66"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-full/loss-summary.json": {
+      "bytes": 197,
+      "sha256": "6591505195332e5ce7eedaee93f6f9e5e1c2123b9fb5e663620f832b4386c1a7"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-full/losses.jsonl": {
+      "bytes": 7444,
+      "sha256": "1997e4e9d799cf9625c7fa31e7e165ecde9d5d41e7d12deb66829a41777c6d00"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-full/resources.jsonl": {
+      "bytes": 9060,
+      "sha256": "d6f12cf72869026beba7f1422fe1f686fb1f53607da6ff0add4450a460607ce8"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-full/worker.json": {
+      "bytes": 519,
+      "sha256": "7ce23ee64f3b3c0fd4dab47ef47a8ca1c9887a024d33516e1548b0f58436131d"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-read/cost.json": {
+      "bytes": 724,
+      "sha256": "a69caf29250c0bf26f410eca5100a1422f7d2921a43ac54dde0d18456d1cf34a"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-read/loss-summary.json": {
+      "bytes": 196,
+      "sha256": "b3c57caf62609ec87793c9882b6a7147b5dd72d8743a43e74911b2e67c4f1657"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-read/losses.jsonl": {
+      "bytes": 7445,
+      "sha256": "0383de343a2a96c95b3c59125ebdeb06e50f5e7d4058d86140980bd5b5636626"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-read/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-read/resources.jsonl": {
+      "bytes": 8675,
+      "sha256": "20a60cf8d443d0c3b14b0844e3f0759fe88069f2e6028f4581d75349049a3218"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-read/worker.json": {
+      "bytes": 519,
+      "sha256": "0faa72123a85ed7a0dfd74d291396f1101418ae891c7fe0c6596c6b6a3cd850c"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-write/cost.json": {
+      "bytes": 712,
+      "sha256": "026878943ca1a4e6380c4dce9df8c1726bd146efce10f1b29eaf3f96d547881e"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-write/loss-summary.json": {
+      "bytes": 196,
+      "sha256": "b3c57caf62609ec87793c9882b6a7147b5dd72d8743a43e74911b2e67c4f1657"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-write/losses.jsonl": {
+      "bytes": 7404,
+      "sha256": "22bee371319219a72a872f3f52081c90adf47c6cc6143e1b379f45854495338d"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-write/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-write/resources.jsonl": {
+      "bytes": 8138,
+      "sha256": "716c5848739ca0a5709e489ebc65e868c5f84a310ca72ca66825deb5f2481943"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-delta-no-write/worker.json": {
+      "bytes": 522,
+      "sha256": "f270bea477c587bd029ca326da7b86205fa1b53a1033db8291ce3a40b9efb348"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-ordinary-full/cost.json": {
+      "bytes": 720,
+      "sha256": "97d9277ec674c6e9da714fd46de97c99af6d251c74acdfc19e1934d1877ed91a"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-ordinary-full/loss-summary.json": {
+      "bytes": 196,
+      "sha256": "909c8c61e93a5687ee8137bcd670f3e1b5193f7f7fec058d795f511e9d01f29a"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-ordinary-full/losses.jsonl": {
+      "bytes": 7398,
+      "sha256": "18c9d247323cc73f3f75de0c71ddc49192b8ec7f2ed7221713f8c38545bcf6a3"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-ordinary-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-ordinary-full/resources.jsonl": {
+      "bytes": 8268,
+      "sha256": "86072f7b9987f303a5b77a17958bcf10472bc3aceedc347e96400171b3d8ea12"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-ordinary-full/worker.json": {
+      "bytes": 521,
+      "sha256": "748ff68eac4f633ac9857420a2060b0dfd24d6a6d72eae4db1e11e52f81f3dae"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-recurrent-full/cost.json": {
+      "bytes": 720,
+      "sha256": "e3bf1a6ca59c5aa770c92161b004a2b75cbe43494e367bc7d40e0b5289f7838d"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-recurrent-full/loss-summary.json": {
+      "bytes": 196,
+      "sha256": "87b28e938fea084138b916180756232c387f9d601354c0cdbde280066bf63727"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-recurrent-full/losses.jsonl": {
+      "bytes": 7397,
+      "sha256": "914a072c999f953918b319f7438a1b3213fd547b0df5cf9fec6ecf177e9f8e79"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-recurrent-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-recurrent-full/resources.jsonl": {
+      "bytes": 8275,
+      "sha256": "fefce276252bae3fa4be0afbb337b16af9936012e3c5082082fc1919a2227a49"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-113-recurrent-full/worker.json": {
+      "bytes": 524,
+      "sha256": "c08257c77244fd8c775bf6242e761e05c436f415954dd841e9aeee01b79688ac"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-full/cost.json": {
+      "bytes": 705,
+      "sha256": "559317739f6a6b88f401131393bda2cbd50d7c1860b33b7fe4adeecfbb715577"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-full/loss-summary.json": {
+      "bytes": 197,
+      "sha256": "0ede2070d1a2a05ab252ebbf429f5535eaa6193cdb109456a319cf331d26e87c"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-full/losses.jsonl": {
+      "bytes": 7458,
+      "sha256": "281c395366dfde7a85efb356a316a4504b242c6a7ecb11924928bbadf2e0ec92"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-full/resources.jsonl": {
+      "bytes": 8662,
+      "sha256": "dfa437bca1268b0de576d7180b89ba80914f0c674f51dd0c93bf478d844c655b"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-full/worker.json": {
+      "bytes": 522,
+      "sha256": "66af785fb9fd535447029804c5e83c5874d645c46779c39726214c93b4907d10"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-read/cost.json": {
+      "bytes": 714,
+      "sha256": "143de8b59164a56768a708ef3ab19148e23e98427fb5d96133c518dfb1c825d6"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-read/loss-summary.json": {
+      "bytes": 195,
+      "sha256": "4a1c8dc9ce4fee35e03d7cc5efa603092816589388c14ad69e9894eef0030c5f"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-read/losses.jsonl": {
+      "bytes": 7432,
+      "sha256": "fef8b1bc50218b931c158ec73c25f05bc4f17a67b79cd5324bd42f0e51403687"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-read/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-read/resources.jsonl": {
+      "bytes": 8552,
+      "sha256": "7dfb49b37a3af0306373a144238d36be5e0434524ae88c5bec22f2d748ac75e8"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-read/worker.json": {
+      "bytes": 522,
+      "sha256": "5d15447a6e02638c39f7c7ed0802e855c98537d31d5a360327a85d7215979dbb"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-write/cost.json": {
+      "bytes": 715,
+      "sha256": "b73691ed71af99408d50bb1e011ae28d3e6329a8742d1fc6de4aac4f6b441340"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-write/loss-summary.json": {
+      "bytes": 195,
+      "sha256": "4a1c8dc9ce4fee35e03d7cc5efa603092816589388c14ad69e9894eef0030c5f"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-write/losses.jsonl": {
+      "bytes": 7390,
+      "sha256": "b13a017fe724df446e67bf2f7dc209f2311e3229c30d94f5ab4d41683e6c830d"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-write/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-write/resources.jsonl": {
+      "bytes": 8258,
+      "sha256": "64c1667ceff31a7d0c028826bc15f08da15870fc692af2aa56030d0efaa612a0"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-delta-no-write/worker.json": {
+      "bytes": 520,
+      "sha256": "02931973d16417c57658eae2bc22b9346362a48e966bb63e24838fb4a50abd23"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-ordinary-full/cost.json": {
+      "bytes": 719,
+      "sha256": "5b4c531fd7bb373af5ec708f50b313467287a400d6245c5988259ce69ba4659a"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-ordinary-full/loss-summary.json": {
+      "bytes": 194,
+      "sha256": "c8d8d3e240811e6c0120140808493951d1dcb0fcc2671f2980c9d7d167071bb8"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-ordinary-full/losses.jsonl": {
+      "bytes": 7391,
+      "sha256": "5b0747821adcc2f19ca27564d94e12f13861945abc8f140ea60d47b8039b04c6"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-ordinary-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-ordinary-full/resources.jsonl": {
+      "bytes": 8138,
+      "sha256": "b957bb302431f012122eb86239a9ce7d43e8f1d5cd477b030f05aca286d61f95"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-ordinary-full/worker.json": {
+      "bytes": 522,
+      "sha256": "421cbfdc8a575d91a2e86d8be728410bc7ad4803cb3809035549256cccc2be53"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-recurrent-full/cost.json": {
+      "bytes": 714,
+      "sha256": "4456254a6321188becdf7a8cfed019b2b90e2066bf9d957d914e56f23ad2b24f"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-recurrent-full/loss-summary.json": {
+      "bytes": 195,
+      "sha256": "7b9b9ce4b97bcf4f295efbb878a9d559e8f68d9c77b1ae3fb5a42d356ce3fed9"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-recurrent-full/losses.jsonl": {
+      "bytes": 7419,
+      "sha256": "7a415c48285c51ea38e93bd9db62f4d622e5c116954a97866eb4f088c6d563dc"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-recurrent-full/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-recurrent-full/resources.jsonl": {
+      "bytes": 8272,
+      "sha256": "853b96eb3ed6d5d61fa25280c22447231c30349addbd42cd1076149c5fd06eab"
+    },
+    "artifacts/segment-delta-dev-v1/stages/score-227-recurrent-full/worker.json": {
+      "bytes": 523,
+      "sha256": "1e352dfd87a1a6582a6f8f942513cc6e5dae9b14d88d5d3bb11b7991be3fa1bd"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/checkpoint-meta.json": {
+      "bytes": 106,
+      "sha256": "c176b6c7c65560389dc96b751c66ee541dd814d0dc3fa8b8acfb4b514f55dac3"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/checkpoint.pt": {
+      "bytes": 213246,
+      "sha256": "d795f22e7ff349770a0be7daaf6531429108138f48efdbbeb09ce336d16ac1df"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/checkpoint.trace.jsonl": {
+      "bytes": 15318,
+      "sha256": "22a947bd79e31200f297cdba32f2923e02342f2da0541544fc41798b58bad8b6"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/cost.json": {
+      "bytes": 704,
+      "sha256": "f3db628c6d3f0df62ccb82e8f48e54b42ddd626b0272223cfef0cb4c600c2b21"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/resources.jsonl": {
+      "bytes": 24842,
+      "sha256": "8e31c2c6767ff304c1b254b7a0ec2eadd5e2b8557d778c7eeb0f5b082d4c2398"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/training.json": {
+      "bytes": 24975,
+      "sha256": "ea1b837ec62fa857266a5dc5e91228f6e6ffc906a7639e823b2c3e72b33dd604"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-delta/worker.json": {
+      "bytes": 524,
+      "sha256": "e7918517909f5d20d01c9e00f1c81312853db746896bd4de009e8bda5cdbcf79"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/checkpoint-meta.json": {
+      "bytes": 106,
+      "sha256": "1b5a69193680557a5d33f1e5234cd8fe62d334e2ca0396722e29ba54d1d27aa5"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/checkpoint.pt": {
+      "bytes": 196661,
+      "sha256": "6fe9ad16dc0074eb7b72c3cf2118c9fd5ae84a7c904326ea3d00c1370c3c35fe"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/checkpoint.trace.jsonl": {
+      "bytes": 15312,
+      "sha256": "db9f7873b91538c1d620bcaa1c0666725e6c82c6849a96b782af8ea32d14f392"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/cost.json": {
+      "bytes": 726,
+      "sha256": "db9810ecaec39e8a7f1c910ef9fb5ee2b23b7dcd8011037140e2f5069acdc21a"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/resources.jsonl": {
+      "bytes": 12127,
+      "sha256": "ca697318c988bd54955293078bc32a1b5181a60ead95d0f4f23489ffe685f25e"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/training.json": {
+      "bytes": 24969,
+      "sha256": "8ad3568e6232618c147f386ce71350ff2ac020b414d7d08f99d0c08f431133df"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-ordinary/worker.json": {
+      "bytes": 523,
+      "sha256": "1d550bf03a5dda0c0ac81ad3b6f827b89cc6aefceee89d8028490870ec86b45b"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/checkpoint-meta.json": {
+      "bytes": 106,
+      "sha256": "6df90f6d329fcfd54699c9e8049f12a92cbf453d82e3e6d3541281b615f93f38"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/checkpoint.pt": {
+      "bytes": 215814,
+      "sha256": "7d418721242a9068a614a7170ef7319c8d2854f76337837edc7768db2846b6f7"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/checkpoint.trace.jsonl": {
+      "bytes": 15306,
+      "sha256": "28a808d8781f5d1bbb1912b63c48b47449e6861e09ff07099ae92559936b59f9"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/cost.json": {
+      "bytes": 712,
+      "sha256": "23703caa4ea8d422d144001c7add2fe695f7ee65f123588367da9383113732fe"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/resources.jsonl": {
+      "bytes": 15594,
+      "sha256": "2b4cdf2ee92bc2cd3bf00e0d4e84da24595cac7fe3c11106609638a519ae6f27"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/training.json": {
+      "bytes": 24963,
+      "sha256": "95b28c4c5da8f767c4f73f1f38d2908119b53aa1da11123f4cf5767d59b01a49"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-113-recurrent/worker.json": {
+      "bytes": 520,
+      "sha256": "f18b77acf73654786fae71df7a6e30fff54bc5d8a840d3a3094850c8a7b4c471"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/checkpoint-meta.json": {
+      "bytes": 106,
+      "sha256": "b58ea5921883d0a00dc965ba2281509e6398fd4b9e46928c4c3768cf9095729f"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/checkpoint.pt": {
+      "bytes": 213182,
+      "sha256": "509ffe31aea6555b3622188090c5ffd00d1e1c6b1a8c28b90a29f2e86ee8498d"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/checkpoint.trace.jsonl": {
+      "bytes": 15318,
+      "sha256": "7c1c9a49f523b492d73d678cfbd82a14185e653e724bb040f963bf4179111729"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/cost.json": {
+      "bytes": 707,
+      "sha256": "c02e4986bdb93208e9b02391618c3b8e6bfa795400e974656e0ca936700a22c5"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/resources.jsonl": {
+      "bytes": 24695,
+      "sha256": "68654c52dd590348405fb36aaa2c149d1089b4b6ab8c38851c5ba29b23775186"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/training.json": {
+      "bytes": 24975,
+      "sha256": "ff07775f4f37d237568e47793faf22cc47a1346152f59e8a85293790f11816ec"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-delta/worker.json": {
+      "bytes": 521,
+      "sha256": "f9d7c647e5a97f4f9473754e2c1b40fce9bfd4af5bde5c012dfb338c855408e7"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/checkpoint-meta.json": {
+      "bytes": 106,
+      "sha256": "242a0456c05fa804dd494beb9b70e7f9b009ddc35117586d23650ce07c862171"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/checkpoint.pt": {
+      "bytes": 196661,
+      "sha256": "3a42688272a277096a6064392cb93e2bf0252ccc9233818932fdcb0b15bfb976"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/checkpoint.trace.jsonl": {
+      "bytes": 15319,
+      "sha256": "f181a54ed60f1e76f808620cda7e898c3d677f56e6c6030b92eaac2b8c70e27a"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/cost.json": {
+      "bytes": 701,
+      "sha256": "575528a6d02ca67facb93c44ad1dcdaf9429dc5d4b070d53a75bf9ccc7fee9dc"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/resources.jsonl": {
+      "bytes": 11848,
+      "sha256": "a85167e881df36036937a23c00796677ff898d275ccaa89cabc1f4666e7e7690"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/training.json": {
+      "bytes": 24976,
+      "sha256": "53178f302b72c44defae01e1550fe4d5ecc342da94c9728b21bb997ebbed1a15"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-ordinary/worker.json": {
+      "bytes": 516,
+      "sha256": "c1cb117501c605c402165b28ff9641615f05c1a300f46b54ac265883e01d604e"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/checkpoint-meta.json": {
+      "bytes": 106,
+      "sha256": "a643fe1fd58a7a1af6db413c15138797b93cd8c3765d30179c7a85801cc2ee32"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/checkpoint.pt": {
+      "bytes": 215814,
+      "sha256": "43f122b3a0838bd30c65d48b0bcc70485826d0a57f61ccd0bd5c0ad1e26c66ee"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/checkpoint.trace.jsonl": {
+      "bytes": 15314,
+      "sha256": "d07b9afc78323df61dc0edf181726cd3e6ac5b0ec16b798de8be956bf3eaa109"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/cost.json": {
+      "bytes": 711,
+      "sha256": "bde6490d1df204e2e90bbc8b7230076784571a7a8aaa73e75c95c3a318879562"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/resources.jsonl": {
+      "bytes": 15341,
+      "sha256": "51766c1d6dc551f1bf1a53259a66d277728b11d019bcf1004d99e95978bd4dcb"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/training.json": {
+      "bytes": 24971,
+      "sha256": "99c7b5e7dd3d39633ede64079cfad0248a0b79bca7d630bd912f6fe2d98c98c7"
+    },
+    "artifacts/segment-delta-dev-v1/stages/train-227-recurrent/worker.json": {
+      "bytes": 520,
+      "sha256": "3d47c14857ce5f2bfd6d9d7aa52e54b562f824427e6fd59d689ebb1a636b59e8"
+    },
+    "artifacts/segment-delta-dev-v1/summary.json": {
+      "bytes": 417867,
+      "sha256": "c81eb5c4502a4c48b946628ceea8ca1f1adca0e2f8b8faa7c20b8b743e0648cc"
+    },
+    "artifacts/segment-delta-dev-v1/train.json": {
+      "bytes": 28712,
+      "sha256": "b4cc4a2761a4886a7190d4f824c46a5cc04cfc54d5016edba43cb6255e71f3df"
+    },
+    "docs/research/segment-delta-dev-v1-commit-review.md": {
+      "bytes": 5803,
+      "sha256": "a4afc4a0f7081dc47c3be45c55de94dd0cb80a4c2e5658596bcf7a59bc9fc0f8"
+    },
+    "docs/research/segment-delta-dev-v1-protocol.md": {
+      "bytes": 10886,
+      "sha256": "8769902230090674e24065f4d48ef2c2db26fdcd04e550cf4c8e757d589730a5"
+    },
+    "docs/research/segment-delta-dev-v1-results.md": {
+      "bytes": 18746,
+      "sha256": "2100e0a460a7e23c6b0e77709c743c5774cab51b8f0eeaa21fda55bad629a1fc"
+    },
+    "docs/research/toruk-custom-lm-architecture-decision-v2.md": {
+      "bytes": 9502,
+      "sha256": "4372c2d78abfd4793f702004fc6af4810174e59b08867c41eef3210e03cfb504"
+    },
+    "scripts/segment_delta_data.py": {
+      "bytes": 7502,
+      "sha256": "e4fcf8a8403e304cf21009bac850348496ac7df13c5c80fcce7cc10ca78c61a6"
+    },
+    "scripts/segment_delta_study.py": {
+      "bytes": 25288,
+      "sha256": "790571ad5ada4ca14bf1ff0f1932ad7d3d9cee856a3acf1a1aff2a71f5b45463"
+    },
+    "scripts/segment_delta_watch.py": {
+      "bytes": 5973,
+      "sha256": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c"
+    },
+    "scripts/verify_segment_delta_dev.py": {
+      "bytes": 3039,
+      "sha256": "5295d4ebc41120e9ec98e763602e76a1191f2cc5ed7402d6148b6a0045f616dc"
+    },
+    "src/toruk_lm/segment_delta.py": {
+      "bytes": 12071,
+      "sha256": "8ea7cbe8758b35ef5e6090a911495c1ddd7814590dd2c436a58cdf90ea23e122"
+    },
+    "src/toruk_lm/segment_delta_training.py": {
+      "bytes": 9410,
+      "sha256": "6836b846a94f2b1a712987bb9e1ef5b5094a44d07f9c429c92b33227c295f26a"
+    },
+    "tests/test_segment_delta.py": {
+      "bytes": 8741,
+      "sha256": "80380f0f150082b307f111c9ceceb6a81732aabf784b31a56a45af99bc9ea445"
+    }
+  },
+  "included_bytes": 4158230,
+  "no_evidence_rewritten": true,
+  "original_inventory_files": 405,
+  "version": "segment-delta-dev-v1-commit-review-001"
+}

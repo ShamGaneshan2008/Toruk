@@ -1,0 +1,120 @@
+{
+  "client_date": "2026-11-13",
+  "base_commit": "ab6d3a65538b5f33d17efe4f45189906f1394a38",
+  "root": "D:/Toruk",
+  "branch": "main",
+  "decision": "Commit negative development record; do not push",
+  "preserved": {
+    "lm_each_seed": "0/24",
+    "lexical": "24/24",
+    "advancement": false,
+    "delta_cpu_wall": "higher than recurrent"
+  },
+  "primary_manifest_files": 301,
+  "inventory_excluded": 110,
+  "research_checkpoints": 6,
+  "checkpoint_bytes": 1251378,
+  "original_inventory": "405 of 405 SHA256/size matches",
+  "final_checks": {
+    "review-format": {
+      "status": "PASS",
+      "seconds": 0.09261440000045695,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "scripts/segment_delta_data.py",
+        "scripts/segment_delta_watch.py",
+        "scripts/segment_delta_study.py",
+        "scripts/verify_segment_delta_dev.py",
+        "src/toruk_lm/segment_delta.py",
+        "src/toruk_lm/segment_delta_training.py",
+        "tests/test_segment_delta.py"
+      ]
+    },
+    "review-frozen-sources": {
+      "status": "PASS",
+      "seconds": 0.06712150000021211,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/check_frozen_sources.py"
+      ]
+    },
+    "review-lint": {
+      "status": "PASS",
+      "seconds": 0.09065580000060436,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/segment_delta_data.py",
+        "scripts/segment_delta_watch.py",
+        "scripts/segment_delta_study.py",
+        "scripts/verify_segment_delta_dev.py",
+        "src/toruk_lm/segment_delta.py",
+        "src/toruk_lm/segment_delta_training.py",
+        "tests/test_segment_delta.py"
+      ]
+    },
+    "review-numerical": {
+      "status": "PASS",
+      "seconds": 4.333039799999824,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_segment_delta.py",
+        "-k",
+        "not checkpoint_resume",
+        "-o",
+        "cache_dir=artifacts/segment-delta-dev-v1-commit-review-001/pytest-cache",
+        "--basetemp",
+        "artifacts/segment-delta-dev-v1-commit-review-001/pytest-tmp"
+      ]
+    },
+    "review-staged-audit-002": {
+      "status": "PASS",
+      "seconds": 2.4990856000003987,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "artifacts/segment-delta-dev-v1-commit-review-001/review.py",
+        "--staged",
+        "--inspect-checkpoints"
+      ]
+    },
+    "review-staged-audit": {
+      "status": "FAIL",
+      "seconds": 0.3717644999996992,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "artifacts/segment-delta-dev-v1-commit-review-001/review.py",
+        "--staged",
+        "--inspect-checkpoints"
+      ]
+    },
+    "review-staged-whitespace": {
+      "status": "PASS",
+      "seconds": 0.07276329999876907,
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ]
+    }
+  },
+  "review_only_failure_resolution": "CRLF-to-LF staging mismatch on mutable .gitignore; corrected and audited again",
+  "secret_scan": "PASS: no common credential patterns; bounded scanner",
+  "maximum_selected_blob_bytes": 417867,
+  "no_retraining": true,
+  "no_held_out_access": true,
+  "no_production_chat_change": true,
+  "earlier_checks": "35 tests/type/web/package receipts are preserved, not newly rerun",
+  "left_untracked": [
+    "docs/research/toruk-custom-lm-architecture-decision-v1.md"
+  ]
+}

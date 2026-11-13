@@ -1,0 +1,134 @@
+{
+  "cells": {
+    "113-delta-full": {
+      "raw_first_bytes": "74793d74793d7479",
+      "request_cpu": 0.5,
+      "request_cpu_max": 0.03125,
+      "request_wall": 0.5097201000062341,
+      "request_wall_median": 0.019758000000365428,
+      "request_wall_p95": 0.02825710000070103,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "113-delta-no-read": {
+      "raw_first_bytes": "74793d74796c732e",
+      "request_cpu": 0.515625,
+      "request_cpu_max": 0.03125,
+      "request_wall": 0.5035134999980073,
+      "request_wall_median": 0.019631099999969592,
+      "request_wall_p95": 0.029494500000510016,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "113-delta-no-write": {
+      "raw_first_bytes": "74793d74796c732e",
+      "request_cpu": 0.203125,
+      "request_cpu_max": 0.015625,
+      "request_wall": 0.20971100000133447,
+      "request_wall_median": 0.00772549999965122,
+      "request_wall_p95": 0.013432100000500213,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "113-ordinary-full": {
+      "raw_first_bytes": "6c732072616c6169",
+      "request_cpu": 0.15625,
+      "request_cpu_max": 0.015625,
+      "request_wall": 0.14726749999863387,
+      "request_wall_median": 0.005623399998512468,
+      "request_wall_p95": 0.008046500001000823,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "113-recurrent-full": {
+      "raw_first_bytes": "74793d74793d2074",
+      "request_cpu": 0.328125,
+      "request_cpu_max": 0.015625,
+      "request_wall": 0.322331800001848,
+      "request_wall_median": 0.012816400001611328,
+      "request_wall_p95": 0.016736400000809226,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "227-delta-full": {
+      "raw_first_bytes": "732066616c6c732e",
+      "request_cpu": 0.515625,
+      "request_cpu_max": 0.03125,
+      "request_wall": 0.5090793999970629,
+      "request_wall_median": 0.02064310000059777,
+      "request_wall_p95": 0.02787929999976768,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "227-delta-no-read": {
+      "raw_first_bytes": "6c612068756d2074",
+      "request_cpu": 0.578125,
+      "request_cpu_max": 0.046875,
+      "request_wall": 0.5699131999990641,
+      "request_wall_median": 0.021832700000231853,
+      "request_wall_p95": 0.03339670000059414,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "227-delta-no-write": {
+      "raw_first_bytes": "6c612068756d2074",
+      "request_cpu": 0.21875,
+      "request_cpu_max": 0.015625,
+      "request_wall": 0.22046009999939997,
+      "request_wall_median": 0.008211099999243743,
+      "request_wall_p95": 0.012802699999156175,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "227-ordinary-full": {
+      "raw_first_bytes": "66616c6c6c6c732e",
+      "request_cpu": 0.140625,
+      "request_cpu_max": 0.015625,
+      "request_wall": 0.15435050000269257,
+      "request_wall_median": 0.005992899999910151,
+      "request_wall_p95": 0.00956399999995483,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    },
+    "227-recurrent-full": {
+      "raw_first_bytes": "696e2066616c732e",
+      "request_cpu": 0.328125,
+      "request_cpu_max": 0.015625,
+      "request_wall": 0.3189264999982697,
+      "request_wall_median": 0.012077899998985231,
+      "request_wall_p95": 0.016544899999644258,
+      "requests": 25,
+      "scored": 24,
+      "unclosed": 24
+    }
+  },
+  "checks": "raw exact scorer, sealed bytes, replay, shared training order/targets, checkpoints, frozen gates/caps/source identities",
+  "failed_rehearsal_lower_bound": {
+    "cpu": 5.65625,
+    "wall": 9.733059099999991
+  },
+  "max_monitor_gap": 0.11560169999938807,
+  "peak_stage_private": 683909120,
+  "requests": 275,
+  "scored_answers": 264,
+  "status": "PASS",
+  "train_cost": {
+    "cpu": 59.703125,
+    "wall": 51.65750119999939
+  },
+  "training_targets": 157347,
+  "unique_questions": 24,
+  "warm_generation_cost": {
+    "cpu": 3.484375,
+    "wall": 3.465273600002547
+  }
+}

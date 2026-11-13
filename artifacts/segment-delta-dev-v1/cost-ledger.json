@@ -1,0 +1,63 @@
+{
+  "failed_rehearsal_lower_bound": {
+    "cpu": 5.65625,
+    "wall": 9.733059099999991
+  },
+  "full_project_cpu": "UNKNOWN, not zero",
+  "full_project_elapsed_wall": "UNKNOWN; some post-study scopes overlap",
+  "handoff_self_cost_before_inventory": {
+    "cpu": 0.171875,
+    "wall": 0.6252107000000251
+  },
+  "hosted_ci": "NOT RUN",
+  "known_disjoint_process_scope_cpu": 325.0,
+  "local_check_statuses": {
+    "build": "PASS",
+    "diagnose": "PASS",
+    "diff-check": "PASS",
+    "format": "PASS",
+    "frozen-sources": "PASS",
+    "help": "PASS",
+    "import": "PASS",
+    "install-local": "PASS",
+    "lint": "PASS",
+    "package": "PASS",
+    "research-cli-help": "PASS",
+    "staged-diff-check": "PASS",
+    "tests": "PASS",
+    "types": "PASS",
+    "types-linux": "PASS",
+    "web-check": "PASS",
+    "web-tests": "PASS",
+    "wheel-prototype-members": "PASS"
+  },
+  "measured_scopes": {
+    "poststudy_audit": {
+      "cpu": 0.40625,
+      "wall": 0.5749044000003778
+    },
+    "registered_study": {
+      "cpu": 168.046875,
+      "wall": 153.55250559999968
+    },
+    "rehearsal002": {
+      "cpu": 4.765625,
+      "wall": 4.7680134000002
+    },
+    "scoped_verification": {
+      "cpu": 151.78125,
+      "wall": 189.34244220000073
+    }
+  },
+  "supplemental_checks": {
+    "research-cli-help": 0.18643990000055055,
+    "wheel-prototype-members": 0.08919889999924635
+  },
+  "unknown_costs": [
+    "early inspection/paper search/editing",
+    "failed rehearsal final controller tail",
+    "data generation and early format/type commands outside monitors",
+    "research CLI help and wheel-membership check CPU",
+    "final report/inventory work"
+  ]
+}

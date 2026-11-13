@@ -1,0 +1,32 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "D:\\Toruk\\scripts\\segment_delta_study.py",
+    "worker",
+    "--root",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1",
+    "--directory",
+    "D:\\Toruk\\artifacts\\segment-delta-dev-v1\\stages\\generate-113-delta-full",
+    "--stage",
+    "generate",
+    "--seed",
+    "113",
+    "--variant",
+    "delta",
+    "--ablation",
+    "full"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 4.59962909999922,
+  "cpu": 5.078125,
+  "peak_private": 677453824,
+  "peak_rss": 299814912,
+  "peak_disk": 3316766,
+  "controller_cpu": 1.125,
+  "pid_cpu": {
+    "20632": 0,
+    "12904": 3.953125
+  },
+  "status": "PASS"
+}
