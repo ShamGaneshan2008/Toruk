@@ -113,3 +113,8 @@
 /tests/test_segment_delta.py text eol=lf
 /docs/research/segment-delta-dev-v1-*.md text eol=lf
 /docs/research/toruk-custom-lm-architecture-decision-v2.md text eol=lf
+# New answer-trainability study: preserve raw evidence and pre-training source seals.
+/artifacts/answer-trainability-dev-v1*/** -text whitespace=cr-at-eol
+/scripts/answer_trainability_dev.py text eol=lf
+/tests/test_answer_trainability_dev.py text eol=lf
+/docs/research/answer-trainability-dev-v1-*.md text eol=lf

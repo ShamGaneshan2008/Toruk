@@ -1,0 +1,29 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_answer_trainability_dev.py",
+    "tests/test_foundation.py::test_tokenizer_round_trip",
+    "tests/test_foundation.py::test_future_tokens_cannot_change_earlier_logits",
+    "tests/test_foundation.py::test_padding_and_batch_isolation",
+    "tests/test_foundation.py::test_shift_and_boundary_targets_once",
+    "tests/test_foundation.py::test_valid_token_loss_and_gradients",
+    "tests/test_recurrent.py::test_causality_write_timing_and_later_writer_gradients",
+    "tests/test_recurrent.py::test_padding_lane_isolation_and_fixed_capacity",
+    "tests/test_recurrent.py::test_session_commit_parity_reset_clone_and_independence",
+    "tests/test_segment_delta.py::test_shapes_counts_state_and_old_recurrent_algebra",
+    "tests/test_segment_delta.py::test_causal_logits_padding_and_entering_state_immutable",
+    "tests/test_segment_delta.py::test_exact_same_key_correction_and_orthogonal_preservation",
+    "tests/test_segment_delta.py::test_future_loss_gradients_cross_segment_and_actual_ablations",
+    "-o",
+    "cache_dir=D:\\Toruk\\artifacts\\answer-trainability-dev-v1-checks-001\\pytest-cache",
+    "--basetemp",
+    "D:\\Toruk\\artifacts\\answer-trainability-dev-v1-checks-001\\pytest-tmp"
+  ],
+  "returncode": 0,
+  "status": "PASS",
+  "wall": 4.985429900000781
+}

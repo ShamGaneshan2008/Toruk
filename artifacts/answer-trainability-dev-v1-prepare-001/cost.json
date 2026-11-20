@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "scripts/answer_trainability_dev.py",
+    "worker",
+    "--stage",
+    "freeze",
+    "--directory",
+    "artifacts/answer-trainability-dev-v1-prepare-001"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 4.251626899999792,
+  "cpu": 4.125,
+  "peak_private": 738996224,
+  "peak_rss": 317095936,
+  "peak_disk": 117067,
+  "controller_cpu": 0.65625,
+  "pid_cpu": {
+    "22152": 0,
+    "22700": 3.265625,
+    "21676": 0,
+    "11304": 0,
+    "19880": 0.203125
+  },
+  "status": "PASS"
+}

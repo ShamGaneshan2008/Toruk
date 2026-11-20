@@ -1,0 +1,22 @@
+{"label": "frozen-study-audit", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "scripts/answer_trainability_dev.py", "audit"], "returncode": 0, "wall": 5.354840500000137, "status": "PASS"}
+{"label": "independent-evidence-audit", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "artifacts/answer-trainability-dev-v1/poststudy-audit.py"], "returncode": 0, "wall": 2.3592365000004065, "status": "PASS"}
+{"label": "legacy-evidence", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "artifacts/segment-delta-dev-v1-commit-review-001/review.py", "--revision", "HEAD", "--inspect-checkpoints"], "returncode": 0, "wall": 2.6883575000001656, "status": "PASS"}
+{"label": "focused-tests", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "pytest", "-q", "tests/test_answer_trainability_dev.py", "tests/test_foundation.py::test_tokenizer_round_trip", "tests/test_foundation.py::test_future_tokens_cannot_change_earlier_logits", "tests/test_foundation.py::test_padding_and_batch_isolation", "tests/test_foundation.py::test_shift_and_boundary_targets_once", "tests/test_foundation.py::test_valid_token_loss_and_gradients", "tests/test_recurrent.py::test_causality_write_timing_and_later_writer_gradients", "tests/test_recurrent.py::test_padding_lane_isolation_and_fixed_capacity", "tests/test_recurrent.py::test_session_commit_parity_reset_clone_and_independence", "tests/test_segment_delta.py::test_shapes_counts_state_and_old_recurrent_algebra", "tests/test_segment_delta.py::test_causal_logits_padding_and_entering_state_immutable", "tests/test_segment_delta.py::test_exact_same_key_correction_and_orthogonal_preservation", "tests/test_segment_delta.py::test_future_loss_gradients_cross_segment_and_actual_ablations", "-o", "cache_dir=D:\\Toruk\\artifacts\\answer-trainability-dev-v1-checks-001\\pytest-cache", "--basetemp", "D:\\Toruk\\artifacts\\answer-trainability-dev-v1-checks-001\\pytest-tmp"], "returncode": 0, "wall": 4.985429900000781, "status": "PASS"}
+{"label": "lint", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-m", "ruff", "check", "."], "returncode": 0, "wall": 0.20340329999999085, "status": "PASS"}
+{"label": "format", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-m", "ruff", "format", "--check", "src", "tests", "scripts"], "returncode": 0, "wall": 0.10708130000057281, "status": "PASS"}
+Traceback (most recent call last):
+  File "D:\Toruk\artifacts\answer-trainability-dev-v1-checks-001\run_checks.py", line 72, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "D:\Toruk\artifacts\answer-trainability-dev-v1-checks-001\run_checks.py", line 50, in main
+    completed = subprocess.run(command, cwd=ROOT, capture_output=True, timeout=90)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\susee\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 1630, in _communicate
+    raise TimeoutExpired(self.args, orig_timeout)
+subprocess.TimeoutExpired: Command '['D:\\Toruk\\.venv\\Scripts\\python.exe', '-m', 'mypy']' timed out after 90 seconds

@@ -1,0 +1,154 @@
+{
+  "checks": {
+    "diff-check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 0.046841999999742256
+    },
+    "focused-tests": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_answer_trainability_dev.py",
+        "tests/test_foundation.py::test_tokenizer_round_trip",
+        "tests/test_foundation.py::test_future_tokens_cannot_change_earlier_logits",
+        "tests/test_foundation.py::test_padding_and_batch_isolation",
+        "tests/test_foundation.py::test_shift_and_boundary_targets_once",
+        "tests/test_foundation.py::test_valid_token_loss_and_gradients",
+        "tests/test_recurrent.py::test_causality_write_timing_and_later_writer_gradients",
+        "tests/test_recurrent.py::test_padding_lane_isolation_and_fixed_capacity",
+        "tests/test_recurrent.py::test_session_commit_parity_reset_clone_and_independence",
+        "tests/test_segment_delta.py::test_shapes_counts_state_and_old_recurrent_algebra",
+        "tests/test_segment_delta.py::test_causal_logits_padding_and_entering_state_immutable",
+        "tests/test_segment_delta.py::test_exact_same_key_correction_and_orthogonal_preservation",
+        "tests/test_segment_delta.py::test_future_loss_gradients_cross_segment_and_actual_ablations",
+        "-o",
+        "cache_dir=D:\\Toruk\\artifacts\\answer-trainability-dev-v1-checks-002\\pytest-cache",
+        "--basetemp",
+        "D:\\Toruk\\artifacts\\answer-trainability-dev-v1-checks-002\\pytest-tmp"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 4.657749799999692
+    },
+    "format": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 0.0919542999999976
+    },
+    "frozen-sources": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/check_frozen_sources.py"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 0.14611250000052678
+    },
+    "frozen-study-audit": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/answer_trainability_dev.py",
+        "audit"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 5.311551000000691
+    },
+    "independent-evidence-audit": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "artifacts/answer-trainability-dev-v1/poststudy-audit.py"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 2.2593379999998433
+    },
+    "legacy-evidence": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "artifacts/segment-delta-dev-v1-commit-review-001/review.py",
+        "--revision",
+        "HEAD",
+        "--inspect-checkpoints"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 2.6723455000001195
+    },
+    "lint": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 0.09551469999951223
+    },
+    "types": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 51.68380590000015
+    },
+    "types-linux": {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "returncode": 0,
+      "status": "PASS",
+      "wall": 49.18886550000025
+    }
+  },
+  "excluded": "unfiltered pytest/verify, old study runners, held-out loaders, live integrations",
+  "full_suite": false,
+  "no_study_training_or_generation": true,
+  "selected_tests": [
+    "tests/test_answer_trainability_dev.py",
+    "tests/test_foundation.py::test_tokenizer_round_trip",
+    "tests/test_foundation.py::test_future_tokens_cannot_change_earlier_logits",
+    "tests/test_foundation.py::test_padding_and_batch_isolation",
+    "tests/test_foundation.py::test_shift_and_boundary_targets_once",
+    "tests/test_foundation.py::test_valid_token_loss_and_gradients",
+    "tests/test_recurrent.py::test_causality_write_timing_and_later_writer_gradients",
+    "tests/test_recurrent.py::test_padding_lane_isolation_and_fixed_capacity",
+    "tests/test_recurrent.py::test_session_commit_parity_reset_clone_and_independence",
+    "tests/test_segment_delta.py::test_shapes_counts_state_and_old_recurrent_algebra",
+    "tests/test_segment_delta.py::test_causal_logits_padding_and_entering_state_immutable",
+    "tests/test_segment_delta.py::test_exact_same_key_correction_and_orthogonal_preservation",
+    "tests/test_segment_delta.py::test_future_loss_gradients_cross_segment_and_actual_ablations"
+  ]
+}

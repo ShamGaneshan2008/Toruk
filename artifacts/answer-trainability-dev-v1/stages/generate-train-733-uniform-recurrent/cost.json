@@ -1,0 +1,33 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\Toruk\\scripts\\answer_trainability_dev.py",
+    "worker",
+    "--stage",
+    "generate",
+    "--seed",
+    "733",
+    "--objective",
+    "uniform",
+    "--variant",
+    "recurrent",
+    "--split",
+    "train",
+    "--directory",
+    "D:\\Toruk\\artifacts\\answer-trainability-dev-v1\\stages\\generate-train-733-uniform-recurrent"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 3.959901500000342,
+  "cpu": 4.234375,
+  "peak_private": 672292864,
+  "peak_rss": 298778624,
+  "peak_disk": 63064672,
+  "controller_cpu": 1.015625,
+  "pid_cpu": {
+    "6800": 0,
+    "26348": 3.21875
+  },
+  "status": "PASS"
+}

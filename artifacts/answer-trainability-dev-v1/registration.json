@@ -1,0 +1,128 @@
+{
+  "caps": {
+    "controller": 60,
+    "disk": 268435456,
+    "fit": 180,
+    "generate": 20,
+    "loss": 20,
+    "memory": 2147483648,
+    "overall": 2400,
+    "request": 2
+  },
+  "config": {
+    "context": 32,
+    "heads": 4,
+    "layers": 1,
+    "max_document_tokens": 64,
+    "slots": 4,
+    "width": 16
+  },
+  "contracts_sha256": "e0d42ed985fe2d963e7b941e9be27dc040351d45825f4fe651a36a8736009fdd",
+  "data": {
+    "dev-inputs.json": "700fcb96d4ec89f3eef2ed496e5c14b4584917c8c6c23b07c08c65ee46c534c6",
+    "dev-labels.json": "be124a35d87f3950cf3031e3c71297ff227f753e3f0144dc9f5f32360c944af9",
+    "train-documents.json": "a0c8de0dbcc65b8b3521c439f97889eac4d832a9e11bb42fd85d7a0513a3d0c7",
+    "train-inputs.json": "672f461c863ad3e5e8d45e00ec156973761204471d4797b3f29cb3b93bf02c49",
+    "train-labels.json": "83a76140836aff2ad074c17feb13155e261b079f033a6341d618923603d4ef2e"
+  },
+  "diagnosis_commit": "39c4e4756b24ca3d09c4a9aa8ae63b1a2b5ab208",
+  "git_status": " M .gitattributes\n?? artifacts/answer-trainability-dev-v1-preflight-001/\n?? artifacts/answer-trainability-dev-v1-prepare-001/\n?? artifacts/answer-trainability-dev-v1/\n?? docs/research/answer-trainability-dev-v1-protocol.md\n?? scripts/answer_trainability_dev.py\n?? tests/test_answer_trainability_dev.py\n",
+  "objectives": {
+    "answer16": 16,
+    "uniform": 1
+  },
+  "optimizer": {
+    "batch": 4,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "clip": 1.0,
+    "eps": 1e-08,
+    "lr": 0.003,
+    "steps": 512,
+    "weight_decay": 0.01
+  },
+  "order": [
+    [
+      419,
+      "uniform",
+      "ordinary"
+    ],
+    [
+      419,
+      "uniform",
+      "recurrent"
+    ],
+    [
+      419,
+      "answer16",
+      "ordinary"
+    ],
+    [
+      419,
+      "answer16",
+      "recurrent"
+    ],
+    [
+      733,
+      "answer16",
+      "recurrent"
+    ],
+    [
+      733,
+      "answer16",
+      "ordinary"
+    ],
+    [
+      733,
+      "uniform",
+      "recurrent"
+    ],
+    [
+      733,
+      "uniform",
+      "ordinary"
+    ]
+  ],
+  "parameters": {
+    "ordinary": 14058,
+    "recurrent": 14416
+  },
+  "runtime": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "psutil": "7.2.2",
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu"
+  },
+  "scorer": "exact UTF-8 bytes+3 then EOS2; no repair",
+  "sources": {
+    ".gitattributes": "fbbdedbb2b2fb24c3d530d0c492742cacc97b5af7a69300755697fccd9c21201",
+    "docs/research/answer-trainability-dev-v1-protocol.md": "ba05a330da6b210d906e82b306ad84aa7c67a8c1c5008328be417ba61d2352a6",
+    "pyproject.toml": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca",
+    "scripts/answer_trainability_dev.py": "c599576237e8e0d8de71b98e0e634a2f4af55fc536bc50915a4dd6bcf6bb0fa1",
+    "scripts/segment_delta_watch.py": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c",
+    "src/toruk_lm/data.py": "343ff1cfb9c1245bd01f7c6eddd80f066689b03515880a7c246de938611a9232",
+    "src/toruk_lm/engine.py": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e",
+    "src/toruk_lm/model.py": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf",
+    "src/toruk_lm/owned_lm.py": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac",
+    "src/toruk_lm/recurrent.py": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d",
+    "src/toruk_lm/tokenizer.py": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0",
+    "tests/test_answer_trainability_dev.py": "43c81f76b235b3f6ba40261ebb8bcb3fbb7856786fe465898d983803115b613e"
+  },
+  "status": "FROZEN_BEFORE_STUDY_FITS_AND_ANSWERS",
+  "success": {
+    "city": 6,
+    "code": 3,
+    "dev_eos": 16,
+    "dev_exact": 12,
+    "dev_malformed": 0,
+    "tiny_exact": 8,
+    "unknown": 3
+  },
+  "tokenizer": {
+    "fingerprint": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7",
+    "identity": "toruk-utf8-byte-v1"
+  },
+  "version": "toruk-answer-trainability-dev-v1"
+}

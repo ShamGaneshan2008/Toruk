@@ -1,0 +1,33 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\Toruk\\scripts\\answer_trainability_dev.py",
+    "worker",
+    "--stage",
+    "loss",
+    "--seed",
+    "419",
+    "--objective",
+    "uniform",
+    "--variant",
+    "recurrent",
+    "--split",
+    "train",
+    "--directory",
+    "D:\\Toruk\\artifacts\\answer-trainability-dev-v1\\stages\\loss-train-419-uniform-recurrent"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 3.9594546999996965,
+  "cpu": 4.078125,
+  "peak_private": 671735808,
+  "peak_rss": 299794432,
+  "peak_disk": 18118815,
+  "controller_cpu": 0.828125,
+  "pid_cpu": {
+    "25000": 0,
+    "6800": 3.25
+  },
+  "status": "PASS"
+}

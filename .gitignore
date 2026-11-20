@@ -72,3 +72,6 @@ credentials.json
 /artifacts/segment-delta-dev-v1-verification-001/pytest-tmp/
 /artifacts/segment-delta-dev-v1-commit-review-001/pytest-cache/
 /artifacts/segment-delta-dev-v1-commit-review-001/pytest-tmp/
+# Preserve answer-trainability evidence without disposable pytest caches/fixtures.
+/artifacts/answer-trainability-dev-v1*/pytest-cache/
+/artifacts/answer-trainability-dev-v1*/pytest-tmp/

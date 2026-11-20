@@ -1,0 +1,33 @@
+{
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\Toruk\\scripts\\answer_trainability_dev.py",
+    "worker",
+    "--stage",
+    "train",
+    "--seed",
+    "733",
+    "--objective",
+    "answer16",
+    "--variant",
+    "recurrent",
+    "--split",
+    "train",
+    "--directory",
+    "D:\\Toruk\\artifacts\\answer-trainability-dev-v1\\stages\\train-733-answer16-recurrent"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "wall": 13.070820900000399,
+  "cpu": 15.25,
+  "peak_private": 672202752,
+  "peak_rss": 307064832,
+  "peak_disk": 45053811,
+  "controller_cpu": 2.890625,
+  "pid_cpu": {
+    "10196": 0,
+    "19916": 12.359375
+  },
+  "status": "PASS"
+}
