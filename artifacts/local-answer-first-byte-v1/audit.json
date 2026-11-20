@@ -1,0 +1,1842 @@
+{
+  "checkpoint_metadata": {
+    "601-ordinary": {
+      "bytes": 197749,
+      "forward_positions": 711856,
+      "initial_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+      "loop_cpu": 10.765625,
+      "loop_wall": 10.814636099999916,
+      "payload_inspected": true,
+      "presentations": 12288,
+      "sha256": "0c6fb762abd5448e1222e617fa7902eaa2e179aa4cc72b02bcf3c44ee0bcd183",
+      "steps": 1536,
+      "targets": 692224
+    },
+    "601-recurrent": {
+      "bytes": 216710,
+      "forward_positions": 711856,
+      "initial_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+      "loop_cpu": 17.234375,
+      "loop_wall": 17.241715500000282,
+      "payload_inspected": true,
+      "presentations": 12288,
+      "sha256": "d3fce91dba46a01eae87675cf68807967a0561120975f5dbad71c3c5a5ee7e62",
+      "steps": 1536,
+      "targets": 692224
+    },
+    "947-ordinary": {
+      "bytes": 197813,
+      "forward_positions": 711920,
+      "initial_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+      "loop_cpu": 10.8125,
+      "loop_wall": 10.864666299999953,
+      "payload_inspected": true,
+      "presentations": 12288,
+      "sha256": "ae8a6eb269473f8d4d8b7dc47f9bbcb28fd9b888aa52269762635c85dbdbafd8",
+      "steps": 1536,
+      "targets": 692224
+    },
+    "947-recurrent": {
+      "bytes": 216710,
+      "forward_positions": 711920,
+      "initial_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+      "loop_cpu": 17.3125,
+      "loop_wall": 17.409811400000763,
+      "payload_inspected": true,
+      "presentations": 12288,
+      "sha256": "9de9dc4cfa3701f7cd48cc33160a6cd08e78e07bb4ea05c341b78453e1ab5bd4",
+      "steps": 1536,
+      "targets": 692224
+    }
+  },
+  "city_first_class_counts": {
+    "601-ordinary": {
+      "l": 8,
+      "m": 8,
+      "s": 8,
+      "t": 8
+    },
+    "601-recurrent": {
+      "l": 8,
+      "m": 8,
+      "s": 8,
+      "t": 8
+    },
+    "947-ordinary": {
+      "l": 8,
+      "s": 8,
+      "t": 16
+    },
+    "947-recurrent": {
+      "l": 8,
+      "m": 8,
+      "s": 8,
+      "t": 8
+    }
+  },
+  "development_evaluated": false,
+  "failed_cases": [
+    {
+      "actual_ids": [
+        111,
+        114,
+        2
+      ],
+      "actual_text": "lo",
+      "batch_slot_histogram": {
+        "0": 14,
+        "1": 14,
+        "2": 13,
+        "3": 17,
+        "4": 17,
+        "5": 15,
+        "6": 22,
+        "7": 16
+      },
+      "canonical": [
+        "uvo",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 12,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-004",
+      "malformed": true,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.02773517183959484,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.036000803112983704,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.15220236778259277,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "uvo city=mi\nuvo city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t004; rain. rain. rain. r\nuvo city=mi\nuvo city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:5",
+      "teacher_answer_suffix_loss": 0.979434609413147,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        111,
+        114,
+        2
+      ],
+      "actual_text": "lo",
+      "batch_slot_histogram": {
+        "0": 24,
+        "1": 15,
+        "2": 14,
+        "3": 8,
+        "4": 20,
+        "5": 12,
+        "6": 22,
+        "7": 13
+      },
+      "canonical": [
+        "uvo",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 10,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-005",
+      "malformed": true,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.02773517183959484,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.03647290915250778,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.10460870712995529,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "uvo city=mi\nuvo city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t005; rain. rain. rain. r\nuvo city=mi\nuvo city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:6",
+      "teacher_answer_suffix_loss": 0.979434609413147,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        111,
+        114,
+        2
+      ],
+      "actual_text": "lo",
+      "batch_slot_histogram": {
+        "0": 13,
+        "1": 19,
+        "2": 19,
+        "3": 19,
+        "4": 14,
+        "5": 14,
+        "6": 16,
+        "7": 14
+      },
+      "canonical": [
+        "uvo",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 27,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-006",
+      "malformed": true,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.03288253769278526,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.02691715583205223,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.0325222983956337,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city uvo=mi\ncity uvo?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t006; rain. rain. rain. r\ncity uvo=mi\ncity uvo?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:7",
+      "teacher_answer_suffix_loss": 1.0739156007766724,
+      "template": "B"
+    },
+    {
+      "actual_ids": [
+        111,
+        114,
+        2
+      ],
+      "actual_text": "lo",
+      "batch_slot_histogram": {
+        "0": 14,
+        "1": 18,
+        "2": 15,
+        "3": 19,
+        "4": 16,
+        "5": 10,
+        "6": 21,
+        "7": 15
+      },
+      "canonical": [
+        "uvo",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 17,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-007",
+      "malformed": true,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.03288253769278526,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.03150166571140289,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.0495586022734642,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city uvo=mi\ncity uvo?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t007; rain. rain. rain. r\ncity uvo=mi\ncity uvo?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:8",
+      "teacher_answer_suffix_loss": 1.0739156007766724,
+      "template": "B"
+    },
+    {
+      "actual_ids": [
+        118,
+        114,
+        2
+      ],
+      "actual_text": "so",
+      "batch_slot_histogram": {
+        "0": 20,
+        "1": 16,
+        "2": 11,
+        "3": 17,
+        "4": 20,
+        "5": 14,
+        "6": 18,
+        "7": 12
+      },
+      "canonical": [
+        "pex",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 15,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-024",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.027067750692367554,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.013139883056282997,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.02465895563364029,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "pex city=mi\npex city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t024; rain. rain. rain. r\npex city=mi\npex city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:25",
+      "teacher_answer_suffix_loss": 0.9448137879371643,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        118,
+        114,
+        2
+      ],
+      "actual_text": "so",
+      "batch_slot_histogram": {
+        "0": 9,
+        "1": 14,
+        "2": 12,
+        "3": 15,
+        "4": 21,
+        "5": 21,
+        "6": 16,
+        "7": 20
+      },
+      "canonical": [
+        "pex",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 18,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-025",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.027067750692367554,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.01285737194120884,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.022594686597585678,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "pex city=mi\npex city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t025; rain. rain. rain. r\npex city=mi\npex city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:26",
+      "teacher_answer_suffix_loss": 0.9448137879371643,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        118,
+        114,
+        2
+      ],
+      "actual_text": "so",
+      "batch_slot_histogram": {
+        "0": 11,
+        "1": 18,
+        "2": 16,
+        "3": 17,
+        "4": 18,
+        "5": 19,
+        "6": 12,
+        "7": 17
+      },
+      "canonical": [
+        "pex",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 19,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-026",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.022102003917098045,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.007081912364810705,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.020558100193738937,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city pex=mi\ncity pex?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t026; rain. rain. rain. r\ncity pex=mi\ncity pex?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:27",
+      "teacher_answer_suffix_loss": 0.8370313048362732,
+      "template": "B"
+    },
+    {
+      "actual_ids": [
+        118,
+        114,
+        2
+      ],
+      "actual_text": "so",
+      "batch_slot_histogram": {
+        "0": 14,
+        "1": 17,
+        "2": 20,
+        "3": 17,
+        "4": 14,
+        "5": 22,
+        "6": 12,
+        "7": 12
+      },
+      "canonical": [
+        "pex",
+        "city",
+        "mi",
+        "city"
+      ],
+      "contrast_copresentations": 20,
+      "expected_first": {
+        "byte": 109,
+        "char": "m",
+        "id": 112
+      },
+      "expected_ids": [
+        112,
+        108,
+        2
+      ],
+      "gold": "mi",
+      "id": "train-027",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          112,
+          108,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.022102003917098045,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.007239366881549358,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.02137911692261696,
+          "first_id": 112,
+          "ids": [
+            112,
+            108,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city pex=mi\ncity pex?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t027; rain. rain. rain. r\ncity pex=mi\ncity pex?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:28",
+      "teacher_answer_suffix_loss": 0.8370313048362732,
+      "template": "B"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 15,
+        "1": 17,
+        "2": 16,
+        "3": 17,
+        "4": 20,
+        "5": 10,
+        "6": 18,
+        "7": 15
+      },
+      "canonical": [
+        "zim",
+        "city",
+        "so",
+        "city"
+      ],
+      "contrast_copresentations": 16,
+      "expected_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "expected_ids": [
+        118,
+        114,
+        2
+      ],
+      "gold": "so",
+      "id": "train-048",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          118,
+          114,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.03429482877254486,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.04231011122465134,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.05011069402098656,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "zim city=so\nzim city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t048; rain. rain. rain. r\nzim city=so\nzim city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:49",
+      "teacher_answer_suffix_loss": 1.3593809604644775,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 14,
+        "1": 18,
+        "2": 16,
+        "3": 10,
+        "4": 9,
+        "5": 23,
+        "6": 20,
+        "7": 18
+      },
+      "canonical": [
+        "zim",
+        "city",
+        "so",
+        "city"
+      ],
+      "contrast_copresentations": 17,
+      "expected_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "expected_ids": [
+        118,
+        114,
+        2
+      ],
+      "gold": "so",
+      "id": "train-049",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          118,
+          114,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.03429482877254486,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.042641766369342804,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.05114782229065895,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "zim city=so\nzim city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t049; rain. rain. rain. r\nzim city=so\nzim city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:50",
+      "teacher_answer_suffix_loss": 1.3593809604644775,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 13,
+        "1": 19,
+        "2": 18,
+        "3": 21,
+        "4": 16,
+        "5": 10,
+        "6": 18,
+        "7": 13
+      },
+      "canonical": [
+        "zim",
+        "city",
+        "so",
+        "city"
+      ],
+      "contrast_copresentations": 18,
+      "expected_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "expected_ids": [
+        118,
+        114,
+        2
+      ],
+      "gold": "so",
+      "id": "train-050",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          118,
+          114,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.04468251392245293,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.020495297387242317,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.029425112530589104,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city zim=so\ncity zim?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t050; rain. rain. rain. r\ncity zim=so\ncity zim?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:51",
+      "teacher_answer_suffix_loss": 1.115185022354126,
+      "template": "B"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 17,
+        "1": 15,
+        "2": 9,
+        "3": 19,
+        "4": 23,
+        "5": 15,
+        "6": 17,
+        "7": 13
+      },
+      "canonical": [
+        "zim",
+        "city",
+        "so",
+        "city"
+      ],
+      "contrast_copresentations": 20,
+      "expected_first": {
+        "byte": 115,
+        "char": "s",
+        "id": 118
+      },
+      "expected_ids": [
+        118,
+        114,
+        2
+      ],
+      "gold": "so",
+      "id": "train-051",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          118,
+          114,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.04468251392245293,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.02045772224664688,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.03166155889630318,
+          "first_id": 118,
+          "ids": [
+            118,
+            114,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city zim=so\ncity zim?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t051; rain. rain. rain. r\ncity zim=so\ncity zim?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:52",
+      "teacher_answer_suffix_loss": 1.115185022354126,
+      "template": "B"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 15,
+        "1": 17,
+        "2": 19,
+        "3": 8,
+        "4": 15,
+        "5": 13,
+        "6": 22,
+        "7": 19
+      },
+      "canonical": [
+        "nax",
+        "city",
+        "la",
+        "city"
+      ],
+      "contrast_copresentations": 11,
+      "expected_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "expected_ids": [
+        111,
+        100,
+        2
+      ],
+      "gold": "la",
+      "id": "train-076",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          111,
+          100,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.04293116554617882,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.031182002276182175,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.02878020890057087,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "nax city=la\nnax city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t076; rain. rain. rain. r\nnax city=la\nnax city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:77",
+      "teacher_answer_suffix_loss": 0.9823120832443237,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 11,
+        "1": 7,
+        "2": 22,
+        "3": 16,
+        "4": 17,
+        "5": 13,
+        "6": 19,
+        "7": 23
+      },
+      "canonical": [
+        "nax",
+        "city",
+        "la",
+        "city"
+      ],
+      "contrast_copresentations": 21,
+      "expected_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "expected_ids": [
+        111,
+        100,
+        2
+      ],
+      "gold": "la",
+      "id": "train-077",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          111,
+          100,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.04293116554617882,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.03147439658641815,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.028307192027568817,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "nax city=la\nnax city?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t077; rain. rain. rain. r\nnax city=la\nnax city?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:78",
+      "teacher_answer_suffix_loss": 0.9823120832443237,
+      "template": "A"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 14,
+        "1": 18,
+        "2": 8,
+        "3": 25,
+        "4": 14,
+        "5": 17,
+        "6": 19,
+        "7": 13
+      },
+      "canonical": [
+        "nax",
+        "city",
+        "la",
+        "city"
+      ],
+      "contrast_copresentations": 16,
+      "expected_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "expected_ids": [
+        111,
+        100,
+        2
+      ],
+      "gold": "la",
+      "id": "train-078",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          111,
+          100,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.018354302272200584,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.024697428569197655,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.06538008153438568,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city nax=la\ncity nax?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t078; rain. rain. rain. r\ncity nax=la\ncity nax?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:79",
+      "teacher_answer_suffix_loss": 1.0269134044647217,
+      "template": "B"
+    },
+    {
+      "actual_ids": [
+        119,
+        120,
+        2
+      ],
+      "actual_text": "tu",
+      "batch_slot_histogram": {
+        "0": 27,
+        "1": 16,
+        "2": 18,
+        "3": 18,
+        "4": 16,
+        "5": 12,
+        "6": 11,
+        "7": 10
+      },
+      "canonical": [
+        "nax",
+        "city",
+        "la",
+        "city"
+      ],
+      "contrast_copresentations": 19,
+      "expected_first": {
+        "byte": 108,
+        "char": "l",
+        "id": 111
+      },
+      "expected_ids": [
+        111,
+        100,
+        2
+      ],
+      "gold": "la",
+      "id": "train-079",
+      "malformed": false,
+      "mask": {
+        "causal_input_index": 53,
+        "full_doc_gold_token_index": 54,
+        "label_ids": [
+          111,
+          100,
+          2
+        ],
+        "local_logit_index": 21,
+        "source": "reconstructed from sealed code and saved bytes; not a mask dump",
+        "start_y": 53,
+        "stop_y_exclusive": 56
+      },
+      "passing_comparisons": {
+        "601-ordinary": {
+          "answer_suffix_loss": 0.018354302272200584,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "601-recurrent": {
+          "answer_suffix_loss": 0.02490157261490822,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        },
+        "947-recurrent": {
+          "answer_suffix_loss": 0.06469931453466415,
+          "first_id": 111,
+          "ids": [
+            111,
+            100,
+            2
+          ],
+          "probability": null,
+          "rank": null
+        }
+      },
+      "predicted_first": {
+        "byte": 116,
+        "char": "t",
+        "id": 119
+      },
+      "presentations": 128,
+      "probability": null,
+      "probability_rank_recorded": false,
+      "prompt": {
+        "answer_context": "city nax=la\ncity nax?=",
+        "byte_length": 53,
+        "delimiter_ids": [
+          66,
+          64
+        ],
+        "first_segment_ids": 32,
+        "native_length": 54,
+        "prefix": "note t079; rain. rain. rain. r\ncity nax=la\ncity nax?="
+      },
+      "rank": null,
+      "raw_source": "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl:80",
+      "teacher_answer_suffix_loss": 1.0269134044647217,
+      "template": "B"
+    }
+  ],
+  "initialization_and_order_share_seed": true,
+  "mask_positions_are_reconstructed": true,
+  "paired_events_are_not_distinct_batches": true,
+  "paired_query_events": 268,
+  "paired_same_question_batches": {
+    "city nax?=": 34,
+    "city pex?=": 38,
+    "city uvo?=": 43,
+    "city zim?=": 38,
+    "nax city?=": 30,
+    "pex city?=": 32,
+    "uvo city?=": 21,
+    "zim city?=": 32
+  },
+  "recorded_first_byte_probabilities_available": false,
+  "registration_sha256": "c11e16cb45dfe116f3f45f2c2e3412f7e26930e2f0db0a607784f4eae54253b4",
+  "status": "PASS",
+  "training_forward_or_generation_executed": false
+}
