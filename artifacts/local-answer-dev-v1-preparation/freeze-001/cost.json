@@ -1,0 +1,30 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "scripts/local_answer_dev.py",
+    "worker",
+    "--stage",
+    "freeze",
+    "--directory",
+    "artifacts/local-answer-dev-v1-preparation/freeze-001"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 2.03125,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.5625,
+  "max_monitor_gap": 0.0758707000004506,
+  "observer_cpu_to_receipt": 0.125,
+  "peak_disk": 237135,
+  "peak_private": 633221120,
+  "returncode": 0,
+  "root_pid": 5532,
+  "status": "PASS",
+  "terminated_processes": 0,
+  "total_processes": 7,
+  "user_cpu": 1.46875,
+  "wall": 2.631629099998463
+}

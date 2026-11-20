@@ -1,0 +1,2824 @@
+{
+  "attribution_limit": "One source entity per prompt; closed wrong values do not establish entity/field confusion",
+  "cells": {
+    "419-answer16-ordinary": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:2",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:3",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:4",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:5",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:6",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "malformed_closed",
+          "query_seen_in_training": true,
+          "raw": "",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:7",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            120,
+            121,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "malformed_closed",
+          "query_seen_in_training": true,
+          "raw": "uv",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:8",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": false,
+          "generated_ids": [
+            85,
+            35,
+            117,
+            100,
+            108,
+            64,
+            113,
+            100
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "eos_failure",
+          "query_seen_in_training": false,
+          "raw": "R rai=na",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": false,
+          "generated_ids": [
+            85,
+            35,
+            117,
+            100,
+            114,
+            118,
+            114,
+            100
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "eos_failure",
+          "query_seen_in_training": false,
+          "raw": "R raosoa",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:11",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            64,
+            85,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "malformed_closed",
+          "query_seen_in_training": true,
+          "raw": "=R",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:13",
+          "training_query_value_match": false,
+          "unsupported_unknown": true,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:14",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-ordinary/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 5,
+        "eos_failure": 2,
+        "malformed_closed": 3,
+        "wrong_value": 6
+      },
+      "prior_matches": 5,
+      "unknown_failures": 1
+    },
+    "419-answer16-recurrent": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:2",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:3",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:4",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:5",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:6",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:7",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:8",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            108,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "malformed_closed",
+          "query_seen_in_training": false,
+          "raw": "i",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:11",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:13",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:14",
+          "training_query_value_match": true,
+          "unsupported_unknown": true,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-answer16-recurrent/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 5,
+        "malformed_closed": 1,
+        "wrong_value": 10
+      },
+      "prior_matches": 8,
+      "unknown_failures": 1
+    },
+    "419-uniform-ordinary": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:2",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:3",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:4",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:5",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:6",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:7",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:8",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:11",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": false,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:13",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:14",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-ordinary/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 7,
+        "wrong_value": 9
+      },
+      "prior_matches": 6,
+      "unknown_failures": 0
+    },
+    "419-uniform-recurrent": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:2",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:3",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:4",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:5",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:6",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:7",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:8",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:11",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": false,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            64,
+            48,
+            62,
+            35,
+            117
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "eos_failure",
+          "query_seen_in_training": false,
+          "raw": "R-7=-; r",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:13",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:14",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-419-uniform-recurrent/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 6,
+        "eos_failure": 1,
+        "wrong_value": 9
+      },
+      "prior_matches": 9,
+      "unknown_failures": 0
+    },
+    "733-answer16-ordinary": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:2",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:3",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:4",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:5",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:6",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:7",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:8",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:11",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:13",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:14",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-ordinary/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 8,
+        "wrong_value": 8
+      },
+      "prior_matches": 6,
+      "unknown_failures": 0
+    },
+    "733-answer16-recurrent": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:2",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:3",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:4",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:5",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:6",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:7",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:8",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": false,
+          "generated_ids": [
+            100,
+            108,
+            35,
+            117,
+            100,
+            104,
+            35,
+            117
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "eos_failure",
+          "query_seen_in_training": false,
+          "raw": "ai rae r",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:11",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:13",
+          "training_query_value_match": true,
+          "unsupported_unknown": true,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:14",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-answer16-recurrent/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 5,
+        "eos_failure": 1,
+        "wrong_value": 10
+      },
+      "prior_matches": 9,
+      "unknown_failures": 1
+    },
+    "733-uniform-ordinary": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:2",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:3",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:4",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:5",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": false,
+          "generated_ids": [
+            112,
+            123,
+            35,
+            13,
+            125,
+            66,
+            64,
+            84
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "eos_failure",
+          "query_seen_in_training": true,
+          "raw": "mx \nz?=Q",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:6",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:7",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:8",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            85,
+            48,
+            58,
+            2
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "R-7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:11",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:13",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:14",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-ordinary/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 9,
+        "eos_failure": 1,
+        "wrong_value": 6
+      },
+      "prior_matches": 5,
+      "unknown_failures": 0
+    },
+    "733-uniform-recurrent": {
+      "cases": [
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-000",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:1",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-001",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:2",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "so",
+          "id": "dev-002",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:3",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-003",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:4",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "tu",
+          "id": "dev-004",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:5",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            118,
+            114,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-005",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "so",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:6",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "la",
+          "id": "dev-006",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:7",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "city",
+          "eos": true,
+          "generated_ids": [
+            119,
+            120,
+            2
+          ],
+          "gold": "mi",
+          "id": "dev-007",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "tu",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:8",
+          "training_query_value_match": true,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": false,
+          "generated_ids": [
+            84,
+            98,
+            117,
+            114,
+            13,
+            104,
+            120,
+            58
+          ],
+          "gold": "R-7",
+          "id": "dev-008",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "eos_failure",
+          "query_seen_in_training": false,
+          "raw": "Q_ro\neu7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:9",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": false,
+          "generated_ids": [
+            117,
+            100,
+            117,
+            114,
+            35,
+            102,
+            108,
+            58
+          ],
+          "gold": "R-7",
+          "id": "dev-009",
+          "known_source_missing": false,
+          "malformed": true,
+          "primary": "eos_failure",
+          "query_seen_in_training": false,
+          "raw": "raro ci7",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:10",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-010",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:11",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "code",
+          "eos": true,
+          "generated_ids": [
+            84,
+            98,
+            53,
+            2
+          ],
+          "gold": "Q_2",
+          "id": "dev-011",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": false,
+          "raw": "Q_2",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:12",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            111,
+            100,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-012",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "la",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:13",
+          "training_query_value_match": true,
+          "unsupported_unknown": true,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            112,
+            108,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-013",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "wrong_value",
+          "query_seen_in_training": true,
+          "raw": "mi",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:14",
+          "training_query_value_match": true,
+          "unsupported_unknown": true,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-014",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:15",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        },
+        {
+          "category": "unknown",
+          "eos": true,
+          "generated_ids": [
+            66,
+            2
+          ],
+          "gold": "?",
+          "id": "dev-015",
+          "known_source_missing": false,
+          "malformed": false,
+          "primary": "correct",
+          "query_seen_in_training": true,
+          "raw": "?",
+          "source": "artifacts/answer-trainability-dev-v1/stages/generate-dev-733-uniform-recurrent/predictions.jsonl:16",
+          "training_query_value_match": false,
+          "unsupported_unknown": false,
+          "verified_other_attribute_copy": false,
+          "verified_other_entity_confusion": false
+        }
+      ],
+      "counts": {
+        "correct": 4,
+        "eos_failure": 2,
+        "wrong_value": 10
+      },
+      "prior_matches": 10,
+      "unknown_failures": 2
+    }
+  },
+  "counts": {
+    "correct": 49,
+    "eos_failure": 7,
+    "malformed_closed": 4,
+    "wrong_value": 68
+  },
+  "overlap": {
+    "assignment_query_cores": 0,
+    "complete_texts": 0,
+    "development_cases_with_seen_question": 13,
+    "ids": 0,
+    "single_question_template_in_both_splits": true
+  },
+  "scope": "16 development cases x 8 cells = 128 saved predictions; 79 failures",
+  "training_or_generation_executed": false
+}

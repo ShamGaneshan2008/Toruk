@@ -118,3 +118,13 @@
 /scripts/answer_trainability_dev.py text eol=lf
 /tests/test_answer_trainability_dev.py text eol=lf
 /docs/research/answer-trainability-dev-v1-*.md text eol=lf
+# New local-answer protocol and kernel Job accounting; v1 bytes remain archived.
+/artifacts/local-answer-*/** -text whitespace=cr-at-eol
+/artifacts/local-answer-*/sources/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+/artifacts/answer-trainability-dev-v1/sources/pyproject.toml whitespace=cr-at-eol,-blank-at-eof
+/scripts/lifetime_job.py text eol=lf
+/scripts/diagnose_local_answer_v1.py text eol=lf
+/scripts/local_answer_dev.py text eol=lf
+/tests/test_lifetime_job.py text eol=lf
+/tests/test_local_answer_dev.py text eol=lf
+/docs/research/local-answer-*.md text eol=lf

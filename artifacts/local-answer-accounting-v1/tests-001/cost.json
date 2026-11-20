@@ -1,0 +1,32 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendant lifetimes; observer outside job",
+  "active_processes": 0,
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_lifetime_job.py",
+    "-o",
+    "cache_dir=artifacts/local-answer-accounting-v1/pytest-cache-001",
+    "--basetemp",
+    "artifacts/local-answer-accounting-v1/pytest-tmp-001"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 1.25,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.640625,
+  "max_monitor_gap": 0.05384229999981471,
+  "observer_cpu_to_receipt": 0.078125,
+  "peak_disk": 19382,
+  "peak_private": 50180096,
+  "returncode": 0,
+  "root_pid": 13400,
+  "status": "PASS",
+  "terminated_processes": 0,
+  "total_processes": 30,
+  "user_cpu": 0.609375,
+  "wall": 2.193352000000232
+}

@@ -1,0 +1,1430 @@
+{
+  "all_new_work_uncommitted": true,
+  "exclusions": [
+    "this inventory (self-reference)",
+    "pytest-cache*/pytest-tmp*/__pycache__"
+  ],
+  "files": {
+    ".gitattributes": {
+      "bytes": 7478,
+      "local_ignored_checkpoint": false,
+      "sha256": "566b0d81838e36cb43f987cddb030ab7680305e439d2c9f12857a0d743999035"
+    },
+    ".gitignore": {
+      "bytes": 3119,
+      "local_ignored_checkpoint": false,
+      "sha256": "5d9032f5a887bc4b66265be5d15af184ac63154d5d55f29ff9550a24424d4a6b"
+    },
+    "artifacts/local-answer-accounting-v1/probe-001/cost.json": {
+      "bytes": 644,
+      "local_ignored_checkpoint": false,
+      "sha256": "f14569f6c4fbe0a0aea91dc52821df81a8db104b347fb5153f01ff0b78bf64e7"
+    },
+    "artifacts/local-answer-accounting-v1/probe-001/output.log": {
+      "bytes": 13,
+      "local_ignored_checkpoint": false,
+      "sha256": "6798c173a31d3353bba64720c961fed3edac8986113766b0a646876d74784515"
+    },
+    "artifacts/local-answer-accounting-v1/probe-001/resources.jsonl": {
+      "bytes": 306,
+      "local_ignored_checkpoint": false,
+      "sha256": "3b831760f57cb4e7005356efef9ca20b8a155fcad9bfbc6edf8eb11b6c7ee206"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_abrupt_exit_without_self_0/abrupt/cost.json": {
+      "bytes": 662,
+      "local_ignored_checkpoint": false,
+      "sha256": "5bbab1d6365befcea41e1984f8b4954004cd88d34f8c88ad4da78e6bbaaa0944"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_abrupt_exit_without_self_0/abrupt/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_abrupt_exit_without_self_0/abrupt/resources.jsonl": {
+      "bytes": 307,
+      "local_ignored_checkpoint": false,
+      "sha256": "a22d36145a9db532cc53dce2f32f4f6c4646dcbcde15e72dd8bf3187d5ed610b"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_cap_and_observer_interrup0/cap/cost.json": {
+      "bytes": 758,
+      "local_ignored_checkpoint": false,
+      "sha256": "c4798f8b2e642ad18e3a8545f0e1dad1d2c5e6048821189a7e936b81c4c9ec90"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_cap_and_observer_interrup0/cap/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_cap_and_observer_interrup0/cap/resources.jsonl": {
+      "bytes": 923,
+      "local_ignored_checkpoint": false,
+      "sha256": "b8c804905bf67358fb3ba89da659acac72d34019281f9f64616e826208409095"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_cap_and_observer_interrup1/cancel/cost.json": {
+      "bytes": 835,
+      "local_ignored_checkpoint": false,
+      "sha256": "eda1e3e79994aba0c6d694e59664813b5c57eee38dfe9b6bc45c7db72807ea91"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_cap_and_observer_interrup1/cancel/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_cap_and_observer_interrup1/cancel/resources.jsonl": {
+      "bytes": 938,
+      "local_ignored_checkpoint": false,
+      "sha256": "556226a2db8fc380ad0ebf398d80abc9bec813720b09078a9129d00b5ad5b037"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records0/success/controller-final.json": {
+      "bytes": 221,
+      "local_ignored_checkpoint": false,
+      "sha256": "f3cc4d3cfb794388a8eec5b01eb23f62bc7187e493499bf303075a2608a41f06"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records0/success/cost.json": {
+      "bytes": 926,
+      "local_ignored_checkpoint": false,
+      "sha256": "ba67164541500af365210bd140eaedc034a100ce44384966165a2c7323f85571"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records0/success/output.log": {
+      "bytes": 9,
+      "local_ignored_checkpoint": false,
+      "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records0/success/resources.jsonl": {
+      "bytes": 464,
+      "local_ignored_checkpoint": false,
+      "sha256": "f36e5f139a125f0200f78497778afba2ab6dc5da92ce1a952880e11d3b8ea9bb"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records1/failure/controller-final.json": {
+      "bytes": 231,
+      "local_ignored_checkpoint": false,
+      "sha256": "570360a56c142c1cd7d2992fad7afb2a37f5884f4aa2c0da95d8fd9ce751ddb6"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records1/failure/cost.json": {
+      "bytes": 927,
+      "local_ignored_checkpoint": false,
+      "sha256": "49cef14dbfa43271584fdad826883dae0cf5bff7ee1bd111a104c1946701f347"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records1/failure/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records1/failure/resources.jsonl": {
+      "bytes": 462,
+      "local_ignored_checkpoint": false,
+      "sha256": "48a5f5da495297a41cfb13ab0889954638ba1b7b72de9ade1a60001d52ba2e18"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records2/interrupt/controller-final.json": {
+      "bytes": 238,
+      "local_ignored_checkpoint": false,
+      "sha256": "6644a0c6471e0d537531e79e6631d84ac1c40067bb1206030b4d49818b837d8a"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records2/interrupt/cost.json": {
+      "bytes": 947,
+      "local_ignored_checkpoint": false,
+      "sha256": "3e6c26a2350dc5d3dd96eab7363bf131f60bc456f2045fa1327b25b7aea87ccb"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records2/interrupt/output.log": {
+      "bytes": 95,
+      "local_ignored_checkpoint": false,
+      "sha256": "716f50c92f21521cd31148a358191eb9d03eb0a8a5537d63d809f4fcbb3fc786"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_controller_always_records2/interrupt/resources.jsonl": {
+      "bytes": 463,
+      "local_ignored_checkpoint": false,
+      "sha256": "c0e43cbbd9f5df2179cbdb796ad366b6d80cda9fdc96e7bf5a6d8327c52a0018"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_descendant_outlives_paren0/descendant/cost.json": {
+      "bytes": 776,
+      "local_ignored_checkpoint": false,
+      "sha256": "61fae61eebec1cb63db6c277f2491da7e079f35b568c3aaf89766fc3f35da86b"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_descendant_outlives_paren0/descendant/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-001/test_descendant_outlives_paren0/descendant/resources.jsonl": {
+      "bytes": 301,
+      "local_ignored_checkpoint": false,
+      "sha256": "a9992a3b6c98ca9c44487bb5800eaf44b83362ea808be9d5d460bf9e0d99f402"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_abrupt_exit_without_self_0/abrupt/cost.json": {
+      "bytes": 650,
+      "local_ignored_checkpoint": false,
+      "sha256": "9dda7e375da60562619b8a5dad92a29e809ef6a2dc2862991f052596f7766d43"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_abrupt_exit_without_self_0/abrupt/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_abrupt_exit_without_self_0/abrupt/resources.jsonl": {
+      "bytes": 308,
+      "local_ignored_checkpoint": false,
+      "sha256": "a4a5de40696512f9461c54e21d86fd0c62d41248da9db051e7c8b5ee8405a6e5"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_cap_and_observer_interrup0/cap/cost.json": {
+      "bytes": 757,
+      "local_ignored_checkpoint": false,
+      "sha256": "1d11d8c2e8276800c8d7f0a04ef63237a4073e1495b9253ef4f0fe6b47ec57ed"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_cap_and_observer_interrup0/cap/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_cap_and_observer_interrup0/cap/resources.jsonl": {
+      "bytes": 926,
+      "local_ignored_checkpoint": false,
+      "sha256": "d92114e6a531239abb5574f3a31e4dfb6bd72245c6d95c2f8993cf2e90159d98"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_cap_and_observer_interrup1/cancel/cost.json": {
+      "bytes": 823,
+      "local_ignored_checkpoint": false,
+      "sha256": "a903acc8ea0025581b7cc84854a5523e272bf53f7bba28fbcba5ceddae8364e7"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_cap_and_observer_interrup1/cancel/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_cap_and_observer_interrup1/cancel/resources.jsonl": {
+      "bytes": 925,
+      "local_ignored_checkpoint": false,
+      "sha256": "bd4a975118fc6a82906700cc4c3da2aec09f9cea26a0d4f07d11714d966f56fe"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records0/success/controller-final.json": {
+      "bytes": 214,
+      "local_ignored_checkpoint": false,
+      "sha256": "0835c4968a25c30ff0e6541201bac3feb4be7b7a1654f82e3d463427382fd7a7"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records0/success/cost.json": {
+      "bytes": 923,
+      "local_ignored_checkpoint": false,
+      "sha256": "9e4728602b7e2a4ed5b6d148a08c78def5c72d9c3820542b3e0fbd4bbb57be5f"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records0/success/output.log": {
+      "bytes": 9,
+      "local_ignored_checkpoint": false,
+      "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records0/success/resources.jsonl": {
+      "bytes": 461,
+      "local_ignored_checkpoint": false,
+      "sha256": "c6086a83c57ec3fe2e9734b3c3142263763cd759729c75e9edaa03914b632a5d"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records1/failure/controller-final.json": {
+      "bytes": 225,
+      "local_ignored_checkpoint": false,
+      "sha256": "5d60b162c489591be9981ee74b3b47c14aa844054761fd8ad6055f91df1d7b8f"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records1/failure/cost.json": {
+      "bytes": 915,
+      "local_ignored_checkpoint": false,
+      "sha256": "a1d98581e3a9c032086d2d4ed33df0cfb1dde3e5b836c611c495b0d987611a60"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records1/failure/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records1/failure/resources.jsonl": {
+      "bytes": 464,
+      "local_ignored_checkpoint": false,
+      "sha256": "8e8e0fb3c544c70a6bae35aeeeb5e49bc5165ffb440ff038c0a95e6688a1e889"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records2/interrupt/controller-final.json": {
+      "bytes": 233,
+      "local_ignored_checkpoint": false,
+      "sha256": "e0c8763486631e0f30f6db5ca945c44d8c079848a913b0d55c1a72a59645373f"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records2/interrupt/cost.json": {
+      "bytes": 935,
+      "local_ignored_checkpoint": false,
+      "sha256": "0e25e5a51b9c7160e1183b289af3566db99f0553526257600c2991bde7053756"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records2/interrupt/output.log": {
+      "bytes": 95,
+      "local_ignored_checkpoint": false,
+      "sha256": "716f50c92f21521cd31148a358191eb9d03eb0a8a5537d63d809f4fcbb3fc786"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_controller_always_records2/interrupt/resources.jsonl": {
+      "bytes": 464,
+      "local_ignored_checkpoint": false,
+      "sha256": "398e3a6f6fc5ff08d6020a1b6a3240b322047f798015ca49fad2ad98fdab3d7d"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_descendant_outlives_paren0/descendant/cost.json": {
+      "bytes": 778,
+      "local_ignored_checkpoint": false,
+      "sha256": "445e6dea3c54d579d9bb72d012a2d14bc5d6b4b745bd7c024357993bdda0c9b6"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_descendant_outlives_paren0/descendant/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/accounting-002/test_descendant_outlives_paren0/descendant/resources.jsonl": {
+      "bytes": 306,
+      "local_ignored_checkpoint": false,
+      "sha256": "df0a8f3d3ea33e834d529fe8246e5f28e1fcbd8092a6bbebdca4ba5904344b6e"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/cases.json": {
+      "bytes": 7202,
+      "local_ignored_checkpoint": false,
+      "sha256": "7d75fd6c6f7fb90d8b0aaba23016625af3541fbf99f86366acf51adf8f0a3bc0"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_abrupt_exit_without_self_0/abrupt/cost.json": {
+      "bytes": 650,
+      "local_ignored_checkpoint": false,
+      "sha256": "ea8c407d63e4423eace3f0fb5e5b58ec0e9d27ad2829fb7df8e38dfc114894cc"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_abrupt_exit_without_self_0/abrupt/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_abrupt_exit_without_self_0/abrupt/resources.jsonl": {
+      "bytes": 306,
+      "local_ignored_checkpoint": false,
+      "sha256": "1b55ec12d7ff1e63ed1ecad97e3f536750021a4f0182adbc0862fe9901ac693a"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_cap_and_observer_interrup0/cap/cost.json": {
+      "bytes": 757,
+      "local_ignored_checkpoint": false,
+      "sha256": "a1ee85307b2d0486c6aca1d21628ebd8c4d17680dd70b7a21b7bf857e9ffa68e"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_cap_and_observer_interrup0/cap/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_cap_and_observer_interrup0/cap/resources.jsonl": {
+      "bytes": 934,
+      "local_ignored_checkpoint": false,
+      "sha256": "594a4472d82e94e329b1ce69e7d52064d2e30880896dfff8a1afe301d43ac5ba"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_cap_and_observer_interrup1/cancel/cost.json": {
+      "bytes": 829,
+      "local_ignored_checkpoint": false,
+      "sha256": "bc919ae19c4dcdff28ce73ae6852dff92700d36d7a254e704f90ad7c8d1036e3"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_cap_and_observer_interrup1/cancel/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_cap_and_observer_interrup1/cancel/resources.jsonl": {
+      "bytes": 930,
+      "local_ignored_checkpoint": false,
+      "sha256": "6e51b17c5049c6f8ebd10ed425919a2f0e2c257db2f3d17de2ceeb0a1e16ce8a"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records0/success/controller-final.json": {
+      "bytes": 213,
+      "local_ignored_checkpoint": false,
+      "sha256": "e013ae77e7a4cbf9bf4c53ef57ae49eaf37638ed4ceb46f9d5146601e5fb40a5"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records0/success/cost.json": {
+      "bytes": 921,
+      "local_ignored_checkpoint": false,
+      "sha256": "23e09ce7072b0c532eb2cd7a272f7eda7d392db906817cf350f68585b5fa8ab7"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records0/success/output.log": {
+      "bytes": 9,
+      "local_ignored_checkpoint": false,
+      "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records0/success/resources.jsonl": {
+      "bytes": 461,
+      "local_ignored_checkpoint": false,
+      "sha256": "53bb4455c8036a8a5688f6498ef757b9884282279165687c8e8c201469cd60a0"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records1/failure/controller-final.json": {
+      "bytes": 227,
+      "local_ignored_checkpoint": false,
+      "sha256": "2c610c580b2b039ba3f28ef13d6f24024727e4603161d923fe592656385c7b4f"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records1/failure/cost.json": {
+      "bytes": 916,
+      "local_ignored_checkpoint": false,
+      "sha256": "4b756ad362f0bca9bf692f59d711f90874789c8304d045543daea762871511ab"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records1/failure/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records1/failure/resources.jsonl": {
+      "bytes": 460,
+      "local_ignored_checkpoint": false,
+      "sha256": "0eeaf6046c22af4384a31fc94d8ecacc9823ce3d3fc77fb88cc9220f2a2e8f2e"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records2/interrupt/controller-final.json": {
+      "bytes": 232,
+      "local_ignored_checkpoint": false,
+      "sha256": "54791a976c0a5af5a0551a6a949a0b6bf834127a5fd735612f6bdf5214e385ff"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records2/interrupt/cost.json": {
+      "bytes": 949,
+      "local_ignored_checkpoint": false,
+      "sha256": "f6beb25cb55c8e0ba1503a414b4908dfeb53f8ada4ebad28fbf0ba48ba548775"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records2/interrupt/output.log": {
+      "bytes": 95,
+      "local_ignored_checkpoint": false,
+      "sha256": "716f50c92f21521cd31148a358191eb9d03eb0a8a5537d63d809f4fcbb3fc786"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_controller_always_records2/interrupt/resources.jsonl": {
+      "bytes": 464,
+      "local_ignored_checkpoint": false,
+      "sha256": "978ea1794237fefa1712072d355b0bcf2a7bc688021592804681e74bde794473"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_descendant_outlives_paren0/descendant/cost.json": {
+      "bytes": 771,
+      "local_ignored_checkpoint": false,
+      "sha256": "dc3be94d52193f0d3b4f5cd795f2287d228ade9b304efef0cb5d01bebbd8fc6b"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_descendant_outlives_paren0/descendant/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-accounting-v1/retained-test-cases/contracts-001/test_descendant_outlives_paren0/descendant/resources.jsonl": {
+      "bytes": 308,
+      "local_ignored_checkpoint": false,
+      "sha256": "874a16615eb70ea4a252f835f1fcf46b96d68e6a8445e4081ee476532adec08c"
+    },
+    "artifacts/local-answer-accounting-v1/tests-001/cost.json": {
+      "bytes": 841,
+      "local_ignored_checkpoint": false,
+      "sha256": "31e7772b95c452c4943a995a14ba72e00b86a148c4b604e70088e5b8604e1042"
+    },
+    "artifacts/local-answer-accounting-v1/tests-001/output.log": {
+      "bytes": 100,
+      "local_ignored_checkpoint": false,
+      "sha256": "522203b2e27ff8e2daccc326414508d9aabdb6cea7719e1c99b83a9caf0ad8c6"
+    },
+    "artifacts/local-answer-accounting-v1/tests-001/resources.jsonl": {
+      "bytes": 6757,
+      "local_ignored_checkpoint": false,
+      "sha256": "fd12943ed3a728e0600e4617d29fed9eaae56ebf1c837faa2a4c0e1262498937"
+    },
+    "artifacts/local-answer-accounting-v1/tests-002/cost.json": {
+      "bytes": 833,
+      "local_ignored_checkpoint": false,
+      "sha256": "61eaf1b809daf0ec9749dde1524a7fa76c0e22feb2f8b6629e6aa05c724d2267"
+    },
+    "artifacts/local-answer-accounting-v1/tests-002/output.log": {
+      "bytes": 100,
+      "local_ignored_checkpoint": false,
+      "sha256": "522203b2e27ff8e2daccc326414508d9aabdb6cea7719e1c99b83a9caf0ad8c6"
+    },
+    "artifacts/local-answer-accounting-v1/tests-002/resources.jsonl": {
+      "bytes": 5666,
+      "local_ignored_checkpoint": false,
+      "sha256": "4450a5bdc20285010cb5d7c0ab5db95e006f6404cbff2344f5b4610e95744d44"
+    },
+    "artifacts/local-answer-dev-v1-preparation/contracts-001/cost.json": {
+      "bytes": 882,
+      "local_ignored_checkpoint": false,
+      "sha256": "b28ac22891220b1a5b937cf27e0e82ff32f038f4b8ea8da4c33c14ded1b278fb"
+    },
+    "artifacts/local-answer-dev-v1-preparation/contracts-001/output.log": {
+      "bytes": 101,
+      "local_ignored_checkpoint": false,
+      "sha256": "9f166e2be7daa49359fa46a130c5e0f257ccd76ba2fd3a1eed269b27d6ddea2a"
+    },
+    "artifacts/local-answer-dev-v1-preparation/contracts-001/resources.jsonl": {
+      "bytes": 18313,
+      "local_ignored_checkpoint": false,
+      "sha256": "79fe31d89984dd5d10cd92db9c7d845679dadce78c00b1c4900f9e17cb614aa0"
+    },
+    "artifacts/local-answer-dev-v1-preparation/freeze-001/controller-final.json": {
+      "bytes": 215,
+      "local_ignored_checkpoint": false,
+      "sha256": "7740c5dd4bfa5b1a968aa1eedc4c7ac3a07586622ee891e90a24bff9fcca39fe"
+    },
+    "artifacts/local-answer-dev-v1-preparation/freeze-001/cost.json": {
+      "bytes": 759,
+      "local_ignored_checkpoint": false,
+      "sha256": "56fad7ed3cb6fa4e8f6d91570c9434e7eedfac8c42ec44c657a59f7aec9711d3"
+    },
+    "artifacts/local-answer-dev-v1-preparation/freeze-001/output.log": {
+      "bytes": 148,
+      "local_ignored_checkpoint": false,
+      "sha256": "2099978801d79c43c760b91cc45aff5e778357a36a6da6c948154a78697e33d2"
+    },
+    "artifacts/local-answer-dev-v1-preparation/freeze-001/resources.jsonl": {
+      "bytes": 7804,
+      "local_ignored_checkpoint": false,
+      "sha256": "be7422b48fe2c8585278c237e2ef6f5203736740b9e82dfd4a577a605f437b8d"
+    },
+    "artifacts/local-answer-dev-v1-preparation/rehearsal-001/controller-final.json": {
+      "bytes": 217,
+      "local_ignored_checkpoint": false,
+      "sha256": "1b7e11ae8594785a1d51d40bbf856cf79e7ff38b7cb20b5a3c95c77bcc16a7ed"
+    },
+    "artifacts/local-answer-dev-v1-preparation/rehearsal-001/cost.json": {
+      "bytes": 773,
+      "local_ignored_checkpoint": false,
+      "sha256": "008336248fbf785dcbef441b2af6631986bf6672864ea35498b5e8675d32e909"
+    },
+    "artifacts/local-answer-dev-v1-preparation/rehearsal-001/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1-preparation/rehearsal-001/rehearsal.json": {
+      "bytes": 1095,
+      "local_ignored_checkpoint": false,
+      "sha256": "3eaaeadbf29767595e5296f34a17123e09f120b26c13e23ecd2e4e53d0f7081f"
+    },
+    "artifacts/local-answer-dev-v1-preparation/rehearsal-001/resources.jsonl": {
+      "bytes": 11919,
+      "local_ignored_checkpoint": false,
+      "sha256": "9d01ceafc7452e1003fc16c17d46914f347830639cdb17ee18606570c1ece451"
+    },
+    "artifacts/local-answer-dev-v1-preparation/v1-diagnosis-derived.json": {
+      "bytes": 91851,
+      "local_ignored_checkpoint": false,
+      "sha256": "b4e8bdf06ae3053dad1516ad0e18bf49ecda39d95b1193d15f32661e2b43ea33"
+    },
+    "artifacts/local-answer-dev-v1-preparation/v1-diagnosis.json": {
+      "bytes": 91869,
+      "local_ignored_checkpoint": false,
+      "sha256": "652e66f0f69ca148fbcdecc6f4865fadb68aca676b4252e0cbc7b5a54e297cde"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/checks.py": {
+      "bytes": 3308,
+      "local_ignored_checkpoint": false,
+      "sha256": "415a296e84b97da8bd103767236d852ee4766f03b08042491d108e4ac1e69743"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/coverage.json": {
+      "bytes": 11492,
+      "local_ignored_checkpoint": false,
+      "sha256": "53e7769ef1083bbc7144edf06b88d30e1a1f122bce89760a197686a9469746db"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/diff-check/cost.json": {
+      "bytes": 603,
+      "local_ignored_checkpoint": false,
+      "sha256": "9508d6e4b166941c608d48a0929001c7d35543770a02b92f8c820cd946ec78b6"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/diff-check/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/diff-check/resources.jsonl": {
+      "bytes": 474,
+      "local_ignored_checkpoint": false,
+      "sha256": "7fe58e0263deaddf6d5570757a0503a8ac081eab575b099554702f24f0b0f894"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/execution/controller-final.json": {
+      "bytes": 214,
+      "local_ignored_checkpoint": false,
+      "sha256": "9e851626434d9bbb15945ced4bd1292e0123805710764854b97c32a0d4d186a7"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/execution/cost.json": {
+      "bytes": 669,
+      "local_ignored_checkpoint": false,
+      "sha256": "dae784a02deb92f513612c53799f8a72944865e10322ef31eaf16f99f8706bb2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/execution/output.log": {
+      "bytes": 1191,
+      "local_ignored_checkpoint": false,
+      "sha256": "d39e0ad33c090909d8db904cb11b83b7bcfad12ca73ed23436ba7e27d006001a"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/execution/resources.jsonl": {
+      "bytes": 316416,
+      "local_ignored_checkpoint": false,
+      "sha256": "25128d41b700126b89c87bb1deebbfe148eec34556c97a6da8b05b174ff92e13"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/focused-tests/cost.json": {
+      "bytes": 1942,
+      "local_ignored_checkpoint": false,
+      "sha256": "e753c4b102bb77e32e9055ed744c8ffc156c93ce793fec0944d45315ed489c5f"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/focused-tests/output.log": {
+      "bytes": 101,
+      "local_ignored_checkpoint": false,
+      "sha256": "36ea86f08cd1051563d1afa884376269affb6be362003d11e73b9603cac7ccdf"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/focused-tests/resources.jsonl": {
+      "bytes": 18636,
+      "local_ignored_checkpoint": false,
+      "sha256": "4c45aeb6560d0c8995b95c99d75298a45165284e1804c6d5102792989c3e1253"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/format/cost.json": {
+      "bytes": 704,
+      "local_ignored_checkpoint": false,
+      "sha256": "0b61270cdba88d38b46d2360fd4bd66c4539e001efe8939f26946598b1549091"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/format/output.log": {
+      "bytes": 28,
+      "local_ignored_checkpoint": false,
+      "sha256": "a8974443d12f9736423157c869f658ab1b4fc18c2ff99f12bf2cb579052f9e5b"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/format/resources.jsonl": {
+      "bytes": 474,
+      "local_ignored_checkpoint": false,
+      "sha256": "c2dbbb075656e8661c54c196ad7e22c4be05f64542e88bd68a2bc0ea0b1eaac8"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/frozen-local-audit/cost.json": {
+      "bytes": 667,
+      "local_ignored_checkpoint": false,
+      "sha256": "69667276aa1b4886d936649492ef19d4f9972000316d691b7d3e55b8756eff63"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/frozen-local-audit/output.log": {
+      "bytes": 249,
+      "local_ignored_checkpoint": false,
+      "sha256": "a0569dfccf6e40477d8f07fc4071f645723cb6c90f99ade539880238b0f846d5"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/frozen-local-audit/resources.jsonl": {
+      "bytes": 12488,
+      "local_ignored_checkpoint": false,
+      "sha256": "5b8b4ed85b51db8d1435c54f5ccfaca8c65877c702f7530ed1348e91341b27a5"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/frozen-sources/cost.json": {
+      "bytes": 659,
+      "local_ignored_checkpoint": false,
+      "sha256": "a25b4dbbfe20604f792989758cc058a250a71a60b7e04bdb3565a8ca7956fd21"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/frozen-sources/output.log": {
+      "bytes": 44,
+      "local_ignored_checkpoint": false,
+      "sha256": "6997253b542064247b6452a5a5953170cde690552fabc944479be6a0bf4d8047"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/frozen-sources/resources.jsonl": {
+      "bytes": 475,
+      "local_ignored_checkpoint": false,
+      "sha256": "4a3cd6be847b6a8ba239253e8727a7a205bec3a30d5ae2904d070ec10637a071"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/lint/cost.json": {
+      "bytes": 657,
+      "local_ignored_checkpoint": false,
+      "sha256": "b19cccb10bf5578a1dfbfafe7b3f84b83ca8cda148ae31561cb8b9718db28a29"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/lint/output.log": {
+      "bytes": 19,
+      "local_ignored_checkpoint": false,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/lint/resources.jsonl": {
+      "bytes": 473,
+      "local_ignored_checkpoint": false,
+      "sha256": "ffa66f62f76fd870e9bb92f4c0c44bd8c916fa4e76891c24d9c9b3e6307313c8"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/local-saved-audit/cost.json": {
+      "bytes": 669,
+      "local_ignored_checkpoint": false,
+      "sha256": "adb0287291b4e6a4d73e4a32b03f54125fa1240440f23b62cbf1bd653d381aa2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/local-saved-audit/output.log": {
+      "bytes": 73541,
+      "local_ignored_checkpoint": false,
+      "sha256": "2c1e0d47ada6b641b7da3d44f852b399d85d3342c543cca5fb84d887f443cfe3"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/local-saved-audit/resources.jsonl": {
+      "bytes": 781,
+      "local_ignored_checkpoint": false,
+      "sha256": "53083c99632b6289e449bf97e861e8b68197a5c23030fd756f581ee7062db0c4"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/cases.json": {
+      "bytes": 1576,
+      "local_ignored_checkpoint": false,
+      "sha256": "3d2cadfbe78a8f341473094d03a527429e7e3a5d9cfae2a49af5a2176dfc3d3d"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_abrupt_exit_without_self_0/abrupt/cost.json": {
+      "bytes": 651,
+      "local_ignored_checkpoint": false,
+      "sha256": "5f51b542d2e722eb9a330eec5e35569a88173e17741e9b8d4fc34f28e55b4f16"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_abrupt_exit_without_self_0/abrupt/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_abrupt_exit_without_self_0/abrupt/resources.jsonl": {
+      "bytes": 304,
+      "local_ignored_checkpoint": false,
+      "sha256": "202a8fc2162b1b4ab8328bdbf090b3b4037531afe1c4693961c468a80ea37bb2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_cap_and_observer_interrup0/cap/cost.json": {
+      "bytes": 755,
+      "local_ignored_checkpoint": false,
+      "sha256": "1c9121bb64d2d7d2e0e55281025ebe8c71db9081e18b305f5936cf9fdfef9e5f"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_cap_and_observer_interrup0/cap/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_cap_and_observer_interrup0/cap/resources.jsonl": {
+      "bytes": 926,
+      "local_ignored_checkpoint": false,
+      "sha256": "0b3c7c1d7c2f67a97d3ff332d14a347cc8c154a4febb46de8af8f0a0a7df3118"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_cap_and_observer_interrup1/cancel/cost.json": {
+      "bytes": 824,
+      "local_ignored_checkpoint": false,
+      "sha256": "41783e8927c037313076e5988fc2664e00e6957019a79875fca73d245624b5d2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_cap_and_observer_interrup1/cancel/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_cap_and_observer_interrup1/cancel/resources.jsonl": {
+      "bytes": 927,
+      "local_ignored_checkpoint": false,
+      "sha256": "4b748c1d3d5246c7c5bf5a7a7156e51657f267b2d31d5b418f678d804da4e7e2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records0/success/controller-final.json": {
+      "bytes": 214,
+      "local_ignored_checkpoint": false,
+      "sha256": "9e14cd57ab55cd982b6d2304cd330c69c973233766ad20e3370b08967e293029"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records0/success/cost.json": {
+      "bytes": 923,
+      "local_ignored_checkpoint": false,
+      "sha256": "de6b3403ed7dab9ffe52dfb20f11dd3001bc5538aabf5f7a7364e1ce2f169a78"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records0/success/output.log": {
+      "bytes": 9,
+      "local_ignored_checkpoint": false,
+      "sha256": "2728816679bc1bf75a02b5dd2100085783b3686793b4029186793a0dfcc1e410"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records0/success/resources.jsonl": {
+      "bytes": 463,
+      "local_ignored_checkpoint": false,
+      "sha256": "5bed4a57c06d0ab2372de9ca1ae58c4537d8f18f9c4994be9ad6a506dd831a5e"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records1/failure/controller-final.json": {
+      "bytes": 227,
+      "local_ignored_checkpoint": false,
+      "sha256": "4af11336198d788a4d0be641f6ea4ac7116e29cf7ce6c5cea45a294045ca2d69"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records1/failure/cost.json": {
+      "bytes": 926,
+      "local_ignored_checkpoint": false,
+      "sha256": "fd1a0e423f937377dab76771713e095a45ed3adff20670dc244cc1249b1365c8"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records1/failure/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records1/failure/resources.jsonl": {
+      "bytes": 462,
+      "local_ignored_checkpoint": false,
+      "sha256": "0648bfb22a38521f808ab4be30e9f6ca987c75ac7fb0618f249a04571f20799b"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records2/interrupt/controller-final.json": {
+      "bytes": 232,
+      "local_ignored_checkpoint": false,
+      "sha256": "8862ccdc51734079c6ed1f0f428ae8cedeb55294974911b660c5f9d1c24ad2c2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records2/interrupt/cost.json": {
+      "bytes": 945,
+      "local_ignored_checkpoint": false,
+      "sha256": "eda41b12a7a74082d816efb9c133c7684f7f3d0c5aacd8c3ec3543ae0da6ed31"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records2/interrupt/output.log": {
+      "bytes": 95,
+      "local_ignored_checkpoint": false,
+      "sha256": "716f50c92f21521cd31148a358191eb9d03eb0a8a5537d63d809f4fcbb3fc786"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_controller_always_records2/interrupt/resources.jsonl": {
+      "bytes": 621,
+      "local_ignored_checkpoint": false,
+      "sha256": "6771a73e3312a1e8e24a60dca6eace46c97f6397080c2ba7c5bee8efa663def3"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_descendant_outlives_paren0/descendant/cost.json": {
+      "bytes": 773,
+      "local_ignored_checkpoint": false,
+      "sha256": "4e2ffec9af7018897e37c4317dc77ecf7b6d76f3fa9f4d6f18b0d32cf7f53eeb"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_descendant_outlives_paren0/descendant/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/retained-job-tests/test_descendant_outlives_paren0/descendant/resources.jsonl": {
+      "bytes": 305,
+      "local_ignored_checkpoint": false,
+      "sha256": "df88a952e2176f18d69d315ab4ea6a3de459b3df0a1dadf3f815bf95aa97ee6f"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/segment-delta-record/cost.json": {
+      "bytes": 785,
+      "local_ignored_checkpoint": false,
+      "sha256": "bc8cdba86142d859b5c0bbbeefa24b7e9609296c5fddcbea0cbc15dedb8e317e"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/segment-delta-record/output.log": {
+      "bytes": 1743,
+      "local_ignored_checkpoint": false,
+      "sha256": "e9ad1d7a36610552ea9946a62e35c0f62142b8e9c21d5e3406e912ac3d372233"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/segment-delta-record/resources.jsonl": {
+      "bytes": 8458,
+      "local_ignored_checkpoint": false,
+      "sha256": "edceeaad14870c710863a2970c25bbce1d4266e401c03e7e8a197f2c3e10d301"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/types-linux/cost.json": {
+      "bytes": 665,
+      "local_ignored_checkpoint": false,
+      "sha256": "3e3b57c629fb2f43cde03cdba84c7d823c0ac193e638a877e747100b8c513e5f"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/types-linux/output.log": {
+      "bytes": 45,
+      "local_ignored_checkpoint": false,
+      "sha256": "1d0b00ad0473fd5bc2b62278f6fc097727a1561945844ab5bddd02cee1369dc2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/types-linux/resources.jsonl": {
+      "bytes": 132960,
+      "local_ignored_checkpoint": false,
+      "sha256": "d332c72f4e3f29aaf6c68498fa8b6e03f46e7416e3bebba3bf3cbf775d0607f5"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/types/cost.json": {
+      "bytes": 634,
+      "local_ignored_checkpoint": false,
+      "sha256": "78a0000e8864829e8b3c5249fa39b1b6d0b006ccb14b86df1b04a3b49989054e"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/types/output.log": {
+      "bytes": 45,
+      "local_ignored_checkpoint": false,
+      "sha256": "1d0b00ad0473fd5bc2b62278f6fc097727a1561945844ab5bddd02cee1369dc2"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/types/resources.jsonl": {
+      "bytes": 137276,
+      "local_ignored_checkpoint": false,
+      "sha256": "3ab97a8b97aa5b9fdf5a46269d46ff98db557943a47e3cf1a745b2aa164b303a"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/v1-committed-record/cost.json": {
+      "bytes": 760,
+      "local_ignored_checkpoint": false,
+      "sha256": "63cca92192e94316590a87344d9a2a9085fa568e2657f9b8ebae68b29495b12d"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/v1-committed-record/output.log": {
+      "bytes": 424,
+      "local_ignored_checkpoint": false,
+      "sha256": "19527a8c51ff8b6c147154c4044d4e8cf839aa98f10203c77a777b1816d7dcca"
+    },
+    "artifacts/local-answer-dev-v1-verification-001/v1-committed-record/resources.jsonl": {
+      "bytes": 2225,
+      "local_ignored_checkpoint": false,
+      "sha256": "58e61806b8a4a9ecc65e7378456851eb0d0eb38e5734d13d4477db8d458561be"
+    },
+    "artifacts/local-answer-dev-v1/dev-inputs.json": {
+      "bytes": 2459,
+      "local_ignored_checkpoint": false,
+      "sha256": "6917a36e088aa1a78ce2f0aacf16b201d66665295abf2eb489b1c26cdebb97b9"
+    },
+    "artifacts/local-answer-dev-v1/dev-labels.json": {
+      "bytes": 4115,
+      "local_ignored_checkpoint": false,
+      "sha256": "2135c77a584863c7c5eb34afd3affb05367591b24f6d717d47bd684103a2ecca"
+    },
+    "artifacts/local-answer-dev-v1/execution/controller-final.json": {
+      "bytes": 216,
+      "local_ignored_checkpoint": false,
+      "sha256": "591afda7979fe77b40d0724fd3c93679994d145faed5a60057eaedb90ae714a3"
+    },
+    "artifacts/local-answer-dev-v1/execution/cost.json": {
+      "bytes": 659,
+      "local_ignored_checkpoint": false,
+      "sha256": "14568477ca31b19bfa811a4b4ded4f2aed4917b7b6b54e6cd8507fc63df1ffe3"
+    },
+    "artifacts/local-answer-dev-v1/execution/output.log": {
+      "bytes": 1244,
+      "local_ignored_checkpoint": false,
+      "sha256": "67bba87a1cd7e45683995a5eea4d41ec0b8d990c641c259cca2a9ae5001cda43"
+    },
+    "artifacts/local-answer-dev-v1/execution/resources.jsonl": {
+      "bytes": 314611,
+      "local_ignored_checkpoint": false,
+      "sha256": "e43f0947090cc90c6a03e3ecff907d99244615446af026f201ee8298b3373699"
+    },
+    "artifacts/local-answer-dev-v1/final-git-state.json": {
+      "bytes": 961,
+      "local_ignored_checkpoint": false,
+      "sha256": "252059245215c9ef1cc3b63ee2edf23d50aff65bf6bb2c9216638eba2b50df9b"
+    },
+    "artifacts/local-answer-dev-v1/registration.json": {
+      "bytes": 3805,
+      "local_ignored_checkpoint": false,
+      "sha256": "c11e16cb45dfe116f3f45f2c2e3412f7e26930e2f0db0a607784f4eae54253b4"
+    },
+    "artifacts/local-answer-dev-v1/run-start.json": {
+      "bytes": 279,
+      "local_ignored_checkpoint": false,
+      "sha256": "7aa4eb5867871530f3f43b04095a7931ce5664a04b1b6ad76d81afeedabf1bb2"
+    },
+    "artifacts/local-answer-dev-v1/saved-audit.json": {
+      "bytes": 127882,
+      "local_ignored_checkpoint": false,
+      "sha256": "8106860c70e665a3e62aec29a0afae78a3939f813d414ad2baed34b41b6133f1"
+    },
+    "artifacts/local-answer-dev-v1/sources/.gitattributes": {
+      "bytes": 7478,
+      "local_ignored_checkpoint": false,
+      "sha256": "566b0d81838e36cb43f987cddb030ab7680305e439d2c9f12857a0d743999035"
+    },
+    "artifacts/local-answer-dev-v1/sources/docs/research/local-answer-dev-v1-protocol.md": {
+      "bytes": 9666,
+      "local_ignored_checkpoint": false,
+      "sha256": "409bf600a79563b70202c5f9feecf95b41401a661482d6007a00762f4bd671e3"
+    },
+    "artifacts/local-answer-dev-v1/sources/pyproject.toml": {
+      "bytes": 1623,
+      "local_ignored_checkpoint": false,
+      "sha256": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca"
+    },
+    "artifacts/local-answer-dev-v1/sources/scripts/answer_trainability_dev.py": {
+      "bytes": 35122,
+      "local_ignored_checkpoint": false,
+      "sha256": "c599576237e8e0d8de71b98e0e634a2f4af55fc536bc50915a4dd6bcf6bb0fa1"
+    },
+    "artifacts/local-answer-dev-v1/sources/scripts/lifetime_job.py": {
+      "bytes": 12999,
+      "local_ignored_checkpoint": false,
+      "sha256": "b076233cdbc76e4e77bb48e71a9cbaee2bd1c5e5697042b7fc3e6580b1b6220f"
+    },
+    "artifacts/local-answer-dev-v1/sources/scripts/local_answer_dev.py": {
+      "bytes": 33386,
+      "local_ignored_checkpoint": false,
+      "sha256": "56228f95d670e676d78aaa0e4b7270c5994e0245c7b073bf6f84310c0469345a"
+    },
+    "artifacts/local-answer-dev-v1/sources/scripts/segment_delta_watch.py": {
+      "bytes": 5973,
+      "local_ignored_checkpoint": false,
+      "sha256": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c"
+    },
+    "artifacts/local-answer-dev-v1/sources/src/toruk_lm/data.py": {
+      "bytes": 5200,
+      "local_ignored_checkpoint": false,
+      "sha256": "343ff1cfb9c1245bd01f7c6eddd80f066689b03515880a7c246de938611a9232"
+    },
+    "artifacts/local-answer-dev-v1/sources/src/toruk_lm/engine.py": {
+      "bytes": 15184,
+      "local_ignored_checkpoint": false,
+      "sha256": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e"
+    },
+    "artifacts/local-answer-dev-v1/sources/src/toruk_lm/model.py": {
+      "bytes": 4536,
+      "local_ignored_checkpoint": false,
+      "sha256": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf"
+    },
+    "artifacts/local-answer-dev-v1/sources/src/toruk_lm/owned_lm.py": {
+      "bytes": 10217,
+      "local_ignored_checkpoint": false,
+      "sha256": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac"
+    },
+    "artifacts/local-answer-dev-v1/sources/src/toruk_lm/recurrent.py": {
+      "bytes": 6624,
+      "local_ignored_checkpoint": false,
+      "sha256": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d"
+    },
+    "artifacts/local-answer-dev-v1/sources/src/toruk_lm/tokenizer.py": {
+      "bytes": 722,
+      "local_ignored_checkpoint": false,
+      "sha256": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0"
+    },
+    "artifacts/local-answer-dev-v1/sources/tests/test_lifetime_job.py": {
+      "bytes": 3345,
+      "local_ignored_checkpoint": false,
+      "sha256": "cfeaafe52ae02a1c1db3fbee134124089018cbcee43a77e457b492300746401a"
+    },
+    "artifacts/local-answer-dev-v1/sources/tests/test_local_answer_dev.py": {
+      "bytes": 2602,
+      "local_ignored_checkpoint": false,
+      "sha256": "d2945f9d5f8aa98056c7534ad7ea9c5767ecbc525788ceb38159235fa336cacc"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-ordinary/controller-final.json": {
+      "bytes": 215,
+      "local_ignored_checkpoint": false,
+      "sha256": "216627dc8e3f03dceec563e44e1ed2c5e94e6c840822a76bcff8aa0136d4c845"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-ordinary/cost.json": {
+      "bytes": 931,
+      "local_ignored_checkpoint": false,
+      "sha256": "c4016345d7267497a7a40b1f46cd5561418162246b2811633598124d513a124e"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-ordinary/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-ordinary/predictions.jsonl": {
+      "bytes": 65665,
+      "local_ignored_checkpoint": false,
+      "sha256": "e2a36e62ef091620c46eea44b0708f4f05da99e8c24d12563f5a717f59595ed5"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-ordinary/resources.jsonl": {
+      "bytes": 12475,
+      "local_ignored_checkpoint": false,
+      "sha256": "95a2df43aba05163faa349f76cdf3a4c53cacf43ac45ff7d900a29e3c56535e2"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-ordinary/seal.json": {
+      "bytes": 101,
+      "local_ignored_checkpoint": false,
+      "sha256": "53889d93904e6c70922006f4f6c41762438dce8020539c5665daa32cce3a144e"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-recurrent/controller-final.json": {
+      "bytes": 216,
+      "local_ignored_checkpoint": false,
+      "sha256": "5ae48d66fd4c3c507721699b938a76f196bf61229293d3c4a0b8e30f8a85d7b3"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-recurrent/cost.json": {
+      "bytes": 934,
+      "local_ignored_checkpoint": false,
+      "sha256": "c566a31b4a7d16c4c824ce5f1008178496fb8c85c6e148f2594284a2b7b4b2d7"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-recurrent/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-recurrent/predictions.jsonl": {
+      "bytes": 65879,
+      "local_ignored_checkpoint": false,
+      "sha256": "f15f01fe24ad97241651c48f6dc91f1ad0d4785ce3742dfd6330e8c4a147083d"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-recurrent/resources.jsonl": {
+      "bytes": 12802,
+      "local_ignored_checkpoint": false,
+      "sha256": "858730c22b8b154c6e386eb10e1b37002b076907e45cfe862d01be39c63f2f39"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-601-recurrent/seal.json": {
+      "bytes": 101,
+      "local_ignored_checkpoint": false,
+      "sha256": "f5e526d34dcf1e5abfcf9d38bda476a813bb4d42706bb53c2479088d8c4ef89e"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/controller-final.json": {
+      "bytes": 214,
+      "local_ignored_checkpoint": false,
+      "sha256": "7dfcda5949b88cd972da9f374f41e4df7ecda5629dbd6f06f1bd31d2c27be0bd"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/cost.json": {
+      "bytes": 927,
+      "local_ignored_checkpoint": false,
+      "sha256": "2bfd2285830925a372e8aecf1867bd50bf398f6cdd40a1d382e8db9088d52b5a"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/predictions.jsonl": {
+      "bytes": 65663,
+      "local_ignored_checkpoint": false,
+      "sha256": "3cebe8870f058cf88d0a53c2adfa19b58fb43a6637a5846c5cac110db38e4d65"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/resources.jsonl": {
+      "bytes": 11981,
+      "local_ignored_checkpoint": false,
+      "sha256": "ae7ec2befa5131726a804ba142ee9bb02ab2dabb21dc435fc318867e0653d9a5"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-ordinary/seal.json": {
+      "bytes": 101,
+      "local_ignored_checkpoint": false,
+      "sha256": "7a1523aff6d332d5e88d6d02de90b8949eb25a6465e3cdb00e74070a219856aa"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-recurrent/controller-final.json": {
+      "bytes": 215,
+      "local_ignored_checkpoint": false,
+      "sha256": "98687ef04571e66b621f2555ad9894a11d4f2f15086ef6b23cd63ed478cf29bc"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-recurrent/cost.json": {
+      "bytes": 928,
+      "local_ignored_checkpoint": false,
+      "sha256": "b47aaaeb7bb543736e293d54585f81ac17132071a2534fdea50adec62c8b1530"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-recurrent/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-recurrent/predictions.jsonl": {
+      "bytes": 65884,
+      "local_ignored_checkpoint": false,
+      "sha256": "ae1c58107277e7613b1bf400e5bbb089adab5c4deba2d76aebb1aa29ef64f196"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-recurrent/resources.jsonl": {
+      "bytes": 12952,
+      "local_ignored_checkpoint": false,
+      "sha256": "d1e77a022768b9ece8de825b389c6ed51c890473e48c93a4c7d0f9d0ccc50c48"
+    },
+    "artifacts/local-answer-dev-v1/stages/generate-train-947-recurrent/seal.json": {
+      "bytes": 101,
+      "local_ignored_checkpoint": false,
+      "sha256": "6bd0bda3d87c9d12d5b1ce6c1c33ef59fc30243f6ae759dd0eff491b7f1d137a"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-ordinary/controller-final.json": {
+      "bytes": 215,
+      "local_ignored_checkpoint": false,
+      "sha256": "43666b3d88f280faf21b9c7982e0e15302123a158fd119ac793b680db1145882"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-ordinary/cost.json": {
+      "bytes": 925,
+      "local_ignored_checkpoint": false,
+      "sha256": "d67886fb86d4c6c88a9d1955a448e02626582e7e9cbd003953cc57a0b53fe106"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-ordinary/losses.jsonl": {
+      "bytes": 15511,
+      "local_ignored_checkpoint": false,
+      "sha256": "ce9e8f8f01290d70176d9f1b780110e71824c5ac52e707677c472f218ad30198"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-ordinary/metrics.json": {
+      "bytes": 19723,
+      "local_ignored_checkpoint": false,
+      "sha256": "f3c016d33bbcdf373c417a065e39ee165e83ec9edf7d0dbf7e025fad15d5f1fb"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-ordinary/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-ordinary/resources.jsonl": {
+      "bytes": 12162,
+      "local_ignored_checkpoint": false,
+      "sha256": "d7609e7c6be1b2f971bbd37b270b607777a50cc69b9fc7d3484f3a6be595ddba"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-recurrent/controller-final.json": {
+      "bytes": 214,
+      "local_ignored_checkpoint": false,
+      "sha256": "2a43172aa244134f6be5841af3ae52855b52f8833ce6b6779c82b150cc8e54b7"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-recurrent/cost.json": {
+      "bytes": 927,
+      "local_ignored_checkpoint": false,
+      "sha256": "80f44791122379cf84d7d00d924bc4b5fc41626cff3c0fb210703a93c76cc9be"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-recurrent/losses.jsonl": {
+      "bytes": 15511,
+      "local_ignored_checkpoint": false,
+      "sha256": "b77717aa2150d95c546ab14d940cdca74252a9458693714ef840f853b7bb87fc"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-recurrent/metrics.json": {
+      "bytes": 19723,
+      "local_ignored_checkpoint": false,
+      "sha256": "3d1f83fc8a1d58b08c5e172812ec49c3104f9383473dc13e09bd69ee4bd92718"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-recurrent/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-601-recurrent/resources.jsonl": {
+      "bytes": 12122,
+      "local_ignored_checkpoint": false,
+      "sha256": "0952ccc9900865ff313cee409d7712be53d47ad0610ec2fa81728b2ce55ab9fe"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-ordinary/controller-final.json": {
+      "bytes": 216,
+      "local_ignored_checkpoint": false,
+      "sha256": "e05258d9830dc242c4f658185d202e6e77257fc439b15b5af90c9249b4f9a7ec"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-ordinary/cost.json": {
+      "bytes": 921,
+      "local_ignored_checkpoint": false,
+      "sha256": "d173a6b9a8db7272c60d69fa95aa9a88b14b2f6aa97f61cc7e4060187b48fb5b"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-ordinary/losses.jsonl": {
+      "bytes": 15473,
+      "local_ignored_checkpoint": false,
+      "sha256": "805ec70f135d07eaf0baa4b2b01317b198218521ce74128e7613d617662365f5"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-ordinary/metrics.json": {
+      "bytes": 19734,
+      "local_ignored_checkpoint": false,
+      "sha256": "e867a5801673e602988e41bf1a9193d83c218c642dd016593915c571e9c9c62b"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-ordinary/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-ordinary/resources.jsonl": {
+      "bytes": 11511,
+      "local_ignored_checkpoint": false,
+      "sha256": "435c98b8d221c580d8714ca41098cd7ed0a63076788ed5283d4a08142f31e0bc"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-recurrent/controller-final.json": {
+      "bytes": 217,
+      "local_ignored_checkpoint": false,
+      "sha256": "238d6e085e4f5e97693b611b81fae4f06225833d9560e8d904e1ca7fb652c048"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-recurrent/cost.json": {
+      "bytes": 924,
+      "local_ignored_checkpoint": false,
+      "sha256": "75a688d75bc9f95572939b305496a6e6a66c749666329f5420ff6b9b2a974576"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-recurrent/losses.jsonl": {
+      "bytes": 15489,
+      "local_ignored_checkpoint": false,
+      "sha256": "38a305a540158f0855b114a57fd700964be196d5c3df2d85b4dca5ef63668220"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-recurrent/metrics.json": {
+      "bytes": 19723,
+      "local_ignored_checkpoint": false,
+      "sha256": "a51c2cdf16537c7f0fbaec09f042822718b875e47ac0750f9ec8d3aa49d1558d"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-recurrent/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/loss-train-947-recurrent/resources.jsonl": {
+      "bytes": 11978,
+      "local_ignored_checkpoint": false,
+      "sha256": "dbab87032b6f408339b9aa254076e67f8bb80283c874c15bfc0ce7a3f492ee0e"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint-meta.json": {
+      "bytes": 102,
+      "local_ignored_checkpoint": false,
+      "sha256": "9faa6d4aafcaa42933d1b04fd24253538f75bfbe2980d1cf23eb22c66c54254f"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt": {
+      "bytes": 197749,
+      "local_ignored_checkpoint": true,
+      "sha256": "0c6fb762abd5448e1222e617fa7902eaa2e179aa4cc72b02bcf3c44ee0bcd183"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/controller-final.json": {
+      "bytes": 214,
+      "local_ignored_checkpoint": false,
+      "sha256": "470730868801667ebd041d63f12e7e0b3c0b42d5e8ad865d504585248f7fdf00"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/cost.json": {
+      "bytes": 918,
+      "local_ignored_checkpoint": false,
+      "sha256": "dfbe7d5c02f9af7d00a7e1186f93eecef0fd8a95cbc7e10561adc2ab57432766"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/resources.jsonl": {
+      "bytes": 44349,
+      "local_ignored_checkpoint": false,
+      "sha256": "6e2372b4a220e55f48d81010d1386b6830af6137466a8584cb686fe52280a620"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/training-summary.json": {
+      "bytes": 246,
+      "local_ignored_checkpoint": false,
+      "sha256": "d90a79a7b391807fa66e8bae0bcac7993538d6fcaecb36fa31b49d4201e2cc16"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/training.jsonl": {
+      "bytes": 524422,
+      "local_ignored_checkpoint": false,
+      "sha256": "7a6b0038295bcfe82b8034fa502b5734337601d67ca87d922c58e67b78987bdd"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/checkpoint-meta.json": {
+      "bytes": 102,
+      "local_ignored_checkpoint": false,
+      "sha256": "bfcf405c187e2ba5e51b53fd431f68965e685cb4e04c38948eac198104145c19"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/checkpoint.pt": {
+      "bytes": 216710,
+      "local_ignored_checkpoint": true,
+      "sha256": "d3fce91dba46a01eae87675cf68807967a0561120975f5dbad71c3c5a5ee7e62"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/controller-final.json": {
+      "bytes": 213,
+      "local_ignored_checkpoint": false,
+      "sha256": "a5d9641474acd38c6424f0f07447a5d772c4b7e3435c0dafc71849c1390b7bb6"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/cost.json": {
+      "bytes": 919,
+      "local_ignored_checkpoint": false,
+      "sha256": "26df21108398776da54ed38ffc3049c415a023deeb025ff360f4feaf87714f9a"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/resources.jsonl": {
+      "bytes": 63438,
+      "local_ignored_checkpoint": false,
+      "sha256": "36afe197ac6bd291f5f02c1e1876c69fdc89811254d4f2da0b2a60658c9c5016"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/training-summary.json": {
+      "bytes": 246,
+      "local_ignored_checkpoint": false,
+      "sha256": "f19ce1c9403a041ef01213a605e1ffec8dcbcf53cc6e34e61492d8dcdb2801f6"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/training.jsonl": {
+      "bytes": 523948,
+      "local_ignored_checkpoint": false,
+      "sha256": "cccd06166dd4956a161fa911f6e3c42f4a62895f1df38dfc6df7cca4fd78aa29"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/checkpoint-meta.json": {
+      "bytes": 102,
+      "local_ignored_checkpoint": false,
+      "sha256": "594cc5cb86052f02464e3067c5e19545ba17ae10e8a49f5716534531e519d6d9"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/checkpoint.pt": {
+      "bytes": 197813,
+      "local_ignored_checkpoint": true,
+      "sha256": "ae8a6eb269473f8d4d8b7dc47f9bbcb28fd9b888aa52269762635c85dbdbafd8"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/controller-final.json": {
+      "bytes": 217,
+      "local_ignored_checkpoint": false,
+      "sha256": "7245a7e715bc8c8463dc54f36e9a46d2c98a726154a70ecb56b180c206112bc2"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/cost.json": {
+      "bytes": 924,
+      "local_ignored_checkpoint": false,
+      "sha256": "754d719eab17e6e10977208b4b288b1326a62e04f0f45c22dd1b4a6e93a63ad5"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/resources.jsonl": {
+      "bytes": 43325,
+      "local_ignored_checkpoint": false,
+      "sha256": "9b5c4f8c8ea1b33399e211b6c6eb9f0b049dd82716ab4d51c02a37cbefdd7f36"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/training-summary.json": {
+      "bytes": 244,
+      "local_ignored_checkpoint": false,
+      "sha256": "b48d1b53184d281272f23198953a2378a93a98a4f090dcc75777bf8ae327cf1d"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/training.jsonl": {
+      "bytes": 523372,
+      "local_ignored_checkpoint": false,
+      "sha256": "8564eee81b305943d4633a53b859799d42e447da44bd63644f8d8245d65222b3"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/checkpoint-meta.json": {
+      "bytes": 102,
+      "local_ignored_checkpoint": false,
+      "sha256": "72f689c5303c29f92f9d8538fdba3083bf0bef9d65102cace9ee0ebf40506ad7"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/checkpoint.pt": {
+      "bytes": 216710,
+      "local_ignored_checkpoint": true,
+      "sha256": "9de9dc4cfa3701f7cd48cc33160a6cd08e78e07bb4ea05c341b78453e1ab5bd4"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/controller-final.json": {
+      "bytes": 217,
+      "local_ignored_checkpoint": false,
+      "sha256": "7aa25d4de0483b17f09b6d5b8018ea94cb4bc70534283244073ab6dab8211457"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/cost.json": {
+      "bytes": 925,
+      "local_ignored_checkpoint": false,
+      "sha256": "476ebfa541c6576a3037b4977965384ee0a3ed167a76c4f3a4001eb24f829f5a"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/output.log": {
+      "bytes": 0,
+      "local_ignored_checkpoint": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/resources.jsonl": {
+      "bytes": 63335,
+      "local_ignored_checkpoint": false,
+      "sha256": "8effdede0ef0e8be3add4f55e3c7fb33b4d38754b6783d995619f5e6930e8b47"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/training-summary.json": {
+      "bytes": 244,
+      "local_ignored_checkpoint": false,
+      "sha256": "4ee1adc7a191e07c32732696430e001adc8fb99abc28893462314f678b781698"
+    },
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/training.jsonl": {
+      "bytes": 524195,
+      "local_ignored_checkpoint": false,
+      "sha256": "781925b038320365fbb9f7e07f08a08bc23d3da2f0bb814e3ae4f82ed97d2672"
+    },
+    "artifacts/local-answer-dev-v1/summary.json": {
+      "bytes": 108171,
+      "local_ignored_checkpoint": false,
+      "sha256": "b1f0bca8a1a53bf5e72b90e21765379c424244b2463c7dd3989c73f5ca79a4e3"
+    },
+    "artifacts/local-answer-dev-v1/train-documents.json": {
+      "bytes": 20899,
+      "local_ignored_checkpoint": false,
+      "sha256": "0758207a5065099eb2bbac30d3829d51e732fcb0e73f53d5d886c1e030846c1d"
+    },
+    "artifacts/local-answer-dev-v1/train-inputs.json": {
+      "bytes": 10019,
+      "local_ignored_checkpoint": false,
+      "sha256": "26388c43aff2963a3d966e737bc549e80225a1055a3027b594857fd2dea5734e"
+    },
+    "artifacts/local-answer-dev-v1/train-labels.json": {
+      "bytes": 16643,
+      "local_ignored_checkpoint": false,
+      "sha256": "f261020c110d69dde91998501a7b2265086f6ccde1c1c6fd7b7cf5ceca5b8850"
+    },
+    "artifacts/local-answer-dev-v1/training-gate.json": {
+      "bytes": 94737,
+      "local_ignored_checkpoint": false,
+      "sha256": "c1be31155f887b401c200043f157c119a4564f2f7a57f5bef3fbc128a5ea43d3"
+    },
+    "artifacts/local-answer-dev-v1/verify_reports.py": {
+      "bytes": 4734,
+      "local_ignored_checkpoint": false,
+      "sha256": "97a1782ca09cd7fe85d178aea71ead3736f7fad56428e6465cd89044f5823998"
+    },
+    "artifacts/local-answer-dev-v1/verify_saved.py": {
+      "bytes": 7138,
+      "local_ignored_checkpoint": false,
+      "sha256": "0812e4310909a16da2dbce399ca921fb30bb2bab35ffa3a900c04bfe7d12af54"
+    },
+    "docs/research/local-answer-accounting-v1.md": {
+      "bytes": 5685,
+      "local_ignored_checkpoint": false,
+      "sha256": "d8bafb8dbe64c92a6076f182d61042f5475bb0865b65389d47ebee3f19a6a7a3"
+    },
+    "docs/research/local-answer-dev-v1-protocol.md": {
+      "bytes": 9666,
+      "local_ignored_checkpoint": false,
+      "sha256": "409bf600a79563b70202c5f9feecf95b41401a661482d6007a00762f4bd671e3"
+    },
+    "docs/research/local-answer-dev-v1-results.md": {
+      "bytes": 23134,
+      "local_ignored_checkpoint": false,
+      "sha256": "519cd7ccb984fe2f0bfc178109f29484d9d8964b4e2c32bcf8c649b6f8a752ae"
+    },
+    "docs/research/local-answer-v1-saved-diagnosis.md": {
+      "bytes": 5689,
+      "local_ignored_checkpoint": false,
+      "sha256": "5e036814559360dcddf18c665211730a20809cc4eedf0086d861339ed8490439"
+    },
+    "scripts/diagnose_local_answer_v1.py": {
+      "bytes": 5379,
+      "local_ignored_checkpoint": false,
+      "sha256": "5408a54f0f4a231364b521d516bc9d6531ae00a60b7a884e900dabc4fe0aaf97"
+    },
+    "scripts/lifetime_job.py": {
+      "bytes": 12999,
+      "local_ignored_checkpoint": false,
+      "sha256": "b076233cdbc76e4e77bb48e71a9cbaee2bd1c5e5697042b7fc3e6580b1b6220f"
+    },
+    "scripts/local_answer_dev.py": {
+      "bytes": 33386,
+      "local_ignored_checkpoint": false,
+      "sha256": "56228f95d670e676d78aaa0e4b7270c5994e0245c7b073bf6f84310c0469345a"
+    },
+    "tests/test_lifetime_job.py": {
+      "bytes": 3345,
+      "local_ignored_checkpoint": false,
+      "sha256": "cfeaafe52ae02a1c1db3fbee134124089018cbcee43a77e457b492300746401a"
+    },
+    "tests/test_local_answer_dev.py": {
+      "bytes": 2602,
+      "local_ignored_checkpoint": false,
+      "sha256": "d2945f9d5f8aa98056c7534ad7ea9c5767ecbc525788ceb38159235fa336cacc"
+    }
+  },
+  "files_count": 283,
+  "logical_bytes": 5667422,
+  "old_v1_lifetime_cpu": "UNKNOWN",
+  "registered_workload_cpu": 103.5,
+  "registered_workload_cpu_complete": true,
+  "version": "local-answer-dev-v1-final-inventory"
+}

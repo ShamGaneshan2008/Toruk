@@ -1,0 +1,26 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "import sys; from pathlib import Path; sys.path.insert(0,'scripts'); from lifetime_job import controller_record\nwith controller_record(Path('D:\\\\Toruk\\\\artifacts\\\\local-answer-dev-v1-preparation\\\\pytest-tmp-001\\\\test_controller_always_records1\\\\failure')):\n raise SystemExit(7)\n"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 0.0625,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.0625,
+  "max_monitor_gap": 0.0507197000006272,
+  "observer_cpu_to_receipt": 0.0,
+  "peak_disk": 533,
+  "peak_private": 12951552,
+  "returncode": 7,
+  "root_pid": 5756,
+  "status": "STOP",
+  "terminated_processes": 0,
+  "total_processes": 3,
+  "user_cpu": 0.0,
+  "wall": 0.10751199999867822
+}

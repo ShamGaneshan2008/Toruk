@@ -1,0 +1,98 @@
+{
+  "base_commit": "301dd9edbf12403aa97e5013247d5b1f33be0746",
+  "batch": 8,
+  "caps": {
+    "controls": 10,
+    "disk": 134217728,
+    "fit": 120,
+    "generate": 20,
+    "loss": 20,
+    "memory": 2147483648,
+    "overall": 1000,
+    "request": 2
+  },
+  "config": {
+    "context": 32,
+    "heads": 4,
+    "layers": 1,
+    "max_document_tokens": 64,
+    "slots": 4,
+    "width": 16
+  },
+  "data": {
+    "dev-inputs.json": "6917a36e088aa1a78ce2f0aacf16b201d66665295abf2eb489b1c26cdebb97b9",
+    "dev-labels.json": "2135c77a584863c7c5eb34afd3affb05367591b24f6d717d47bd684103a2ecca",
+    "train-documents.json": "0758207a5065099eb2bbac30d3829d51e732fcb0e73f53d5d886c1e030846c1d",
+    "train-inputs.json": "26388c43aff2963a3d966e737bc549e80225a1055a3027b594857fd2dea5734e",
+    "train-labels.json": "f261020c110d69dde91998501a7b2265086f6ccde1c1c6fd7b7cf5ceca5b8850"
+  },
+  "gates": {
+    "city": 7,
+    "code": 7,
+    "dev_eos": 24,
+    "dev_exact": 22,
+    "known_context_gain": 8,
+    "train_eos": 96,
+    "train_exact": 90,
+    "unknown": 8
+  },
+  "objective": "uniform CE including EOS",
+  "order": [
+    [
+      601,
+      "ordinary"
+    ],
+    [
+      601,
+      "recurrent"
+    ],
+    [
+      947,
+      "recurrent"
+    ],
+    [
+      947,
+      "ordinary"
+    ]
+  ],
+  "parameters": {
+    "ordinary": 14058,
+    "recurrent": 14416
+  },
+  "prerequisites": {
+    "artifacts\\local-answer-dev-v1-preparation\\contracts-001\\cost.json": "b28ac22891220b1a5b937cf27e0e82ff32f038f4b8ea8da4c33c14ded1b278fb",
+    "artifacts\\local-answer-dev-v1-preparation\\rehearsal-001\\cost.json": "008336248fbf785dcbef441b2af6631986bf6672864ea35498b5e8675d32e909",
+    "artifacts\\local-answer-dev-v1-preparation\\rehearsal-001\\rehearsal.json": "3eaaeadbf29767595e5296f34a17123e09f120b26c13e23ecd2e4e53d0f7081f"
+  },
+  "protocol": "docs/research/local-answer-dev-v1-protocol.md",
+  "runtime": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "psutil": "7.2.2",
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu"
+  },
+  "sources": {
+    ".gitattributes": "566b0d81838e36cb43f987cddb030ab7680305e439d2c9f12857a0d743999035",
+    "docs/research/local-answer-dev-v1-protocol.md": "409bf600a79563b70202c5f9feecf95b41401a661482d6007a00762f4bd671e3",
+    "pyproject.toml": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca",
+    "scripts/answer_trainability_dev.py": "c599576237e8e0d8de71b98e0e634a2f4af55fc536bc50915a4dd6bcf6bb0fa1",
+    "scripts/lifetime_job.py": "b076233cdbc76e4e77bb48e71a9cbaee2bd1c5e5697042b7fc3e6580b1b6220f",
+    "scripts/local_answer_dev.py": "56228f95d670e676d78aaa0e4b7270c5994e0245c7b073bf6f84310c0469345a",
+    "scripts/segment_delta_watch.py": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c",
+    "src/toruk_lm/data.py": "343ff1cfb9c1245bd01f7c6eddd80f066689b03515880a7c246de938611a9232",
+    "src/toruk_lm/engine.py": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e",
+    "src/toruk_lm/model.py": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf",
+    "src/toruk_lm/owned_lm.py": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac",
+    "src/toruk_lm/recurrent.py": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d",
+    "src/toruk_lm/tokenizer.py": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0",
+    "tests/test_lifetime_job.py": "cfeaafe52ae02a1c1db3fbee134124089018cbcee43a77e457b492300746401a",
+    "tests/test_local_answer_dev.py": "d2945f9d5f8aa98056c7534ad7ea9c5767ecbc525788ceb38159235fa336cacc"
+  },
+  "status": "FROZEN_BEFORE_STUDY_TRAINING_AND_ANSWERS",
+  "steps": 1536,
+  "tokenizer": {
+    "fingerprint": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7",
+    "identity": "toruk-utf8-byte-v1"
+  },
+  "version": "toruk-local-answer-dev-v1"
+}
