@@ -1,0 +1,9 @@
+{"name": "probe-saved", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\verify_saved.py", "--output", "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\verification\\audit-recheck.json"], "returncode": 0, "wall": 0.29360710000037216}
+{"name": "probe-documents", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\verify_documents.py"], "returncode": 0, "wall": 0.07863929999984975}
+{"name": "preserved-diagnosis-documents", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "artifacts/local-answer-first-byte-v1/verify_document.py"], "returncode": 0, "wall": 0.07244339999851945}
+{"name": "original-study-saved", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "artifacts/local-answer-dev-v1/verify_saved.py", "--output", "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\verification\\original-study-recheck.json"], "returncode": 0, "wall": 0.5350244000001112}
+{"name": "frozen-sources", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "scripts/check_frozen_sources.py"], "returncode": 0, "wall": 0.18764980000014475}
+{"name": "ruff-lint", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "ruff", "check", "."], "returncode": 0, "wall": 0.2161020000003191}
+{"name": "ruff-format", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "ruff", "format", "--check", "src", "tests", "scripts"], "returncode": 0, "wall": 0.09373900000173307}
+{"name": "dependencies", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "pip", "check"], "returncode": 0, "wall": 2.533178699999553}
+{"name": "diff-check", "command": ["git", "diff", "--check"], "returncode": 0, "wall": 0.04628980000052252}

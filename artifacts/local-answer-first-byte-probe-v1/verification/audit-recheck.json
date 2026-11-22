@@ -1,0 +1,812 @@
+{
+  "auditor_training_or_forward_or_generation": false,
+  "cells": {
+    "601-ordinary": {
+      "expected_ranks": [
+        1
+      ],
+      "first_matches": 32,
+      "near_tied_decisions": 0,
+      "records": 32,
+      "signed_gold_vs_best_other_max": 6.374795436859131,
+      "signed_gold_vs_best_other_min": 3.9696178436279297,
+      "wrong": 0,
+      "wrong_gold_prob_max": null,
+      "wrong_gold_prob_min": null
+    },
+    "601-recurrent": {
+      "expected_ranks": [
+        1
+      ],
+      "first_matches": 32,
+      "near_tied_decisions": 0,
+      "records": 32,
+      "signed_gold_vs_best_other_max": 7.221269607543945,
+      "signed_gold_vs_best_other_min": 3.4885973930358887,
+      "wrong": 0,
+      "wrong_gold_prob_max": null,
+      "wrong_gold_prob_min": null
+    },
+    "947-ordinary": {
+      "expected_ranks": [
+        1,
+        2
+      ],
+      "first_matches": 16,
+      "near_tied_decisions": 0,
+      "records": 32,
+      "signed_gold_vs_best_other_max": 1.0861034393310547,
+      "signed_gold_vs_best_other_min": -1.0351934432983398,
+      "wrong": 16,
+      "wrong_gold_prob_max": 0.43618636866522725,
+      "wrong_gold_prob_min": 0.25758180615182596
+    },
+    "947-recurrent": {
+      "expected_ranks": [
+        1
+      ],
+      "first_matches": 32,
+      "near_tied_decisions": 0,
+      "records": 32,
+      "signed_gold_vs_best_other_max": 6.804997444152832,
+      "signed_gold_vs_best_other_min": 3.0293846130371094,
+      "wrong": 0,
+      "wrong_gold_prob_max": null,
+      "wrong_gold_prob_min": null
+    }
+  },
+  "complete_execution_cost": {
+    "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+    "active_processes": 0,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-B",
+      "scripts/first_byte_probe.py",
+      "run"
+    ],
+    "complete_process_lifetimes": true,
+    "cpu": 30.1875,
+    "error": null,
+    "failure": null,
+    "kernel_cpu": 7.15625,
+    "max_monitor_gap": 0.14178739999988466,
+    "observer_cpu_to_receipt": 3.0625,
+    "peak_disk": 2378294,
+    "peak_private": 696156160,
+    "returncode": 0,
+    "root_pid": 16772,
+    "status": "PASS",
+    "terminated_processes": 0,
+    "total_processes": 52,
+    "user_cpu": 23.03125,
+    "wall": 44.73427499999889
+  },
+  "complete_preparation_controller_cost": {
+    "cpu": 3.671875,
+    "wall": 1.8396907999976975
+  },
+  "contracts_cost": {
+    "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+    "active_processes": 0,
+    "command": [
+      "D:\\Toruk\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_first_byte_probe.py",
+      "-o",
+      "cache_dir=D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\pytest-cache",
+      "--basetemp",
+      "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\pytest-tmp"
+    ],
+    "complete_process_lifetimes": true,
+    "cpu": 0.40625,
+    "error": null,
+    "failure": null,
+    "kernel_cpu": 0.0625,
+    "max_monitor_gap": 0.051376400000663125,
+    "observer_cpu_to_receipt": 0.0,
+    "peak_disk": 7381,
+    "peak_private": 36757504,
+    "returncode": 0,
+    "root_pid": 16400,
+    "status": "PASS",
+    "terminated_processes": 0,
+    "total_processes": 3,
+    "user_cpu": 0.34375,
+    "wall": 0.8742044999999052
+  },
+  "development_evaluated": false,
+  "failures": [
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9935811053848773,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.262449264526367
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9689625593229255,
+          "rank": 1,
+          "signed_gold_vs_best_other": 3.9436893463134766
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9204568058118523,
+          "rank": 1,
+          "signed_gold_vs_best_other": 3.613377094268799
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.3792229949267745,
+      "id": "train-004",
+      "predicted_id": 111,
+      "predicted_probability_eligible": 0.6009906337480185,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.46045494079589844
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9935811053848773,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.262449264526367
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.968589917600973,
+          "rank": 1,
+          "signed_gold_vs_best_other": 3.93815279006958
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9453551962531312,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.351759910583496
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.3792229949267745,
+      "id": "train-005",
+      "predicted_id": 111,
+      "predicted_probability_eligible": 0.6009906337480185,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.46045494079589844
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.984614032880698,
+          "rank": 1,
+          "signed_gold_vs_best_other": 5.7906270027160645
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9794909887462163,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.738673686981201
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9859743452225137,
+          "rank": 1,
+          "signed_gold_vs_best_other": 5.2932844161987305
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.3460950664137879,
+      "id": "train-006",
+      "predicted_id": 111,
+      "predicted_probability_eligible": 0.6252924748725169,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.5915060043334961
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.984614032880698,
+          "rank": 1,
+          "signed_gold_vs_best_other": 5.7906270027160645
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9747873616603888,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.59280252456665
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9769775144421879,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.848364353179932
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.3460950664137879,
+      "id": "train-007",
+      "predicted_id": 111,
+      "predicted_probability_eligible": 0.6252924748725169,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.5915060043334961
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9891139132270407,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.84511661529541
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9940961305410504,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.29578971862793
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9955503425107618,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.426854133605957
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.3935284947144768,
+      "id": "train-024",
+      "predicted_id": 118,
+      "predicted_probability_eligible": 0.5678500945614064,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.36670398712158203
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9891139132270407,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.84511661529541
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9942653271316745,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.27902889251709
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9955136100771269,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.4779181480407715
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.3935284947144768,
+      "id": "train-025",
+      "predicted_id": 118,
+      "predicted_probability_eligible": 0.5678500945614064,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.36670398712158203
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9866725595308224,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.986749172210693
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9961780233826463,
+          "rank": 1,
+          "signed_gold_vs_best_other": 7.041952610015869
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.996523183313416,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.804997444152832
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.43618636866522725,
+      "id": "train-026",
+      "predicted_id": 118,
+      "predicted_probability_eligible": 0.5379257806333139,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.20965099334716797
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9866725595308224,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.986749172210693
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9960489034346591,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.9263224601745605
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9964458785688453,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.726317405700684
+        }
+      },
+      "expected_id": 112,
+      "expected_probability_eligible": 0.43618636866522725,
+      "id": "train-027",
+      "predicted_id": 118,
+      "predicted_probability_eligible": 0.5379257806333139,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.20965099334716797
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9735576013152968,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.21866512298584
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9622708845782875,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.366663932800293
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9579444206698225,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.120076656341553
+        }
+      },
+      "expected_id": 118,
+      "expected_probability_eligible": 0.25758180615182596,
+      "id": "train-048",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.725260431882553,
+      "rank": 2,
+      "signed_gold_vs_best_other": -1.0351934432983398
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9735576013152968,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.21866512298584
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9620267048428247,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.303305149078369
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9569276094207282,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.077818870544434
+        }
+      },
+      "expected_id": 118,
+      "expected_probability_eligible": 0.25758180615182596,
+      "id": "train-049",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.725260431882553,
+      "rank": 2,
+      "signed_gold_vs_best_other": -1.0351934432983398
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9635973273629268,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.046977519989014
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9851569081457157,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.907777309417725
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9820400894132747,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.8412322998046875
+        }
+      },
+      "expected_id": 118,
+      "expected_probability_eligible": 0.3306954261788181,
+      "id": "train-050",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.6535379985944642,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.6812028884887695
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9635973273629268,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.046977519989014
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9850293887604277,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.843440532684326
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.980298471809789,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.7783026695251465
+        }
+      },
+      "expected_id": 118,
+      "expected_probability_eligible": 0.3306954261788181,
+      "id": "train-051",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.6535379985944642,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.6812028884887695
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9739851809022156,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.413605690002441
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9750985632970943,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.2606306076049805
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9905616826480327,
+          "rank": 1,
+          "signed_gold_vs_best_other": 5.307486534118652
+        }
+      },
+      "expected_id": 111,
+      "expected_probability_eligible": 0.37593387462633515,
+      "id": "train-076",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.6000415040425015,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.46758556365966797
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.9739851809022156,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.413605690002441
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9747923267143423,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.237102031707764
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.990423811980817,
+          "rank": 1,
+          "signed_gold_vs_best_other": 5.312191963195801
+        }
+      },
+      "expected_id": 111,
+      "expected_probability_eligible": 0.37593387462633515,
+      "id": "train-077",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.6000415040425015,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.46758556365966797
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.995014843969448,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.374795436859131
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9863192621753122,
+          "rank": 1,
+          "signed_gold_vs_best_other": 4.994902610778809
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9556872955064377,
+          "rank": 1,
+          "signed_gold_vs_best_other": 3.6779837608337402
+        }
+      },
+      "expected_id": 111,
+      "expected_probability_eligible": 0.35899039343766626,
+      "id": "train-078",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.6278823854553035,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.5590572357177734
+    },
+    {
+      "controls": {
+        "601-ordinary": {
+          "expected_probability_eligible": 0.995014843969448,
+          "rank": 1,
+          "signed_gold_vs_best_other": 6.374795436859131
+        },
+        "601-recurrent": {
+          "expected_probability_eligible": 0.9861618614269784,
+          "rank": 1,
+          "signed_gold_vs_best_other": 5.003296375274658
+        },
+        "947-recurrent": {
+          "expected_probability_eligible": 0.9560852627204948,
+          "rank": 1,
+          "signed_gold_vs_best_other": 3.7000632286071777
+        }
+      },
+      "expected_id": 111,
+      "expected_probability_eligible": 0.35899039343766626,
+      "id": "train-079",
+      "predicted_id": 119,
+      "predicted_probability_eligible": 0.6278823854553035,
+      "rank": 2,
+      "signed_gold_vs_best_other": -0.5590572357177734
+    }
+  ],
+  "max_first_ce_reconstruction_difference": 1.0702192305700464e-06,
+  "max_old_suffix_loss_sum_difference": 7.031485438346863e-08,
+  "max_parity_difference": 5.9604644775390625e-06,
+  "max_request_cost": {
+    "cpu": 0.015625,
+    "wall": 0.3969317000010051
+  },
+  "original_training_gate": false,
+  "parity_checks": 128,
+  "prefix_records": 132,
+  "records": 260,
+  "registration_sha256": "b244089a172bf7933fe53ee1558b2e8ac1c393c03e837e22e884dee052863213",
+  "replay_checks": 4,
+  "stage_costs": {
+    "prefix-601-ordinary": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\prefix-601-ordinary",
+        "--phase",
+        "prefix",
+        "--cell",
+        "601-ordinary"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.890625,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.78125,
+      "max_monitor_gap": 0.13325820000136446,
+      "observer_cpu_to_receipt": 1.015625,
+      "peak_disk": 587599,
+      "peak_private": 673177600,
+      "returncode": 0,
+      "root_pid": 19776,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 3.109375,
+      "wall": 15.51389399999971
+    },
+    "prefix-601-recurrent": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\prefix-601-recurrent",
+        "--phase",
+        "prefix",
+        "--cell",
+        "601-recurrent"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.171875,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.453125,
+      "max_monitor_gap": 0.0551670999993803,
+      "observer_cpu_to_receipt": 0.234375,
+      "peak_disk": 811742,
+      "peak_private": 672915456,
+      "returncode": 0,
+      "root_pid": 15960,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 2.71875,
+      "wall": 4.124835100001292
+    },
+    "prefix-947-ordinary": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\prefix-947-ordinary",
+        "--phase",
+        "prefix",
+        "--cell",
+        "947-ordinary"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.375,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.59375,
+      "max_monitor_gap": 0.05578330000025744,
+      "observer_cpu_to_receipt": 0.21875,
+      "peak_disk": 1256277,
+      "peak_private": 673988608,
+      "returncode": 0,
+      "root_pid": 25236,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 2.78125,
+      "wall": 3.9078198000006523
+    },
+    "prefix-947-recurrent": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\prefix-947-recurrent",
+        "--phase",
+        "prefix",
+        "--cell",
+        "947-recurrent"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.296875,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.6875,
+      "max_monitor_gap": 0.06366970000090078,
+      "observer_cpu_to_receipt": 0.25,
+      "peak_disk": 1035134,
+      "peak_private": 672124928,
+      "returncode": 0,
+      "root_pid": 13336,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 2.609375,
+      "wall": 3.885466499999893
+    },
+    "teacher-601-ordinary": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\teacher-601-ordinary",
+        "--phase",
+        "teacher",
+        "--cell",
+        "601-ordinary"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.265625,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.75,
+      "max_monitor_gap": 0.05581300000085321,
+      "observer_cpu_to_receipt": 0.21875,
+      "peak_disk": 1484693,
+      "peak_private": 673497088,
+      "returncode": 0,
+      "root_pid": 15744,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 2.515625,
+      "wall": 3.9065786999999546
+    },
+    "teacher-601-recurrent": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\teacher-601-recurrent",
+        "--phase",
+        "teacher",
+        "--cell",
+        "601-recurrent"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.15625,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.59375,
+      "max_monitor_gap": 0.05587279999963357,
+      "observer_cpu_to_receipt": 0.3125,
+      "peak_disk": 1711931,
+      "peak_private": 673792000,
+      "returncode": 0,
+      "root_pid": 10836,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 2.5625,
+      "wall": 3.8662927000004856
+    },
+    "teacher-947-ordinary": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\teacher-947-ordinary",
+        "--phase",
+        "teacher",
+        "--cell",
+        "947-ordinary"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.15625,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.421875,
+      "max_monitor_gap": 0.057446900000286405,
+      "observer_cpu_to_receipt": 0.390625,
+      "peak_disk": 2164810,
+      "peak_private": 673243136,
+      "returncode": 0,
+      "root_pid": 8944,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 2.734375,
+      "wall": 3.853940099999818
+    },
+    "teacher-947-recurrent": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\first_byte_probe.py",
+        "worker",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-first-byte-probe-v1\\stages\\teacher-947-recurrent",
+        "--phase",
+        "teacher",
+        "--cell",
+        "947-recurrent"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.203125,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.578125,
+      "max_monitor_gap": 0.05707240000083402,
+      "observer_cpu_to_receipt": 0.234375,
+      "peak_disk": 1939736,
+      "peak_private": 673230848,
+      "returncode": 0,
+      "root_pid": 24968,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 5,
+      "user_cpu": 2.625,
+      "wall": 3.8357572999993863
+    }
+  },
+  "status": "PASS",
+  "teacher_records": 128
+}
