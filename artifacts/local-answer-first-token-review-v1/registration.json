@@ -1,0 +1,37 @@
+{
+  "branch": "main",
+  "date": "2026-11-22",
+  "diagnosis_commit": "743c29ff1b1dc5c86b81de48888a4753860ef0f8",
+  "head": "56af6eddf1467e52bd6e248b196b81f40d99b183",
+  "inputs": {
+    "artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt": "0c6fb762abd5448e1222e617fa7902eaa2e179aa4cc72b02bcf3c44ee0bcd183",
+    "artifacts/local-answer-dev-v1/stages/train-601-recurrent/checkpoint.pt": "d3fce91dba46a01eae87675cf68807967a0561120975f5dbad71c3c5a5ee7e62",
+    "artifacts/local-answer-dev-v1/stages/train-947-ordinary/checkpoint.pt": "ae8a6eb269473f8d4d8b7dc47f9bbcb28fd9b888aa52269762635c85dbdbafd8",
+    "artifacts/local-answer-dev-v1/stages/train-947-recurrent/checkpoint.pt": "9de9dc4cfa3701f7cd48cc33160a6cd08e78e07bb4ea05c341b78453e1ab5bd4",
+    "artifacts/local-answer-first-byte-probe-v1/inventory.json": "81567f195ce2a906c6697a1dfc4fdcdc3b6ba608dc8c70e3b8d88d20c4052360",
+    "artifacts/local-answer-first-byte-probe-v1/registration.json": "b244089a172bf7933fe53ee1558b2e8ac1c393c03e837e22e884dee052863213",
+    "artifacts/local-answer-first-byte-v1/inventory.json": "b546652f2788c4102b834a152c9f9024492d029c44ddb2ccd9da6883af941b65"
+  },
+  "kind": "post-hoc saved-vector derivation; zero new inference",
+  "new_forward_passes": 0,
+  "new_generated_answers": 0,
+  "new_training_updates": 0,
+  "observed_error_reference": "archived ordinary947 first ID, only when different from gold",
+  "origin_main": "56af6eddf1467e52bd6e248b196b81f40d99b183",
+  "origin_main_vs_head": "0\t0",
+  "original_probe_caps": {
+    "cpu": 200,
+    "memory": 2147483648,
+    "wall": 200
+  },
+  "probe_commit": "56af6eddf1467e52bd6e248b196b81f40d99b183",
+  "probe_registration_sha256": "b244089a172bf7933fe53ee1558b2e8ac1c393c03e837e22e884dee052863213",
+  "records": 260,
+  "sources": {
+    "docs/research/local-answer-first-token-review-v1-protocol.md": "db967f7ac826b7e8536742222db1d634ab02d200f5b906b8bc49de502ab55df6",
+    "docs/research/local-answer-paired-batch-v1-proposal.md": "fdf4af4cd2fa08cfe93685c9a41885facd21ac4f5faf57b3ca5ab7a23866c510",
+    "scripts/audit_first_token_margins.py": "556e3c3e977734c6d76c25e69cdf7af3f1e33d9f2584e9d393650d56886f2342",
+    "tests/test_first_token_margin_review.py": "86be3ce09f122e2c0ecdd71a009f042becdee0abecd7137c71921173f8734e90"
+  },
+  "version": "local-answer-first-token-review-v1"
+}
