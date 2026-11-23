@@ -1,0 +1,85 @@
+{
+  "caps": {
+    "analyze": 20,
+    "contracts": 30,
+    "development": 20,
+    "disk": 134217728,
+    "fit": 60,
+    "memory": 2147483648,
+    "overall": 1500,
+    "rehearsal": 30,
+    "request": 2
+  },
+  "format": "toruk-local-answer-paired-batch-dev-v1",
+  "order": [
+    [
+      601,
+      "ordinary",
+      "original"
+    ],
+    [
+      601,
+      "ordinary",
+      "city-shuffled"
+    ],
+    [
+      601,
+      "ordinary",
+      "city-paired"
+    ],
+    [
+      601,
+      "recurrent",
+      "city-paired"
+    ],
+    [
+      601,
+      "recurrent",
+      "city-shuffled"
+    ],
+    [
+      601,
+      "recurrent",
+      "original"
+    ],
+    [
+      947,
+      "recurrent",
+      "original"
+    ],
+    [
+      947,
+      "recurrent",
+      "city-shuffled"
+    ],
+    [
+      947,
+      "recurrent",
+      "city-paired"
+    ],
+    [
+      947,
+      "ordinary",
+      "city-paired"
+    ],
+    [
+      947,
+      "ordinary",
+      "city-shuffled"
+    ],
+    [
+      947,
+      "ordinary",
+      "original"
+    ]
+  ],
+  "plan_sha256": "eef73d3f728782319d8103f1ab1b7e3f2cf60199ef9268348f3f57a0a95a7fd3",
+  "prerequisites": {
+    "preparation/contracts/contracts-result.json": "eb25c496da6ed2929e929b94f9c340edabde5b0f110b23a59700bccf086c6a76",
+    "preparation/contracts/cost.json": "bb4fb0c1adc3e17652e5a2702fcc1af77d3ce33abc45eefffbac76d4b94de0b0",
+    "preparation/rehearsal/controller-final.json": "ed8b79cac9b3435aae0baa56fed9d889e3538039b0faabe7a065e53fd9a2a114",
+    "preparation/rehearsal/cost.json": "e018439c382e350c854b9a0408dcecd943e31c9868f16852359624d0cf753641",
+    "preparation/rehearsal/rehearsal.json": "e7c0b752341e9ab830b2343d1521716e886f92a6d2207a016905767160d230db"
+  },
+  "status": "FROZEN_BEFORE_ANY_STUDY_UPDATE_OR_ANSWER"
+}

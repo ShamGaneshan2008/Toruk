@@ -1,0 +1,184 @@
+{
+  "status": "CHECKS_COMPLETE_WITH_REGISTERED_SEAL_FAILURE",
+  "registered_integrity_gate_passed": false,
+  "all_check_expectations_met": true,
+  "commands": [
+    {
+      "name": "registered-auditor",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/paired_batch_dev.py",
+        "audit"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "matched_expectation": true,
+      "classification": "EXPECTED_FAILURE_PRESERVED"
+    },
+    {
+      "name": "independent-saved-observations",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "D:\\Toruk\\artifacts\\local-answer-paired-batch-dev-v1\\verify_saved.py",
+        "--output",
+        "D:\\Toruk\\artifacts\\local-answer-paired-batch-dev-v1\\independent-audit.json"
+      ],
+      "returncode": 2,
+      "expected_returncode": 2,
+      "matched_expectation": true,
+      "classification": "EXPECTED_FAILURE_PRESERVED"
+    },
+    {
+      "name": "old-first-token-margins",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/audit_first_token_margins.py",
+        "audit"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "old-first-token-report",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "artifacts/local-answer-first-token-review-v1/verify_report.py"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "frozen-sources",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/check_frozen_sources.py"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "preserved-handoff",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "artifacts/checkpoint-handoff-v1-20261123/verify_handoff.py",
+        "verify",
+        "--bundle",
+        "artifacts/checkpoint-handoff-v1-20261123/toruk-checkpoints-v1.zip",
+        "--expected-sha256",
+        "b6e336cb004f3334a244101b6d3a102ccee3da6e3106fa447c565b2e6d731300"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "repository-lint",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "repository-format",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "dependencies",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "unstaged-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "staged-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "matched_expectation": true,
+      "classification": "PASS"
+    },
+    {
+      "name": "older-portable-verifier",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/verify_portable_research_evidence.py",
+        "verify"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "matched_expectation": true,
+      "classification": "EXPECTED_FAILURE_PRESERVED"
+    }
+  ],
+  "new_model_forwards": 0,
+  "new_generated_answers": 0,
+  "prior_focused_tests": "18 passed inside preparation/contracts; no new fitting tests",
+  "known_old_portable_failure": ".gitattributes historical dependency drift",
+  "known_new_failure": "twelve observation seals bind a prefix of a growing resources.jsonl"
+}

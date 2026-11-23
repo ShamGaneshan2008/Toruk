@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\Toruk\scripts\paired_batch_dev.py", line 1099, in <module>
+    main()
+  File "D:\Toruk\scripts\paired_batch_dev.py", line 1072, in main
+    print(json.dumps(audit(), indent=2))
+                     ^^^^^^^
+  File "D:\Toruk\scripts\paired_batch_dev.py", line 1010, in audit
+    require(sha(directory / name) == expected, "observation seal")
+  File "D:\Toruk\scripts\paired_batch_dev.py", line 87, in require
+    raise ValueError(message)
+ValueError: observation seal
