@@ -1,0 +1,26 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "import subprocess,sys; subprocess.Popen([sys.executable,'-c','import time; t=time.process_time();\\nwhile time.process_time()-t<0.2: pass'])"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 0.265625,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.1875,
+  "max_monitor_gap": 0.4007667000005313,
+  "observer_cpu_to_receipt": 0.0,
+  "peak_disk": 150,
+  "peak_private": 10432512,
+  "returncode": 0,
+  "root_pid": 3224,
+  "status": "PASS",
+  "terminated_processes": 0,
+  "total_processes": 5,
+  "user_cpu": 0.078125,
+  "wall": 0.406858999999713
+}

@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "base_evidence_commit": "392e002caa203d17a837fde7e759187e59a81301",
+  "checks": [
+    {
+      "check": "mypy",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "mypy",
+        "--follow-imports=silent",
+        "--cache-dir",
+        "D:\\Toruk\\artifacts\\local-answer-monitor-sealing-v2-20261123\\mypy-cache-review-002",
+        "scripts/lifetime_job_v2.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "check": "ruff-lint",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "returncode": 0
+    },
+    {
+      "check": "ruff-format",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "returncode": 0
+    },
+    {
+      "check": "staged-whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0
+    },
+    {
+      "check": "retest-seal",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/lifetime_job_v2.py",
+        "verify",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-monitor-sealing-v2-20261123\\tests-execution-002",
+        "--expected-seal-sha256",
+        "996a74cfd4dada2201bef85c6c9cb41ebaa6deed612652dd77637827a81e4f00"
+      ],
+      "returncode": 0
+    },
+    {
+      "check": "prior-check-seal",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/lifetime_job_v2.py",
+        "verify",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-monitor-sealing-v2-20261123\\checks-execution-001",
+        "--expected-seal-sha256",
+        "84769890bd0d05fd6c4d02e6700d47b475a9e72e79ae53e74a60f1d4ef5633f0"
+      ],
+      "returncode": 0
+    }
+  ],
+  "disposable_tests": {
+    "count": 24,
+    "result": "24 passed in 6.20s",
+    "command": [
+      "D:\\Toruk\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "tests/test_lifetime_job_v2.py",
+      "tests/test_lifetime_job.py",
+      "--basetemp",
+      "artifacts/local-answer-monitor-sealing-v2-20261123/pytest-tmp-002"
+    ]
+  },
+  "original_paired_batch_files_unchanged": 337,
+  "prior_v2_inventory_files_unchanged": 130,
+  "original_v1_seals_or_gates_modified": false,
+  "paired_batch_v1_executed": false,
+  "model_fit_or_checkpoint_loading": false,
+  "heldout_data_access": false,
+  "push": false,
+  "lifecycle_review": {
+    "seal_after_watch_returns": true,
+    "watch_closes_descendants_and_streams_before_final_cost": true,
+    "final_cost_written_before_seal": true,
+    "premature_workload_pass_failure_path_found": false,
+    "incomplete_lifetimes_or_receipts_rejected": true,
+    "stopped_workloads_remain_stop": true,
+    "seal_publication_failure_retains_records_and_rejects_verification": true,
+    "assumptions": "Execution API and observer-owned output directory; fabricated receipts or unrelated writers are outside the contract."
+  }
+}

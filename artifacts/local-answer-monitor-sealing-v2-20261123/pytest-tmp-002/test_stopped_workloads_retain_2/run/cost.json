@@ -1,0 +1,26 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "from pathlib import Path; Path('D:\\\\Toruk\\\\artifacts\\\\local-answer-monitor-sealing-v2-20261123\\\\pytest-tmp-002\\\\test_stopped_workloads_retain_2\\\\run\\\\partial.txt').write_text('partial'); import subprocess,sys,time,os; print('before stop',flush=True); sys.exit(7)"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 0.0625,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.03125,
+  "max_monitor_gap": 0.05119550000017625,
+  "observer_cpu_to_receipt": 0.0,
+  "peak_disk": 326,
+  "peak_private": 9883648,
+  "returncode": 7,
+  "root_pid": 14792,
+  "status": "STOP",
+  "terminated_processes": 0,
+  "total_processes": 3,
+  "user_cpu": 0.03125,
+  "wall": 0.10830970000006346
+}

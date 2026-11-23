@@ -1,0 +1,26 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "import subprocess,sys,time; subprocess.Popen([sys.executable,'-c','import time; time.sleep(10)']); time.sleep(10)"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 0.0625,
+  "error": "KeyboardInterrupt('deterministic observer-interruption test')",
+  "failure": "observer interrupted",
+  "kernel_cpu": 0.0625,
+  "max_monitor_gap": 0.050907200000438024,
+  "observer_cpu_to_receipt": 0.0,
+  "peak_disk": 775,
+  "peak_private": 16400384,
+  "returncode": 130,
+  "root_pid": 24040,
+  "status": "STOP",
+  "terminated_processes": 0,
+  "total_processes": 5,
+  "user_cpu": 0.0,
+  "wall": 0.2567104999998264
+}

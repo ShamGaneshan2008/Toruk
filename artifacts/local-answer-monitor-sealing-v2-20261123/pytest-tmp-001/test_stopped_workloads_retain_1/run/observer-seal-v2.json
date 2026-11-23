@@ -1,0 +1,28 @@
+{
+  "active_processes": 0,
+  "complete_process_lifetimes": true,
+  "files": {
+    "cost.json": {
+      "bytes": 1064,
+      "sha256": "d61c151c812b62f14d41835645637b0b887b617102d7d98599b832afb3cb99d9"
+    },
+    "output.log": {
+      "bytes": 13,
+      "sha256": "fda93237b2303f88abc416eff0b1d6fa0262a8312a0f2e91c4e9a5bb5340e651"
+    },
+    "partial.txt": {
+      "bytes": 7,
+      "sha256": "9834a14ab9bcaa0f6a8da71073617eac8f004e596a3fa11d807b84631b825d9d"
+    },
+    "resources.jsonl": {
+      "bytes": 1721,
+      "sha256": "ecd40ddec5dd7788afe263cb3c37f3e90b3dc1507128ac66096f29edc630813e"
+    }
+  },
+  "final_receipt": "cost.json",
+  "final_receipt_sha256": "d61c151c812b62f14d41835645637b0b887b617102d7d98599b832afb3cb99d9",
+  "note": "A valid STOP snapshot certifies retained bytes, not workload success.",
+  "publication": "observer only, after watch returned and all output handles closed",
+  "schema": "toruk-observer-owned-seal-v2",
+  "workload_status": "STOP"
+}

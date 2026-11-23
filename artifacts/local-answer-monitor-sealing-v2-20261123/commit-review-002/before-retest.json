@@ -1,0 +1,33 @@
+{
+  "base_commit": "392e002caa203d17a837fde7e759187e59a81301",
+  "limitations": [
+    "Output directories and final receipts must be observer-owned; unrelated external writers are outside the contract.",
+    "Raw seal bytes from an interrupted publication are not a successful verified seal."
+  ],
+  "no_models": true,
+  "no_v1_execution": true,
+  "phase": "before requested retest",
+  "reviewed_prior_inventory_files": 130,
+  "reviewed_source_hashes": {
+    "docs/research/monitor-sealing-v2.md": {
+      "bytes": 5270,
+      "sha256": "ad577b153507876eb0e59874306314a0039f68b0d14973b1f5d50ff0c892f008"
+    },
+    "scripts/lifetime_job_v2.py": {
+      "bytes": 10600,
+      "sha256": "4070eab1862aa8d48310129bf69761bfa173412378e21b8fbe94f67b404f794e"
+    },
+    "tests/test_lifetime_job_v2.py": {
+      "bytes": 10149,
+      "sha256": "8d662942abbee8266fec9db59ad6938543294081b7eb024beb57f27f4fd3d498"
+    }
+  },
+  "schema": "monitor-sealing-v2-commit-review",
+  "shutdown_review": [
+    "watch_and_seal calls watch synchronously before sealing.",
+    "watch drains descendants, closes output/monitor streams and process/Job handles, then writes/closes cost.json.",
+    "v2 requires complete lifetimes, zero active processes and a matching final receipt.",
+    "STOP workloads remain STOP. Missing receipts or interrupted publication cannot return a successful result."
+  ],
+  "source_changes_required": false
+}
