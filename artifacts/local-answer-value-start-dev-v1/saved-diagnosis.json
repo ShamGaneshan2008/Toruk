@@ -1,0 +1,552 @@
+{
+  "cells": {
+    "601-ordinary-city-paired": {
+      "checkpoint_bytes": 197813,
+      "checkpoint_sha256": "f2e571ec2892e190268a027e91a560a9fab6c655c3764767623acba05127a555",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "53650de74f77209ac6cf8abfc1d906ac1d78da46ebfda4ff87bc10387e494810",
+      "initial_hash": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+      "late_answer_nll": 0.008609955240467862,
+      "malformed": 0,
+      "mean_city_first_ce": 0.01741604714575146,
+      "parameter_count": 14058,
+      "parameter_l2": 74.81260193739332,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "601-ordinary-city-shuffled": {
+      "checkpoint_bytes": 197813,
+      "checkpoint_sha256": "5845bb43e52106b48997dd14611ea55d4687f2bed3d03d34a5b9afb2444553bb",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "b9acee6f4dc5fc46f7f4bcc7adba997e6e83b54d89842cba930f58d721fb98cd",
+      "initial_hash": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+      "late_answer_nll": 0.008956358590806191,
+      "malformed": 0,
+      "mean_city_first_ce": 0.01855573709539855,
+      "parameter_count": 14058,
+      "parameter_l2": 74.7634647305327,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "601-ordinary-original": {
+      "checkpoint_bytes": 197813,
+      "checkpoint_sha256": "8e14585e647f83a11d9bfaf8f7f330b03b36e329d15317ceef558c72702d8816",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "90738e1c8950ca2fa9fb8021b6c1cba491092c1c4072f2cd094e965892821a0a",
+      "initial_hash": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+      "late_answer_nll": 0.007565372347515683,
+      "malformed": 0,
+      "mean_city_first_ce": 0.01731109007711899,
+      "parameter_count": 14058,
+      "parameter_l2": 74.844046540709,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "601-recurrent-city-paired": {
+      "checkpoint_bytes": 216774,
+      "checkpoint_sha256": "e7645fba88dc8b90a8cd1799a7e0ae26bf5fad11a88a37ce25cde39311c4250a",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "a39445c62c5b8c4157e7cdcadbc76991172a2da7a6fe448548a1879e34990485",
+      "initial_hash": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+      "late_answer_nll": 0.00924875721380406,
+      "malformed": 0,
+      "mean_city_first_ce": 0.014142600978732947,
+      "parameter_count": 14416,
+      "parameter_l2": 72.46510360980034,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "601-recurrent-city-shuffled": {
+      "checkpoint_bytes": 216774,
+      "checkpoint_sha256": "c397d249d3b53c28f7d5f74451ac871c80633e15b765622deb770ce7e4ec969a",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "f14af5b5e8139a021b0d866eb00219d4d94a4bd313b7f67611851673e40aa61e",
+      "initial_hash": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+      "late_answer_nll": 0.01197699849995929,
+      "malformed": 0,
+      "mean_city_first_ce": 0.018088076608527414,
+      "parameter_count": 14416,
+      "parameter_l2": 73.37171439907452,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "601-recurrent-original": {
+      "checkpoint_bytes": 216774,
+      "checkpoint_sha256": "fb458d36891216e6a69c485060b9d63e5605fbce28fdf28e45da8b2f3518b8cc",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "a91c4729de926351d150cfaebab771336c2041095d20db42748cac0a032ead14",
+      "initial_hash": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+      "late_answer_nll": 0.012321344929089635,
+      "malformed": 0,
+      "mean_city_first_ce": 0.017808931102565595,
+      "parameter_count": 14416,
+      "parameter_l2": 73.96613535660853,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "947-ordinary-city-paired": {
+      "checkpoint_bytes": 197877,
+      "checkpoint_sha256": "1f15605e9af7414e71d2ce1f6f9748991dacd4441254846dc864700980fcb83f",
+      "eos": 96,
+      "exact": 90,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 6
+        }
+      },
+      "final_tensor_hash": "58122c574c44de9ff590745620bbff60d6d103e40db51bf1f22fbff30b7cdd96",
+      "initial_hash": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+      "late_answer_nll": 0.042607375513000964,
+      "malformed": 0,
+      "mean_city_first_ce": 0.388521969848941,
+      "parameter_count": 14058,
+      "parameter_l2": 75.21565179563638,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 6,
+      "wrong_ids": [
+        "train-052",
+        "train-053",
+        "train-054",
+        "train-055",
+        "train-072",
+        "train-073"
+      ],
+      "wrong_margin_range": [
+        -0.49530029296875,
+        -0.07741546630859375
+      ]
+    },
+    "947-ordinary-city-shuffled": {
+      "checkpoint_bytes": 197877,
+      "checkpoint_sha256": "8f184c392099c95e2df71c67cab7aa61c82d433108edd64cd0449068ac3edba0",
+      "eos": 96,
+      "exact": 92,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 4
+        }
+      },
+      "final_tensor_hash": "7074a03c9efeaa09ff3067d1cde4d3bee6e16ab1786e3d0286e311f689b01bf4",
+      "initial_hash": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+      "late_answer_nll": 0.04683212177388916,
+      "malformed": 0,
+      "mean_city_first_ce": 0.26357114700065293,
+      "parameter_count": 14058,
+      "parameter_l2": 75.11514177527638,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 4,
+      "wrong_ids": [
+        "train-052",
+        "train-053",
+        "train-054",
+        "train-055"
+      ],
+      "wrong_margin_range": [
+        -0.11412239074707031,
+        -0.10675430297851562
+      ]
+    },
+    "947-ordinary-original": {
+      "checkpoint_bytes": 197877,
+      "checkpoint_sha256": "8e5a59fac10996c659ee2c0adbad1f8bb3d0485ee4824745091bc6fcf04af308",
+      "eos": 96,
+      "exact": 80,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 4
+        },
+        "m": {
+          "count": 8,
+          "errors": 8
+        },
+        "s": {
+          "count": 8,
+          "errors": 4
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "f056755a7af031f350b3610cc472475e7d96d670a3f52780781ea1aeb4d268ff",
+      "initial_hash": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+      "late_answer_nll": 0.0975717627780897,
+      "malformed": 4,
+      "mean_city_first_ce": 0.7625054636974546,
+      "parameter_count": 14058,
+      "parameter_l2": 75.19719286084664,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 16,
+      "wrong_ids": [
+        "train-004",
+        "train-005",
+        "train-006",
+        "train-007",
+        "train-024",
+        "train-025",
+        "train-026",
+        "train-027",
+        "train-048",
+        "train-049",
+        "train-050",
+        "train-051",
+        "train-076",
+        "train-077",
+        "train-078",
+        "train-079"
+      ],
+      "wrong_margin_range": [
+        -1.035196304321289,
+        -0.20965099334716797
+      ]
+    },
+    "947-recurrent-city-paired": {
+      "checkpoint_bytes": 216838,
+      "checkpoint_sha256": "d850516356d8d6b25e5cb24627688f1a364a8b8d2a9982ffba542347b1c18415",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "cf5793279d9d7deeeba0b59456df2e1a94685bb7c136819c2caec62f0f227846",
+      "initial_hash": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+      "late_answer_nll": 0.009012999336950349,
+      "malformed": 0,
+      "mean_city_first_ce": 0.012676724510366954,
+      "parameter_count": 14416,
+      "parameter_l2": 71.77357375101329,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "947-recurrent-city-shuffled": {
+      "checkpoint_bytes": 216838,
+      "checkpoint_sha256": "4c5122cd518f04871bf10ed45edc421a70c586aef054dfcf3b36e921b9fd62c1",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "3d4152d9ae5b9f1a2803044b6894c34ee7b646a60a4ef81ec38877145294c5b3",
+      "initial_hash": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+      "late_answer_nll": 0.01323197089446301,
+      "malformed": 0,
+      "mean_city_first_ce": 0.023356332125860507,
+      "parameter_count": 14416,
+      "parameter_l2": 72.16741557302053,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    },
+    "947-recurrent-original": {
+      "checkpoint_bytes": 216838,
+      "checkpoint_sha256": "3f16cec254b9ccd0e619db21427f084fd58365b3377796c11d8f5d06f7bb910f",
+      "eos": 96,
+      "exact": 96,
+      "expected_city_first": {
+        "l": {
+          "count": 8,
+          "errors": 0
+        },
+        "m": {
+          "count": 8,
+          "errors": 0
+        },
+        "s": {
+          "count": 8,
+          "errors": 0
+        },
+        "t": {
+          "count": 8,
+          "errors": 0
+        }
+      },
+      "final_tensor_hash": "8881c433139109e416fdedc34a0131774e3f944b40344592ab78107abb740d35",
+      "initial_hash": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+      "late_answer_nll": 0.012915902057075865,
+      "malformed": 0,
+      "mean_city_first_ce": 0.03216756498383517,
+      "parameter_count": 14416,
+      "parameter_l2": 72.60261287202317,
+      "total_dense_positions": 786432,
+      "total_targets": 692224,
+      "wrong_first": 0,
+      "wrong_ids": [],
+      "wrong_margin_range": null
+    }
+  },
+  "checkpoint_bytes_modified": false,
+  "established": [
+    "Shared initialization within each seed/model and matched total exposure/work.",
+    "All old ordinary947 failures corrected by both city schedules, with four/six new t-byte regressions.",
+    "Saved failures are rank-two non-near-tied preferences, not proof of absent context or EOS failure.",
+    "All final tensors finite; optimizer progress matches 1536; no stale checkpoint identity."
+  ],
+  "heldout_inputs_accessed": false,
+  "hypothesis": "On the strongest city-shuffled schedule, first-answer-token weight16 may improve answer-value discrimination versus uniform CE.",
+  "model_construction": false,
+  "new_forward_passes": 0,
+  "new_generated_answers": 0,
+  "prior_comparisons": {
+    "city-paired": {
+      "fixed_original_failures": [
+        "train-004",
+        "train-005",
+        "train-006",
+        "train-007",
+        "train-024",
+        "train-025",
+        "train-026",
+        "train-027",
+        "train-048",
+        "train-049",
+        "train-050",
+        "train-051",
+        "train-076",
+        "train-077",
+        "train-078",
+        "train-079"
+      ],
+      "net_exact_gain": 10,
+      "regressed_original_correct": [
+        "train-052",
+        "train-053",
+        "train-054",
+        "train-055",
+        "train-072",
+        "train-073"
+      ]
+    },
+    "city-shuffled": {
+      "fixed_original_failures": [
+        "train-004",
+        "train-005",
+        "train-006",
+        "train-007",
+        "train-024",
+        "train-025",
+        "train-026",
+        "train-027",
+        "train-048",
+        "train-049",
+        "train-050",
+        "train-051",
+        "train-076",
+        "train-077",
+        "train-078",
+        "train-079"
+      ],
+      "net_exact_gain": 12,
+      "regressed_original_correct": [
+        "train-052",
+        "train-053",
+        "train-054",
+        "train-055"
+      ]
+    }
+  },
+  "rationale_limit": "Saved correlations and tensor norms do not establish a training cause.",
+  "status": "SAVED_TRAINING_EVIDENCE_VERIFIED",
+  "unknown": [
+    "Initialization versus shuffle contribution across seeds.",
+    "Why optimization selected one competing byte rather than another.",
+    "Whether additional first-answer supervision repairs all values without suffix/EOS regression.",
+    "Development generalization, which prior paired-batch training gates never opened."
+  ]
+}

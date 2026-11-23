@@ -1,0 +1,91 @@
+{
+  "caps": {
+    "development": 30,
+    "disk": 134217728,
+    "evaluate": 30,
+    "fit": 70,
+    "memory": 2147483648,
+    "overall": 1500,
+    "request": 2
+  },
+  "format": "toruk-local-answer-value-start-dev-v1",
+  "order": [
+    [
+      601,
+      "ordinary",
+      "uniform"
+    ],
+    [
+      601,
+      "ordinary",
+      "first16"
+    ],
+    [
+      601,
+      "recurrent",
+      "first16"
+    ],
+    [
+      601,
+      "recurrent",
+      "uniform"
+    ],
+    [
+      947,
+      "recurrent",
+      "uniform"
+    ],
+    [
+      947,
+      "recurrent",
+      "first16"
+    ],
+    [
+      947,
+      "ordinary",
+      "first16"
+    ],
+    [
+      947,
+      "ordinary",
+      "uniform"
+    ]
+  ],
+  "plan_sha256": "2c64a590523d4717bdd24b9d5ade925f1657bbccf6c160e097b050e8396b5e66",
+  "prerequisite_files": {
+    "diagnose_predictions_schedules.py": "9c9a24509babaceb6e83b699e6ea4c548258b7ad898ea959b7a55c2d8b325a47",
+    "diagnose_saved.py": "fdea4044fa3e5427ca5e260046dc0a759b8890d3c4b90ec4b751ae6c23d5ce5c",
+    "diagnostic-launch-guard-failure.json": "f3f3ce99086261ed196d3713e7eeafb148c513929b996c18595b97a42c35b845",
+    "phase1-readiness.json": "714ec21ba7d48e5fbc344b4ea0903a6ef849ea8d2eecb79f66a4ce26069418c9",
+    "preparation-budget-receipt.json": "6e7bd303f0d402951b90205321f76576113783396e3b30306bb99db3cdc394c9",
+    "preparation-summary.json": "4856c5f53154375ebf73a06f4d677d29109f705119316ca8c04166d7da30b386",
+    "preparation/rehearsal/rehearsal.json": "fd5c635dee6251ccf9748f3ce101db1e08bd267a5892354f37ff375cf4ab27bc",
+    "saved-diagnosis-supplement.json": "e12096342288c60481a409ea7b4ce3b8259c34e35cbb1d665067729083b49af4",
+    "saved-diagnosis.json": "d4bd1019b1e144b3a70dfe73d2129b7b021081c5eccce6fd99858806664dc926",
+    "search-scope-incident.json": "a843a0114a3fa9f7340a1dfa4ec696d143b3cf8b957bd1802dc42f0e435209f0",
+    "starting-state.json": "b6e93395e7748ed6c588ec97dd1a15c1557602db618bc44a58fad692eb453f3b"
+  },
+  "prerequisite_seals": [
+    {
+      "path": "preparation/contracts",
+      "sha256": "840f9072a4cd35cfe5b41b8f4f9d9f63356573e6e7fda669b49d4f92a8de044b"
+    },
+    {
+      "path": "preparation/rehearsal",
+      "sha256": "4468eac311b01e3b158319239201aa474721e9c81a71c7c2c04d194d09827ffe"
+    },
+    {
+      "path": "preparation/budget",
+      "sha256": "459f9856460f0a1422a5094133d6a313497055adf703f8c0e085fa3c1a24f846"
+    },
+    {
+      "path": "phase1-tests",
+      "sha256": "b2e7dbf425df4ff0c1ed7aad5d0dba4283ffa1c40d8ab77148f01e692197d0d1"
+    },
+    {
+      "path": "diagnosis-execution",
+      "sha256": "306c34e02d260a5f939d52beb960d96dfb963c96c87ff612120610dd61dfb3eb"
+    }
+  ],
+  "status": "FROZEN_BEFORE_ANY_RESEARCH_FIT_OR_ANSWER"
+}

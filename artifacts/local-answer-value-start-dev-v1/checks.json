@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "name": "ruff-lint",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "ruff-format",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "mypy",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "mypy",
+        "--follow-imports=silent",
+        "--cache-dir",
+        "D:\\Toruk\\artifacts\\local-answer-value-start-dev-v1\\preflight-mypy",
+        "scripts/value_start_dev.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "frozen-sources",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/check_frozen_sources.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "dependencies",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "staged-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0
+    }
+  ],
+  "python_type_lookup": "MYPYPATH=D:/Toruk/src",
+  "focused_tests": {
+    "disposable_process_tests": 24,
+    "new_numerical_data_gate_tests": 8,
+    "research_optimizer_updates_in_tests": 0
+  },
+  "independent_measurement_integrity": "PASS",
+  "scientific_quality_decision": "STOP_DEVELOPMENT_FAILURE",
+  "hosted_ci": "NOT_RUN: uncommitted/unpushed new study; local checks only",
+  "complete_verify_py": "NOT_RUN: installs, trains and generates unrelated research outputs",
+  "known_scope_exception": "Pre-freeze native-shell search broadened; no held-out evaluation or experimental held-out inputs, but unrelated search access cannot be certified zero.",
+  "new_model_forwards": 0,
+  "new_generated_answers": 0
+}

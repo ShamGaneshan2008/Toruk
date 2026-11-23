@@ -1,0 +1,26 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "import subprocess,sys,os; subprocess.Popen([sys.executable,'-B','-c',\"import time; from pathlib import Path; time.sleep(.25); Path('D:\\\\\\\\Toruk\\\\\\\\artifacts\\\\\\\\local-answer-value-start-dev-v1\\\\\\\\phase1-tmp\\\\\\\\test_late_descendant_log_and_p0\\\\\\\\run\\\\\\\\late.txt').write_text('late payload'); print('late stdout',flush=True)\"]); print('parent exits first',flush=True); os._exit(0)"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 0.09375,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.0625,
+  "max_monitor_gap": 0.05105749999984255,
+  "observer_cpu_to_receipt": 0.015625,
+  "peak_disk": 1289,
+  "peak_private": 10420224,
+  "returncode": 0,
+  "root_pid": 17032,
+  "status": "PASS",
+  "terminated_processes": 0,
+  "total_processes": 5,
+  "user_cpu": 0.03125,
+  "wall": 0.4131428999999116
+}

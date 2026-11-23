@@ -1,0 +1,139 @@
+{
+  "batch": 8,
+  "config": {
+    "context": 32,
+    "heads": 4,
+    "layers": 1,
+    "max_document_tokens": 64,
+    "slots": 4,
+    "width": 16
+  },
+  "data": {
+    "dev-inputs.json": "6917a36e088aa1a78ce2f0aacf16b201d66665295abf2eb489b1c26cdebb97b9",
+    "dev-labels.json": "2135c77a584863c7c5eb34afd3affb05367591b24f6d717d47bd684103a2ecca",
+    "schedules.json": "c3d1e23d1c748705db82c86cf4e6608c04e04b00d3fe325656a86fd4f6b08899",
+    "train-documents.json": "0758207a5065099eb2bbac30d3829d51e732fcb0e73f53d5d886c1e030846c1d",
+    "train-inputs.json": "26388c43aff2963a3d966e737bc549e80225a1055a3027b594857fd2dea5734e",
+    "train-labels.json": "f261020c110d69dde91998501a7b2265086f6ccde1c1c6fd7b7cf5ceca5b8850"
+  },
+  "development_gate": "each candidate exact>=22,city>=7,code>=7,unknown8,EOS24,zero malformed/repetition,known context gain>=8",
+  "format": "toruk-local-answer-value-start-dev-v1",
+  "initial_gate_reason": "control floor90 inherited from original local-answer protocol; control mastery remains96, and is reported separately",
+  "initial_hashes": {
+    "601-ordinary": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+    "601-recurrent": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+    "947-ordinary": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+    "947-recurrent": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5"
+  },
+  "intervention": "first answer byte weight16; every other byte/EOS weight1",
+  "max_caps": {
+    "contracts": 60,
+    "development": 30,
+    "disk": 134217728,
+    "evaluate": 30,
+    "fit": 120,
+    "memory": 2147483648,
+    "overall": 1500,
+    "preparation": 150,
+    "rehearsal": 45,
+    "request": 2
+  },
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "clip": 1.0,
+    "eps": 1e-08,
+    "foreach": false,
+    "fused": false,
+    "lr": 0.003,
+    "weight_decay": 0.01
+  },
+  "order": [
+    [
+      601,
+      "ordinary",
+      "uniform"
+    ],
+    [
+      601,
+      "ordinary",
+      "first16"
+    ],
+    [
+      601,
+      "recurrent",
+      "first16"
+    ],
+    [
+      601,
+      "recurrent",
+      "uniform"
+    ],
+    [
+      947,
+      "recurrent",
+      "uniform"
+    ],
+    [
+      947,
+      "recurrent",
+      "first16"
+    ],
+    [
+      947,
+      "ordinary",
+      "first16"
+    ],
+    [
+      947,
+      "ordinary",
+      "uniform"
+    ]
+  ],
+  "parameters": {
+    "ordinary": 14058,
+    "recurrent": 14416
+  },
+  "preservation_sha256": "b67035765775a76767173bef298f5fed43bcfa3a06adc7c47646abea174fc2d4",
+  "resource_rule": "fit_cap=max(60,ceil(max(2*max(last-two CPU/wall)*1536+20)/10)*10); <=120",
+  "runtime": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "psutil": "7.2.2",
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu"
+  },
+  "source_commit": "7cdded09b0255dd20379b96cd67e83d05ab65f8a",
+  "sources": {
+    ".gitattributes": "566b0d81838e36cb43f987cddb030ab7680305e439d2c9f12857a0d743999035",
+    "docs/research/local-answer-value-start-dev-v1-protocol.md": "cadae86694016e1821496f2f59d7ce866a212b53b2c14087798805928af56a6f",
+    "pyproject.toml": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca",
+    "scripts/answer_trainability_dev.py": "c599576237e8e0d8de71b98e0e634a2f4af55fc536bc50915a4dd6bcf6bb0fa1",
+    "scripts/first_byte_probe.py": "d4a2ebfaa73f6e49c7a28201d5667c8124c7cf3504858d936bf171953e8e5324",
+    "scripts/lifetime_job.py": "b076233cdbc76e4e77bb48e71a9cbaee2bd1c5e5697042b7fc3e6580b1b6220f",
+    "scripts/lifetime_job_v2.py": "4070eab1862aa8d48310129bf69761bfa173412378e21b8fbe94f67b404f794e",
+    "scripts/local_answer_dev.py": "56228f95d670e676d78aaa0e4b7270c5994e0245c7b073bf6f84310c0469345a",
+    "scripts/segment_delta_watch.py": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c",
+    "scripts/value_start_dev.py": "8202eb9275ef02b3d50a9df4d1434bc7d6359a72f9423ed42a4e5ba45ecdbf5f",
+    "src/toruk_lm/data.py": "343ff1cfb9c1245bd01f7c6eddd80f066689b03515880a7c246de938611a9232",
+    "src/toruk_lm/engine.py": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e",
+    "src/toruk_lm/model.py": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf",
+    "src/toruk_lm/owned_lm.py": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac",
+    "src/toruk_lm/recurrent.py": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d",
+    "src/toruk_lm/tokenizer.py": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0",
+    "tests/test_value_start_dev.py": "82cfe6d5042f0ea2a336610d563b8c1e6502e73afeb5bd51cfccfc9b91a86d66"
+  },
+  "status": "DESIGN_FROZEN_BEFORE_REHEARSAL_AND_STUDY_UPDATES",
+  "steps": 1536,
+  "tokenizer": {
+    "fingerprint": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7",
+    "identity": "toruk-utf8-byte-v1"
+  },
+  "training_gate": "each first16 cell complete exact96/EOS96/zero malformed/repetition/first errors; uniform controls exact>=90/EOS96/zero malformed/repetition",
+  "uniform_control": "exact prior city-shuffled batches; first-token extra weight=0",
+  "weights": {
+    "first16": 15,
+    "uniform": 0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    ".\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_lifetime_job_v2.py",
+    "tests/test_lifetime_job.py",
+    "--basetemp",
+    "artifacts/local-answer-value-start-dev-v1/phase1-tmp"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 2.6875,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 1.46875,
+  "max_monitor_gap": 0.0989410999991378,
+  "observer_cpu_to_receipt": 0.453125,
+  "peak_disk": 68644,
+  "peak_private": 57724928,
+  "returncode": 0,
+  "root_pid": 15256,
+  "status": "PASS",
+  "terminated_processes": 0,
+  "total_processes": 85,
+  "user_cpu": 1.21875,
+  "wall": 6.827603900000213
+}

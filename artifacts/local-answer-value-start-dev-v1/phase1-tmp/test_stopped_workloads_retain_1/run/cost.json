@@ -1,0 +1,26 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    "D:\\Toruk\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "from pathlib import Path; Path('D:\\\\Toruk\\\\artifacts\\\\local-answer-value-start-dev-v1\\\\phase1-tmp\\\\test_stopped_workloads_retain_1\\\\run\\\\partial.txt').write_text('partial'); import subprocess,sys,time,os; print('before stop',flush=True); subprocess.Popen([sys.executable,'-B','-c','import time; time.sleep(5)']); time.sleep(5)"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 0.125,
+  "error": "KeyboardInterrupt('deterministic observer-interruption test')",
+  "failure": "observer interrupted",
+  "kernel_cpu": 0.0625,
+  "max_monitor_gap": 0.05130559999997786,
+  "observer_cpu_to_receipt": 0.015625,
+  "peak_disk": 1566,
+  "peak_private": 16842752,
+  "returncode": 130,
+  "root_pid": 21316,
+  "status": "STOP",
+  "terminated_processes": 0,
+  "total_processes": 5,
+  "user_cpu": 0.0625,
+  "wall": 0.5152712999997675
+}

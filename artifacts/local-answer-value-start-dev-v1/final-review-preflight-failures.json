@@ -1,0 +1,23 @@
+{
+  "scope": "Reporting only; outside research attempt",
+  "failures": [
+    {
+      "error": "TypeError in read-only compact inspection: len() on integer count",
+      "mutation": false
+    },
+    {
+      "error": "Review finalizer checked its future inventory link before writing the inventory",
+      "response": "Link allowed only for the exact upcoming inventory; all links checked again after creation",
+      "scientific_data_modified": false
+    },
+    {
+      "error": "git ls-files --others --directory reported directories containing ignored artifacts, unlike status-visible untracked changes",
+      "response": "Review scope compares porcelain Git status; ignored data remain preserved and inventory exclusions explicit",
+      "scientific_data_modified": false
+    }
+  ],
+  "new_model_fits": 0,
+  "new_model_forwards": 0,
+  "new_generated_answers": 0,
+  "cost": "Unmeasured reporting CPU, outside named Jobs"
+}
