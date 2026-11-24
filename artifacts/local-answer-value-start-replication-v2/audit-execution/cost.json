@@ -1,0 +1,29 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "scripts/audit_value_start_replication_v2.py",
+    "--output",
+    "artifacts/local-answer-value-start-replication-v2/independent-audit.json"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 1.515625,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.296875,
+  "max_monitor_gap": 0.08985709999979008,
+  "observer_cpu_to_receipt": 0.578125,
+  "peak_disk": 39591223,
+  "peak_private": 36589568,
+  "returncode": 0,
+  "root_pid": 19580,
+  "status": "PASS",
+  "terminated_processes": 0,
+  "total_processes": 3,
+  "user_cpu": 1.21875,
+  "wall": 1.5783651000019745
+}

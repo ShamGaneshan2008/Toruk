@@ -1,0 +1,119 @@
+{
+  "caps": {
+    "development": 30,
+    "disk": 134217728,
+    "evaluate": 30,
+    "fit": 70,
+    "memory": 2147483648,
+    "overall": 1800,
+    "request": 2
+  },
+  "format": "toruk-local-answer-value-start-replication-v2",
+  "order": [
+    [
+      "i601-s1301",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i601-s1301",
+      "ordinary",
+      "first16"
+    ],
+    [
+      "i601-s1301",
+      "recurrent",
+      "first16"
+    ],
+    [
+      "i601-s1301",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i601-s1709",
+      "ordinary",
+      "first16"
+    ],
+    [
+      "i601-s1709",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i601-s1709",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i601-s1709",
+      "recurrent",
+      "first16"
+    ],
+    [
+      "i947-s1301",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i947-s1301",
+      "ordinary",
+      "first16"
+    ],
+    [
+      "i947-s1301",
+      "recurrent",
+      "first16"
+    ],
+    [
+      "i947-s1301",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i947-s1709",
+      "ordinary",
+      "first16"
+    ],
+    [
+      "i947-s1709",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i947-s1709",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i947-s1709",
+      "recurrent",
+      "first16"
+    ]
+  ],
+  "plan_sha256": "d7a5ade0068dd2cf9aee39c972c35bc080d851c6490ab20caf6546ec79a63762",
+  "prerequisite_files": {
+    "overlap.json": "6b8008ba3bb9f307d12c93c05053a9897719071265df21ab0af851e29db346cc",
+    "precondition.json": "bf33c00e3b970a9ff96fe04f741ce89b392f8a2b35073e2486fcacda2acc8358",
+    "preparation-budget-receipt.json": "582850d330c58e0a6f46349a81b19888a663e646f9e1d418dc645ad667c7a3a0",
+    "preparation-summary.json": "5dc3b69d466d670f687f481b9847d9ae29a7d30c526a6d6ca0c08a4e1e3d6e56",
+    "preparation/rehearsal/rehearsal.json": "ce1d91dd76636ae3eb43adde5a58a8b215543cf15a942b4d1f142e0cd20ec55a",
+    "preservation-before.json": "eb90fdd90f1df7600aa5193f21e16f1df48c7be846236a3b964641833589c1d2",
+    "starting-state.json": "6fd7834135b072e0c30f05b14ec93e10f50f16be19ec279b60fdf030c9dca93b"
+  },
+  "prerequisite_seals": [
+    {
+      "path": "preparation/contracts",
+      "sha256": "12ee25b551b992ab0cf1295c96192cdb8492d7a24af137efe025fedec3fde304"
+    },
+    {
+      "path": "preparation/rehearsal",
+      "sha256": "b4d6dc25a1a354a8007447a487b2df1b76092f60e59d17970878e6924c52d6d5"
+    },
+    {
+      "path": "preparation/budget",
+      "sha256": "d369bea8f21ec2f77614a9a0de543e23d542ef53a24c04270aba66c33f32c563"
+    }
+  ],
+  "status": "FROZEN_BEFORE_ANY_RESEARCH_FIT_OR_ANSWER"
+}

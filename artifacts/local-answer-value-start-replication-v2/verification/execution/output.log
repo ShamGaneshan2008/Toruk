@@ -1,0 +1,8 @@
+{"name": "ruff", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "ruff", "check", "--no-cache", "."], "returncode": 0, "wall": 0.7766956999985268}
+{"name": "format", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "ruff", "format", "--check", "--no-cache", "src", "tests", "scripts"], "returncode": 0, "wall": 0.10632640000039828}
+{"name": "type-study", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "mypy", "--follow-imports=silent", "scripts/value_start_replication_v2.py", "scripts/value_start_replication_data.py"], "returncode": 0, "wall": 29.732291799999075}
+{"name": "type-auditor", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "mypy", "--allow-untyped-defs", "--follow-imports=silent", "scripts/audit_value_start_replication_v2.py"], "returncode": 0, "wall": 1.1565071000004536}
+{"name": "frozen", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "scripts/check_frozen_sources.py"], "returncode": 0, "wall": 0.09066940000047907}
+{"name": "dependencies", "command": ["D:\\Toruk\\.venv\\Scripts\\python.exe", "-B", "-m", "pip", "check"], "returncode": 0, "wall": 2.935765700000047}
+{"name": "diff", "command": ["git", "diff", "--check"], "returncode": 0, "wall": 0.08632500000021537}
+{"name": "cached-diff", "command": ["git", "diff", "--cached", "--check"], "returncode": 0, "wall": 0.03805149999971036}

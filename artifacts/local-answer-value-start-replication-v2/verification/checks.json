@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "."
+      ],
+      "name": "ruff",
+      "returncode": 0,
+      "wall": 0.7766956999985268
+    },
+    {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "name": "format",
+      "returncode": 0,
+      "wall": 0.10632640000039828
+    },
+    {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "mypy",
+        "--follow-imports=silent",
+        "scripts/value_start_replication_v2.py",
+        "scripts/value_start_replication_data.py"
+      ],
+      "name": "type-study",
+      "returncode": 0,
+      "wall": 29.732291799999075
+    },
+    {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "mypy",
+        "--allow-untyped-defs",
+        "--follow-imports=silent",
+        "scripts/audit_value_start_replication_v2.py"
+      ],
+      "name": "type-auditor",
+      "returncode": 0,
+      "wall": 1.1565071000004536
+    },
+    {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "scripts/check_frozen_sources.py"
+      ],
+      "name": "frozen",
+      "returncode": 0,
+      "wall": 0.09066940000047907
+    },
+    {
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "name": "dependencies",
+      "returncode": 0,
+      "wall": 2.935765700000047
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "name": "diff",
+      "returncode": 0,
+      "wall": 0.08632500000021537
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "name": "cached-diff",
+      "returncode": 0,
+      "wall": 0.03805149999971036
+    }
+  ],
+  "hosted_ci": "NOT_RUN",
+  "new_model_forwards": 0
+}
