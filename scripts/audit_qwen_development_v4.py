@@ -11,6 +11,7 @@ import time
 from pathlib import Path
 from typing import Any
 
+from ci_contracts import historical_attributes
 from verify_portable_research_evidence import Evidence, digest, frozen_functions, portable_path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -151,6 +152,9 @@ def audit_row(case: dict, row: dict, tokenizer: Any, api: dict) -> dict:
 
 def verify_preservation(root: Path, baseline: dict) -> int:
     for name, expected in baseline["sha256"].items():
+        if name == ".gitattributes":
+            historical_attributes(root, baseline["head"], expected)
+            continue
         # Hashing frozen files is permitted; their held-out records are never parsed.
         with (root / name).open("rb") as stream:
             actual = hashlib.file_digest(stream, "sha256").hexdigest()

@@ -36,7 +36,13 @@ jobs:
       - run: python -m ruff format --check src tests scripts
       - run: python -m mypy
       - run: python -m mypy --platform linux
-      - run: python -m pytest -q
+      - name: Diagnose current-runtime initialization (not archived reproduction)
+        run: python scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-ubuntu.json
+      - name: Compare scalar CPU dispatch initialization (diagnostic only)
+        env:
+          ATEN_CPU_CAPABILITY: default
+        run: python scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-scalar-ubuntu.json
+      - run: python -m pytest -q -ra --junitxml=artifacts/ci-pytest-ubuntu.xml
       # Validate the independent evaluation contract without downloading chat weights.
       # Full inference reproduction requires the separately pinned local backbone.
       - run: python scripts/independent_replication.py validate-cases --run artifacts/ci-independent-cases
@@ -52,6 +58,14 @@ jobs:
       - run: python -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json
       - run: python -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke
       - run: python -m build --no-isolation
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cpu-contracts-ubuntu
+          path: |
+            artifacts/ci-initialization-ubuntu.json
+            artifacts/ci-initialization-scalar-ubuntu.json
+            artifacts/ci-pytest-ubuntu.xml
   windows-reproduction:
     runs-on: windows-latest
     timeout-minutes: 10
@@ -60,14 +74,36 @@ jobs:
         shell: pwsh
         working-directory: checkout with spaces
     steps:
+      - name: Keep frozen source snapshots at canonical Git byte endings
+        working-directory: ${{ github.workspace }}
+        run: git config --global core.autocrlf false
       - uses: actions/checkout@v4
         with:
           path: checkout with spaces
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
-      - run: python -m pip install .
+      - run: python -m pip install -e '.[dev,chat]'
+      - name: Diagnose current-runtime initialization (not archived reproduction)
+        run: python scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-windows.json
+      - name: Compare scalar CPU dispatch initialization (diagnostic only)
+        env:
+          ATEN_CPU_CAPABILITY: default
+        run: python scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-scalar-windows.json
+      # Native Windows Job/ctypes tests execute here, not on Ubuntu.
+      - run: python -m pytest -q -ra --junitxml=artifacts/ci-pytest-windows.xml
       # Fresh data/weights, small CPU model only; full 256-step research stays opt-in.
       - run: python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output 'artifacts/owned smoke'
       - run: python scripts/validate_owned_reproduction.py --config configs/owned-lm-smoke-v1.json --run 'artifacts/owned smoke'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cpu-contracts-windows
+          path: |
+            checkout with spaces/artifacts/ci-initialization-windows.json
+            checkout with spaces/artifacts/ci-initialization-scalar-windows.json
+            checkout with spaces/artifacts/ci-pytest-windows.xml
