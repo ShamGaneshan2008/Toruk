@@ -1,0 +1,1641 @@
+{
+  "sources": {
+    "local": {
+      "path": "initialization-local-windows-002.json",
+      "runtime": {
+        "platform": "Windows-11-10.0.26100-SP0",
+        "psutil": "7.2.2",
+        "python": "3.12.14",
+        "torch": "2.15.0+cpu"
+      },
+      "cpu_capability": "AVX2",
+      "override": null
+    },
+    "local_scalar": {
+      "path": "initialization-local-scalar-windows.json",
+      "runtime": {
+        "platform": "Windows-11-10.0.26100-SP0",
+        "psutil": "7.2.2",
+        "python": "3.12.14",
+        "torch": "2.15.0+cpu"
+      },
+      "cpu_capability": "DEFAULT",
+      "override": "default"
+    },
+    "ubuntu": {
+      "path": "initialization-hosted-ubuntu.json",
+      "runtime": {
+        "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+        "psutil": "7.2.2",
+        "python": "3.12.16",
+        "torch": "2.15.0+cpu"
+      },
+      "cpu_capability": "AVX512",
+      "override": null
+    },
+    "ubuntu_scalar": {
+      "path": "initialization-hosted-scalar-ubuntu.json",
+      "runtime": {
+        "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+        "psutil": "7.2.2",
+        "python": "3.12.16",
+        "torch": "2.15.0+cpu"
+      },
+      "cpu_capability": "DEFAULT",
+      "override": "default"
+    },
+    "windows": {
+      "path": "initialization-hosted-windows.json",
+      "runtime": {
+        "platform": "Windows-2025Server-10.0.26100-SP0",
+        "psutil": "7.2.2",
+        "python": "3.12.10",
+        "torch": "2.15.0+cpu"
+      },
+      "cpu_capability": "AVX512",
+      "override": null
+    },
+    "windows_scalar": {
+      "path": "initialization-hosted-scalar-windows.json",
+      "runtime": {
+        "platform": "Windows-2025Server-10.0.26100-SP0",
+        "psutil": "7.2.2",
+        "python": "3.12.10",
+        "torch": "2.15.0+cpu"
+      },
+      "cpu_capability": "DEFAULT",
+      "override": "default"
+    }
+  },
+  "comparisons": {
+    "local_vs_local_scalar": {
+      "601-ordinary": {
+        "left_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+        "right_sha256": "e9b1948afd4d6a399d10a4608f5b80b29aa9bcd6c0f55ecf99c130b1c009eae7",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "embedding.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "b258ed60a1fa848afa0d4e2c62d753e0783580d12eb05bc7e243dfcb17075cb2",
+              "shape": [
+                259,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "229c86fa1b3dbe2c1c12b91d10d9621b61739e1e5e68a436618f37054857b451",
+              "shape": [
+                259,
+                18
+              ]
+            }
+          },
+          "position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.3645738661289215,
+                1.5915364027023315,
+                0.6667655110359192,
+                -0.5630738139152527
+              ],
+              "sha256": "5a4c9832459e9ce6c4e0f26f1edbb3319768c0ecd54164a602ee06675cc2ec10",
+              "shape": [
+                32,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.36457401514053345,
+                1.5915364027023315,
+                0.6667655110359192,
+                -0.5630738139152527
+              ],
+              "sha256": "f86909430adf5d729f00a7954f9b4e56f44dc59024584023298e569fd2bf44c9",
+              "shape": [
+                32,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "601-recurrent": {
+        "left_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+        "right_sha256": "064b4629e045223ba5a78291c103da8104e2e3c5554289c1fdaff52a0e484bdd",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "42f143933da87b817029f89ba3bb0d95606f43ba67660ca95fad0f7242b5a63d",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "4090fed36c2e473165a1cd924a34554c55a9c343538cae7ba90fa5fae1e4ad4e",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          },
+          "backbone.position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.01954837702214718,
+                -1.4999319314956665,
+                0.04013491049408913,
+                0.5925984978675842
+              ],
+              "sha256": "657b485fdfb252aa7eb5a34d1405d67d537cba1f76b9f38e3c797eed7caea9cd",
+              "shape": [
+                32,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.019548267126083374,
+                -1.4999319314956665,
+                0.040134791284799576,
+                0.5925987362861633
+              ],
+              "sha256": "78e86b798ed7dfb17d541b109d325ee4f670845c4800f78bbbd8bf278a64ec27",
+              "shape": [
+                32,
+                16
+              ]
+            }
+          }
+        }
+      },
+      "947-ordinary": {
+        "left_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+        "right_sha256": "5c364a1b2255c691bb8b4962361b098b40860558b184901f5baac7def6fa7946",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "embedding.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "d2d4975a8ff1fdfafa54443ad90a595465929a2d43d65bd089e1697dc29de12b",
+              "shape": [
+                259,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "f22fddb73817ceadb9f39220705e9c2f8b5ace88e7a155a87e02a8a3634bbf8e",
+              "shape": [
+                259,
+                18
+              ]
+            }
+          },
+          "position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.28651124238967896,
+                -0.4800393879413605,
+                -0.766623854637146,
+                -0.4625307023525238
+              ],
+              "sha256": "a0090c8167786e9e8d8bb47f091350d5eb550ea4a3d6776835e3cfa7d11a8747",
+              "shape": [
+                32,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.28651124238967896,
+                -0.4800393879413605,
+                -0.7666242718696594,
+                -0.4625307023525238
+              ],
+              "sha256": "96e4b370c3dcd782dfe81c54b9154d1746755ce73f58ce757666b4e6958426cb",
+              "shape": [
+                32,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "947-recurrent": {
+        "left_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+        "right_sha256": "cd9e8a0110ae15ad0ec1369479f56dcabee286dbb2b543c44ae1fb3f386ae2cb",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "e964d67edebc6d8abdac15ab5df7616a866c213e3578b7e0355d039f429da51b",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "sha256": "5b97d0435684dc683a27183a922df4a74e118820aeb877ffb9124891419190c7",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          },
+          "backbone.position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.14806348085403442,
+                1.827078104019165,
+                -0.1545564979314804,
+                -0.5231153964996338
+              ],
+              "sha256": "b1786f6a31ffe2229d0f8971943136fabf22e865e2cc24b6256677317799c853",
+              "shape": [
+                32,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.14806348085403442,
+                1.827078104019165,
+                -0.1545564979314804,
+                -0.5231153964996338
+              ],
+              "sha256": "c94918827ca4321fea88ffe4635a42597e707dc13c1e226bfcda050c058b0046",
+              "shape": [
+                32,
+                16
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ubuntu_vs_windows": {
+      "601-ordinary": {
+        "left_sha256": "55eb0e94969e5551c859b04338811e88a7d55854af0d3ad8b334a82dc40e0a07",
+        "right_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "blocks.0.attention.in_proj_weight",
+          "blocks.0.attention.out_proj.weight",
+          "blocks.0.ff.0.bias",
+          "blocks.0.ff.0.weight",
+          "blocks.0.ff.2.bias",
+          "blocks.0.ff.2.weight",
+          "embedding.weight",
+          "output.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.08970022201538086,
+                0.21359065175056458,
+                -0.08331535011529922,
+                0.24636027216911316
+              ],
+              "sha256": "0aa024060abab65ac54ee983e142d1c2454065971cee30f42a837eb6949fcec5",
+              "shape": [
+                54,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.08970022201538086,
+                0.21359068155288696,
+                -0.08331534266471863,
+                0.24636030197143555
+              ],
+              "sha256": "4c5fb58e04501cd13b04ae93e6b9ce1c5f125ddba9d7395b96e6cc1708715f08",
+              "shape": [
+                54,
+                18
+              ]
+            }
+          },
+          "blocks.0.attention.out_proj.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.18275786936283112,
+                0.224919855594635,
+                0.17135711014270782,
+                0.04468479007482529
+              ],
+              "sha256": "e01f5a3fb820619b31c3e154596e59cf9f415046af29e4d618e6325b6410a76a",
+              "shape": [
+                18,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.18275786936283112,
+                0.2249198704957962,
+                0.17135711014270782,
+                0.04468478262424469
+              ],
+              "sha256": "652686a6bd258fef7e9996f93b3be27c5adbe7d1899869cd83715ce120c70e5e",
+              "shape": [
+                18,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "601-recurrent": {
+        "left_sha256": "f4657f953092da16dc41fce2d37489214f3ed5847cce691c80b4b94e73a9c806",
+        "right_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.blocks.0.attention.in_proj_weight",
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "gate.bias",
+          "gate.weight",
+          "proposal.bias",
+          "proposal.weight",
+          "readers.0.in_proj_weight"
+        ],
+        "tensor_examples": {
+          "backbone.blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.10668864101171494,
+                -0.10184144228696823,
+                -0.07504986226558685,
+                0.055060360580682755
+              ],
+              "sha256": "4be18513e0a9de60d213aa83019a49c1067dcc0e4e8ae1d9e433ae0a34bb4020",
+              "shape": [
+                48,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.10668864846229553,
+                -0.10184144973754883,
+                -0.07504986226558685,
+                0.055060356855392456
+              ],
+              "sha256": "449f8959aec6beb4f3865656bb963dc449947379dbcaf94d1dc32256f6e386a9",
+              "shape": [
+                48,
+                16
+              ]
+            }
+          },
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "e0ace372681382f9444676ddd3625defce09856af74c2a3df6d242f4b82fe2f0",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "42f143933da87b817029f89ba3bb0d95606f43ba67660ca95fad0f7242b5a63d",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          }
+        }
+      },
+      "947-ordinary": {
+        "left_sha256": "6e6588d0f9d187605ef87c19dfee2fe0e9abf51cd243c8659a0aa10f69dcac74",
+        "right_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "blocks.0.attention.in_proj_weight",
+          "blocks.0.attention.out_proj.weight",
+          "blocks.0.ff.0.bias",
+          "blocks.0.ff.0.weight",
+          "blocks.0.ff.2.bias",
+          "blocks.0.ff.2.weight",
+          "embedding.weight",
+          "output.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.2787097096443176,
+                -0.04256162792444229,
+                0.22979992628097534,
+                -0.2783143222332001
+              ],
+              "sha256": "e5b68af952889c71c46994154b6b4d9dee916d45f8b360d04d411d7622d9c1ef",
+              "shape": [
+                54,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.2787097096443176,
+                -0.04256163537502289,
+                0.22979992628097534,
+                -0.2783143222332001
+              ],
+              "sha256": "411527d096f07a675f182e84a39a97d000f415e77ca8cf07438160ea8d01333c",
+              "shape": [
+                54,
+                18
+              ]
+            }
+          },
+          "blocks.0.attention.out_proj.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.03297661989927292,
+                -0.22954794764518738,
+                -0.10496509820222855,
+                0.07538402080535889
+              ],
+              "sha256": "31d9391e194ece23ab2c3f2322666dd7c42f7176b0af22513d4ac3070265e952",
+              "shape": [
+                18,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.032976627349853516,
+                -0.22954794764518738,
+                -0.10496509075164795,
+                0.07538403570652008
+              ],
+              "sha256": "3b02f9f2f416ada41ed3abb44ddcb12aeca4ca1fbcd8c475d3d94b4d0e6c7d23",
+              "shape": [
+                18,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "947-recurrent": {
+        "left_sha256": "ff8e40801b7f7e21bf60ce6051269dc831d58b5b70126ea3852d3691318ddbb2",
+        "right_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.blocks.0.attention.in_proj_weight",
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "gate.bias",
+          "gate.weight",
+          "proposal.bias",
+          "proposal.weight",
+          "readers.0.in_proj_weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.29786986112594604,
+                0.059822436422109604,
+                -0.21301217377185822,
+                0.1540425568819046
+              ],
+              "sha256": "aa7b9b9f7ecf02cf74b8bc59da89c44611b9f634b291b21989d2251fbfc40852",
+              "shape": [
+                48,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.29786986112594604,
+                0.0598224401473999,
+                -0.21301215887069702,
+                0.1540425717830658
+              ],
+              "sha256": "e8a9b3334218de3ca65e10fe510366e4620a840ee3b954cc26715f1f4bcd8a71",
+              "shape": [
+                48,
+                16
+              ]
+            }
+          },
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "465662a8f4f2df81000ded8f7aff051bf799e19cc80e431b141a8ad39db3bb87",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "e964d67edebc6d8abdac15ab5df7616a866c213e3578b7e0355d039f429da51b",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ubuntu_scalar_vs_windows_scalar": {
+      "601-ordinary": {
+        "left_sha256": "2a97e2deac0b53946052bbd7a50dc0fdc35df347886fb7c7f9a86c6fefbccdfa",
+        "right_sha256": "e9b1948afd4d6a399d10a4608f5b80b29aa9bcd6c0f55ecf99c130b1c009eae7",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "embedding.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "5185acebe36666da7d6612eec15558d1974a6bd0e36ac84736f58db2250576a4",
+              "shape": [
+                259,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "229c86fa1b3dbe2c1c12b91d10d9621b61739e1e5e68a436618f37054857b451",
+              "shape": [
+                259,
+                18
+              ]
+            }
+          },
+          "position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.36457401514053345,
+                1.5915364027023315,
+                0.6667655110359192,
+                -0.5630738139152527
+              ],
+              "sha256": "2aaae8159cfe19332e0879a3b92293c41830bb3c6a1ef57e4a0013097bf9cbf5",
+              "shape": [
+                32,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.36457401514053345,
+                1.5915364027023315,
+                0.6667655110359192,
+                -0.5630738139152527
+              ],
+              "sha256": "f86909430adf5d729f00a7954f9b4e56f44dc59024584023298e569fd2bf44c9",
+              "shape": [
+                32,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "601-recurrent": {
+        "left_sha256": "897cf8ead8af333aba84f8e3abd62951b83b947313aad4fcd81635a8b1017eab",
+        "right_sha256": "064b4629e045223ba5a78291c103da8104e2e3c5554289c1fdaff52a0e484bdd",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.embedding.weight",
+          "backbone.position.weight"
+        ],
+        "tensor_examples": {
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "e4fd3006e8f17d7e9c49e1529243c1f18812e17de48bbdb32766bf5edcc1b78c",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "4090fed36c2e473165a1cd924a34554c55a9c343538cae7ba90fa5fae1e4ad4e",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          },
+          "backbone.position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.019548267126083374,
+                -1.4999319314956665,
+                0.040134791284799576,
+                0.5925987362861633
+              ],
+              "sha256": "b30375c74450cdaefcf2e19ea2bfc91714a64d3d6da417c3f2372fef7c77002b",
+              "shape": [
+                32,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.019548267126083374,
+                -1.4999319314956665,
+                0.040134791284799576,
+                0.5925987362861633
+              ],
+              "sha256": "78e86b798ed7dfb17d541b109d325ee4f670845c4800f78bbbd8bf278a64ec27",
+              "shape": [
+                32,
+                16
+              ]
+            }
+          }
+        }
+      },
+      "947-ordinary": {
+        "left_sha256": "25e9962c6670c0e4d797f7b7c02527cfadc7107d3ccfb8e6b339991ffda7fabd",
+        "right_sha256": "5c364a1b2255c691bb8b4962361b098b40860558b184901f5baac7def6fa7946",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "embedding.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "2ddb445f1e8636c256623552a47e5e719fb2cb6f2f2450b0a245ca86febf48cc",
+              "shape": [
+                259,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "f22fddb73817ceadb9f39220705e9c2f8b5ace88e7a155a87e02a8a3634bbf8e",
+              "shape": [
+                259,
+                18
+              ]
+            }
+          },
+          "position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.28651124238967896,
+                -0.4800393879413605,
+                -0.7666242718696594,
+                -0.4625307023525238
+              ],
+              "sha256": "d7c0d485ffb2cdc1b724c68c56f6ad9f6f7f5fbd27cfdc0504e827d4ad080b7b",
+              "shape": [
+                32,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.28651124238967896,
+                -0.4800393879413605,
+                -0.7666242718696594,
+                -0.4625307023525238
+              ],
+              "sha256": "96e4b370c3dcd782dfe81c54b9154d1746755ce73f58ce757666b4e6958426cb",
+              "shape": [
+                32,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "947-recurrent": {
+        "left_sha256": "e36a5ba2729411d7047698eb9a7f2b6335c7921e7b97b5e930f58cff731ce856",
+        "right_sha256": "cd9e8a0110ae15ad0ec1369479f56dcabee286dbb2b543c44ae1fb3f386ae2cb",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "be6afcaeca3cf32ce8b73359593532a3dd8f338e1a95059c3d4dd3cb0b702c17",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "5b97d0435684dc683a27183a922df4a74e118820aeb877ffb9124891419190c7",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          },
+          "backbone.position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.14806348085403442,
+                1.827078104019165,
+                -0.1545564979314804,
+                -0.5231153964996338
+              ],
+              "sha256": "4f9683683c5db39127ae62a73cfac88d4a6cb4a34dc5bb3a5069dd87c743c78a",
+              "shape": [
+                32,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.14806348085403442,
+                1.827078104019165,
+                -0.1545564979314804,
+                -0.5231153964996338
+              ],
+              "sha256": "c94918827ca4321fea88ffe4635a42597e707dc13c1e226bfcda050c058b0046",
+              "shape": [
+                32,
+                16
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ubuntu_vs_ubuntu_scalar": {
+      "601-ordinary": {
+        "left_sha256": "55eb0e94969e5551c859b04338811e88a7d55854af0d3ad8b334a82dc40e0a07",
+        "right_sha256": "2a97e2deac0b53946052bbd7a50dc0fdc35df347886fb7c7f9a86c6fefbccdfa",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "blocks.0.attention.in_proj_weight",
+          "blocks.0.attention.out_proj.weight",
+          "blocks.0.ff.0.bias",
+          "blocks.0.ff.0.weight",
+          "blocks.0.ff.2.bias",
+          "blocks.0.ff.2.weight",
+          "embedding.weight",
+          "output.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.08970022201538086,
+                0.21359065175056458,
+                -0.08331535011529922,
+                0.24636027216911316
+              ],
+              "sha256": "0aa024060abab65ac54ee983e142d1c2454065971cee30f42a837eb6949fcec5",
+              "shape": [
+                54,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.08970022201538086,
+                0.21359068155288696,
+                -0.08331534266471863,
+                0.24636030197143555
+              ],
+              "sha256": "4c5fb58e04501cd13b04ae93e6b9ce1c5f125ddba9d7395b96e6cc1708715f08",
+              "shape": [
+                54,
+                18
+              ]
+            }
+          },
+          "blocks.0.attention.out_proj.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.18275786936283112,
+                0.224919855594635,
+                0.17135711014270782,
+                0.04468479007482529
+              ],
+              "sha256": "e01f5a3fb820619b31c3e154596e59cf9f415046af29e4d618e6325b6410a76a",
+              "shape": [
+                18,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.18275786936283112,
+                0.2249198704957962,
+                0.17135711014270782,
+                0.04468478262424469
+              ],
+              "sha256": "652686a6bd258fef7e9996f93b3be27c5adbe7d1899869cd83715ce120c70e5e",
+              "shape": [
+                18,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "601-recurrent": {
+        "left_sha256": "f4657f953092da16dc41fce2d37489214f3ed5847cce691c80b4b94e73a9c806",
+        "right_sha256": "897cf8ead8af333aba84f8e3abd62951b83b947313aad4fcd81635a8b1017eab",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.blocks.0.attention.in_proj_weight",
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "gate.bias",
+          "gate.weight",
+          "proposal.bias",
+          "proposal.weight",
+          "readers.0.in_proj_weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.10668864101171494,
+                -0.10184144228696823,
+                -0.07504986226558685,
+                0.055060360580682755
+              ],
+              "sha256": "4be18513e0a9de60d213aa83019a49c1067dcc0e4e8ae1d9e433ae0a34bb4020",
+              "shape": [
+                48,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.10668864846229553,
+                -0.10184144973754883,
+                -0.07504986226558685,
+                0.055060356855392456
+              ],
+              "sha256": "449f8959aec6beb4f3865656bb963dc449947379dbcaf94d1dc32256f6e386a9",
+              "shape": [
+                48,
+                16
+              ]
+            }
+          },
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "e0ace372681382f9444676ddd3625defce09856af74c2a3df6d242f4b82fe2f0",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "e4fd3006e8f17d7e9c49e1529243c1f18812e17de48bbdb32766bf5edcc1b78c",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          }
+        }
+      },
+      "947-ordinary": {
+        "left_sha256": "6e6588d0f9d187605ef87c19dfee2fe0e9abf51cd243c8659a0aa10f69dcac74",
+        "right_sha256": "25e9962c6670c0e4d797f7b7c02527cfadc7107d3ccfb8e6b339991ffda7fabd",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "blocks.0.attention.in_proj_weight",
+          "blocks.0.attention.out_proj.weight",
+          "blocks.0.ff.0.bias",
+          "blocks.0.ff.0.weight",
+          "blocks.0.ff.2.bias",
+          "blocks.0.ff.2.weight",
+          "embedding.weight",
+          "output.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.2787097096443176,
+                -0.04256162792444229,
+                0.22979992628097534,
+                -0.2783143222332001
+              ],
+              "sha256": "e5b68af952889c71c46994154b6b4d9dee916d45f8b360d04d411d7622d9c1ef",
+              "shape": [
+                54,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.2787097096443176,
+                -0.04256163537502289,
+                0.22979992628097534,
+                -0.2783143222332001
+              ],
+              "sha256": "411527d096f07a675f182e84a39a97d000f415e77ca8cf07438160ea8d01333c",
+              "shape": [
+                54,
+                18
+              ]
+            }
+          },
+          "blocks.0.attention.out_proj.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.03297661989927292,
+                -0.22954794764518738,
+                -0.10496509820222855,
+                0.07538402080535889
+              ],
+              "sha256": "31d9391e194ece23ab2c3f2322666dd7c42f7176b0af22513d4ac3070265e952",
+              "shape": [
+                18,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.032976627349853516,
+                -0.22954794764518738,
+                -0.10496509075164795,
+                0.07538403570652008
+              ],
+              "sha256": "3b02f9f2f416ada41ed3abb44ddcb12aeca4ca1fbcd8c475d3d94b4d0e6c7d23",
+              "shape": [
+                18,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "947-recurrent": {
+        "left_sha256": "ff8e40801b7f7e21bf60ce6051269dc831d58b5b70126ea3852d3691318ddbb2",
+        "right_sha256": "e36a5ba2729411d7047698eb9a7f2b6335c7921e7b97b5e930f58cff731ce856",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.blocks.0.attention.in_proj_weight",
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "gate.bias",
+          "gate.weight",
+          "proposal.bias",
+          "proposal.weight",
+          "readers.0.in_proj_weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.blocks.0.attention.in_proj_weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.29786986112594604,
+                0.059822436422109604,
+                -0.21301217377185822,
+                0.1540425568819046
+              ],
+              "sha256": "aa7b9b9f7ecf02cf74b8bc59da89c44611b9f634b291b21989d2251fbfc40852",
+              "shape": [
+                48,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.29786986112594604,
+                0.0598224401473999,
+                -0.21301215887069702,
+                0.1540425717830658
+              ],
+              "sha256": "e8a9b3334218de3ca65e10fe510366e4620a840ee3b954cc26715f1f4bcd8a71",
+              "shape": [
+                48,
+                16
+              ]
+            }
+          },
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "465662a8f4f2df81000ded8f7aff051bf799e19cc80e431b141a8ad39db3bb87",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "be6afcaeca3cf32ce8b73359593532a3dd8f338e1a95059c3d4dd3cb0b702c17",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          }
+        }
+      }
+    },
+    "windows_vs_windows_scalar": {
+      "601-ordinary": {
+        "left_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+        "right_sha256": "e9b1948afd4d6a399d10a4608f5b80b29aa9bcd6c0f55ecf99c130b1c009eae7",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "embedding.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "b258ed60a1fa848afa0d4e2c62d753e0783580d12eb05bc7e243dfcb17075cb2",
+              "shape": [
+                259,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "229c86fa1b3dbe2c1c12b91d10d9621b61739e1e5e68a436618f37054857b451",
+              "shape": [
+                259,
+                18
+              ]
+            }
+          },
+          "position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.3645738661289215,
+                1.5915364027023315,
+                0.6667655110359192,
+                -0.5630738139152527
+              ],
+              "sha256": "5a4c9832459e9ce6c4e0f26f1edbb3319768c0ecd54164a602ee06675cc2ec10",
+              "shape": [
+                32,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.36457401514053345,
+                1.5915364027023315,
+                0.6667655110359192,
+                -0.5630738139152527
+              ],
+              "sha256": "f86909430adf5d729f00a7954f9b4e56f44dc59024584023298e569fd2bf44c9",
+              "shape": [
+                32,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "601-recurrent": {
+        "left_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+        "right_sha256": "064b4629e045223ba5a78291c103da8104e2e3c5554289c1fdaff52a0e484bdd",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "42f143933da87b817029f89ba3bb0d95606f43ba67660ca95fad0f7242b5a63d",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "4090fed36c2e473165a1cd924a34554c55a9c343538cae7ba90fa5fae1e4ad4e",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          },
+          "backbone.position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.01954837702214718,
+                -1.4999319314956665,
+                0.04013491049408913,
+                0.5925984978675842
+              ],
+              "sha256": "657b485fdfb252aa7eb5a34d1405d67d537cba1f76b9f38e3c797eed7caea9cd",
+              "shape": [
+                32,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.019548267126083374,
+                -1.4999319314956665,
+                0.040134791284799576,
+                0.5925987362861633
+              ],
+              "sha256": "78e86b798ed7dfb17d541b109d325ee4f670845c4800f78bbbd8bf278a64ec27",
+              "shape": [
+                32,
+                16
+              ]
+            }
+          }
+        }
+      },
+      "947-ordinary": {
+        "left_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+        "right_sha256": "5c364a1b2255c691bb8b4962361b098b40860558b184901f5baac7def6fa7946",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "embedding.weight",
+          "position.weight"
+        ],
+        "tensor_examples": {
+          "embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "d2d4975a8ff1fdfafa54443ad90a595465929a2d43d65bd089e1697dc29de12b",
+              "shape": [
+                259,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "f22fddb73817ceadb9f39220705e9c2f8b5ace88e7a155a87e02a8a3634bbf8e",
+              "shape": [
+                259,
+                18
+              ]
+            }
+          },
+          "position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.28651124238967896,
+                -0.4800393879413605,
+                -0.766623854637146,
+                -0.4625307023525238
+              ],
+              "sha256": "a0090c8167786e9e8d8bb47f091350d5eb550ea4a3d6776835e3cfa7d11a8747",
+              "shape": [
+                32,
+                18
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0.28651124238967896,
+                -0.4800393879413605,
+                -0.7666242718696594,
+                -0.4625307023525238
+              ],
+              "sha256": "96e4b370c3dcd782dfe81c54b9154d1746755ce73f58ce757666b4e6958426cb",
+              "shape": [
+                32,
+                18
+              ]
+            }
+          }
+        }
+      },
+      "947-recurrent": {
+        "left_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+        "right_sha256": "cd9e8a0110ae15ad0ec1369479f56dcabee286dbb2b543c44ae1fb3f386ae2cb",
+        "same_model_hash": false,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [
+          "backbone.embedding.weight",
+          "backbone.position.weight",
+          "slot_proposal"
+        ],
+        "tensor_examples": {
+          "backbone.embedding.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "e964d67edebc6d8abdac15ab5df7616a866c213e3578b7e0355d039f429da51b",
+              "shape": [
+                259,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "sha256": "5b97d0435684dc683a27183a922df4a74e118820aeb877ffb9124891419190c7",
+              "shape": [
+                259,
+                16
+              ]
+            }
+          },
+          "backbone.position.weight": {
+            "left": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.14806348085403442,
+                1.827078104019165,
+                -0.1545564979314804,
+                -0.5231153964996338
+              ],
+              "sha256": "b1786f6a31ffe2229d0f8971943136fabf22e865e2cc24b6256677317799c853",
+              "shape": [
+                32,
+                16
+              ]
+            },
+            "right": {
+              "dtype": "torch.float32",
+              "first_values": [
+                -0.14806348085403442,
+                1.827078104019165,
+                -0.1545564979314804,
+                -0.5231153964996338
+              ],
+              "sha256": "c94918827ca4321fea88ffe4635a42597e707dc13c1e226bfcda050c058b0046",
+              "shape": [
+                32,
+                16
+              ]
+            }
+          }
+        }
+      }
+    },
+    "local_vs_windows": {
+      "601-ordinary": {
+        "left_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+        "right_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+        "same_model_hash": true,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [],
+        "tensor_examples": {}
+      },
+      "601-recurrent": {
+        "left_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+        "right_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+        "same_model_hash": true,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [],
+        "tensor_examples": {}
+      },
+      "947-ordinary": {
+        "left_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+        "right_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+        "same_model_hash": true,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [],
+        "tensor_examples": {}
+      },
+      "947-recurrent": {
+        "left_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+        "right_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+        "same_model_hash": true,
+        "same_rng_before": true,
+        "same_rng_after": true,
+        "differing_tensors": [],
+        "tensor_examples": {}
+      }
+    }
+  },
+  "model_work_performed": 0
+}

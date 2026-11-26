@@ -1,0 +1,1643 @@
+﻿2026-11-26T09:47:25.1652915Z Current runner version: '2.338.2'
+2026-11-26T09:47:25.1669986Z ##[group]Runner Image Provisioner
+2026-11-26T09:47:25.1670609Z Hosted Compute Agent
+2026-11-26T09:47:25.1671005Z Version: 20261111.635
+2026-11-26T09:47:25.1671547Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-26T09:47:25.1672063Z Build Date: 2026-11-11T01:49:01Z
+2026-11-26T09:47:25.1672750Z Worker ID: {528e62d9-8f29-46aa-88f5-6b59138fd0a5}
+2026-11-26T09:47:25.1673249Z Region: us-east-1
+2026-11-26T09:47:25.1673648Z Cloud: AWS
+2026-11-26T09:47:25.1674015Z ##[endgroup]
+2026-11-26T09:47:25.1674891Z ##[group]Operating System
+2026-11-26T09:47:25.1675515Z Ubuntu
+2026-11-26T09:47:25.1675873Z 26.04.1
+2026-11-26T09:47:25.1676236Z LTS
+2026-11-26T09:47:25.1676621Z ##[endgroup]
+2026-11-26T09:47:25.1677053Z ##[group]Runner Image
+2026-11-26T09:47:25.1677464Z Image: ubuntu-26.04
+2026-11-26T09:47:25.1678131Z Version: 20261116.88.1
+2026-11-26T09:47:25.1679071Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.88/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-26T09:47:25.1680204Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.88
+2026-11-26T09:47:25.1680879Z ##[endgroup]
+2026-11-26T09:47:25.1681703Z ##[group]GITHUB_TOKEN Permissions
+2026-11-26T09:47:25.1683390Z Contents: read
+2026-11-26T09:47:25.1683834Z Metadata: read
+2026-11-26T09:47:25.1684223Z Packages: read
+2026-11-26T09:47:25.1684603Z ##[endgroup]
+2026-11-26T09:47:25.1686141Z Secret source: Actions
+2026-11-26T09:47:25.1686986Z Cache mode: write
+2026-11-26T09:47:25.1687789Z Prepare workflow directory
+2026-11-26T09:47:25.1911270Z Prepare all required actions
+2026-11-26T09:47:25.1946905Z Getting action download info
+2026-11-26T09:47:25.3589665Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-26T09:47:26.4012312Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-26T09:47:26.5028580Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-26T09:47:26.7270086Z Complete job name: check
+2026-11-26T09:47:26.7896011Z ##[group]Run actions/checkout@v4
+2026-11-26T09:47:26.7896530Z with:
+2026-11-26T09:47:26.7896798Z   repository: ShamGaneshan2008/Toruk
+2026-11-26T09:47:26.7899265Z   token: ***
+2026-11-26T09:47:26.7899539Z   ssh-strict: true
+2026-11-26T09:47:26.7899815Z   ssh-user: git
+2026-11-26T09:47:26.7900101Z   persist-credentials: true
+2026-11-26T09:47:26.7900395Z   clean: true
+2026-11-26T09:47:26.7900660Z   sparse-checkout-cone-mode: true
+2026-11-26T09:47:26.7900959Z   fetch-depth: 1
+2026-11-26T09:47:26.7901206Z   fetch-tags: false
+2026-11-26T09:47:26.7901475Z   show-progress: true
+2026-11-26T09:47:26.7901735Z   lfs: false
+2026-11-26T09:47:26.7901978Z   submodules: false
+2026-11-26T09:47:26.7902254Z   set-safe-directory: true
+2026-11-26T09:47:26.7902564Z   allow-unsafe-pr-checkout: false
+2026-11-26T09:47:26.7903000Z ##[endgroup]
+2026-11-26T09:47:28.9361655Z Syncing repository: ShamGaneshan2008/Toruk
+2026-11-26T09:47:28.9362973Z ##[group]Getting Git version info
+2026-11-26T09:47:28.9363499Z Working directory is '/home/runner/work/Toruk/Toruk'
+2026-11-26T09:47:28.9364030Z [command]/usr/bin/git version
+2026-11-26T09:47:28.9368342Z git version 2.56.1
+2026-11-26T09:47:28.9381208Z ##[endgroup]
+2026-11-26T09:47:28.9391055Z Temporarily overriding HOME='/home/runner/work/_temp/9fcd0aab-35e1-48ae-958b-3ff592fd888b' before making global git config changes
+2026-11-26T09:47:28.9392018Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-26T09:47:28.9395012Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Toruk/Toruk
+2026-11-26T09:47:28.9980930Z Deleting the contents of '/home/runner/work/Toruk/Toruk'
+2026-11-26T09:47:28.9983993Z ##[group]Initializing the repository
+2026-11-26T09:47:28.9990101Z [command]/usr/bin/git init /home/runner/work/Toruk/Toruk
+2026-11-26T09:47:29.0413797Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-26T09:47:29.0414600Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-26T09:47:29.0415169Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-26T09:47:29.0415573Z hint: call:
+2026-11-26T09:47:29.0415809Z hint:
+2026-11-26T09:47:29.0416300Z hint: 	git config --global init.defaultBranch <name>
+2026-11-26T09:47:29.0416606Z hint:
+2026-11-26T09:47:29.0416915Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-26T09:47:29.0417397Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-26T09:47:29.0417901Z hint:
+2026-11-26T09:47:29.0418144Z hint: 	git branch -m <name>
+2026-11-26T09:47:29.0418397Z hint:
+2026-11-26T09:47:29.0418718Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-26T09:47:29.0430150Z Initialized empty Git repository in /home/runner/work/Toruk/Toruk/.git/
+2026-11-26T09:47:29.0436950Z [command]/usr/bin/git remote add origin https://github.com/ShamGaneshan2008/Toruk
+2026-11-26T09:47:29.0485923Z ##[endgroup]
+2026-11-26T09:47:29.0486353Z ##[group]Disabling automatic garbage collection
+2026-11-26T09:47:29.0489300Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-26T09:47:29.0509446Z ##[endgroup]
+2026-11-26T09:47:29.0510075Z ##[group]Setting up auth
+2026-11-26T09:47:29.0514381Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-26T09:47:29.0536082Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-26T09:47:29.1598675Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-26T09:47:29.1621652Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-26T09:47:29.1795409Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-26T09:47:29.1816789Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-26T09:47:29.1986658Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-26T09:47:29.2010723Z ##[endgroup]
+2026-11-26T09:47:29.2011231Z ##[group]Fetching the repository
+2026-11-26T09:47:29.2016265Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +31da24ea2c876b75f63ae537f499f73df86129e9:refs/remotes/origin/main
+2026-11-26T09:47:33.7986516Z From https://github.com/ShamGaneshan2008/Toruk
+2026-11-26T09:47:33.7987281Z  * [new ref]         31da24ea2c876b75f63ae537f499f73df86129e9 -> origin/main
+2026-11-26T09:47:33.7989974Z ##[endgroup]
+2026-11-26T09:47:33.7990428Z ##[group]Determining the checkout info
+2026-11-26T09:47:33.7991835Z ##[endgroup]
+2026-11-26T09:47:33.7996000Z [command]/usr/bin/git sparse-checkout disable
+2026-11-26T09:47:33.8044951Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-26T09:47:33.8066474Z ##[group]Checking out the ref
+2026-11-26T09:47:33.8106030Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-26T09:47:34.6699433Z Switched to a new branch 'main'
+2026-11-26T09:47:34.6705280Z branch 'main' set up to track 'origin/main'.
+2026-11-26T09:47:34.6736381Z ##[endgroup]
+2026-11-26T09:47:34.6792233Z [command]/usr/bin/git log -1 --format=%H
+2026-11-26T09:47:34.6810582Z 31da24ea2c876b75f63ae537f499f73df86129e9
+2026-11-26T09:47:34.7013594Z ##[group]Run actions/setup-python@v5
+2026-11-26T09:47:34.7013883Z with:
+2026-11-26T09:47:34.7014092Z   python-version: 3.12
+2026-11-26T09:47:34.7014325Z   check-latest: false
+2026-11-26T09:47:34.7016333Z   token: ***
+2026-11-26T09:47:34.7016673Z   update-environment: true
+2026-11-26T09:47:34.7017034Z   allow-prereleases: false
+2026-11-26T09:47:34.7017266Z   freethreaded: false
+2026-11-26T09:47:34.7017489Z ##[endgroup]
+2026-11-26T09:47:34.8029931Z ##[group]Installed versions
+2026-11-26T09:47:34.9742026Z (node:2360) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T09:47:34.9743126Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T09:47:34.9743749Z Successfully set up CPython (3.12.16)
+2026-11-26T09:47:34.9744377Z ##[endgroup]
+2026-11-26T09:47:34.9904513Z ##[group]Run actions/setup-node@v4
+2026-11-26T09:47:34.9904940Z with:
+2026-11-26T09:47:34.9905246Z   node-version: 22
+2026-11-26T09:47:34.9905587Z   always-auth: false
+2026-11-26T09:47:34.9905896Z   check-latest: false
+2026-11-26T09:47:34.9909931Z   token: ***
+2026-11-26T09:47:34.9910215Z env:
+2026-11-26T09:47:34.9910546Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:34.9911135Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:47:34.9911712Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:34.9912193Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:34.9912679Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:34.9913147Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:47:34.9913582Z ##[endgroup]
+2026-11-26T09:47:35.1963940Z (node:2369) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T09:47:35.1965596Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T09:47:35.1966313Z Found in cache @ /opt/hostedtoolcache/node/22.23.5/x64
+2026-11-26T09:47:35.1967584Z ##[group]Environment details
+2026-11-26T09:47:38.1302115Z node: v22.23.5
+2026-11-26T09:47:38.1302496Z npm: 10.9.9
+2026-11-26T09:47:38.1302868Z yarn: 1.22.22
+2026-11-26T09:47:38.1303642Z ##[endgroup]
+2026-11-26T09:47:38.1398968Z ##[group]Run python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+2026-11-26T09:47:38.1399604Z [36;1mpython -m pip install torch --index-url https://download.pytorch.org/whl/cpu[0m
+2026-11-26T09:47:38.1440899Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:47:38.1441271Z env:
+2026-11-26T09:47:38.1441594Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:38.1441986Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:47:38.1442372Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:38.1442722Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:38.1443077Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:38.1443428Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:47:38.1443703Z ##[endgroup]
+2026-11-26T09:47:41.1101691Z Looking in indexes: https://download.pytorch.org/whl/cpu
+2026-11-26T09:47:41.1825078Z Collecting torch
+2026-11-26T09:47:41.2185350Z   Downloading torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (35 kB)
+2026-11-26T09:47:41.2388718Z Collecting filelock (from torch)
+2026-11-26T09:47:41.2551049Z   Downloading filelock-4.2.4-py3-none-any.whl.metadata (2.0 kB)
+2026-11-26T09:47:41.2656735Z Collecting typing-extensions>=4.13.0 (from torch)
+2026-11-26T09:47:41.2680579Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-26T09:47:41.2746382Z Collecting setuptools>=77.0.3 (from torch)
+2026-11-26T09:47:41.2773086Z   Downloading setuptools-78.1.0-py3-none-any.whl.metadata (6.6 kB)
+2026-11-26T09:47:41.2901964Z Collecting sympy>=1.13.3 (from torch)
+2026-11-26T09:47:41.2924653Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+2026-11-26T09:47:41.3202213Z Collecting networkx>=2.5.1 (from torch)
+2026-11-26T09:47:41.3224774Z   Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+2026-11-26T09:47:41.3303135Z Collecting jinja2 (from torch)
+2026-11-26T09:47:41.3329400Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-11-26T09:47:41.3459760Z Collecting fsspec>=0.8.5 (from torch)
+2026-11-26T09:47:41.3482214Z   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+2026-11-26T09:47:41.3645740Z Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+2026-11-26T09:47:41.3670645Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-11-26T09:47:41.3798479Z Collecting MarkupSafe>=2.0 (from jinja2->torch)
+2026-11-26T09:47:41.3822991Z   Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-11-26T09:47:41.4110782Z Downloading torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl (209.5 MB)
+2026-11-26T09:47:42.1303536Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.5/209.5 MB 295.0 MB/s  0:00:00
+2026-11-26T09:47:42.1333196Z Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+2026-11-26T09:47:42.1406137Z Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+2026-11-26T09:47:42.1478630Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 346.6 MB/s  0:00:00
+2026-11-26T09:47:42.1509073Z Downloading setuptools-78.1.0-py3-none-any.whl (1.3 MB)
+2026-11-26T09:47:42.1569684Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 221.6 MB/s  0:00:00
+2026-11-26T09:47:42.1594624Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+2026-11-26T09:47:42.1760128Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 398.4 MB/s  0:00:00
+2026-11-26T09:47:42.1787762Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-11-26T09:47:42.1818745Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 165.8 MB/s  0:00:00
+2026-11-26T09:47:42.1848207Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-26T09:47:42.1889200Z Downloading filelock-4.2.4-py3-none-any.whl (162 kB)
+2026-11-26T09:47:42.1935119Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-11-26T09:47:42.1976146Z Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-11-26T09:47:42.7061736Z Installing collected packages: mpmath, typing-extensions, sympy, setuptools, networkx, MarkupSafe, fsspec, filelock, jinja2, torch
+2026-11-26T09:47:57.1185940Z 
+2026-11-26T09:47:57.1198081Z Successfully installed MarkupSafe-3.0.3 filelock-4.2.4 fsspec-2026.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.7 setuptools-78.1.0 sympy-1.14.0 torch-2.15.0+cpu typing-extensions-4.16.0
+2026-11-26T09:47:57.1923278Z ##[group]Run python -m pip install -e '.[dev,chat]'
+2026-11-26T09:47:57.1923667Z [36;1mpython -m pip install -e '.[dev,chat]'[0m
+2026-11-26T09:47:57.1944388Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:47:57.1944721Z env:
+2026-11-26T09:47:57.1944989Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:57.1945378Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:47:57.1945819Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:57.1946173Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:57.1946640Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:47:57.1947101Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:47:57.1947421Z ##[endgroup]
+2026-11-26T09:47:57.9393230Z Obtaining file:///home/runner/work/Toruk/Toruk
+2026-11-26T09:47:57.9403594Z   Installing build dependencies: started
+2026-11-26T09:47:58.8476809Z   Installing build dependencies: finished with status 'done'
+2026-11-26T09:47:58.8481730Z   Checking if build backend supports build_editable: started
+2026-11-26T09:47:59.1192428Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-11-26T09:47:59.1198054Z   Getting requirements to build editable: started
+2026-11-26T09:47:59.3471731Z   Getting requirements to build editable: finished with status 'done'
+2026-11-26T09:47:59.3477795Z   Preparing editable metadata (pyproject.toml): started
+2026-11-26T09:47:59.4832048Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-26T09:47:59.4861609Z Requirement already satisfied: torch<3,>=2.6 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from toruk-lm==0.1.0) (2.15.0+cpu)
+2026-11-26T09:47:59.5192556Z Collecting pytest<10,>=8 (from toruk-lm==0.1.0)
+2026-11-26T09:47:59.5342571Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-26T09:47:59.7328812Z Collecting ruff<1,>=0.11 (from toruk-lm==0.1.0)
+2026-11-26T09:47:59.7350823Z   Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-11-26T09:47:59.7942939Z Collecting mypy<2,>=1.15 (from toruk-lm==0.1.0)
+2026-11-26T09:47:59.7966029Z   Downloading mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-26T09:47:59.8058116Z Collecting build<2,>=1 (from toruk-lm==0.1.0)
+2026-11-26T09:47:59.8077535Z   Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+2026-11-26T09:47:59.8435446Z Collecting psutil<8,>=5.9 (from toruk-lm==0.1.0)
+2026-11-26T09:47:59.8457230Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-11-26T09:47:59.8674924Z Collecting transformers<6,>=4.48 (from toruk-lm==0.1.0)
+2026-11-26T09:47:59.8694092Z   Downloading transformers-5.24.1-py3-none-any.whl.metadata (31 kB)
+2026-11-26T09:47:59.9457509Z Collecting safetensors<1,>=0.5 (from toruk-lm==0.1.0)
+2026-11-26T09:47:59.9477822Z   Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+2026-11-26T09:47:59.9587503Z Collecting packaging>=24.0 (from build<2,>=1->toruk-lm==0.1.0)
+2026-11-26T09:47:59.9613591Z   Downloading packaging-26.4-py3-none-any.whl.metadata (3.5 kB)
+2026-11-26T09:47:59.9676574Z Collecting pyproject_hooks (from build<2,>=1->toruk-lm==0.1.0)
+2026-11-26T09:47:59.9698163Z   Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+2026-11-26T09:47:59.9722362Z Requirement already satisfied: typing_extensions>=4.6.0 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from mypy<2,>=1.15->toruk-lm==0.1.0) (4.16.0)
+2026-11-26T09:47:59.9767530Z Collecting mypy_extensions>=1.0.0 (from mypy<2,>=1.15->toruk-lm==0.1.0)
+2026-11-26T09:47:59.9788084Z   Downloading mypy_extensions-1.2.0-py3-none-any.whl.metadata (1.1 kB)
+2026-11-26T09:47:59.9858946Z Collecting pathspec>=1.0.0 (from mypy<2,>=1.15->toruk-lm==0.1.0)
+2026-11-26T09:47:59.9883123Z   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+2026-11-26T09:48:00.0757022Z Collecting librt>=0.8.0 (from mypy<2,>=1.15->toruk-lm==0.1.0)
+2026-11-26T09:48:00.0776494Z   Downloading librt-0.17.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+2026-11-26T09:48:00.0894186Z Collecting iniconfig>=2 (from pytest<10,>=8->toruk-lm==0.1.0)
+2026-11-26T09:48:00.0912571Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-11-26T09:48:00.0990837Z Collecting pluggy<2,>=1.6 (from pytest<10,>=8->toruk-lm==0.1.0)
+2026-11-26T09:48:00.1011952Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-11-26T09:48:00.1114145Z Collecting pygments>=2.15 (from pytest<10,>=8->toruk-lm==0.1.0)
+2026-11-26T09:48:00.1134319Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-26T09:48:00.1172303Z Requirement already satisfied: filelock in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (4.2.4)
+2026-11-26T09:48:00.1173702Z Requirement already satisfied: setuptools>=77.0.3 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (78.1.0)
+2026-11-26T09:48:00.1178751Z Requirement already satisfied: sympy>=1.13.3 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (1.14.0)
+2026-11-26T09:48:00.1179924Z Requirement already satisfied: networkx>=2.5.1 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (3.7)
+2026-11-26T09:48:00.1181940Z Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (3.1.6)
+2026-11-26T09:48:00.1184228Z Requirement already satisfied: fsspec>=0.8.5 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (2026.9.0)
+2026-11-26T09:48:00.1550039Z Collecting huggingface-hub<3.0,>=1.31.0 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.1571551Z   Downloading huggingface_hub-2.4.0-py3-none-any.whl.metadata (16 kB)
+2026-11-26T09:48:00.2741809Z Collecting numpy>=1.17 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.2763672Z   Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-11-26T09:48:00.2990400Z Collecting pyyaml>=5.1 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.3014006Z   Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+2026-11-26T09:48:00.5551333Z Collecting regex>=2025.10.22 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.5576501Z   Downloading regex-2026.11.25-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-11-26T09:48:00.6330052Z Collecting tokenizers<0.24.0,>=0.23.1 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.6354510Z   Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+2026-11-26T09:48:00.6488620Z Collecting typer (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.6508564Z   Downloading typer-0.29.3-py3-none-any.whl.metadata (16 kB)
+2026-11-26T09:48:00.6680050Z Collecting tqdm>=4.60 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.6700868Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+2026-11-26T09:48:00.6839728Z Collecting click<9.0.0,>=8.4.2 (from huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.6861420Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+2026-11-26T09:48:00.7112668Z Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.7134334Z   Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+2026-11-26T09:48:00.7217542Z Collecting httpx2<3,>=2.0.0 (from huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.7238292Z   Downloading httpx2-2.16.2-py3-none-any.whl.metadata (10.0 kB)
+2026-11-26T09:48:00.7382814Z Collecting anyio>=4.10 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.7401572Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+2026-11-26T09:48:00.7480802Z Collecting httpcore2==2.16.2 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.7500905Z   Downloading httpcore2-2.16.2-py3-none-any.whl.metadata (28 kB)
+2026-11-26T09:48:00.7599985Z Collecting idna>=3.18 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.7619822Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-26T09:48:00.7704644Z Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.7728088Z   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+2026-11-26T09:48:00.7802012Z Collecting h11>=0.16 (from httpcore2==2.16.2->httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.7823737Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-11-26T09:48:00.7981712Z Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from sympy>=1.13.3->torch<3,>=2.6->toruk-lm==0.1.0) (1.3.0)
+2026-11-26T09:48:00.8006670Z Requirement already satisfied: MarkupSafe>=2.0 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from jinja2->torch<3,>=2.6->toruk-lm==0.1.0) (3.0.3)
+2026-11-26T09:48:00.8564867Z Collecting pydantic>=2.5.3 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.8588482Z   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+2026-11-26T09:48:00.8701463Z Collecting shellingham>=1.3.0 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.8722875Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-11-26T09:48:00.8888560Z Collecting rich>=13.8.0 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.8908965Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-11-26T09:48:00.8990611Z Collecting annotated-doc>=0.0.2 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.9011976Z   Downloading annotated_doc-0.0.7-py3-none-any.whl.metadata (6.4 kB)
+2026-11-26T09:48:00.9087978Z Collecting annotated-types>=0.6.0 (from pydantic>=2.5.3->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:00.9107939Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-11-26T09:48:01.3103134Z Collecting pydantic-core==2.50.5 (from pydantic>=2.5.3->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:01.3129153Z   Downloading pydantic_core-2.50.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+2026-11-26T09:48:01.3207451Z Collecting typing-inspection>=0.4.4 (from pydantic>=2.5.3->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:01.3230386Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+2026-11-26T09:48:01.3335500Z Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:01.3359685Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-26T09:48:01.3448994Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T09:48:01.3470723Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-11-26T09:48:01.3534004Z Downloading build-1.6.1-py3-none-any.whl (31 kB)
+2026-11-26T09:48:01.3573234Z Downloading mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (14.7 MB)
+2026-11-26T09:48:01.4068817Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 317.2 MB/s  0:00:00
+2026-11-26T09:48:01.4090664Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-11-26T09:48:01.4124666Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+2026-11-26T09:48:01.4167880Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-11-26T09:48:01.4197772Z Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)
+2026-11-26T09:48:01.4547511Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 317.7 MB/s  0:00:00
+2026-11-26T09:48:01.4570715Z Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-11-26T09:48:01.4629647Z Downloading transformers-5.24.1-py3-none-any.whl (13.6 MB)
+2026-11-26T09:48:01.5214782Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 236.5 MB/s  0:00:00
+2026-11-26T09:48:01.5241386Z Downloading huggingface_hub-2.4.0-py3-none-any.whl (857 kB)
+2026-11-26T09:48:01.5283782Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 242.1 MB/s  0:00:00
+2026-11-26T09:48:01.5307306Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+2026-11-26T09:48:01.5345154Z Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.3 MB)
+2026-11-26T09:48:01.5500765Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 286.1 MB/s  0:00:00
+2026-11-26T09:48:01.5527111Z Downloading httpx2-2.16.2-py3-none-any.whl (97 kB)
+2026-11-26T09:48:01.5569823Z Downloading httpcore2-2.16.2-py3-none-any.whl (85 kB)
+2026-11-26T09:48:01.5600561Z Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-11-26T09:48:01.5725952Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 282.1 MB/s  0:00:00
+2026-11-26T09:48:01.5747122Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+2026-11-26T09:48:01.5779837Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-11-26T09:48:01.5809640Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-11-26T09:48:01.5839872Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-11-26T09:48:01.5873686Z Downloading librt-0.17.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (623 kB)
+2026-11-26T09:48:01.5905931Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 623.6/623.6 kB 198.6 MB/s  0:00:00
+2026-11-26T09:48:01.5926588Z Downloading mypy_extensions-1.2.0-py3-none-any.whl (5.1 kB)
+2026-11-26T09:48:01.5956913Z Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (15.7 MB)
+2026-11-26T09:48:01.6734976Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 322.0 MB/s  0:00:00
+2026-11-26T09:48:01.6754709Z Downloading packaging-26.4-py3-none-any.whl (140 kB)
+2026-11-26T09:48:01.6790387Z Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+2026-11-26T09:48:01.6820522Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-26T09:48:01.6881552Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 221.6 MB/s  0:00:00
+2026-11-26T09:48:01.6904037Z Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (849 kB)
+2026-11-26T09:48:01.6947061Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.2/849.2 kB 231.3 MB/s  0:00:00
+2026-11-26T09:48:01.6967133Z Downloading regex-2026.11.25-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (820 kB)
+2026-11-26T09:48:01.7011364Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 820.5/820.5 kB 282.2 MB/s  0:00:00
+2026-11-26T09:48:01.7030613Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-11-26T09:48:01.7061581Z Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-11-26T09:48:01.7090919Z Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+2026-11-26T09:48:01.7119884Z Downloading typer-0.29.3-py3-none-any.whl (121 kB)
+2026-11-26T09:48:01.7152015Z Downloading annotated_doc-0.0.7-py3-none-any.whl (5.3 kB)
+2026-11-26T09:48:01.7181747Z Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+2026-11-26T09:48:01.7226269Z Downloading pydantic_core-2.50.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+2026-11-26T09:48:01.7318940Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 266.7 MB/s  0:00:00
+2026-11-26T09:48:01.7338514Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-11-26T09:48:01.7368062Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-11-26T09:48:01.7403293Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+2026-11-26T09:48:01.7434068Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-11-26T09:48:01.7462159Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-11-26T09:48:01.7490838Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+2026-11-26T09:48:01.8865226Z Building wheels for collected packages: toruk-lm
+2026-11-26T09:48:01.8870496Z   Building editable for toruk-lm (pyproject.toml): started
+2026-11-26T09:48:02.0395726Z   Building editable for toruk-lm (pyproject.toml): finished with status 'done'
+2026-11-26T09:48:02.0397375Z   Created wheel for toruk-lm: filename=toruk_lm-0.1.0-0.editable-py3-none-any.whl size=1618 sha256=a017963b8510027dceb8baa98500df4c5248c6f139911e653cd1bfef604da8cd
+2026-11-26T09:48:02.0398595Z   Stored in directory: /tmp/pip-ephem-wheel-cache-tquoi44q/wheels/54/26/a5/1d0d4344b115dfbb34639a5d4014b63a2fd8708d6f05e773b6
+2026-11-26T09:48:02.0407987Z Successfully built toruk-lm
+2026-11-26T09:48:02.1157482Z Installing collected packages: typing-inspection, truststore, tqdm, shellingham, safetensors, ruff, regex, pyyaml, pyproject_hooks, pygments, pydantic-core, psutil, pluggy, pathspec, packaging, numpy, mypy_extensions, mdurl, iniconfig, idna, hf-xet, h11, click, annotated-types, annotated-doc, pytest, pydantic, markdown-it-py, librt, httpcore2, build, anyio, toruk-lm, rich, mypy, httpx2, typer, huggingface-hub, tokenizers, transformers
+2026-11-26T09:48:12.0229807Z 
+2026-11-26T09:48:12.0257235Z Successfully installed annotated-doc-0.0.7 annotated-types-0.8.0 anyio-4.16.0 build-1.6.1 click-8.5.1 h11-0.16.0 hf-xet-1.8.0 httpcore2-2.16.2 httpx2-2.16.2 huggingface-hub-2.4.0 idna-3.20 iniconfig-2.3.1 librt-0.17.0 markdown-it-py-4.3.0 mdurl-0.1.2 mypy-1.20.2 mypy_extensions-1.2.0 numpy-2.5.5 packaging-26.4 pathspec-1.1.1 pluggy-1.7.0 psutil-7.2.2 pydantic-2.14.4 pydantic-core-2.50.5 pygments-2.21.0 pyproject_hooks-1.3.3 pytest-9.2.0 pyyaml-6.0.4 regex-2026.11.25 rich-15.0.0 ruff-0.17.6 safetensors-0.8.0 shellingham-1.5.4 tokenizers-0.23.3 toruk-lm-0.1.0 tqdm-4.70.1 transformers-5.24.1 truststore-0.10.5 typer-0.29.3 typing-inspection-0.4.5
+2026-11-26T09:48:12.1532437Z ##[group]Run python -m pip check
+2026-11-26T09:48:12.1532750Z [36;1mpython -m pip check[0m
+2026-11-26T09:48:12.1550995Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:12.1551249Z env:
+2026-11-26T09:48:12.1551567Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.1551957Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:12.1552357Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.1552707Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.1553044Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.1553418Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:12.1553710Z ##[endgroup]
+2026-11-26T09:48:12.3283600Z No broken requirements found.
+2026-11-26T09:48:12.3549803Z ##[group]Run python -c "import toruk_lm; print(toruk_lm.__version__)"
+2026-11-26T09:48:12.3550242Z [36;1mpython -c "import toruk_lm; print(toruk_lm.__version__)"[0m
+2026-11-26T09:48:12.3569567Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:12.3569833Z env:
+2026-11-26T09:48:12.3570152Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3570541Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:12.3570969Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3571316Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3571654Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3572012Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:12.3572307Z ##[endgroup]
+2026-11-26T09:48:12.3694762Z 0.1.0
+2026-11-26T09:48:12.3736544Z ##[group]Run python -m toruk_lm --help
+2026-11-26T09:48:12.3736835Z [36;1mpython -m toruk_lm --help[0m
+2026-11-26T09:48:12.3751205Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:12.3751441Z env:
+2026-11-26T09:48:12.3751727Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3752248Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:12.3752636Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3752997Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3753351Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:12.3753691Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:12.3753994Z ##[endgroup]
+2026-11-26T09:48:13.7401300Z usage: toruk [-h]
+2026-11-26T09:48:13.7405108Z              {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+2026-11-26T09:48:13.7409157Z              ...
+2026-11-26T09:48:13.7409437Z 
+2026-11-26T09:48:13.7409696Z Toruk-LM research foundation
+2026-11-26T09:48:13.7410010Z 
+2026-11-26T09:48:13.7410309Z positional arguments:
+2026-11-26T09:48:13.7413647Z   {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+2026-11-26T09:48:13.7416945Z     diagnose            report actual runtime and CUDA availability
+2026-11-26T09:48:13.7418190Z     validate-config     validate a versioned reproduction config
+2026-11-26T09:48:13.7419137Z     audit-evidence      validate sealed evidence and rescore raw answers
+2026-11-26T09:48:13.7420172Z     compare-replay      require exact generated answers and score parity
+2026-11-26T09:48:13.7421087Z     make-fixture        generate document-separated smoke-test text
+2026-11-26T09:48:13.7421994Z     validate            verify split checksums, config and checkpoint identity
+2026-11-26T09:48:13.7423065Z     reproduce           run a bounded foundation or versioned research config
+2026-11-26T09:48:13.7423969Z     summarize           verify a sealed run and regenerate result tables
+2026-11-26T09:48:13.7424851Z     train               train ordinary LM; CPU; fixed learning rate
+2026-11-26T09:48:13.7425712Z     evaluate            local-context loss and autoregressive continuations
+2026-11-26T09:48:13.7426512Z     generate            greedy local-context inference
+2026-11-26T09:48:13.7427423Z     make-worlds         create frozen controlled worlds and LM exports
+2026-11-26T09:48:13.7428538Z     evaluate-worlds     validation-only generated factual answers
+2026-11-26T09:48:13.7429463Z     train-controlled    bounded ordinary/recurrent world training
+2026-11-26T09:48:13.7430137Z     evaluate-controlled
+2026-11-26T09:48:13.7430767Z                         validation-only world answers
+2026-11-26T09:48:13.7431503Z     effect-labels       offline bounded paired supervision
+2026-11-26T09:48:13.7432337Z     fit-effect          fit effect predictor on training labels only
+2026-11-26T09:48:13.7433196Z     evaluate-effect     offline validation effect diagnostics
+2026-11-26T09:48:13.7434104Z     controlled-pilot    bounded validation prerequisite/comparison pipeline
+2026-11-26T09:48:13.7435094Z     verify-m6           reproduce frozen M6 answers without retraining
+2026-11-26T09:48:13.7435984Z     generalization      bounded exploratory M7 held-out failure study
+2026-11-26T09:48:13.7436852Z     evaluate-heldout    one protocol-bound M7 cell/checkpoint
+2026-11-26T09:48:13.7437349Z 
+2026-11-26T09:48:13.7437532Z options:
+2026-11-26T09:48:13.7438303Z   -h, --help            show this help message and exit
+2026-11-26T09:48:13.9226339Z ##[group]Run python -m toruk_lm diagnose
+2026-11-26T09:48:13.9226690Z [36;1mpython -m toruk_lm diagnose[0m
+2026-11-26T09:48:13.9245022Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:13.9245347Z env:
+2026-11-26T09:48:13.9245622Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:13.9246225Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:13.9246701Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:13.9247066Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:13.9247435Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:13.9247958Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:13.9248287Z ##[endgroup]
+2026-11-26T09:48:14.7233581Z {
+2026-11-26T09:48:14.7234304Z   "python": "3.12.16",
+2026-11-26T09:48:14.7235005Z   "platform": "Linux-7.0.0-1016-aws-x86_64-with-glibc2.43",
+2026-11-26T09:48:14.7235896Z   "logical_cpus": 4,
+2026-11-26T09:48:14.7236364Z   "torch": "2.15.0+cpu",
+2026-11-26T09:48:14.7236840Z   "cuda_available": false,
+2026-11-26T09:48:14.7237327Z   "cuda_devices": [],
+2026-11-26T09:48:14.7238077Z   "training_device": "cpu",
+2026-11-26T09:48:14.7238914Z   "tokenizer": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7"
+2026-11-26T09:48:14.7239739Z }
+2026-11-26T09:48:14.9111193Z ##[group]Run python scripts/check_frozen_sources.py
+2026-11-26T09:48:14.9111721Z [36;1mpython scripts/check_frozen_sources.py[0m
+2026-11-26T09:48:14.9137180Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:14.9137916Z env:
+2026-11-26T09:48:14.9138305Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9138844Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:14.9139380Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9139916Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9140383Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9140872Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:14.9141292Z ##[endgroup]
+2026-11-26T09:48:14.9372854Z Verified 3 frozen experiment source files.
+2026-11-26T09:48:14.9426078Z ##[group]Run python -m ruff check .
+2026-11-26T09:48:14.9426358Z [36;1mpython -m ruff check .[0m
+2026-11-26T09:48:14.9440915Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:14.9441271Z env:
+2026-11-26T09:48:14.9441553Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9441957Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:14.9442361Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9442690Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9443019Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:14.9443373Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:14.9443646Z ##[endgroup]
+2026-11-26T09:48:15.0030304Z All checks passed!
+2026-11-26T09:48:15.0063251Z ##[group]Run python -m ruff format --check src tests scripts
+2026-11-26T09:48:15.0063846Z [36;1mpython -m ruff format --check src tests scripts[0m
+2026-11-26T09:48:15.0082883Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:15.0083146Z env:
+2026-11-26T09:48:15.0083411Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0083794Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:15.0084176Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0084501Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0084878Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0085205Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:15.0085493Z ##[endgroup]
+2026-11-26T09:48:15.0592919Z 202 files already formatted
+2026-11-26T09:48:15.0621900Z ##[group]Run python -m mypy
+2026-11-26T09:48:15.0622155Z [36;1mpython -m mypy[0m
+2026-11-26T09:48:15.0635771Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:15.0636066Z env:
+2026-11-26T09:48:15.0636331Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0636804Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:15.0637251Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0637592Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0638132Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:15.0638525Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:15.0638810Z ##[endgroup]
+2026-11-26T09:48:48.7236510Z Success: no issues found in 38 source files
+2026-11-26T09:48:48.7750592Z ##[group]Run python -m mypy --platform linux
+2026-11-26T09:48:48.7750923Z [36;1mpython -m mypy --platform linux[0m
+2026-11-26T09:48:48.7769421Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:48.7769746Z env:
+2026-11-26T09:48:48.7770026Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:48.7770413Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:48.7770828Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:48.7771163Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:48.7771489Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:48.7771856Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:48.7772150Z ##[endgroup]
+2026-11-26T09:48:49.2778448Z Success: no issues found in 38 source files
+2026-11-26T09:48:49.2846497Z ##[group]Run python -m pytest -q
+2026-11-26T09:48:49.2846938Z [36;1mpython -m pytest -q[0m
+2026-11-26T09:48:49.2873774Z shell: /usr/bin/bash -e {0}
+2026-11-26T09:48:49.2874162Z env:
+2026-11-26T09:48:49.2874622Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:49.2875185Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T09:48:49.2875749Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:49.2876297Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:49.2876806Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T09:48:49.2877342Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T09:48:49.2877946Z ##[endgroup]
+2026-11-26T09:48:54.6494365Z ........................................................................ [ 12%]
+2026-11-26T09:49:01.7961992Z ........................................................................ [ 25%]
+2026-11-26T09:49:09.3454953Z ..............................................F......................... [ 38%]
+2026-11-26T09:49:23.3320342Z .....................................FFFFFFFFFFFFFFFFFFFFFFFF........... [ 51%]
+2026-11-26T09:49:27.1702943Z .................................F....................................F. [ 64%]
+2026-11-26T09:49:27.2636632Z .............................................s.......F.................. [ 77%]
+2026-11-26T09:49:44.5347272Z ........................................................................ [ 90%]
+2026-11-26T09:50:03.2309472Z ......................................................                   [100%]
+2026-11-26T09:50:03.2328964Z =================================== FAILURES ===================================
+2026-11-26T09:50:03.2334090Z _________________ test_exact_saved_inputs_and_260_record_plan __________________
+2026-11-26T09:50:03.2334421Z 
+2026-11-26T09:50:03.2334648Z     def test_exact_saved_inputs_and_260_record_plan():
+2026-11-26T09:50:03.2335337Z >       prefixes, labels, originals, checkpoints, plan = probe.inputs_from_saved()
+2026-11-26T09:50:03.2335901Z                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2336216Z 
+2026-11-26T09:50:03.2336399Z tests/test_first_byte_probe.py:17: 
+2026-11-26T09:50:03.2336837Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2337316Z scripts/first_byte_probe.py:160: in inputs_from_saved
+2026-11-26T09:50:03.2338029Z     sha(checkpoint) == meta["sha256"] and checkpoint.stat().st_size == meta["bytes"],
+2026-11-26T09:50:03.2338690Z     ^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2339023Z scripts/first_byte_probe.py:60: in sha
+2026-11-26T09:50:03.2339440Z     return hashlib.sha256(path.read_bytes()).hexdigest()
+2026-11-26T09:50:03.2339809Z                           ^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2340269Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/pathlib.py:1019: in read_bytes
+2026-11-26T09:50:03.2340747Z     with self.open(mode='rb') as f:
+2026-11-26T09:50:03.2341091Z          ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2341512Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2341729Z 
+2026-11-26T09:50:03.2342203Z self = PosixPath('/home/runner/work/Toruk/Toruk/artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt')
+2026-11-26T09:50:03.2343164Z mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+2026-11-26T09:50:03.2343427Z 
+2026-11-26T09:50:03.2343801Z     def open(self, mode='r', buffering=-1, encoding=None,
+2026-11-26T09:50:03.2346162Z              errors=None, newline=None):
+2026-11-26T09:50:03.2346665Z         """
+2026-11-26T09:50:03.2347164Z         Open the file pointed to by this path and return a file object, as
+2026-11-26T09:50:03.2348809Z         the built-in open() function does.
+2026-11-26T09:50:03.2349182Z         """
+2026-11-26T09:50:03.2349521Z         if "b" not in mode:
+2026-11-26T09:50:03.2350210Z             encoding = io.text_encoding(encoding)
+2026-11-26T09:50:03.2350820Z >       return io.open(self, mode, buffering, encoding, errors, newline)
+2026-11-26T09:50:03.2351402Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2352471Z E       FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Toruk/Toruk/artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt'
+2026-11-26T09:50:03.2353214Z 
+2026-11-26T09:50:03.2353678Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/pathlib.py:1013: FileNotFoundError
+2026-11-26T09:50:03.2354485Z _____ test_controller_always_records_and_kernel_closes_lifetime[success-0] _____
+2026-11-26T09:50:03.2354899Z 
+2026-11-26T09:50:03.2355309Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records0')
+2026-11-26T09:50:03.2355941Z mode = 'success', exit_code = 0
+2026-11-26T09:50:03.2356183Z 
+2026-11-26T09:50:03.2356598Z     @pytest.mark.parametrize("mode,exit_code", [("success", 0), ("failure", 7), ("interrupt", 130)])
+2026-11-26T09:50:03.2357455Z     def test_controller_always_records_and_kernel_closes_lifetime(tmp_path, mode, exit_code):
+2026-11-26T09:50:03.2358262Z         directory = tmp_path / mode
+2026-11-26T09:50:03.2358669Z         code = (
+2026-11-26T09:50:03.2359190Z             "import sys; from pathlib import Path; sys.path.insert(0,'scripts'); "
+2026-11-26T09:50:03.2359824Z             "from lifetime_job import controller_record\n"
+2026-11-26T09:50:03.2360369Z             f"with controller_record(Path({str(directory)!r})):\n"
+2026-11-26T09:50:03.2360856Z             + (
+2026-11-26T09:50:03.2361201Z                 " print('success')\n"
+2026-11-26T09:50:03.2361644Z                 if mode == "success"
+2026-11-26T09:50:03.2362057Z                 else " raise SystemExit(7)\n"
+2026-11-26T09:50:03.2362468Z                 if mode == "failure"
+2026-11-26T09:50:03.2362914Z                 else " raise KeyboardInterrupt()\n"
+2026-11-26T09:50:03.2363308Z             )
+2026-11-26T09:50:03.2363684Z         )
+2026-11-26T09:50:03.2364208Z >       result = watch([sys.executable, "-B", "-c", code], directory, tmp_path, 5)
+2026-11-26T09:50:03.2364805Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2365120Z 
+2026-11-26T09:50:03.2365322Z tests/test_lifetime_job.py:30: 
+2026-11-26T09:50:03.2365824Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2366144Z 
+2026-11-26T09:50:03.2367480Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "import sys; from pathlib import Path; sys.path.ins...ntroller_record(Path('/tmp/pytest-of-runner/pytest-0/test_controller_always_records0/success')):\n print('success')\n"]
+2026-11-26T09:50:03.2369379Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records0/success')
+2026-11-26T09:50:03.2370197Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records0')
+2026-11-26T09:50:03.2370959Z seconds = 5, memory = 2147483648, disk = 134217728, interrupt_after = None
+2026-11-26T09:50:03.2371451Z poll = 0.05
+2026-11-26T09:50:03.2371617Z 
+2026-11-26T09:50:03.2371773Z     def watch(
+2026-11-26T09:50:03.2372068Z         command,
+2026-11-26T09:50:03.2372359Z         directory,
+2026-11-26T09:50:03.2372677Z         root,
+2026-11-26T09:50:03.2372958Z         seconds,
+2026-11-26T09:50:03.2373306Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2373655Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2374087Z         interrupt_after=None,
+2026-11-26T09:50:03.2374487Z         poll=0.05,
+2026-11-26T09:50:03.2374820Z     ):
+2026-11-26T09:50:03.2375156Z >       import msvcrt
+2026-11-26T09:50:03.2375597Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2375886Z 
+2026-11-26T09:50:03.2376158Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2376792Z _____ test_controller_always_records_and_kernel_closes_lifetime[failure-7] _____
+2026-11-26T09:50:03.2377193Z 
+2026-11-26T09:50:03.2377959Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records1')
+2026-11-26T09:50:03.2378618Z mode = 'failure', exit_code = 7
+2026-11-26T09:50:03.2378854Z 
+2026-11-26T09:50:03.2379239Z     @pytest.mark.parametrize("mode,exit_code", [("success", 0), ("failure", 7), ("interrupt", 130)])
+2026-11-26T09:50:03.2380101Z     def test_controller_always_records_and_kernel_closes_lifetime(tmp_path, mode, exit_code):
+2026-11-26T09:50:03.2380746Z         directory = tmp_path / mode
+2026-11-26T09:50:03.2381086Z         code = (
+2026-11-26T09:50:03.2381598Z             "import sys; from pathlib import Path; sys.path.insert(0,'scripts'); "
+2026-11-26T09:50:03.2382273Z             "from lifetime_job import controller_record\n"
+2026-11-26T09:50:03.2382846Z             f"with controller_record(Path({str(directory)!r})):\n"
+2026-11-26T09:50:03.2383305Z             + (
+2026-11-26T09:50:03.2383608Z                 " print('success')\n"
+2026-11-26T09:50:03.2384073Z                 if mode == "success"
+2026-11-26T09:50:03.2384559Z                 else " raise SystemExit(7)\n"
+2026-11-26T09:50:03.2385006Z                 if mode == "failure"
+2026-11-26T09:50:03.2385469Z                 else " raise KeyboardInterrupt()\n"
+2026-11-26T09:50:03.2385864Z             )
+2026-11-26T09:50:03.2386146Z         )
+2026-11-26T09:50:03.2386695Z >       result = watch([sys.executable, "-B", "-c", code], directory, tmp_path, 5)
+2026-11-26T09:50:03.2387271Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2387562Z 
+2026-11-26T09:50:03.2388007Z tests/test_lifetime_job.py:30: 
+2026-11-26T09:50:03.2388469Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2388762Z 
+2026-11-26T09:50:03.2389955Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "import sys; from pathlib import Path; sys.path.ins...oller_record(Path('/tmp/pytest-of-runner/pytest-0/test_controller_always_records1/failure')):\n raise SystemExit(7)\n"]
+2026-11-26T09:50:03.2391442Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records1/failure')
+2026-11-26T09:50:03.2392279Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records1')
+2026-11-26T09:50:03.2393010Z seconds = 5, memory = 2147483648, disk = 134217728, interrupt_after = None
+2026-11-26T09:50:03.2393498Z poll = 0.05
+2026-11-26T09:50:03.2393679Z 
+2026-11-26T09:50:03.2393793Z     def watch(
+2026-11-26T09:50:03.2394119Z         command,
+2026-11-26T09:50:03.2394438Z         directory,
+2026-11-26T09:50:03.2394895Z         root,
+2026-11-26T09:50:03.2395186Z         seconds,
+2026-11-26T09:50:03.2395549Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2395902Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2396247Z         interrupt_after=None,
+2026-11-26T09:50:03.2396617Z         poll=0.05,
+2026-11-26T09:50:03.2396918Z     ):
+2026-11-26T09:50:03.2397238Z >       import msvcrt
+2026-11-26T09:50:03.2397866Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2398171Z 
+2026-11-26T09:50:03.2398403Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2399079Z ___ test_controller_always_records_and_kernel_closes_lifetime[interrupt-130] ___
+2026-11-26T09:50:03.2399429Z 
+2026-11-26T09:50:03.2399798Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records2')
+2026-11-26T09:50:03.2400366Z mode = 'interrupt', exit_code = 130
+2026-11-26T09:50:03.2400608Z 
+2026-11-26T09:50:03.2400987Z     @pytest.mark.parametrize("mode,exit_code", [("success", 0), ("failure", 7), ("interrupt", 130)])
+2026-11-26T09:50:03.2401851Z     def test_controller_always_records_and_kernel_closes_lifetime(tmp_path, mode, exit_code):
+2026-11-26T09:50:03.2402459Z         directory = tmp_path / mode
+2026-11-26T09:50:03.2402824Z         code = (
+2026-11-26T09:50:03.2403333Z             "import sys; from pathlib import Path; sys.path.insert(0,'scripts'); "
+2026-11-26T09:50:03.2404080Z             "from lifetime_job import controller_record\n"
+2026-11-26T09:50:03.2404649Z             f"with controller_record(Path({str(directory)!r})):\n"
+2026-11-26T09:50:03.2405099Z             + (
+2026-11-26T09:50:03.2405476Z                 " print('success')\n"
+2026-11-26T09:50:03.2405871Z                 if mode == "success"
+2026-11-26T09:50:03.2406303Z                 else " raise SystemExit(7)\n"
+2026-11-26T09:50:03.2406715Z                 if mode == "failure"
+2026-11-26T09:50:03.2407180Z                 else " raise KeyboardInterrupt()\n"
+2026-11-26T09:50:03.2407841Z             )
+2026-11-26T09:50:03.2408148Z         )
+2026-11-26T09:50:03.2408623Z >       result = watch([sys.executable, "-B", "-c", code], directory, tmp_path, 5)
+2026-11-26T09:50:03.2409206Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2409441Z 
+2026-11-26T09:50:03.2409627Z tests/test_lifetime_job.py:30: 
+2026-11-26T09:50:03.2410115Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2410413Z 
+2026-11-26T09:50:03.2412274Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "import sys; from pathlib import Path; sys.path.ins...cord(Path('/tmp/pytest-of-runner/pytest-0/test_controller_always_records2/interrupt')):\n raise KeyboardInterrupt()\n"]
+2026-11-26T09:50:03.2414642Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records2/interrupt')
+2026-11-26T09:50:03.2415977Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_controller_always_records2')
+2026-11-26T09:50:03.2417099Z seconds = 5, memory = 2147483648, disk = 134217728, interrupt_after = None
+2026-11-26T09:50:03.2418034Z poll = 0.05
+2026-11-26T09:50:03.2418329Z 
+2026-11-26T09:50:03.2418502Z     def watch(
+2026-11-26T09:50:03.2418945Z         command,
+2026-11-26T09:50:03.2419378Z         directory,
+2026-11-26T09:50:03.2419797Z         root,
+2026-11-26T09:50:03.2420225Z         seconds,
+2026-11-26T09:50:03.2420698Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2421179Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2421712Z         interrupt_after=None,
+2026-11-26T09:50:03.2422222Z         poll=0.05,
+2026-11-26T09:50:03.2422627Z     ):
+2026-11-26T09:50:03.2423079Z >       import msvcrt
+2026-11-26T09:50:03.2423701Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2424126Z 
+2026-11-26T09:50:03.2424523Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2425505Z ________ test_abrupt_exit_without_self_receipt_is_completely_accounted _________
+2026-11-26T09:50:03.2426077Z 
+2026-11-26T09:50:03.2426892Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_abrupt_exit_without_self_0')
+2026-11-26T09:50:03.2429060Z 
+2026-11-26T09:50:03.2429558Z     def test_abrupt_exit_without_self_receipt_is_completely_accounted(tmp_path):
+2026-11-26T09:50:03.2430401Z >       result = watch(
+2026-11-26T09:50:03.2431252Z             [sys.executable, "-B", "-c", "import os; os._exit(9)"], tmp_path / "abrupt", tmp_path, 5
+2026-11-26T09:50:03.2432090Z         )
+2026-11-26T09:50:03.2432325Z 
+2026-11-26T09:50:03.2432573Z tests/test_lifetime_job.py:42: 
+2026-11-26T09:50:03.2433349Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2433815Z 
+2026-11-26T09:50:03.2434557Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', 'import os; os._exit(9)']
+2026-11-26T09:50:03.2435981Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_abrupt_exit_without_self_0/abrupt')
+2026-11-26T09:50:03.2437288Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_abrupt_exit_without_self_0')
+2026-11-26T09:50:03.2438604Z seconds = 5, memory = 2147483648, disk = 134217728, interrupt_after = None
+2026-11-26T09:50:03.2439350Z poll = 0.05
+2026-11-26T09:50:03.2439595Z 
+2026-11-26T09:50:03.2439789Z     def watch(
+2026-11-26T09:50:03.2440233Z         command,
+2026-11-26T09:50:03.2440651Z         directory,
+2026-11-26T09:50:03.2441295Z         root,
+2026-11-26T09:50:03.2566544Z         seconds,
+2026-11-26T09:50:03.2566983Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2567348Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2567611Z         interrupt_after=None,
+2026-11-26T09:50:03.2568022Z         poll=0.05,
+2026-11-26T09:50:03.2568218Z     ):
+2026-11-26T09:50:03.2568417Z >       import msvcrt
+2026-11-26T09:50:03.2568714Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2568930Z 
+2026-11-26T09:50:03.2569137Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2569600Z _________ test_cap_and_observer_interruption_drain_entire_tree[False] __________
+2026-11-26T09:50:03.2569877Z 
+2026-11-26T09:50:03.2570344Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cap_and_observer_interrup0')
+2026-11-26T09:50:03.2570808Z interrupt = False
+2026-11-26T09:50:03.2570930Z 
+2026-11-26T09:50:03.2571119Z     @pytest.mark.parametrize("interrupt", [False, True])
+2026-11-26T09:50:03.2571982Z     def test_cap_and_observer_interruption_drain_entire_tree(tmp_path, interrupt):
+2026-11-26T09:50:03.2572511Z         code = (
+2026-11-26T09:50:03.2572799Z             "import subprocess,sys,time; "
+2026-11-26T09:50:03.2573278Z             "subprocess.Popen([sys.executable,'-c','import time; time.sleep(10)']); time.sleep(10)"
+2026-11-26T09:50:03.2573681Z         )
+2026-11-26T09:50:03.2573882Z >       result = watch(
+2026-11-26T09:50:03.2574144Z             [sys.executable, "-B", "-c", code],
+2026-11-26T09:50:03.2574493Z             tmp_path / ("cancel" if interrupt else "cap"),
+2026-11-26T09:50:03.2574792Z             tmp_path,
+2026-11-26T09:50:03.2575056Z             5 if interrupt else 0.25,
+2026-11-26T09:50:03.2575406Z             interrupt_after=0.25 if interrupt else None,
+2026-11-26T09:50:03.2575698Z         )
+2026-11-26T09:50:03.2575826Z 
+2026-11-26T09:50:03.2575968Z tests/test_lifetime_job.py:56: 
+2026-11-26T09:50:03.2576319Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2576568Z 
+2026-11-26T09:50:03.2577313Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "import subprocess,sys,time; subprocess.Popen([sys.executable,'-c','import time; time.sleep(10)']); time.sleep(10)"]
+2026-11-26T09:50:03.2578460Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cap_and_observer_interrup0/cap')
+2026-11-26T09:50:03.2579115Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cap_and_observer_interrup0')
+2026-11-26T09:50:03.2579670Z seconds = 0.25, memory = 2147483648, disk = 134217728, interrupt_after = None
+2026-11-26T09:50:03.2580229Z poll = 0.05
+2026-11-26T09:50:03.2581085Z 
+2026-11-26T09:50:03.2581182Z     def watch(
+2026-11-26T09:50:03.2581387Z         command,
+2026-11-26T09:50:03.2581581Z         directory,
+2026-11-26T09:50:03.2581987Z         root,
+2026-11-26T09:50:03.2582197Z         seconds,
+2026-11-26T09:50:03.2582412Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2582660Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2582910Z         interrupt_after=None,
+2026-11-26T09:50:03.2583184Z         poll=0.05,
+2026-11-26T09:50:03.2583413Z     ):
+2026-11-26T09:50:03.2583633Z >       import msvcrt
+2026-11-26T09:50:03.2583990Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2584236Z 
+2026-11-26T09:50:03.2584583Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2585133Z __________ test_cap_and_observer_interruption_drain_entire_tree[True] __________
+2026-11-26T09:50:03.2585452Z 
+2026-11-26T09:50:03.2585807Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cap_and_observer_interrup1')
+2026-11-26T09:50:03.2586273Z interrupt = True
+2026-11-26T09:50:03.2586409Z 
+2026-11-26T09:50:03.2586622Z     @pytest.mark.parametrize("interrupt", [False, True])
+2026-11-26T09:50:03.2587142Z     def test_cap_and_observer_interruption_drain_entire_tree(tmp_path, interrupt):
+2026-11-26T09:50:03.2587567Z         code = (
+2026-11-26T09:50:03.2588016Z             "import subprocess,sys,time; "
+2026-11-26T09:50:03.2588699Z             "subprocess.Popen([sys.executable,'-c','import time; time.sleep(10)']); time.sleep(10)"
+2026-11-26T09:50:03.2589166Z         )
+2026-11-26T09:50:03.2589386Z >       result = watch(
+2026-11-26T09:50:03.2589674Z             [sys.executable, "-B", "-c", code],
+2026-11-26T09:50:03.2590024Z             tmp_path / ("cancel" if interrupt else "cap"),
+2026-11-26T09:50:03.2590313Z             tmp_path,
+2026-11-26T09:50:03.2590564Z             5 if interrupt else 0.25,
+2026-11-26T09:50:03.2590907Z             interrupt_after=0.25 if interrupt else None,
+2026-11-26T09:50:03.2591214Z         )
+2026-11-26T09:50:03.2591340Z 
+2026-11-26T09:50:03.2591486Z tests/test_lifetime_job.py:56: 
+2026-11-26T09:50:03.2591902Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2592157Z 
+2026-11-26T09:50:03.2592997Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "import subprocess,sys,time; subprocess.Popen([sys.executable,'-c','import time; time.sleep(10)']); time.sleep(10)"]
+2026-11-26T09:50:03.2594082Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cap_and_observer_interrup1/cancel')
+2026-11-26T09:50:03.2594734Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cap_and_observer_interrup1')
+2026-11-26T09:50:03.2595280Z seconds = 5, memory = 2147483648, disk = 134217728, interrupt_after = 0.25
+2026-11-26T09:50:03.2595608Z poll = 0.05
+2026-11-26T09:50:03.2595698Z 
+2026-11-26T09:50:03.2595771Z     def watch(
+2026-11-26T09:50:03.2595919Z         command,
+2026-11-26T09:50:03.2596071Z         directory,
+2026-11-26T09:50:03.2596219Z         root,
+2026-11-26T09:50:03.2596374Z         seconds,
+2026-11-26T09:50:03.2596529Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2596702Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2596873Z         interrupt_after=None,
+2026-11-26T09:50:03.2597048Z         poll=0.05,
+2026-11-26T09:50:03.2597189Z     ):
+2026-11-26T09:50:03.2597342Z >       import msvcrt
+2026-11-26T09:50:03.2597568Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2598373Z 
+2026-11-26T09:50:03.2598523Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2598886Z ___ test_descendant_outlives_parent_and_lifetime_cpu_exceeds_coarse_samples ____
+2026-11-26T09:50:03.2599109Z 
+2026-11-26T09:50:03.2599341Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_descendant_outlives_paren0')
+2026-11-26T09:50:03.2599580Z 
+2026-11-26T09:50:03.2599798Z     def test_descendant_outlives_parent_and_lifetime_cpu_exceeds_coarse_samples(tmp_path):
+2026-11-26T09:50:03.2600272Z         leaf = "import time; t=time.process_time();\nwhile time.process_time()-t<0.2: pass"
+2026-11-26T09:50:03.2600867Z         code = f"import subprocess,sys; subprocess.Popen([sys.executable,'-c',{leaf!r}])"
+2026-11-26T09:50:03.2601176Z >       result = watch(
+2026-11-26T09:50:03.2601487Z             [sys.executable, "-B", "-c", code], tmp_path / "descendant", tmp_path, 5, poll=0.4
+2026-11-26T09:50:03.2601766Z         )
+2026-11-26T09:50:03.2601841Z 
+2026-11-26T09:50:03.2601947Z tests/test_lifetime_job.py:71: 
+2026-11-26T09:50:03.2602213Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2602380Z 
+2026-11-26T09:50:03.2603003Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "import subprocess,sys; subprocess.Popen([sys.executable,'-c','import time; t=time.process_time();\\nwhile time.process_time()-t<0.2: pass'])"]
+2026-11-26T09:50:03.2603806Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_descendant_outlives_paren0/descendant')
+2026-11-26T09:50:03.2604288Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_descendant_outlives_paren0')
+2026-11-26T09:50:03.2604693Z seconds = 5, memory = 2147483648, disk = 134217728, interrupt_after = None
+2026-11-26T09:50:03.2604937Z poll = 0.4
+2026-11-26T09:50:03.2605070Z 
+2026-11-26T09:50:03.2605135Z     def watch(
+2026-11-26T09:50:03.2605281Z         command,
+2026-11-26T09:50:03.2605422Z         directory,
+2026-11-26T09:50:03.2605559Z         root,
+2026-11-26T09:50:03.2605740Z         seconds,
+2026-11-26T09:50:03.2605892Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2606053Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2606222Z         interrupt_after=None,
+2026-11-26T09:50:03.2606385Z         poll=0.05,
+2026-11-26T09:50:03.2606524Z     ):
+2026-11-26T09:50:03.2606669Z >       import msvcrt
+2026-11-26T09:50:03.2606889Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2607048Z 
+2026-11-26T09:50:03.2607176Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2607775Z ________ test_normal_exit_closes_receipt_streams_and_seals_stable_bytes ________
+2026-11-26T09:50:03.2607997Z 
+2026-11-26T09:50:03.2608235Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_normal_exit_closes_receip0')
+2026-11-26T09:50:03.2608461Z 
+2026-11-26T09:50:03.2608650Z     def test_normal_exit_closes_receipt_streams_and_seals_stable_bytes(tmp_path: Path):
+2026-11-26T09:50:03.2608991Z         payload = tmp_path / "run" / "payload.txt"
+2026-11-26T09:50:03.2609228Z         code = (
+2026-11-26T09:50:03.2609494Z             f"from pathlib import Path; Path({str(payload)!r}).write_text('normal'); "
+2026-11-26T09:50:03.2609799Z             "print('done',flush=True)"
+2026-11-26T09:50:03.2609976Z         )
+2026-11-26T09:50:03.2610154Z >       result = _run(tmp_path, code)
+2026-11-26T09:50:03.2610355Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2610473Z 
+2026-11-26T09:50:03.2610576Z tests/test_lifetime_job_v2.py:39: 
+2026-11-26T09:50:03.2610850Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2611132Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2611362Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2611614Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2611904Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2612156Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2612402Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2612773Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2613171Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2613343Z 
+2026-11-26T09:50:03.2613524Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2613731Z 
+2026-11-26T09:50:03.2613859Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2614089Z         if not condition:
+2026-11-26T09:50:03.2614384Z >           raise SealError(message)
+2026-11-26T09:50:03.2614707Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2614912Z 
+2026-11-26T09:50:03.2615021Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2615364Z __ test_stopped_workloads_retain_partial_output_and_complete_receipt[timeout] __
+2026-11-26T09:50:03.2615590Z 
+2026-11-26T09:50:03.2615880Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_stopped_workloads_retain_0')
+2026-11-26T09:50:03.2616183Z mode = 'timeout'
+2026-11-26T09:50:03.2616274Z 
+2026-11-26T09:50:03.2616498Z     @pytest.mark.parametrize("mode", ["timeout", "observer-interruption", "failure", "abrupt"])
+2026-11-26T09:50:03.2616989Z     def test_stopped_workloads_retain_partial_output_and_complete_receipt(tmp_path: Path, mode: str):
+2026-11-26T09:50:03.2617347Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2617564Z         payload = directory / "partial.txt"
+2026-11-26T09:50:03.2617918Z         code = (
+2026-11-26T09:50:03.2618198Z             f"from pathlib import Path; Path({str(payload)!r}).write_text('partial'); "
+2026-11-26T09:50:03.2618589Z             "import subprocess,sys,time,os; print('before stop',flush=True); "
+2026-11-26T09:50:03.2618846Z         )
+2026-11-26T09:50:03.2619051Z         if mode in ("timeout", "observer-interruption"):
+2026-11-26T09:50:03.2619262Z             code += (
+2026-11-26T09:50:03.2619624Z                 "subprocess.Popen([sys.executable,'-B','-c','import time; time.sleep(5)']); "
+2026-11-26T09:50:03.2619933Z                 "time.sleep(5)"
+2026-11-26T09:50:03.2620095Z             )
+2026-11-26T09:50:03.2620298Z >           result = sealing.watch_and_seal(
+2026-11-26T09:50:03.2620542Z                 [sys.executable, "-B", "-c", code],
+2026-11-26T09:50:03.2620753Z                 directory,
+2026-11-26T09:50:03.2620925Z                 tmp_path,
+2026-11-26T09:50:03.2621127Z                 0.6 if mode == "timeout" else 5,
+2026-11-26T09:50:03.2621436Z                 interrupt_after=0.5 if mode == "observer-interruption" else None,
+2026-11-26T09:50:03.2621690Z             )
+2026-11-26T09:50:03.2621771Z 
+2026-11-26T09:50:03.2621874Z tests/test_lifetime_job_v2.py:64: 
+2026-11-26T09:50:03.2622147Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2622432Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2622715Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2622970Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2623208Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2623573Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2623971Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2624136Z 
+2026-11-26T09:50:03.2624312Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2624505Z 
+2026-11-26T09:50:03.2624640Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2624867Z         if not condition:
+2026-11-26T09:50:03.2625069Z >           raise SealError(message)
+2026-11-26T09:50:03.2625379Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2625584Z 
+2026-11-26T09:50:03.2625692Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2626135Z _ test_stopped_workloads_retain_partial_output_and_complete_receipt[observer-interruption] _
+2026-11-26T09:50:03.2626390Z 
+2026-11-26T09:50:03.2626623Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_stopped_workloads_retain_1')
+2026-11-26T09:50:03.2626964Z mode = 'observer-interruption'
+2026-11-26T09:50:03.2627095Z 
+2026-11-26T09:50:03.2627321Z     @pytest.mark.parametrize("mode", ["timeout", "observer-interruption", "failure", "abrupt"])
+2026-11-26T09:50:03.2628014Z     def test_stopped_workloads_retain_partial_output_and_complete_receipt(tmp_path: Path, mode: str):
+2026-11-26T09:50:03.2628436Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2628664Z         payload = directory / "partial.txt"
+2026-11-26T09:50:03.2628854Z         code = (
+2026-11-26T09:50:03.2629129Z             f"from pathlib import Path; Path({str(payload)!r}).write_text('partial'); "
+2026-11-26T09:50:03.2629518Z             "import subprocess,sys,time,os; print('before stop',flush=True); "
+2026-11-26T09:50:03.2629791Z         )
+2026-11-26T09:50:03.2630000Z         if mode in ("timeout", "observer-interruption"):
+2026-11-26T09:50:03.2630220Z             code += (
+2026-11-26T09:50:03.2630521Z                 "subprocess.Popen([sys.executable,'-B','-c','import time; time.sleep(5)']); "
+2026-11-26T09:50:03.2630836Z                 "time.sleep(5)"
+2026-11-26T09:50:03.2631028Z             )
+2026-11-26T09:50:03.2631224Z >           result = sealing.watch_and_seal(
+2026-11-26T09:50:03.2631475Z                 [sys.executable, "-B", "-c", code],
+2026-11-26T09:50:03.2631696Z                 directory,
+2026-11-26T09:50:03.2631882Z                 tmp_path,
+2026-11-26T09:50:03.2632109Z                 0.6 if mode == "timeout" else 5,
+2026-11-26T09:50:03.2632425Z                 interrupt_after=0.5 if mode == "observer-interruption" else None,
+2026-11-26T09:50:03.2632697Z             )
+2026-11-26T09:50:03.2632793Z 
+2026-11-26T09:50:03.2632900Z tests/test_lifetime_job_v2.py:64: 
+2026-11-26T09:50:03.2633239Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2633558Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2633867Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2634136Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2634399Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2634780Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2635196Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2635371Z 
+2026-11-26T09:50:03.2635563Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2635757Z 
+2026-11-26T09:50:03.2635888Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2636117Z         if not condition:
+2026-11-26T09:50:03.2636314Z >           raise SealError(message)
+2026-11-26T09:50:03.2636626Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2636840Z 
+2026-11-26T09:50:03.2636956Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2637322Z __ test_stopped_workloads_retain_partial_output_and_complete_receipt[failure] __
+2026-11-26T09:50:03.2637566Z 
+2026-11-26T09:50:03.2637955Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_stopped_workloads_retain_2')
+2026-11-26T09:50:03.2638276Z mode = 'failure'
+2026-11-26T09:50:03.2638373Z 
+2026-11-26T09:50:03.2638607Z     @pytest.mark.parametrize("mode", ["timeout", "observer-interruption", "failure", "abrupt"])
+2026-11-26T09:50:03.2639107Z     def test_stopped_workloads_retain_partial_output_and_complete_receipt(tmp_path: Path, mode: str):
+2026-11-26T09:50:03.2639458Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2639681Z         payload = directory / "partial.txt"
+2026-11-26T09:50:03.2639896Z         code = (
+2026-11-26T09:50:03.2640203Z             f"from pathlib import Path; Path({str(payload)!r}).write_text('partial'); "
+2026-11-26T09:50:03.2640608Z             "import subprocess,sys,time,os; print('before stop',flush=True); "
+2026-11-26T09:50:03.2640864Z         )
+2026-11-26T09:50:03.2641064Z         if mode in ("timeout", "observer-interruption"):
+2026-11-26T09:50:03.2641282Z             code += (
+2026-11-26T09:50:03.2641592Z                 "subprocess.Popen([sys.executable,'-B','-c','import time; time.sleep(5)']); "
+2026-11-26T09:50:03.2641896Z                 "time.sleep(5)"
+2026-11-26T09:50:03.2642070Z             )
+2026-11-26T09:50:03.2642250Z             result = sealing.watch_and_seal(
+2026-11-26T09:50:03.2642551Z                 [sys.executable, "-B", "-c", code],
+2026-11-26T09:50:03.2642768Z                 directory,
+2026-11-26T09:50:03.2642952Z                 tmp_path,
+2026-11-26T09:50:03.2643167Z                 0.6 if mode == "timeout" else 5,
+2026-11-26T09:50:03.2643490Z                 interrupt_after=0.5 if mode == "observer-interruption" else None,
+2026-11-26T09:50:03.2643759Z             )
+2026-11-26T09:50:03.2643949Z             assert result.cost["failure"] == (
+2026-11-26T09:50:03.2644260Z                 "CPU/wall cap" if mode == "timeout" else "observer interrupted"
+2026-11-26T09:50:03.2644520Z             )
+2026-11-26T09:50:03.2644724Z             assert result.cost["total_processes"] >= 2
+2026-11-26T09:50:03.2644941Z         else:
+2026-11-26T09:50:03.2645177Z             code += "sys.exit(7)" if mode == "failure" else "os._exit(9)"
+2026-11-26T09:50:03.2645469Z >           result = _run(tmp_path, code)
+2026-11-26T09:50:03.2645706Z                      ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2645834Z 
+2026-11-26T09:50:03.2645953Z tests/test_lifetime_job_v2.py:77: 
+2026-11-26T09:50:03.2646248Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2646530Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2646751Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2647015Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2647441Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2647825Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2648141Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2648580Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2649016Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2649184Z 
+2026-11-26T09:50:03.2649389Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2649602Z 
+2026-11-26T09:50:03.2649734Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2649979Z         if not condition:
+2026-11-26T09:50:03.2650202Z >           raise SealError(message)
+2026-11-26T09:50:03.2650544Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2650753Z 
+2026-11-26T09:50:03.2650882Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2651243Z __ test_stopped_workloads_retain_partial_output_and_complete_receipt[abrupt] ___
+2026-11-26T09:50:03.2651482Z 
+2026-11-26T09:50:03.2651724Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_stopped_workloads_retain_3')
+2026-11-26T09:50:03.2652056Z mode = 'abrupt'
+2026-11-26T09:50:03.2652153Z 
+2026-11-26T09:50:03.2652392Z     @pytest.mark.parametrize("mode", ["timeout", "observer-interruption", "failure", "abrupt"])
+2026-11-26T09:50:03.2652896Z     def test_stopped_workloads_retain_partial_output_and_complete_receipt(tmp_path: Path, mode: str):
+2026-11-26T09:50:03.2653265Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2653511Z         payload = directory / "partial.txt"
+2026-11-26T09:50:03.2653741Z         code = (
+2026-11-26T09:50:03.2654029Z             f"from pathlib import Path; Path({str(payload)!r}).write_text('partial'); "
+2026-11-26T09:50:03.2654438Z             "import subprocess,sys,time,os; print('before stop',flush=True); "
+2026-11-26T09:50:03.2654721Z         )
+2026-11-26T09:50:03.2654940Z         if mode in ("timeout", "observer-interruption"):
+2026-11-26T09:50:03.2655197Z             code += (
+2026-11-26T09:50:03.2655510Z                 "subprocess.Popen([sys.executable,'-B','-c','import time; time.sleep(5)']); "
+2026-11-26T09:50:03.2655838Z                 "time.sleep(5)"
+2026-11-26T09:50:03.2656027Z             )
+2026-11-26T09:50:03.2656213Z             result = sealing.watch_and_seal(
+2026-11-26T09:50:03.2656471Z                 [sys.executable, "-B", "-c", code],
+2026-11-26T09:50:03.2656777Z                 directory,
+2026-11-26T09:50:03.2656969Z                 tmp_path,
+2026-11-26T09:50:03.2657188Z                 0.6 if mode == "timeout" else 5,
+2026-11-26T09:50:03.2657507Z                 interrupt_after=0.5 if mode == "observer-interruption" else None,
+2026-11-26T09:50:03.2657936Z             )
+2026-11-26T09:50:03.2658191Z             assert result.cost["failure"] == (
+2026-11-26T09:50:03.2658502Z                 "CPU/wall cap" if mode == "timeout" else "observer interrupted"
+2026-11-26T09:50:03.2658746Z             )
+2026-11-26T09:50:03.2658944Z             assert result.cost["total_processes"] >= 2
+2026-11-26T09:50:03.2659157Z         else:
+2026-11-26T09:50:03.2659387Z             code += "sys.exit(7)" if mode == "failure" else "os._exit(9)"
+2026-11-26T09:50:03.2659689Z >           result = _run(tmp_path, code)
+2026-11-26T09:50:03.2659905Z                      ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2660026Z 
+2026-11-26T09:50:03.2660137Z tests/test_lifetime_job_v2.py:77: 
+2026-11-26T09:50:03.2660419Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2660698Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2660927Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2661177Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2661468Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2661772Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2662015Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2662370Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2662776Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2662936Z 
+2026-11-26T09:50:03.2663121Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2663315Z 
+2026-11-26T09:50:03.2663440Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2663667Z         if not condition:
+2026-11-26T09:50:03.2663870Z >           raise SealError(message)
+2026-11-26T09:50:03.2664185Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2664380Z 
+2026-11-26T09:50:03.2664495Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2664824Z ____ test_late_descendant_log_and_payload_write_precede_final_cost_and_seal ____
+2026-11-26T09:50:03.2665044Z 
+2026-11-26T09:50:03.2665274Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_late_descendant_log_and_p0')
+2026-11-26T09:50:03.2665511Z 
+2026-11-26T09:50:03.2665733Z     def test_late_descendant_log_and_payload_write_precede_final_cost_and_seal(tmp_path: Path):
+2026-11-26T09:50:03.2666064Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2666360Z         payload = directory / "late.txt"
+2026-11-26T09:50:03.2666541Z         leaf = (
+2026-11-26T09:50:03.2666771Z             f"import time; from pathlib import Path; time.sleep(.25); "
+2026-11-26T09:50:03.2667161Z             f"Path({str(payload)!r}).write_text('late payload'); print('late stdout',flush=True)"
+2026-11-26T09:50:03.2667444Z         )
+2026-11-26T09:50:03.2667577Z         code = (
+2026-11-26T09:50:03.2668004Z             f"import subprocess,sys,os; subprocess.Popen([sys.executable,'-B','-c',{leaf!r}]); "
+2026-11-26T09:50:03.2668374Z             "print('parent exits first',flush=True); os._exit(0)"
+2026-11-26T09:50:03.2668641Z         )
+2026-11-26T09:50:03.2668823Z >       result = _run(tmp_path, code)
+2026-11-26T09:50:03.2669029Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2669154Z 
+2026-11-26T09:50:03.2669262Z tests/test_lifetime_job_v2.py:102: 
+2026-11-26T09:50:03.2669545Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2669827Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2670057Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2670317Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2670679Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2670961Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2671224Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2671597Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2672015Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2672202Z 
+2026-11-26T09:50:03.2672389Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2672595Z 
+2026-11-26T09:50:03.2672735Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2672983Z         if not condition:
+2026-11-26T09:50:03.2673203Z >           raise SealError(message)
+2026-11-26T09:50:03.2673530Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2673742Z 
+2026-11-26T09:50:03.2673854Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2674205Z ________________ test_post_seal_mutations_are_detected[payload] ________________
+2026-11-26T09:50:03.2674400Z 
+2026-11-26T09:50:03.2674651Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_post_seal_mutations_are_d0')
+2026-11-26T09:50:03.2674976Z mutation = 'payload'
+2026-11-26T09:50:03.2675094Z 
+2026-11-26T09:50:03.2675180Z     @pytest.mark.parametrize(
+2026-11-26T09:50:03.2675546Z         "mutation", ["payload", "monitor", "receipt", "added-file", "removed-file"]
+2026-11-26T09:50:03.2675825Z     )
+2026-11-26T09:50:03.2676084Z     def test_post_seal_mutations_are_detected(tmp_path: Path, mutation: str):
+2026-11-26T09:50:03.2676381Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2676622Z         payload = directory / "payload.txt"
+2026-11-26T09:50:03.2677011Z         code = f"from pathlib import Path; Path({str(payload)!r}).write_text('original'); print('done')"
+2026-11-26T09:50:03.2677388Z >       result = _run(tmp_path, code)
+2026-11-26T09:50:03.2677723Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2677885Z 
+2026-11-26T09:50:03.2678013Z tests/test_lifetime_job_v2.py:123: 
+2026-11-26T09:50:03.2678310Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2678602Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2678861Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2679131Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2679435Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2679715Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2679973Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2680358Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2680780Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2680947Z 
+2026-11-26T09:50:03.2681140Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2681354Z 
+2026-11-26T09:50:03.2681484Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2681728Z         if not condition:
+2026-11-26T09:50:03.2681961Z >           raise SealError(message)
+2026-11-26T09:50:03.2682286Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2682528Z 
+2026-11-26T09:50:03.2682652Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2682984Z ________________ test_post_seal_mutations_are_detected[monitor] ________________
+2026-11-26T09:50:03.2683196Z 
+2026-11-26T09:50:03.2683433Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_post_seal_mutations_are_d1')
+2026-11-26T09:50:03.2683764Z mutation = 'monitor'
+2026-11-26T09:50:03.2683864Z 
+2026-11-26T09:50:03.2683962Z     @pytest.mark.parametrize(
+2026-11-26T09:50:03.2684269Z         "mutation", ["payload", "monitor", "receipt", "added-file", "removed-file"]
+2026-11-26T09:50:03.2684604Z     )
+2026-11-26T09:50:03.2684876Z     def test_post_seal_mutations_are_detected(tmp_path: Path, mutation: str):
+2026-11-26T09:50:03.2685208Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2685449Z         payload = directory / "payload.txt"
+2026-11-26T09:50:03.2685842Z         code = f"from pathlib import Path; Path({str(payload)!r}).write_text('original'); print('done')"
+2026-11-26T09:50:03.2686228Z >       result = _run(tmp_path, code)
+2026-11-26T09:50:03.2686454Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2686585Z 
+2026-11-26T09:50:03.2686702Z tests/test_lifetime_job_v2.py:123: 
+2026-11-26T09:50:03.2686998Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2687377Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2687719Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2688008Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2688327Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2688605Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2688867Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2689240Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2689668Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2689853Z 
+2026-11-26T09:50:03.2690265Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2690469Z 
+2026-11-26T09:50:03.2690616Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2690890Z         if not condition:
+2026-11-26T09:50:03.2691093Z >           raise SealError(message)
+2026-11-26T09:50:03.2691419Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2691640Z 
+2026-11-26T09:50:03.2691768Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2692108Z ________________ test_post_seal_mutations_are_detected[receipt] ________________
+2026-11-26T09:50:03.2692317Z 
+2026-11-26T09:50:03.2692568Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_post_seal_mutations_are_d2')
+2026-11-26T09:50:03.2692907Z mutation = 'receipt'
+2026-11-26T09:50:03.2693025Z 
+2026-11-26T09:50:03.2693125Z     @pytest.mark.parametrize(
+2026-11-26T09:50:03.2693440Z         "mutation", ["payload", "monitor", "receipt", "added-file", "removed-file"]
+2026-11-26T09:50:03.2693727Z     )
+2026-11-26T09:50:03.2693997Z     def test_post_seal_mutations_are_detected(tmp_path: Path, mutation: str):
+2026-11-26T09:50:03.2694331Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2694576Z         payload = directory / "payload.txt"
+2026-11-26T09:50:03.2694977Z         code = f"from pathlib import Path; Path({str(payload)!r}).write_text('original'); print('done')"
+2026-11-26T09:50:03.2695352Z >       result = _run(tmp_path, code)
+2026-11-26T09:50:03.2695579Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2695717Z 
+2026-11-26T09:50:03.2695828Z tests/test_lifetime_job_v2.py:123: 
+2026-11-26T09:50:03.2696127Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2696417Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2696659Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2696929Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2697241Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2697519Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2698080Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2698460Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2698889Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2699075Z 
+2026-11-26T09:50:03.2699263Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2699549Z 
+2026-11-26T09:50:03.2699677Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2699932Z         if not condition:
+2026-11-26T09:50:03.2700159Z >           raise SealError(message)
+2026-11-26T09:50:03.2700537Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2700743Z 
+2026-11-26T09:50:03.2700850Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2701179Z ______________ test_post_seal_mutations_are_detected[added-file] _______________
+2026-11-26T09:50:03.2701386Z 
+2026-11-26T09:50:03.2701619Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_post_seal_mutations_are_d3')
+2026-11-26T09:50:03.2701931Z mutation = 'added-file'
+2026-11-26T09:50:03.2702035Z 
+2026-11-26T09:50:03.2702118Z     @pytest.mark.parametrize(
+2026-11-26T09:50:03.2702404Z         "mutation", ["payload", "monitor", "receipt", "added-file", "removed-file"]
+2026-11-26T09:50:03.2702660Z     )
+2026-11-26T09:50:03.2702922Z     def test_post_seal_mutations_are_detected(tmp_path: Path, mutation: str):
+2026-11-26T09:50:03.2703215Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2703436Z         payload = directory / "payload.txt"
+2026-11-26T09:50:03.2703789Z         code = f"from pathlib import Path; Path({str(payload)!r}).write_text('original'); print('done')"
+2026-11-26T09:50:03.2704137Z >       result = _run(tmp_path, code)
+2026-11-26T09:50:03.2704382Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2704496Z 
+2026-11-26T09:50:03.2704601Z tests/test_lifetime_job_v2.py:123: 
+2026-11-26T09:50:03.2704875Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2705149Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2705371Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2705630Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2705917Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2706177Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2706425Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2706786Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2707201Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2707366Z 
+2026-11-26T09:50:03.2707551Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2707857Z 
+2026-11-26T09:50:03.2707993Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2708218Z         if not condition:
+2026-11-26T09:50:03.2708420Z >           raise SealError(message)
+2026-11-26T09:50:03.2708742Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2708937Z 
+2026-11-26T09:50:03.2709051Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2709377Z _____________ test_post_seal_mutations_are_detected[removed-file] ______________
+2026-11-26T09:50:03.2709589Z 
+2026-11-26T09:50:03.2709821Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_post_seal_mutations_are_d4')
+2026-11-26T09:50:03.2710143Z mutation = 'removed-file'
+2026-11-26T09:50:03.2710255Z 
+2026-11-26T09:50:03.2710341Z     @pytest.mark.parametrize(
+2026-11-26T09:50:03.2710631Z         "mutation", ["payload", "monitor", "receipt", "added-file", "removed-file"]
+2026-11-26T09:50:03.2710887Z     )
+2026-11-26T09:50:03.2711180Z     def test_post_seal_mutations_are_detected(tmp_path: Path, mutation: str):
+2026-11-26T09:50:03.2711470Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2711696Z         payload = directory / "payload.txt"
+2026-11-26T09:50:03.2712067Z         code = f"from pathlib import Path; Path({str(payload)!r}).write_text('original'); print('done')"
+2026-11-26T09:50:03.2712408Z >       result = _run(tmp_path, code)
+2026-11-26T09:50:03.2712610Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2712734Z 
+2026-11-26T09:50:03.2712835Z tests/test_lifetime_job_v2.py:123: 
+2026-11-26T09:50:03.2713181Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2713463Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2713688Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2713950Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2714245Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2714513Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2714768Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2715135Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2715540Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2715712Z 
+2026-11-26T09:50:03.2715895Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2716094Z 
+2026-11-26T09:50:03.2716225Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2716460Z         if not condition:
+2026-11-26T09:50:03.2716666Z >           raise SealError(message)
+2026-11-26T09:50:03.2716982Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2717202Z 
+2026-11-26T09:50:03.2717312Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2717836Z ________ test_overwrite_and_reseal_refusal_preserve_existing_valid_run _________
+2026-11-26T09:50:03.2718058Z 
+2026-11-26T09:50:03.2718299Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_overwrite_and_reseal_refu0')
+2026-11-26T09:50:03.2718531Z 
+2026-11-26T09:50:03.2718734Z     def test_overwrite_and_reseal_refusal_preserve_existing_valid_run(tmp_path: Path):
+2026-11-26T09:50:03.2719103Z >       result = _run(tmp_path, "print('completed')")
+2026-11-26T09:50:03.2719354Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2719491Z 
+2026-11-26T09:50:03.2719599Z tests/test_lifetime_job_v2.py:145: 
+2026-11-26T09:50:03.2719886Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2720159Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2720384Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2720639Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2720932Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2721194Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2721437Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2721797Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2722208Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2722370Z 
+2026-11-26T09:50:03.2722551Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2722740Z 
+2026-11-26T09:50:03.2722874Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2723109Z         if not condition:
+2026-11-26T09:50:03.2723312Z >           raise SealError(message)
+2026-11-26T09:50:03.2723623Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2723823Z 
+2026-11-26T09:50:03.2723936Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2724272Z _____ test_missing_final_receipt_retains_failure_marker_and_partial_output _____
+2026-11-26T09:50:03.2724479Z 
+2026-11-26T09:50:03.2724705Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_missing_final_receipt_ret0')
+2026-11-26T09:50:03.2724944Z 
+2026-11-26T09:50:03.2725154Z     def test_missing_final_receipt_retains_failure_marker_and_partial_output(tmp_path: Path):
+2026-11-26T09:50:03.2725495Z         directory = tmp_path / "partial"
+2026-11-26T09:50:03.2725694Z         directory.mkdir()
+2026-11-26T09:50:03.2725894Z         payload = directory / "partial.txt"
+2026-11-26T09:50:03.2726121Z         payload.write_text("retained")
+2026-11-26T09:50:03.2726509Z >       with pytest.raises(sealing.SealError, match="final cost receipt missing"):
+2026-11-26T09:50:03.2726860Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2727159Z E       AssertionError: Regex pattern did not match.
+2026-11-26T09:50:03.2727554Z E         Expected regex: 'final cost receipt missing'
+2026-11-26T09:50:03.2728017Z E         Actual message: 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2728205Z 
+2026-11-26T09:50:03.2728336Z tests/test_lifetime_job_v2.py:160: AssertionError
+2026-11-26T09:50:03.2728706Z ____ test_interrupted_seal_publication_retains_incomplete_seal_and_failure _____
+2026-11-26T09:50:03.2728918Z 
+2026-11-26T09:50:03.2729159Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_interrupted_seal_publicat0')
+2026-11-26T09:50:03.2729597Z monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7b3f014ef650>
+2026-11-26T09:50:03.2729819Z 
+2026-11-26T09:50:03.2729997Z     def test_interrupted_seal_publication_retains_incomplete_seal_and_failure(
+2026-11-26T09:50:03.2730302Z         tmp_path: Path, monkeypatch
+2026-11-26T09:50:03.2730497Z     ):
+2026-11-26T09:50:03.2730664Z         directory = tmp_path / "run"
+2026-11-26T09:50:03.2731036Z >       cost = sealing.watch([sys.executable, "-B", "-c", "print('done')"], directory, tmp_path, 5)
+2026-11-26T09:50:03.2731478Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2731664Z 
+2026-11-26T09:50:03.2731767Z tests/test_lifetime_job_v2.py:173: 
+2026-11-26T09:50:03.2732054Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2732222Z 
+2026-11-26T09:50:03.2732476Z command = ['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "print('done')"]
+2026-11-26T09:50:03.2732984Z directory = PosixPath('/tmp/pytest-of-runner/pytest-0/test_interrupted_seal_publicat0/run')
+2026-11-26T09:50:03.2733464Z root = PosixPath('/tmp/pytest-of-runner/pytest-0/test_interrupted_seal_publicat0')
+2026-11-26T09:50:03.2733887Z seconds = 5, memory = 2147483648, disk = 134217728, interrupt_after = None
+2026-11-26T09:50:03.2734155Z poll = 0.05
+2026-11-26T09:50:03.2734242Z 
+2026-11-26T09:50:03.2734312Z     def watch(
+2026-11-26T09:50:03.2734462Z         command,
+2026-11-26T09:50:03.2734612Z         directory,
+2026-11-26T09:50:03.2734762Z         root,
+2026-11-26T09:50:03.2734913Z         seconds,
+2026-11-26T09:50:03.2735066Z         memory=2 * 1024**3,
+2026-11-26T09:50:03.2735241Z         disk=128 * 1024**2,
+2026-11-26T09:50:03.2735416Z         interrupt_after=None,
+2026-11-26T09:50:03.2735592Z         poll=0.05,
+2026-11-26T09:50:03.2735738Z     ):
+2026-11-26T09:50:03.2735885Z >       import msvcrt
+2026-11-26T09:50:03.2736130Z E       ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2736285Z 
+2026-11-26T09:50:03.2736425Z scripts/lifetime_job.py:169: ModuleNotFoundError
+2026-11-26T09:50:03.2736771Z ________________ test_cli_verification_and_trusted_seal_digest _________________
+2026-11-26T09:50:03.2736980Z 
+2026-11-26T09:50:03.2737207Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cli_verification_and_trus0')
+2026-11-26T09:50:03.2737445Z 
+2026-11-26T09:50:03.2737609Z     def test_cli_verification_and_trusted_seal_digest(tmp_path: Path):
+2026-11-26T09:50:03.2738097Z >       result = _run(tmp_path, "print('CLI fixture')")
+2026-11-26T09:50:03.2738360Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2738503Z 
+2026-11-26T09:50:03.2738608Z tests/test_lifetime_job_v2.py:195: 
+2026-11-26T09:50:03.2738892Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2739183Z tests/test_lifetime_job_v2.py:28: in _run
+2026-11-26T09:50:03.2739413Z     return sealing.watch_and_seal(
+2026-11-26T09:50:03.2739668Z scripts/lifetime_job_v2.py:220: in watch_and_seal
+2026-11-26T09:50:03.2739965Z     directory, root = _directory(directory), _directory(root)
+2026-11-26T09:50:03.2740277Z                       ^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2740524Z scripts/lifetime_job_v2.py:68: in _directory
+2026-11-26T09:50:03.2740896Z     _require(resolved.is_relative_to(ROOT.resolve()), "outputs must remain inside the checkout")
+2026-11-26T09:50:03.2741306Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2741474Z 
+2026-11-26T09:50:03.2741662Z condition = False, message = 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2741864Z 
+2026-11-26T09:50:03.2741990Z     def _require(condition: bool, message: str) -> None:
+2026-11-26T09:50:03.2742228Z         if not condition:
+2026-11-26T09:50:03.2742435Z >           raise SealError(message)
+2026-11-26T09:50:03.2742752Z E           lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.2742964Z 
+2026-11-26T09:50:03.2743071Z scripts/lifetime_job_v2.py:35: SealError
+2026-11-26T09:50:03.2743395Z _________________ test_unclosed_final_receipt_cannot_be_sealed _________________
+2026-11-26T09:50:03.2743609Z 
+2026-11-26T09:50:03.2743849Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_unclosed_final_receipt_ca0')
+2026-11-26T09:50:03.2744085Z 
+2026-11-26T09:50:03.2744247Z     def test_unclosed_final_receipt_cannot_be_sealed(tmp_path: Path):
+2026-11-26T09:50:03.2744539Z         directory = tmp_path / "partial"
+2026-11-26T09:50:03.2744744Z         directory.mkdir()
+2026-11-26T09:50:03.2744993Z         (directory / "cost.json").write_text(
+2026-11-26T09:50:03.2745209Z             json.dumps(
+2026-11-26T09:50:03.2745379Z                 dict(
+2026-11-26T09:50:03.2745701Z                     complete_process_lifetimes=False, active_processes=1, returncode=259, status="STOP"
+2026-11-26T09:50:03.2746018Z                 )
+2026-11-26T09:50:03.2746163Z             )
+2026-11-26T09:50:03.2746306Z         )
+2026-11-26T09:50:03.2746559Z >       with pytest.raises(sealing.SealError, match="not closed"):
+2026-11-26T09:50:03.2746852Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2747136Z E       AssertionError: Regex pattern did not match.
+2026-11-26T09:50:03.2747394Z E         Expected regex: 'not closed'
+2026-11-26T09:50:03.2747787Z E         Actual message: 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.2747973Z 
+2026-11-26T09:50:03.2748112Z tests/test_lifetime_job_v2.py:224: AssertionError
+2026-11-26T09:50:03.2748452Z ___________________ test_cli_run_uses_observer_owned_sealing ___________________
+2026-11-26T09:50:03.2748649Z 
+2026-11-26T09:50:03.2748885Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cli_run_uses_observer_own0')
+2026-11-26T09:50:03.2749129Z 
+2026-11-26T09:50:03.2749276Z     def test_cli_run_uses_observer_owned_sealing(tmp_path: Path):
+2026-11-26T09:50:03.2749558Z         directory = tmp_path / "cli"
+2026-11-26T09:50:03.2749745Z         command = [
+2026-11-26T09:50:03.2749910Z             sys.executable,
+2026-11-26T09:50:03.2750082Z             "-B",
+2026-11-26T09:50:03.2750287Z             str(ROOT / "scripts/lifetime_job_v2.py"),
+2026-11-26T09:50:03.2750496Z             "run",
+2026-11-26T09:50:03.2750663Z             "--directory",
+2026-11-26T09:50:03.2750838Z             str(directory),
+2026-11-26T09:50:03.2751006Z             "--root",
+2026-11-26T09:50:03.2751165Z             str(tmp_path),
+2026-11-26T09:50:03.2751332Z             "--seconds",
+2026-11-26T09:50:03.2751494Z             "5",
+2026-11-26T09:50:03.2751679Z             "--",
+2026-11-26T09:50:03.2751847Z             sys.executable,
+2026-11-26T09:50:03.2752016Z             "-B",
+2026-11-26T09:50:03.2752164Z             "-c",
+2026-11-26T09:50:03.2752358Z             "print('CLI run fixture',flush=True)",
+2026-11-26T09:50:03.2752567Z         ]
+2026-11-26T09:50:03.2752892Z >       output = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, check=True)
+2026-11-26T09:50:03.2753284Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2753497Z 
+2026-11-26T09:50:03.2753611Z tests/test_lifetime_job_v2.py:249: 
+2026-11-26T09:50:03.2753895Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2754134Z 
+2026-11-26T09:50:03.2754309Z input = None, capture_output = True, timeout = None, check = True
+2026-11-26T09:50:03.2755172Z popenargs = (['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '/home/runner/work/Toruk/Toruk/scripts/lifetime_job_v2.py', 'run', '--directory', '/tmp/pytest-of-runner/pytest-0/test_cli_run_uses_observer_own0/cli', ...],)
+2026-11-26T09:50:03.2756016Z kwargs = {'cwd': PosixPath('/home/runner/work/Toruk/Toruk'), 'text': True, 'stdout': -1, 'stderr': -1}
+2026-11-26T09:50:03.2756293Z 
+2026-11-26T09:50:03.2756363Z     def run(*popenargs,
+2026-11-26T09:50:03.2756648Z             input=None, capture_output=False, timeout=None, check=False, **kwargs):
+2026-11-26T09:50:03.2757026Z         """Run command with arguments and return a CompletedProcess instance.
+2026-11-26T09:50:03.2757287Z     
+2026-11-26T09:50:03.2757539Z         The returned instance will have attributes args, returncode, stdout and
+2026-11-26T09:50:03.2758073Z         stderr. By default, stdout and stderr are not captured, and those attributes
+2026-11-26T09:50:03.2758471Z         will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+2026-11-26T09:50:03.2758814Z         or pass capture_output=True to capture both.
+2026-11-26T09:50:03.2759081Z     
+2026-11-26T09:50:03.2759301Z         If check is True and the exit code was non-zero, it raises a
+2026-11-26T09:50:03.2759675Z         CalledProcessError. The CalledProcessError object will have the return code
+2026-11-26T09:50:03.2760083Z         in the returncode attribute, and output & stderr attributes if those streams
+2026-11-26T09:50:03.2760365Z         were captured.
+2026-11-26T09:50:03.2760530Z     
+2026-11-26T09:50:03.2760749Z         If timeout (seconds) is given and the process takes too long,
+2026-11-26T09:50:03.2761043Z          a TimeoutExpired exception will be raised.
+2026-11-26T09:50:03.2761245Z     
+2026-11-26T09:50:03.2761455Z         There is an optional argument "input", allowing you to
+2026-11-26T09:50:03.2761798Z         pass bytes or a string to the subprocess's stdin.  If you use this argument
+2026-11-26T09:50:03.2762166Z         you may not also use the Popen constructor's "stdin" argument, as
+2026-11-26T09:50:03.2762447Z         it will be used internally.
+2026-11-26T09:50:03.2762630Z     
+2026-11-26T09:50:03.2762879Z         By default, all communication is in bytes, and therefore any "input" should
+2026-11-26T09:50:03.2763246Z         be bytes, and the stdout and stderr will be bytes. If in text mode, any
+2026-11-26T09:50:03.2763616Z         "input" should be a string, and stdout and stderr will be strings decoded
+2026-11-26T09:50:03.2763977Z         according to locale encoding, or by "encoding" if set. Text mode is
+2026-11-26T09:50:03.2764351Z         triggered by setting any of text, encoding, errors or universal_newlines.
+2026-11-26T09:50:03.2764614Z     
+2026-11-26T09:50:03.2764842Z         The other arguments are the same as for the Popen constructor.
+2026-11-26T09:50:03.2765089Z         """
+2026-11-26T09:50:03.2765250Z         if input is not None:
+2026-11-26T09:50:03.2765464Z             if kwargs.get('stdin') is not None:
+2026-11-26T09:50:03.2765779Z                 raise ValueError('stdin and input arguments may not both be used.')
+2026-11-26T09:50:03.2766076Z             kwargs['stdin'] = PIPE
+2026-11-26T09:50:03.2766276Z     
+2026-11-26T09:50:03.2766420Z         if capture_output:
+2026-11-26T09:50:03.2766711Z             if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+2026-11-26T09:50:03.2767075Z                 raise ValueError('stdout and stderr arguments may not be used '
+2026-11-26T09:50:03.2767467Z                                  'with capture_output.')
+2026-11-26T09:50:03.2767799Z             kwargs['stdout'] = PIPE
+2026-11-26T09:50:03.2768017Z             kwargs['stderr'] = PIPE
+2026-11-26T09:50:03.2768376Z     
+2026-11-26T09:50:03.2768568Z         with Popen(*popenargs, **kwargs) as process:
+2026-11-26T09:50:03.2768781Z             try:
+2026-11-26T09:50:03.2769032Z                 stdout, stderr = process.communicate(input, timeout=timeout)
+2026-11-26T09:50:03.2769326Z             except TimeoutExpired as exc:
+2026-11-26T09:50:03.2769548Z                 process.kill()
+2026-11-26T09:50:03.2769751Z                 if _mswindows:
+2026-11-26T09:50:03.2770005Z                     # Windows accumulates the output in a single blocking
+2026-11-26T09:50:03.2770314Z                     # read() call run on child threads, with the timeout
+2026-11-26T09:50:03.2770639Z                     # being done in a join() on those threads.  communicate()
+2026-11-26T09:50:03.2770970Z                     # _after_ kill() is required to collect that and add it
+2026-11-26T09:50:03.2771246Z                     # to the exception.
+2026-11-26T09:50:03.2771507Z                     exc.stdout, exc.stderr = process.communicate()
+2026-11-26T09:50:03.2771751Z                 else:
+2026-11-26T09:50:03.2771986Z                     # POSIX _communicate already populated the output so
+2026-11-26T09:50:03.2772284Z                     # far into the TimeoutExpired exception.
+2026-11-26T09:50:03.2772533Z                     process.wait()
+2026-11-26T09:50:03.2772717Z                 raise
+2026-11-26T09:50:03.2773014Z             except:  # Including KeyboardInterrupt, communicate handled that.
+2026-11-26T09:50:03.2773303Z                 process.kill()
+2026-11-26T09:50:03.2773558Z                 # We don't call process.wait() as .__exit__ does that for us.
+2026-11-26T09:50:03.2773805Z                 raise
+2026-11-26T09:50:03.2773996Z             retcode = process.poll()
+2026-11-26T09:50:03.2774210Z             if check and retcode:
+2026-11-26T09:50:03.2774484Z >               raise CalledProcessError(retcode, process.args,
+2026-11-26T09:50:03.2774774Z                                          output=stdout, stderr=stderr)
+2026-11-26T09:50:03.2776408Z E               subprocess.CalledProcessError: Command '['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '/home/runner/work/Toruk/Toruk/scripts/lifetime_job_v2.py', 'run', '--directory', '/tmp/pytest-of-runner/pytest-0/test_cli_run_uses_observer_own0/cli', '--root', '/tmp/pytest-of-runner/pytest-0/test_cli_run_uses_observer_own0', '--seconds', '5', '--', '/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "print('CLI run fixture',flush=True)"]' returned non-zero exit status 1.
+2026-11-26T09:50:03.2777588Z 
+2026-11-26T09:50:03.2778023Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/subprocess.py:571: CalledProcessError
+2026-11-26T09:50:03.2778502Z _______ test_fixed_models_initialize_to_original_hashes_without_updates ________
+2026-11-26T09:50:03.2778730Z 
+2026-11-26T09:50:03.2778905Z     def test_fixed_models_initialize_to_original_hashes_without_updates():
+2026-11-26T09:50:03.2779208Z         for seed in study.SEEDS:
+2026-11-26T09:50:03.2779437Z             for variant in study.PARAMETERS:
+2026-11-26T09:50:03.2779672Z                 setup(seed, 1)
+2026-11-26T09:50:03.2779889Z                 model = study.make_model(variant)
+2026-11-26T09:50:03.2780141Z                 expected = study.read(
+2026-11-26T09:50:03.2780484Z                     study.OLD / "stages" / f"train-{seed}-{variant}" / "training-summary.json"
+2026-11-26T09:50:03.2780798Z                 )["initial_sha256"]
+2026-11-26T09:50:03.2781063Z >               assert study.initial_hash(model) == expected
+2026-11-26T09:50:03.2781487Z E               AssertionError: assert '55eb0e94969e...4a82dc40e0a07' == '4af341e6f693...4907affb6b22b'
+2026-11-26T09:50:03.2781820Z E                 
+2026-11-26T09:50:03.2782117Z E                 - 4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b
+2026-11-26T09:50:03.2782529Z E                 + 55eb0e94969e5551c859b04338811e88a7d55854af0d3ad8b334a82dc40e0a07
+2026-11-26T09:50:03.2782740Z 
+2026-11-26T09:50:03.2782873Z tests/test_paired_batch_dev.py:82: AssertionError
+2026-11-26T09:50:03.2783286Z ________ test_saved_development_audit_has_no_candidate_or_heldout_input ________
+2026-11-26T09:50:03.2783509Z 
+2026-11-26T09:50:03.2783675Z     def test_saved_development_audit_has_no_candidate_or_heldout_input():
+2026-11-26T09:50:03.2784066Z         manifest = json.loads((ROOT / audit.SUPPORT / "manifest.json").read_bytes())
+2026-11-26T09:50:03.2784448Z         baseline = {"head": manifest["base_commit"], "sha256": manifest["files"]}
+2026-11-26T09:50:03.2784773Z >       result = audit.audit(ROOT, baseline)
+2026-11-26T09:50:03.2785053Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2785198Z 
+2026-11-26T09:50:03.2785331Z tests/test_qwen_development_v4.py:132: 
+2026-11-26T09:50:03.2785652Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2785968Z scripts/audit_qwen_development_v4.py:300: in audit
+2026-11-26T09:50:03.2786277Z     "preserved_files": verify_preservation(root, baseline),
+2026-11-26T09:50:03.2786575Z                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-26T09:50:03.2786899Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-26T09:50:03.2787072Z 
+2026-11-26T09:50:03.2787222Z root = PosixPath('/home/runner/work/Toruk/Toruk')
+2026-11-26T09:50:03.2788293Z baseline = {'head': 'b304091bd16a12be7204d207ed7d82e51e5ba9a6', 'sha256': {'.gitattributes': 'e3c9979c8b004038b145d85d10cc196d51c...kbone-qualification-v1/checks/aggregate.log': 'deba19677fabfd5cc6b590b6890f6b3412604c53779def47744dc16665d437cb', ...}}
+2026-11-26T09:50:03.2788986Z 
+2026-11-26T09:50:03.2789145Z     def verify_preservation(root: Path, baseline: dict) -> int:
+2026-11-26T09:50:03.2789488Z         for name, expected in baseline["sha256"].items():
+2026-11-26T09:50:03.2789862Z             # Hashing frozen files is permitted; their held-out records are never parsed.
+2026-11-26T09:50:03.2790217Z             with (root / name).open("rb") as stream:
+2026-11-26T09:50:03.2790531Z                 actual = hashlib.file_digest(stream, "sha256").hexdigest()
+2026-11-26T09:50:03.2790825Z             if actual != expected:
+2026-11-26T09:50:03.2791144Z >               raise ValueError("frozen evidence changed: " + name)
+2026-11-26T09:50:03.2791493Z E               ValueError: frozen evidence changed: .gitattributes
+2026-11-26T09:50:03.2791666Z 
+2026-11-26T09:50:03.2791830Z scripts/audit_qwen_development_v4.py:158: ValueError
+2026-11-26T09:50:03.2792208Z ___________ test_rehearsal_stops_on_first_failure_and_restores_power ___________
+2026-11-26T09:50:03.2792435Z 
+2026-11-26T09:50:03.2792684Z tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_rehearsal_stops_on_first_0')
+2026-11-26T09:50:03.2793130Z monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7b3ef93020f0>
+2026-11-26T09:50:03.2793394Z 
+2026-11-26T09:50:03.2793614Z     def test_rehearsal_stops_on_first_failure_and_restores_power(tmp_path, monkeypatch):
+2026-11-26T09:50:03.2793942Z         v2.write(
+2026-11-26T09:50:03.2794172Z             tmp_path / "rehearsal/registration.json",
+2026-11-26T09:50:03.2794526Z             {"bindings": {}, "v2_config": {"rehearsal_order": ["full", "toruk"]}},
+2026-11-26T09:50:03.2794797Z         )
+2026-11-26T09:50:03.2794991Z         power_calls, stage_calls = [], []
+2026-11-26T09:50:03.2795199Z     
+2026-11-26T09:50:03.2795367Z         def power(flags):
+2026-11-26T09:50:03.2795591Z             power_calls.append(flags)
+2026-11-26T09:50:03.2795823Z             return 1
+2026-11-26T09:50:03.2796019Z     
+2026-11-26T09:50:03.2796244Z         def failed_stage(run, arm, totals):
+2026-11-26T09:50:03.2796497Z             stage_calls.append(arm)
+2026-11-26T09:50:03.2796822Z             return {"wall_seconds": 180, "cpu_seconds": 12, "failure": "interruption"}
+2026-11-26T09:50:03.2797111Z     
+2026-11-26T09:50:03.2797298Z >       monkeypatch.setattr(
+2026-11-26T09:50:03.2797518Z             v2.ctypes,
+2026-11-26T09:50:03.2797819Z             "windll",
+2026-11-26T09:50:03.2798137Z             SimpleNamespace(kernel32=SimpleNamespace(SetThreadExecutionState=power)),
+2026-11-26T09:50:03.2798517Z         )
+2026-11-26T09:50:03.2799023Z E       AttributeError: <module 'ctypes' from '/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ctypes/__init__.py'> has no attribute 'windll'
+2026-11-26T09:50:03.2799410Z 
+2026-11-26T09:50:03.2799571Z tests/test_qwen_long_history_v2.py:124: AttributeError
+2026-11-26T09:50:03.2799922Z =========================== short test summary info ============================
+2026-11-26T09:50:03.2800911Z FAILED tests/test_first_byte_probe.py::test_exact_saved_inputs_and_260_record_plan - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Toruk/Toruk/artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt'
+2026-11-26T09:50:03.2801993Z FAILED tests/test_lifetime_job.py::test_controller_always_records_and_kernel_closes_lifetime[success-0] - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.2802835Z FAILED tests/test_lifetime_job.py::test_controller_always_records_and_kernel_closes_lifetime[failure-7] - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.4098121Z FAILED tests/test_lifetime_job.py::test_controller_always_records_and_kernel_closes_lifetime[interrupt-130] - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.4099482Z FAILED tests/test_lifetime_job.py::test_abrupt_exit_without_self_receipt_is_completely_accounted - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.4100269Z FAILED tests/test_lifetime_job.py::test_cap_and_observer_interruption_drain_entire_tree[False] - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.4101043Z FAILED tests/test_lifetime_job.py::test_cap_and_observer_interruption_drain_entire_tree[True] - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.4101851Z FAILED tests/test_lifetime_job.py::test_descendant_outlives_parent_and_lifetime_cpu_exceeds_coarse_samples - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.4102733Z FAILED tests/test_lifetime_job_v2.py::test_normal_exit_closes_receipt_streams_and_seals_stable_bytes - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4103713Z FAILED tests/test_lifetime_job_v2.py::test_stopped_workloads_retain_partial_output_and_complete_receipt[timeout] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4104753Z FAILED tests/test_lifetime_job_v2.py::test_stopped_workloads_retain_partial_output_and_complete_receipt[observer-interruption] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4105747Z FAILED tests/test_lifetime_job_v2.py::test_stopped_workloads_retain_partial_output_and_complete_receipt[failure] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4106705Z FAILED tests/test_lifetime_job_v2.py::test_stopped_workloads_retain_partial_output_and_complete_receipt[abrupt] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4107823Z FAILED tests/test_lifetime_job_v2.py::test_late_descendant_log_and_payload_write_precede_final_cost_and_seal - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4108684Z FAILED tests/test_lifetime_job_v2.py::test_post_seal_mutations_are_detected[payload] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4109477Z FAILED tests/test_lifetime_job_v2.py::test_post_seal_mutations_are_detected[monitor] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4110275Z FAILED tests/test_lifetime_job_v2.py::test_post_seal_mutations_are_detected[receipt] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4111069Z FAILED tests/test_lifetime_job_v2.py::test_post_seal_mutations_are_detected[added-file] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4111901Z FAILED tests/test_lifetime_job_v2.py::test_post_seal_mutations_are_detected[removed-file] - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4112857Z FAILED tests/test_lifetime_job_v2.py::test_overwrite_and_reseal_refusal_preserve_existing_valid_run - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4113695Z FAILED tests/test_lifetime_job_v2.py::test_missing_final_receipt_retains_failure_marker_and_partial_output - AssertionError: Regex pattern did not match.
+2026-11-26T09:50:03.4114192Z   Expected regex: 'final cost receipt missing'
+2026-11-26T09:50:03.4114529Z   Actual message: 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.4115134Z FAILED tests/test_lifetime_job_v2.py::test_interrupted_seal_publication_retains_incomplete_seal_and_failure - ModuleNotFoundError: No module named 'msvcrt'
+2026-11-26T09:50:03.4115940Z FAILED tests/test_lifetime_job_v2.py::test_cli_verification_and_trusted_seal_digest - lifetime_job_v2.SealError: outputs must remain inside the checkout
+2026-11-26T09:50:03.4116699Z FAILED tests/test_lifetime_job_v2.py::test_unclosed_final_receipt_cannot_be_sealed - AssertionError: Regex pattern did not match.
+2026-11-26T09:50:03.4117126Z   Expected regex: 'not closed'
+2026-11-26T09:50:03.4117382Z   Actual message: 'outputs must remain inside the checkout'
+2026-11-26T09:50:03.4119381Z FAILED tests/test_lifetime_job_v2.py::test_cli_run_uses_observer_owned_sealing - subprocess.CalledProcessError: Command '['/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '/home/runner/work/Toruk/Toruk/scripts/lifetime_job_v2.py', 'run', '--directory', '/tmp/pytest-of-runner/pytest-0/test_cli_run_uses_observer_own0/cli', '--root', '/tmp/pytest-of-runner/pytest-0/test_cli_run_uses_observer_own0', '--seconds', '5', '--', '/opt/hostedtoolcache/Python/3.12.16/x64/bin/python', '-B', '-c', "print('CLI run fixture',flush=True)"]' returned non-zero exit status 1.
+2026-11-26T09:50:03.4121306Z FAILED tests/test_paired_batch_dev.py::test_fixed_models_initialize_to_original_hashes_without_updates - AssertionError: assert '55eb0e94969e...4a82dc40e0a07' == '4af341e6f693...4907affb6b22b'
+2026-11-26T09:50:03.4121849Z   
+2026-11-26T09:50:03.4122094Z   - 4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b
+2026-11-26T09:50:03.4122451Z   + 55eb0e94969e5551c859b04338811e88a7d55854af0d3ad8b334a82dc40e0a07
+2026-11-26T09:50:03.4123096Z FAILED tests/test_qwen_development_v4.py::test_saved_development_audit_has_no_candidate_or_heldout_input - ValueError: frozen evidence changed: .gitattributes
+2026-11-26T09:50:03.4124202Z FAILED tests/test_qwen_long_history_v2.py::test_rehearsal_stops_on_first_failure_and_restores_power - AttributeError: <module 'ctypes' from '/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/ctypes/__init__.py'> has no attribute 'windll'
+2026-11-26T09:50:03.4125003Z 28 failed, 529 passed, 1 skipped in 73.61s (0:01:13)
+2026-11-26T09:50:03.8254581Z ##[error]Process completed with exit code 1.
+2026-11-26T09:50:03.8365881Z Post job cleanup.
+2026-11-26T09:50:03.9002054Z [command]/usr/bin/git version
+2026-11-26T09:50:03.9035325Z git version 2.56.1
+2026-11-26T09:50:03.9064540Z Temporarily overriding HOME='/home/runner/work/_temp/ac63f793-6ae8-4bd4-a12d-3f20bf6e2357' before making global git config changes
+2026-11-26T09:50:03.9065203Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-26T09:50:03.9068989Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Toruk/Toruk
+2026-11-26T09:50:03.9102832Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-26T09:50:03.9127986Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-26T09:50:03.9348692Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-26T09:50:03.9366086Z http.https://github.com/.extraheader
+2026-11-26T09:50:03.9383056Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-26T09:50:03.9401662Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-26T09:50:03.9603205Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-26T09:50:03.9626430Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-26T09:50:03.9931523Z Cleaning up orphan processes
+2026-11-26T09:50:04.0171487Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

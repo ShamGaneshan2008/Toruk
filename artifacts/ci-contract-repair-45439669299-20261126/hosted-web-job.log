@@ -1,0 +1,293 @@
+﻿2026-11-26T10:09:12.4956404Z Current runner version: '2.338.2'
+2026-11-26T10:09:12.4978412Z ##[group]Runner Image Provisioner
+2026-11-26T10:09:12.4979106Z Hosted Compute Agent
+2026-11-26T10:09:12.4979698Z Version: 20261111.635
+2026-11-26T10:09:12.4980222Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-26T10:09:12.4980841Z Build Date: 2026-11-11T01:49:01Z
+2026-11-26T10:09:12.4981469Z Worker ID: {34a79097-50bc-4d45-a359-b55321997455}
+2026-11-26T10:09:12.4982020Z Region: westus2
+2026-11-26T10:09:12.4982546Z Cloud: Azure
+2026-11-26T10:09:12.4983008Z ##[endgroup]
+2026-11-26T10:09:12.4984143Z ##[group]Operating System
+2026-11-26T10:09:12.4984666Z Ubuntu
+2026-11-26T10:09:12.4985094Z 26.04.1
+2026-11-26T10:09:12.4985591Z LTS
+2026-11-26T10:09:12.4986016Z ##[endgroup]
+2026-11-26T10:09:12.4986457Z ##[group]Runner Image
+2026-11-26T10:09:12.4987027Z Image: ubuntu-26.04
+2026-11-26T10:09:12.4987673Z Version: 20261116.202.1
+2026-11-26T10:09:12.4988807Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-26T10:09:12.4990105Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-26T10:09:12.4990911Z ##[endgroup]
+2026-11-26T10:09:12.4991871Z ##[group]GITHUB_TOKEN Permissions
+2026-11-26T10:09:12.4993697Z Contents: read
+2026-11-26T10:09:12.4994193Z Metadata: read
+2026-11-26T10:09:12.4994722Z Packages: read
+2026-11-26T10:09:12.4995240Z ##[endgroup]
+2026-11-26T10:09:12.4997438Z Secret source: Actions
+2026-11-26T10:09:12.4998221Z Cache mode: write
+2026-11-26T10:09:12.4998803Z Prepare workflow directory
+2026-11-26T10:09:12.5256950Z Prepare all required actions
+2026-11-26T10:09:12.5296042Z Getting action download info
+2026-11-26T10:09:12.8526645Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-26T10:09:12.9504381Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-26T10:09:13.1581746Z Complete job name: web
+2026-11-26T10:09:13.2268402Z ##[group]Run actions/checkout@v4
+2026-11-26T10:09:13.2269072Z with:
+2026-11-26T10:09:13.2269442Z   repository: ShamGaneshan2008/Toruk
+2026-11-26T10:09:13.2272504Z   token: ***
+2026-11-26T10:09:13.2272866Z   ssh-strict: true
+2026-11-26T10:09:13.2273228Z   ssh-user: git
+2026-11-26T10:09:13.2273594Z   persist-credentials: true
+2026-11-26T10:09:13.2273990Z   clean: true
+2026-11-26T10:09:13.2274353Z   sparse-checkout-cone-mode: true
+2026-11-26T10:09:13.2274772Z   fetch-depth: 1
+2026-11-26T10:09:13.2275126Z   fetch-tags: false
+2026-11-26T10:09:13.2275491Z   show-progress: true
+2026-11-26T10:09:13.2275855Z   lfs: false
+2026-11-26T10:09:13.2276191Z   submodules: false
+2026-11-26T10:09:13.2276553Z   set-safe-directory: true
+2026-11-26T10:09:13.2276962Z   allow-unsafe-pr-checkout: false
+2026-11-26T10:09:13.2277658Z ##[endgroup]
+2026-11-26T10:09:13.5579847Z Syncing repository: ShamGaneshan2008/Toruk
+2026-11-26T10:09:13.5582166Z ##[group]Getting Git version info
+2026-11-26T10:09:13.5582880Z Working directory is '/home/runner/work/Toruk/Toruk'
+2026-11-26T10:09:13.5584235Z [command]/usr/bin/git version
+2026-11-26T10:09:13.5617624Z git version 2.56.1
+2026-11-26T10:09:13.5633769Z ##[endgroup]
+2026-11-26T10:09:13.5647074Z Temporarily overriding HOME='/home/runner/work/_temp/642d3bdc-7bba-4114-afd4-146292b52326' before making global git config changes
+2026-11-26T10:09:13.5649303Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-26T10:09:13.5653066Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Toruk/Toruk
+2026-11-26T10:09:13.5710029Z Deleting the contents of '/home/runner/work/Toruk/Toruk'
+2026-11-26T10:09:13.5713648Z ##[group]Initializing the repository
+2026-11-26T10:09:13.5718610Z [command]/usr/bin/git init /home/runner/work/Toruk/Toruk
+2026-11-26T10:09:13.5880720Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-26T10:09:13.5882201Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-26T10:09:13.5883925Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-26T10:09:13.5884730Z hint: call:
+2026-11-26T10:09:13.5885204Z hint:
+2026-11-26T10:09:13.5885763Z hint: 	git config --global init.defaultBranch <name>
+2026-11-26T10:09:13.5886696Z hint:
+2026-11-26T10:09:13.5887487Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-26T10:09:13.5888834Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-26T10:09:13.5889912Z hint:
+2026-11-26T10:09:13.5890786Z hint: 	git branch -m <name>
+2026-11-26T10:09:13.5891826Z hint:
+2026-11-26T10:09:13.5892783Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-26T10:09:13.5894252Z Initialized empty Git repository in /home/runner/work/Toruk/Toruk/.git/
+2026-11-26T10:09:13.5905968Z [command]/usr/bin/git remote add origin https://github.com/ShamGaneshan2008/Toruk
+2026-11-26T10:09:13.5955455Z ##[endgroup]
+2026-11-26T10:09:13.5956597Z ##[group]Disabling automatic garbage collection
+2026-11-26T10:09:13.5959586Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-26T10:09:13.5991075Z ##[endgroup]
+2026-11-26T10:09:13.5992126Z ##[group]Setting up auth
+2026-11-26T10:09:13.5996985Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-26T10:09:13.6043889Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-26T10:09:13.6452457Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-26T10:09:13.6481743Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-26T10:09:13.6720145Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-26T10:09:13.6750382Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-26T10:09:13.6980395Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-26T10:09:13.7016782Z ##[endgroup]
+2026-11-26T10:09:13.7023993Z ##[group]Fetching the repository
+2026-11-26T10:09:13.7025525Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +412bb58ffeb334bc8bae36ecdacda3c57b81985d:refs/remotes/origin/ci/repair-cpu-foundation-45439669299-20261126
+2026-11-26T10:09:19.0821207Z From https://github.com/ShamGaneshan2008/Toruk
+2026-11-26T10:09:19.0824007Z  * [new ref]         412bb58ffeb334bc8bae36ecdacda3c57b81985d -> origin/ci/repair-cpu-foundation-45439669299-20261126
+2026-11-26T10:09:19.0826915Z ##[endgroup]
+2026-11-26T10:09:19.0828162Z ##[group]Determining the checkout info
+2026-11-26T10:09:19.0829505Z ##[endgroup]
+2026-11-26T10:09:19.0832734Z [command]/usr/bin/git sparse-checkout disable
+2026-11-26T10:09:19.0889880Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-26T10:09:19.0918282Z ##[group]Checking out the ref
+2026-11-26T10:09:19.0921976Z [command]/usr/bin/git checkout --progress --force -B ci/repair-cpu-foundation-45439669299-20261126 refs/remotes/origin/ci/repair-cpu-foundation-45439669299-20261126
+2026-11-26T10:09:20.0663179Z Switched to a new branch 'ci/repair-cpu-foundation-45439669299-20261126'
+2026-11-26T10:09:20.1992055Z branch 'ci/repair-cpu-foundation-45439669299-20261126' set up to track 'origin/ci/repair-cpu-foundation-45439669299-20261126'.
+2026-11-26T10:09:20.2049797Z ##[endgroup]
+2026-11-26T10:09:20.2093851Z [command]/usr/bin/git log -1 --format=%H
+2026-11-26T10:09:20.2115693Z 412bb58ffeb334bc8bae36ecdacda3c57b81985d
+2026-11-26T10:09:20.2405898Z ##[group]Run actions/setup-node@v4
+2026-11-26T10:09:20.2406218Z with:
+2026-11-26T10:09:20.2406442Z   node-version: 22
+2026-11-26T10:09:20.2406827Z   always-auth: false
+2026-11-26T10:09:20.2407061Z   check-latest: false
+2026-11-26T10:09:20.2409546Z   token: ***
+2026-11-26T10:09:20.2409788Z ##[endgroup]
+2026-11-26T10:09:20.3598375Z Found in cache @ /opt/hostedtoolcache/node/22.23.5/x64
+2026-11-26T10:09:20.3602808Z (node:2191) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T10:09:20.3603625Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T10:09:20.3605502Z ##[group]Environment details
+2026-11-26T10:09:23.3963924Z node: v22.23.5
+2026-11-26T10:09:23.3964359Z npm: 10.9.9
+2026-11-26T10:09:23.3964608Z yarn: 1.22.22
+2026-11-26T10:09:23.3965948Z ##[endgroup]
+2026-11-26T10:09:23.4156642Z ##[group]Run npm --prefix web/vercel run check
+2026-11-26T10:09:23.4157040Z [36;1mnpm --prefix web/vercel run check[0m
+2026-11-26T10:09:23.4235471Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:09:23.4235724Z ##[endgroup]
+2026-11-26T10:09:23.5677717Z 
+2026-11-26T10:09:23.5683436Z > check
+2026-11-26T10:09:23.5684168Z > node --check api/chat.js && node --check api/status.js && node --check lib/proxy.js && node --check scripts/dev.mjs
+2026-11-26T10:09:23.5684528Z 
+2026-11-26T10:09:23.6793868Z ##[group]Run npm --prefix web/vercel test
+2026-11-26T10:09:23.6794199Z [36;1mnpm --prefix web/vercel test[0m
+2026-11-26T10:09:23.6825292Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:09:23.6825537Z ##[endgroup]
+2026-11-26T10:09:23.8818805Z 
+2026-11-26T10:09:23.8819127Z > test
+2026-11-26T10:09:23.8819748Z > node --test tests/*.test.mjs
+2026-11-26T10:09:23.8819982Z 
+2026-11-26T10:09:23.9493686Z TAP version 13
+2026-11-26T10:09:24.1089316Z # Subtest: HTTP backend deadlines and busy responses retain actionable safe semantics
+2026-11-26T10:09:24.1148939Z ok 1 - HTTP backend deadlines and busy responses retain actionable safe semantics
+2026-11-26T10:09:24.1165824Z   ---
+2026-11-26T10:09:24.1172837Z   duration_ms: 101.908857
+2026-11-26T10:09:24.1188268Z   type: 'test'
+2026-11-26T10:09:24.1188658Z   ...
+2026-11-26T10:09:24.1208475Z # Subtest: long conversations fail visibly instead of silently dropping the earliest turns
+2026-11-26T10:09:24.1209900Z ok 2 - long conversations fail visibly instead of silently dropping the earliest turns
+2026-11-26T10:09:24.1210708Z   ---
+2026-11-26T10:09:24.1211207Z   duration_ms: 0.784822
+2026-11-26T10:09:24.1211685Z   type: 'test'
+2026-11-26T10:09:24.1212100Z   ...
+2026-11-26T10:09:24.1212747Z # Subtest: empty backend replies cannot poison the next browser history
+2026-11-26T10:09:24.1213742Z ok 3 - empty backend replies cannot poison the next browser history
+2026-11-26T10:09:24.1214444Z   ---
+2026-11-26T10:09:24.1214886Z   duration_ms: 1.868056
+2026-11-26T10:09:24.1215412Z   type: 'test'
+2026-11-26T10:09:24.1215877Z   ...
+2026-11-26T10:09:24.1216560Z # Subtest: backend request errors do not expose private exception details
+2026-11-26T10:09:24.1217648Z ok 4 - backend request errors do not expose private exception details
+2026-11-26T10:09:24.1218329Z   ---
+2026-11-26T10:09:24.1218806Z   duration_ms: 0.806114
+2026-11-26T10:09:24.1219309Z   type: 'test'
+2026-11-26T10:09:24.1219766Z   ...
+2026-11-26T10:09:24.1220478Z # Subtest: chunked request bodies are cancelled when they cross the byte limit
+2026-11-26T10:09:24.1221442Z ok 5 - chunked request bodies are cancelled when they cross the byte limit
+2026-11-26T10:09:24.1222883Z   ---
+2026-11-26T10:09:24.1223192Z   duration_ms: 0.915866
+2026-11-26T10:09:24.1223534Z   type: 'test'
+2026-11-26T10:09:24.1223853Z   ...
+2026-11-26T10:09:24.1229835Z # Subtest: impossible token counts, timings and source IDs are rejected
+2026-11-26T10:09:24.1231150Z ok 6 - impossible token counts, timings and source IDs are rejected
+2026-11-26T10:09:24.1232154Z   ---
+2026-11-26T10:09:24.1232719Z   duration_ms: 4.70129
+2026-11-26T10:09:24.1233269Z   type: 'test'
+2026-11-26T10:09:24.1233832Z   ...
+2026-11-26T10:09:24.1234708Z # Subtest: unready model has an actionable reason and never forwards backend exception text
+2026-11-26T10:09:24.1236533Z ok 7 - unready model has an actionable reason and never forwards backend exception text
+2026-11-26T10:09:24.1237509Z   ---
+2026-11-26T10:09:24.1238013Z   duration_ms: 5.049666
+2026-11-26T10:09:24.1238592Z   type: 'test'
+2026-11-26T10:09:24.1239099Z   ...
+2026-11-26T10:09:24.1239918Z # Subtest: unconfigured and unavailable inference return errors, never answers
+2026-11-26T10:09:24.1241006Z ok 8 - unconfigured and unavailable inference return errors, never answers
+2026-11-26T10:09:24.1241750Z   ---
+2026-11-26T10:09:24.1242032Z   duration_ms: 0.804971
+2026-11-26T10:09:24.1242388Z   type: 'test'
+2026-11-26T10:09:24.1242674Z   ...
+2026-11-26T10:09:24.1243323Z # Subtest: normal Toruk proxy validates metrics and keeps token off the browser response
+2026-11-26T10:09:24.1244225Z ok 9 - normal Toruk proxy validates metrics and keeps token off the browser response
+2026-11-26T10:09:24.1244772Z   ---
+2026-11-26T10:09:24.1245034Z   duration_ms: 0.908164
+2026-11-26T10:09:24.1245324Z   type: 'test'
+2026-11-26T10:09:24.1245640Z   ...
+2026-11-26T10:09:24.1246184Z # Subtest: empty and long messages, invalid budget, and malformed backend are rejected
+2026-11-26T10:09:24.1247485Z ok 10 - empty and long messages, invalid budget, and malformed backend are rejected
+2026-11-26T10:09:24.1247990Z   ---
+2026-11-26T10:09:24.1248257Z   duration_ms: 1.490877
+2026-11-26T10:09:24.1248554Z   type: 'test'
+2026-11-26T10:09:24.1248716Z   ...
+2026-11-26T10:09:24.1249065Z # Subtest: status and client history clear remain independent of backend sessions
+2026-11-26T10:09:24.1249712Z ok 11 - status and client history clear remain independent of backend sessions
+2026-11-26T10:09:24.1250153Z   ---
+2026-11-26T10:09:24.1250410Z   duration_ms: 1.268418
+2026-11-26T10:09:24.1250633Z   type: 'test'
+2026-11-26T10:09:24.1250828Z   ...
+2026-11-26T10:09:24.1251202Z # Subtest: status retains the full backbone and trained selector identities
+2026-11-26T10:09:24.1251642Z ok 12 - status retains the full backbone and trained selector identities
+2026-11-26T10:09:24.1251943Z   ---
+2026-11-26T10:09:24.1252119Z   duration_ms: 0.549774
+2026-11-26T10:09:24.1252301Z   type: 'test'
+2026-11-26T10:09:24.1252467Z   ...
+2026-11-26T10:09:24.1252759Z # Subtest: follow-up request forwards the browser history in order
+2026-11-26T10:09:24.1253152Z ok 13 - follow-up request forwards the browser history in order
+2026-11-26T10:09:24.1253418Z   ---
+2026-11-26T10:09:24.1253593Z   duration_ms: 0.991808
+2026-11-26T10:09:24.1253781Z   type: 'test'
+2026-11-26T10:09:24.1253948Z   ...
+2026-11-26T10:09:24.1254287Z # Subtest: full reported history reaches inference without dropped or rewritten turns
+2026-11-26T10:09:24.1254776Z ok 14 - full reported history reaches inference without dropped or rewritten turns
+2026-11-26T10:09:24.1255097Z   ---
+2026-11-26T10:09:24.1255264Z   duration_ms: 0.840804
+2026-11-26T10:09:24.1255446Z   type: 'test'
+2026-11-26T10:09:24.1255606Z   ...
+2026-11-26T10:09:24.1255898Z # Subtest: TORUK metrics are accepted only for a matching TORUK request
+2026-11-26T10:09:24.1256306Z ok 15 - TORUK metrics are accepted only for a matching TORUK request
+2026-11-26T10:09:24.1256577Z   ---
+2026-11-26T10:09:24.1256741Z   duration_ms: 0.888536
+2026-11-26T10:09:24.1256919Z   type: 'test'
+2026-11-26T10:09:24.1257083Z   ...
+2026-11-26T10:09:24.1257693Z # Subtest: production and preview reject a plaintext backend URL
+2026-11-26T10:09:24.1258126Z ok 16 - production and preview reject a plaintext backend URL
+2026-11-26T10:09:24.1258422Z   ---
+2026-11-26T10:09:24.1258689Z   duration_ms: 0.593969
+2026-11-26T10:09:24.1258883Z   type: 'test'
+2026-11-26T10:09:24.1259046Z   ...
+2026-11-26T10:09:24.1259286Z # Subtest: backend timeout is a bounded visible error
+2026-11-26T10:09:24.1259606Z ok 17 - backend timeout is a bounded visible error
+2026-11-26T10:09:24.1259845Z   ---
+2026-11-26T10:09:24.1260015Z   duration_ms: 0.458729
+2026-11-26T10:09:24.1260189Z   type: 'test'
+2026-11-26T10:09:24.1260353Z   ...
+2026-11-26T10:09:24.1260705Z # Subtest: static Vercel project declares bounded API functions and visible mode labels
+2026-11-26T10:09:24.1261437Z ok 18 - static Vercel project declares bounded API functions and visible mode labels
+2026-11-26T10:09:24.1261757Z   ---
+2026-11-26T10:09:24.1261936Z   duration_ms: 11.748193
+2026-11-26T10:09:24.1262129Z   type: 'test'
+2026-11-26T10:09:24.1262293Z   ...
+2026-11-26T10:09:24.1315396Z # Subtest: page disables chat with a reason, recovers on Retry, and sends generated history
+2026-11-26T10:09:24.1318415Z ok 19 - page disables chat with a reason, recovers on Retry, and sends generated history
+2026-11-26T10:09:24.1346612Z   ---
+2026-11-26T10:09:24.1346934Z   duration_ms: 81.258585
+2026-11-26T10:09:24.1347458Z   type: 'test'
+2026-11-26T10:09:24.1347721Z   ...
+2026-11-26T10:09:24.1348307Z # Subtest: page distinguishes a Toruk-trained smoke fixture from external pretrained weights
+2026-11-26T10:09:24.1349169Z ok 20 - page distinguishes a Toruk-trained smoke fixture from external pretrained weights
+2026-11-26T10:09:24.1349688Z   ---
+2026-11-26T10:09:24.1349927Z   duration_ms: 3.916409
+2026-11-26T10:09:24.1350288Z   type: 'test'
+2026-11-26T10:09:24.1350518Z   ...
+2026-11-26T10:09:24.1351131Z # Subtest: live page handlers send a normal question and follow-up through the real proxy
+2026-11-26T10:09:24.1352469Z ok 21 - live page handlers send a normal question and follow-up through the real proxy # SKIP
+2026-11-26T10:09:24.1352972Z   ---
+2026-11-26T10:09:24.1353199Z   duration_ms: 0.274536
+2026-11-26T10:09:24.1353456Z   type: 'test'
+2026-11-26T10:09:24.1353685Z   ...
+2026-11-26T10:09:24.1353909Z 1..21
+2026-11-26T10:09:24.1354124Z # tests 21
+2026-11-26T10:09:24.1354360Z # suites 0
+2026-11-26T10:09:24.1354606Z # pass 20
+2026-11-26T10:09:24.1354821Z # fail 0
+2026-11-26T10:09:24.1355063Z # cancelled 0
+2026-11-26T10:09:24.1355309Z # skipped 1
+2026-11-26T10:09:24.1355537Z # todo 0
+2026-11-26T10:09:24.1355783Z # duration_ms 204.950806
+2026-11-26T10:09:24.1533740Z Post job cleanup.
+2026-11-26T10:09:24.2547339Z (node:2309) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T10:09:24.2548078Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T10:09:24.2730611Z Post job cleanup.
+2026-11-26T10:09:24.3476382Z [command]/usr/bin/git version
+2026-11-26T10:09:24.3514537Z git version 2.56.1
+2026-11-26T10:09:24.3545516Z Temporarily overriding HOME='/home/runner/work/_temp/586888f4-2e8a-4e53-8dea-8d37c2f116ab' before making global git config changes
+2026-11-26T10:09:24.3546638Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-26T10:09:24.3551260Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Toruk/Toruk
+2026-11-26T10:09:24.3589600Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-26T10:09:24.3623994Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-26T10:09:24.3928514Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-26T10:09:24.3946702Z http.https://github.com/.extraheader
+2026-11-26T10:09:24.3977508Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-26T10:09:24.4012581Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-26T10:09:24.4311266Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-26T10:09:24.4342552Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-26T10:09:24.4753213Z Cleaning up orphan processes
+2026-11-26T10:09:24.5113066Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

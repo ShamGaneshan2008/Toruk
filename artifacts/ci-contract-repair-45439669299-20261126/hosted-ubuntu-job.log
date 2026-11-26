@@ -1,0 +1,1417 @@
+﻿2026-11-26T10:09:12.5191864Z Current runner version: '2.338.2'
+2026-11-26T10:09:12.5215254Z ##[group]Runner Image Provisioner
+2026-11-26T10:09:12.5216131Z Hosted Compute Agent
+2026-11-26T10:09:12.5216611Z Version: 20261111.635
+2026-11-26T10:09:12.5217469Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-26T10:09:12.5218078Z Build Date: 2026-11-11T01:49:01Z
+2026-11-26T10:09:12.5218661Z Worker ID: {19930ac6-ae11-4a45-90ef-04aaeb13b557}
+2026-11-26T10:09:12.5219324Z Region: westus3
+2026-11-26T10:09:12.5219774Z Cloud: Azure
+2026-11-26T10:09:12.5220234Z ##[endgroup]
+2026-11-26T10:09:12.5221692Z ##[group]Operating System
+2026-11-26T10:09:12.5222223Z Ubuntu
+2026-11-26T10:09:12.5222746Z 26.04.1
+2026-11-26T10:09:12.5223169Z LTS
+2026-11-26T10:09:12.5223584Z ##[endgroup]
+2026-11-26T10:09:12.5224101Z ##[group]Runner Image
+2026-11-26T10:09:12.5224626Z Image: ubuntu-26.04
+2026-11-26T10:09:12.5225175Z Version: 20261122.9.1
+2026-11-26T10:09:12.5226244Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-26T10:09:12.5227470Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+2026-11-26T10:09:12.5228274Z ##[endgroup]
+2026-11-26T10:09:12.5229310Z ##[group]GITHUB_TOKEN Permissions
+2026-11-26T10:09:12.5231560Z Contents: read
+2026-11-26T10:09:12.5232130Z Metadata: read
+2026-11-26T10:09:12.5232604Z Packages: read
+2026-11-26T10:09:12.5233083Z ##[endgroup]
+2026-11-26T10:09:12.5235378Z Secret source: Actions
+2026-11-26T10:09:12.5236152Z Cache mode: write
+2026-11-26T10:09:12.5236822Z Prepare workflow directory
+2026-11-26T10:09:12.5571938Z Prepare all required actions
+2026-11-26T10:09:12.5614707Z Getting action download info
+2026-11-26T10:09:12.8682350Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-26T10:09:12.9486186Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-26T10:09:13.0249669Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-26T10:09:13.1058973Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-26T10:09:13.3139504Z Complete job name: check
+2026-11-26T10:09:13.3968513Z ##[group]Run actions/checkout@v4
+2026-11-26T10:09:13.3969231Z with:
+2026-11-26T10:09:13.3969603Z   repository: ShamGaneshan2008/Toruk
+2026-11-26T10:09:13.3972867Z   token: ***
+2026-11-26T10:09:13.3973220Z   ssh-strict: true
+2026-11-26T10:09:13.3973576Z   ssh-user: git
+2026-11-26T10:09:13.4055711Z   persist-credentials: true
+2026-11-26T10:09:13.4056409Z   clean: true
+2026-11-26T10:09:13.4056975Z   sparse-checkout-cone-mode: true
+2026-11-26T10:09:13.4057616Z   fetch-depth: 1
+2026-11-26T10:09:13.4058151Z   fetch-tags: false
+2026-11-26T10:09:13.4058632Z   show-progress: true
+2026-11-26T10:09:13.4059131Z   lfs: false
+2026-11-26T10:09:13.4059623Z   submodules: false
+2026-11-26T10:09:13.4060168Z   set-safe-directory: true
+2026-11-26T10:09:13.4060782Z   allow-unsafe-pr-checkout: false
+2026-11-26T10:09:13.4063357Z ##[endgroup]
+2026-11-26T10:09:13.6282730Z Syncing repository: ShamGaneshan2008/Toruk
+2026-11-26T10:09:13.6284858Z ##[group]Getting Git version info
+2026-11-26T10:09:13.6285605Z Working directory is '/home/runner/work/Toruk/Toruk'
+2026-11-26T10:09:13.6286534Z [command]/usr/bin/git version
+2026-11-26T10:09:13.6287019Z git version 2.56.1
+2026-11-26T10:09:13.6303466Z ##[endgroup]
+2026-11-26T10:09:13.6318953Z Temporarily overriding HOME='/home/runner/work/_temp/f88d8610-2f2c-493c-92c2-fb57d14942b4' before making global git config changes
+2026-11-26T10:09:13.6321254Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-26T10:09:13.6324534Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Toruk/Toruk
+2026-11-26T10:09:13.6389073Z Deleting the contents of '/home/runner/work/Toruk/Toruk'
+2026-11-26T10:09:13.6393347Z ##[group]Initializing the repository
+2026-11-26T10:09:13.6399529Z [command]/usr/bin/git init /home/runner/work/Toruk/Toruk
+2026-11-26T10:09:13.6492375Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-26T10:09:13.6493468Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-26T10:09:13.6494270Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-26T10:09:13.6494915Z hint: call:
+2026-11-26T10:09:13.6495322Z hint:
+2026-11-26T10:09:13.6495827Z hint: 	git config --global init.defaultBranch <name>
+2026-11-26T10:09:13.6496399Z hint:
+2026-11-26T10:09:13.6496933Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-26T10:09:13.6497733Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-26T10:09:13.6498389Z hint:
+2026-11-26T10:09:13.6498798Z hint: 	git branch -m <name>
+2026-11-26T10:09:13.6499254Z hint:
+2026-11-26T10:09:13.6499816Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-26T10:09:13.6508945Z Initialized empty Git repository in /home/runner/work/Toruk/Toruk/.git/
+2026-11-26T10:09:13.6521266Z [command]/usr/bin/git remote add origin https://github.com/ShamGaneshan2008/Toruk
+2026-11-26T10:09:13.6589300Z ##[endgroup]
+2026-11-26T10:09:13.6590454Z ##[group]Disabling automatic garbage collection
+2026-11-26T10:09:13.6593779Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-26T10:09:13.6643813Z ##[endgroup]
+2026-11-26T10:09:13.6644455Z ##[group]Setting up auth
+2026-11-26T10:09:13.6651645Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-26T10:09:13.6688351Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-26T10:09:13.7149221Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-26T10:09:13.7182530Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-26T10:09:13.7434375Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-26T10:09:13.7467559Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-26T10:09:13.7724794Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-26T10:09:13.7772518Z ##[endgroup]
+2026-11-26T10:09:13.7773474Z ##[group]Fetching the repository
+2026-11-26T10:09:13.7782379Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +412bb58ffeb334bc8bae36ecdacda3c57b81985d:refs/remotes/origin/ci/repair-cpu-foundation-45439669299-20261126
+2026-11-26T10:09:19.2159387Z From https://github.com/ShamGaneshan2008/Toruk
+2026-11-26T10:09:19.2165711Z  * [new ref]         412bb58ffeb334bc8bae36ecdacda3c57b81985d -> origin/ci/repair-cpu-foundation-45439669299-20261126
+2026-11-26T10:09:19.2167498Z ##[endgroup]
+2026-11-26T10:09:19.2167921Z ##[group]Determining the checkout info
+2026-11-26T10:09:19.2168396Z ##[endgroup]
+2026-11-26T10:09:19.2171655Z [command]/usr/bin/git sparse-checkout disable
+2026-11-26T10:09:19.2223359Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-26T10:09:19.2253992Z ##[group]Checking out the ref
+2026-11-26T10:09:19.2258743Z [command]/usr/bin/git checkout --progress --force -B ci/repair-cpu-foundation-45439669299-20261126 refs/remotes/origin/ci/repair-cpu-foundation-45439669299-20261126
+2026-11-26T10:09:20.2129798Z Switched to a new branch 'ci/repair-cpu-foundation-45439669299-20261126'
+2026-11-26T10:09:20.2133553Z branch 'ci/repair-cpu-foundation-45439669299-20261126' set up to track 'origin/ci/repair-cpu-foundation-45439669299-20261126'.
+2026-11-26T10:09:20.2204843Z ##[endgroup]
+2026-11-26T10:09:20.2251833Z [command]/usr/bin/git log -1 --format=%H
+2026-11-26T10:09:20.2276035Z 412bb58ffeb334bc8bae36ecdacda3c57b81985d
+2026-11-26T10:09:20.2525923Z ##[group]Run actions/setup-python@v5
+2026-11-26T10:09:20.2526249Z with:
+2026-11-26T10:09:20.2526454Z   python-version: 3.12
+2026-11-26T10:09:20.2526687Z   check-latest: false
+2026-11-26T10:09:20.2528558Z   token: ***
+2026-11-26T10:09:20.2528831Z   update-environment: true
+2026-11-26T10:09:20.2529068Z   allow-prereleases: false
+2026-11-26T10:09:20.2529293Z   freethreaded: false
+2026-11-26T10:09:20.2529511Z ##[endgroup]
+2026-11-26T10:09:20.3705657Z ##[group]Installed versions
+2026-11-26T10:09:20.3842870Z (node:2286) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T10:09:20.3843767Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T10:09:20.3844257Z Successfully set up CPython (3.12.16)
+2026-11-26T10:09:20.3845173Z ##[endgroup]
+2026-11-26T10:09:20.3989128Z ##[group]Run actions/setup-node@v4
+2026-11-26T10:09:20.3989475Z with:
+2026-11-26T10:09:20.3989716Z   node-version: 22
+2026-11-26T10:09:20.3989930Z   always-auth: false
+2026-11-26T10:09:20.3990144Z   check-latest: false
+2026-11-26T10:09:20.3992499Z   token: ***
+2026-11-26T10:09:20.3992710Z env:
+2026-11-26T10:09:20.3992964Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.3993377Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:09:20.3993759Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.3994098Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.3994428Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.3994764Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:09:20.3995053Z ##[endgroup]
+2026-11-26T10:09:20.5373567Z Found in cache @ /opt/hostedtoolcache/node/22.23.5/x64
+2026-11-26T10:09:20.5378518Z (node:2296) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T10:09:20.5379466Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T10:09:20.5381278Z ##[group]Environment details
+2026-11-26T10:09:20.8757975Z node: v22.23.5
+2026-11-26T10:09:20.8758487Z npm: 10.9.9
+2026-11-26T10:09:20.8758714Z yarn: 1.22.22
+2026-11-26T10:09:20.8759649Z ##[endgroup]
+2026-11-26T10:09:20.8894742Z ##[group]Run python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+2026-11-26T10:09:20.8895367Z [36;1mpython -m pip install torch --index-url https://download.pytorch.org/whl/cpu[0m
+2026-11-26T10:09:20.8940973Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:09:20.8941398Z env:
+2026-11-26T10:09:20.8941724Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.8942110Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:09:20.8942447Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.8942812Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.8943144Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:20.8943454Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:09:20.8943726Z ##[endgroup]
+2026-11-26T10:09:21.6654369Z Looking in indexes: https://download.pytorch.org/whl/cpu
+2026-11-26T10:09:21.8042758Z Collecting torch
+2026-11-26T10:09:21.8606384Z   Downloading torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (35 kB)
+2026-11-26T10:09:21.8950437Z Collecting filelock (from torch)
+2026-11-26T10:09:21.9360013Z   Downloading filelock-4.2.4-py3-none-any.whl.metadata (2.0 kB)
+2026-11-26T10:09:21.9511239Z Collecting typing-extensions>=4.13.0 (from torch)
+2026-11-26T10:09:21.9613932Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-26T10:09:21.9723640Z Collecting setuptools>=77.0.3 (from torch)
+2026-11-26T10:09:21.9758799Z   Downloading setuptools-78.1.0-py3-none-any.whl.metadata (6.6 kB)
+2026-11-26T10:09:21.9928099Z Collecting sympy>=1.13.3 (from torch)
+2026-11-26T10:09:22.0031515Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+2026-11-26T10:09:22.0404519Z Collecting networkx>=2.5.1 (from torch)
+2026-11-26T10:09:22.0506157Z   Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+2026-11-26T10:09:22.0623924Z Collecting jinja2 (from torch)
+2026-11-26T10:09:22.0658030Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-11-26T10:09:22.0846813Z Collecting fsspec>=0.8.5 (from torch)
+2026-11-26T10:09:22.0951591Z   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+2026-11-26T10:09:22.1175223Z Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+2026-11-26T10:09:22.1280715Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-11-26T10:09:22.1464392Z Collecting MarkupSafe>=2.0 (from jinja2->torch)
+2026-11-26T10:09:22.1502252Z   Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-11-26T10:09:22.1729520Z Downloading torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl (209.5 MB)
+2026-11-26T10:09:23.8431672Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.5/209.5 MB 127.1 MB/s  0:00:01
+2026-11-26T10:09:23.8533614Z Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+2026-11-26T10:09:23.8841376Z Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+2026-11-26T10:09:23.9235184Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 64.2 MB/s  0:00:00
+2026-11-26T10:09:23.9275911Z Downloading setuptools-78.1.0-py3-none-any.whl (1.3 MB)
+2026-11-26T10:09:23.9346436Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 207.8 MB/s  0:00:00
+2026-11-26T10:09:23.9451719Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+2026-11-26T10:09:23.9852258Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 159.2 MB/s  0:00:00
+2026-11-26T10:09:23.9956245Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-11-26T10:09:24.0006308Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 91.7 MB/s  0:00:00
+2026-11-26T10:09:24.0109684Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-26T10:09:24.0231754Z Downloading filelock-4.2.4-py3-none-any.whl (162 kB)
+2026-11-26T10:09:24.0304533Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-11-26T10:09:24.0370890Z Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-11-26T10:09:24.3874487Z Installing collected packages: mpmath, typing-extensions, sympy, setuptools, networkx, MarkupSafe, fsspec, filelock, jinja2, torch
+2026-11-26T10:09:43.7376596Z 
+2026-11-26T10:09:43.7391209Z Successfully installed MarkupSafe-3.0.3 filelock-4.2.4 fsspec-2026.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.7 setuptools-78.1.0 sympy-1.14.0 torch-2.15.0+cpu typing-extensions-4.16.0
+2026-11-26T10:09:43.8489964Z ##[group]Run python -m pip install -e '.[dev,chat]'
+2026-11-26T10:09:43.8490315Z [36;1mpython -m pip install -e '.[dev,chat]'[0m
+2026-11-26T10:09:43.8522510Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:09:43.8522725Z env:
+2026-11-26T10:09:43.8522952Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:43.8523313Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:09:43.8523651Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:43.8523952Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:43.8524249Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:09:43.8524553Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:09:43.8524815Z ##[endgroup]
+2026-11-26T10:09:44.2792119Z Obtaining file:///home/runner/work/Toruk/Toruk
+2026-11-26T10:09:44.2807364Z   Installing build dependencies: started
+2026-11-26T10:09:44.8224808Z   Installing build dependencies: finished with status 'done'
+2026-11-26T10:09:44.8230857Z   Checking if build backend supports build_editable: started
+2026-11-26T10:09:45.1689937Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-11-26T10:09:45.1698019Z   Getting requirements to build editable: started
+2026-11-26T10:09:45.5070581Z   Getting requirements to build editable: finished with status 'done'
+2026-11-26T10:09:45.5079184Z   Preparing editable metadata (pyproject.toml): started
+2026-11-26T10:09:45.6843490Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-26T10:09:45.6877683Z Requirement already satisfied: torch<3,>=2.6 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from toruk-lm==0.1.0) (2.15.0+cpu)
+2026-11-26T10:09:45.7513404Z Collecting pytest<10,>=8 (from toruk-lm==0.1.0)
+2026-11-26T10:09:45.7692314Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-26T10:09:46.0618578Z Collecting ruff<1,>=0.11 (from toruk-lm==0.1.0)
+2026-11-26T10:09:46.0652436Z   Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-11-26T10:09:46.1550743Z Collecting mypy<2,>=1.15 (from toruk-lm==0.1.0)
+2026-11-26T10:09:46.1584020Z   Downloading mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-26T10:09:46.1786307Z Collecting build<2,>=1 (from toruk-lm==0.1.0)
+2026-11-26T10:09:46.1819503Z   Downloading build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+2026-11-26T10:09:46.2491823Z Collecting psutil<8,>=5.9 (from toruk-lm==0.1.0)
+2026-11-26T10:09:46.2525120Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-11-26T10:09:46.2906185Z Collecting transformers<6,>=4.48 (from toruk-lm==0.1.0)
+2026-11-26T10:09:46.2939865Z   Downloading transformers-5.24.1-py3-none-any.whl.metadata (31 kB)
+2026-11-26T10:09:46.4083574Z Collecting safetensors<1,>=0.5 (from toruk-lm==0.1.0)
+2026-11-26T10:09:46.4115026Z   Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+2026-11-26T10:09:46.4336535Z Collecting packaging>=24.0 (from build<2,>=1->toruk-lm==0.1.0)
+2026-11-26T10:09:46.4369072Z   Downloading packaging-26.4-py3-none-any.whl.metadata (3.5 kB)
+2026-11-26T10:09:46.4537554Z Collecting pyproject_hooks (from build<2,>=1->toruk-lm==0.1.0)
+2026-11-26T10:09:46.4570597Z   Downloading pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+2026-11-26T10:09:46.4611583Z Requirement already satisfied: typing_extensions>=4.6.0 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from mypy<2,>=1.15->toruk-lm==0.1.0) (4.16.0)
+2026-11-26T10:09:46.4752487Z Collecting mypy_extensions>=1.0.0 (from mypy<2,>=1.15->toruk-lm==0.1.0)
+2026-11-26T10:09:46.4786773Z   Downloading mypy_extensions-1.2.0-py3-none-any.whl.metadata (1.1 kB)
+2026-11-26T10:09:46.4975189Z Collecting pathspec>=1.0.0 (from mypy<2,>=1.15->toruk-lm==0.1.0)
+2026-11-26T10:09:46.5009683Z   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+2026-11-26T10:09:46.6458476Z Collecting librt>=0.8.0 (from mypy<2,>=1.15->toruk-lm==0.1.0)
+2026-11-26T10:09:46.6491469Z   Downloading librt-0.17.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+2026-11-26T10:09:46.7743436Z Collecting iniconfig>=2 (from pytest<10,>=8->toruk-lm==0.1.0)
+2026-11-26T10:09:46.7775942Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-11-26T10:09:46.7951520Z Collecting pluggy<2,>=1.6 (from pytest<10,>=8->toruk-lm==0.1.0)
+2026-11-26T10:09:46.7986625Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-11-26T10:09:46.8201760Z Collecting pygments>=2.15 (from pytest<10,>=8->toruk-lm==0.1.0)
+2026-11-26T10:09:46.8234652Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-26T10:09:46.8288990Z Requirement already satisfied: filelock in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (4.2.4)
+2026-11-26T10:09:46.8293872Z Requirement already satisfied: setuptools>=77.0.3 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (78.1.0)
+2026-11-26T10:09:46.8297974Z Requirement already satisfied: sympy>=1.13.3 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (1.14.0)
+2026-11-26T10:09:46.8302058Z Requirement already satisfied: networkx>=2.5.1 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (3.7)
+2026-11-26T10:09:46.8305769Z Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (3.1.6)
+2026-11-26T10:09:46.8309738Z Requirement already satisfied: fsspec>=0.8.5 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from torch<3,>=2.6->toruk-lm==0.1.0) (2026.9.0)
+2026-11-26T10:09:46.8667410Z Collecting huggingface-hub<3.0,>=1.31.0 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:46.8709034Z   Downloading huggingface_hub-2.4.0-py3-none-any.whl.metadata (16 kB)
+2026-11-26T10:09:47.0347581Z Collecting numpy>=1.17 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.0379781Z   Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-11-26T10:09:47.0765386Z Collecting pyyaml>=5.1 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.0800420Z   Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+2026-11-26T10:09:47.4492557Z Collecting regex>=2025.10.22 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.4530219Z   Downloading regex-2026.11.25-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-11-26T10:09:47.5677749Z Collecting tokenizers<0.24.0,>=0.23.1 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.5710510Z   Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+2026-11-26T10:09:47.5968098Z Collecting typer (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.6005979Z   Downloading typer-0.29.3-py3-none-any.whl.metadata (16 kB)
+2026-11-26T10:09:47.6313718Z Collecting tqdm>=4.60 (from transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.6350103Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+2026-11-26T10:09:47.6608857Z Collecting click<9.0.0,>=8.4.2 (from huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.6644407Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+2026-11-26T10:09:47.7065413Z Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.7099637Z   Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+2026-11-26T10:09:47.7296482Z Collecting httpx2<3,>=2.0.0 (from huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.7329606Z   Downloading httpx2-2.16.2-py3-none-any.whl.metadata (10.0 kB)
+2026-11-26T10:09:47.7600642Z Collecting anyio>=4.10 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.7635921Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+2026-11-26T10:09:47.7825707Z Collecting httpcore2==2.16.2 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.7857808Z   Downloading httpcore2-2.16.2-py3-none-any.whl.metadata (28 kB)
+2026-11-26T10:09:47.8066314Z Collecting idna>=3.18 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.8100373Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-26T10:09:47.8290591Z Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.8325267Z   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+2026-11-26T10:09:47.8506912Z Collecting h11>=0.16 (from httpcore2==2.16.2->httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.8539870Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-11-26T10:09:47.8756552Z Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from sympy>=1.13.3->torch<3,>=2.6->toruk-lm==0.1.0) (1.3.0)
+2026-11-26T10:09:47.8791490Z Requirement already satisfied: MarkupSafe>=2.0 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (from jinja2->torch<3,>=2.6->toruk-lm==0.1.0) (3.0.3)
+2026-11-26T10:09:47.9654195Z Collecting pydantic>=2.5.3 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.9688264Z   Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+2026-11-26T10:09:47.9923655Z Collecting shellingham>=1.3.0 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:47.9955820Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-11-26T10:09:48.0259407Z Collecting rich>=13.8.0 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:48.0293487Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-11-26T10:09:48.0478669Z Collecting annotated-doc>=0.0.2 (from typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:48.0515390Z   Downloading annotated_doc-0.0.7-py3-none-any.whl.metadata (6.4 kB)
+2026-11-26T10:09:48.0702019Z Collecting annotated-types>=0.6.0 (from pydantic>=2.5.3->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:48.0733449Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-11-26T10:09:48.6495573Z Collecting pydantic-core==2.50.5 (from pydantic>=2.5.3->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:48.6527699Z   Downloading pydantic_core-2.50.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+2026-11-26T10:09:48.8633070Z Collecting typing-inspection>=0.4.4 (from pydantic>=2.5.3->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:48.8666753Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+2026-11-26T10:09:48.9256986Z Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:48.9288034Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-26T10:09:48.9522206Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers<6,>=4.48->toruk-lm==0.1.0)
+2026-11-26T10:09:48.9550850Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-11-26T10:09:48.9676037Z Downloading build-1.6.1-py3-none-any.whl (31 kB)
+2026-11-26T10:09:48.9739642Z Downloading mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (14.7 MB)
+2026-11-26T10:09:49.1041197Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 115.2 MB/s  0:00:00
+2026-11-26T10:09:49.1083422Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-11-26T10:09:49.1142521Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+2026-11-26T10:09:49.1438854Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-11-26T10:09:49.1540153Z Downloading ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)
+2026-11-26T10:09:49.2834767Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 81.6 MB/s  0:00:00
+2026-11-26T10:09:49.2869437Z Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-11-26T10:09:49.3133939Z Downloading transformers-5.24.1-py3-none-any.whl (13.6 MB)
+2026-11-26T10:09:49.5026875Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 72.0 MB/s  0:00:00
+2026-11-26T10:09:49.5064312Z Downloading huggingface_hub-2.4.0-py3-none-any.whl (857 kB)
+2026-11-26T10:09:49.5325105Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 25.0 MB/s  0:00:00
+2026-11-26T10:09:49.5357237Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+2026-11-26T10:09:49.5636912Z Downloading hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.3 MB)
+2026-11-26T10:09:49.6620681Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 41.8 MB/s  0:00:00
+2026-11-26T10:09:49.6654377Z Downloading httpx2-2.16.2-py3-none-any.whl (97 kB)
+2026-11-26T10:09:49.6942760Z Downloading httpcore2-2.16.2-py3-none-any.whl (85 kB)
+2026-11-26T10:09:49.7135054Z Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-11-26T10:09:49.8016976Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 36.3 MB/s  0:00:00
+2026-11-26T10:09:49.8052045Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+2026-11-26T10:09:49.8742548Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-11-26T10:09:49.8948678Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-11-26T10:09:49.9250701Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-11-26T10:09:49.9347480Z Downloading librt-0.17.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (623 kB)
+2026-11-26T10:09:49.9515873Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 623.6/623.6 kB 24.5 MB/s  0:00:00
+2026-11-26T10:09:49.9550816Z Downloading mypy_extensions-1.2.0-py3-none-any.whl (5.1 kB)
+2026-11-26T10:09:49.9649105Z Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (15.7 MB)
+2026-11-26T10:09:50.2571833Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 65.4 MB/s  0:00:00
+2026-11-26T10:09:50.2605423Z Downloading packaging-26.4-py3-none-any.whl (140 kB)
+2026-11-26T10:09:50.3353674Z Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+2026-11-26T10:09:50.3446604Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-26T10:09:50.3717169Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 39.8 MB/s  0:00:00
+2026-11-26T10:09:50.3754385Z Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (849 kB)
+2026-11-26T10:09:50.3918427Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.2/849.2 kB 41.1 MB/s  0:00:00
+2026-11-26T10:09:50.3956670Z Downloading regex-2026.11.25-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (820 kB)
+2026-11-26T10:09:50.4217050Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 820.5/820.5 kB 23.4 MB/s  0:00:00
+2026-11-26T10:09:50.4253631Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-11-26T10:09:50.4436174Z Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-11-26T10:09:50.4633956Z Downloading pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+2026-11-26T10:09:50.5543414Z Downloading typer-0.29.3-py3-none-any.whl (121 kB)
+2026-11-26T10:09:50.6135872Z Downloading annotated_doc-0.0.7-py3-none-any.whl (5.3 kB)
+2026-11-26T10:09:50.6331952Z Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+2026-11-26T10:09:50.6635097Z Downloading pydantic_core-2.50.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+2026-11-26T10:09:50.7021914Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 55.2 MB/s  0:00:00
+2026-11-26T10:09:50.7055848Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-11-26T10:09:50.7447283Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-11-26T10:09:50.7630179Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+2026-11-26T10:09:50.7829597Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-11-26T10:09:50.8036557Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-11-26T10:09:50.8140358Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+2026-11-26T10:09:50.9747501Z Building wheels for collected packages: toruk-lm
+2026-11-26T10:09:50.9753833Z   Building editable for toruk-lm (pyproject.toml): started
+2026-11-26T10:09:51.1814751Z   Building editable for toruk-lm (pyproject.toml): finished with status 'done'
+2026-11-26T10:09:51.1819204Z   Created wheel for toruk-lm: filename=toruk_lm-0.1.0-0.editable-py3-none-any.whl size=1618 sha256=e128374776b2067ed65d9143a70317f1fa18993331cefe55488db6c77f63d19c
+2026-11-26T10:09:51.1820682Z   Stored in directory: /tmp/pip-ephem-wheel-cache-abzw954e/wheels/54/26/a5/1d0d4344b115dfbb34639a5d4014b63a2fd8708d6f05e773b6
+2026-11-26T10:09:51.1832570Z Successfully built toruk-lm
+2026-11-26T10:09:51.2777139Z Installing collected packages: typing-inspection, truststore, tqdm, shellingham, safetensors, ruff, regex, pyyaml, pyproject_hooks, pygments, pydantic-core, psutil, pluggy, pathspec, packaging, numpy, mypy_extensions, mdurl, iniconfig, idna, hf-xet, h11, click, annotated-types, annotated-doc, pytest, pydantic, markdown-it-py, librt, httpcore2, build, anyio, toruk-lm, rich, mypy, httpx2, typer, huggingface-hub, tokenizers, transformers
+2026-11-26T10:10:06.2540212Z 
+2026-11-26T10:10:06.2575092Z Successfully installed annotated-doc-0.0.7 annotated-types-0.8.0 anyio-4.16.0 build-1.6.1 click-8.5.1 h11-0.16.0 hf-xet-1.8.0 httpcore2-2.16.2 httpx2-2.16.2 huggingface-hub-2.4.0 idna-3.20 iniconfig-2.3.1 librt-0.17.0 markdown-it-py-4.3.0 mdurl-0.1.2 mypy-1.20.2 mypy_extensions-1.2.0 numpy-2.5.5 packaging-26.4 pathspec-1.1.1 pluggy-1.7.0 psutil-7.2.2 pydantic-2.14.4 pydantic-core-2.50.5 pygments-2.21.0 pyproject_hooks-1.3.3 pytest-9.2.0 pyyaml-6.0.4 regex-2026.11.25 rich-15.0.0 ruff-0.17.6 safetensors-0.8.0 shellingham-1.5.4 tokenizers-0.23.3 toruk-lm-0.1.0 tqdm-4.70.1 transformers-5.24.1 truststore-0.10.5 typer-0.29.3 typing-inspection-0.4.5
+2026-11-26T10:10:06.5640530Z ##[group]Run python -m pip check
+2026-11-26T10:10:06.5640816Z [36;1mpython -m pip check[0m
+2026-11-26T10:10:06.5671135Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:06.5671349Z env:
+2026-11-26T10:10:06.5671568Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.5671926Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:06.5672291Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.5672592Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.5672916Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.5673221Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:06.5673479Z ##[endgroup]
+2026-11-26T10:10:06.8012407Z No broken requirements found.
+2026-11-26T10:10:06.8445369Z ##[group]Run python -c "import toruk_lm; print(toruk_lm.__version__)"
+2026-11-26T10:10:06.8445789Z [36;1mpython -c "import toruk_lm; print(toruk_lm.__version__)"[0m
+2026-11-26T10:10:06.8476415Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:06.8476628Z env:
+2026-11-26T10:10:06.8476853Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8477202Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:06.8477543Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8477838Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8478146Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8478634Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:06.8478891Z ##[endgroup]
+2026-11-26T10:10:06.8648907Z 0.1.0
+2026-11-26T10:10:06.8703260Z ##[group]Run python -m toruk_lm --help
+2026-11-26T10:10:06.8703561Z [36;1mpython -m toruk_lm --help[0m
+2026-11-26T10:10:06.8733796Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:06.8734019Z env:
+2026-11-26T10:10:06.8734246Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8734605Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:06.8734935Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8735228Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8735543Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:06.8735846Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:06.8736104Z ##[endgroup]
+2026-11-26T10:10:08.3257555Z usage: toruk [-h]
+2026-11-26T10:10:08.3260308Z              {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+2026-11-26T10:10:08.3262845Z              ...
+2026-11-26T10:10:08.3262987Z 
+2026-11-26T10:10:08.3263127Z Toruk-LM research foundation
+2026-11-26T10:10:08.3263320Z 
+2026-11-26T10:10:08.3263432Z positional arguments:
+2026-11-26T10:10:08.3265901Z   {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+2026-11-26T10:10:08.3268408Z     diagnose            report actual runtime and CUDA availability
+2026-11-26T10:10:08.3268958Z     validate-config     validate a versioned reproduction config
+2026-11-26T10:10:08.3269579Z     audit-evidence      validate sealed evidence and rescore raw answers
+2026-11-26T10:10:08.3270205Z     compare-replay      require exact generated answers and score parity
+2026-11-26T10:10:08.3270764Z     make-fixture        generate document-separated smoke-test text
+2026-11-26T10:10:08.3271448Z     validate            verify split checksums, config and checkpoint identity
+2026-11-26T10:10:08.3272048Z     reproduce           run a bounded foundation or versioned research config
+2026-11-26T10:10:08.3272610Z     summarize           verify a sealed run and regenerate result tables
+2026-11-26T10:10:08.3273113Z     train               train ordinary LM; CPU; fixed learning rate
+2026-11-26T10:10:08.3273643Z     evaluate            local-context loss and autoregressive continuations
+2026-11-26T10:10:08.3274128Z     generate            greedy local-context inference
+2026-11-26T10:10:08.3274613Z     make-worlds         create frozen controlled worlds and LM exports
+2026-11-26T10:10:08.3275165Z     evaluate-worlds     validation-only generated factual answers
+2026-11-26T10:10:08.3275685Z     train-controlled    bounded ordinary/recurrent world training
+2026-11-26T10:10:08.3276124Z     evaluate-controlled
+2026-11-26T10:10:08.3276502Z                         validation-only world answers
+2026-11-26T10:10:08.3276972Z     effect-labels       offline bounded paired supervision
+2026-11-26T10:10:08.3277479Z     fit-effect          fit effect predictor on training labels only
+2026-11-26T10:10:08.3278002Z     evaluate-effect     offline validation effect diagnostics
+2026-11-26T10:10:08.3278586Z     controlled-pilot    bounded validation prerequisite/comparison pipeline
+2026-11-26T10:10:08.3279175Z     verify-m6           reproduce frozen M6 answers without retraining
+2026-11-26T10:10:08.3279708Z     generalization      bounded exploratory M7 held-out failure study
+2026-11-26T10:10:08.3280236Z     evaluate-heldout    one protocol-bound M7 cell/checkpoint
+2026-11-26T10:10:08.3280518Z 
+2026-11-26T10:10:08.3281323Z options:
+2026-11-26T10:10:08.3281628Z   -h, --help            show this help message and exit
+2026-11-26T10:10:08.6835655Z ##[group]Run python -m toruk_lm diagnose
+2026-11-26T10:10:08.6835951Z [36;1mpython -m toruk_lm diagnose[0m
+2026-11-26T10:10:08.6866168Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:08.6866385Z env:
+2026-11-26T10:10:08.6866636Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:08.6866991Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:08.6867336Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:08.6867632Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:08.6867926Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:08.6868406Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:08.6868780Z ##[endgroup]
+2026-11-26T10:10:09.7379066Z {
+2026-11-26T10:10:09.7379312Z   "python": "3.12.16",
+2026-11-26T10:10:09.7379676Z   "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+2026-11-26T10:10:09.7380052Z   "logical_cpus": 4,
+2026-11-26T10:10:09.7380251Z   "torch": "2.15.0+cpu",
+2026-11-26T10:10:09.7380443Z   "cuda_available": false,
+2026-11-26T10:10:09.7380634Z   "cuda_devices": [],
+2026-11-26T10:10:09.7380820Z   "training_device": "cpu",
+2026-11-26T10:10:09.7381313Z   "tokenizer": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7"
+2026-11-26T10:10:09.7381639Z }
+2026-11-26T10:10:10.0855217Z ##[group]Run python scripts/check_frozen_sources.py
+2026-11-26T10:10:10.0855548Z [36;1mpython scripts/check_frozen_sources.py[0m
+2026-11-26T10:10:10.0885316Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:10.0885524Z env:
+2026-11-26T10:10:10.0885740Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.0886105Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:10.0886441Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.0886772Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.0887070Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.0887364Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:10.0887622Z ##[endgroup]
+2026-11-26T10:10:10.1168891Z Verified 3 frozen experiment source files.
+2026-11-26T10:10:10.1234951Z ##[group]Run python -m ruff check .
+2026-11-26T10:10:10.1235238Z [36;1mpython -m ruff check .[0m
+2026-11-26T10:10:10.1265084Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:10.1265299Z env:
+2026-11-26T10:10:10.1265513Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1265856Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:10.1266228Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1266536Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1266831Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1267143Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:10.1267405Z ##[endgroup]
+2026-11-26T10:10:10.1877301Z All checks passed!
+2026-11-26T10:10:10.1922241Z ##[group]Run python -m ruff format --check src tests scripts
+2026-11-26T10:10:10.1922719Z [36;1mpython -m ruff format --check src tests scripts[0m
+2026-11-26T10:10:10.1952920Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:10.1953215Z env:
+2026-11-26T10:10:10.1953605Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1954083Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:10.1954536Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1954971Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1955359Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.1955790Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:10.1956321Z ##[endgroup]
+2026-11-26T10:10:10.2567045Z 208 files already formatted
+2026-11-26T10:10:10.2613194Z ##[group]Run python -m mypy
+2026-11-26T10:10:10.2613561Z [36;1mpython -m mypy[0m
+2026-11-26T10:10:10.2643518Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:10.2643817Z env:
+2026-11-26T10:10:10.2644198Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.2644649Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:10.2645067Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.2645581Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.2645969Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:10.2646284Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:10.2646540Z ##[endgroup]
+2026-11-26T10:10:55.9321751Z Success: no issues found in 38 source files
+2026-11-26T10:10:56.0430665Z ##[group]Run python -m mypy --platform linux
+2026-11-26T10:10:56.0431143Z [36;1mpython -m mypy --platform linux[0m
+2026-11-26T10:10:56.0460783Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:56.0461133Z env:
+2026-11-26T10:10:56.0461412Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.0461765Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:56.0462111Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.0462408Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.0462702Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.0462995Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:56.0463248Z ##[endgroup]
+2026-11-26T10:10:56.8184370Z Success: no issues found in 38 source files
+2026-11-26T10:10:56.8283502Z ##[group]Run python scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-ubuntu.json
+2026-11-26T10:10:56.8284156Z [36;1mpython scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-ubuntu.json[0m
+2026-11-26T10:10:56.8314067Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:56.8314280Z env:
+2026-11-26T10:10:56.8314496Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.8314844Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:56.8315173Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.8315467Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.8315758Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:56.8316048Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:56.8316303Z ##[endgroup]
+2026-11-26T10:10:59.1183620Z INITIALIZATION_CONTRACT={"answers_generated": 0, "cells": {"601-ordinary": {"current_sha256": "55eb0e94969e5551c859b04338811e88a7d55854af0d3ad8b334a82dc40e0a07", "equals_recorded": false, "recorded_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b", "rng_after": "da58d94daf7b370de0ab6b06878caed749b3fb0badc1bee2dec5e9bcccaf5ef6", "rng_before": "35000a1b23cb737f5f2c3d264ad81ab72ee8792c37ed4b332a0fabf80a48fe76", "same_runtime_repeatable": true, "tensors": {"blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "a5645e7a3fa0866cde8842c4dab96567507c3d1a3c028b816bc63f6966367b70", "shape": [54]}, "blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [-0.08970022201538086, 0.21359065175056458, -0.08331535011529922, 0.24636027216911316], "sha256": "0aa024060abab65ac54ee983e142d1c2454065971cee30f42a837eb6949fcec5", "shape": [54, 18]}, "blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.18275786936283112, 0.224919855594635, 0.17135711014270782, 0.04468479007482529], "sha256": "e01f5a3fb820619b31c3e154596e59cf9f415046af29e4d618e6325b6410a76a", "shape": [18, 18]}, "blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [0.0050638034008443356, 0.2316393405199051, -0.17025941610336304, 0.060516104102134705], "sha256": "42643a113a8db2ebf645e534c21fa18a30a154a1548b91d61621f98e9f83df1e", "shape": [72]}, "blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [-0.08627960085868835, 0.08907699584960938, -0.037817131727933884, 0.03339651599526405], "sha256": "5ce702cd878b7d59b8e11b9265e581cb12d71953c7482d27d5a9182b32f54505", "shape": [72, 18]}, "blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [-0.1028084009885788, -0.029732733964920044, -0.0035389866679906845, -0.11070667952299118], "sha256": "afdec9b5c3e5a379b396718ef63b28362652a1dffd3f77db1786d8a2809c9f5e", "shape": [18]}, "blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [0.02658124454319477, 0.09887077659368515, -0.04317031428217888, -0.06833518296480179], "sha256": "62312fe4e51359ca915595649c0e3386ade6798324bb66464e73aad9a7f9938d", "shape": [18, 72]}, "blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "19775a0eefecff0262ea0e83d5b62b3ea1d5016a275f7cab0088355fe8cd719b", "shape": [259, 18]}, "norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "output.weight": {"dtype": "torch.float32", "first_values": [-0.13109411299228668, -0.09159066528081894, -0.21690887212753296, 0.20818562805652618], "sha256": "9a5abb397e9faf59ab63122bd655ca5591bdac34208c24a3e21874cfa10ad8d3", "shape": [259, 18]}, "position.weight": {"dtype": "torch.float32", "first_values": [0.3645738661289215, 1.5915364027023315, 0.6667655110359192, -0.5630738139152527], "sha256": "44d6f7cadd5ae4252efbf5929ea75e7e1bf1480802f5126d401e7646125147c3", "shape": [32, 18]}}}, "601-recurrent": {"current_sha256": "f4657f953092da16dc41fce2d37489214f3ed5847cce691c80b4b94e73a9c806", "equals_recorded": false, "recorded_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392", "rng_after": "350d17282fce4eb10c609cca94f99330efaebcd6d3773c6944aaff55154cf0ac", "rng_before": "35000a1b23cb737f5f2c3d264ad81ab72ee8792c37ed4b332a0fabf80a48fe76", "same_runtime_repeatable": true, "tensors": {"backbone.blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "backbone.blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [0.10668864101171494, -0.10184144228696823, -0.07504986226558685, 0.055060360580682755], "sha256": "4be18513e0a9de60d213aa83019a49c1067dcc0e4e8ae1d9e433ae0a34bb4020", "shape": [48, 16]}, "backbone.blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [-0.10835015773773193, -0.00852435827255249, 0.06240051984786987, 0.031993985176086426], "sha256": "346eefc3895c4d9c39241da9e5a96eb0f657f4370984a9d462796982de0bbc19", "shape": [16, 16]}, "backbone.blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [0.025105535984039307, 0.14858663082122803, -0.1482011079788208, 0.014822393655776978], "sha256": "e21491ca6033cbd3007df48634a436fb45e22a86c78dd2a113df91fb59c1e097", "shape": [64]}, "backbone.blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [0.10510978102684021, -0.006559967994689941, -0.07517531514167786, -0.163210928440094], "sha256": "dff7af660ae1e2105187bc23a54310bfbc861c31c2b5a293b6624f84d5718a62", "shape": [64, 16]}, "backbone.blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [-0.004977568984031677, 0.025026917457580566, -0.07422520220279694, 0.05058249831199646], "sha256": "2ffced3c6173e515f7231dedc70c4e92160151f236b68d3876c26691e2d159dc", "shape": [16]}, "backbone.blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [-0.10692693293094635, -0.12452642619609833, -0.02817918360233307, -0.10281805694103241], "sha256": "aa297e3a5ced71c51c438a69abeecc64d3941ff4d75faf5bf8f0b7ad6a2d7393", "shape": [16, 64]}, "backbone.blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "e0ace372681382f9444676ddd3625defce09856af74c2a3df6d242f4b82fe2f0", "shape": [259, 16]}, "backbone.norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.output.weight": {"dtype": "torch.float32", "first_values": [-0.09814375638961792, -0.2056233286857605, 0.006921052932739258, 0.03241443634033203], "sha256": "05d937f1b41c982ad1d10cbf32768b54b2d440a6e4f99157b36f9e141123d6e3", "shape": [259, 16]}, "backbone.position.weight": {"dtype": "torch.float32", "first_values": [-0.01954837702214718, -1.4999319314956665, 0.04013491049408913, 0.5925984978675842], "sha256": "20cfab22beb1eb23f0ea76f1f29dd358ce8b5e2d13aacd0a751230b61647607e", "shape": [32, 16]}, "gate.bias": {"dtype": "torch.float32", "first_values": [0.10935406386852264, -0.1261482536792755, -0.17022545635700226, 0.11168906092643738], "sha256": "cdce51c8a9d80a668678d7430bc0a8876e696eacf56250195de38d1b060ddb9c", "shape": [16]}, "gate.weight": {"dtype": "torch.float32", "first_values": [0.15982063114643097, -0.12885022163391113, -0.09705744683742523, -0.14476044476032257], "sha256": "09eacbb258b77a49f18a90b5a2a8261857404460a5c70c1226a609b0446d514b", "shape": [16, 32]}, "proposal.bias": {"dtype": "torch.float32", "first_values": [-0.043298132717609406, 0.02210479974746704, 0.07633112370967865, 0.1424795687198639], "sha256": "49116f4ee988fc92a98943c91d875e20b049b211fdae29dbef381bc1912a6507", "shape": [16]}, "proposal.weight": {"dtype": "torch.float32", "first_values": [0.03295965865254402, 0.17413459718227386, 0.056095220148563385, -0.016824325546622276], "sha256": "dd3470393b4e28baebcbc0b81d7165627d6871ef8071c3ddcbc4160ead5bc35b", "shape": [16, 32]}, "read_norms.0.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "read_norms.0.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "readers.0.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "readers.0.in_proj_weight": {"dtype": "torch.float32", "first_values": [0.25280389189720154, 0.19023382663726807, -0.14101138710975647, 0.0009786810260266066], "sha256": "b16ee7472de0a81cede7ff81b875daee9992d83817147f0af736036034fc3d87", "shape": [48, 16]}, "readers.0.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "readers.0.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.15941381454467773, -0.0023664534091949463, 0.24886497855186462, 0.20168814063072205], "sha256": "ac7d71ce785646c17af046cd74d656c87a757e8479c4a651db1c1129b5477c40", "shape": [16, 16]}, "slot_gate": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1", "shape": [4, 16]}, "slot_proposal": {"dtype": "torch.float32", "first_values": [0.002464032033458352, -0.009801764972507954, 0.048025764524936676, -0.0009470190852880478], "sha256": "58bbc9d9d41ccaba1c0883b85dea49307aaad91efac95b140f0ec786ee708766", "shape": [4, 16]}}}, "947-ordinary": {"current_sha256": "6e6588d0f9d187605ef87c19dfee2fe0e9abf51cd243c8659a0aa10f69dcac74", "equals_recorded": false, "recorded_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5", "rng_after": "fdb38956c8d4f37a90098605919edd55584af6e9876d9d016b99e6a8c1c4d580", "rng_before": "7bd0f28c6b77b2845a409ccfe158cf4432fe92cec6babc1f4c4e35df3fc38faa", "same_runtime_repeatable": true, "tensors": {"blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "a5645e7a3fa0866cde8842c4dab96567507c3d1a3c028b816bc63f6966367b70", "shape": [54]}, "blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [-0.2787097096443176, -0.04256162792444229, 0.22979992628097534, -0.2783143222332001], "sha256": "e5b68af952889c71c46994154b6b4d9dee916d45f8b360d04d411d7622d9c1ef", "shape": [54, 18]}, "blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [-0.03297661989927292, -0.22954794764518738, -0.10496509820222855, 0.07538402080535889], "sha256": "31d9391e194ece23ab2c3f2322666dd7c42f7176b0af22513d4ac3070265e952", "shape": [18, 18]}, "blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [-0.12210714817047119, 0.1367533951997757, -0.037398502230644226, 0.2298612743616104], "sha256": "e7afff3cf3b0ea4a282c659ed78d97600c2bf5d6d63ccf8e7f6c6ee5333651fa", "shape": [72]}, "blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [-0.23462031781673431, -0.16486796736717224, 0.1214858740568161, -0.2115509957075119], "sha256": "320967234d432a2bd4d5a531679d7fcea3be771bb80aadd9ee176f12235d796e", "shape": [72, 18]}, "blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [-0.06983038783073425, -0.06371726840734482, -0.06068412959575653, 0.019636468961834908], "sha256": "216231ad724643978333044ac02ef243fa15820e321ddf29eb6b06052e291df9", "shape": [18]}, "blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [0.02396913804113865, 0.01756609044969082, -0.09562833607196808, 0.07385502010583878], "sha256": "720dba5c49c827e75a0c20fea059115e34ac9c9b109ae972f61ac81557b24d29", "shape": [18, 72]}, "blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "69086ee6bb26874a825470616bbdaefe1697dd9429583e83fc3694dc957426ce", "shape": [259, 18]}, "norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "output.weight": {"dtype": "torch.float32", "first_values": [0.20760394632816315, 0.047546789050102234, -0.10493556410074234, -0.0388931967318058], "sha256": "df82d708be76a644748ebbbe2515890c1afce5bdc6687f1f91c1c65deabadcdd", "shape": [259, 18]}, "position.weight": {"dtype": "torch.float32", "first_values": [0.28651124238967896, -0.4800393879413605, -0.766623854637146, -0.4625307023525238], "sha256": "527a23101121bd6fe46b1cbaa9afd65a5f7b8bbdcc07f7d1fc2fa978466539ea", "shape": [32, 18]}}}, "947-recurrent": {"current_sha256": "ff8e40801b7f7e21bf60ce6051269dc831d58b5b70126ea3852d3691318ddbb2", "equals_recorded": false, "recorded_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5", "rng_after": "c965def098db3712f8cfeec0e5ab6f30ddb2daa9614575a97bb20acebb4dce12", "rng_before": "7bd0f28c6b77b2845a409ccfe158cf4432fe92cec6babc1f4c4e35df3fc38faa", "same_runtime_repeatable": true, "tensors": {"backbone.blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "backbone.blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [-0.29786986112594604, 0.059822436422109604, -0.21301217377185822, 0.1540425568819046], "sha256": "aa7b9b9f7ecf02cf74b8bc59da89c44611b9f634b291b21989d2251fbfc40852", "shape": [48, 16]}, "backbone.blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.10680663585662842, -0.00032827258110046387, 0.18051445484161377, -0.033616721630096436], "sha256": "2d4e67bdd670bdff0e53ec7446e44ceb264ea5a6e7154bf9c40fb61c42324d27", "shape": [16, 16]}, "backbone.blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [0.1332804560661316, -0.2299090027809143, -0.15442728996276855, -0.13165268301963806], "sha256": "89727a7cc1bc1e0b5e5706c1cfcefb22bc186cf8fe55a16fa609a9a8e8ce8314", "shape": [64]}, "backbone.blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [-0.20774543285369873, -0.2004159688949585, -0.07895904779434204, 0.18031767010688782], "sha256": "d2db9d93d2a6fbc253b17a9944bc5e68ad6b203cfb177aec25a1944b7294ff9d", "shape": [64, 16]}, "backbone.blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [0.09881238639354706, 0.0473882257938385, 0.05751478672027588, 0.11734557151794434], "sha256": "2f65131d3c05bfdd882e20cb0bcd2f8950f719abbb0d35065f185ec20de4968a", "shape": [16]}, "backbone.blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [0.03464682400226593, -0.06670145690441132, -0.019983544945716858, -0.09473203122615814], "sha256": "2e5a654341ee828a803423e377312f08e0ece70110f8593b5d8a439ece405f8a", "shape": [16, 64]}, "backbone.blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "465662a8f4f2df81000ded8f7aff051bf799e19cc80e431b141a8ad39db3bb87", "shape": [259, 16]}, "backbone.norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.output.weight": {"dtype": "torch.float32", "first_values": [-0.02344602346420288, 0.21909362077713013, 0.05103254318237305, -0.19440484046936035], "sha256": "b94f93214a7c014996af4a013f8a0ce1a3cd89cf4862be151a5984327091deda", "shape": [259, 16]}, "backbone.position.weight": {"dtype": "torch.float32", "first_values": [-0.14806348085403442, 1.827078104019165, -0.1545564979314804, -0.5231153964996338], "sha256": "4590c5ffe6f9dd177935e3a6753f03feae6d5cf2bd2558c8099c81b1cce04d57", "shape": [32, 16]}, "gate.bias": {"dtype": "torch.float32", "first_values": [0.09977008402347565, -0.026336321607232094, 0.14757360517978668, 0.1214115172624588], "sha256": "334aab87ad21484d2056d5f037e1cb69d3299d385e0a73e540654b5aa0d2eff3", "shape": [16]}, "gate.weight": {"dtype": "torch.float32", "first_values": [-0.12569886445999146, -0.10481731593608856, -0.14911635220050812, -0.08688079565763474], "sha256": "432cd35147908bbe8555f0f3614d50017fc39c29763124e1c0b3d7390aee1e41", "shape": [16, 32]}, "proposal.bias": {"dtype": "torch.float32", "first_values": [-0.11241976171731949, -0.03021867945790291, 0.10134582221508026, 0.02192763425409794], "sha256": "f345ed1a23205fb4196e3c348875c9ca23b10f63e88fad774ded32be4c265738", "shape": [16]}, "proposal.weight": {"dtype": "torch.float32", "first_values": [0.10498271882534027, -0.11247267574071884, -0.12462009489536285, 0.09402548521757126], "sha256": "87a76f80e5b837b1ecd24974440e40158d142d59151332b22e30a5fe9d1c386f", "shape": [16, 32]}, "read_norms.0.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "read_norms.0.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "readers.0.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "readers.0.in_proj_weight": {"dtype": "torch.float32", "first_values": [0.03443998843431473, -0.038482826203107834, 0.12178831547498703, -0.09707951545715332], "sha256": "b4df43a9bba89a33c2bc4baa10e84513b909a0afa8eba20b0a37995261062f10", "shape": [48, 16]}, "readers.0.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "readers.0.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.13199132680892944, -0.11972442269325256, -0.203751802444458, -0.039683252573013306], "sha256": "734151d29e123788dceab89f50bc1a7bb8ca29379a4574e7bcbad1b44072ab1d", "shape": [16, 16]}, "slot_gate": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1", "shape": [4, 16]}, "slot_proposal": {"dtype": "torch.float32", "first_values": [-0.02840934693813324, -0.01574580930173397, -0.015816915780305862, -0.027622753754258156], "sha256": "3b093afd6208ea2ede05a55e59ef397734553bbd71d6603f6a759e6817a4024b", "shape": [4, 16]}}}}, "cpu_capability": "AVX512", "cpu_capability_override": null, "frozen_runtime": {"platform": "Windows-11-10.0.26100-SP0", "psutil": "7.2.2", "python": "3.12.14", "torch": "2.15.0+cpu"}, "machine": "x86_64", "model_forwards": 0, "optimizer_updates": 0, "optional_local_checkpoints": {"checkpoints": {"601-ordinary": {"path": "artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt", "status": "MISSING"}, "601-recurrent": {"path": "artifacts/local-answer-dev-v1/stages/train-601-recurrent/checkpoint.pt", "status": "MISSING"}, "947-ordinary": {"path": "artifacts/local-answer-dev-v1/stages/train-947-ordinary/checkpoint.pt", "status": "MISSING"}, "947-recurrent": {"path": "artifacts/local-answer-dev-v1/stages/train-947-recurrent/checkpoint.pt", "status": "MISSING"}}, "model_loaded": false, "status": "MISSING_INPUTS", "substitutes_created": false}, "runtime": {"platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43", "psutil": "7.2.2", "python": "3.12.16", "torch": "2.15.0+cpu"}, "scope": "Current-runtime initialization only; not cross-runtime byte identity or research reproduction", "torch_build": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 202002\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.13.3 (Git Hash b38f97eb6f2173513112f15a0481750b8a66e901)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX512\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=d0f2af8b66b20da4baa50644c0cd3f887a2eae2e, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.15.0, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"}
+2026-11-26T10:10:59.7809122Z ##[group]Run python scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-scalar-ubuntu.json
+2026-11-26T10:10:59.7809838Z [36;1mpython scripts/diagnose_initialization_contract.py --output artifacts/ci-initialization-scalar-ubuntu.json[0m
+2026-11-26T10:10:59.7839743Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:10:59.7839956Z env:
+2026-11-26T10:10:59.7840180Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:59.7840533Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:10:59.7840884Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:59.7841760Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:59.7842076Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:10:59.7842371Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:10:59.7842635Z   ATEN_CPU_CAPABILITY: default
+2026-11-26T10:10:59.7842873Z ##[endgroup]
+2026-11-26T10:11:01.8329052Z INITIALIZATION_CONTRACT={"answers_generated": 0, "cells": {"601-ordinary": {"current_sha256": "2a97e2deac0b53946052bbd7a50dc0fdc35df347886fb7c7f9a86c6fefbccdfa", "equals_recorded": false, "recorded_sha256": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b", "rng_after": "da58d94daf7b370de0ab6b06878caed749b3fb0badc1bee2dec5e9bcccaf5ef6", "rng_before": "35000a1b23cb737f5f2c3d264ad81ab72ee8792c37ed4b332a0fabf80a48fe76", "same_runtime_repeatable": true, "tensors": {"blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "a5645e7a3fa0866cde8842c4dab96567507c3d1a3c028b816bc63f6966367b70", "shape": [54]}, "blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [-0.08970022201538086, 0.21359068155288696, -0.08331534266471863, 0.24636030197143555], "sha256": "4c5fb58e04501cd13b04ae93e6b9ce1c5f125ddba9d7395b96e6cc1708715f08", "shape": [54, 18]}, "blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.18275786936283112, 0.2249198704957962, 0.17135711014270782, 0.04468478262424469], "sha256": "652686a6bd258fef7e9996f93b3be27c5adbe7d1899869cd83715ce120c70e5e", "shape": [18, 18]}, "blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [0.005063802003860474, 0.2316393405199051, -0.17025941610336304, 0.060516104102134705], "sha256": "e8d1a98cc3db50e9a25b76ff56ef0f2c4dc6576f34372045ca467a1692e2cc1c", "shape": [72]}, "blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [-0.08627960085868835, 0.08907701075077057, -0.03781713545322418, 0.03339652717113495], "sha256": "1eee23d80e27ef9a8af04d2de75500246d283854ff0d4b9c5613fc5d15b36439", "shape": [72, 18]}, "blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [-0.1028084009885788, -0.029732733964920044, -0.0035389885306358337, -0.11070667952299118], "sha256": "47debff92ff517593e3d8a4fe66929843e0e3a27159498b58a2d6849ef590f3d", "shape": [18]}, "blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [0.02658125013113022, 0.09887077659368515, -0.04317031800746918, -0.06833519041538239], "sha256": "648342327f80566f60066de6061f735d0b30013c13bae3973661b2f1815c07d2", "shape": [18, 72]}, "blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5185acebe36666da7d6612eec15558d1974a6bd0e36ac84736f58db2250576a4", "shape": [259, 18]}, "norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "output.weight": {"dtype": "torch.float32", "first_values": [-0.13109412789344788, -0.09159067273139954, -0.21690887212753296, 0.20818562805652618], "sha256": "515f381536d160d8b8935481073675f53e6cbba678e14992e483ec9f99fc565c", "shape": [259, 18]}, "position.weight": {"dtype": "torch.float32", "first_values": [0.36457401514053345, 1.5915364027023315, 0.6667655110359192, -0.5630738139152527], "sha256": "2aaae8159cfe19332e0879a3b92293c41830bb3c6a1ef57e4a0013097bf9cbf5", "shape": [32, 18]}}}, "601-recurrent": {"current_sha256": "897cf8ead8af333aba84f8e3abd62951b83b947313aad4fcd81635a8b1017eab", "equals_recorded": false, "recorded_sha256": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392", "rng_after": "350d17282fce4eb10c609cca94f99330efaebcd6d3773c6944aaff55154cf0ac", "rng_before": "35000a1b23cb737f5f2c3d264ad81ab72ee8792c37ed4b332a0fabf80a48fe76", "same_runtime_repeatable": true, "tensors": {"backbone.blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "backbone.blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [0.10668864846229553, -0.10184144973754883, -0.07504986226558685, 0.055060356855392456], "sha256": "449f8959aec6beb4f3865656bb963dc449947379dbcaf94d1dc32256f6e386a9", "shape": [48, 16]}, "backbone.blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [-0.10835015773773193, -0.00852435827255249, 0.06240051984786987, 0.031993985176086426], "sha256": "346eefc3895c4d9c39241da9e5a96eb0f657f4370984a9d462796982de0bbc19", "shape": [16, 16]}, "backbone.blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [0.025105535984039307, 0.14858663082122803, -0.1482011079788208, 0.014822393655776978], "sha256": "e21491ca6033cbd3007df48634a436fb45e22a86c78dd2a113df91fb59c1e097", "shape": [64]}, "backbone.blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [0.10510978102684021, -0.006559967994689941, -0.07517531514167786, -0.163210928440094], "sha256": "dff7af660ae1e2105187bc23a54310bfbc861c31c2b5a293b6624f84d5718a62", "shape": [64, 16]}, "backbone.blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [-0.004977568984031677, 0.025026917457580566, -0.07422520220279694, 0.05058249831199646], "sha256": "2ffced3c6173e515f7231dedc70c4e92160151f236b68d3876c26691e2d159dc", "shape": [16]}, "backbone.blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [-0.10692693293094635, -0.12452642619609833, -0.02817918360233307, -0.10281805694103241], "sha256": "aa297e3a5ced71c51c438a69abeecc64d3941ff4d75faf5bf8f0b7ad6a2d7393", "shape": [16, 64]}, "backbone.blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "e4fd3006e8f17d7e9c49e1529243c1f18812e17de48bbdb32766bf5edcc1b78c", "shape": [259, 16]}, "backbone.norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.output.weight": {"dtype": "torch.float32", "first_values": [-0.09814375638961792, -0.2056233286857605, 0.006921052932739258, 0.03241443634033203], "sha256": "05d937f1b41c982ad1d10cbf32768b54b2d440a6e4f99157b36f9e141123d6e3", "shape": [259, 16]}, "backbone.position.weight": {"dtype": "torch.float32", "first_values": [-0.019548267126083374, -1.4999319314956665, 0.040134791284799576, 0.5925987362861633], "sha256": "b30375c74450cdaefcf2e19ea2bfc91714a64d3d6da417c3f2372fef7c77002b", "shape": [32, 16]}, "gate.bias": {"dtype": "torch.float32", "first_values": [0.10935406386852264, -0.1261482536792755, -0.17022545635700226, 0.11168907582759857], "sha256": "bc6ab09c19b68bbb90873cc7141d75a4e2067698da906bcf68d7a066a4bbfa15", "shape": [16]}, "gate.weight": {"dtype": "torch.float32", "first_values": [0.15982063114643097, -0.12885022163391113, -0.09705744683742523, -0.14476045966148376], "sha256": "e2d8f97a699e8ad4a5327b05847d08f2e9eb0d6a2cb445e4cbf990c34e80acdc", "shape": [16, 32]}, "proposal.bias": {"dtype": "torch.float32", "first_values": [-0.04329812526702881, 0.02210479974746704, 0.07633112370967865, 0.1424795538187027], "sha256": "517812808ab6cf43fd178b5d554e379a60f38e9cba35bc818b31413013472d99", "shape": [16]}, "proposal.weight": {"dtype": "torch.float32", "first_values": [0.03295965492725372, 0.17413459718227386, 0.05609522759914398, -0.01682431995868683], "sha256": "e6cb87d5ea1fb4b9cc9e03b5498a660129e492145261685e0f3cb8ba4ca32316", "shape": [16, 32]}, "read_norms.0.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "read_norms.0.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "readers.0.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "readers.0.in_proj_weight": {"dtype": "torch.float32", "first_values": [0.25280389189720154, 0.19023382663726807, -0.14101138710975647, 0.0009786784648895264], "sha256": "8f21fc46dd657275e40af38ffa41732c7caab0c99933a641f5ef3de9ee5fa638", "shape": [48, 16]}, "readers.0.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "readers.0.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.15941381454467773, -0.0023664534091949463, 0.24886497855186462, 0.20168814063072205], "sha256": "ac7d71ce785646c17af046cd74d656c87a757e8479c4a651db1c1129b5477c40", "shape": [16, 16]}, "slot_gate": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1", "shape": [4, 16]}, "slot_proposal": {"dtype": "torch.float32", "first_values": [0.002464032033458352, -0.00980176031589508, 0.048025764524936676, -0.0009470184450037777], "sha256": "8d86a7cf91a7aa220951fbfbcf4a66ff767680934d9776fda64df6fc158c9a76", "shape": [4, 16]}}}, "947-ordinary": {"current_sha256": "25e9962c6670c0e4d797f7b7c02527cfadc7107d3ccfb8e6b339991ffda7fabd", "equals_recorded": false, "recorded_sha256": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5", "rng_after": "fdb38956c8d4f37a90098605919edd55584af6e9876d9d016b99e6a8c1c4d580", "rng_before": "7bd0f28c6b77b2845a409ccfe158cf4432fe92cec6babc1f4c4e35df3fc38faa", "same_runtime_repeatable": true, "tensors": {"blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "a5645e7a3fa0866cde8842c4dab96567507c3d1a3c028b816bc63f6966367b70", "shape": [54]}, "blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [-0.2787097096443176, -0.04256163537502289, 0.22979992628097534, -0.2783143222332001], "sha256": "411527d096f07a675f182e84a39a97d000f415e77ca8cf07438160ea8d01333c", "shape": [54, 18]}, "blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [-0.032976627349853516, -0.22954794764518738, -0.10496509075164795, 0.07538403570652008], "sha256": "3b02f9f2f416ada41ed3abb44ddcb12aeca4ca1fbcd8c475d3d94b4d0e6c7d23", "shape": [18, 18]}, "blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [-0.12210714817047119, 0.1367533951997757, -0.037398502230644226, 0.2298612743616104], "sha256": "06784cfc2d5b5f51be096d82d81c75ed72fd72eb68a70feacbd36885cdfbe34b", "shape": [72]}, "blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [-0.23462031781673431, -0.16486796736717224, 0.1214858740568161, -0.2115509957075119], "sha256": "a1e8dc5826c9de80e794b34bdad7175f82739daed243bf63de4441a9bbf01191", "shape": [72, 18]}, "blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [-0.06983038783073425, -0.06371726840734482, -0.06068412959575653, 0.019636474549770355], "sha256": "a2cf13a47ee4b97377662e3ed88e93af4b9a7904073146357006518ed7d368f5", "shape": [18]}, "blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [0.0239691361784935, 0.017566092312335968, -0.09562833607196808, 0.07385502010583878], "sha256": "bb1c05de5f9736389bfaabbf931d9f4f2168642e72fa3774b412ddc5d2ed42aa", "shape": [18, 72]}, "blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "2ddb445f1e8636c256623552a47e5e719fb2cb6f2f2450b0a245ca86febf48cc", "shape": [259, 18]}, "norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400", "shape": [18]}, "norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "cb20f90237d216aff937f8753f7070e5fde514a80130f10572838485729343eb", "shape": [18]}, "output.weight": {"dtype": "torch.float32", "first_values": [0.20760394632816315, 0.047546789050102234, -0.10493557155132294, -0.0388931930065155], "sha256": "67afad5e8765bfe72bd96efdf3337ef2da2860e8e21da5a2e730c3b2dd8407a7", "shape": [259, 18]}, "position.weight": {"dtype": "torch.float32", "first_values": [0.28651124238967896, -0.4800393879413605, -0.7666242718696594, -0.4625307023525238], "sha256": "d7c0d485ffb2cdc1b724c68c56f6ad9f6f7f5fbd27cfdc0504e827d4ad080b7b", "shape": [32, 18]}}}, "947-recurrent": {"current_sha256": "e36a5ba2729411d7047698eb9a7f2b6335c7921e7b97b5e930f58cff731ce856", "equals_recorded": false, "recorded_sha256": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5", "rng_after": "c965def098db3712f8cfeec0e5ab6f30ddb2daa9614575a97bb20acebb4dce12", "rng_before": "7bd0f28c6b77b2845a409ccfe158cf4432fe92cec6babc1f4c4e35df3fc38faa", "same_runtime_repeatable": true, "tensors": {"backbone.blocks.0.attention.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "backbone.blocks.0.attention.in_proj_weight": {"dtype": "torch.float32", "first_values": [-0.29786986112594604, 0.0598224401473999, -0.21301215887069702, 0.1540425717830658], "sha256": "e8a9b3334218de3ca65e10fe510366e4620a840ee3b954cc26715f1f4bcd8a71", "shape": [48, 16]}, "backbone.blocks.0.attention.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.attention.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.10680663585662842, -0.00032827258110046387, 0.18051445484161377, -0.033616721630096436], "sha256": "2d4e67bdd670bdff0e53ec7446e44ceb264ea5a6e7154bf9c40fb61c42324d27", "shape": [16, 16]}, "backbone.blocks.0.ff.0.bias": {"dtype": "torch.float32", "first_values": [0.1332804560661316, -0.2299090027809143, -0.15442728996276855, -0.13165268301963806], "sha256": "89727a7cc1bc1e0b5e5706c1cfcefb22bc186cf8fe55a16fa609a9a8e8ce8314", "shape": [64]}, "backbone.blocks.0.ff.0.weight": {"dtype": "torch.float32", "first_values": [-0.20774543285369873, -0.2004159688949585, -0.07895904779434204, 0.18031767010688782], "sha256": "d2db9d93d2a6fbc253b17a9944bc5e68ad6b203cfb177aec25a1944b7294ff9d", "shape": [64, 16]}, "backbone.blocks.0.ff.2.bias": {"dtype": "torch.float32", "first_values": [0.09881238639354706, 0.0473882257938385, 0.05751478672027588, 0.11734557151794434], "sha256": "2f65131d3c05bfdd882e20cb0bcd2f8950f719abbb0d35065f185ec20de4968a", "shape": [16]}, "backbone.blocks.0.ff.2.weight": {"dtype": "torch.float32", "first_values": [0.03464682400226593, -0.06670145690441132, -0.019983544945716858, -0.09473203122615814], "sha256": "2e5a654341ee828a803423e377312f08e0ece70110f8593b5d8a439ece405f8a", "shape": [16, 64]}, "backbone.blocks.0.norm1.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm1.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.blocks.0.norm2.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.blocks.0.norm2.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.embedding.weight": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "be6afcaeca3cf32ce8b73359593532a3dd8f338e1a95059c3d4dd3cb0b702c17", "shape": [259, 16]}, "backbone.norm.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "backbone.norm.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "backbone.output.weight": {"dtype": "torch.float32", "first_values": [-0.02344602346420288, 0.21909362077713013, 0.05103254318237305, -0.19440484046936035], "sha256": "b94f93214a7c014996af4a013f8a0ce1a3cd89cf4862be151a5984327091deda", "shape": [259, 16]}, "backbone.position.weight": {"dtype": "torch.float32", "first_values": [-0.14806348085403442, 1.827078104019165, -0.1545564979314804, -0.5231153964996338], "sha256": "4f9683683c5db39127ae62a73cfac88d4a6cb4a34dc5bb3a5069dd87c743c78a", "shape": [32, 16]}, "gate.bias": {"dtype": "torch.float32", "first_values": [0.09977008402347565, -0.02633632719516754, 0.14757360517978668, 0.1214115172624588], "sha256": "18b67a54878b0666932ff4773371d5037e89db7f57a8498d99bd613b62039367", "shape": [16]}, "gate.weight": {"dtype": "torch.float32", "first_values": [-0.12569886445999146, -0.10481731593608856, -0.14911635220050812, -0.08688079565763474], "sha256": "8a298dd52e9ef844f6a205018e25aafa5440188a8b9ec444d83f52e2c7c23d96", "shape": [16, 32]}, "proposal.bias": {"dtype": "torch.float32", "first_values": [-0.11241976171731949, -0.03021867573261261, 0.10134582221508026, 0.021927639842033386], "sha256": "64b336d95446fc0f06ffa69493cc9b2f78c2cc502cadd8a1c10d6e834a69aae9", "shape": [16]}, "proposal.weight": {"dtype": "torch.float32", "first_values": [0.10498271882534027, -0.11247267574071884, -0.12462009489536285, 0.09402547776699066], "sha256": "c5bc5821b126af4fa4c5f87d6da6236133aa06e3384e62cd354c97afed1b21f0", "shape": [16, 32]}, "read_norms.0.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "read_norms.0.weight": {"dtype": "torch.float32", "first_values": [1.0, 1.0, 1.0, 1.0], "sha256": "9628e545ed3ac074e5a6cbf542a642b62482fbfca9b4cb3ea4743a1874256e37", "shape": [16]}, "readers.0.in_proj_bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5", "shape": [48]}, "readers.0.in_proj_weight": {"dtype": "torch.float32", "first_values": [0.03443998098373413, -0.03848281502723694, 0.12178832292556763, -0.09707951545715332], "sha256": "5538bedd89c49cfb88897082a9e037026b5f5187d30b66fd3ba3811cd2489779", "shape": [48, 16]}, "readers.0.out_proj.bias": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b", "shape": [16]}, "readers.0.out_proj.weight": {"dtype": "torch.float32", "first_values": [0.13199132680892944, -0.11972442269325256, -0.203751802444458, -0.039683252573013306], "sha256": "734151d29e123788dceab89f50bc1a7bb8ca29379a4574e7bcbad1b44072ab1d", "shape": [16, 16]}, "slot_gate": {"dtype": "torch.float32", "first_values": [0.0, 0.0, 0.0, 0.0], "sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1", "shape": [4, 16]}, "slot_proposal": {"dtype": "torch.float32", "first_values": [-0.02840934693813324, -0.01574580930173397, -0.015816913917660713, -0.027622759342193604], "sha256": "e9f519f80e389979c05a06a8e3a007c08606776e7c96ca6c062cbfd0714b1374", "shape": [4, 16]}}}}, "cpu_capability": "DEFAULT", "cpu_capability_override": "default", "frozen_runtime": {"platform": "Windows-11-10.0.26100-SP0", "psutil": "7.2.2", "python": "3.12.14", "torch": "2.15.0+cpu"}, "machine": "x86_64", "model_forwards": 0, "optimizer_updates": 0, "optional_local_checkpoints": {"checkpoints": {"601-ordinary": {"path": "artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt", "status": "MISSING"}, "601-recurrent": {"path": "artifacts/local-answer-dev-v1/stages/train-601-recurrent/checkpoint.pt", "status": "MISSING"}, "947-ordinary": {"path": "artifacts/local-answer-dev-v1/stages/train-947-ordinary/checkpoint.pt", "status": "MISSING"}, "947-recurrent": {"path": "artifacts/local-answer-dev-v1/stages/train-947-recurrent/checkpoint.pt", "status": "MISSING"}}, "model_loaded": false, "status": "MISSING_INPUTS", "substitutes_created": false}, "runtime": {"platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43", "psutil": "7.2.2", "python": "3.12.16", "torch": "2.15.0+cpu"}, "scope": "Current-runtime initialization only; not cross-runtime byte identity or research reproduction", "torch_build": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 202002\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.13.3 (Git Hash b38f97eb6f2173513112f15a0481750b8a66e901)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=d0f2af8b66b20da4baa50644c0cd3f887a2eae2e, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.15.0, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"}
+2026-11-26T10:11:02.4668942Z ##[group]Run python -m pytest -q -ra --junitxml=artifacts/ci-pytest-ubuntu.xml
+2026-11-26T10:11:02.4669705Z [36;1mpython -m pytest -q -ra --junitxml=artifacts/ci-pytest-ubuntu.xml[0m
+2026-11-26T10:11:02.4700306Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:11:02.4700528Z env:
+2026-11-26T10:11:02.4700768Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:11:02.4701327Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:11:02.4701668Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:11:02.4701966Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:11:02.4702267Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:11:02.4702570Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:11:02.4702828Z ##[endgroup]
+2026-11-26T10:11:09.0651424Z ........................................................................ [ 12%]
+2026-11-26T10:11:18.3261287Z ........................................................................ [ 24%]
+2026-11-26T10:11:18.4253896Z ..........................................................s............. [ 37%]
+2026-11-26T10:11:46.2905322Z .................................................sssssssssssssssssss.ss. [ 49%]
+2026-11-26T10:11:50.2719534Z s....................................................s.................. [ 62%]
+2026-11-26T10:11:51.7388268Z .................................................................s...... [ 74%]
+2026-11-26T10:12:16.0587905Z .s...................................................................... [ 87%]
+2026-11-26T10:12:30.6491853Z ........................................................................ [ 99%]
+2026-11-26T10:12:43.0372641Z ..                                                                       [100%]
+2026-11-26T10:12:43.0373373Z =========================== short test summary info ============================
+2026-11-26T10:12:43.0376452Z SKIPPED [1] tests/test_first_byte_probe.py: Optional local research weights missing: artifacts/local-answer-dev-v1/stages/train-601-ordinary/checkpoint.pt, artifacts/local-answer-dev-v1/stages/train-601-recurrent/checkpoint.pt, artifacts/local-answer-dev-v1/stages/train-947-ordinary/checkpoint.pt, artifacts/local-answer-dev-v1/stages/train-947-recurrent/checkpoint.pt; use scripts/check_local_research_checkpoints.py. Portable data/plan checks run separately.
+2026-11-26T10:12:43.0379303Z SKIPPED [3] tests/test_lifetime_job.py:15: Native Windows Job/ctypes.windll contract; exercised by Windows CI
+2026-11-26T10:12:43.0380369Z SKIPPED [2] tests/test_lifetime_job.py: Native Windows Job/ctypes.windll contract; exercised by Windows CI
+2026-11-26T10:12:43.0381570Z SKIPPED [2] tests/test_lifetime_job.py:50: Native Windows Job/ctypes.windll contract; exercised by Windows CI
+2026-11-26T10:12:43.0382610Z SKIPPED [6] tests/test_lifetime_job_v2.py: Native Windows Job/ctypes.windll contract; exercised by Windows CI
+2026-11-26T10:12:43.0383644Z SKIPPED [4] tests/test_lifetime_job_v2.py:51: Native Windows Job/ctypes.windll contract; exercised by Windows CI
+2026-11-26T10:12:43.0385107Z SKIPPED [5] tests/test_lifetime_job_v2.py:116: Native Windows Job/ctypes.windll contract; exercised by Windows CI
+2026-11-26T10:12:43.0387145Z SKIPPED [1] tests/test_paired_batch_dev.py: Exact archived initialization requires its frozen runtime; current={"platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43", "psutil": "7.2.2", "python": "3.12.16", "torch": "2.15.0+cpu"}; same-runtime determinism is tested separately. Recorded expected hashes are unchanged.
+2026-11-26T10:12:43.0388721Z SKIPPED [1] tests/test_qwen_long_history_v2.py:19: Windows awake-time clock
+2026-11-26T10:12:43.0389619Z SKIPPED [1] tests/test_qwen_long_history_v2.py: Native Windows Job/ctypes.windll contract; exercised by Windows CI
+2026-11-26T10:12:43.0390345Z 552 passed, 26 skipped in 99.73s (0:01:39)
+2026-11-26T10:12:43.9397573Z ##[group]Run python scripts/independent_replication.py validate-cases --run artifacts/ci-independent-cases
+2026-11-26T10:12:43.9398571Z [36;1mpython scripts/independent_replication.py validate-cases --run artifacts/ci-independent-cases[0m
+2026-11-26T10:12:43.9435581Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:12:43.9435818Z env:
+2026-11-26T10:12:43.9436051Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:43.9436413Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:12:43.9436745Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:43.9437048Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:43.9437347Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:43.9437650Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:12:43.9437916Z ##[endgroup]
+2026-11-26T10:12:45.0156298Z Validated 24 independent cases; no model inference.
+2026-11-26T10:12:45.3808810Z ##[group]Run python scripts/conversation_readiness.py validate --output artifacts/ci-conversation-data
+2026-11-26T10:12:45.3809441Z [36;1mpython scripts/conversation_readiness.py validate --output artifacts/ci-conversation-data[0m
+2026-11-26T10:12:45.3839192Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:12:45.3839419Z env:
+2026-11-26T10:12:45.3839639Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:45.3839988Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:12:45.3840319Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:45.3840626Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:45.3840923Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:45.3841821Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:12:45.3842102Z ##[endgroup]
+2026-11-26T10:12:46.4497057Z PASS: chat formatting/splits checked; inherited-exposure gate blocks training
+2026-11-26T10:12:46.8045495Z ##[group]Run python scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output artifacts/ci-owned-lm
+2026-11-26T10:12:46.8046146Z [36;1mpython scripts/study_owned_lm.py --config configs/owned-lm-smoke-v1.json --output artifacts/ci-owned-lm[0m
+2026-11-26T10:12:46.8076294Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:12:46.8076515Z env:
+2026-11-26T10:12:46.8076736Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:46.8077092Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:12:46.8077438Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:46.8077745Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:46.8078041Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:46.8078339Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:12:46.8078622Z ##[endgroup]
+2026-11-26T10:12:49.8571486Z {"status": "complete", "criterion": false, "seconds": 2.001767252000036, "output": "artifacts/ci-owned-lm"}
+2026-11-26T10:12:50.5300423Z ##[group]Run python scripts/validate_owned_reproduction.py --config configs/owned-lm-smoke-v1.json --run artifacts/ci-owned-lm
+2026-11-26T10:12:50.5302062Z [36;1mpython scripts/validate_owned_reproduction.py --config configs/owned-lm-smoke-v1.json --run artifacts/ci-owned-lm[0m
+2026-11-26T10:12:50.5343461Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:12:50.5343794Z env:
+2026-11-26T10:12:50.5344137Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:50.5344704Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:12:50.5345243Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:50.5345732Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:50.5346222Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:50.5346699Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:12:50.5347107Z ##[endgroup]
+2026-11-26T10:12:52.5865268Z {
+2026-11-26T10:12:52.5865719Z   "status": "PASS",
+2026-11-26T10:12:52.5866022Z   "mode": "smoke",
+2026-11-26T10:12:52.5866251Z   "conditions": 8,
+2026-11-26T10:12:52.5866474Z   "answers": 48,
+2026-11-26T10:12:52.5866784Z   "reference_compared": false,
+2026-11-26T10:12:52.5867096Z   "research_gate": false,
+2026-11-26T10:12:52.5867340Z   "nll": {
+2026-11-26T10:12:52.5867615Z     "23-memory_off-full": 5.743653867972143,
+2026-11-26T10:12:52.5867999Z     "23-memory_on-full": 5.718839266401161,
+2026-11-26T10:12:52.5868381Z     "23-memory_on-no_read": 5.743010447416192,
+2026-11-26T10:12:52.5868784Z     "23-memory_on-no_update": 5.73974350919941,
+2026-11-26T10:12:52.5869159Z     "23-ordinary-full": 5.743653867972143,
+2026-11-26T10:12:52.5869514Z     "23-ordinary-rolling": 5.743653867972143,
+2026-11-26T10:12:52.5869907Z     "23-ordinary_matched-full": 5.623082661085098,
+2026-11-26T10:12:52.5870333Z     "23-ordinary_matched-rolling": 5.623082661085098
+2026-11-26T10:12:52.5870689Z   },
+2026-11-26T10:12:52.5870952Z   "seconds": 2.001767252000036
+2026-11-26T10:12:52.5871503Z }
+2026-11-26T10:12:53.2260260Z ##[group]Run python -m toruk_lm.owned_lm generate --checkpoint artifacts/ci-owned-lm/models/23-memory_on/checkpoint.pt --prompt "Experimental CPU smoke" --max-new-tokens 4
+2026-11-26T10:12:53.2261376Z [36;1mpython -m toruk_lm.owned_lm generate --checkpoint artifacts/ci-owned-lm/models/23-memory_on/checkpoint.pt --prompt "Experimental CPU smoke" --max-new-tokens 4[0m
+2026-11-26T10:12:53.2291182Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:12:53.2291389Z env:
+2026-11-26T10:12:53.2291616Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:53.2291958Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:12:53.2292286Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:53.2292581Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:53.2292879Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:53.2293217Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:12:53.2293493Z ##[endgroup]
+2026-11-26T10:12:55.2238120Z {"experimental": true, "conversationally_qualified": false, "model": "toruk-owned-next-token-v1", "variant": "memory_on", "answer": "\ufffd\u0006\u001d\ufffd", "generated_ids": [177, 9, 32, 186], "input_tokens": 23, "forward_positions": 125, "commits": 0, "allocated_state_bytes": 128, "budget_exhausted": true}
+2026-11-26T10:12:55.8539245Z ##[group]Run python -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke
+2026-11-26T10:12:55.8539810Z [36;1mpython -m toruk_lm reproduce --config configs/foundation.json --output artifacts/ci-smoke[0m
+2026-11-26T10:12:55.8569690Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:12:55.8569906Z env:
+2026-11-26T10:12:55.8570130Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:55.8570483Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:12:55.8570829Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:55.8571461Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:55.8571760Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:55.8572058Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:12:55.8572307Z ##[endgroup]
+2026-11-26T10:12:58.0159483Z {
+2026-11-26T10:12:58.0160127Z   "scope": "ordinary-LM smoke fixture; no factual or memory claim",
+2026-11-26T10:12:58.0160470Z   "parameters": 44096,
+2026-11-26T10:12:58.0160659Z   "steps": 2,
+2026-11-26T10:12:58.0160832Z   "training_targets": 353,
+2026-11-26T10:12:58.0161340Z   "validation_loss_nats_per_byte_or_eos": 5.395493544541396,
+2026-11-26T10:12:58.0161628Z   "validation_targets": 154,
+2026-11-26T10:12:58.0161829Z   "generated_tokens": 8,
+2026-11-26T10:12:58.0162068Z   "saved_generation_seconds": 0.006225467000035678,
+2026-11-26T10:12:58.0162351Z   "saved_mean_generation_ms": 6.225467000035678,
+2026-11-26T10:12:58.0162648Z   "saved_generation_tokens_per_second": 1285.0441581256719,
+2026-11-26T10:12:58.0162965Z   "saved_training_seconds": 0.0151737520000097,
+2026-11-26T10:12:58.0163259Z   "saved_training_tokens_per_second": 23263.85721868753,
+2026-11-26T10:12:58.0163660Z   "checkpoint_sha256": "314152a4643722900654d896a2542df3f54156135565195c6bf6c9c96ed78a21",
+2026-11-26T10:12:58.0164157Z   "run_manifest_sha256": "7cc3659591978f670fc7d2917164f4603d99df1a1820a30f10b4be3ae03a1ee6",
+2026-11-26T10:12:58.0164581Z   "uncertainty": "NOT_TESTED; one seed and synthetic fixture",
+2026-11-26T10:12:58.0164860Z   "recurrent_state_bytes": 0,
+2026-11-26T10:12:58.0165066Z   "peak_memory_bytes": null,
+2026-11-26T10:12:58.0165440Z   "timing_note": "stored run timings; rescore/generation verify outputs but do not replace timings"
+2026-11-26T10:12:58.0165788Z }
+2026-11-26T10:12:58.6563825Z ##[group]Run python -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt
+2026-11-26T10:12:58.6564754Z [36;1mpython -m toruk_lm validate --manifest artifacts/ci-smoke/data/manifest.json --config configs/foundation.json --checkpoint artifacts/ci-smoke/train/checkpoint.pt[0m
+2026-11-26T10:12:58.6594822Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:12:58.6595040Z env:
+2026-11-26T10:12:58.6595252Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:58.6595598Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:12:58.6595930Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:58.6596233Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:58.6596530Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:12:58.6596860Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:12:58.6597118Z ##[endgroup]
+2026-11-26T10:12:59.7437047Z {
+2026-11-26T10:12:59.7437742Z   "manifest_sha256": "14c6fdfa6fc8ca4b048785fb13e5b8922319bcf4b85e27b86c9abe914a98fb2f",
+2026-11-26T10:12:59.7438171Z   "splits": {
+2026-11-26T10:12:59.7438349Z     "test": {
+2026-11-26T10:12:59.7438518Z       "documents": 1,
+2026-11-26T10:12:59.7438699Z       "ids": [
+2026-11-26T10:12:59.7438876Z         "fixture-17-0005"
+2026-11-26T10:12:59.7439065Z       ],
+2026-11-26T10:12:59.7439364Z       "sha256": "2f813326247678c02fdda3bfde60f9282fe4a3b9ef58df8c69f863e94221ce54"
+2026-11-26T10:12:59.7439687Z     },
+2026-11-26T10:12:59.7439844Z     "train": {
+2026-11-26T10:12:59.7440010Z       "documents": 8,
+2026-11-26T10:12:59.7440185Z       "ids": [
+2026-11-26T10:12:59.7440353Z         "fixture-17-0003",
+2026-11-26T10:12:59.7440550Z         "fixture-17-0004",
+2026-11-26T10:12:59.7440732Z         "fixture-17-0007",
+2026-11-26T10:12:59.7440910Z         "fixture-17-0002",
+2026-11-26T10:12:59.7441326Z         "fixture-17-0000",
+2026-11-26T10:12:59.7441556Z         "fixture-17-0006",
+2026-11-26T10:12:59.7441733Z         "fixture-17-0009",
+2026-11-26T10:12:59.7441909Z         "fixture-17-0001"
+2026-11-26T10:12:59.7442523Z       ],
+2026-11-26T10:12:59.7442809Z       "sha256": "b8a624254ffe12099a9b322d73ea69d7db870e7930c7126556d20bb642a7ccb0"
+2026-11-26T10:12:59.7443106Z     },
+2026-11-26T10:12:59.7443266Z     "validation": {
+2026-11-26T10:12:59.7443433Z       "documents": 1,
+2026-11-26T10:12:59.7443608Z       "ids": [
+2026-11-26T10:12:59.7443778Z         "fixture-17-0008"
+2026-11-26T10:12:59.7443950Z       ],
+2026-11-26T10:12:59.7444222Z       "sha256": "7353979df452f44ac880f0ee5b1e67390763364b5d54babb5d1676c089348b86"
+2026-11-26T10:12:59.7444523Z     }
+2026-11-26T10:12:59.7444675Z   },
+2026-11-26T10:12:59.7444978Z   "config_sha256": "800791119eeac1c5668605820063f8dc8040cd8f1ea6373f37c027a5dd2606f3",
+2026-11-26T10:12:59.7445482Z   "checkpoint_sha256": "314152a4643722900654d896a2542df3f54156135565195c6bf6c9c96ed78a21",
+2026-11-26T10:12:59.7445814Z   "next_step": 2
+2026-11-26T10:12:59.7445980Z }
+2026-11-26T10:13:00.0911965Z ##[group]Run python -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables
+2026-11-26T10:13:00.0912522Z [36;1mpython -m toruk_lm summarize --run artifacts/ci-smoke --output artifacts/ci-tables[0m
+2026-11-26T10:13:00.0941959Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:13:00.0942171Z env:
+2026-11-26T10:13:00.0942391Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:00.0942741Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:13:00.0943075Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:00.0943370Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:00.0943667Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:00.0943971Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:13:00.0944225Z ##[endgroup]
+2026-11-26T10:13:02.1700285Z {
+2026-11-26T10:13:02.1700758Z   "scope": "ordinary-LM smoke fixture; no factual or memory claim",
+2026-11-26T10:13:02.1701254Z   "parameters": 44096,
+2026-11-26T10:13:02.1701453Z   "steps": 2,
+2026-11-26T10:13:02.1701651Z   "training_targets": 353,
+2026-11-26T10:13:02.1701924Z   "validation_loss_nats_per_byte_or_eos": 5.395493544541396,
+2026-11-26T10:13:02.1702206Z   "validation_targets": 154,
+2026-11-26T10:13:02.1702409Z   "generated_tokens": 8,
+2026-11-26T10:13:02.1702640Z   "saved_generation_seconds": 0.006225467000035678,
+2026-11-26T10:13:02.1702917Z   "saved_mean_generation_ms": 6.225467000035678,
+2026-11-26T10:13:02.1703209Z   "saved_generation_tokens_per_second": 1285.0441581256719,
+2026-11-26T10:13:02.1703503Z   "saved_training_seconds": 0.0151737520000097,
+2026-11-26T10:13:02.1703781Z   "saved_training_tokens_per_second": 23263.85721868753,
+2026-11-26T10:13:02.1704178Z   "checkpoint_sha256": "314152a4643722900654d896a2542df3f54156135565195c6bf6c9c96ed78a21",
+2026-11-26T10:13:02.1704674Z   "run_manifest_sha256": "7cc3659591978f670fc7d2917164f4603d99df1a1820a30f10b4be3ae03a1ee6",
+2026-11-26T10:13:02.1705084Z   "uncertainty": "NOT_TESTED; one seed and synthetic fixture",
+2026-11-26T10:13:02.1705363Z   "recurrent_state_bytes": 0,
+2026-11-26T10:13:02.1705565Z   "peak_memory_bytes": null,
+2026-11-26T10:13:02.1705934Z   "timing_note": "stored run timings; rescore/generation verify outputs but do not replace timings"
+2026-11-26T10:13:02.1706279Z }
+2026-11-26T10:13:02.8232491Z ##[group]Run python -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json
+2026-11-26T10:13:02.8232976Z [36;1mpython -m toruk_lm validate-config --config configs/reproduce-smoke-v1.json[0m
+2026-11-26T10:13:02.8262579Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:13:02.8262782Z env:
+2026-11-26T10:13:02.8263002Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:02.8263355Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:13:02.8263689Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:02.8263984Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:02.8264276Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:02.8264787Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:13:02.8265041Z ##[endgroup]
+2026-11-26T10:13:03.8886855Z {
+2026-11-26T10:13:03.8887198Z   "status": "PASS",
+2026-11-26T10:13:03.8887544Z   "config": {
+2026-11-26T10:13:03.8887770Z     "schema": "toruk-reproduce-v1",
+2026-11-26T10:13:03.8887996Z     "mode": "smoke",
+2026-11-26T10:13:03.8888172Z     "seed": 23,
+2026-11-26T10:13:03.8888338Z     "fixture_seed": 17,
+2026-11-26T10:13:03.8888524Z     "steps": 2,
+2026-11-26T10:13:03.8888683Z     "worlds": 2,
+2026-11-26T10:13:03.8888852Z     "answer_budget": 2,
+2026-11-26T10:13:03.8889024Z     "seconds": 110
+2026-11-26T10:13:03.8889183Z   }
+2026-11-26T10:13:03.8889323Z }
+2026-11-26T10:13:04.2672475Z ##[group]Run python -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke
+2026-11-26T10:13:04.2673629Z [36;1mpython -m toruk_lm reproduce --config configs/reproduce-smoke-v1.json --output artifacts/ci-research-smoke[0m
+2026-11-26T10:13:04.2709159Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:13:04.2709386Z env:
+2026-11-26T10:13:04.2709616Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:04.2709985Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:13:04.2710316Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:04.2710610Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:04.2710908Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:04.2711356Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:13:04.2711608Z ##[endgroup]
+2026-11-26T10:13:06.9415312Z {
+2026-11-26T10:13:06.9415662Z   "status": "PASS",
+2026-11-26T10:13:06.9415987Z   "purpose": "execution smoke; no research-quality claim",
+2026-11-26T10:13:06.9416268Z   "results": {
+2026-11-26T10:13:06.9416439Z     "ordinary": {
+2026-11-26T10:13:06.9416606Z       "groups": {
+2026-11-26T10:13:06.9416793Z         "ambiguous": {
+2026-11-26T10:13:06.9416972Z           "examples": 2,
+2026-11-26T10:13:06.9417152Z           "correct": 0,
+2026-11-26T10:13:06.9417333Z           "accuracy": 0.0
+2026-11-26T10:13:06.9417515Z         },
+2026-11-26T10:13:06.9417674Z         "corrected": {
+2026-11-26T10:13:06.9417859Z           "examples": 2,
+2026-11-26T10:13:06.9418040Z           "correct": 0,
+2026-11-26T10:13:06.9418214Z           "accuracy": 0.0
+2026-11-26T10:13:06.9418387Z         },
+2026-11-26T10:13:06.9418544Z         "unchanged_entity": {
+2026-11-26T10:13:06.9418739Z           "examples": 2,
+2026-11-26T10:13:06.9418919Z           "correct": 0,
+2026-11-26T10:13:06.9419092Z           "accuracy": 0.0
+2026-11-26T10:13:06.9419261Z         },
+2026-11-26T10:13:06.9419414Z         "unknown": {
+2026-11-26T10:13:06.9419580Z           "examples": 2,
+2026-11-26T10:13:06.9419754Z           "correct": 0,
+2026-11-26T10:13:06.9419940Z           "accuracy": 0.0
+2026-11-26T10:13:06.9420111Z         },
+2026-11-26T10:13:06.9420274Z         "unrelated_date": {
+2026-11-26T10:13:06.9420472Z           "examples": 2,
+2026-11-26T10:13:06.9420651Z           "correct": 0,
+2026-11-26T10:13:06.9420829Z           "accuracy": 0.0
+2026-11-26T10:13:06.9421208Z         },
+2026-11-26T10:13:06.9421409Z         "unrelated_number": {
+2026-11-26T10:13:06.9421604Z           "examples": 2,
+2026-11-26T10:13:06.9421784Z           "correct": 0,
+2026-11-26T10:13:06.9421954Z           "accuracy": 0.0
+2026-11-26T10:13:06.9422126Z         }
+2026-11-26T10:13:06.9422275Z       },
+2026-11-26T10:13:06.9422442Z       "resume": "PASS",
+2026-11-26T10:13:06.9422790Z       "checkpoint_sha256": "a597b133162f440355bb311439828c68e43549b5886b33997a8709c602852954"
+2026-11-26T10:13:06.9423127Z     },
+2026-11-26T10:13:06.9423298Z     "recurrent": {
+2026-11-26T10:13:06.9423471Z       "groups": {
+2026-11-26T10:13:06.9423638Z         "ambiguous": {
+2026-11-26T10:13:06.9423826Z           "examples": 2,
+2026-11-26T10:13:06.9424005Z           "correct": 0,
+2026-11-26T10:13:06.9424181Z           "accuracy": 0.0
+2026-11-26T10:13:06.9424781Z         },
+2026-11-26T10:13:06.9424938Z         "corrected": {
+2026-11-26T10:13:06.9425118Z           "examples": 2,
+2026-11-26T10:13:06.9425303Z           "correct": 0,
+2026-11-26T10:13:06.9425484Z           "accuracy": 0.0
+2026-11-26T10:13:06.9425651Z         },
+2026-11-26T10:13:06.9425810Z         "unchanged_entity": {
+2026-11-26T10:13:06.9425998Z           "examples": 2,
+2026-11-26T10:13:06.9426176Z           "correct": 0,
+2026-11-26T10:13:06.9426353Z           "accuracy": 0.0
+2026-11-26T10:13:06.9426519Z         },
+2026-11-26T10:13:06.9426669Z         "unknown": {
+2026-11-26T10:13:06.9426839Z           "examples": 2,
+2026-11-26T10:13:06.9427014Z           "correct": 0,
+2026-11-26T10:13:06.9427396Z           "accuracy": 0.0
+2026-11-26T10:13:06.9427570Z         },
+2026-11-26T10:13:06.9427727Z         "unrelated_date": {
+2026-11-26T10:13:06.9427915Z           "examples": 2,
+2026-11-26T10:13:06.9428087Z           "correct": 0,
+2026-11-26T10:13:06.9428440Z           "accuracy": 0.0
+2026-11-26T10:13:06.9428646Z         },
+2026-11-26T10:13:06.9428803Z         "unrelated_number": {
+2026-11-26T10:13:06.9428995Z           "examples": 2,
+2026-11-26T10:13:06.9429173Z           "correct": 0,
+2026-11-26T10:13:06.9429341Z           "accuracy": 0.0
+2026-11-26T10:13:06.9429506Z         }
+2026-11-26T10:13:06.9429659Z       },
+2026-11-26T10:13:06.9429813Z       "resume": "PASS",
+2026-11-26T10:13:06.9430159Z       "checkpoint_sha256": "c78d5317a5d9f67498551cbfb886fb9b360d651906c9d07567dae9675371b553"
+2026-11-26T10:13:06.9430493Z     }
+2026-11-26T10:13:06.9430673Z   },
+2026-11-26T10:13:06.9430854Z   "elapsed_seconds": 1.5974970399999506,
+2026-11-26T10:13:06.9431217Z   "cumulative_process_peak_bytes": 439005184,
+2026-11-26T10:13:06.9431602Z   "package_sha256": "d7693c91d6214c6e14c1218cbb988269f3e106bcd6a5decb1ca4b800514033a3",
+2026-11-26T10:13:06.9432193Z   "config_sha256": "9d1483eed559cea0a5af9509348e1118f2c0c70541da278416757f4bafaccbc4"
+2026-11-26T10:13:06.9432520Z }
+2026-11-26T10:13:07.5858659Z ##[group]Run python -m build --no-isolation
+2026-11-26T10:13:07.5858953Z [36;1mpython -m build --no-isolation[0m
+2026-11-26T10:13:07.5889087Z shell: /usr/bin/bash -e {0}
+2026-11-26T10:13:07.5889288Z env:
+2026-11-26T10:13:07.5889509Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:07.5889863Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:13:07.5890193Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:07.5890489Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:07.5890796Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:07.5891353Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:13:07.5891630Z ##[endgroup]
+2026-11-26T10:13:07.6756846Z * Getting build dependencies for sdist...
+2026-11-26T10:13:07.8668418Z running egg_info
+2026-11-26T10:13:07.8699937Z writing src/toruk_lm.egg-info/PKG-INFO
+2026-11-26T10:13:07.8708999Z writing dependency_links to src/toruk_lm.egg-info/dependency_links.txt
+2026-11-26T10:13:07.8713376Z writing entry points to src/toruk_lm.egg-info/entry_points.txt
+2026-11-26T10:13:07.8718735Z writing requirements to src/toruk_lm.egg-info/requires.txt
+2026-11-26T10:13:07.8721144Z writing top-level names to src/toruk_lm.egg-info/top_level.txt
+2026-11-26T10:13:07.8838298Z reading manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:07.8863010Z reading manifest template 'MANIFEST.in'
+2026-11-26T10:13:07.8894557Z no previously-included directories found matching 'docs/internal'
+2026-11-26T10:13:07.8920158Z writing manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:07.9252680Z * Building sdist...
+2026-11-26T10:13:08.0854083Z running sdist
+2026-11-26T10:13:08.0854340Z running egg_info
+2026-11-26T10:13:08.0924859Z writing src/toruk_lm.egg-info/PKG-INFO
+2026-11-26T10:13:08.0933102Z writing dependency_links to src/toruk_lm.egg-info/dependency_links.txt
+2026-11-26T10:13:08.0936743Z writing entry points to src/toruk_lm.egg-info/entry_points.txt
+2026-11-26T10:13:08.0942228Z writing requirements to src/toruk_lm.egg-info/requires.txt
+2026-11-26T10:13:08.0944550Z writing top-level names to src/toruk_lm.egg-info/top_level.txt
+2026-11-26T10:13:08.1051667Z reading manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:08.1076717Z reading manifest template 'MANIFEST.in'
+2026-11-26T10:13:08.1108014Z no previously-included directories found matching 'docs/internal'
+2026-11-26T10:13:08.1133940Z writing manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:08.1137214Z running check
+2026-11-26T10:13:08.1175037Z creating toruk_lm-0.1.0
+2026-11-26T10:13:08.1179612Z creating toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1180797Z creating toruk_lm-0.1.0/docs
+2026-11-26T10:13:08.1182391Z creating toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1183596Z creating toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1184533Z creating toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1185801Z creating toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1187709Z creating toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1188619Z creating toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1189455Z copying files to toruk_lm-0.1.0...
+2026-11-26T10:13:08.1190107Z copying MANIFEST.in -> toruk_lm-0.1.0
+2026-11-26T10:13:08.1191885Z copying README.md -> toruk_lm-0.1.0
+2026-11-26T10:13:08.1193470Z copying pyproject.toml -> toruk_lm-0.1.0
+2026-11-26T10:13:08.1194811Z copying configs/adversarial-twins-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1196027Z copying configs/backbone-qualification-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1197198Z copying configs/chat-comparison-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1198440Z copying configs/chat-foundation-eval-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1199757Z copying configs/chat-launch-gate-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1201333Z copying configs/chat-qualification-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1202289Z copying configs/chat-release-eval-v2.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1203648Z copying configs/claim-closure-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1204736Z copying configs/context-eval-dev-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1206141Z copying configs/context-eval-final-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1207525Z copying configs/conversation-readiness-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1208559Z copying configs/copy-gap-probe-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1209869Z copying configs/foundation.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1210944Z copying configs/frozen-source-sha256.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1212294Z copying configs/independent-chat-cards-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1213508Z copying configs/m6-successor-v1-execution.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1214626Z copying configs/m6-successor-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1215976Z copying configs/minimal-lm-demo-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1217000Z copying configs/owned-lm-primary-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1218120Z copying configs/owned-lm-smoke-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1219391Z copying configs/owned-reproduction-requirements-v1.txt -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1220534Z copying configs/owned-reproduction-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1221875Z copying configs/qwen-development-v5.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1223045Z copying configs/qwen-long-history-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1224218Z copying configs/qwen-long-history-v2.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1225427Z copying configs/qwen-long-history-v3.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1226579Z copying configs/reproduce-primary-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1227764Z copying configs/reproduce-smoke-v1.json -> toruk_lm-0.1.0/configs
+2026-11-26T10:13:08.1228908Z copying docs/local-chat.md -> toruk_lm-0.1.0/docs
+2026-11-26T10:13:08.1230445Z copying docs/reproducibility.md -> toruk_lm-0.1.0/docs
+2026-11-26T10:13:08.1232456Z copying docs/research/adversarial-twins-v1-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1233667Z copying docs/research/chat-launch-gate-20261107.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1235149Z copying docs/research/conversation-format-v1-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1236408Z copying docs/research/conversation-format-v1-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1237755Z copying docs/research/conversation-readiness-v1-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1238992Z copying docs/research/copy-gap-v1-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1240346Z copying docs/research/independent-replication-v1-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1241781Z copying docs/research/independent-replication-v1-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1243193Z copying docs/research/integrated-memory-v1-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1244420Z copying docs/research/integrated-memory-v1-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1245703Z copying docs/research/owned-lm-v1-design.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1247082Z copying docs/research/owned-lm-v1-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1248525Z copying docs/research/qualification-v1-paper-outline.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1249733Z copying docs/research/qualification-v1-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1251170Z copying docs/research/qualification-v1-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1252671Z copying docs/research/routing-v2-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1253737Z copying docs/research/routing-v2-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1255142Z copying docs/research/value-fidelity-dev-v1-protocol.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1256350Z copying docs/research/value-fidelity-dev-v1-results.md -> toruk_lm-0.1.0/docs/research
+2026-11-26T10:13:08.1257901Z copying docs/research/independent-replication-v1/README.md -> toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1259121Z copying docs/research/independent-replication-v1/claim-ledger.json -> toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1260085Z copying docs/research/independent-replication-v1/claim-ledger.md -> toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1261462Z copying docs/research/independent-replication-v1/draft.md -> toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1262818Z copying docs/research/independent-replication-v1/positioning.md -> toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1264030Z copying docs/research/independent-replication-v1/references.bib -> toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1265273Z copying docs/research/independent-replication-v1/reproduce.md -> toruk_lm-0.1.0/docs/research/independent-replication-v1
+2026-11-26T10:13:08.1266363Z copying scripts/adversarial_twins.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1268008Z copying scripts/analyze_integrated_memory.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1269138Z copying scripts/answer_trainability_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1270689Z copying scripts/audit_chat_advantage.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1272172Z copying scripts/audit_first_token_margins.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1273532Z copying scripts/audit_local_answer_first_byte.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1274781Z copying scripts/audit_owned_lm.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1276067Z copying scripts/audit_qwen_development_v4.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1277374Z copying scripts/audit_routing_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1278539Z copying scripts/audit_value_fidelity_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1279615Z copying scripts/audit_value_start_replication_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1280766Z copying scripts/build_chat_selector_data.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1282054Z copying scripts/build_chat_selector_data_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1282991Z copying scripts/check.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1284117Z copying scripts/check_frozen_sources.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1285168Z copying scripts/check_local_research_checkpoints.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1286047Z copying scripts/check_wheel.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1287059Z copying scripts/ci_contracts.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1288199Z copying scripts/compare_chat_context.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1289191Z copying scripts/compare_recall_runs.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1290213Z copying scripts/conversation_format_study.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1291442Z copying scripts/conversation_readiness.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1292510Z copying scripts/copy_gap_probe.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1293796Z copying scripts/diagnose_initialization_contract.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1294775Z copying scripts/diagnose_local_answer_v1.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1295924Z copying scripts/diagnose_segment_delta_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1297189Z copying scripts/download_chat_backbone.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1298424Z copying scripts/evaluate_chat_foundation.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1299205Z copying scripts/evaluate_chat_release_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1300298Z copying scripts/evaluate_chat_selector_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1301489Z copying scripts/evaluate_context_selection.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1302601Z copying scripts/evaluate_local_backbone.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1303756Z copying scripts/evaluate_trained_chat_selector.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1304844Z copying scripts/evidence_first_feasibility_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1306021Z copying scripts/evidence_first_policy.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1307174Z copying scripts/evidence_first_rehearsal.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1308514Z copying scripts/first_byte_probe.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1309729Z copying scripts/independent_cases.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1310836Z copying scripts/independent_replication.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1312268Z copying scripts/lifetime_job.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1313464Z copying scripts/lifetime_job_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1314583Z copying scripts/local_answer_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1315776Z copying scripts/m6_successor.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1317143Z copying scripts/make_context_eval.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1318245Z copying scripts/measure_inference_host.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1319301Z copying scripts/package_qualification.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1320400Z copying scripts/package_routing_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1321629Z copying scripts/paired_batch_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1323062Z copying scripts/prepare_inference_package.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1324098Z copying scripts/probe_local_chat_quality.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1325077Z copying scripts/probe_ollama_backbone.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1326144Z copying scripts/probe_refusal_carryover.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1327243Z copying scripts/qualify_answer_backbone.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1328498Z copying scripts/qualify_chat_launch.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1329627Z copying scripts/qualify_memory.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1330782Z copying scripts/qualify_ollama_launch.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1332059Z copying scripts/qwen_development_v5.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1333228Z copying scripts/qwen_long_history.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1334517Z copying scripts/qwen_long_history_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1335740Z copying scripts/qwen_long_history_v3.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1336834Z copying scripts/rank_budget_study.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1337833Z copying scripts/recall_after.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1339215Z copying scripts/recall_study.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1340102Z copying scripts/recall_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1341357Z copying scripts/replay_archived_cell.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1342593Z copying scripts/replay_owned_prerequisites.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1343643Z copying scripts/replay_owned_readiness.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1344674Z copying scripts/replay_refusal_diagnostic.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1345626Z copying scripts/replay_routing_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1346906Z copying scripts/report_conversation_format.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1348153Z copying scripts/report_conversation_readiness.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1349084Z copying scripts/report_independent_replication.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1350082Z copying scripts/report_owned_lm.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1351284Z copying scripts/report_qwen_long_history_v3.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1352465Z copying scripts/report_rank_budget.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1353472Z copying scripts/report_recall.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1354606Z copying scripts/report_value_fidelity_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1355728Z copying scripts/research_claim_closure.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1357301Z copying scripts/seal_m8.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1358295Z copying scripts/seal_run.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1359353Z copying scripts/segment_delta_data.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1360485Z copying scripts/segment_delta_study.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1361864Z copying scripts/segment_delta_watch.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1363088Z copying scripts/smoke_chat_foundation.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1364184Z copying scripts/smoke_chat_readiness.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1365210Z copying scripts/smoke_qualification_ui.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1366207Z copying scripts/smoke_vercel_local.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1367345Z copying scripts/source_faithful_development_v1.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1368535Z copying scripts/study_owned_lm.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1369652Z copying scripts/study_routing_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1370970Z copying scripts/train_chat_selector.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1372293Z copying scripts/train_chat_selector_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1373460Z copying scripts/validate_owned_reproduction.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1374480Z copying scripts/value_fidelity_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1375641Z copying scripts/value_start_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1376968Z copying scripts/value_start_replication_data.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1378023Z copying scripts/value_start_replication_v2.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1379227Z copying scripts/verify.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1380408Z copying scripts/verify_evidence_first_record.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1381718Z copying scripts/verify_frozen_m6.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1382926Z copying scripts/verify_portable_research_evidence.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1384134Z copying scripts/verify_segment_delta_dev.py -> toruk_lm-0.1.0/scripts
+2026-11-26T10:13:08.1385145Z copying src/toruk_lm/__init__.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1386128Z copying src/toruk_lm/__main__.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1387124Z copying src/toruk_lm/chat_foundation.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1388186Z copying src/toruk_lm/chat_runtime.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1389246Z copying src/toruk_lm/chat_selector.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1390254Z copying src/toruk_lm/chat_server.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1391394Z copying src/toruk_lm/chat_ui.html -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1392444Z copying src/toruk_lm/cli.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1393623Z copying src/toruk_lm/comparisons.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1394735Z copying src/toruk_lm/context_selection.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1395683Z copying src/toruk_lm/controlled.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1397048Z copying src/toruk_lm/conversation_data.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1397972Z copying src/toruk_lm/copy_diagnostic.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1398922Z copying src/toruk_lm/data.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1400006Z copying src/toruk_lm/effect_predictor.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1400973Z copying src/toruk_lm/effect_training.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1402364Z copying src/toruk_lm/engine.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1403546Z copying src/toruk_lm/generalization.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1404746Z copying src/toruk_lm/inference_server.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1405794Z copying src/toruk_lm/inference_worker.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1406897Z copying src/toruk_lm/integrated_memory.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1408022Z copying src/toruk_lm/integrated_study.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1409111Z copying src/toruk_lm/model.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1410238Z copying src/toruk_lm/ollama_chat.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1411328Z copying src/toruk_lm/owned_data.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1412482Z copying src/toruk_lm/owned_lm.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1413582Z copying src/toruk_lm/owned_training.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1414806Z copying src/toruk_lm/pooled_router.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1415804Z copying src/toruk_lm/rank_budget.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1416792Z copying src/toruk_lm/recurrent.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1417890Z copying src/toruk_lm/relevance_gate.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1418918Z copying src/toruk_lm/reproducibility.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1420079Z copying src/toruk_lm/reproduction.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1421248Z copying src/toruk_lm/segment_delta.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1422523Z copying src/toruk_lm/segment_delta_training.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1423523Z copying src/toruk_lm/source_spans.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1424548Z copying src/toruk_lm/tokenizer.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1425544Z copying src/toruk_lm/validation.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1426666Z copying src/toruk_lm/worlds.py -> toruk_lm-0.1.0/src/toruk_lm
+2026-11-26T10:13:08.1427936Z copying src/toruk_lm.egg-info/PKG-INFO -> toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1428979Z copying src/toruk_lm.egg-info/SOURCES.txt -> toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1430202Z copying src/toruk_lm.egg-info/dependency_links.txt -> toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1431289Z copying src/toruk_lm.egg-info/entry_points.txt -> toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1432460Z copying src/toruk_lm.egg-info/requires.txt -> toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1433531Z copying src/toruk_lm.egg-info/top_level.txt -> toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1434457Z copying tests/test_adversarial_twins.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1435457Z copying tests/test_answer_trainability_dev.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1436434Z copying tests/test_backbone_qualification.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1437352Z copying tests/test_chat.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1438449Z copying tests/test_chat_advantage_audit.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1439495Z copying tests/test_chat_foundation.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1440569Z copying tests/test_chat_release_eval.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1441814Z copying tests/test_chat_selector.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1442713Z copying tests/test_chat_selector_v2.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1443662Z copying tests/test_check_records.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1444680Z copying tests/test_ci_contracts.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1445683Z copying tests/test_claim_closure.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1446692Z copying tests/test_compare_recall_runs.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1447623Z copying tests/test_comparisons.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1448697Z copying tests/test_context_selection.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1449710Z copying tests/test_controlled_validation.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1450663Z copying tests/test_conversation_data.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1451922Z copying tests/test_conversation_format_study.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1452853Z copying tests/test_copy_diagnostic.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1453807Z copying tests/test_effects.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1455024Z copying tests/test_evidence_first_feasibility_v2.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1456036Z copying tests/test_evidence_first_policy.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1457128Z copying tests/test_evidence_first_record.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1458167Z copying tests/test_evidence_first_rehearsal.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1459136Z copying tests/test_first_byte_probe.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1460183Z copying tests/test_first_token_margin_review.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1461185Z copying tests/test_foundation.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1462430Z copying tests/test_frozen_m6_provenance.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1463531Z copying tests/test_frozen_sources.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1464564Z copying tests/test_generalization.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1465750Z copying tests/test_independent_replication.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1466745Z copying tests/test_inference_package.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1467714Z copying tests/test_inference_server.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1468810Z copying tests/test_integrated_memory.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1469835Z copying tests/test_lifetime_job.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1470935Z copying tests/test_lifetime_job_v2.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1472309Z copying tests/test_lifetime_sealing_portable.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1473282Z copying tests/test_local_answer_dev.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1474319Z copying tests/test_m6_successor.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1475326Z copying tests/test_merged_cli.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1476331Z copying tests/test_ollama_chat.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1477340Z copying tests/test_owned_lm.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1478524Z copying tests/test_owned_reproduction.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1479514Z copying tests/test_paired_batch_dev.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1480542Z copying tests/test_pooled_router.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1481857Z copying tests/test_portable_research_evidence.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1482905Z copying tests/test_qualification.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1483954Z copying tests/test_qwen_development_v4.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1484981Z copying tests/test_qwen_development_v5.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1486022Z copying tests/test_qwen_long_history.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1487124Z copying tests/test_qwen_long_history_v2.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1488202Z copying tests/test_qwen_long_history_v3.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1489328Z copying tests/test_rank_budget.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1490206Z copying tests/test_recall_protocol.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1491254Z copying tests/test_recall_seals.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1492440Z copying tests/test_recall_templates.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1493492Z copying tests/test_recurrent.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1494561Z copying tests/test_reproducibility.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1495588Z copying tests/test_reproduction.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1496609Z copying tests/test_sealed_replay.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1497601Z copying tests/test_segment_delta.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1498835Z copying tests/test_source_faithful_development_v1.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1499871Z copying tests/test_source_spans.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1500966Z copying tests/test_summary_accounting.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1502141Z copying tests/test_validation.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1503290Z copying tests/test_value_fidelity_dev.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1504295Z copying tests/test_value_start_dev.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1505360Z copying tests/test_value_start_replication_v2.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1506356Z copying tests/test_web_integration.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1507369Z copying tests/test_worlds.py -> toruk_lm-0.1.0/tests
+2026-11-26T10:13:08.1508734Z copying src/toruk_lm.egg-info/SOURCES.txt -> toruk_lm-0.1.0/src/toruk_lm.egg-info
+2026-11-26T10:13:08.1517818Z Writing toruk_lm-0.1.0/setup.cfg
+2026-11-26T10:13:08.1519393Z Creating tar archive
+2026-11-26T10:13:08.3816112Z removing 'toruk_lm-0.1.0' (and everything under it)
+2026-11-26T10:13:08.4914884Z * Building wheel from sdist
+2026-11-26T10:13:08.4918377Z * Getting build dependencies for wheel...
+2026-11-26T10:13:08.6563089Z running egg_info
+2026-11-26T10:13:08.6596486Z writing src/toruk_lm.egg-info/PKG-INFO
+2026-11-26T10:13:08.6604154Z writing dependency_links to src/toruk_lm.egg-info/dependency_links.txt
+2026-11-26T10:13:08.6606860Z writing entry points to src/toruk_lm.egg-info/entry_points.txt
+2026-11-26T10:13:08.6611157Z writing requirements to src/toruk_lm.egg-info/requires.txt
+2026-11-26T10:13:08.6612247Z writing top-level names to src/toruk_lm.egg-info/top_level.txt
+2026-11-26T10:13:08.6729972Z reading manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:08.6754810Z reading manifest template 'MANIFEST.in'
+2026-11-26T10:13:08.6782881Z no previously-included directories found matching 'docs/internal'
+2026-11-26T10:13:08.6808293Z writing manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:08.7112845Z * Building wheel...
+2026-11-26T10:13:08.8705999Z running bdist_wheel
+2026-11-26T10:13:08.8865855Z running build
+2026-11-26T10:13:08.8866156Z running build_py
+2026-11-26T10:13:08.8901744Z creating build/lib/toruk_lm
+2026-11-26T10:13:08.8904176Z copying src/toruk_lm/integrated_study.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8905936Z copying src/toruk_lm/__init__.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8907553Z copying src/toruk_lm/owned_data.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8909242Z copying src/toruk_lm/chat_foundation.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8910893Z copying src/toruk_lm/controlled.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8912717Z copying src/toruk_lm/validation.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8914239Z copying src/toruk_lm/engine.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8915860Z copying src/toruk_lm/effect_predictor.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8917303Z copying src/toruk_lm/worlds.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8918878Z copying src/toruk_lm/__main__.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8920357Z copying src/toruk_lm/cli.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8922506Z copying src/toruk_lm/comparisons.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8923920Z copying src/toruk_lm/model.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8925425Z copying src/toruk_lm/generalization.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8927064Z copying src/toruk_lm/segment_delta.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8928572Z copying src/toruk_lm/tokenizer.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8930046Z copying src/toruk_lm/context_selection.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8931693Z copying src/toruk_lm/recurrent.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8933225Z copying src/toruk_lm/inference_worker.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8934764Z copying src/toruk_lm/relevance_gate.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8936221Z copying src/toruk_lm/chat_runtime.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8937707Z copying src/toruk_lm/reproduction.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8939308Z copying src/toruk_lm/pooled_router.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8940769Z copying src/toruk_lm/copy_diagnostic.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8942402Z copying src/toruk_lm/integrated_memory.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8943878Z copying src/toruk_lm/chat_server.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8945370Z copying src/toruk_lm/reproducibility.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8947028Z copying src/toruk_lm/ollama_chat.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8948496Z copying src/toruk_lm/inference_server.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8950057Z copying src/toruk_lm/segment_delta_training.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8951790Z copying src/toruk_lm/conversation_data.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8953281Z copying src/toruk_lm/rank_budget.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8954698Z copying src/toruk_lm/data.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8956210Z copying src/toruk_lm/source_spans.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8957677Z copying src/toruk_lm/owned_training.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8959365Z copying src/toruk_lm/chat_selector.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8960908Z copying src/toruk_lm/effect_training.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8962648Z copying src/toruk_lm/owned_lm.py -> build/lib/toruk_lm
+2026-11-26T10:13:08.8964095Z running egg_info
+2026-11-26T10:13:08.8997436Z writing src/toruk_lm.egg-info/PKG-INFO
+2026-11-26T10:13:08.9007253Z writing dependency_links to src/toruk_lm.egg-info/dependency_links.txt
+2026-11-26T10:13:08.9011388Z writing entry points to src/toruk_lm.egg-info/entry_points.txt
+2026-11-26T10:13:08.9017021Z writing requirements to src/toruk_lm.egg-info/requires.txt
+2026-11-26T10:13:08.9019325Z writing top-level names to src/toruk_lm.egg-info/top_level.txt
+2026-11-26T10:13:08.9068568Z reading manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:08.9093723Z reading manifest template 'MANIFEST.in'
+2026-11-26T10:13:08.9121931Z no previously-included directories found matching 'docs/internal'
+2026-11-26T10:13:08.9147331Z writing manifest file 'src/toruk_lm.egg-info/SOURCES.txt'
+2026-11-26T10:13:08.9160058Z copying src/toruk_lm/chat_ui.html -> build/lib/toruk_lm
+2026-11-26T10:13:08.9227006Z installing to build/bdist.linux-x86_64/wheel
+2026-11-26T10:13:08.9227381Z running install
+2026-11-26T10:13:08.9285835Z running install_lib
+2026-11-26T10:13:08.9319859Z creating build/bdist.linux-x86_64/wheel
+2026-11-26T10:13:08.9322756Z creating build/bdist.linux-x86_64/wheel/toruk_lm
+2026-11-26T10:13:08.9324103Z copying build/lib/toruk_lm/integrated_study.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9325927Z copying build/lib/toruk_lm/__init__.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9327281Z copying build/lib/toruk_lm/owned_data.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9328634Z copying build/lib/toruk_lm/chat_foundation.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9330312Z copying build/lib/toruk_lm/controlled.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9331605Z copying build/lib/toruk_lm/validation.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9332950Z copying build/lib/toruk_lm/engine.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9334402Z copying build/lib/toruk_lm/effect_predictor.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9335582Z copying build/lib/toruk_lm/worlds.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9337194Z copying build/lib/toruk_lm/__main__.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9338407Z copying build/lib/toruk_lm/cli.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9339830Z copying build/lib/toruk_lm/comparisons.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9341277Z copying build/lib/toruk_lm/model.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9342717Z copying build/lib/toruk_lm/generalization.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9344225Z copying build/lib/toruk_lm/segment_delta.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9345489Z copying build/lib/toruk_lm/tokenizer.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9346767Z copying build/lib/toruk_lm/context_selection.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9347933Z copying build/lib/toruk_lm/recurrent.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9349293Z copying build/lib/toruk_lm/inference_worker.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9350517Z copying build/lib/toruk_lm/chat_ui.html -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9352110Z copying build/lib/toruk_lm/relevance_gate.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9353373Z copying build/lib/toruk_lm/chat_runtime.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9354745Z copying build/lib/toruk_lm/reproduction.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9356133Z copying build/lib/toruk_lm/pooled_router.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9357373Z copying build/lib/toruk_lm/copy_diagnostic.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9358764Z copying build/lib/toruk_lm/integrated_memory.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9360063Z copying build/lib/toruk_lm/chat_server.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9361537Z copying build/lib/toruk_lm/reproducibility.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9362992Z copying build/lib/toruk_lm/ollama_chat.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9364335Z copying build/lib/toruk_lm/inference_server.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9365685Z copying build/lib/toruk_lm/segment_delta_training.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9366960Z copying build/lib/toruk_lm/conversation_data.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9368230Z copying build/lib/toruk_lm/rank_budget.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9369440Z copying build/lib/toruk_lm/data.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9370739Z copying build/lib/toruk_lm/source_spans.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9372207Z copying build/lib/toruk_lm/owned_training.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9373556Z copying build/lib/toruk_lm/chat_selector.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9374964Z copying build/lib/toruk_lm/effect_training.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9376267Z copying build/lib/toruk_lm/owned_lm.py -> build/bdist.linux-x86_64/wheel/./toruk_lm
+2026-11-26T10:13:08.9377674Z running install_egg_info
+2026-11-26T10:13:08.9410567Z Copying src/toruk_lm.egg-info to build/bdist.linux-x86_64/wheel/./toruk_lm-0.1.0-py3.12.egg-info
+2026-11-26T10:13:08.9417797Z running install_scripts
+2026-11-26T10:13:08.9425796Z creating build/bdist.linux-x86_64/wheel/toruk_lm-0.1.0.dist-info/WHEEL
+2026-11-26T10:13:08.9430570Z creating '/home/runner/work/Toruk/Toruk/dist/.tmp-8bna6qvi/toruk_lm-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+2026-11-26T10:13:08.9434353Z adding 'toruk_lm/__init__.py'
+2026-11-26T10:13:08.9436898Z adding 'toruk_lm/__main__.py'
+2026-11-26T10:13:08.9441440Z adding 'toruk_lm/chat_foundation.py'
+2026-11-26T10:13:08.9444585Z adding 'toruk_lm/chat_runtime.py'
+2026-11-26T10:13:08.9447043Z adding 'toruk_lm/chat_selector.py'
+2026-11-26T10:13:08.9449310Z adding 'toruk_lm/chat_server.py'
+2026-11-26T10:13:08.9452494Z adding 'toruk_lm/chat_ui.html'
+2026-11-26T10:13:08.9456643Z adding 'toruk_lm/cli.py'
+2026-11-26T10:13:08.9460587Z adding 'toruk_lm/comparisons.py'
+2026-11-26T10:13:08.9462893Z adding 'toruk_lm/context_selection.py'
+2026-11-26T10:13:08.9467675Z adding 'toruk_lm/controlled.py'
+2026-11-26T10:13:08.9471300Z adding 'toruk_lm/conversation_data.py'
+2026-11-26T10:13:08.9474094Z adding 'toruk_lm/copy_diagnostic.py'
+2026-11-26T10:13:08.9476373Z adding 'toruk_lm/data.py'
+2026-11-26T10:13:08.9478442Z adding 'toruk_lm/effect_predictor.py'
+2026-11-26T10:13:08.9482293Z adding 'toruk_lm/effect_training.py'
+2026-11-26T10:13:08.9486259Z adding 'toruk_lm/engine.py'
+2026-11-26T10:13:08.9493718Z adding 'toruk_lm/generalization.py'
+2026-11-26T10:13:08.9497338Z adding 'toruk_lm/inference_server.py'
+2026-11-26T10:13:08.9499737Z adding 'toruk_lm/inference_worker.py'
+2026-11-26T10:13:08.9503158Z adding 'toruk_lm/integrated_memory.py'
+2026-11-26T10:13:08.9508982Z adding 'toruk_lm/integrated_study.py'
+2026-11-26T10:13:08.9511387Z adding 'toruk_lm/model.py'
+2026-11-26T10:13:08.9514179Z adding 'toruk_lm/ollama_chat.py'
+2026-11-26T10:13:08.9516286Z adding 'toruk_lm/owned_data.py'
+2026-11-26T10:13:08.9519590Z adding 'toruk_lm/owned_lm.py'
+2026-11-26T10:13:08.9524509Z adding 'toruk_lm/owned_training.py'
+2026-11-26T10:13:08.9526594Z adding 'toruk_lm/pooled_router.py'
+2026-11-26T10:13:08.9528412Z adding 'toruk_lm/rank_budget.py'
+2026-11-26T10:13:08.9530912Z adding 'toruk_lm/recurrent.py'
+2026-11-26T10:13:08.9533044Z adding 'toruk_lm/relevance_gate.py'
+2026-11-26T10:13:08.9538366Z adding 'toruk_lm/reproducibility.py'
+2026-11-26T10:13:08.9542455Z adding 'toruk_lm/reproduction.py'
+2026-11-26T10:13:08.9546091Z adding 'toruk_lm/segment_delta.py'
+2026-11-26T10:13:08.9549243Z adding 'toruk_lm/segment_delta_training.py'
+2026-11-26T10:13:08.9551367Z adding 'toruk_lm/source_spans.py'
+2026-11-26T10:13:08.9552812Z adding 'toruk_lm/tokenizer.py'
+2026-11-26T10:13:08.9555071Z adding 'toruk_lm/validation.py'
+2026-11-26T10:13:08.9558701Z adding 'toruk_lm/worlds.py'
+2026-11-26T10:13:08.9561457Z adding 'toruk_lm-0.1.0.dist-info/METADATA'
+2026-11-26T10:13:08.9562422Z adding 'toruk_lm-0.1.0.dist-info/WHEEL'
+2026-11-26T10:13:08.9563525Z adding 'toruk_lm-0.1.0.dist-info/entry_points.txt'
+2026-11-26T10:13:08.9564420Z adding 'toruk_lm-0.1.0.dist-info/top_level.txt'
+2026-11-26T10:13:08.9567582Z adding 'toruk_lm-0.1.0.dist-info/RECORD'
+2026-11-26T10:13:08.9570056Z removing build/bdist.linux-x86_64/wheel
+2026-11-26T10:13:08.9924518Z Successfully built toruk_lm-0.1.0.tar.gz and toruk_lm-0.1.0-py3-none-any.whl
+2026-11-26T10:13:09.0139492Z ##[group]Run actions/upload-artifact@v4
+2026-11-26T10:13:09.0139723Z with:
+2026-11-26T10:13:09.0139898Z   name: cpu-contracts-ubuntu
+2026-11-26T10:13:09.0140368Z   path: artifacts/ci-initialization-ubuntu.json
+artifacts/ci-initialization-scalar-ubuntu.json
+artifacts/ci-pytest-ubuntu.xml
+
+2026-11-26T10:13:09.0140845Z   if-no-files-found: warn
+2026-11-26T10:13:09.0141232Z   compression-level: 6
+2026-11-26T10:13:09.0141415Z   overwrite: false
+2026-11-26T10:13:09.0141596Z   include-hidden-files: false
+2026-11-26T10:13:09.0141787Z env:
+2026-11-26T10:13:09.0141992Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:09.0142354Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-26T10:13:09.0142688Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:09.0142995Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:09.0143306Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-26T10:13:09.0143632Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-26T10:13:09.0143885Z ##[endgroup]
+2026-11-26T10:13:09.1609649Z (node:2897) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T10:13:09.1610312Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T10:13:09.1659786Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-26T10:13:09.1693073Z The least common ancestor is /home/runner/work/Toruk/Toruk/artifacts. This will be the root directory of the artifact
+2026-11-26T10:13:09.1693994Z With the provided path, there will be 3 files uploaded
+2026-11-26T10:13:09.1694600Z Artifact name is valid!
+2026-11-26T10:13:09.1694956Z Root directory input is valid!
+2026-11-26T10:13:09.5458309Z Beginning upload of artifact content to blob storage
+2026-11-26T10:13:09.5734827Z (node:2897) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-26T10:13:09.8215644Z Uploaded bytes 28854
+2026-11-26T10:13:09.8770503Z Finished uploading artifact content to blob storage!
+2026-11-26T10:13:09.8771694Z SHA256 digest of uploaded artifact zip is b624a0bc7057ceebdc21d2fbc3d3e47d0cb88461971d26d840a6e940f62aaf61
+2026-11-26T10:13:09.8772424Z Finalizing artifact upload
+2026-11-26T10:13:10.2773636Z Artifact cpu-contracts-ubuntu.zip successfully finalized. Artifact ID 15106797297
+2026-11-26T10:13:10.2774434Z Artifact cpu-contracts-ubuntu has been successfully uploaded! Final size is 28854 bytes. Artifact ID is 15106797297
+2026-11-26T10:13:10.2779766Z Artifact download URL: https://github.com/ShamGaneshan2008/Toruk/actions/runs/45798618132/artifacts/15106797297
+2026-11-26T10:13:10.2973930Z Post job cleanup.
+2026-11-26T10:13:10.4050947Z (node:2909) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T10:13:10.4051758Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T10:13:10.4216432Z Post job cleanup.
+2026-11-26T10:13:10.5341656Z (node:2917) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-26T10:13:10.5342914Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-26T10:13:10.5580023Z Post job cleanup.
+2026-11-26T10:13:10.6495626Z [command]/usr/bin/git version
+2026-11-26T10:13:10.6552496Z git version 2.56.1
+2026-11-26T10:13:10.6604104Z Temporarily overriding HOME='/home/runner/work/_temp/459d5fda-6cbf-4642-ab2b-0d9a90caab32' before making global git config changes
+2026-11-26T10:13:10.6606019Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-26T10:13:10.6607118Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Toruk/Toruk
+2026-11-26T10:13:10.6663580Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-26T10:13:10.6717095Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-26T10:13:10.7038910Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-26T10:13:10.7071574Z http.https://github.com/.extraheader
+2026-11-26T10:13:10.7083297Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-26T10:13:10.7144537Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-26T10:13:10.7463317Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-26T10:13:10.7497337Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-26T10:13:10.7900178Z Cleaning up orphan processes
+2026-11-26T10:13:10.8254060Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
