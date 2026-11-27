@@ -1,0 +1,27 @@
+{
+  "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+  "active_processes": 0,
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "scripts/audit_entity_dropout_dev.py",
+    "--output",
+    "artifacts/local-answer-entity-dropout-dev-v1/independent-audit.json"
+  ],
+  "complete_process_lifetimes": true,
+  "cpu": 3.21875,
+  "error": null,
+  "failure": null,
+  "kernel_cpu": 0.546875,
+  "max_monitor_gap": 0.08135109999966517,
+  "observer_cpu_to_receipt": 1.125,
+  "peak_disk": 42155261,
+  "peak_private": 45744128,
+  "returncode": 0,
+  "root_pid": 11260,
+  "status": "PASS",
+  "terminated_processes": 0,
+  "total_processes": 3,
+  "user_cpu": 2.671875,
+  "wall": 3.304471299999932
+}

@@ -1,0 +1,118 @@
+{
+  "caps": {
+    "development": 30,
+    "disk": 134217728,
+    "evaluate": 30,
+    "fit": 90,
+    "memory": 2147483648,
+    "overall": 1800,
+    "request": 2
+  },
+  "order": [
+    [
+      "i601-s1301",
+      "ordinary",
+      "control"
+    ],
+    [
+      "i601-s1301",
+      "ordinary",
+      "contrast"
+    ],
+    [
+      "i601-s1301",
+      "recurrent",
+      "contrast"
+    ],
+    [
+      "i601-s1301",
+      "recurrent",
+      "control"
+    ],
+    [
+      "i601-s1709",
+      "ordinary",
+      "contrast"
+    ],
+    [
+      "i601-s1709",
+      "ordinary",
+      "control"
+    ],
+    [
+      "i601-s1709",
+      "recurrent",
+      "control"
+    ],
+    [
+      "i601-s1709",
+      "recurrent",
+      "contrast"
+    ],
+    [
+      "i947-s1301",
+      "ordinary",
+      "control"
+    ],
+    [
+      "i947-s1301",
+      "ordinary",
+      "contrast"
+    ],
+    [
+      "i947-s1301",
+      "recurrent",
+      "contrast"
+    ],
+    [
+      "i947-s1301",
+      "recurrent",
+      "control"
+    ],
+    [
+      "i947-s1709",
+      "ordinary",
+      "contrast"
+    ],
+    [
+      "i947-s1709",
+      "ordinary",
+      "control"
+    ],
+    [
+      "i947-s1709",
+      "recurrent",
+      "control"
+    ],
+    [
+      "i947-s1709",
+      "recurrent",
+      "contrast"
+    ]
+  ],
+  "plan_sha256": "7cc2180d32f01afda1d2852e6d0bd92cff6f00b3a497482efc981e015f8d87ef",
+  "prerequisite_seals": [
+    {
+      "cpu": 7.53125,
+      "path": "preparation/contracts",
+      "sha256": "f2ca17036d7f7211225ea7ac9eba4b4bd58d22cf9133803b7ade812c2adb13c9",
+      "status": "PASS",
+      "wall": 10.598358700000063
+    },
+    {
+      "cpu": 3.75,
+      "path": "preparation/rehearsal",
+      "sha256": "7cb06bc8032a626187f2d59595c7c5d441a589b7a95e3a05d106175dd8ebabd0",
+      "status": "PASS",
+      "wall": 4.7778808000002755
+    },
+    {
+      "cpu": 13.1875,
+      "path": "preparation/budget",
+      "sha256": "28f3683231a863e5c94deb12ad087cb360b97995c9fe85b7fea97ee7237a4ddd",
+      "status": "PASS",
+      "wall": 15.831126199999744
+    }
+  ],
+  "status": "FROZEN_BEFORE_FIT_1"
+}

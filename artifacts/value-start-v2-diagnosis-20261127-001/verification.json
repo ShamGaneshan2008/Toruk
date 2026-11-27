@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "named_input_files_unchanged": 38,
+  "source_and_production_changes": false,
+  "model_forwards": 0,
+  "training_updates": 0,
+  "new_answers": 0,
+  "heldout_opened": false,
+  "checks": {
+    "offline-recheck": {
+      "status": "PASS",
+      "returncode": 0,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "artifacts/value-start-v2-diagnosis-20261127-001/audit_diagnosis.py",
+        "--verify-only"
+      ]
+    },
+    "offline-contracts": {
+      "status": "PASS",
+      "returncode": 0,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_value_start_replication_v2.py",
+        "-k",
+        "separate_outcomes or candidate_mastery or aggregate_gain or training_loader or runtime_answers or initialization_lookup",
+        "--basetemp",
+        "artifacts/value-start-v2-diagnosis-20261127-001/pytest-temp",
+        "-p",
+        "no:cacheprovider"
+      ]
+    },
+    "lint": {
+      "status": "PASS",
+      "returncode": 0,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "scripts/audit_value_start_replication_v2.py",
+        "scripts/diagnose_value_start_v2.py",
+        "artifacts/value-start-v2-diagnosis-20261127-001/audit_diagnosis.py"
+      ]
+    },
+    "format": {
+      "status": "PASS",
+      "returncode": 0,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "scripts/audit_value_start_replication_v2.py",
+        "scripts/diagnose_value_start_v2.py",
+        "artifacts/value-start-v2-diagnosis-20261127-001/audit_diagnosis.py"
+      ]
+    },
+    "diff-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ]
+    },
+    "cached-diff-check": {
+      "status": "PASS",
+      "returncode": 0,
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ]
+    }
+  },
+  "readable_git_check": {
+    "status": "PASS",
+    "returncode": 0,
+    "mode": "approved read-only execution outside sandbox",
+    "commands": [
+      "git --no-optional-locks status --short --branch --untracked-files=normal",
+      "git diff --check",
+      "git diff --cached --check"
+    ],
+    "result": "No tracked or staged changes; only existing untracked work and this report directory; no access warnings. Full tool receipt is in the conversation.",
+    "sandbox_note": "Initial sandbox Git returned zero with permission warnings and 324 apparent artifact deletions; readable status shows these are not actual deletions."
+  },
+  "proposal_input_hashes_verified": true,
+  "files": {
+    ".gitignore": "03d97aa489dd94271fd7d743da0a7686e1b74aaefcfaddccf1d39d2b25143e32",
+    "access-record.json": "11668f0eda68775615d85d83d3a8e0cbddfe2fc25d4a1610f53fa110fade9174",
+    "audit_diagnosis.py": "20099d289d04b2bb6fe9be68cb9f52370dd114b8c3ef0261b08a9356c4c4b41f",
+    "cached-diff-check.json": "9dd960bed8cf5ec55050c92d9f7e4ad140af9374b91e19962521ed1c84094d60",
+    "cached-diff-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "comparison.json": "5e082c05299ee9877cd20d4b79d1409eed8c8936ec999da02bd2a4059216e0f6",
+    "diagnosis.json": "566fd25ed881b58676b003289333ca50b122b25df18c79081e2b460505d28eff",
+    "diff-check.json": "fda4d1d08bfc90208769b7d0437bb50713f061db5adaaaa70589be81016d83ef",
+    "diff-check.log": "935c1ffd23895615921d1dec892f51b848120e0866abdb5efb8c8dcb1a812c12",
+    "format.json": "2bbc2a0e6054eaca3317df346b5cfcd77b1b84ece1ec776ce586f3a50af1cc65",
+    "format.log": "81e0708af79a682467b0ecbd3453a0a33cfcbbe2812201b4d4f405f78ded2976",
+    "lint.json": "c7e5876de96d1983ccdd80f10debfda2bef970eff90f5a9dc9af25365038ebd6",
+    "lint.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "offline-contracts.json": "b203d1ffc98ff8ea2af7e18f4d64fe190c5c2bff0ff4673f3578507e03c25a93",
+    "offline-contracts.log": "20bce709edfc92532873aaed74cbc0f8e0048fe90f8507f4f69c43f178259f63",
+    "offline-recheck.json": "0f44b9937d65cfadcd66ab6cb2293d8c1022c172c7fb3dfa044c279077c4dbad",
+    "offline-recheck.log": "105032a978c5f74919f76bb9cf5f3cefc9a049bcba91c3631805f3f74f1291ed",
+    "proposal.md": "2b41a3c4358dee450aac5c7f1decfaff056abdd6065d3303c368082df34e32b3",
+    "report.md": "16e5fdf0a23b9878820c7a05b8081fb57683138a76271090bbab3033efde27b8",
+    "starting-state.json": "97a991215f6103224ba5b857d66e38c26f180898768a123ab4c7b59d23069e06"
+  }
+}

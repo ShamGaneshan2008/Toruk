@@ -1,0 +1,44 @@
+{
+  "active_processes": 0,
+  "complete_process_lifetimes": true,
+  "files": {
+    "checkpoint-meta.json": {
+      "bytes": 102,
+      "sha256": "92228d90b12cc9e9e4847eb07df264a224d03d68dffe677662accd1d8a48fa29"
+    },
+    "checkpoint.pt": {
+      "bytes": 197588,
+      "sha256": "34c1d09c32377090dc087451ddd5fee4df572f320cabfc58688d01425edc3507"
+    },
+    "controller-final.json": {
+      "bytes": 217,
+      "sha256": "e6da218e262e7326bb78ee7e8669851493a18482714edeb1834970924c75072e"
+    },
+    "cost.json": {
+      "bytes": 959,
+      "sha256": "33f131deeec9c78bc2221a3ef80ec1024bcdd5464424d02d50986fd3cb2b91d3"
+    },
+    "output.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "resources.jsonl": {
+      "bytes": 47829,
+      "sha256": "feb53a8f79387d8cf510c1845ee834f7ac4c719104e36130ef31fe66918d2dd8"
+    },
+    "training-summary.json": {
+      "bytes": 329,
+      "sha256": "389c288b70899b7c964c582239c8c0509ac028963f1bd5e03feea7c1fc32cfec"
+    },
+    "training.jsonl": {
+      "bytes": 1480063,
+      "sha256": "2c836e0c7aa074ed012b1021ded792bd906c02f3048438756b4b5894f212425b"
+    }
+  },
+  "final_receipt": "cost.json",
+  "final_receipt_sha256": "33f131deeec9c78bc2221a3ef80ec1024bcdd5464424d02d50986fd3cb2b91d3",
+  "note": "A valid STOP snapshot certifies retained bytes, not workload success.",
+  "publication": "observer only, after watch returned and all output handles closed",
+  "schema": "toruk-observer-owned-seal-v2",
+  "workload_status": "PASS"
+}

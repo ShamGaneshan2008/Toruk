@@ -1,0 +1,32 @@
+{
+  "active_processes": 0,
+  "complete_process_lifetimes": true,
+  "files": {
+    "audit.json": {
+      "bytes": 739612,
+      "sha256": "9551ca29160c432bd4337b1bb0e62df5b15221e2bff306b637949c40f6a2268a"
+    },
+    "controller-final.json": {
+      "bytes": 214,
+      "sha256": "eae79771db74712de4c25e88ecf61276d258739548acd01f28413027d831a3f0"
+    },
+    "cost.json": {
+      "bytes": 783,
+      "sha256": "55ad63c859bc938089f7012cd10682a6a6d34205a29c185fcbf58a900f86cb91"
+    },
+    "output.log": {
+      "bytes": 2461,
+      "sha256": "0ce45e1bbcf062c4bd34bc88e81183bf4d17af20e30e45e2ad563ec6409f0623"
+    },
+    "resources.jsonl": {
+      "bytes": 20040,
+      "sha256": "caff63db6d025b771a67ffb8cd2ebf254a4cb3adbe3698b9b01864adf2249dcc"
+    }
+  },
+  "final_receipt": "cost.json",
+  "final_receipt_sha256": "55ad63c859bc938089f7012cd10682a6a6d34205a29c185fcbf58a900f86cb91",
+  "note": "A valid STOP snapshot certifies retained bytes, not workload success.",
+  "publication": "observer only, after watch returned and all output handles closed",
+  "schema": "toruk-observer-owned-seal-v2",
+  "workload_status": "PASS"
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "decision": "STOP_DEVELOPMENT_FAILURE",
+  "training_gate": true,
+  "development_evaluated": true,
+  "pair_gains": {
+    "i601-s1301-ordinary": 0,
+    "i601-s1301-recurrent": 2,
+    "i601-s1709-ordinary": 0,
+    "i601-s1709-recurrent": 4,
+    "i947-s1301-ordinary": 6,
+    "i947-s1301-recurrent": -1,
+    "i947-s1709-ordinary": 6,
+    "i947-s1709-recurrent": 2
+  },
+  "pair_gates": {
+    "i601-s1301-ordinary": true,
+    "i601-s1301-recurrent": true,
+    "i601-s1709-ordinary": true,
+    "i601-s1709-recurrent": true,
+    "i947-s1301-ordinary": true,
+    "i947-s1301-recurrent": false,
+    "i947-s1709-ordinary": true,
+    "i947-s1709-recurrent": true
+  },
+  "candidate_floors": {
+    "i601-s1301-ordinary": true,
+    "i601-s1301-recurrent": false,
+    "i601-s1709-ordinary": true,
+    "i601-s1709-recurrent": true,
+    "i947-s1301-ordinary": true,
+    "i947-s1301-recurrent": false,
+    "i947-s1709-ordinary": true,
+    "i947-s1709-recurrent": false
+  },
+  "city_first_nll_gates": {
+    "i601-s1301": true,
+    "i601-s1709": true
+  },
+  "model_gains": {
+    "ordinary": 12,
+    "recurrent": 7
+  },
+  "protected_v2_files": 770,
+  "historical_decision": "STOP_DEVELOPMENT_FAILURE",
+  "model_forwards": 0,
+  "heldout_opened": false,
+  "memory_advantage": false
+}

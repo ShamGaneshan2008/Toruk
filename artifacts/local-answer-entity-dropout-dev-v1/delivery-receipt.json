@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "decision": "STOP_DEVELOPMENT_FAILURE",
+  "inventory_sha256": "93e897e7918f74ec686b99ec96bd1c35597940074f4fb01232aa2b2337f335d9",
+  "inventoried_files": 691,
+  "report_links": 57,
+  "costs": {
+    "preparation/budget": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\local_answer_entity_dropout.py",
+        "resources-controller",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-entity-dropout-dev-v1\\preparation\\budget"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 8.0625,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 2.359375,
+      "max_monitor_gap": 0.05171659999905387,
+      "observer_cpu_to_receipt": 0.21875,
+      "peak_disk": 88453,
+      "peak_private": 696012800,
+      "returncode": 0,
+      "root_pid": 8996,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 91,
+      "user_cpu": 5.703125,
+      "wall": 13.63736659999995
+    },
+    "registered/budget": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\Toruk\\scripts\\local_answer_entity_dropout.py",
+        "budget",
+        "--directory",
+        "D:\\Toruk\\artifacts\\local-answer-entity-dropout-dev-v1\\registered\\budget"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 569.296875,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 118.15625,
+      "max_monitor_gap": 0.6539768000002368,
+      "observer_cpu_to_receipt": 68.28125,
+      "peak_disk": 37964465,
+      "peak_private": 725377024,
+      "returncode": 0,
+      "root_pid": 16188,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 150,
+      "user_cpu": 451.140625,
+      "wall": 472.51341760000105
+    },
+    "audit-execution": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "scripts/audit_entity_dropout_dev.py",
+        "--output",
+        "artifacts/local-answer-entity-dropout-dev-v1/independent-audit.json"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 3.21875,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 0.546875,
+      "max_monitor_gap": 0.08135109999966517,
+      "observer_cpu_to_receipt": 1.125,
+      "peak_disk": 42155261,
+      "peak_private": 45744128,
+      "returncode": 0,
+      "root_pid": 11260,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 3,
+      "user_cpu": 2.671875,
+      "wall": 3.304471299999932
+    },
+    "verification/execution": {
+      "accounting_scope": "kernel Job: complete workload/controller and descendants; observer outside job",
+      "active_processes": 0,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "artifacts/local-answer-entity-dropout-dev-v1/check_repository.py"
+      ],
+      "complete_process_lifetimes": true,
+      "cpu": 131.328125,
+      "error": null,
+      "failure": null,
+      "kernel_cpu": 11.65625,
+      "max_monitor_gap": 0.07425330000114627,
+      "observer_cpu_to_receipt": 2.8125,
+      "peak_disk": 483333,
+      "peak_private": 1579270144,
+      "returncode": 0,
+      "root_pid": 24092,
+      "status": "PASS",
+      "terminated_processes": 0,
+      "total_processes": 107,
+      "user_cpu": 119.671875,
+      "wall": 151.4667814000004
+    }
+  },
+  "token_totals": {
+    "uniform": {
+      "train_target_tokens": 5537792,
+      "train_padded_forward_positions": 6291456,
+      "train_generated_tokens": 2328,
+      "dev_main_generated_tokens": 597,
+      "dev_question_only_generated_tokens": 691
+    },
+    "drop50": {
+      "train_target_tokens": 5537792,
+      "train_padded_forward_positions": 6291456,
+      "train_generated_tokens": 2328,
+      "dev_main_generated_tokens": 596,
+      "dev_question_only_generated_tokens": 674
+    }
+  },
+  "main": "916efdd4b63dd63fab08ffabb8ab6e8313dc4bf2",
+  "real_index_empty": true,
+  "scoped_new_source_diff_check": "PASS",
+  "worktree": [
+    "?? artifacts/local-answer-entity-dropout-dev-v1/",
+    "?? docs/research/local-answer-entity-dropout-dev-v1-protocol.md",
+    "?? docs/research/local-answer-entity-dropout-dev-v1-results.md",
+    "?? scripts/audit_entity_dropout_dev.py",
+    "?? scripts/diagnose_value_start_v2.py",
+    "?? scripts/local_answer_entity_dropout.py",
+    "?? tests/test_entity_dropout_dev.py"
+  ],
+  "complete_project_cost": "UNKNOWN",
+  "research_retries": 0,
+  "heldout_opened": false,
+  "committed": false,
+  "pushed": false
+}

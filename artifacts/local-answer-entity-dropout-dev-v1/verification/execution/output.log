@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "focused",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_entity_dropout_dev.py",
+        "tests/test_value_start_replication_v2.py",
+        "tests/test_lifetime_job.py",
+        "tests/test_lifetime_job_v2.py",
+        "--basetemp",
+        "D:\\Toruk\\artifacts\\local-answer-entity-dropout-dev-v1\\pytest-tmp-postrun"
+      ],
+      "returncode": 0,
+      "wall": 9.996751799999402
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "returncode": 0,
+      "wall": 0.09258669999871927
+    },
+    {
+      "name": "format",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "returncode": 0,
+      "wall": 0.09077460000116844
+    },
+    {
+      "name": "mypy",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy"
+      ],
+      "returncode": 0,
+      "wall": 50.09085509999932
+    },
+    {
+      "name": "mypy-linux",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "returncode": 0,
+      "wall": 50.99064949999956
+    },
+    {
+      "name": "mypy-study",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--follow-imports=silent",
+        "scripts/diagnose_value_start_v2.py",
+        "scripts/local_answer_entity_dropout.py",
+        "scripts/audit_entity_dropout_dev.py"
+      ],
+      "returncode": 0,
+      "wall": 38.21141849999913
+    },
+    {
+      "name": "frozen-sources",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "scripts/check_frozen_sources.py"
+      ],
+      "returncode": 0,
+      "wall": 0.10411199999907694
+    },
+    {
+      "name": "dependencies",
+      "command": [
+        "D:\\Toruk\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall": 1.7137340999997832
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall": 0.05454789999930654
+    },
+    {
+      "name": "cached-diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall": 0.03292230000079144
+    }
+  ],
+  "hosted_ci": "NOT_RUN",
+  "model_research_fits": 0
+}

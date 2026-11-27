@@ -1,0 +1,23 @@
+usage: owned_resume.py [-h] --checkpoint CHECKPOINT --data DATA
+                       [--config CONFIG]
+                       [--variant {ordinary,ordinary_matched,memory_off,memory_on}]
+                       [--steps STEPS] [--seed SEED] [--resume RESUME]
+                       {validate,train}
+
+Fail-closed owned-LM resume adapter; preserve the hash-bound v1 trainer. The
+v1 checkpoint format and numerical training implementation remain unchanged.
+Use this module for new training/resume; archived commands remain
+reproducible.
+
+positional arguments:
+  {validate,train}
+
+options:
+  -h, --help            show this help message and exit
+  --checkpoint CHECKPOINT
+  --data DATA
+  --config CONFIG
+  --variant {ordinary,ordinary_matched,memory_off,memory_on}
+  --steps STEPS
+  --seed SEED
+  --resume RESUME

@@ -1,0 +1,348 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+__ test_corrupt_checkpoint_rejected_before_training[negative_second_moment] ___
+
+checkpoint = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_corrupt_checkpoint_reject0/legacy.pt')
+tmp_path = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_corrupt_checkpoint_reject0')
+config = OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000028415847C80>
+change = 'negative_second_moment'
+
+    @pytest.mark.parametrize(
+        "change",
+        [
+            "missing_all",
+            "missing_one",
+            "extra_state",
+            "duplicate_parameter",
+            "reordered_parameters",
+            "setting_lr",
+            "setting_betas",
+            "setting_eps",
+            "setting_weight_decay",
+            "setting_amsgrad",
+            "missing_moment_field",
+            "moment_shape",
+            "moment_dtype",
+            "nonfinite_moment",
+            "negative_second_moment",
+            "model_dtype",
+            "step_shape",
+            "step_value",
+            "step_integer",
+            "targets",
+            "bool_targets",
+            "zero_steps",
+            "python_rng",
+            "torch_rng",
+            "runtime",
+            "tokenizer",
+            "float_seed",
+            "bool_batch",
+        ],
+    )
+    def test_corrupt_checkpoint_rejected_before_training(
+        checkpoint, tmp_path, config, monkeypatch, change
+    ):
+        payload = torch.load(checkpoint, weights_only=True)
+        corrupt(payload, change)
+        bad = tmp_path / "bad.pt"
+        torch.save(payload, bad)
+        output = tmp_path / "must not exist" / "new.pt"
+    
+        def forbidden(*args, **kwargs):
+            pytest.fail("corrupt checkpoint reached training")
+    
+        monkeypatch.setattr(legacy, "train", forbidden)
+        with pytest.raises(ValueError):
+>           safe.train(config, "ordinary", documents(), output, steps=3, seed=23, batch=1, resume=bad)
+
+tests\test_owned_resume.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\toruk_lm\owned_resume.py:228: in train
+    result = legacy.train(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64), 'ordinary', [{'id': 'disposable-...'D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_corrupt_checkpoint_reject0/must not exist/new.pt'))
+kwargs = {'steps': 3, 'seed': 23, 'batch': 1, 'learning_rate': 0.003, ...}
+
+    def forbidden(*args, **kwargs):
+>       pytest.fail("corrupt checkpoint reached training")
+E       Failed: corrupt checkpoint reached training
+
+tests\test_owned_resume.py:143: Failed
+________ test_corrupt_checkpoint_rejected_before_training[model_dtype] ________
+
+checkpoint = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_corrupt_checkpoint_reject1/legacy.pt')
+tmp_path = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_corrupt_checkpoint_reject1')
+config = OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000284159A72F0>
+change = 'model_dtype'
+
+    @pytest.mark.parametrize(
+        "change",
+        [
+            "missing_all",
+            "missing_one",
+            "extra_state",
+            "duplicate_parameter",
+            "reordered_parameters",
+            "setting_lr",
+            "setting_betas",
+            "setting_eps",
+            "setting_weight_decay",
+            "setting_amsgrad",
+            "missing_moment_field",
+            "moment_shape",
+            "moment_dtype",
+            "nonfinite_moment",
+            "negative_second_moment",
+            "model_dtype",
+            "step_shape",
+            "step_value",
+            "step_integer",
+            "targets",
+            "bool_targets",
+            "zero_steps",
+            "python_rng",
+            "torch_rng",
+            "runtime",
+            "tokenizer",
+            "float_seed",
+            "bool_batch",
+        ],
+    )
+    def test_corrupt_checkpoint_rejected_before_training(
+        checkpoint, tmp_path, config, monkeypatch, change
+    ):
+        payload = torch.load(checkpoint, weights_only=True)
+        corrupt(payload, change)
+        bad = tmp_path / "bad.pt"
+        torch.save(payload, bad)
+        output = tmp_path / "must not exist" / "new.pt"
+    
+        def forbidden(*args, **kwargs):
+            pytest.fail("corrupt checkpoint reached training")
+    
+        monkeypatch.setattr(legacy, "train", forbidden)
+        with pytest.raises(ValueError):
+>           safe.train(config, "ordinary", documents(), output, steps=3, seed=23, batch=1, resume=bad)
+
+tests\test_owned_resume.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\toruk_lm\owned_resume.py:228: in train
+    result = legacy.train(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64), 'ordinary', [{'id': 'disposable-...'D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_corrupt_checkpoint_reject1/must not exist/new.pt'))
+kwargs = {'steps': 3, 'seed': 23, 'batch': 1, 'learning_rate': 0.003, ...}
+
+    def forbidden(*args, **kwargs):
+>       pytest.fail("corrupt checkpoint reached training")
+E       Failed: corrupt checkpoint reached training
+
+tests\test_owned_resume.py:143: Failed
+___________ test_document_ids_are_checked_before_training[missing] ____________
+
+tmp_path = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_0')
+config = OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000284158FCE00>
+invalid = 'missing'
+
+    @pytest.mark.parametrize("invalid", ["missing", "empty", "blank", "number", "duplicate"])
+    def test_document_ids_are_checked_before_training(tmp_path, config, monkeypatch, invalid):
+        docs = documents()
+        if invalid == "missing":
+            del docs[0]["id"]
+        elif invalid == "duplicate":
+            docs.append(dict(docs[0], text="another independent document"))
+        else:
+            docs[0]["id"] = {"empty": "", "blank": " \t", "number": 42}[invalid]
+    
+        def forbidden(*args, **kwargs):
+            pytest.fail("invalid document IDs reached the numerical trainer")
+    
+        monkeypatch.setattr(legacy, "train", forbidden)
+        output = tmp_path / "absent" / "new.pt"
+        with pytest.raises(ValueError, match="document.*ID"):
+>           safe.train(config, "ordinary", docs, output, steps=1, seed=23, batch=1)
+
+tests\test_owned_resume.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\toruk_lm\owned_resume.py:228: in train
+    result = legacy.train(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64), 'ordinary', [{'split': 'train', ...owsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_0/absent/new.pt'))
+kwargs = {'steps': 1, 'seed': 23, 'batch': 1, 'learning_rate': 0.003, ...}
+
+    def forbidden(*args, **kwargs):
+>       pytest.fail("invalid document IDs reached the numerical trainer")
+E       Failed: invalid document IDs reached the numerical trainer
+
+tests\test_owned_resume.py:277: Failed
+____________ test_document_ids_are_checked_before_training[empty] _____________
+
+tmp_path = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_1')
+config = OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000284158FE6F0>
+invalid = 'empty'
+
+    @pytest.mark.parametrize("invalid", ["missing", "empty", "blank", "number", "duplicate"])
+    def test_document_ids_are_checked_before_training(tmp_path, config, monkeypatch, invalid):
+        docs = documents()
+        if invalid == "missing":
+            del docs[0]["id"]
+        elif invalid == "duplicate":
+            docs.append(dict(docs[0], text="another independent document"))
+        else:
+            docs[0]["id"] = {"empty": "", "blank": " \t", "number": 42}[invalid]
+    
+        def forbidden(*args, **kwargs):
+            pytest.fail("invalid document IDs reached the numerical trainer")
+    
+        monkeypatch.setattr(legacy, "train", forbidden)
+        output = tmp_path / "absent" / "new.pt"
+        with pytest.raises(ValueError, match="document.*ID"):
+>           safe.train(config, "ordinary", docs, output, steps=1, seed=23, batch=1)
+
+tests\test_owned_resume.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\toruk_lm\owned_resume.py:228: in train
+    result = legacy.train(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64), 'ordinary', [{'id': '', 'split':...owsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_1/absent/new.pt'))
+kwargs = {'steps': 1, 'seed': 23, 'batch': 1, 'learning_rate': 0.003, ...}
+
+    def forbidden(*args, **kwargs):
+>       pytest.fail("invalid document IDs reached the numerical trainer")
+E       Failed: invalid document IDs reached the numerical trainer
+
+tests\test_owned_resume.py:277: Failed
+____________ test_document_ids_are_checked_before_training[blank] _____________
+
+tmp_path = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_2')
+config = OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000284158FD0A0>
+invalid = 'blank'
+
+    @pytest.mark.parametrize("invalid", ["missing", "empty", "blank", "number", "duplicate"])
+    def test_document_ids_are_checked_before_training(tmp_path, config, monkeypatch, invalid):
+        docs = documents()
+        if invalid == "missing":
+            del docs[0]["id"]
+        elif invalid == "duplicate":
+            docs.append(dict(docs[0], text="another independent document"))
+        else:
+            docs[0]["id"] = {"empty": "", "blank": " \t", "number": 42}[invalid]
+    
+        def forbidden(*args, **kwargs):
+            pytest.fail("invalid document IDs reached the numerical trainer")
+    
+        monkeypatch.setattr(legacy, "train", forbidden)
+        output = tmp_path / "absent" / "new.pt"
+        with pytest.raises(ValueError, match="document.*ID"):
+>           safe.train(config, "ordinary", docs, output, steps=1, seed=23, batch=1)
+
+tests\test_owned_resume.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\toruk_lm\owned_resume.py:228: in train
+    result = legacy.train(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64), 'ordinary', [{'id': ' \t', 'spli...owsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_2/absent/new.pt'))
+kwargs = {'steps': 1, 'seed': 23, 'batch': 1, 'learning_rate': 0.003, ...}
+
+    def forbidden(*args, **kwargs):
+>       pytest.fail("invalid document IDs reached the numerical trainer")
+E       Failed: invalid document IDs reached the numerical trainer
+
+tests\test_owned_resume.py:277: Failed
+____________ test_document_ids_are_checked_before_training[number] ____________
+
+tmp_path = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_3')
+config = OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000028415A8DC10>
+invalid = 'number'
+
+    @pytest.mark.parametrize("invalid", ["missing", "empty", "blank", "number", "duplicate"])
+    def test_document_ids_are_checked_before_training(tmp_path, config, monkeypatch, invalid):
+        docs = documents()
+        if invalid == "missing":
+            del docs[0]["id"]
+        elif invalid == "duplicate":
+            docs.append(dict(docs[0], text="another independent document"))
+        else:
+            docs[0]["id"] = {"empty": "", "blank": " \t", "number": 42}[invalid]
+    
+        def forbidden(*args, **kwargs):
+            pytest.fail("invalid document IDs reached the numerical trainer")
+    
+        monkeypatch.setattr(legacy, "train", forbidden)
+        output = tmp_path / "absent" / "new.pt"
+        with pytest.raises(ValueError, match="document.*ID"):
+>           safe.train(config, "ordinary", docs, output, steps=1, seed=23, batch=1)
+
+tests\test_owned_resume.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\toruk_lm\owned_resume.py:228: in train
+    result = legacy.train(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64), 'ordinary', [{'id': 42, 'split':...owsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_3/absent/new.pt'))
+kwargs = {'steps': 1, 'seed': 23, 'batch': 1, 'learning_rate': 0.003, ...}
+
+    def forbidden(*args, **kwargs):
+>       pytest.fail("invalid document IDs reached the numerical trainer")
+E       Failed: invalid document IDs reached the numerical trainer
+
+tests\test_owned_resume.py:277: Failed
+__________ test_document_ids_are_checked_before_training[duplicate] ___________
+
+tmp_path = WindowsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_4')
+config = OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000284158FDE20>
+invalid = 'duplicate'
+
+    @pytest.mark.parametrize("invalid", ["missing", "empty", "blank", "number", "duplicate"])
+    def test_document_ids_are_checked_before_training(tmp_path, config, monkeypatch, invalid):
+        docs = documents()
+        if invalid == "missing":
+            del docs[0]["id"]
+        elif invalid == "duplicate":
+            docs.append(dict(docs[0], text="another independent document"))
+        else:
+            docs[0]["id"] = {"empty": "", "blank": " \t", "number": 42}[invalid]
+    
+        def forbidden(*args, **kwargs):
+            pytest.fail("invalid document IDs reached the numerical trainer")
+    
+        monkeypatch.setattr(legacy, "train", forbidden)
+        output = tmp_path / "absent" / "new.pt"
+        with pytest.raises(ValueError, match="document.*ID"):
+>           safe.train(config, "ordinary", docs, output, steps=1, seed=23, batch=1)
+
+tests\test_owned_resume.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\toruk_lm\owned_resume.py:228: in train
+    result = legacy.train(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (OwnedConfig(context=8, width=8, heads=2, layers=1, slots=2, max_document_tokens=64), 'ordinary', [{'id': 'disposable-...owsPath('D:/Toruk/artifacts/code-review-fixes-20261127-001/before-temp/test_document_ids_are_checked_4/absent/new.pt'))
+kwargs = {'steps': 1, 'seed': 23, 'batch': 1, 'learning_rate': 0.003, ...}
+
+    def forbidden(*args, **kwargs):
+>       pytest.fail("invalid document IDs reached the numerical trainer")
+E       Failed: invalid document IDs reached the numerical trainer
+
+tests\test_owned_resume.py:277: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_owned_resume.py::test_corrupt_checkpoint_rejected_before_training[negative_second_moment]
+FAILED tests/test_owned_resume.py::test_corrupt_checkpoint_rejected_before_training[model_dtype]
+FAILED tests/test_owned_resume.py::test_document_ids_are_checked_before_training[missing]
+FAILED tests/test_owned_resume.py::test_document_ids_are_checked_before_training[empty]
+FAILED tests/test_owned_resume.py::test_document_ids_are_checked_before_training[blank]
+FAILED tests/test_owned_resume.py::test_document_ids_are_checked_before_training[number]
+FAILED tests/test_owned_resume.py::test_document_ids_are_checked_before_training[duplicate]
+7 failed, 53 deselected in 3.47s

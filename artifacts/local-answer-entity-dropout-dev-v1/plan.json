@@ -1,0 +1,175 @@
+{
+  "anonymity_rule": "(epoch+original-document-index)%2==0; training only",
+  "caps": {
+    "development": 40,
+    "disk": 134217728,
+    "evaluate": 40,
+    "fit": 90,
+    "memory": 2147483648,
+    "overall": 1800,
+    "request": 2
+  },
+  "config": {
+    "context": 32,
+    "heads": 4,
+    "layers": 1,
+    "max_document_tokens": 64,
+    "slots": 4,
+    "width": 16
+  },
+  "data": {
+    "dev-inputs.json": "625f96f9a3c07c95c07d1026eca1442d28192d6c4ee43c54260b95b013b1c49b",
+    "dev-labels.json": "790361d1401fae4c632fd90d5824864bee567dd43d4bd09158e61195492068e2",
+    "overlap.json": "670f96d3dbab5a2d4edcacc00351b89bcdef272a2aef3639c65d7657c5f12fed",
+    "schedules.json": "81f0bfd50b224c6595808d4f736d2947bbc9dd6a6007fa834d44e623b386786c",
+    "train-documents.json": "b406991cef36bdacdbc7462d35e7760bbb7192bb859a64608b0e223863821bfb",
+    "train-inputs.json": "98e31e1fc992c66e0927dbba5d19591b045b2c37f747c2cdde8f45bb31c7bf76",
+    "train-labels.json": "0b8306aae6427d954f473527e334699c5631b9a7b43942dadf7a2b2415bad6a5",
+    "training-views.json": "22658410699f0de9bcadf269a0443e8dae6e5c32ea790432446251c7a9ac2726"
+  },
+  "diagnosis_sha256": "1450474c7af4122a439ead3a9214467ff2b87a9f62628ea9d44ad7407ac962ad",
+  "format": "toruk-local-answer-entity-dropout-dev-v1",
+  "forward_positions": 786432,
+  "initial_hashes": {
+    "i601-s1301-ordinary": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+    "i601-s1301-recurrent": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+    "i601-s1709-ordinary": "4af341e6f6938f0d7127f16fbd35bd571463877336b173d722e4907affb6b22b",
+    "i601-s1709-recurrent": "18683d480a6e60763d841a6706c9a8e195d05495e06b59f7d84756a981d2e392",
+    "i947-s1301-ordinary": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+    "i947-s1301-recurrent": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5",
+    "i947-s1709-ordinary": "32dd98b749a3b8967ea10910adbb7eec22bfe69210b009163182479d81d8eba5",
+    "i947-s1709-recurrent": "9b46218d45be7a1bd4ae5ed800d07b85cc69952da85c581ec9036d32eb9dfca5"
+  },
+  "objective": "uniform unweighted valid-token CE in both arms",
+  "order": [
+    [
+      "i601-s1301",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i601-s1301",
+      "ordinary",
+      "drop50"
+    ],
+    [
+      "i601-s1301",
+      "recurrent",
+      "drop50"
+    ],
+    [
+      "i601-s1301",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i601-s1709",
+      "ordinary",
+      "drop50"
+    ],
+    [
+      "i601-s1709",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i601-s1709",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i601-s1709",
+      "recurrent",
+      "drop50"
+    ],
+    [
+      "i947-s1301",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i947-s1301",
+      "ordinary",
+      "drop50"
+    ],
+    [
+      "i947-s1301",
+      "recurrent",
+      "drop50"
+    ],
+    [
+      "i947-s1301",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i947-s1709",
+      "ordinary",
+      "drop50"
+    ],
+    [
+      "i947-s1709",
+      "ordinary",
+      "uniform"
+    ],
+    [
+      "i947-s1709",
+      "recurrent",
+      "uniform"
+    ],
+    [
+      "i947-s1709",
+      "recurrent",
+      "drop50"
+    ]
+  ],
+  "parameters": {
+    "ordinary": 14058,
+    "recurrent": 14416
+  },
+  "preservation_inventory_sha256": "b04e1e90aa29dcd15aee36534d0e05f64e7a32a5e01f2bcee3c31e5ce050be90",
+  "preserved_files": 770,
+  "runtime": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "psutil": "7.2.2",
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu"
+  },
+  "source_commit": "916efdd4b63dd63fab08ffabb8ab6e8313dc4bf2",
+  "sources": {
+    ".gitattributes": "566b0d81838e36cb43f987cddb030ab7680305e439d2c9f12857a0d743999035",
+    "docs/research/local-answer-entity-dropout-dev-v1-protocol.md": "b361549afa313a4142896d127c8ea4e272bcea0d965827a317a4ef7886506ccc",
+    "docs/research/local-answer-value-start-replication-v2-protocol.md": "6e93d23f494eea4880d27708922a128e8557b21c9e04e5094eb8edb15b0828ae",
+    "pyproject.toml": "613cfa93cf1894828a1443d28959d6565a9abea13e48dc5fca9d9b3bbc1ab1ca",
+    "scripts/answer_trainability_dev.py": "c599576237e8e0d8de71b98e0e634a2f4af55fc536bc50915a4dd6bcf6bb0fa1",
+    "scripts/audit_entity_dropout_dev.py": "519ae255e752a791fa0e21256f05ba06dbb058fa538cdf9158c6a044576d664b",
+    "scripts/audit_value_start_replication_v2.py": "6407af6a8549b877dac0d8c37db877043a7f9d918281f493aef7b699dd239c9c",
+    "scripts/diagnose_value_start_v2.py": "f5ec9863c993fc2708fcb4effd9d077374ff440b4b5defb83e35acb9a6cf6394",
+    "scripts/first_byte_probe.py": "d4a2ebfaa73f6e49c7a28201d5667c8124c7cf3504858d936bf171953e8e5324",
+    "scripts/lifetime_job.py": "b076233cdbc76e4e77bb48e71a9cbaee2bd1c5e5697042b7fc3e6580b1b6220f",
+    "scripts/lifetime_job_v2.py": "4070eab1862aa8d48310129bf69761bfa173412378e21b8fbe94f67b404f794e",
+    "scripts/local_answer_dev.py": "56228f95d670e676d78aaa0e4b7270c5994e0245c7b073bf6f84310c0469345a",
+    "scripts/local_answer_entity_dropout.py": "76f9a05a86fdfc2974da890d632e17106a5a4245f7d4e98ea69e99d1ed3187a0",
+    "scripts/segment_delta_watch.py": "351005a108fbb93948c75e51c4f8ba811d51e170d694239bf48b6ef421d8093c",
+    "scripts/value_start_replication_data.py": "73e83256a04cdbbeb5c5e87c631b1f59b196b6433543330dc1ca2a6b44876d26",
+    "scripts/value_start_replication_v2.py": "8d214b87301f174a865327b50f5556627be086ee43ebff12c272dee9f2cedbf4",
+    "src/toruk_lm/data.py": "343ff1cfb9c1245bd01f7c6eddd80f066689b03515880a7c246de938611a9232",
+    "src/toruk_lm/engine.py": "c5f9c794d0067ebd1521f6d8c721aecd63e9a2b590f607a57e4bb1d49863684e",
+    "src/toruk_lm/model.py": "c02556c171f81cb3fedec971f9be5fd2698b16179f24edfdf16ae2fbff90ccdf",
+    "src/toruk_lm/owned_lm.py": "f85f328b67f6cb9c146b6aeb1de7417cf057a7adfe60718bb4071ab6e145b4ac",
+    "src/toruk_lm/recurrent.py": "9d82e6d44046370e39b6faf3776561d21bc63a6ce099374dc352ad147fa9395d",
+    "src/toruk_lm/tokenizer.py": "da68d9ee22bceff57d155e745e6ebf88163e3d5b2430ad1c84b476d0a6a347e0",
+    "tests/test_entity_dropout_dev.py": "49c5851d020c954e255a2584bc81216188485e8c7176d418a51b58bdc7a3c99a",
+    "tests/test_lifetime_job.py": "cfeaafe52ae02a1c1db3fbee134124089018cbcee43a77e457b492300746401a",
+    "tests/test_lifetime_job_v2.py": "8d662942abbee8266fec9db59ad6938543294081b7eb024beb57f27f4fd3d498",
+    "tests/test_value_start_replication_v2.py": "5e4a55203660210683d855b3bcab959f76c989351d3163f550dc49a1a78b5bf1"
+  },
+  "status": "DESIGN_FROZEN_BEFORE_REHEARSAL_OR_RESEARCH_FORWARD",
+  "steps": 1536,
+  "tokenizer": {
+    "fingerprint": "ebf7d205ce6fc5e51a3109713ea3a0c29f01f7d309a8f2f5dca7a9863ea970d7",
+    "identity": "toruk-utf8-byte-v1"
+  },
+  "v2_registration_sha256": "964d13a265a75a76b70b577873165b1a9347b720d57a5ce516bae453566e916d",
+  "valid_targets": 692224
+}

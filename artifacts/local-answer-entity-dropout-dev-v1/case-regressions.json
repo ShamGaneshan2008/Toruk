@@ -1,0 +1,281 @@
+{
+  "pairs": {
+    "i601-s1301-ordinary": {
+      "resolved": [],
+      "introduced": [],
+      "persisted": []
+    },
+    "i601-s1301-recurrent": {
+      "resolved": [
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-014"
+      ],
+      "introduced": [
+        "v2-dev-000"
+      ],
+      "persisted": [
+        "v2-dev-006"
+      ]
+    },
+    "i601-s1709-ordinary": {
+      "resolved": [],
+      "introduced": [],
+      "persisted": []
+    },
+    "i601-s1709-recurrent": {
+      "resolved": [
+        "v2-dev-006",
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-014"
+      ],
+      "introduced": [],
+      "persisted": []
+    },
+    "i947-s1301-ordinary": {
+      "resolved": [
+        "v2-dev-000",
+        "v2-dev-006",
+        "v2-dev-007",
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "persisted": []
+    },
+    "i947-s1301-recurrent": {
+      "resolved": [
+        "v2-dev-000"
+      ],
+      "introduced": [
+        "v2-dev-006",
+        "v2-dev-007"
+      ],
+      "persisted": []
+    },
+    "i947-s1709-ordinary": {
+      "resolved": [
+        "v2-dev-000",
+        "v2-dev-007",
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-018",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "persisted": []
+    },
+    "i947-s1709-recurrent": {
+      "resolved": [
+        "v2-dev-000",
+        "v2-dev-015",
+        "v2-dev-019"
+      ],
+      "introduced": [
+        "v2-dev-009"
+      ],
+      "persisted": [
+        "v2-dev-006",
+        "v2-dev-007"
+      ]
+    }
+  },
+  "candidate_failures": [
+    {
+      "cell": "i601-s1301-recurrent-drop50",
+      "flags": {
+        "eos": true,
+        "exact": false,
+        "malformed": false,
+        "repetition": false,
+        "value_exact": false,
+        "wrong_first": true
+      },
+      "gold": "so",
+      "id": "v2-dev-000",
+      "prefix": "v2 d000; rain. rain. rain. rai\nbek city=so\nbek city?=",
+      "result": {
+        "allocated_state_bytes": 256,
+        "answer": "?",
+        "budget_exhausted": false,
+        "commits": 1,
+        "forward_positions": 77,
+        "generated_ids": [
+          66,
+          2
+        ],
+        "input_tokens": 54
+      },
+      "split": "dev"
+    },
+    {
+      "cell": "i601-s1301-recurrent-drop50",
+      "flags": {
+        "eos": true,
+        "exact": false,
+        "malformed": false,
+        "repetition": false,
+        "value_exact": false,
+        "wrong_first": true
+      },
+      "gold": "tu",
+      "id": "v2-dev-006",
+      "prefix": "v2 d006; rain. rain. rain. rai\ndov city=tu\ndov city?=",
+      "result": {
+        "allocated_state_bytes": 256,
+        "answer": "so",
+        "budget_exhausted": false,
+        "commits": 1,
+        "forward_positions": 101,
+        "generated_ids": [
+          118,
+          114,
+          2
+        ],
+        "input_tokens": 54
+      },
+      "split": "dev"
+    },
+    {
+      "cell": "i947-s1301-recurrent-drop50",
+      "flags": {
+        "eos": true,
+        "exact": false,
+        "malformed": false,
+        "repetition": false,
+        "value_exact": false,
+        "wrong_first": true
+      },
+      "gold": "tu",
+      "id": "v2-dev-006",
+      "prefix": "v2 d006; rain. rain. rain. rai\ndov city=tu\ndov city?=",
+      "result": {
+        "allocated_state_bytes": 256,
+        "answer": "?",
+        "budget_exhausted": false,
+        "commits": 1,
+        "forward_positions": 77,
+        "generated_ids": [
+          66,
+          2
+        ],
+        "input_tokens": 54
+      },
+      "split": "dev"
+    },
+    {
+      "cell": "i947-s1301-recurrent-drop50",
+      "flags": {
+        "eos": true,
+        "exact": false,
+        "malformed": false,
+        "repetition": false,
+        "value_exact": false,
+        "wrong_first": true
+      },
+      "gold": "la",
+      "id": "v2-dev-007",
+      "prefix": "v2 d007; rain. rain. rain. rai\ncity dov=la\ncity dov?=",
+      "result": {
+        "allocated_state_bytes": 256,
+        "answer": "mi",
+        "budget_exhausted": false,
+        "commits": 1,
+        "forward_positions": 101,
+        "generated_ids": [
+          112,
+          108,
+          2
+        ],
+        "input_tokens": 54
+      },
+      "split": "dev"
+    },
+    {
+      "cell": "i947-s1709-recurrent-drop50",
+      "flags": {
+        "eos": true,
+        "exact": false,
+        "malformed": false,
+        "repetition": false,
+        "value_exact": false,
+        "wrong_first": true
+      },
+      "gold": "tu",
+      "id": "v2-dev-006",
+      "prefix": "v2 d006; rain. rain. rain. rai\ndov city=tu\ndov city?=",
+      "result": {
+        "allocated_state_bytes": 256,
+        "answer": "?",
+        "budget_exhausted": false,
+        "commits": 1,
+        "forward_positions": 77,
+        "generated_ids": [
+          66,
+          2
+        ],
+        "input_tokens": 54
+      },
+      "split": "dev"
+    },
+    {
+      "cell": "i947-s1709-recurrent-drop50",
+      "flags": {
+        "eos": true,
+        "exact": false,
+        "malformed": false,
+        "repetition": false,
+        "value_exact": false,
+        "wrong_first": true
+      },
+      "gold": "la",
+      "id": "v2-dev-007",
+      "prefix": "v2 d007; rain. rain. rain. rai\ncity dov=la\ncity dov?=",
+      "result": {
+        "allocated_state_bytes": 256,
+        "answer": "mi",
+        "budget_exhausted": false,
+        "commits": 1,
+        "forward_positions": 101,
+        "generated_ids": [
+          112,
+          108,
+          2
+        ],
+        "input_tokens": 54
+      },
+      "split": "dev"
+    },
+    {
+      "cell": "i947-s1709-recurrent-drop50",
+      "flags": {
+        "eos": true,
+        "exact": false,
+        "malformed": false,
+        "repetition": false,
+        "value_exact": false,
+        "wrong_first": true
+      },
+      "gold": "R-7",
+      "id": "v2-dev-009",
+      "prefix": "v2 d009; rain. rain. rain. rai\ncode dov=R-7\ncode dov?=",
+      "result": {
+        "allocated_state_bytes": 256,
+        "answer": "V:4",
+        "budget_exhausted": false,
+        "commits": 1,
+        "forward_positions": 130,
+        "generated_ids": [
+          89,
+          61,
+          55,
+          2
+        ],
+        "input_tokens": 55
+      },
+      "split": "dev"
+    }
+  ]
+}

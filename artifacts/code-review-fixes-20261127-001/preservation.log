@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "city_artifacts_unchanged": 711,
+  "city_checkpoints_unchanged": 16,
+  "city_registered_sources_unchanged": 25,
+  "v2_files_unchanged": 770,
+  "archived_original_files": 8,
+  "current_review_files": {
+    "docs/owned-resume.md": "5a00439145ebe2d4557096a8c74ad40b9d21358f60297f54342a5a9bc89f3c93",
+    "scripts/check_city_contrastive_evidence.py": "9f1095831c338135710f8578f74687d1033cdb9cbf106bc92a9d92a79f447b88",
+    "src/toruk_lm/owned_resume.py": "c665e87a45a0d5a101a2088cb43d5338bed93228026237dd2c4c418f95e1b49e",
+    "tests/test_owned_resume.py": "9138e0058eb99ed04516aaf103068e4ef13ea841df34336fbe8cb11a2bfaa4ee",
+    "tests/test_research_observation_review.py": "a0381062b3c2434ede3a2bd7f38bcccaff8296349b4aae5be1a85fe9f446ed0f"
+  },
+  "checks": {
+    "final-tests": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_owned_resume.py",
+        "tests/test_owned_lm.py",
+        "tests/test_research_observation_review.py",
+        "tests/test_city_contrastive_dev.py",
+        "tests/test_value_start_replication_v2.py",
+        "tests/test_lifetime_job.py",
+        "tests/test_lifetime_job_v2.py",
+        "--basetemp",
+        "artifacts/code-review-fixes-20261127-001/final-temp",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "receipt_sha256": "a68f994114c4a74fb845b74479b27677471110e5c2a6fa46afb433f875b508f6",
+      "log_sha256": "80d182ac55b5b455048bcaf85ba663f4344a894b176b3389cec809d14c74380b"
+    },
+    "lint": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "receipt_sha256": "2a7c04385127a829eca610a96cfc8bf200b2a59decab8672ad473ee3174983db",
+      "log_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+    },
+    "format": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "receipt_sha256": "77179a5a00bbf284d2af90252fb925a0077a64d32799b5c58d7d145a0e7811f8",
+      "log_sha256": "1c51f521270ce8f199d420b248228dc473504e2f694cce9c4ccd35cb396834cc"
+    },
+    "types": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "mypy"
+      ],
+      "receipt_sha256": "6bc33850f1329ccda640c04d10a1bf794127ddfae40fb715a445afe907e806c8",
+      "log_sha256": "3b8f552ab9a16c7f13064ecacca096ebe057ff5d97d648c4720182bcff27fd96"
+    },
+    "types-linux": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "receipt_sha256": "375b0a8e6827387bebcadcf39e8ac0ed1c51eec7902eb0e897488285ebbefd3d",
+      "log_sha256": "3b8f552ab9a16c7f13064ecacca096ebe057ff5d97d648c4720182bcff27fd96"
+    },
+    "reviewer-types": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "mypy",
+        "--follow-imports=silent",
+        "scripts/check_city_contrastive_evidence.py"
+      ],
+      "receipt_sha256": "6247da2b1e408ac6555ab70ebea99b408855eb545b8b9dc95621faf98ebb5b45",
+      "log_sha256": "8e63ae22e8213e327a5e9cbd584067681681bd8ef7f25c869877887ccdcfc4ff"
+    },
+    "build": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "artifacts/code-review-fixes-20261127-001/package"
+      ],
+      "receipt_sha256": "34797e8dbc85e94c788672af0536b5041e0e39742179ba94dcad48d53ecf92da",
+      "log_sha256": "a0cc32cabe0a930392c534f90be62f214190e2d82df6681bccca930e154769cb"
+    },
+    "offline-study-review-002": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/check_city_contrastive_evidence.py"
+      ],
+      "receipt_sha256": "bcc328362e2244d21c5a758f12cb61ea90fbdbb83bac804a4eb8f08bde59e1fa",
+      "log_sha256": "e45f2a1ba3162a45aa80efeb2d3f04edff289ad9dadb85aaeca4458033c74e2b"
+    }
+  },
+  "package_import": {
+    "module": "D:\\Toruk\\artifacts\\code-review-fixes-20261127-001\\package\\unpacked\\toruk_lm\\owned_resume.py",
+    "contract": "toruk-owned-resume-validation-v1"
+  },
+  "scientific_decision": "STOP_DEVELOPMENT_FAILURE",
+  "observations_checked": 32,
+  "seals_checked": 48,
+  "audit_model_forwards": 0,
+  "heldout_opened": false,
+  "limitations": "Focused tests only; no scientific cells retried; no model-quality claim."
+}

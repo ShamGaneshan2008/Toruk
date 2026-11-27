@@ -1,0 +1,1688 @@
+{
+  "max_teacher_prefix_ce_difference": 4.956875896411361e-06,
+  "pairs": [
+    {
+      "cell": "i601-s1301-ordinary",
+      "delta": -1,
+      "first16": 23,
+      "first16_categories": {
+        "city": 7,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 13,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "first16_malformed": 0,
+      "fixed": [],
+      "introduced": [
+        "v2-dev-012"
+      ],
+      "uniform": 24,
+      "uniform_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_context_gain": 14,
+      "uniform_eos": 24,
+      "uniform_malformed": 0
+    },
+    {
+      "cell": "i601-s1301-recurrent",
+      "delta": 1,
+      "first16": 21,
+      "first16_categories": {
+        "city": 5,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 12,
+      "first16_eos": 23,
+      "first16_floor": false,
+      "first16_malformed": 2,
+      "fixed": [
+        "v2-dev-006",
+        "v2-dev-014"
+      ],
+      "introduced": [
+        "v2-dev-018"
+      ],
+      "uniform": 20,
+      "uniform_categories": {
+        "city": 5,
+        "code": 7,
+        "unknown": 8
+      },
+      "uniform_context_gain": 9,
+      "uniform_eos": 24,
+      "uniform_malformed": 0
+    },
+    {
+      "cell": "i601-s1709-ordinary",
+      "delta": 0,
+      "first16": 24,
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 13,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "first16_malformed": 0,
+      "fixed": [],
+      "introduced": [],
+      "uniform": 24,
+      "uniform_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_context_gain": 14,
+      "uniform_eos": 24,
+      "uniform_malformed": 0
+    },
+    {
+      "cell": "i601-s1709-recurrent",
+      "delta": 1,
+      "first16": 21,
+      "first16_categories": {
+        "city": 5,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 13,
+      "first16_eos": 24,
+      "first16_floor": false,
+      "first16_malformed": 1,
+      "fixed": [
+        "v2-dev-006",
+        "v2-dev-014"
+      ],
+      "introduced": [
+        "v2-dev-018"
+      ],
+      "uniform": 20,
+      "uniform_categories": {
+        "city": 5,
+        "code": 7,
+        "unknown": 8
+      },
+      "uniform_context_gain": 10,
+      "uniform_eos": 24,
+      "uniform_malformed": 0
+    },
+    {
+      "cell": "i947-s1301-ordinary",
+      "delta": 6,
+      "first16": 24,
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 16,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "first16_malformed": 0,
+      "fixed": [
+        "v2-dev-000",
+        "v2-dev-006",
+        "v2-dev-007",
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "uniform": 18,
+      "uniform_categories": {
+        "city": 2,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_context_gain": 9,
+      "uniform_eos": 24,
+      "uniform_malformed": 0
+    },
+    {
+      "cell": "i947-s1301-recurrent",
+      "delta": 0,
+      "first16": 23,
+      "first16_categories": {
+        "city": 7,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 13,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "first16_malformed": 0,
+      "fixed": [
+        "v2-dev-000"
+      ],
+      "introduced": [
+        "v2-dev-012"
+      ],
+      "uniform": 23,
+      "uniform_categories": {
+        "city": 7,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_context_gain": 13,
+      "uniform_eos": 24,
+      "uniform_malformed": 1
+    },
+    {
+      "cell": "i947-s1709-ordinary",
+      "delta": 6,
+      "first16": 24,
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 15,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "first16_malformed": 0,
+      "fixed": [
+        "v2-dev-000",
+        "v2-dev-007",
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-018",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "uniform": 18,
+      "uniform_categories": {
+        "city": 2,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_context_gain": 10,
+      "uniform_eos": 24,
+      "uniform_malformed": 0
+    },
+    {
+      "cell": "i947-s1709-recurrent",
+      "delta": 5,
+      "first16": 24,
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_context_gain": 14,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "first16_malformed": 0,
+      "fixed": [
+        "v2-dev-000",
+        "v2-dev-006",
+        "v2-dev-007",
+        "v2-dev-015",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "uniform": 19,
+      "uniform_categories": {
+        "city": 4,
+        "code": 7,
+        "unknown": 8
+      },
+      "uniform_context_gain": 9,
+      "uniform_eos": 24,
+      "uniform_malformed": 1
+    }
+  ],
+  "source_checks": {
+    "dev": {
+      "v2-dev-000": {
+        "canonical": [
+          "bek",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "A"
+      },
+      "v2-dev-001": {
+        "canonical": [
+          "bek",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "B"
+      },
+      "v2-dev-002": {
+        "canonical": [
+          "bek",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "A"
+      },
+      "v2-dev-003": {
+        "canonical": [
+          "bek",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "B"
+      },
+      "v2-dev-004": {
+        "canonical": [
+          "bek",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-dev-005": {
+        "canonical": [
+          "bek",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-dev-006": {
+        "canonical": [
+          "dov",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "A"
+      },
+      "v2-dev-007": {
+        "canonical": [
+          "dov",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "B"
+      },
+      "v2-dev-008": {
+        "canonical": [
+          "dov",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "A"
+      },
+      "v2-dev-009": {
+        "canonical": [
+          "dov",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "B"
+      },
+      "v2-dev-010": {
+        "canonical": [
+          "dov",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-dev-011": {
+        "canonical": [
+          "dov",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-dev-012": {
+        "canonical": [
+          "ral",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "A"
+      },
+      "v2-dev-013": {
+        "canonical": [
+          "ral",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "B"
+      },
+      "v2-dev-014": {
+        "canonical": [
+          "ral",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "A"
+      },
+      "v2-dev-015": {
+        "canonical": [
+          "ral",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "B"
+      },
+      "v2-dev-016": {
+        "canonical": [
+          "ral",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-dev-017": {
+        "canonical": [
+          "ral",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-dev-018": {
+        "canonical": [
+          "sun",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "A"
+      },
+      "v2-dev-019": {
+        "canonical": [
+          "sun",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "B"
+      },
+      "v2-dev-020": {
+        "canonical": [
+          "sun",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "A"
+      },
+      "v2-dev-021": {
+        "canonical": [
+          "sun",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "B"
+      },
+      "v2-dev-022": {
+        "canonical": [
+          "sun",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-dev-023": {
+        "canonical": [
+          "sun",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      }
+    },
+    "train": {
+      "v2-train-000": {
+        "canonical": [
+          "bek",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "A"
+      },
+      "v2-train-001": {
+        "canonical": [
+          "bek",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "A"
+      },
+      "v2-train-002": {
+        "canonical": [
+          "bek",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "B"
+      },
+      "v2-train-003": {
+        "canonical": [
+          "bek",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "B"
+      },
+      "v2-train-004": {
+        "canonical": [
+          "bek",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "A"
+      },
+      "v2-train-005": {
+        "canonical": [
+          "bek",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "A"
+      },
+      "v2-train-006": {
+        "canonical": [
+          "bek",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "B"
+      },
+      "v2-train-007": {
+        "canonical": [
+          "bek",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "B"
+      },
+      "v2-train-008": {
+        "canonical": [
+          "bek",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "A"
+      },
+      "v2-train-009": {
+        "canonical": [
+          "bek",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "A"
+      },
+      "v2-train-010": {
+        "canonical": [
+          "bek",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "B"
+      },
+      "v2-train-011": {
+        "canonical": [
+          "bek",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "B"
+      },
+      "v2-train-012": {
+        "canonical": [
+          "bek",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "A"
+      },
+      "v2-train-013": {
+        "canonical": [
+          "bek",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "A"
+      },
+      "v2-train-014": {
+        "canonical": [
+          "bek",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "B"
+      },
+      "v2-train-015": {
+        "canonical": [
+          "bek",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "B"
+      },
+      "v2-train-016": {
+        "canonical": [
+          "bek",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-017": {
+        "canonical": [
+          "bek",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-018": {
+        "canonical": [
+          "bek",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-019": {
+        "canonical": [
+          "bek",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-020": {
+        "canonical": [
+          "bek",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-021": {
+        "canonical": [
+          "bek",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-022": {
+        "canonical": [
+          "bek",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-023": {
+        "canonical": [
+          "bek",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-024": {
+        "canonical": [
+          "dov",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "A"
+      },
+      "v2-train-025": {
+        "canonical": [
+          "dov",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "A"
+      },
+      "v2-train-026": {
+        "canonical": [
+          "dov",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "B"
+      },
+      "v2-train-027": {
+        "canonical": [
+          "dov",
+          "city",
+          "mi",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "mi",
+        "template": "B"
+      },
+      "v2-train-028": {
+        "canonical": [
+          "dov",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "A"
+      },
+      "v2-train-029": {
+        "canonical": [
+          "dov",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "A"
+      },
+      "v2-train-030": {
+        "canonical": [
+          "dov",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "B"
+      },
+      "v2-train-031": {
+        "canonical": [
+          "dov",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "B"
+      },
+      "v2-train-032": {
+        "canonical": [
+          "dov",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "A"
+      },
+      "v2-train-033": {
+        "canonical": [
+          "dov",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "A"
+      },
+      "v2-train-034": {
+        "canonical": [
+          "dov",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "B"
+      },
+      "v2-train-035": {
+        "canonical": [
+          "dov",
+          "code",
+          "Q_2",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Q_2",
+        "template": "B"
+      },
+      "v2-train-036": {
+        "canonical": [
+          "dov",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "A"
+      },
+      "v2-train-037": {
+        "canonical": [
+          "dov",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "A"
+      },
+      "v2-train-038": {
+        "canonical": [
+          "dov",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "B"
+      },
+      "v2-train-039": {
+        "canonical": [
+          "dov",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "B"
+      },
+      "v2-train-040": {
+        "canonical": [
+          "dov",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-041": {
+        "canonical": [
+          "dov",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-042": {
+        "canonical": [
+          "dov",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-043": {
+        "canonical": [
+          "dov",
+          "role",
+          "mi",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-044": {
+        "canonical": [
+          "dov",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-045": {
+        "canonical": [
+          "dov",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-046": {
+        "canonical": [
+          "dov",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-047": {
+        "canonical": [
+          "dov",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-048": {
+        "canonical": [
+          "ral",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "A"
+      },
+      "v2-train-049": {
+        "canonical": [
+          "ral",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "A"
+      },
+      "v2-train-050": {
+        "canonical": [
+          "ral",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "B"
+      },
+      "v2-train-051": {
+        "canonical": [
+          "ral",
+          "city",
+          "so",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "so",
+        "template": "B"
+      },
+      "v2-train-052": {
+        "canonical": [
+          "ral",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "A"
+      },
+      "v2-train-053": {
+        "canonical": [
+          "ral",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "A"
+      },
+      "v2-train-054": {
+        "canonical": [
+          "ral",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "B"
+      },
+      "v2-train-055": {
+        "canonical": [
+          "ral",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "B"
+      },
+      "v2-train-056": {
+        "canonical": [
+          "ral",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "A"
+      },
+      "v2-train-057": {
+        "canonical": [
+          "ral",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "A"
+      },
+      "v2-train-058": {
+        "canonical": [
+          "ral",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "B"
+      },
+      "v2-train-059": {
+        "canonical": [
+          "ral",
+          "code",
+          "V:4",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "V:4",
+        "template": "B"
+      },
+      "v2-train-060": {
+        "canonical": [
+          "ral",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "A"
+      },
+      "v2-train-061": {
+        "canonical": [
+          "ral",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "A"
+      },
+      "v2-train-062": {
+        "canonical": [
+          "ral",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "B"
+      },
+      "v2-train-063": {
+        "canonical": [
+          "ral",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "B"
+      },
+      "v2-train-064": {
+        "canonical": [
+          "ral",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-065": {
+        "canonical": [
+          "ral",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-066": {
+        "canonical": [
+          "ral",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-067": {
+        "canonical": [
+          "ral",
+          "role",
+          "so",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-068": {
+        "canonical": [
+          "ral",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-069": {
+        "canonical": [
+          "ral",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-070": {
+        "canonical": [
+          "ral",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-071": {
+        "canonical": [
+          "ral",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-072": {
+        "canonical": [
+          "sun",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "A"
+      },
+      "v2-train-073": {
+        "canonical": [
+          "sun",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "A"
+      },
+      "v2-train-074": {
+        "canonical": [
+          "sun",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "B"
+      },
+      "v2-train-075": {
+        "canonical": [
+          "sun",
+          "city",
+          "tu",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "tu",
+        "template": "B"
+      },
+      "v2-train-076": {
+        "canonical": [
+          "sun",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "A"
+      },
+      "v2-train-077": {
+        "canonical": [
+          "sun",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "A"
+      },
+      "v2-train-078": {
+        "canonical": [
+          "sun",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "B"
+      },
+      "v2-train-079": {
+        "canonical": [
+          "sun",
+          "city",
+          "la",
+          "city"
+        ],
+        "category": "city",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "la",
+        "template": "B"
+      },
+      "v2-train-080": {
+        "canonical": [
+          "sun",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "A"
+      },
+      "v2-train-081": {
+        "canonical": [
+          "sun",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "A"
+      },
+      "v2-train-082": {
+        "canonical": [
+          "sun",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "B"
+      },
+      "v2-train-083": {
+        "canonical": [
+          "sun",
+          "code",
+          "Z!6",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "Z!6",
+        "template": "B"
+      },
+      "v2-train-084": {
+        "canonical": [
+          "sun",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "A"
+      },
+      "v2-train-085": {
+        "canonical": [
+          "sun",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "A"
+      },
+      "v2-train-086": {
+        "canonical": [
+          "sun",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "B"
+      },
+      "v2-train-087": {
+        "canonical": [
+          "sun",
+          "code",
+          "R-7",
+          "code"
+        ],
+        "category": "code",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "R-7",
+        "template": "B"
+      },
+      "v2-train-088": {
+        "canonical": [
+          "sun",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-089": {
+        "canonical": [
+          "sun",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-090": {
+        "canonical": [
+          "sun",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-091": {
+        "canonical": [
+          "sun",
+          "role",
+          "tu",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-092": {
+        "canonical": [
+          "sun",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-093": {
+        "canonical": [
+          "sun",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "A"
+      },
+      "v2-train-094": {
+        "canonical": [
+          "sun",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      },
+      "v2-train-095": {
+        "canonical": [
+          "sun",
+          "role",
+          "la",
+          "city"
+        ],
+        "category": "unknown",
+        "evidence_and_query_in_second_segment": true,
+        "gold": "?",
+        "template": "B"
+      }
+    }
+  },
+  "vectors_verified": 1952
+}

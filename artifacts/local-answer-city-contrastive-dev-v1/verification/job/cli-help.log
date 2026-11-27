@@ -1,0 +1,34 @@
+usage: toruk [-h]
+             {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+             ...
+
+Toruk-LM research foundation
+
+positional arguments:
+  {diagnose,validate-config,audit-evidence,compare-replay,make-fixture,validate,reproduce,summarize,train,evaluate,generate,make-worlds,evaluate-worlds,train-controlled,evaluate-controlled,effect-labels,fit-effect,evaluate-effect,controlled-pilot,verify-m6,generalization,evaluate-heldout}
+    diagnose            report actual runtime and CUDA availability
+    validate-config     validate a versioned reproduction config
+    audit-evidence      validate sealed evidence and rescore raw answers
+    compare-replay      require exact generated answers and score parity
+    make-fixture        generate document-separated smoke-test text
+    validate            verify split checksums, config and checkpoint identity
+    reproduce           run a bounded foundation or versioned research config
+    summarize           verify a sealed run and regenerate result tables
+    train               train ordinary LM; CPU; fixed learning rate
+    evaluate            local-context loss and autoregressive continuations
+    generate            greedy local-context inference
+    make-worlds         create frozen controlled worlds and LM exports
+    evaluate-worlds     validation-only generated factual answers
+    train-controlled    bounded ordinary/recurrent world training
+    evaluate-controlled
+                        validation-only world answers
+    effect-labels       offline bounded paired supervision
+    fit-effect          fit effect predictor on training labels only
+    evaluate-effect     offline validation effect diagnostics
+    controlled-pilot    bounded validation prerequisite/comparison pipeline
+    verify-m6           reproduce frozen M6 answers without retraining
+    generalization      bounded exploratory M7 held-out failure study
+    evaluate-heldout    one protocol-bound M7 cell/checkpoint
+
+options:
+  -h, --help            show this help message and exit

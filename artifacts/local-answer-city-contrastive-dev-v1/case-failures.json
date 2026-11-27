@@ -1,0 +1,174 @@
+[
+  {
+    "cell": "i601-s1301-recurrent-contrast",
+    "split": "dev",
+    "case": {
+      "category": "city",
+      "eos": true,
+      "exact": false,
+      "gold": "la",
+      "id": "v2-dev-012",
+      "malformed": false,
+      "repetition": false,
+      "value_exact": false,
+      "wrong_first": true
+    },
+    "result": {
+      "allocated_state_bytes": 256,
+      "answer": "?",
+      "budget_exhausted": false,
+      "commits": 1,
+      "forward_positions": 77,
+      "generated_ids": [
+        66,
+        2
+      ],
+      "input_tokens": 54
+    }
+  },
+  {
+    "cell": "i601-s1301-recurrent-contrast",
+    "split": "dev",
+    "case": {
+      "category": "code",
+      "eos": true,
+      "exact": false,
+      "gold": "R-7",
+      "id": "v2-dev-014",
+      "malformed": false,
+      "repetition": false,
+      "value_exact": false,
+      "wrong_first": true
+    },
+    "result": {
+      "allocated_state_bytes": 256,
+      "answer": "V:4",
+      "budget_exhausted": false,
+      "commits": 1,
+      "forward_positions": 130,
+      "generated_ids": [
+        89,
+        61,
+        55,
+        2
+      ],
+      "input_tokens": 55
+    }
+  },
+  {
+    "cell": "i601-s1709-recurrent-contrast",
+    "split": "dev",
+    "case": {
+      "category": "city",
+      "eos": true,
+      "exact": false,
+      "gold": "la",
+      "id": "v2-dev-012",
+      "malformed": false,
+      "repetition": false,
+      "value_exact": false,
+      "wrong_first": true
+    },
+    "result": {
+      "allocated_state_bytes": 256,
+      "answer": "?",
+      "budget_exhausted": false,
+      "commits": 1,
+      "forward_positions": 77,
+      "generated_ids": [
+        66,
+        2
+      ],
+      "input_tokens": 54
+    }
+  },
+  {
+    "cell": "i601-s1709-recurrent-contrast",
+    "split": "dev",
+    "case": {
+      "category": "city",
+      "eos": true,
+      "exact": false,
+      "gold": "mi",
+      "id": "v2-dev-013",
+      "malformed": true,
+      "repetition": false,
+      "value_exact": false,
+      "wrong_first": true
+    },
+    "result": {
+      "allocated_state_bytes": 256,
+      "answer": "nZ!6",
+      "budget_exhausted": false,
+      "commits": 1,
+      "forward_positions": 152,
+      "generated_ids": [
+        113,
+        93,
+        36,
+        57,
+        2
+      ],
+      "input_tokens": 54
+    }
+  },
+  {
+    "cell": "i601-s1709-recurrent-contrast",
+    "split": "dev",
+    "case": {
+      "category": "city",
+      "eos": true,
+      "exact": false,
+      "gold": "mi",
+      "id": "v2-dev-018",
+      "malformed": true,
+      "repetition": false,
+      "value_exact": false,
+      "wrong_first": true
+    },
+    "result": {
+      "allocated_state_bytes": 256,
+      "answer": "R2:4",
+      "budget_exhausted": false,
+      "commits": 1,
+      "forward_positions": 152,
+      "generated_ids": [
+        85,
+        53,
+        61,
+        55,
+        2
+      ],
+      "input_tokens": 54
+    }
+  },
+  {
+    "cell": "i947-s1301-recurrent-contrast",
+    "split": "dev",
+    "case": {
+      "category": "code",
+      "eos": true,
+      "exact": false,
+      "gold": "V:4",
+      "id": "v2-dev-002",
+      "malformed": false,
+      "repetition": false,
+      "value_exact": false,
+      "wrong_first": true
+    },
+    "result": {
+      "allocated_state_bytes": 256,
+      "answer": "Q_2",
+      "budget_exhausted": false,
+      "commits": 1,
+      "forward_positions": 130,
+      "generated_ids": [
+        84,
+        98,
+        53,
+        2
+      ],
+      "input_tokens": 55
+    }
+  }
+]

@@ -1,0 +1,7 @@
+scripts\audit_city_contrastive_dev.py:115: error: Need type annotation for "training" (hint: "training: dict[<type>, <type>] = ...")  [var-annotated]
+scripts\audit_city_contrastive_dev.py:115: error: Need type annotation for "development" (hint: "development: dict[<type>, <type>] = ...")  [var-annotated]
+scripts\audit_city_contrastive_dev.py:115: error: Need type annotation for "cells" (hint: "cells: dict[<type>, <type>] = ...")  [var-annotated]
+scripts\city_contrastive_dev.py:277: error: Skipping analyzing "toruk_lm.engine": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+scripts\city_contrastive_dev.py:277: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+scripts\city_contrastive_dev.py:315: error: Unsupported operand types for >= ("int" and "object")  [operator]
+Found 5 errors in 2 files (checked 2 source files)

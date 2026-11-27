@@ -1,0 +1,906 @@
+{
+  "status": "PASS",
+  "decision": "STOP_DEVELOPMENT_FAILURE",
+  "model_forwards": 0,
+  "observations_checked": 32,
+  "token_and_cost_totals": {
+    "evaluate-i601-s1301-ordinary-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.1875,
+        "wall": 0.18325880000338657
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.125,
+        "wall": 0.11811470000793634
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.109375,
+        "wall": 0.11006969999834837
+      }
+    },
+    "evaluate-i601-s1301-ordinary-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.203125,
+        "wall": 0.18745129999933852
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.109375,
+        "wall": 0.12269210000158637
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.125,
+        "wall": 0.12230269999599841
+      }
+    },
+    "evaluate-i601-s1301-recurrent-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.359375,
+        "wall": 0.38121339999634074
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.21875,
+        "wall": 0.21473710000373103
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.203125,
+        "wall": 0.21083620000081282
+      }
+    },
+    "evaluate-i601-s1301-recurrent-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.375,
+        "wall": 0.3786411999999473
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.203125,
+        "wall": 0.2121365999973932
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.21875,
+        "wall": 0.20523149999280577
+      }
+    },
+    "evaluate-i601-s1709-ordinary-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.171875,
+        "wall": 0.18054949999532255
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.125,
+        "wall": 0.1174886000007973
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.109375,
+        "wall": 0.10999510000056034
+      }
+    },
+    "evaluate-i601-s1709-ordinary-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.1875,
+        "wall": 0.18351349999375088
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.109375,
+        "wall": 0.1191677999931926
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.125,
+        "wall": 0.11103959999672952
+      }
+    },
+    "evaluate-i601-s1709-recurrent-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.375,
+        "wall": 0.37689640000280633
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.21875,
+        "wall": 0.21414139999615145
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.1875,
+        "wall": 0.20481079999626672
+      }
+    },
+    "evaluate-i601-s1709-recurrent-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.390625,
+        "wall": 0.3813436999980695
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.21875,
+        "wall": 0.2143800999992891
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.1875,
+        "wall": 0.20506250000289583
+      }
+    },
+    "evaluate-i947-s1301-ordinary-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.171875,
+        "wall": 0.18628439999883994
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.125,
+        "wall": 0.11894289999963803
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.109375,
+        "wall": 0.10901770000964461
+      }
+    },
+    "evaluate-i947-s1301-ordinary-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.1875,
+        "wall": 0.18099270000038814
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.125,
+        "wall": 0.11860319999686908
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.109375,
+        "wall": 0.1122096999997666
+      }
+    },
+    "evaluate-i947-s1301-recurrent-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.375,
+        "wall": 0.3835631999991165
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.21875,
+        "wall": 0.2162763000042105
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.21875,
+        "wall": 0.21127270000033604
+      }
+    },
+    "evaluate-i947-s1301-recurrent-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.390625,
+        "wall": 0.3799421000003349
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.21875,
+        "wall": 0.21721699999125121
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.1875,
+        "wall": 0.20659369999430055
+      }
+    },
+    "evaluate-i947-s1709-ordinary-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.1875,
+        "wall": 0.18413440000131231
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.125,
+        "wall": 0.11961939999855531
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.09375,
+        "wall": 0.11102259999825037
+      }
+    },
+    "evaluate-i947-s1709-ordinary-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.1875,
+        "wall": 0.18389509999997244
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.125,
+        "wall": 0.12026309999691875
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.09375,
+        "wall": 0.11137060000146448
+      }
+    },
+    "evaluate-i947-s1709-recurrent-control": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.390625,
+        "wall": 0.3829374000060852
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.21875,
+        "wall": 0.21636389999912353
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.203125,
+        "wall": 0.20752039999661065
+      }
+    },
+    "evaluate-i947-s1709-recurrent-contrast": {
+      "main": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "generated_tokens": 291,
+        "forward_positions": 9957,
+        "cpu": 0.390625,
+        "wall": 0.3892833000027167
+      },
+      "vectors": {
+        "requests": 97,
+        "input_tokens": 5270,
+        "forward_positions": 5270,
+        "cpu": 0.234375,
+        "wall": 0.22390809999888006
+      },
+      "teacher": {
+        "requests": 96,
+        "targets": 5408,
+        "forward_positions": 6144,
+        "cpu": 0.21875,
+        "wall": 0.21304090000103315
+      }
+    },
+    "development-i601-s1301-ordinary-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.0625,
+        "wall": 0.0501518999972177
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 113,
+        "forward_positions": 3522,
+        "cpu": 0.078125,
+        "wall": 0.06588719999581372
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.03125,
+        "wall": 0.03171780000320723
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.015625,
+        "wall": 0.028694500003439316
+      }
+    },
+    "development-i601-s1301-recurrent-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 79,
+        "forward_positions": 2706,
+        "cpu": 0.125,
+        "wall": 0.12982069999907253
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 107,
+        "forward_positions": 3675,
+        "cpu": 0.140625,
+        "wall": 0.15211809999982506
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.046875,
+        "wall": 0.06000789999961853
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.0625,
+        "wall": 0.055592300001990225
+      }
+    },
+    "development-i601-s1709-ordinary-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.0625,
+        "wall": 0.050418500000887434
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 83,
+        "forward_positions": 2757,
+        "cpu": 0.0625,
+        "wall": 0.05153229999723408
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.03125,
+        "wall": 0.03159940000023198
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.015625,
+        "wall": 0.029068100000586128
+      }
+    },
+    "development-i601-s1709-recurrent-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 74,
+        "forward_positions": 2541,
+        "cpu": 0.109375,
+        "wall": 0.10220690000005561
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 91,
+        "forward_positions": 3091,
+        "cpu": 0.109375,
+        "wall": 0.12910590000319644
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.0625,
+        "wall": 0.05891280000014376
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.046875,
+        "wall": 0.05293060000076366
+      }
+    },
+    "development-i947-s1301-ordinary-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.046875,
+        "wall": 0.05059670000264305
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 98,
+        "forward_positions": 3509,
+        "cpu": 0.0625,
+        "wall": 0.06812079999872367
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.03125,
+        "wall": 0.031154600001173094
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.03125,
+        "wall": 0.02870600000005652
+      }
+    },
+    "development-i947-s1301-recurrent-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.09375,
+        "wall": 0.10369150000224181
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 83,
+        "forward_positions": 2757,
+        "cpu": 0.109375,
+        "wall": 0.10616619999655086
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.0625,
+        "wall": 0.058817799998905684
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.0625,
+        "wall": 0.06528800000069168
+      }
+    },
+    "development-i947-s1709-ordinary-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.046875,
+        "wall": 0.05118320000474341
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 74,
+        "forward_positions": 2639,
+        "cpu": 0.046875,
+        "wall": 0.04996299999675102
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.046875,
+        "wall": 0.03250380000281439
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.015625,
+        "wall": 0.0293026999970607
+      }
+    },
+    "development-i947-s1709-recurrent-control": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.109375,
+        "wall": 0.10156519999782176
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 99,
+        "forward_positions": 3200,
+        "cpu": 0.125,
+        "wall": 0.12403579999681824
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.0625,
+        "wall": 0.060997199999292206
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.046875,
+        "wall": 0.05367099999784841
+      }
+    },
+    "development-i601-s1301-ordinary-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.0625,
+        "wall": 0.04956859999947483
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 83,
+        "forward_positions": 2757,
+        "cpu": 0.0625,
+        "wall": 0.05059280000205035
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.03125,
+        "wall": 0.03197390000241285
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.03125,
+        "wall": 0.028337699999610777
+      }
+    },
+    "development-i601-s1301-recurrent-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 74,
+        "forward_positions": 2541,
+        "cpu": 0.109375,
+        "wall": 0.10102680000090913
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 85,
+        "forward_positions": 2883,
+        "cpu": 0.109375,
+        "wall": 0.11184199999934208
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.046875,
+        "wall": 0.057701300000189804
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.0625,
+        "wall": 0.05507370000304945
+      }
+    },
+    "development-i601-s1709-ordinary-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.046875,
+        "wall": 0.05165879999913159
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 168,
+        "forward_positions": 5562,
+        "cpu": 0.109375,
+        "wall": 0.10487640000155807
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.03125,
+        "wall": 0.03403089999937947
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.046875,
+        "wall": 0.033410900000490074
+      }
+    },
+    "development-i601-s1709-recurrent-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 78,
+        "forward_positions": 2643,
+        "cpu": 0.109375,
+        "wall": 0.10721180000200548
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 105,
+        "forward_positions": 3402,
+        "cpu": 0.140625,
+        "wall": 0.13988890000018728
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.046875,
+        "wall": 0.06315020000147342
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.0625,
+        "wall": 0.059986100000060105
+      }
+    },
+    "development-i947-s1301-ordinary-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.0625,
+        "wall": 0.050115599999116967
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 86,
+        "forward_positions": 3006,
+        "cpu": 0.0625,
+        "wall": 0.05525429999943299
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.03125,
+        "wall": 0.03182589999778429
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.03125,
+        "wall": 0.028985399999328365
+      }
+    },
+    "development-i947-s1301-recurrent-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.109375,
+        "wall": 0.10917140000128711
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 87,
+        "forward_positions": 2859,
+        "cpu": 0.109375,
+        "wall": 0.11225210000066
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.0625,
+        "wall": 0.057756899997912114
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.0625,
+        "wall": 0.053015999998933694
+      }
+    },
+    "development-i947-s1709-ordinary-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.046875,
+        "wall": 0.049971900000855385
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 76,
+        "forward_positions": 2693,
+        "cpu": 0.046875,
+        "wall": 0.04911859999992885
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.03125,
+        "wall": 0.0320488999986992
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.03125,
+        "wall": 0.028603700002349797
+      }
+    },
+    "development-i947-s1709-recurrent-contrast": {
+      "main": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 75,
+        "forward_positions": 2565,
+        "cpu": 0.109375,
+        "wall": 0.10335839999879681
+      },
+      "question-only": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "generated_tokens": 79,
+        "forward_positions": 2655,
+        "cpu": 0.109375,
+        "wall": 0.10533329999816488
+      },
+      "vectors": {
+        "requests": 25,
+        "input_tokens": 1358,
+        "forward_positions": 1358,
+        "cpu": 0.0625,
+        "wall": 0.05905780000011873
+      },
+      "teacher": {
+        "requests": 24,
+        "targets": 1352,
+        "forward_positions": 1536,
+        "cpu": 0.046875,
+        "wall": 0.05422679999810498
+      }
+    }
+  },
+  "scientific_seals": 48,
+  "heldout_opened": false
+}

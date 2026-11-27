@@ -1,0 +1,247 @@
+{
+  "decision": "STOP_DEVELOPMENT_FAILURE",
+  "integrity": "PASS",
+  "failure_count": 34,
+  "pairs": [
+    {
+      "cell": "i601-s1301-ordinary",
+      "uniform": 24,
+      "first16": 23,
+      "delta": -1,
+      "fixed": [],
+      "introduced": [
+        "v2-dev-012"
+      ],
+      "uniform_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 7,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "uniform_malformed": 0,
+      "first16_malformed": 0,
+      "uniform_context_gain": 14,
+      "first16_context_gain": 13
+    },
+    {
+      "cell": "i601-s1301-recurrent",
+      "uniform": 20,
+      "first16": 21,
+      "delta": 1,
+      "fixed": [
+        "v2-dev-006",
+        "v2-dev-014"
+      ],
+      "introduced": [
+        "v2-dev-018"
+      ],
+      "uniform_categories": {
+        "city": 5,
+        "code": 7,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 5,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 23,
+      "first16_floor": false,
+      "uniform_malformed": 0,
+      "first16_malformed": 2,
+      "uniform_context_gain": 9,
+      "first16_context_gain": 12
+    },
+    {
+      "cell": "i601-s1709-ordinary",
+      "uniform": 24,
+      "first16": 24,
+      "delta": 0,
+      "fixed": [],
+      "introduced": [],
+      "uniform_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "uniform_malformed": 0,
+      "first16_malformed": 0,
+      "uniform_context_gain": 14,
+      "first16_context_gain": 13
+    },
+    {
+      "cell": "i601-s1709-recurrent",
+      "uniform": 20,
+      "first16": 21,
+      "delta": 1,
+      "fixed": [
+        "v2-dev-006",
+        "v2-dev-014"
+      ],
+      "introduced": [
+        "v2-dev-018"
+      ],
+      "uniform_categories": {
+        "city": 5,
+        "code": 7,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 5,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 24,
+      "first16_floor": false,
+      "uniform_malformed": 0,
+      "first16_malformed": 1,
+      "uniform_context_gain": 10,
+      "first16_context_gain": 13
+    },
+    {
+      "cell": "i947-s1301-ordinary",
+      "uniform": 18,
+      "first16": 24,
+      "delta": 6,
+      "fixed": [
+        "v2-dev-000",
+        "v2-dev-006",
+        "v2-dev-007",
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "uniform_categories": {
+        "city": 2,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "uniform_malformed": 0,
+      "first16_malformed": 0,
+      "uniform_context_gain": 9,
+      "first16_context_gain": 16
+    },
+    {
+      "cell": "i947-s1301-recurrent",
+      "uniform": 23,
+      "first16": 23,
+      "delta": 0,
+      "fixed": [
+        "v2-dev-000"
+      ],
+      "introduced": [
+        "v2-dev-012"
+      ],
+      "uniform_categories": {
+        "city": 7,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 7,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "uniform_malformed": 1,
+      "first16_malformed": 0,
+      "uniform_context_gain": 13,
+      "first16_context_gain": 13
+    },
+    {
+      "cell": "i947-s1709-ordinary",
+      "uniform": 18,
+      "first16": 24,
+      "delta": 6,
+      "fixed": [
+        "v2-dev-000",
+        "v2-dev-007",
+        "v2-dev-012",
+        "v2-dev-013",
+        "v2-dev-018",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "uniform_categories": {
+        "city": 2,
+        "code": 8,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "uniform_malformed": 0,
+      "first16_malformed": 0,
+      "uniform_context_gain": 10,
+      "first16_context_gain": 15
+    },
+    {
+      "cell": "i947-s1709-recurrent",
+      "uniform": 19,
+      "first16": 24,
+      "delta": 5,
+      "fixed": [
+        "v2-dev-000",
+        "v2-dev-006",
+        "v2-dev-007",
+        "v2-dev-015",
+        "v2-dev-019"
+      ],
+      "introduced": [],
+      "uniform_categories": {
+        "city": 4,
+        "code": 7,
+        "unknown": 8
+      },
+      "first16_categories": {
+        "city": 8,
+        "code": 8,
+        "unknown": 8
+      },
+      "uniform_eos": 24,
+      "first16_eos": 24,
+      "first16_floor": true,
+      "uniform_malformed": 1,
+      "first16_malformed": 0,
+      "uniform_context_gain": 9,
+      "first16_context_gain": 14
+    }
+  ],
+  "vectors_verified": 1952,
+  "model_forwards": 0,
+  "heldout_opened": false,
+  "named_inputs_unchanged": 38
+}

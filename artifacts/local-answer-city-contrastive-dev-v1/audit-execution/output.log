@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "measurement_integrity": "PASS",
+  "decision": "STOP_DEVELOPMENT_FAILURE",
+  "training_gate": true,
+  "development_evaluated": true,
+  "pairs": {
+    "i601-s1301-ordinary": {
+      "pass_pair": true,
+      "gain": 1,
+      "introduced": [],
+      "fixed": [
+        "v2-dev-012"
+      ],
+      "ceiling": false
+    },
+    "i601-s1301-recurrent": {
+      "pass_pair": false,
+      "gain": 1,
+      "introduced": [
+        "v2-dev-014"
+      ],
+      "fixed": [
+        "v2-dev-013",
+        "v2-dev-018"
+      ],
+      "ceiling": false
+    },
+    "i601-s1709-ordinary": {
+      "pass_pair": true,
+      "gain": 0,
+      "introduced": [],
+      "fixed": [],
+      "ceiling": true
+    },
+    "i601-s1709-recurrent": {
+      "pass_pair": false,
+      "gain": 0,
+      "introduced": [],
+      "fixed": [],
+      "ceiling": false
+    },
+    "i947-s1301-ordinary": {
+      "pass_pair": true,
+      "gain": 0,
+      "introduced": [],
+      "fixed": [],
+      "ceiling": true
+    },
+    "i947-s1301-recurrent": {
+      "pass_pair": false,
+      "gain": 0,
+      "introduced": [
+        "v2-dev-002"
+      ],
+      "fixed": [
+        "v2-dev-012"
+      ],
+      "ceiling": false
+    },
+    "i947-s1709-ordinary": {
+      "pass_pair": true,
+      "gain": 0,
+      "introduced": [],
+      "fixed": [],
+      "ceiling": true
+    },
+    "i947-s1709-recurrent": {
+      "pass_pair": true,
+      "gain": 0,
+      "introduced": [],
+      "fixed": [],
+      "ceiling": true
+    }
+  },
+  "floors": {
+    "i601-s1301-ordinary-contrast": true,
+    "i601-s1301-recurrent-contrast": true,
+    "i601-s1709-ordinary-contrast": true,
+    "i601-s1709-recurrent-contrast": false,
+    "i947-s1301-ordinary-contrast": true,
+    "i947-s1301-recurrent-contrast": true,
+    "i947-s1709-ordinary-contrast": true,
+    "i947-s1709-recurrent-contrast": true
+  },
+  "city_first_nll": {
+    "i601-s1301": {
+      "control": 1.3603098036546726,
+      "contrast": 0.9016125649213791,
+      "improved": true
+    },
+    "i601-s1709": {
+      "control": 2.018933993909741,
+      "contrast": 1.7646302046923665,
+      "improved": true
+    }
+  },
+  "model_gains": {
+    "ordinary": 1,
+    "recurrent": 1
+  },
+  "scientific_seals": 48,
+  "optimizer_steps_verified": 24576,
+  "historical_decision": "STOP_DEVELOPMENT_FAILURE",
+  "model_forwards": 0,
+  "heldout_opened": false
+}

@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "head": "916efdd4b63dd63fab08ffabb8ab6e8313dc4bf2",
+  "preserved_source_config_test_doc_files": 252,
+  "changed_preexisting_sources": [],
+  "regenerated_build_metadata": [
+    "src/toruk_lm.egg-info/SOURCES.txt"
+  ],
+  "original_tracked_status_preserved": true,
+  "index_unchanged": true,
+  "wheel_import": {
+    "version": "0.1.0",
+    "contract": "toruk-owned-resume-validation-v1",
+    "module": "D:\\Toruk\\artifacts\\owned-resume-integrity-v1-20261127-001\\package-final\\toruk_lm-0.1.0-py3-none-any.whl\\toruk_lm\\owned_resume.py"
+  },
+  "checks": {
+    "resume-final": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_owned_resume.py",
+        "tests/test_owned_lm.py",
+        "--basetemp",
+        "artifacts/owned-resume-integrity-v1-20261127-001/final-focused-temp",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "seconds": 30.80925810000008
+    },
+    "final-pytest": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "--junitxml=artifacts/owned-resume-integrity-v1-20261127-001/final-pytest.xml",
+        "--basetemp",
+        "artifacts/owned-resume-integrity-v1-20261127-001/final-full-temp",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "seconds": 193.72919430000002
+    },
+    "final-lint": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "seconds": 0.12101290000009612
+    },
+    "final-format": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "seconds": 0.09846689999994851
+    },
+    "final-types": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "mypy"
+      ],
+      "seconds": 46.85767249999981
+    },
+    "final-types-linux": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "mypy",
+        "--platform",
+        "linux"
+      ],
+      "seconds": 59.33857829999988
+    },
+    "final-build": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "artifacts/owned-resume-integrity-v1-20261127-001/package-final"
+      ],
+      "seconds": 5.947578299999805
+    },
+    "dependencies": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "seconds": 10.259257700000035
+    },
+    "frozen-sources": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/check_frozen_sources.py"
+      ],
+      "seconds": 0.0949756999998499
+    },
+    "web-check": {
+      "status": "PASS",
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "run",
+        "check"
+      ],
+      "seconds": 3.4645785000002434
+    },
+    "web-tests": {
+      "status": "PASS",
+      "command": [
+        "npm.cmd",
+        "--prefix",
+        "web/vercel",
+        "test"
+      ],
+      "seconds": 1.0431674999999814
+    },
+    "cli-help": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "toruk_lm",
+        "--help"
+      ],
+      "seconds": 2.5034069999996973
+    },
+    "diagnose": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "toruk_lm",
+        "diagnose"
+      ],
+      "seconds": 2.5803297000002203
+    },
+    "adapter-help": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "toruk_lm.owned_resume",
+        "--help"
+      ],
+      "seconds": 2.6116022999999586
+    }
+  },
+  "scope": "Software integrity validation only; no research-quality improvement claimed."
+}
